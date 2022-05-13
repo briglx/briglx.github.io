@@ -1,6 +1,6 @@
 # Blog Notes
 
-Build Locally
+Build Locally:
 
 ```bash
 cd docs
