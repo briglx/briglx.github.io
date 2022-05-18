@@ -6,10 +6,10 @@ categories:
 tags: 
   - "aws"
   - "tomcat"
-coverImage: "awstomcat2-e1381951840211.png"
+cover: assets/images/awstomcat2-e1381951840211.png
 ---
 
-[![AwsTomcat](images/awstomcat2-e1381951840211.png)](http://briglamoreaux.files.wordpress.com/2013/10/awstomcat2-e1381951840211.png)I just received an email from Amazon concerning proper Security around Tomcat. Here is part of the message:
+[![AwsTomcat](/assets/images/awstomcat2-e1381951840211.png)](http://briglamoreaux.files.wordpress.com/2013/10/awstomcat2-e1381951840211.png)I just received an email from Amazon concerning proper Security around Tomcat. Here is part of the message:
 
 > You can avoid being vulnerable to attackers by following the below best practices to increase the security of your Tomcat installation:
 > 

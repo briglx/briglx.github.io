@@ -1,11 +1,13 @@
 ---
+layout: post
+current: post
+cover: /assets/images/comparepythonthumbnailsfeature.png
 title: "Surprising Results with Python Thumbnails"
 date: "2018-04-13"
 categories: 
   - "software"
 tags: 
   - "python"
-coverImage: "comparepythonthumbnailsfeature.png"
 ---
 
 I've been working with images recently and am using a technique for a hashing algorithm. This technique resized the image to a 9x8 gray scale image.
@@ -95,19 +97,19 @@ I took four different images and ran it against the code. I used Cv2 as the base
 
 **Image 1 - Color**
 
-![comparePythonThumbnails01](images/comparepythonthumbnails01.png)
+![comparePythonThumbnails01](/assets/images/comparepythonthumbnails01.png)
 
 **Image 2 - Color**
 
-![comparePythonThumbnails02](images/comparepythonthumbnails02.png)
+![comparePythonThumbnails02](/assets/images/comparepythonthumbnails02.png)
 
 **Image 3 - Color**
 
-![comparePythonThumbnails03](images/comparepythonthumbnails03.png)
+![comparePythonThumbnails03](/assets/images/comparepythonthumbnails03.png)
 
 **Image 4 - Color**
 
-![comparePythonThumbnails04](images/comparepythonthumbnails04.png)
+![comparePythonThumbnails04](/assets/images/comparepythonthumbnails04.png)
 
 There are a few things I noticed:
 
@@ -121,19 +123,19 @@ It seems like pillow does a better job at matching the luminance. For the final 
 
 **Image 1 - Gray Scaled**
 
-![comparePythonThumbnails01bw](images/comparepythonthumbnails01bw.png)
+![comparePythonThumbnails01bw](/assets/images/comparepythonthumbnails01bw.png)
 
 **Image 2 - Gray Scaled**
 
-![comparePythonThumbnails02bw](images/comparepythonthumbnails02bw.png)
+![comparePythonThumbnails02bw](/assets/images/comparepythonthumbnails02bw.png)
 
 **Image 3 - Gray Scale**
 
-![comparePythonThumbnails03bw](images/comparepythonthumbnails03bw.png)
+![comparePythonThumbnails03bw](/assets/images/comparepythonthumbnails03bw.png)
 
 **Image 4 - Gray Scale**
 
-![comparePythonThumbnails04bw](images/comparepythonthumbnails04bw.png)
+![comparePythonThumbnails04bw](/assets/images/comparepythonthumbnails04bw.png)
 
 ## Conclusion
 

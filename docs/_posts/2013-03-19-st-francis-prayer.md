@@ -1,7 +1,7 @@
 ---
 title: "Prayer of St. Francis"
 date: "2013-03-19"
-coverImage: "evmpb.png"
+cover: assets/images/evmpb.png
 ---
 
 [![evmpb](http://briglamoreaux.files.wordpress.com/2013/03/evmpb.png?w=300)](http://briglamoreaux.files.wordpress.com/2013/03/evmpb.png)

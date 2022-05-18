@@ -42,7 +42,7 @@ You can configure the Proxy Server different ways. Just stick to the defaults fo
 - Right Click on the Workbench and select **Logic Controller**
 - Select **Recording Controller**
 
-You should now have two elements. [![](images/Record1.png "Record1")](http://127.0.0.1:4000/imgs/uploads/2011/02/Record1.png)
+You should now have two elements. [![](/assets/images/Record1.png "Record1")](http://127.0.0.1:4000/imgs/uploads/2011/02/Record1.png)
 
 7. Configure the Browser to Record
 
@@ -52,6 +52,6 @@ In FireFox this is done with Edit -> Preferences -> Advance -> Network -> Settin
 
 - Navigate to [JMeter User Manual](http://jakarta.apache.org/jmeter/usermanual/index.html)
 
-JMeter now has your actions recorded [![](images/Record2.png "Record2")](http://127.0.0.1:4000/imgs/uploads/2011/02/Record2.png)
+JMeter now has your actions recorded [![](/assets/images/Record2.png "Record2")](http://127.0.0.1:4000/imgs/uploads/2011/02/Record2.png)
 
 That's it. You have install, configured and used JMeter to record some browser actions. Next we'll go into running what was recorded.

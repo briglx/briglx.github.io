@@ -17,7 +17,7 @@ I wanted to ensure that each page would perform a check to see if the current us
 
 Each page that needed authorization would derive from the base class and override the **ApplyAuthorizationRules** () method. Notice in the Class Diagram how the AdminPage is overriding the method while the other two pages, SummaryPage and DetailPage, use the default implementation.
 
-[![](images/UrlAuthzUml.Png)](http://bp0.blogger.com/_io6q_2NOAVQ/Rzt2Lj814dI/AAAAAAAAAUI/QCcOwOkzCeQ/s1600-h/UrlAuthzUml.Png)
+[![](/assets/images/UrlAuthzUml.Png)](http://bp0.blogger.com/_io6q_2NOAVQ/Rzt2Lj814dI/AAAAAAAAAUI/QCcOwOkzCeQ/s1600-h/UrlAuthzUml.Png)
 
 The code in the AdminPage looks something like this:
 

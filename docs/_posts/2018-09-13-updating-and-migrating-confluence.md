@@ -1,27 +1,34 @@
 ---
-title: "Updating and Migrating Confluence"
-date: "2018-09-13"
-categories: 
-  - "software"
+layout: post
+current: post
+# cover:  assets/images/confluencev1.png
+navigation: True
+title: Updating and Migrating Confluence
+date: 2018-09-13
 tags: 
   - "confluence"
-  - "linu"
+  - "linux"
   - "ops"
   - "postgresql"
+categories: 
+  - "software"
+class: post-template
+subclass: 'post'
+author: brig
 ---
 
 I started hosting my wiki on Azure way back in 2016. The other day I received a message that I was  not using managed disks and I should upgrade. So I pushed the upgrade button and kicked off a two day outage which resulted in me pulling my hair out, migrating, looking at logs, and changing databases.
 
 ## First Architecture
 
-![Confluence v1 Architecture](images/confluencev1.png)
+![Confluence v1 Architecture](/assets/images/confluencev1.png)
 
 The first architecture is really basic. Just two vms. One with confluence installed on it and the other with Postgresql. I configured a separate nsg for each one. Looking back I could have had just one.
 
 - App Server
     - Confluence 5.9.6
-    - <CONFLUENCE\_HOME> = /var/atlassian/application-data/confluence/
-    - <CONFLUENCE\_INSTALLATION> = /opt/atlassian/confluence/
+    - `<CONFLUENCE\_HOME> = /var/atlassian/application-data/confluence/`
+    - `<CONFLUENCE\_INSTALLATION> = /opt/atlassian/confluence/`
 -  Database
     - Ubuntu 14.04 64-bit
     - PostgreSQL 9.3.12
@@ -37,7 +44,7 @@ Instead of cleaning up the installation I thought I would try a new architecture
 
 ## New Architecture
 
-![confluencev2](images/confluencev2.png)
+![confluencev2](/assets/images/confluencev2.png)
 
 I replaced the IaaS database for the Azure Database Postgresql PaaS solution. I don't want to mess around with managing a database. One less thing to think about.
 
@@ -46,15 +53,15 @@ I replaced the IaaS database for the Azure Database Postgresql PaaS solution. I 
 -  Database
     - PostgreSQL 9.5
 
-Confluence does not support Postgres 9.6, and will throw error messages like the following: org.postgresql.util.PSQLException: ERROR: column am.amcanorder does not exist
+Confluence does not support Postgres 9.6, and will throw error messages like the following: `org.postgresql.util.PSQLException: ERROR: column am.amcanorder does not exist`
 
 ## Future work
 
-Turns out I had to use the export restore option with Confluence. I though I would be able to setup the new environment and just perform a pg\_dump and pg\_restore. For some reason that didn't work.
+Turns out I had to use the export restore option with Confluence. I though I would be able to setup the new environment and just perform a `pg_dump` and `pg_restore`. For some reason that didn't work.
 
 ## References
 
-- Restore to Azure DB Postgres https://docs.microsoft.com/en-us/azure/postgresql/quickstart-create-server-database-portal
-- How to dump and restore https://docs.microsoft.com/en-us/azure/postgresql/howto-migrate-using-dump-and-restore
-- Example of Confluence Setup http://comtronic.com.au/how-to-install-confluence-on-centos7-with-postgresql/
-- Remove ubuntu services https://help.ubuntu.com/community/UbuntuBootupHowto
+- Restore to Azure DB Postgres [https://docs.microsoft.com/en-us/azure/postgresql/quickstart-create-server-database-portal](https://docs.microsoft.com/en-us/azure/postgresql/quickstart-create-server-database-portal)
+- How to dump and restore [https://docs.microsoft.com/en-us/azure/postgresql/howto-migrate-using-dump-and-restore](https://docs.microsoft.com/en-us/azure/postgresql/howto-migrate-using-dump-and-restore)
+- Example of Confluence Setup [http://comtronic.com.au/how-to-install-confluence-on-centos7-with-postgresql/](http://comtronic.com.au/how-to-install-confluence-on-centos7-with-postgresql/)
+- Remove ubuntu services [https://help.ubuntu.com/community/UbuntuBootupHowto](https://help.ubuntu.com/community/UbuntuBootupHowto)

@@ -17,7 +17,7 @@ Here is a list of notable platforms as a service (PaaS) providers.
 
 Both Heroku and Engine yard are backed onto Amazon and leverage EC2 and the EBS.
 
-[![](images/PlatformLayers.png "PlatformLayers")](http://127.0.0.1:4000/imgs/uploads/2010/12/PlatformLayers.png)
+[![](/assets/images/PlatformLayers.png "PlatformLayers")](http://127.0.0.1:4000/imgs/uploads/2010/12/PlatformLayers.png)
 
 ### References
 

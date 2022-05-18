@@ -16,7 +16,7 @@ Not too many people would think it important to have a discussion on Trees and m
   
 
   
-[![](images/FolderSingle.png)](http://photos1.blogger.com/blogger/5517/4062/1600/FolderSingle.png)  
+[![](/assets/images/FolderSingle.png)](http://photos1.blogger.com/blogger/5517/4062/1600/FolderSingle.png)  
 
   
 
@@ -26,7 +26,7 @@ But then quickly turn into a mess of folders:
   
 
   
-[![](images/FolderMultiple.png)](http://photos1.blogger.com/blogger/5517/4062/1600/FolderMultiple.png)  
+[![](/assets/images/FolderMultiple.png)](http://photos1.blogger.com/blogger/5517/4062/1600/FolderMultiple.png)  
 
   
 
@@ -36,7 +36,7 @@ So as we organize our folders we get a nice little tree of folders (Which looks 
   
 
   
-[![](images/FolderSnakeTree.png)](http://photos1.blogger.com/blogger/5517/4062/1600/FolderSnakeTree.png)  
+[![](/assets/images/FolderSnakeTree.png)](http://photos1.blogger.com/blogger/5517/4062/1600/FolderSnakeTree.png)  
 
   
 
@@ -46,7 +46,7 @@ But as we know, trees can grow unruly and quickly get out of hand. For instance 
   
 
   
-[![](images/BadFolderTree.png)](http://photos1.blogger.com/blogger/5517/4062/1600/BadFolderTree.png)  
+[![](/assets/images/BadFolderTree.png)](http://photos1.blogger.com/blogger/5517/4062/1600/BadFolderTree.png)  
 
   
 
@@ -56,7 +56,7 @@ Wow! This is out of hand.
   
 
   
-[![](images/CoddingHorror.png)](http://photos1.blogger.com/blogger/5517/4062/1600/CoddingHorror.png)  
+[![](/assets/images/CoddingHorror.png)](http://photos1.blogger.com/blogger/5517/4062/1600/CoddingHorror.png)  
 
   
 
@@ -66,7 +66,7 @@ Or is it? What makes a good tree different from a bad tree?
   
 
   
-[![](images/GoodBadTree.png)](http://photos1.blogger.com/blogger/5517/4062/1600/GoodBadTree.png)  
+[![](/assets/images/GoodBadTree.png)](http://photos1.blogger.com/blogger/5517/4062/1600/GoodBadTree.png)  
 
   
 
@@ -86,7 +86,7 @@ Do not confuse S2C with X2C which is a street term for the drug Ecstasy.
   
 
   
-[![](images/X2C.png)](http://photos1.blogger.com/blogger/5517/4062/1600/X2C.png)  
+[![](/assets/images/X2C.png)](http://photos1.blogger.com/blogger/5517/4062/1600/X2C.png)  
 
   
 
@@ -96,7 +96,7 @@ S2C stands for Source to Compile and promotes the clear separation between the s
   
 
   
-[![](images/S2C1.png)](http://photos1.blogger.com/blogger/5517/4062/1600/S2C1.png)  
+[![](/assets/images/S2C1.png)](http://photos1.blogger.com/blogger/5517/4062/1600/S2C1.png)  
 
   
 
@@ -116,7 +116,7 @@ Because I am a developer, I would rather spend my time actually writing code ins
   
 
   
-[![](images/S2C2.png)](http://photos1.blogger.com/blogger/5517/4062/1600/S2C2.png)  
+[![](/assets/images/S2C2.png)](http://photos1.blogger.com/blogger/5517/4062/1600/S2C2.png)  
 
   
 
@@ -126,7 +126,7 @@ The way to do that is to create a magic button that will automatically take my s
   
 
   
-[![](images/Enter.png)](http://photos1.blogger.com/blogger/5517/4062/1600/Enter.png)  
+[![](/assets/images/Enter.png)](http://photos1.blogger.com/blogger/5517/4062/1600/Enter.png)  
 
   
 
@@ -146,7 +146,7 @@ There is nothing stopping me from creating a wonderful project name Foo with the
   
 
   
-[![](images/ProjectFoo.png)](http://photos1.blogger.com/blogger/5517/4062/1600/ProjectFoo.png)  
+[![](/assets/images/ProjectFoo.png)](http://photos1.blogger.com/blogger/5517/4062/1600/ProjectFoo.png)  
 
   
 
@@ -156,7 +156,7 @@ Just as there is nothing wrong with this tree.
   
 
   
-[![](images/BadTree.png)](http://photos1.blogger.com/blogger/5517/4062/1600/BadTree.png)  
+[![](/assets/images/BadTree.png)](http://photos1.blogger.com/blogger/5517/4062/1600/BadTree.png)  
 
   
 
@@ -166,7 +166,7 @@ A dead tree can still provide a home for small critters and bugs but we want to 
   
 
   
-[![](images/ProjectBar.png)](http://photos1.blogger.com/blogger/5517/4062/1600/ProjectBar.png)  
+[![](/assets/images/ProjectBar.png)](http://photos1.blogger.com/blogger/5517/4062/1600/ProjectBar.png)  
 
   
 

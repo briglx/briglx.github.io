@@ -23,12 +23,12 @@ Now I know that I’m not alone in these feelings and many bright and talented d
 
   
 Starting up the application displays a stunning UI where the user can provide an entity name and click Render.  
-[![](images/CropperCapture%5B12%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/430923/CropperCapture%5B12%5D.png)  
+[![](/assets/images/CropperCapture%5B12%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/430923/CropperCapture%5B12%5D.png)  
 The application will inspect the SQL table and create the SQL scripts needed to create the CRUD stored procedures. One of the tricky things I had to do was check the field type to see if a size is required, like varchar(50).  
-[![](images/CropperCapture%5B13%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/58142/CropperCapture%5B13%5D.png)  
+[![](/assets/images/CropperCapture%5B13%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/58142/CropperCapture%5B13%5D.png)  
 Since I am really lazy, I decided to have the application generate test data and a script so I could run through and make sure the stored procedures worked all right. Based on the field type, the generated test data is created to match.  
-[![](images/CropperCapture%5B14%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/165904/CropperCapture%5B14%5D.png)  
+[![](/assets/images/CropperCapture%5B14%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/165904/CropperCapture%5B14%5D.png)  
 My favorite part of all of this is getting the code written for me. I really like Rocky Lhotka’s CSLA business objects. Especially the way he has all of the data access routines on the objects themselves.  
-[![](images/CropperCapture%5B15%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/691586/CropperCapture%5B15%5D.png)  
+[![](/assets/images/CropperCapture%5B15%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/691586/CropperCapture%5B15%5D.png)  
 Even thought this application does a lot for me already, you can probably see some areas for improvement. Most notably is the “Form1” in the title bar. I would also like to revamp the syntax highlighting engine. Right now it just looks for specific words to highlight. I think adding a parser would really add some value.  
 One other major improvement would be to add a template system similar to CodeSmith. Right now it doesn’t use templates to generate the code. This makes updates difficult. But it play-around code so I’m not too upset by that. One final big part would be to select a generic database. Once again I have it hard coded to point to my project’s database. Once I get all of these updates in, I think I will have a pretty neat little tool.

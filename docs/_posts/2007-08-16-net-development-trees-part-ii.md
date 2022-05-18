@@ -24,7 +24,7 @@ The following tools were used during the presentation and I'll go over how each 
 
 ### Sample Project
 
-Using Visual Studio 2005, I created a solution called Castor with several projects in it. The entire solution is in the nice development tree structure under the /castor/src/ folder. Here is what the solution looks like. [![](images/CropperCapture%5B7%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/210225/CropperCapture%5B7%5D.png)
+Using Visual Studio 2005, I created a solution called Castor with several projects in it. The entire solution is in the nice development tree structure under the /castor/src/ folder. Here is what the solution looks like. [![](/assets/images/CropperCapture%5B7%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/210225/CropperCapture%5B7%5D.png)
 
 ### First Step: Build
 
@@ -64,7 +64,7 @@ What I did was set up a special build configuration on the castro project called
 
 ### Build Type
 
-Setting up the AutomatedDebug configuration is pretty easy to do in Visual Studio 2005. Just click on Build -> Configuration Manager. [![](images/CropperCapture%5B8%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/45756/CropperCapture%5B8%5D.png)
+Setting up the AutomatedDebug configuration is pretty easy to do in Visual Studio 2005. Just click on Build -> Configuration Manager. [![](/assets/images/CropperCapture%5B8%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/45756/CropperCapture%5B8%5D.png)
 
 ### Go.bat
 
@@ -72,4 +72,4 @@ The last thing to do in order to get the project to build with a single click is
 
     1 @tools\\nant\\NAnt.exe -buildfile:Castor.build %\*
 
-And with that, we can open up a prompt at our project root and type **go**. We should get something like the following with a nice little 'Build Successful' at the end. [![](images/CropperCapture%5B10%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/999673/CropperCapture%5B10%5D.png) That does it for this installment. Next I'll dig into adding value to our build script by including auto unit testing.
+And with that, we can open up a prompt at our project root and type **go**. We should get something like the following with a nice little 'Build Successful' at the end. [![](/assets/images/CropperCapture%5B10%5D.png)](http://photos1.blogger.com/x/blogger/5517/4062/1600/999673/CropperCapture%5B10%5D.png) That does it for this installment. Next I'll dig into adding value to our build script by including auto unit testing.

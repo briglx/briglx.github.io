@@ -6,10 +6,10 @@ categories:
 tags: 
   - "apache"
   - "php"
-coverImage: "phpapache.jpg"
+cover: assets/images/phpapache.png
 ---
 
-[![phpapache](images/phpapache.jpg)](https://briglamoreaux.files.wordpress.com/2014/07/phpapache.jpg)
+[![phpapache](/assets/images/phpapache.jpg)](https://briglamoreaux.files.wordpress.com/2014/07/phpapache.jpg)
 
 I was trying to install a debugger for PHP and had trouble mostly because it turned out I had two different versions of PHP running on my machine. One I installed using homebrew and the other ... well I don't know how it got there.
 

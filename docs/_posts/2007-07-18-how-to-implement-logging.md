@@ -112,13 +112,13 @@ The first thing we'll want to setup is the logging aspect. This makes the Except
 
 Select your app node and choose to add the Logging and Instrumentation Application Block.
 
-[![AddBlock](images/addblock_thumb.png "AddBlock")](http://briglamoreaux.files.wordpress.com/2012/05/addblock.png)
+[![AddBlock](/assets/images/addblock_thumb.png "AddBlock")](http://briglamoreaux.files.wordpress.com/2012/05/addblock.png)
 
 The tool allows you to define categories, formatters, and sinks. Sinks are the final resting place for our messages. Sinks can be a flat file or an event log. Formatter are used to turn our message object into a plain text message. The category is where you define what happens to our message object when it is caught.
 
 I modify the Sinks section to have one sink for the Application Event Log.
 
-[![SinkSetup](images/sinksetup_thumb.png "SinkSetup")](http://briglamoreaux.files.wordpress.com/2012/05/sinksetup.png)
+[![SinkSetup](/assets/images/sinksetup_thumb.png "SinkSetup")](http://briglamoreaux.files.wordpress.com/2012/05/sinksetup.png)
 
 Modify the categories section to have the three categories defined during the implementation step
 
@@ -128,11 +128,11 @@ Modify the categories section to have the three categories defined during the im
 
 Notice how each category has a single destination. The destination tells Enterprise library to use the default Text Formatter and send it to the Application Event Log Sink.
 
-[![LoggingCategory](images/loggingcategory_thumb.png "LoggingCategory")](http://briglamoreaux.files.wordpress.com/2012/05/loggingcategory.png)
+[![LoggingCategory](/assets/images/loggingcategory_thumb.png "LoggingCategory")](http://briglamoreaux.files.wordpress.com/2012/05/loggingcategory.png)
 
 One last step in logging is to set up a default category. I like to set mine to default to Error.
 
-[![DefaultCategory](images/defaultcategory_thumb.png "DefaultCategory")](http://briglamoreaux.files.wordpress.com/2012/05/defaultcategory.png)
+[![DefaultCategory](/assets/images/defaultcategory_thumb.png "DefaultCategory")](http://briglamoreaux.files.wordpress.com/2012/05/defaultcategory.png)
 
 At this point your application should be able to use LogInformational(string message) and LogWarning(string message)with no problems. Setting up the exception handling will take care of the rest.
 
@@ -140,7 +140,7 @@ At this point your application should be able to use LogInformational(string mes
 
 Select your app node and choose to add the Exception Handling Application Block. Select the application block and add a new Exception Policy with the name Error. Add a new Exception Type to the policy that catches all Exceptions. Finally add a new Logging Handler.
 
-[![ErrorExceptionPolicy](images/errorexceptionpolicy_thumb.png "ErrorExceptionPolicy")](http://briglamoreaux.files.wordpress.com/2012/05/errorexceptionpolicy.png)
+[![ErrorExceptionPolicy](/assets/images/errorexceptionpolicy_thumb.png "ErrorExceptionPolicy")](http://briglamoreaux.files.wordpress.com/2012/05/errorexceptionpolicy.png)
 
 The configuration I use for the Logging Handler of the Error Exception Policy is:
 
@@ -150,13 +150,13 @@ The Warning exception policy is exactly like the Error but with the following va
 
 <table width="400" border="1" cellspacing="0" cellpadding="2"><tbody><tr><td valign="top" width="200">LogCategory</td><td valign="top" width="198">Warning</td></tr><tr><td valign="top" width="200">Priority</td><td valign="top" width="198">5</td></tr><tr><td valign="top" width="200">Severity</td><td valign="top" width="198">Warning</td></tr></tbody></table>
 
-[![WarningExceptionPolicy](images/warningexceptionpolicy_thumb.png "WarningExceptionPolicy")](http://briglamoreaux.files.wordpress.com/2012/05/warningexceptionpolicy.png)
+[![WarningExceptionPolicy](/assets/images/warningexceptionpolicy_thumb.png "WarningExceptionPolicy")](http://briglamoreaux.files.wordpress.com/2012/05/warningexceptionpolicy.png)
 
 With both exception policies setup and using the logging our ILogging class is fully functional. Now it is a simple configuration setting to turn on and off the different logging levels.
 
 Any value larger than the MinimumPriority will be logged. Anything less will not be logged, simple. The values of the categories are: Error-10, Warning-5, and Information-1. I like to set the MinimumPriority to 10 in production.
 
-[![MinimumPriority](images/minimumpriority_thumb.png "MinimumPriority")](http://briglamoreaux.files.wordpress.com/2012/05/minimumpriority.png)
+[![MinimumPriority](/assets/images/minimumpriority_thumb.png "MinimumPriority")](http://briglamoreaux.files.wordpress.com/2012/05/minimumpriority.png)
 
 #### Wrap Up
 

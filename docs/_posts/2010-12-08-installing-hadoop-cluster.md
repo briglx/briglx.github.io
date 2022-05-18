@@ -9,7 +9,7 @@ I have four VM machines in dev and I want to configure my own [hadoop](http://h
 
 # This is what the final setup will look like
 
-[![HadoopCluster-Dev](images/hadoopcluster-dev2.png)](http://briglamoreaux.files.wordpress.com/2010/12/hadoopcluster-dev2.png)
+[![HadoopCluster-Dev](/assets/images/hadoopcluster-dev2.png)](http://briglamoreaux.files.wordpress.com/2010/12/hadoopcluster-dev2.png)
 
 # Prework
 

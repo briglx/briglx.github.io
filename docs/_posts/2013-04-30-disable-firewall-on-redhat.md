@@ -7,10 +7,10 @@ tags:
   - "ec2"
   - "linux"
   - "redhat"
-coverImage: "firewall-e1367345805612.png"
+cover: assets/images/firewall-e1367345805612.png
 ---
 
-[![Firewall](images/firewall-e1367345805612.png)](http://briglamoreaux.files.wordpress.com/2013/04/firewall-e1367345805612.png) I just tried to deploy and test an application on EC2 running red hat. I configured the security group to allow port 8080, I could see the port was running with netstat
+[![Firewall](/assets/images/firewall-e1367345805612.png)](http://briglamoreaux.files.wordpress.com/2013/04/firewall-e1367345805612.png) I just tried to deploy and test an application on EC2 running red hat. I configured the security group to allow port 8080, I could see the port was running with netstat
 
 `$ sudo netstat -lntp
 

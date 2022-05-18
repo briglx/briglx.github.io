@@ -51,7 +51,7 @@ These steps are a mix of my adventure and my attempt to document how to setup ca
     - Install snmpwalk
         - After looking around I need to install net-snmp-utils. I added this to the initial installation items above. Lame.
     
-9. **Done!** [![](images/Cacti.png "Cacti")](http://127.0.0.1:4000/imgs/uploads/2011/03/Cacti.png)
+9. **Done!** [![](/assets/images/Cacti.png "Cacti")](http://127.0.0.1:4000/imgs/uploads/2011/03/Cacti.png)
 
 I'll configure cacti in another post. This was too much to get it installed.
 

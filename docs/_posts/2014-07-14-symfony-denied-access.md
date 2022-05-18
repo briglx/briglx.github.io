@@ -8,7 +8,7 @@ tags:
   - "nginx"
   - "php"
   - "symfony"
-coverImage: "sf-logo.png"
+cover: assets/images/sf-logo.png
 ---
 
 Moving my Symfony app to a QA server showed me how rude the server is. I could see the home page right after I copied the project to the new machine with not problem (except for modifying app.config.php and various file permission ownership issues). Nevertheless, the real problem came when I tried navigating to any other route besides the index. Each time I would get a 403 Access denied error.

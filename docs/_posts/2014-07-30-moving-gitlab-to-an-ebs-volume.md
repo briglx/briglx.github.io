@@ -8,7 +8,7 @@ tags:
   - "ec2"
   - "linux"
   - "ubuntu"
-coverImage: "gitlab_logo.png"
+cover: assets/images/gitlab_logo.png
 ---
 
  

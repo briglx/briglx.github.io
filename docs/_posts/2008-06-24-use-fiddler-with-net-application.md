@@ -12,7 +12,7 @@ I often need to watch communication between a web service and my application. Th
 
 Open Fiddler and click on Tools -> Fiddler Options. The Fiddler Options window will pop up and take note of Listen Port number under Proxy Settings. In this case the value is 8888.
 
-[![](images/CropperCapture%5B71%5D.jpg)](http://picasaweb.google.com/blamoreaux/BloggerPictures/photo?authkey=xF0ivtt8GuU#5215503748989006434)
+[![](/assets/images/CropperCapture%5B71%5D.jpg)](http://picasaweb.google.com/blamoreaux/BloggerPictures/photo?authkey=xF0ivtt8GuU#5215503748989006434)
 
 ### Update Web.Config
 

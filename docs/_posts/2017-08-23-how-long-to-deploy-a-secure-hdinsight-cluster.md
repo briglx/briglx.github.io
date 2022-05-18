@@ -8,7 +8,7 @@ tags:
 
 It takes a while to build a secure HDInsight cluster. In my case it was about an hour from start to finish.
 
-![SecureClusterDeployment](images/secureclusterdeployment.jpg)
+![SecureClusterDeployment](/assets/images/secureclusterdeployment.jpg)
 
 About half of the work was setting up the VNet and configuring the Domain Controllers. The HDInsight cluster took about 30 mins which his about normal.
 

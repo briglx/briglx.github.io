@@ -1,0 +1,180 @@
+---
+layout: default
+current: about
+title: About
+cover: false
+grouptype: author
+class: 'author-template'
+navigation: True
+label: Author
+---
+
+
+<!-- <img src="/assets/images/brig.jpg" alt="Brig's Profile Picture" width="100"/> -->
+<!-- 
+I’m a Cloud Solution Architect for Microsoft. I solve problems by being insatiably curious.
+
+> I believe the best solutions come from understanding the people at the heart of innovation. My expertise is discovering and explaining novel solutions with my rare perspective. 
+
+I have always enjoyed developing software and learning new technologies. I have a love of learning, a love for teaching, and plenty of curiosity to fill a pool.
+
+I’m a hands-on architect who enjoys coding and a passionate learner who quickly understands a vision and works with teams to deliver. I have leadership experience designing and developing product lines and company standards. I’ve been involved in architecting big data solutions to support Adaptive Learning and modeling student knowledge. I’ve lead research projects to operationalize emerging technologies with a published whitepaper in research around MongoDB and a patent pending in the area of Social Classroom Integration and Content Management. I enjoy sharing what I learn and have experience teaching wilderness survival skills. I was also a leader and teacher for immersive web development bootcamps where students learned hands-on skills building real world projects.
+
+I hold an MBA and a BS degree in information technology. As a continuous learner, I like to supplements my education with opencoursware from MIT and Stanford.
+
+When I’m not programming or reading something new, you can find me on the slopes following my true passion of skiing.
+
+Cloud Architect | Python Expert | Teacher | Speaker | Thought Leader | Microsoft -->
+
+
+<!-- #author  -->
+<!-- Everything inside the #author tags pulls data from the author -->
+
+{% for author in site.data.authors %}
+    {% if forloop.first %}
+    <header class="site-header outer {% if author[1].cover or page.cover %}" style="background-image: url({{ site.baseurl }}{% if author[1].cover %}{{ author[1].cover }}{% elsif page.cover %}{{ page.cover }}{% endif %}) {% else %}no-cover{% endif %}">
+        <div class="inner">
+            {% include site-nav.html %}
+            <div class="site-header-content">
+                {% if author[1].picture %}
+                    <img class="author-profile-image" src="{{ site.baseurl }}{{ author[1].picture }}" alt="{{ page.author }}" />
+                {% endif %}
+                <h1 class="site-title">{{ author[1].name }}</h1>
+                {% if author[1].bio %}
+                    <h2 class="author-bio">{{ author[1].bio }}</h2>
+                {% endif %}
+                <div class="author-meta">
+                    {% if author[1].location %}
+                        <div class="author-location">{{ author[1].location }} <span class="bull">&bull;</span></div>
+                    {% endif %}
+                    
+                    {% if author[1].url %}
+                        <a class="social-link social-link-wb" href="{{ author[1].url_full }}" target="_blank" rel="noopener">{% include website.html %}</a>
+                    {% endif %}
+                    {% if author[1].github %}
+                        <a class="social-link social-link-gh" href="https://github.com/{{ author[1].github }}" target="_blank" rel="noopener">{% include github.html %}</a>
+                    {% endif %}
+                    {% if author[1].twitter %}
+                        <a class="social-link social-link-tw" href="https://twitter.com/{{ author[1].twitter }}" target="_blank" rel="noopener">{% include twitter.html %}</a>
+                    {% endif %}
+                    {% if author[1].facebook %}
+                        <a class="social-link social-link-fb" href="https://facebook.com/{{ author[1].facebook }}" target="_blank" rel="noopener">{% include facebook.html %}</a>
+                    {% endif %}
+                    <a class="social-link social-link-rss" href="https://feedly.com/i/subscription/feed/{{ site.url }}{{ site.baseurl }}author/{{ page.author }}/feed.xml" target="_blank" rel="noopener">{% include rss.html %}</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% endif %}
+{% endfor %}
+
+
+<!-- /author -->
+
+<!-- The main content area -->
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <div class="post-feed">
+            <!-- The tag below includes the markup for each post - partials/post-card.hbs -->
+            <article class="post-card {{ page.class }}{% unless post.cover %} no-image{% endunless %}">
+                
+                <div class="post-card-content">
+                    <div class="post-card-content-link">
+                        <header class="post-card-header">
+                            
+                            <span class="post-card-tags"></span>
+                                    
+        
+                            <h2 class="post-card-title"></h2>
+                        </header>
+                        <section class="post-card-excerpt">
+                            
+                            <p>I’m a Cloud Solution Architect for Microsoft. I solve problems by being insatiably curious.</p>
+    
+                            <blockquote>
+                            <p>I believe the best solutions come from understanding the people at the heart of innovation. My expertise is discovering and explaining novel solutions with my rare perspective.</p>
+                            </blockquote>
+                            
+                            <p>I have always enjoyed developing software and learning new technologies. I have a love of learning, a love for teaching, and plenty of curiosity to fill a pool.</p>
+                            
+                            <p>I’m a hands-on architect who enjoys coding and a passionate learner who quickly understands a vision and works with teams to deliver. I have leadership experience designing and developing product lines and company standards. I’ve been involved in architecting big data solutions to support Adaptive Learning and modeling student knowledge. I’ve lead research projects to operationalize emerging technologies with a published whitepaper in research around MongoDB and a patent pending in the area of Social Classroom Integration and Content Management. I enjoy sharing what I learn and have experience teaching wilderness survival skills. I was also a leader and teacher for immersive web development bootcamps where students learned hands-on skills building real world projects.</p>
+                            
+                            <p>I hold an MBA and a BS degree in information technology. As a continuous learner, I like to supplements my education with opencoursware from MIT and Stanford.</p>
+                            
+                            <p>When I’m not programming or reading something new, you can find me on the slopes following my true passion of skiing.</p>
+                            
+                            <table>
+                            <tbody>
+                                <tr>
+                                <td>Cloud Architect</td>
+                                <td>Python Expert</td>
+                                <td>Teacher</td>
+                                <td>Speaker</td>
+                                <td>Thought Leader</td>
+                                <td>Microsoft</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                            
+                        </section>
+                    </div>
+                    
+                </div>
+            </article>
+        </div>
+
+        <div class="site-wrapper">
+            <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+            <p>I’m a Cloud Solution Architect for Microsoft. I solve problems by being insatiably curious.</p>
+    
+            <blockquote>
+            <p>I believe the best solutions come from understanding the people at the heart of innovation. My expertise is discovering and explaining novel solutions with my rare perspective.</p>
+            </blockquote>
+            
+            <p>I have always enjoyed developing software and learning new technologies. I have a love of learning, a love for teaching, and plenty of curiosity to fill a pool.</p>
+            
+            <p>I’m a hands-on architect who enjoys coding and a passionate learner who quickly understands a vision and works with teams to deliver. I have leadership experience designing and developing product lines and company standards. I’ve been involved in architecting big data solutions to support Adaptive Learning and modeling student knowledge. I’ve lead research projects to operationalize emerging technologies with a published whitepaper in research around MongoDB and a patent pending in the area of Social Classroom Integration and Content Management. I enjoy sharing what I learn and have experience teaching wilderness survival skills. I was also a leader and teacher for immersive web development bootcamps where students learned hands-on skills building real world projects.</p>
+            
+            <p>I hold an MBA and a BS degree in information technology. As a continuous learner, I like to supplements my education with opencoursware from MIT and Stanford.</p>
+            
+            <p>When I’m not programming or reading something new, you can find me on the slopes following my true passion of skiing.</p>
+            
+            <table>
+            <tbody>
+                <tr>
+                <td>Cloud Architect</td>
+                <td>Python Expert</td>
+                <td>Teacher</td>
+                <td>Speaker</td>
+                <td>Thought Leader</td>
+                <td>Microsoft</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+            
+                    <!-- Previous/next page links - displayed on every page -->
+                    
+            
+                    <!-- The footer at the very bottom of the screen -->
+                    <footer class="site-footer outer">
+                        <div class="site-footer-content inner">
+                            <section class="copyright"><a href="http://localhost:4000/">Brig Lamoreaux</a> © 2022</section>
+                            <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &amp;
+                                <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                                <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
+                            <nav class="site-footer-nav">
+                                <a href="/">Latest Posts</a>
+                                <a href="https://facebook.com/ghost" target="_blank" rel="noopener">Facebook</a>
+                                <a href="https://twitter.com/tryghost" target="_blank" rel="noopener">Twitter</a>
+                                <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                            </nav>
+                        </div>
+                    </footer>
+            
+                </div>
+
+    </div>
+</main>
+

@@ -15,7 +15,7 @@ Running the test verified what I thought was happening. Somewhere the code is ca
 
 ﻿﻿I ran a profiler on the code and found that 60% of the time was being spent on json serialization.
 
-[![](images/CropperCapture86.png "Profiler")](http://127.0.0.1:4000/imgs/uploads/2010/12/CropperCapture86.png)
+[![](/assets/images/CropperCapture86.png "Profiler")](http://127.0.0.1:4000/imgs/uploads/2010/12/CropperCapture86.png)
 
 So I swapped out to a different [JSON serializer](http://json.codeplex.com/) an re-ran the test.
 
@@ -23,7 +23,7 @@ So I swapped out to a different [JSON serializer](http://json.codeplex.com/) an 
 
 The first part of the graph could be ![](http://chart.apis.google.com/chart?cht=tx&chl=O(n^2) "Quadratic Growth") and the second looks linear ![](http://chart.apis.google.com/chart?cht=tx&chl=O(n) "Linear Growth"). The profiler showed an improvement. Now only 41% of the time is spent in serializing. But still it's not what I'm looking for. I want at least linear time.
 
-[![](images/CropperCapture88.png "Newtonsoft JSon Serializer")](http://127.0.0.1:4000/imgs/uploads/2010/12/CropperCapture88.png)
+[![](/assets/images/CropperCapture88.png "Newtonsoft JSon Serializer")](http://127.0.0.1:4000/imgs/uploads/2010/12/CropperCapture88.png)
 
 Since it looks like it may be the serializer, I switch caused the serializer to just return a constant value each time.
 
@@ -31,7 +31,7 @@ Since it looks like it may be the serializer, I switch caused the serializer to 
 
 Whala! There is the linear time I wanted. Notice the hops on the line when something took a little longer than usual. I would guess that is the hash table resizing. Let's see where the profiler says the code is spending its time. Now all the time is spent calculating the KeyHash for the property
 
-[![](images/CropperCapture1.png "NVertiecies Constant Serializer Profile Output")](http://127.0.0.1:4000/imgs/uploads/2010/12/CropperCapture1.png)
+[![](/assets/images/CropperCapture1.png "NVertiecies Constant Serializer Profile Output")](http://127.0.0.1:4000/imgs/uploads/2010/12/CropperCapture1.png)
 
 Here are how they compare to each other
 
@@ -45,7 +45,7 @@ I still don't feel comfortable with the serializer as the culprit for the qua
 
 The profile tells me most of the time is in the Serializer. Hmmm. I have good growth and am using a serializer. Perhaps the serializer isn't the issue.
 
-[![](images/CropperCapture2.png "NPropertyTest Default Serializer Profiler")](http://127.0.0.1:4000/imgs/uploads/2010/12/CropperCapture2.png)
+[![](/assets/images/CropperCapture2.png "NPropertyTest Default Serializer Profiler")](http://127.0.0.1:4000/imgs/uploads/2010/12/CropperCapture2.png)
 
 Let's see the Newtonsoft serializer.
 
@@ -53,13 +53,13 @@ Let's see the Newtonsoft serializer.
 
 Same growth, and most of the time was spent in the Serializer. Hmmm.
 
-![](images/CropperCapture89.png "Newtonsoft and NProperty")
+![](/assets/images/CropperCapture89.png "Newtonsoft and NProperty")
 
 Let's see with no serializer.
 
 ![](http://chart.apis.google.com/chart?chxt=x,y&chs=300x225&cht=s&chds=0,100,0,38,0,100&chd=t:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100|0,1,1,1,2,2,2,3,3,3,4,4,5,5,5,6,6,7,7,7,8,8,9,9,9,10,10,10,11,11,12,12,12,13,13,13,14,14,14,15,15,16,16,16,17,17,18,18,18,19,19,19,20,20,21,21,22,22,22,23,23,23,24,24,25,25,26,26,26,27,27,27,28,28,28,29,29,29,30,30,30,31,31,32,32,32,33,33,33,34,34,35,35,35,36,36,36,37,37,37,38|84,23,69,81,47,94,60,93,64,54 "NPropertyTest No Serializer")
 
-[![](images/CropperCapture3.png "NPropertyTest No Serializer Profiler")](http://127.0.0.1:4000/imgs/uploads/2010/12/CropperCapture3.png)
+[![](/assets/images/CropperCapture3.png "NPropertyTest No Serializer Profiler")](http://127.0.0.1:4000/imgs/uploads/2010/12/CropperCapture3.png)
 
 Together they look like this
 

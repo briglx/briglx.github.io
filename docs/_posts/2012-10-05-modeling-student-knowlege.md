@@ -17,9 +17,9 @@ I could choose to model the intelligence of this student by first claiming tha
 
 ### Network Effect
 
-[![Network Effect](images/networkview.png "Network Data")](http://briglamoreaux.files.wordpress.com/2012/10/networkview.png)When I observe all student in all classes, I suddenly have access to a lot more information the help determine the intelligence of the student in my model. Specifically I have additional information about the course the student did poor in.
+[![Network Effect](/assets/images/networkview.png "Network Data")](http://briglamoreaux.files.wordpress.com/2012/10/networkview.png)When I observe all student in all classes, I suddenly have access to a lot more information the help determine the intelligence of the student in my model. Specifically I have additional information about the course the student did poor in.
 
-[![](images/networkcourseview.png "Course Detail in Network")](http://briglamoreaux.files.wordpress.com/2012/10/networkcourseview.png)Looking at the entire network, I have additional evidence that shows course 2 is a very easy course because all the other students did well. What does this additional information really give me though?
+[![](/assets/images/networkcourseview.png "Course Detail in Network")](http://briglamoreaux.files.wordpress.com/2012/10/networkcourseview.png)Looking at the entire network, I have additional evidence that shows course 2 is a very easy course because all the other students did well. What does this additional information really give me though?
 
 ### Local vs Global Scope
 

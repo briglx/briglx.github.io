@@ -7,7 +7,7 @@ tags:
   - "rdf"
   - "semantic"
   - "skos"
-coverImage: "ontologiesbasics.png"
+cover: assets/images/ontologiesbasics.png
 ---
 
 New projects often introduce new terms which can sometimes be used in different ways between team members. Especial when there are multiple teams. This article will clarify the meaning for the following terms and help explain how they are related to one another.

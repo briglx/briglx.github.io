@@ -11,19 +11,19 @@ This first thing is to download the library from Microsoft. Do a search to get t
   
 I'll be using the 2.0 framework in this example. I've set up a project and set a reference to Microsoft.Practices.EnterpriseLibrary.Common and Microsoft.Practices.EnterpriseLibrary.Data. That should get us going.  
   
-[![](images/CropperCapture%5B17%5D.Png)](http://bp3.blogger.com/_io6q_2NOAVQ/RX3CcLi48sI/AAAAAAAAAAM/Xz17E5dWTPI/s1600-h/CropperCapture%5B17%5D.Png)  
+[![](/assets/images/CropperCapture%5B17%5D.Png)](http://bp3.blogger.com/_io6q_2NOAVQ/RX3CcLi48sI/AAAAAAAAAAM/Xz17E5dWTPI/s1600-h/CropperCapture%5B17%5D.Png)  
   
 The next step is the start up the EntLibConfig.exe and select File - Open Application and select the app.config file for our project. At first glance, the configuration tool is not at all intuitive. But if you are lucky, you will have a node called Data Access Application Block. If not, then just select your app node and choose to add the Data Application Block manually.  
   
-[![](images/CropperCapture%5B23%5D.Png)](http://bp0.blogger.com/_io6q_2NOAVQ/RX3EDbi48tI/AAAAAAAAAAU/7k_J_0WFgFA/s1600-h/CropperCapture%5B23%5D.Png)  
+[![](/assets/images/CropperCapture%5B23%5D.Png)](http://bp0.blogger.com/_io6q_2NOAVQ/RX3EDbi48tI/AAAAAAAAAAU/7k_J_0WFgFA/s1600-h/CropperCapture%5B23%5D.Png)  
   
 The vital piece of the Data Application Block is the Connection String setting. I modified the default LocalSqlServer connection to have the settings I need. First I'll change the Provider name for an Oracle Client connection. Unfortunately the tool isn't smart enough to set default connection string values for an oracle connection so you have to manually add, edit, or remove the default nodes under the connection string.  
   
-[![](images/CropperCapture%5B26%5D.Png)](http://bp3.blogger.com/_io6q_2NOAVQ/RX3GcLi48uI/AAAAAAAAAAc/41EWb-VN7D8/s1600-h/CropperCapture%5B26%5D.Png)  
+[![](/assets/images/CropperCapture%5B26%5D.Png)](http://bp3.blogger.com/_io6q_2NOAVQ/RX3GcLi48uI/AAAAAAAAAAc/41EWb-VN7D8/s1600-h/CropperCapture%5B26%5D.Png)  
   
 Once you've updated the connection string with the correct values, be sure to select the connection string as the default connection.  
   
-[![](images/CropperCapture%5B29%5D.Png)](http://bp3.blogger.com/_io6q_2NOAVQ/RX3LDLi48vI/AAAAAAAAAAk/5aK3qMdBf2I/s1600-h/CropperCapture%5B29%5D.Png)  
+[![](/assets/images/CropperCapture%5B29%5D.Png)](http://bp3.blogger.com/_io6q_2NOAVQ/RX3LDLi48vI/AAAAAAAAAAk/5aK3qMdBf2I/s1600-h/CropperCapture%5B29%5D.Png)  
   
 Save and close the tool. Going back to the application we can see that the app.config was updated with our modifications.  
   
