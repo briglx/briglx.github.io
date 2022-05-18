@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Scientific Process"
 date: "2010-09-22"
 ---

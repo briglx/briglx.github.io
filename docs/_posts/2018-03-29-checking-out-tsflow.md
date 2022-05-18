@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Checking out TSLearn"
 date: "2018-03-29"
 ---
@@ -11,7 +17,7 @@ I'm toying around with my new dashcam videos and thought I would try to build a 
 - Graphics Card GeForce 900M Series (Notebooks)
     - GeForce 940M (1 GB)
     - 5.0 Compute Capability
-- Windows 10 x86\_64
+- Windows 10 x86_64
 - Python 2.7.14 Anaconda 5.1
 - CUDA 9.0
 - cuDNN v7.1.2 (Mar 21, 2018), for CUDA 9.0
@@ -21,7 +27,7 @@ TFLearn requires TensorFlow
 **Installing TensorFlow - Prerequisites**
 
 - CUDA® Toolkit 9.0.
-    - Base Installer cuda\_9.0.176\_win10\_network.exe
+    - Base Installer cuda_9.0.176_win10_network.exe
     - Patch 1 (Released Jan 25, 2018)
     - Patch 3 (Released Mar 5, 2018)
 - cuDNN v7.0
@@ -34,8 +40,8 @@ Step
 
 Check for valid installation
 
-```
-$> nvcc --version
+```bash
+nvcc --version
 
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2017 NVIDIA Corporation
@@ -45,8 +51,8 @@ Cuda compilation tools, release 9.0, V9.0.176
 
 Build Projects and run device query
 
-```
-$> deviceQuery
+```bash
+deviceQuery
 
 deviceQuery Starting...
 
@@ -101,14 +107,18 @@ Installed Download cuDNN v7.1.2 (Mar 21, 2018), for CUDA 9.0
 
 Copied files from zip to
 
-\\cuda\\bin\\cudnn64\_7.dll to C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v9.1\\bin. \\cuda\\ include\\cudnn.h to C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v9.1\\include. \\cuda\\lib\\x64\\cudnn.lib to C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v9.1\\lib\\x64.
+```dos
+\cuda\bin\cudnn64_7.dll to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin. 
+\cuda\include\cudnn.h to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include. 
+\cuda\lib\x64\cudnn.lib to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64.
+```
 
 ## Install Python 3
 
 Tensor Flow requires python three. Use conda to create a new environment
 
-```
-$> conda create -n py36 python=3.6 anaconda
+```bash
+conda create -n py36 python=3.6 anaconda
 
 # To activate this environment, use:
 # > activate py36
@@ -116,9 +126,9 @@ $> conda create -n py36 python=3.6 anaconda
 # To deactivate an active environment, use:
 # > deactivate
 
-$> activate py36
+activate py36
 
-$> conda install pip
+conda install pip
 ```
 
 ## Install TSLearn
@@ -129,11 +139,11 @@ pip install tflearn
 
 Must use CUDA 9.0 NOT 9.1
 
-> ImportError: Could not find 'cudart64\_90.dll'. TensorFlow requires that this DLL be installed in a directory that is named in your %PATH% environment variable. Download and install CUDA 9.0 from this URL: [https://developer.nvidia.com/cuda-toolkit](https://developer.nvidia.com/cuda-toolkit)
+> ImportError: Could not find 'cudart64_90.dll'. TensorFlow requires that this DLL be installed in a directory that is named in your %PATH% environment variable. Download and install CUDA 9.0 from this URL: [https://developer.nvidia.com/cuda-toolkit](https://developer.nvidia.com/cuda-toolkit)
 
 ## **References**
 
-- https://www.tensorflow.org/install/install\_windows
+- Tensor Flow on Windows [https://www.tensorflow.org/install/install_windows](https://www.tensorflow.org/install/install_windows)
 - Cudu Installation [http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/](http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/)
-- Cudo Developer Toolkit [https://developer.nvidia.com/cuda-downloads?target\_os=Windows&target\_arch=x86\_64&target\_version=10&target\_type=exenetwork](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exenetwork)
+- Cudo Developer Toolkit [https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exenetwork](https://developer.nvidia.com/cuda-downloads?target_os=Windows&target_arch=x86_64&target_version=10&target_type=exenetwork)
 - cuDNN installation [http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-windowshttps://developer.nvidia.com/cudnn](http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-windows)

@@ -1,9 +1,14 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Proxy Node through nginx"
 date: "2012-01-11"
-categories: 
+tags:
   - "software"
-tags: 
   - "nginx"
   - "nodejs"
 ---
@@ -22,20 +27,50 @@ Despite my own lack of understanding, having nginx in front will be useful if I 
     
     </li
 2. Forward request to node
-    - Edit nginx config at /opt/nginx/conf/nginx.conf
-    `worker\_processes 1;
-    
-    error\_log /var/log/nginx/error.log notice;
-    
-    events { worker\_connections 1024; }
-    
-    http { include mime.types; default\_type application/octet-stream; access\_log /var/log/nginx/access.log; sendfile on; keepalive\_timeout 65; # Define the node service upstream node\_service { server 127.0.0.1:9451; }
-    
-    server { listen 80; server\_name localhost;
-    
-    \# Proxy traffic to node service location / { # add proxy headers proxy\_set\_header X-Real-IP $remote\_addr; proxy\_set\_header X-Forwarded-For $proxy\_add\_x\_forwarded\_for; proxy\_set\_header Host $http\_host; proxy\_set\_header X-NginX-Proxy true; # Here is where node service is specified proxy\_pass http://node\_service/; proxy\_redirect off; }`
+    - Edit nginx config at 
+    ```bash
+    vi /opt/nginx/conf/nginx.conf
 
-### References
+    worker_processes  1;
+ 
+    error_log  /var/log/nginx/error.log notice;
+    
+    events {
+        worker_connections  1024;
+    }
+    
+    http {
+        include       mime.types;
+        default_type  application/octet-stream;
+        access_log    /var/log/nginx/access.log;
+        sendfile      on;
+        keepalive_timeout  65;
+        
+        # Define the node service 
+        upstream node_service {
+            server 127.0.0.1:9451;
+        }
+    
+        server {
+            listen       80;
+            server_name  localhost;
+    
+            # Proxy traffic to node service
+            location / {
+                # add proxy headers
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header Host $http_host;
+                proxy_set_header X-NginX-Proxy true;
+                # Here is where node service is specified
+                proxy_pass http://node_service/;
+                proxy_redirect off;
+            }
+        }
+    }
+    ```
+
+## References
 
 - [Proxy node with nginx](http://pau.calepin.co/how-to-deploy-a-nodejs-application-with-monit-nginx-and-bouncy.html)
 - [Install NGinx](http://library.linode.com/web-servers/nginx/installation/debian-6-squeeze)

@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Setup Password-less SSH Login"
 date: "2010-12-10"
 ---
@@ -8,8 +14,16 @@ I hate having to login to remote machines. Since SSH can be configured with publ
 1. Create remote user.
     - If you are going to log in with a different user, then you'll need to create a local account.
     - This command will prompt you for details about the new user. Just follow the prompts.
-    - Replace **remote-user** with the name of the user you will use to connect to the remote machine.\[sourcecode language="bash"\] user@local:~$ sudo adduser remote-user \[/sourcecode\]
+    - Replace `remote-user` with the name of the user you will use to connect to the remote machine.
+    ```bash
+    user@local:~$ sudo adduser remote-user
+    ```
 2. Generate an SSH key for the new remote user.
-    - This setups a passwordless key.\[sourcecode language="bash"\] user@local:~$ su - remoteuser remoteuser@local:~$ ssh-keygen -t rsa -P "" \[/sourcecode\]
+    - This setups a passwordless key.
+    ```bash
+    user@local:~$ su - remoteuser remoteuser@local:~$ ssh-keygen -t rsa -P ""
+    ```
 3. Copy public key to remote machine.
-\[sourcecode language="bash"\] remoteuser@local:~$ ssh-copy-id -i $HOME/.ssh/id\_rsa.pub remoteuser@remotemachine \[/sourcecode\]
+    ```bash
+    remoteuser@local:~$ ssh-copy-id -i $HOME/.ssh/id_rsa.pub remoteuser@remotemachine 
+    ```

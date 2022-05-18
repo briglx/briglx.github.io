@@ -10,7 +10,6 @@ tags:
   - "linux"
   - "ops"
   - "postgresql"
-categories: 
   - "software"
 class: post-template
 subclass: 'post'
@@ -27,8 +26,8 @@ The first architecture is really basic. Just two vms. One with confluence instal
 
 - App Server
     - Confluence 5.9.6
-    - `<CONFLUENCE\_HOME> = /var/atlassian/application-data/confluence/`
-    - `<CONFLUENCE\_INSTALLATION> = /opt/atlassian/confluence/`
+    - `<CONFLUENCE_HOME> = /var/atlassian/application-data/confluence/`
+    - `<CONFLUENCE_INSTALLATION> = /opt/atlassian/confluence/`
 -  Database
     - Ubuntu 14.04 64-bit
     - PostgreSQL 9.3.12

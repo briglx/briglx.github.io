@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "A Tour of JMeter - Part 1"
 date: "2011-02-17"
 tags: 
@@ -9,20 +15,24 @@ I recently had a task to test the performance between two different solutions. A
 
 This tour is broken into several sections
 
-- [Installing and Recording](/wordpress/?p=317) (This post)
-- [First Test Run](/wordpress/?p=363)
+- [Installing and Recording]({% post_url 2011-02-17-a-tour-of-jmeter-part-1 %}) (This post)
+- [First Test Run]({% post_url 2011-03-22-a-tour-of-jmeter-part-2 %})
 - Improving the Test Run
 - Advance Techniques
 
-### Install
+## Install
 
 You can quickly start recording web interactions in less than 10 min with the tool. Run these commands in your console.
 
-\[code language="bash"\] $ wget http://apache.opensourceresources.org//jakarta/jmeter/binaries/jakarta-jmeter-2.4.tgz $ tar zxvf jakarta-jmeter-2.4.tgz $ cd jakarta-jmeter-2.4 $ bin/jmeter`
+```bash
+wget http://apache.opensourceresources.org//jakarta/jmeter/binaries/jakarta-jmeter-2.4.tgz 
+tar zxvf jakarta-jmeter-2.4.tgz 
+cd jakarta-jmeter-2.4 $ bin/jmeter
+``` 
 
 Bam! That fast.
 
-### Record
+## Record
 
 When JMeter starts, there are two nodes for you to play with.
 
@@ -30,28 +40,22 @@ When JMeter starts, there are two nodes for you to play with.
 
 Recording is just configuring JMeter to listen to the browser and configuring the browser to send info to JMeter.
 
-1. Add A Proxy in JMeter
+- Add A Proxy in JMeter
+  - Right Click on the Workbench and select **Non-Test Element**
+  - Select **HTTP Proxy Server**
+  
+  You can configure the Proxy Server different ways. Just stick to the defaults for now.
+- Add a Place to capture the recording
+  - Right Click on the Workbench and select **Logic Controller**
+  - Select **Recording Controller**
 
-- Right Click on the Workbench and select **Non-Test Element**
-- Select **HTTP Proxy Server**
+  You should now have two elements. ![Record1](/assets/images/record1.png)
+- Configure the Browser to Record
+  In FireFox this is done with Edit -> Preferences -> Advance -> Network -> Settings -> Manual Proxy Configuration.
 
-You can configure the Proxy Server different ways. Just stick to the defaults for now.
+- Record Something
+  - Navigate to [JMeter User Manual](http://jakarta.apache.org/jmeter/usermanual/index.html)
 
-4. Add a Place to capture the recording
-
-- Right Click on the Workbench and select **Logic Controller**
-- Select **Recording Controller**
-
-You should now have two elements. [![](/assets/images/Record1.png "Record1")](http://127.0.0.1:4000/imgs/uploads/2011/02/Record1.png)
-
-7. Configure the Browser to Record
-
-In FireFox this is done with Edit -> Preferences -> Advance -> Network -> Settings -> Manual Proxy Configuration.
-
-9. Record Something
-
-- Navigate to [JMeter User Manual](http://jakarta.apache.org/jmeter/usermanual/index.html)
-
-JMeter now has your actions recorded [![](/assets/images/Record2.png "Record2")](http://127.0.0.1:4000/imgs/uploads/2011/02/Record2.png)
+  JMeter now has your actions recorded ![Record2](/assets/images/record2.png)
 
 That's it. You have install, configured and used JMeter to record some browser actions. Next we'll go into running what was recorded.

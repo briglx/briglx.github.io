@@ -1,9 +1,14 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Sentiment Analysis"
 date: "2013-03-26"
-categories: 
+tags:
   - "software"
-tags: 
   - "machine-learning"
   - "nltk"
   - "python"

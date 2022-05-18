@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "The Cloud is Cool"
 date: "2011-05-12"
 tags: 
@@ -10,14 +16,14 @@ I've known about Amazon EC2 service for a while. I've really been interested in 
 
 I thought I would move my blog to amazon. I found a [great guide](http://cykod.com/blog/post/2010-09-blogging-in-the-cloud-scaling-wordpress3) that I more or less followed. The only places where I deviated were due to me using a single micro instance and the bitnami AMI. But wait, what is a micro instance and an AMI. These were some of the many terms I learned today.
 
-### Basic Concepts
+## Basic Concepts
 
 - VM hosted remotely on Amazon servers
 - Access to more storage like S3
 - Ability to pick server profile (Small, medium, large)
 - ect.
 
-### New Concepts
+## New Concepts
 
 AMI Amazon Machine Image.
 

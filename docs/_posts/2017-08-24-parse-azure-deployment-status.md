@@ -1,9 +1,14 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Parse Azure Deployment Status"
 date: "2017-08-24"
-categories: 
-  - "software"
 tags: 
+  - "software"
   - "azure"
   - "python"
 ---

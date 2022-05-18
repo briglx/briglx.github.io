@@ -51,6 +51,27 @@ There is a [known issue](https://stackoverflow.com/questions/55921442/how-to-fix
 Followed [migration instructions](https://www.sitepoint.com/how-to-migrate-to-gulp-4/)
 
 
+**Replace special Chars**
+The import applied a `\` to some special characters like `\=` 
+
+The full list was:
+```
+\_ \[ \] \\ \> \= \# \- \* \" \tick \* \.
+```
+
+I use the following regex to find where they might be
+`\\[^A-Za-z0-9]+`
+
+**Install MathJax**
+Some of my post use LaTex so I need to render it. 
+MathJax is a JavaScript library that allows this
+
+```bash
+git clone https://github.com/mathjax/MathJax.git mj-tmp
+mv mj-tmp/es5 <path-to-server-location>/mathjax
+rm -rf mj-tmp
+```
+
 **GitHub Action**
 
 The Jasper2 solution uses `helaili/jekyll-action@v2` to build and deploy the site.

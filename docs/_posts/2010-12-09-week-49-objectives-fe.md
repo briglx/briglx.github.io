@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Week 49 Objectives FE"
 date: "2010-12-09"
 tags: 

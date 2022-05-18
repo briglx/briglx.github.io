@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Keeping the Blog Alive"
 date: "2007-07-02"
 tags: 

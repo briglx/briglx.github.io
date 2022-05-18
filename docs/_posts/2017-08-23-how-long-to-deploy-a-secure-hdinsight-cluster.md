@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "How Long to Deploy a Secure HDInsight Cluster"
 date: "2017-08-23"
 tags: 

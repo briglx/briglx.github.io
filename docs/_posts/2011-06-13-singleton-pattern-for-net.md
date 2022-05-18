@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Singleton Pattern for .NET"
 date: "2011-06-13"
 ---
@@ -9,6 +15,6 @@ Jon Skeet's [singleton article](http://csharpindepth.com/Articles/General/Single
 
 Microsoft has a [great article](http://msdn.microsoft.com/en-us/library/ff650316.aspx) that goes a little deeper in some areas but doesn’t talk too much about Lazy loading.
 
-Finally the folks at dofactory give a [direct implementation](http://www.dofactory.com/Patterns/PatternSingleton.aspx#_self1) from the “Design Patterns” book which each other article references. The dofactory article gives a real world example of a singleton in use and also tries to show how .net can be used to simplify the pattern.
+Finally the folks at dofactory give a [direct implementation](http://www.dofactory.com/Patterns/PatternSingleton.aspx#_self1) from the "Design Patterns" book which each other article references. The dofactory article gives a real world example of a singleton in use and also tries to show how .net can be used to simplify the pattern.
 
 Out of all three articles, I think [Jon Skeet's](http://csharpindepth.com/Articles/General/Singleton.aspx) does the best job of explaining the why behind the pattern for the language.

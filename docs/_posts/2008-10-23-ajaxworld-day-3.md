@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "AjaxWorld - Day 3"
 date: "2008-10-23"
 tags: 
@@ -25,7 +31,7 @@ A few people got their feelings hurt when [Yehuda Katz](http://www.yehudakatz.co
 - Use the Addon .listener, .intercept to bind events.
 - Bind to a higher element than lots of lower elements
 - Use Event Messaging
-- Think in High Level Events. Instead of e.keycode == 38 do .trigger('uparrow\_clicked')
+- Think in High Level Events. Instead of e.keycode == 38 do .trigger('uparrow_clicked')
 - See LiveQuery. This allows you to bind events to all DIV even if they are not on the page yet. Useful for dynamic text via a widget
 - See
 

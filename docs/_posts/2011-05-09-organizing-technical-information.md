@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Organizing Technical Information"
 date: "2011-05-09"
 ---
@@ -9,13 +15,13 @@ This checklist includes items that an Architect should be responsible for when c
 
 Items include:
 
-### General
+## General
 
 - Team Contact List
 - Calendar
 - Business need
 
-### Architecture
+## Architecture
 
 Captures the architecture and decision process of the service
 
@@ -41,7 +47,7 @@ Captures the architecture and decision process of the service
     - Logs
     - Profiling
 
-### Developer Documents
+## Developer Documents
 
 - Project Source Control
 - Project Backlog
@@ -53,7 +59,7 @@ Testing
 - Test Data
 - Load Testing Results
 
-### Service API
+## Service API
 
 - Description
 - Wsdl Location (version X)

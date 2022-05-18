@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Configure SSH"
 date: "2011-09-30"
 tags: 
@@ -16,16 +22,16 @@ I recently set up a few new servers and needed to allow other developers access.
     
     `sudo vi /etc/sudoers
     
-    \# Add this line to the sodoers file bbdiddle ALL=(ALL) NOPASSWD:ALL`
+    # Add this line to the sodoers file bbdiddle ALL=(ALL) NOPASSWD:ALL`
     
 - Enable ssh
     
-    `sudo vi /etc/ssh/sshd\_config
+    `sudo vi /etc/ssh/sshd_config
     
-    \# Change to yes to allow ssh PasswordAuthentication yes`
+    # Change to yes to allow ssh PasswordAuthentication yes`
     
 - Restart ssh
     
     `sudo /etc/init.d/ssh restart
     
-    \# Redhat sudo service sshd restart`
+    # Redhat sudo service sshd restart`

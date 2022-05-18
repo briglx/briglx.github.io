@@ -1,7 +1,13 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Week 50 Objectives FE"
 date: "2010-12-14"
-categories: 
+tags:
   - "objectives"
 ---
 

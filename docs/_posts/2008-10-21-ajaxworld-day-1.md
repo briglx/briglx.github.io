@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "AjaxWorld - Day 1"
 date: "2008-10-21"
 tags: 

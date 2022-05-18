@@ -1,9 +1,14 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Downgrading Node"
 date: "2012-02-21"
-categories: 
+tags:
   - "software"
-tags: 
   - "nodejs"
 ---
 

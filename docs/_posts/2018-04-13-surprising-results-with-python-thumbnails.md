@@ -1,12 +1,15 @@
 ---
 layout: post
 current: post
-cover: /assets/images/comparepythonthumbnailsfeature.png
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
+cover: assets/images/comparepythonthumbnailsfeature.png
 title: "Surprising Results with Python Thumbnails"
 date: "2018-04-13"
-categories: 
-  - "software"
 tags: 
+  - "software"
   - "python"
 ---
 
@@ -23,7 +26,7 @@ I found five different ways to do it with a few surprising results:
 
 The first part of the code loads the image file, covert it to black and white, and then resizes it down to an 9x8 thumbnail.
 
-The rgb3gray and rgb2gray2 methods are custom functions that attempt to convert an RGB \[n,d,3\] matrix into a gray scale.
+The rgb3gray and rgb2gray2 methods are custom functions that attempt to convert an RGB [n,d,3] matrix into a gray scale.
 
 The second part of of the code uses matplotlib to show the thumbnails.
 

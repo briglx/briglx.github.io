@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "First Impressions of Google App Engine"
 date: "2009-02-01"
 tags: 
@@ -27,11 +33,11 @@ Installation is a breeze. The two python files for the [hello world](http://code
 
 Trouble hit when I tried to test my application. I really didn't know how to call the script but I figured it out.
 
-My application folder structure looks like this `c:\\dev\\helloworld\\ c:\\dev\\helloworld\\helloworld.py c:\\dev\\helloworld\\app.yaml`
+My application folder structure looks like this `c:\dev\helloworld\ c:\dev\helloworld\helloworld.py c:\dev\helloworld\app.yaml`
 
 ## Running
 
-I had to open a command prompt and type: `C:\\dev>dev\_appserver.py helloworld` Notice that the path to google\_appengine, where the dev\_appserver.py script resides, is already in the system path. The script dev\_appserver wants the path to the application. Which is the helloworld directory.
+I had to open a command prompt and type: `C:\dev>dev_appserver.py helloworld` Notice that the path to google_appengine, where the dev_appserver.py script resides, is already in the system path. The script dev_appserver wants the path to the application. Which is the helloworld directory.
 
 Once I got that figure out. Bam! My helloworld was up and running at [http://localhost:8080](http://localhost:8080)
 

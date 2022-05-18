@@ -1,9 +1,15 @@
 ---
+layout: post
+current: post
+# cover:  assets/images/confluencev1.png
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Boilerplate Raspbian Setup"
 date: "2018-08-28"
-categories: 
-  - "software"
 tags: 
+  - "software"
   - "linux"
   - "pi"
   - "raspberry"
@@ -14,8 +20,8 @@ I tend to flash my raspberry pies a lot. Here are the steps I follow to get to m
 
 - Flash with latest raspbian image https://www.raspberrypi.org/downloads/raspbian/
 - Add an empty file named **ssh** to the boot folder
-- Add an empty file called **wpa\_supplicant.conf**
-- Configure the wireless by creating a file called **wpa\_supplicant.conf**
+- Add an empty file called **wpa_supplicant.conf**
+- Configure the wireless by creating a file called **wpa_supplicant.conf**
 
 ```conf
 country=US

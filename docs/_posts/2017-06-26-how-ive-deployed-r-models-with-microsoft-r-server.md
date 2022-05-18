@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "How I've deployed R Models with Microsoft R Server"
 date: "2017-06-26"
 ---
@@ -21,17 +27,17 @@ The best teams version their models using version control software just as it's 
 
 - Navigate to Azure portal
 - Spin up an R Server
-- [Azure R Server Dashboard](/assets/images/image2017-2-28-14-52-4.png) Azure R Server Dashboard
+- ![Azure R Server Dashboard](/assets/images/image2017-2-28-14-52-4.png)
 - Open the network port
-- [image2017-2-28 14-52-51](/assets/images/image2017-2-28-14-52-51.png)
+- ![image2017-2-28 14-52-51](/assets/images/image2017-2-28-14-52-51.png)
 
 **Configure Server**
 
 - ssh onto the machine
 - Launch Admin utility and configure password and server
 -  ```bash
-   $ cd /usr/lib64/microsoft-deployr/9.0.1/
-   $ sudo dotnet Microsoft.DeployR.Utils.AdminUtil/Microsoft.DeployR.Utils.AdminUtil.dll
+   cd /usr/lib64/microsoft-deployr/9.0.1/
+   sudo dotnet Microsoft.DeployR.Utils.AdminUtil/Microsoft.DeployR.Utils.AdminUtil.dll
    ```
 
 **Install RClient**
@@ -51,7 +57,7 @@ library(mrsdeploy)
 # Produce a prediction function that can use the model manualTransmission <- function(hp, wt) { newdata <- data.frame(hp = hp, wt = wt) predict(carsModel, newdata, type = "response") }
 # test function locally by printing results print(manualTransmission(120, 2.8)) # 0.6418125
 ########################################################## # Log into Microsoft R Server # ##########################################################
-# Use `remoteLogin` to authenticate with R Server using # the local admin account. Use session = false so no # remote R session started remoteLogin("http://localhost:12800", username = “admin”, password = “{{YOUR_PASSWORD}}”, session = FALSE)
+# Use `remoteLogin` to authenticate with R Server using # the local admin account. Use session = false so no # remote R session started remoteLogin("http://localhost:12800", username = "admin", password = "{{YOUR_PASSWORD}}", session = FALSE)
 ########################################################## # Publish Model as a Service # ##########################################################
 # Publish as service using `publishService()` function from # `mrsdeploy` package. Name service "mtService" and provide # unique version number. Assign service to the variable `api` api <- publishService( "mtService", code = manualTransmission, model = carsModel, inputs = list(hp = "numeric", wt = "numeric"), outputs = list(answer = "numeric"), v = "v1.0.0" )
 ########################################################## # Consume Service in R # ##########################################################
@@ -74,7 +80,7 @@ library(mrsdeploy)
 - ![image2017-2-28 15-14-26](/assets/images/image2017-2-28-15-14-26.png)
 - ![image2017-2-28 15-14-49](/assets/images/image2017-2-28-15-14-49.png)
 
-# Resources
+## Resources
 
 - About Deploy R [https://msdn.microsoft.com/microsoft-r/deployr-about](https://msdn.microsoft.com/microsoft-r/deployr-about)
 - Configure R Server for Operationalize [https://msdn.microsoft.com/en-us/microsoft-r/operationalize/configuration-initial](https://msdn.microsoft.com/en-us/microsoft-r/operationalize/configuration-initial)
@@ -83,7 +89,7 @@ library(mrsdeploy)
 - Microsoft R Overview [https://msdn.microsoft.com/en-us/microsoft-r/index](https://msdn.microsoft.com/en-us/microsoft-r/index)
 - Getting Started with R [https://mran.microsoft.com/documents/getting-started/](https://mran.microsoft.com/documents/getting-started/)
 - About RServer [https://msdn.microsoft.com/en-us/microsoft-r/deployr-about](https://msdn.microsoft.com/en-us/microsoft-r/deployr-about)
-- RServer vs [https://www.reddit.com/r/rstats/comments/3n4dg0/deployr\_vs\_plumber/](https://www.reddit.com/r/rstats/comments/3n4dg0/deployr_vs_plumber/)
+- RServer vs [https://www.reddit.com/r/rstats/comments/3n4dg0/deployr_vs_plumber/](https://www.reddit.com/r/rstats/comments/3n4dg0/deployr_vs_plumber/)
 - Azure Functions [https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
 - R Models via web services [http://blog.algorithmia.com/deploying-r-models-production-web-services/](http://blog.algorithmia.com/deploying-r-models-production-web-services/)
 - Stack Overflow Deploy R Models [http://stackoverflow.com/questions/22309236/options-for-deploying-r-models-in-production](http://stackoverflow.com/questions/22309236/options-for-deploying-r-models-in-production)

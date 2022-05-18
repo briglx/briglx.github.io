@@ -1,9 +1,14 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Logging onto EC2"
 date: "2014-04-01"
-categories: 
+tags:
   - "software"
-tags: 
   - "aws"
   - "ec2"
   - "linux"

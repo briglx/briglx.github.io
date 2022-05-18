@@ -1,20 +1,20 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Here are the differences between HDInsight and Hortonworks HDP"
 date: "2017-05-08"
-categories: 
-  - "software"
 tags: 
+  - "software"
   - "azure"
   - "hadoop"
   - "hdinsight"
   - "hdp"
-
-cover: assets/images/hdpvshdi3.png
+cover: assets/images/hdpvshdi3.jpg
 ---
-
- 
-
-![HDPvsHDI](/assets/images/hdpvshdi3.jpg)
 
 I get asked a lot about the differences between Microsoft HDInsight and Hortonworks HDP. Turns out there tight coordinated development efforts between the two companies. I was surprised to see how much closer the two products are now today compared to a year ago. Here is what I was able to find.
 

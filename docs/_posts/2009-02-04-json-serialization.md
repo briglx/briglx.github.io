@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Json Serialization"
 date: "2009-02-04"
 tags: 
@@ -29,10 +35,10 @@ I changed the Json.Net Performance tests to serialize and deserialize 1000 times
 
 One of the bad things I saw happen is how the DataContractJsonSerializer tried to serialize the private methods of the class. So I though I would try to force it to use the properties of the class by not defining a backing variable.
 
-\[code\]public string Name { get; set; }\[/code\]
+```public string Name { get; set; }```
 
 What to my surprise when I saw the following in the Json output:
 
-`"<Name>k\_\_BackingField":"Rick"`
+`"<Name>k__BackingField":"Rick"`
 
 Weird.

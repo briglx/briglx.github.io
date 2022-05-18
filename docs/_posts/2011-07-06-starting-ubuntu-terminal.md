@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Starting Ubuntu Terminal"
 date: "2011-07-06"
 tags: 

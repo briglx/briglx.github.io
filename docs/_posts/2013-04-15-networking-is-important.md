@@ -1,7 +1,13 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Networking is Important"
 date: "2013-04-15"
-categories: 
+tags:
   - "11"
 ---
 

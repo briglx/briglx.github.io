@@ -1,7 +1,13 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Tack and Diplomacy"
 date: "2013-05-07"
-categories: 
+tags:
   - "11"
 ---
 

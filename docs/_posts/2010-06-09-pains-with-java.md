@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Pains with Java"
 date: "2010-06-09"
 tags: 
@@ -18,7 +24,7 @@ Here is what I did
 - Under Platform Settings select SDKs
 - For the Classpath tab, I clicked add and included
     
-    %JAVA\_HOME/jre/lib/rt.jar
+    %JAVA_HOME/jre/lib/rt.jar
     
 
 Hope this helps.

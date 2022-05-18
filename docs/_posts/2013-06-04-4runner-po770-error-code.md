@@ -1,15 +1,20 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "4Runner PO770 Error Code"
 date: "2013-06-04"
-categories: 
+tags:
   - "car"
-tags: 
   - "4runner"
 ---
 
 I just had the engine light come on the 4Runner. Looking around here is what I found. Fortunately for me, my transmission fluid level was low. Adding a little fluid fixed the problem.
 
-### Background
+## Background
 
 - The PO770 error code is for the lock up clutch in the converter.
 - It is called a Shift Solenoid "E" malfunction
@@ -19,7 +24,7 @@ I just had the engine light come on the 4Runner. Looking around here is what I f
 - We have a 2001 4Runner. This falls into the 1996-2002 Toyota 4Runner 5ZE-FE
 - A340F are found in 4wd 4runners and trucks that have the 2.4L 22RE 4cyl motors.
 
-### Diagnose and Fixes
+## Diagnose and Fixes
 
 1. Check the transmission fluid level.
 2. Flush the tranny-even though you just did, clean the filter, replace the seal
@@ -43,12 +48,12 @@ You may find:
 - If the (solenoid) clicks, then it usually ends up being a bad (converter).
 - Bad torque converter causes loud clunk when pressing brake or accelerating
 
-### Estimates
+## Estimates
 
 - New Solenoid $277.45 from the dealer.
 - Used Torque converter  $150
 
-### References
+## References
 
 - [Tranny Flush](http://www.justanswer.com/toyota/2d0lq-2001-4runner-4wd-automatic-transmission-a-tranny-flush.html)
 - [Engine Codes](http://engine-codes.com/p0770.html)

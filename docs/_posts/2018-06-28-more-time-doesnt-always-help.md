@@ -1,9 +1,14 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "More Time Doesn't Always Help"
 date: "2018-06-28"
-categories: 
-  - "software"
 tags: 
+  - "software"
   - "keras"
   - "machine-learning"
   - "python"

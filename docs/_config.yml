@@ -11,7 +11,7 @@ baseurl: /
 # Website info
 title: Brig Lamoreaux
 description: Long term storage for a forgetful mind
-cover: assets/images/blog-cover.jpg
+# cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/blog-icon.png
 favicon: assets/images/favicon.png
@@ -24,7 +24,7 @@ subscribers: False # you need to connect an external service for this to work,
 # by editing `_includes/subscribe-form.html`
 github: briglx
 twitter: briglx # replace by your username
-# facebook: ghost # replace by your username
+linkedin: briglamoreaux
 
 # Disqus
 disqus: False

@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Installing Node and Mongo"
 date: "2012-01-11"
 tags: 
@@ -41,31 +47,54 @@ I need to install Node and Mongo an a server. These are my notes.
     `sudo adduser bbdiddle`- Add user to sudoers
     `sudo vi /etc/sudoers
     
-    \# Add this line to the sodoers file bbdiddle ALL=(ALL) NOPASSWD:ALL`- Enable ssh
-    `sudo vi /etc/ssh/sshd\_config
+    # Add this line to the sodoers file bbdiddle ALL=(ALL) NOPASSWD:ALL`- Enable ssh
+    `sudo vi /etc/ssh/sshd_config
     
-    \# Change to yes to allow ssh PasswordAuthentication yes`- Restart ssh
+    # Change to yes to allow ssh PasswordAuthentication yes`- Restart ssh
     `sudo /etc/init.d/ssh restart`
     
 4. **Install Mongo**
     - Download and install
-    `$ curl http://downloads.mongodb.org/linux/mongodb-linux-x86\_64-2.0.2.tgz > mongo.tgz $ tar -xzvf mongo.tgz $ mv mongodb-linux-x86\_64-2.0.2 /opt/mongo $ sudo mkdir -p /mnt/db $ sudo chown \`id -u\` /mnt/db`- Test start server
-    `$ sudo ./mongodb-xxxxxxx/bin/mongod`- Running as a Daemon
-    `$ ./mongod --fork --logpath /var/log/mongodb.log --logappend --dbpath /mnt/db`
+    ```bash
+    curl http://downloads.mongodb.org/linux/mongodb-linux-x86_64-2.0.2.tgz > mongo.tgz 
+    tar -xzvf mongo.tgz 
+    mv mongodb-linux-x86_64-2.0.2 /opt/mongo 
+    sudo mkdir -p /mnt/db 
+    sudo chown id -u /mnt/db
+    ```
+    - Test start server
+    ```bash
+    sudo ./mongodb-xxxxxxx/bin/mongod
+    ```
+    - Running as a Daemon
+    ```bash
+    ./mongod --fork --logpath /var/log/mongodb.log --logappend --dbpath /mnt/db
+    ```
 5. Install Node
-    
-    - Install dependencies:
-        
-        `$ sudo apt-get install g++ curl libssl-dev apache2-utils $ sudo apt-get install git-core`
-    - Get latest code: `$ git clone https://github.com/joyent/node.git $ cd node`
-    - Make the project `$ ./configure --prefix=/opt/node $ make $ sudo make install`
-    - Edit path variables `$ sudo vi /etc/bash.bashrc
-        
-        // Add to bottom of file export PATH=$PATH:/opt/node/bin:.`
-    - Verify Installation
-    `$ node --version $ npm --version`
+    ```bash
+    # Install dependencies
+    sudo apt-get install g++ curl libssl-dev apache2-utils 
+    sudo apt-get install git-core
 
-### Notes
+    # Get latest code
+    git clone https://github.com/joyent/node.git 
+    cd node
+
+    # Make the project 
+    ./configure --prefix=/opt/node 
+    make 
+    sudo make install
+
+    # Edit path variables 
+    sudo vi /etc/bash.bashrc
+    // Add to bottom of file export PATH=$PATH:/opt/node/bin:.
+
+    # Verify Installation
+    node --version 
+    npm --version
+    ```
+
+## Notes
 
 - [Configuring a Machine for Mongo](http://www.mongodb.org/display/DOCS/Production+Notes)
 - [Installing Node](https://github.com/joyent/node/wiki/Installation)

@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "How to Convert Integers to Strings in C#"
 date: "2007-08-31"
 tags: 
@@ -6,7 +12,9 @@ tags:
   - "c"
 ---
 
-I've been working with converting strings to integers and have a few options at my disposal. In the past I've bounce between using Convert.Int32(string) and Int.Parse(string). I've decided to look into what really goes on under the covers between these different options.
+I've been working with converting strings to integers and have a few options at my disposal. 
+
+In the past I've bounce between using Convert.Int32(string) and Int.Parse(string). I've decided to look into what really goes on under the covers between these different options.
 
 There are three different ways to convert one item to another:
 
@@ -14,7 +22,7 @@ There are three different ways to convert one item to another:
 - Explicit Conversion Operator
 - Use a Format Provider
 
-### Conversion Operator
+## Conversion Operator
 
 In order for the implicit and explicit conversions to work, the class/structure must define a [Conversion Operator](http://msdn2.microsoft.com/en-us/library/09479473(VS.80).aspx). The example below will allow an explicit conversion from int to SampleClass. Notice how the method takes an int and returns the SampleClass type:
 
@@ -24,7 +32,7 @@ return temp; } }`
 
 Using the conversion in real code would then be: `int i = 45; SampleClass sc = new SampleClass(); sc = (SampleClass)i; // Explicit conversion` If I had defined the method as implicit instead, then I wouldn't need the cast like operation. I could have just written: `sc = i; // Implicit conversion` What I really wanted to know is how strings are converted into integers. The String class doesn't implement either an implicit or explicit conversion to int. This leaves me the option of having to use a Format Provider object. `public class String { static public explicit operator int(String string) // Doesn't exist. static public implicit operator int(String string) // Doesn't exist. }`
 
-### Format Provider
+## Format Provider
 
 The framework offers two Format Provider methods:
 
@@ -41,7 +49,7 @@ Int.parse() is the real worker because it dives deep into several methods and fi
             - Calls Number.ParseNumber(ref chPtr2, options, ref number, info, parseDecimal)
                 - Does all the work here
 
-### Summary
+## Summary
 
 There are no implicit or explicit conversions from a string to an integer, you must use a format provider method. The two options available with the library are really one option.
 

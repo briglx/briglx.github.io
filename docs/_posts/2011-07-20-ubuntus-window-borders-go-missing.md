@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Ubuntu's Window Borders go Missing"
 date: "2011-07-20"
 tags: 

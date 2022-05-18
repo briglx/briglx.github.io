@@ -1,4 +1,10 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Flex and Ubuntu"
 date: "2011-09-30"
 tags: 
@@ -11,8 +17,8 @@ I'm on a project that uses flash for the ui. I want to make a few modification a
 
 It's just a matter of [downloading the SDK](http://opensource.adobe.com/wiki/display/flexsdk/Download+Flex+4)
 
-Unzipping and adding $FLEX\_HOME/bin to the Path
+Unzipping and adding $FLEX_HOME/bin to the Path
 
-### Resources
+## Resources
 
 - [Install SDK Tutorial](http://stevelove.org/2009/05/14/how-to-install-and-set-up-adobe-flex-sdk-on-ubuntu-linux/)

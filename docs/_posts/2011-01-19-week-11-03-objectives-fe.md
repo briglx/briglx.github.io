@@ -1,11 +1,17 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Week 11-03 Objectives FE"
 date: "2011-01-19"
 tags: 
   - "objectives"
 ---
 
-### Objective
+## Objective
 
 Create three different environments for the groups
 

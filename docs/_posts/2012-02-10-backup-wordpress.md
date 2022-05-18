@@ -1,9 +1,14 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Backup Wordpress"
 date: "2012-02-10"
-categories: 
+tags:
   - "software"
-tags: 
   - "mysql"
   - "wordpress"
 ---
@@ -14,9 +19,9 @@ I have MySQL Workbench on my machine and though it would be trivial. When I trie
 
 1. **Add Remote User**.
     - From the remote host, connect to local db `$ ./mysql -u root mysql -p`
-    - Insert a new value `mysql> insert into user VALUES('HOSTNAME','root',PASSWORD('my\_password'), 'Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y', 'Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y', '','','','',0,0,0,0);`
+    - Insert a new value `mysql> insert into user VALUES('HOSTNAME','root',PASSWORD('my_password'), 'Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y', 'Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y', '','','','',0,0,0,0);`
     - Restart the service `$ cd /opt/bitnami $ sudo ./ctlscript.sh restart mysql`
-    Test connection `localhost$ mysql -h REMOTE\_HOST -u root -p`
+    Test connection `localhost$ mysql -h REMOTE_HOST -u root -p`
 2. **Start the backup**
     
     This part was easy. I just had to follow the [backup instructions](http://forum.hostek.com/showthread.php?297-How-to-use-MySQL-Workbench-to-backup-your-MySQL-database).

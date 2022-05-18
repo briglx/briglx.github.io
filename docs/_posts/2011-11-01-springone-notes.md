@@ -1,9 +1,14 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "SpringOne Notes"
 date: "2011-11-01"
-categories: 
+tags:
   - "software"
-tags: 
   - "java"
   - "linux"
   - "springone2gx"

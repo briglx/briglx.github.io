@@ -1,7 +1,13 @@
 ---
+layout: post
+current: post
+navigation: True
+class: post-template
+subclass: 'post'
+author: brig
 title: "Mentor teaches how to argue"
 date: "2013-08-26"
-categories: 
+tags:
   - "11"
 ---
 

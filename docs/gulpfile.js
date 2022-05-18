@@ -1,62 +1,51 @@
-var gulp = require('gulp');
+const {series, watch, src, dest, parallel} = require('gulp');
+const pump = require('pump');
 
 // gulp plugins and utils
-var livereload = require('gulp-livereload');
-var postcss = require('gulp-postcss');
-var sourcemaps = require('gulp-sourcemaps');
-var zip = require('gulp-zip');
+const livereload = require('gulp-livereload');
+const postcss = require('gulp-postcss');
+const beeper = require('beeper');
 
 // postcss plugins
-var autoprefixer = require('autoprefixer');
-var colorFunction = require('postcss-color-function');
-var cssnano = require('cssnano');
-var customProperties = require('postcss-custom-properties');
-var easyimport = require('postcss-easy-import');
+const autoprefixer = require('autoprefixer');
+const colorFunction = require('postcss-color-mod-function');
+const cssnano = require('cssnano');
+const easyimport = require('postcss-easy-import');
 
-var nodemonServerInit = function () {
-    livereload.listen(1234);
+
+function serve(done) {
+    livereload.listen();
+    done();
+}
+
+const handleError = (done) => {
+    return function (err) {
+        if (err) {
+            beeper();
+        }
+        return done(err);
+    };
 };
 
-gulp.task('css', function () {
-    var processors = [
-        easyimport,
-        customProperties,
-        colorFunction(),
-        autoprefixer(),
-        cssnano()
-    ];
-
-    return gulp.src('assets/css/*.css')
-        .pipe(sourcemaps.init())
-        .pipe(postcss(processors))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('assets/built/'))
-        .pipe(livereload());
-});
-
-gulp.task('build', gulp.series('css', function () {
-    nodemonServerInit();
+function css(done) {
+    pump([
+        src('assets/css/*.css', {sourcemaps: true}),
+        postcss([
+            easyimport,
+            colorFunction(),
+            autoprefixer(),
+            cssnano()
+        ]),
+        dest('assets/built/', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
 }
-));
 
-gulp.task('watch', function () {
-    gulp.watch('assets/css/**', ['css']);
-});
 
-gulp.task('zip', gulp.series('css', function() {
-    var targetDir = 'dist/';
-    var themeName = require('./package.json').name;
-    var filename = themeName + '.zip';
+const cssWatcher = () => watch('assets/css/**', css);
+const watcher = parallel(cssWatcher);
+const build = series(css);
 
-    return gulp.src([
-        '**',
-        '!node_modules', '!node_modules/**',
-        '!dist', '!dist/**'
-    ])
-        .pipe(zip(filename))
-        .pipe(gulp.dest(targetDir));
-}));
+exports.build = build;
+exports.default = series(build, serve, watcher);
 
-gulp.task('default', gulp.series('build', function () {
-    gulp.start('watch');
-}));
