@@ -31,8 +31,7 @@ vendor
 Gemfile.lock
 node_modules
 
-# css build
-*/assets/built/
+
 
 # Other
 */Gemfile.lock
