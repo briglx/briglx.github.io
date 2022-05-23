@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/hdp/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T15:02:56-07:00</updated>
+  <id>http://localhost:4000/tag/hdp/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Here are the differences between HDInsight and Hortonworks HDP</title>
+      <link href="http://localhost:4000/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html" rel="alternate" type="text/html" title="Here are the differences between HDInsight and Hortonworks HDP" />
+      <published>2017-05-08T00:00:00-07:00</published>
+      <updated>2017-05-08T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp</id>
+      <content type="html" xml:base="http://localhost:4000/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html">&lt;p&gt;I get asked a lot about the differences between Microsoft HDInsight and Hortonworks HDP. Turns out there tight coordinated development efforts between the two companies. I was surprised to see how much closer the two products are now today compared to a year ago. Here is what I was able to find.&lt;/p&gt;
+
+&lt;h2 id=&quot;lag-in-versions&quot;&gt;Lag in Versions&lt;/h2&gt;
+
+&lt;p&gt;As of today, 8 May 2017, the current versions are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HDP: 2.6&lt;/li&gt;
+  &lt;li&gt;HDInsight: 3.5. Based on HDP 2.5&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, the first thing we see is HDInsight has a lag between the latest and greatest of Hortonworks. This really results in differences between feature version. That makes sense because Azure is a different beast than a straight IaaS deployments. Microsoft engineers need to make it work with WASB storage and other Azure specific architecture (networking, security, etc).&lt;/p&gt;
+
+&lt;h2 id=&quot;feature-gaps&quot;&gt;Feature Gaps&lt;/h2&gt;
+
+&lt;p&gt;It would be great if all of the features were ported to Azure but they are not. Some priorities are made on what to support. I imagine this is driven by customer demand. Here are the feature not found in HDInsight:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Druid&lt;/li&gt;
+  &lt;li&gt;Solr&lt;/li&gt;
+  &lt;li&gt;Slider&lt;/li&gt;
+  &lt;li&gt;Accumulo&lt;/li&gt;
+  &lt;li&gt;Falcon&lt;/li&gt;
+  &lt;li&gt;Atlas&lt;/li&gt;
+  &lt;li&gt;Flume&lt;/li&gt;
+  &lt;li&gt;Knox&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;I found this information from the product pages&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HDP tools found in HDInsight &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning&quot;&gt;https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Apache tools found in HDP &lt;a href=&quot;https://hortonworks.com/products/data-center/hdp/&quot;&gt;https://hortonworks.com/products/data-center/hdp/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hortonworks.com/datasheet/microsoft-azure-hdinsight/&quot;&gt;https://hortonworks.com/datasheet/microsoft-azure-hdinsight/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="azure" />
+      
+        <category term="hadoop" />
+      
+        <category term="hdinsight" />
+      
+        <category term="hdp" />
+      
+
+      
+        <summary type="html">I get asked a lot about the differences between Microsoft HDInsight and Hortonworks HDP. Turns out there tight coordinated development efforts between the two companies. I was surprised to see how much closer the two products are now today compared to a year ago. Here is what I was able to find.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

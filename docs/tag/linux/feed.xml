@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/linux/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T15:02:56-07:00</updated>
+  <id>http://localhost:4000/tag/linux/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Finding Missing Images</title>
+      <link href="http://localhost:4000/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
+      <published>2022-05-20T00:00:00-07:00</published>
+      <updated>2022-05-20T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2022/05/20/finding-missing-images</id>
+      <content type="html" xml:base="http://localhost:4000/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
+
+&lt;p&gt;My strategy is to:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Get the list of images I have&lt;/li&gt;
+  &lt;li&gt;Find all the image referenced in the blog&lt;/li&gt;
+  &lt;li&gt;Alert where the reference name &amp;lt;&amp;gt; an actual name&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;getting-the-list-of-images&quot;&gt;Getting the list of images&lt;/h2&gt;
+
+&lt;p&gt;This is really easy&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; /images &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; images_list.csv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;getting-the-images-refereced&quot;&gt;Getting the images refereced&lt;/h2&gt;
+
+&lt;p&gt;This is a bit trickier because I have to look inside the files. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt; seems like a good way to do this.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Er&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/images/(.+)'&lt;/span&gt; _posts &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; referenced_images.csv
+
+&lt;span class=&quot;nb&quot;&gt;head &lt;/span&gt;referenced_images.csv
+_posts/2014-07-31-what-version-of-php-am-i-running.md:cover: assets/images/phpapache.jpg
+_posts/2011-02-17-a-tour-of-jmeter-part-1.md:  You should now have two elements. &lt;span class=&quot;o&quot;&gt;![&lt;/span&gt;Record1]&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/assets/images/Record1.png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+_posts/2011-02-17-a-tour-of-jmeter-part-1.md:  JMeter now has your actions recorded &lt;span class=&quot;o&quot;&gt;![&lt;/span&gt;Record2]&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/assets/images/Record2.png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I don’t need all the info retured. ow do I just get the image name part.&lt;/p&gt;
+
+&lt;p&gt;looking at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;man grep&lt;/code&gt; the options &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-o -h&lt;/code&gt; look promising.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; -o, --only-matching
+              Print only the matched (non-empty) parts of a matching line, with each such part on a  separate  output
+              line.
+
+ -h, --no-filename
+              Suppress  the  prefixing  of file names on output.  This is the default when there is only one file (or
+              only standard input) to search.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Eroh&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/images/(.+)'&lt;/span&gt; _posts &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; referenced_images.csv
+
+&lt;span class=&quot;nb&quot;&gt;head &lt;/span&gt;referenced_images.csv
+/images/phpapache.jpg
+/images/Record1.png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+/images/Record2.png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+/images/SBCLOptions.Png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I’d like to just get the image name though. Pearl has a &lt;a href=&quot;https://perldoc.perl.org/perlre#Lookaround-Assertions&quot;&gt;look-around assersion&lt;/a&gt; syntax which will check for things before or after the pattern match.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Find a word between foo and bar&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-oP&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'(?&amp;lt;=foo )\w+(?= bar)'&lt;/span&gt; test.txt
+
+&lt;span class=&quot;c&quot;&gt;# Shortcut for the same query&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-oP&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo \K\w+(?= bar)'&lt;/span&gt; test.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I can modify my query to drop everything before the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\K&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rPoh&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/images/\K.+(png|jpe?g|gif)'&lt;/span&gt; _posts &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; referenced_images.csv
+&lt;span class=&quot;nb&quot;&gt;head &lt;/span&gt;referenced_images.csv
+phpapache.jpg
+Record1.png
+Record2.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Nice, now I just need to loop over each one in the reference and see if there is a match in the actualls.&lt;/p&gt;
+
+&lt;h2 id=&quot;finding-the-outlyers&quot;&gt;Finding the outlyers&lt;/h2&gt;
+
+&lt;p&gt;I’m sure there is an easier way to do this.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;l&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$l&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$l&lt;/span&gt; image_list.csv&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; &amp;lt; referenced_images.csv  &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; results.csv
+
+&lt;span class=&quot;nb&quot;&gt;head &lt;/span&gt;results.csv
+phpapache.jpg,1
+Record1.png,0
+Record2.png,0
+trainingvalidation
+
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;results.csv | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' 0'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $1}'&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; missing_images
+
+&lt;span class=&quot;nb&quot;&gt;head &lt;/span&gt;missing_images
+Record1.png,0
+Record2.png,0
+CropperCapture88.png,0
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now I have my list but don’t know if it’s just missing or has a case of bad formatting.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $1;}'&lt;/span&gt; missing_images
+
+&lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;l&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$l&lt;/span&gt;,&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-ic&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$l&lt;/span&gt; image_list.csv&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; &amp;lt; missing_images &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; wrong_case.csv
+
+&lt;span class=&quot;nb&quot;&gt;head
+&lt;/span&gt;Record1.png,1
+Record2.png,1
+CropperCapture%5B12%5D.png,0
+
+&lt;span class=&quot;c&quot;&gt;# 1 means it's named wrong&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 0 means it's not in the image list&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Can I grep out a group match https://unix.stackexchange.com/questions/13466/can-grep-output-only-specified-groupings-that-match&lt;/li&gt;
+  &lt;li&gt;Basic Grep info https://linuxize.com/post/regular-expressions-in-grep/&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="blogging" />
+      
+        <category term="sed" />
+      
+        <category term="awk" />
+      
+        <category term="linux" />
+      
+        <category term="software" />
+      
+
+      
+        <summary type="html">As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case myimage.png vs MyImage.png. This is how I checked what other images were named wrong or missing.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Updating and Migrating Confluence</title>
+      <link href="http://localhost:4000/2018/09/13/updating-and-migrating-confluence.html" rel="alternate" type="text/html" title="Updating and Migrating Confluence" />
+      <published>2018-09-13T00:00:00-07:00</published>
+      <updated>2018-09-13T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2018/09/13/updating-and-migrating-confluence</id>
+      <content type="html" xml:base="http://localhost:4000/2018/09/13/updating-and-migrating-confluence.html">&lt;p&gt;I started hosting my wiki on Azure way back in 2016. The other day I received a message that I was  not using managed disks and I should upgrade. So I pushed the upgrade button and kicked off a two day outage which resulted in me pulling my hair out, migrating, looking at logs, and changing databases.&lt;/p&gt;
+
+&lt;h2 id=&quot;first-architecture&quot;&gt;First Architecture&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/confluencev1.png&quot; alt=&quot;Confluence v1 Architecture&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The first architecture is really basic. Just two vms. One with confluence installed on it and the other with Postgresql. I configured a separate nsg for each one. Looking back I could have had just one.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;App Server
+    &lt;ul&gt;
+      &lt;li&gt;Confluence 5.9.6&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;CONFLUENCE_HOME&amp;gt; = /var/atlassian/application-data/confluence/&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;CONFLUENCE_INSTALLATION&amp;gt; = /opt/atlassian/confluence/&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt; Database
+    &lt;ul&gt;
+      &lt;li&gt;Ubuntu 14.04 64-bit&lt;/li&gt;
+      &lt;li&gt;PostgreSQL 9.3.12&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;trouble-after-reboot&quot;&gt;Trouble after Reboot&lt;/h2&gt;
+
+&lt;p&gt;When I rebooted the machine, after a failed managed disk migration, I wasn’t able to log in. It took me a while &lt;a href=&quot;https://community.atlassian.com/t5/Confluence-questions/Failed-to-Login-after-Reboot-Confluence-5-9-6/qaq-p/889565&quot;&gt;to figure out what happened&lt;/a&gt;. Turns out I had two instances of confluence running on the app server. This made me think I should do a few things:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make a backup&lt;/li&gt;
+  &lt;li&gt;Clean up the installation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Instead of cleaning up the installation I thought I would try a new architecture&lt;/p&gt;
+
+&lt;h2 id=&quot;new-architecture&quot;&gt;New Architecture&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/confluencev2.png&quot; alt=&quot;confluencev2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I replaced the IaaS database for the Azure Database Postgresql PaaS solution. I don’t want to mess around with managing a database. One less thing to think about.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;App Server
+    &lt;ul&gt;
+      &lt;li&gt;Confluence 5.9.6 (Can’t change)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt; Database
+    &lt;ul&gt;
+      &lt;li&gt;PostgreSQL 9.5&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Confluence does not support Postgres 9.6, and will throw error messages like the following: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;org.postgresql.util.PSQLException: ERROR: column am.amcanorder does not exist&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;future-work&quot;&gt;Future work&lt;/h2&gt;
+
+&lt;p&gt;Turns out I had to use the export restore option with Confluence. I though I would be able to setup the new environment and just perform a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pg_dump&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pg_restore&lt;/code&gt;. For some reason that didn’t work.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Restore to Azure DB Postgres &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/postgresql/quickstart-create-server-database-portal&quot;&gt;https://docs.microsoft.com/en-us/azure/postgresql/quickstart-create-server-database-portal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;How to dump and restore &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/postgresql/howto-migrate-using-dump-and-restore&quot;&gt;https://docs.microsoft.com/en-us/azure/postgresql/howto-migrate-using-dump-and-restore&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Example of Confluence Setup &lt;a href=&quot;http://comtronic.com.au/how-to-install-confluence-on-centos7-with-postgresql/&quot;&gt;http://comtronic.com.au/how-to-install-confluence-on-centos7-with-postgresql/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Remove ubuntu services &lt;a href=&quot;https://help.ubuntu.com/community/UbuntuBootupHowto&quot;&gt;https://help.ubuntu.com/community/UbuntuBootupHowto&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="confluence" />
+      
+        <category term="linux" />
+      
+        <category term="ops" />
+      
+        <category term="postgresql" />
+      
+        <category term="software" />
+      
+
+      
+        <summary type="html">I started hosting my wiki on Azure way back in 2016. The other day I received a message that I was  not using managed disks and I should upgrade. So I pushed the upgrade button and kicked off a two day outage which resulted in me pulling my hair out, migrating, looking at logs, and changing databases.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Boilerplate Raspbian Setup</title>
+      <link href="http://localhost:4000/2018/08/28/boilerplate-raspbian-setup.html" rel="alternate" type="text/html" title="Boilerplate Raspbian Setup" />
+      <published>2018-08-28T00:00:00-07:00</published>
+      <updated>2018-08-28T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2018/08/28/boilerplate-raspbian-setup</id>
+      <content type="html" xml:base="http://localhost:4000/2018/08/28/boilerplate-raspbian-setup.html">&lt;p&gt;I tend to flash my raspberry pies a lot. Here are the steps I follow to get to my working state.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Flash with latest raspbian image https://www.raspberrypi.org/downloads/raspbian/&lt;/li&gt;
+  &lt;li&gt;Add an empty file named &lt;strong&gt;ssh&lt;/strong&gt; to the boot folder&lt;/li&gt;
+  &lt;li&gt;Add an empty file called &lt;strong&gt;wpa_supplicant.conf&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Configure the wireless by creating a file called &lt;strong&gt;wpa_supplicant.conf&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;country&lt;/span&gt;=&lt;span class=&quot;n&quot;&gt;US&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ctrl_interface&lt;/span&gt;=&lt;span class=&quot;n&quot;&gt;DIR&lt;/span&gt;=/&lt;span class=&quot;n&quot;&gt;var&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;wpa_supplicant&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GROUP&lt;/span&gt;=&lt;span class=&quot;n&quot;&gt;netdev&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;update_config&lt;/span&gt;=&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;network&lt;/span&gt;={
+    &lt;span class=&quot;n&quot;&gt;ssid&lt;/span&gt;=&lt;span class=&quot;s2&quot;&gt;&quot;your_real_wifi_ssid&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;scan_ssid&lt;/span&gt;=&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;psk&lt;/span&gt;=&lt;span class=&quot;s2&quot;&gt;&quot;your_real_password&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;key_mgmt&lt;/span&gt;=&lt;span class=&quot;n&quot;&gt;WPA&lt;/span&gt;-&lt;span class=&quot;n&quot;&gt;PSK&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ssh onto the pi with pi@hostname raspberry&lt;/li&gt;
+  &lt;li&gt;Update system and Install vim.
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt full-upgrade &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;vim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Create my user on the pi
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;adduser username
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add my user to the sudo’s file.
+    &lt;ul&gt;
+      &lt;li&gt; Create a new file named &lt;strong&gt;020_username_nopasswd&lt;/strong&gt;  in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/sudoers.d&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Edit the file as.
+        &lt;div class=&quot;language-conf highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ALL&lt;/span&gt;=(&lt;span class=&quot;n&quot;&gt;ALL&lt;/span&gt;) &lt;span class=&quot;n&quot;&gt;NOPASSWD&lt;/span&gt;: &lt;span class=&quot;n&quot;&gt;ALL&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add my certificate to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.ssh/authorized_keys&lt;/code&gt;
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;su username
+  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
+  &lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; .ssh
+  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; .ssh
+  vi authorized_keys
+  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~
+  &lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;700 ~/.ssh/
+  &lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;600 ~/.ssh/authorized_keys
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Disable password authentication
+    &lt;ul&gt;
+      &lt;li&gt;Edit file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/ssh/sshd_config&lt;/code&gt;
+        &lt;pre&gt;&lt;code class=&quot;language-vi&quot;&gt;  PasswordAuthentication no
+&lt;/code&gt;&lt;/pre&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Restart ssh server&lt;/p&gt;
+
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; /etc/init.d/ssh restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Remove User pi&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;deluser &lt;span class=&quot;nt&quot;&gt;-remove-home&lt;/span&gt; pi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add alias to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/.bashrc&lt;/code&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;ll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ls -al'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Setup wifi &lt;a href=&quot;https://www.raspberrypi.org/forums/viewtopic.php?t=191252&quot;&gt;https://www.raspberrypi.org/forums/viewtopic.php?t=191252&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Create new user &lt;a href=&quot;https://raspi.tv/2012/how-to-create-a-new-user-on-raspberry-pi&quot;&gt;https://raspi.tv/2012/how-to-create-a-new-user-on-raspberry-pi&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Setup keys &lt;a href=&quot;https://raspi.tv/2012/how-to-set-up-keys-and-disable-password-login-for-ssh-on-your-raspberry-pi&quot;&gt;https://raspi.tv/2012/how-to-set-up-keys-and-disable-password-login-for-ssh-on-your-raspberry-pi&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Update system &lt;a href=&quot;https://www.raspberrypi.org/documentation/raspbian/updating.md&quot;&gt;https://www.raspberrypi.org/documentation/raspbian/updating.md&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Pi setup &lt;a href=&quot;https://blog.jongallant.com/2017/11/raspberrypi-setup/&quot;&gt;https://blog.jongallant.com/2017/11/raspberrypi-setup/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="linux" />
+      
+        <category term="pi" />
+      
+        <category term="raspberry" />
+      
+        <category term="raspbian" />
+      
+
+      
+        <summary type="html">I tend to flash my raspberry pies a lot. Here are the steps I follow to get to my working state.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Moving GitLab to an EBS Volume</title>
+      <link href="http://localhost:4000/2014/07/30/moving-gitlab-to-an-ebs-volume.html" rel="alternate" type="text/html" title="Moving GitLab to an EBS Volume" />
+      <published>2014-07-30T00:00:00-07:00</published>
+      <updated>2014-07-30T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2014/07/30/moving-gitlab-to-an-ebs-volume</id>
+      <content type="html" xml:base="http://localhost:4000/2014/07/30/moving-gitlab-to-an-ebs-volume.html">&lt;p&gt;I’ve really enjoyed using &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;GitLab&lt;/a&gt; to manage my git repositories.&lt;/p&gt;
+
+&lt;p&gt;It was really easy to get started because I used a &lt;a href=&quot;https://bitnami.com/stack/gitlab/cloud/amazon&quot;&gt;Bitnami GitLab image&lt;/a&gt; for Amazon. The problem is when I created the instance I chose an Instance store over EBS. I don’t have a really good reason why I did but now I need to move my data to its own volume so I can restart my instance with no fear of loosing data.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Check how much space you have&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; 
+ /dev/xvda1 9.9G 4.5G 4.9G 48% /
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/xvda1&lt;/code&gt; is the root device volume. 10 GB is the default for ephemeral.&lt;/p&gt;
+
+    &lt;p&gt;I’m at 50% and would like to have more room to grow. However, the real reason is I don’t want to lose my data.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Create and Attach an EBS Volume&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;You need to create the volume in the same available zone as the host computer in order to attach it. Take note of the device name when you attach it. We’ll need this name when we mount the volume.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Format the Volume&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Find which volume is the new one with the list block devices command&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; lsblk
+    
+ xvda1 202:1 0 10G 0 disk / 
+ xvdb 202:16 0 4G 0 disk /mnt 
+ xvdf 202:80 0 100G 0 disk
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xvdf&lt;/code&gt; is the new one because it doesn’t have a mount point associated with it. Format the drive:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;mkfs &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; ext4 /dev/xvdf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Create a full backup of GitLab&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;First stop the application using the bitnami ctrl script and move to a safe location:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; /opt/bitnami/ctlscript.sh stop 
+ &lt;span class=&quot;nb&quot;&gt;sudo mv&lt;/span&gt; /opt /opt2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Mount the volume&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Although the volume has been attached, it hasn’t been mounted yet. You can see this by running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;df&lt;/code&gt; again:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt;
+ /dev/xvda1 9.9G 4.5G 4.9G 48% /
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;However the list block devices command can see the volume.&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; lsblk
+    
+ xvda1 202:1 0 10G 0 disk / 
+ xvdb 202:16 0 4G 0 disk /mnt 
+ xvdf 202:80 0 100G 0 disk
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xvda1&lt;/code&gt; is mounted as the root file system.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xbdb&lt;/code&gt; is 4 GB mounted as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/mnt&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;We’ll mount the new drive to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/opt&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;sudo mkdir&lt;/span&gt; /opt 
+ &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;mount /dev/xvdf /opt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Restart Gitlab&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Move data over to the new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/opt&lt;/code&gt; drive and restart:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; /opt2/bitnami /opt 
+ &lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; /opt/bitnami/ctlscript.sh start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Verify the volume and data&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt;
+    
+ /dev/xvda1 9.9G 1.2G 8.3G 12% / 
+ /dev/xvdf 99G 3.6G 90G 4% /opt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;I now have 3.6GB moved from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/opt&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/opt&lt;/code&gt; is mounted to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/xvdf&lt;/code&gt; volume.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-add-volume-to-instance.html&quot;&gt;Add a Volume to Your Instance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html&quot;&gt;Attaching a Amazon EBS Volume to an Instance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html&quot;&gt;Block Device Mapping&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://wiki.bitnami.com/Applications/BitNami_GitLab#How_to_start.2fstop_the_servers.3f&quot;&gt;BitNami GitLab&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="bash" />
+      
+        <category term="ec2" />
+      
+        <category term="linux" />
+      
+        <category term="ubuntu" />
+      
+
+      
+        <summary type="html">I’ve really enjoyed using GitLab to manage my git repositories.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Symfony denied Access</title>
+      <link href="http://localhost:4000/2014/07/14/symfony-denied-access.html" rel="alternate" type="text/html" title="Symfony denied Access" />
+      <published>2014-07-14T00:00:00-07:00</published>
+      <updated>2014-07-14T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2014/07/14/symfony-denied-access</id>
+      <content type="html" xml:base="http://localhost:4000/2014/07/14/symfony-denied-access.html">&lt;p&gt;Moving my Symfony app to a QA server showed me how rude the server is.&lt;/p&gt;
+
+&lt;p&gt;I could see the home page right after I copied the project to the new machine with not problem (except for modifying &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.config.php&lt;/code&gt; and various file permission ownership issues). Nevertheless, the real problem came when I tried navigating to any other route besides the index. Each time I would get a 403 Access denied error.&lt;/p&gt;
+
+&lt;p&gt;Apparently the server “understood the request, but is refusing to fulfill it”. Thanks. I especially like how the &lt;a href=&quot;http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html&quot;&gt;guideline for 403 errors&lt;/a&gt; says&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;…if the server wishes to make public why the request has not been fulfilled, it SHOULD describe the reason for the refusal in the entity.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That sounds good because I really don’t know why I’m not seeing my page and I would really like to know why the server is &lt;em&gt;refusing&lt;/em&gt; to fulfill it. In my case I am given the clear description of ”&lt;strong&gt;Access denied&lt;/strong&gt;.” Thanks again. After much searching and testing I found &lt;a href=&quot;http://askubuntu.com/questions/164627/nginx-php-fpm-access-denied-error&quot;&gt;the solution&lt;/a&gt;. The fix was to modify my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;php.ini&lt;/code&gt; and restart the service&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vi /etc/php5/fpm/php.ini
+
+&lt;span class=&quot;c&quot;&gt;# Edit line&lt;/span&gt;
+cgi.fix_pathinfo&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I’m sure there is a better way to restart this service.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ps &lt;span class=&quot;nt&quot;&gt;-eaf&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;php 
+root 1269 1 0 16:39 ? 00:00:00 php-fpm: master process &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/etc/php5/fpm/php-fpm.conf&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;  
+
+&lt;span class=&quot;nb&quot;&gt;sudo kill &lt;/span&gt;1269 
+ps &lt;span class=&quot;nt&quot;&gt;-eaf&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;grep &lt;/span&gt;php 
+root 1436 1 6 17:49 ? 00:00:00 php-fpm: master process &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/etc/php5/fpm/php-fpm.conf&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And I’m sure there are more ways for a server to be helpful.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="linux" />
+      
+        <category term="nginx" />
+      
+        <category term="php" />
+      
+        <category term="symfony" />
+      
+
+      
+        <summary type="html">Moving my Symfony app to a QA server showed me how rude the server is.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Logging onto EC2</title>
+      <link href="http://localhost:4000/2014/04/01/logging-onto-ec2.html" rel="alternate" type="text/html" title="Logging onto EC2" />
+      <published>2014-04-01T00:00:00-07:00</published>
+      <updated>2014-04-01T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2014/04/01/logging-onto-ec2</id>
+      <content type="html" xml:base="http://localhost:4000/2014/04/01/logging-onto-ec2.html">&lt;p&gt;I tend to forget how to log onto EC2. This morning I spun up a few servers with an Ubuntu image on EC2. As soon as I tried to log on, I received a&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Permission denied (publickey).&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After doing a &lt;a href=&quot;http://stackoverflow.com/questions/4826706/amazon-ec2-permission-denied-publickey&quot;&gt;quick search&lt;/a&gt; I remembered I needed to add the username on the instance&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh -i /path/to/keypair.pem ubuntu@ec2-instancename.compute-1.amazonaws.com&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;So simple.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="aws" />
+      
+        <category term="ec2" />
+      
+        <category term="linux" />
+      
+        <category term="ubuntu" />
+      
+
+      
+        <summary type="html">I tend to forget how to log onto EC2. This morning I spun up a few servers with an Ubuntu image on EC2. As soon as I tried to log on, I received a</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Disable firewall on Redhat</title>
+      <link href="http://localhost:4000/2013/04/30/disable-firewall-on-redhat.html" rel="alternate" type="text/html" title="Disable firewall on Redhat" />
+      <published>2013-04-30T00:00:00-07:00</published>
+      <updated>2013-04-30T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2013/04/30/disable-firewall-on-redhat</id>
+      <content type="html" xml:base="http://localhost:4000/2013/04/30/disable-firewall-on-redhat.html">&lt;p&gt;I just tried to deploy and test an application on EC2 running red hat but couldn’t telnet it.&lt;/p&gt;
+
+&lt;p&gt;I configured the security group to allow port 8080, I could see the port was running with netstat&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;netstat &lt;span class=&quot;nt&quot;&gt;-lntp&lt;/span&gt;
+
+tcp 0 0 :::80 :::&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; LISTEN 29031/httpd 
+tcp 0 0 :::8080 :::&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; LISTEN 28923/java
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;However, try as I might I could not telnet. I didn’t have any issues with ssh. Finally I found the problem. Redhat instances have a firewall enabled by default. A quick way around the firewall is to disable it with a simple command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;system-config-firewall-tui
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I’m sure there is a better way to solve this issue that doesn’t expose the server to attacks. I’d love to know.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="ec2" />
+      
+        <category term="linux" />
+      
+        <category term="redhat" />
+      
+
+      
+        <summary type="html">I just tried to deploy and test an application on EC2 running red hat but couldn’t telnet it.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Copy Contents of Directory into Another</title>
+      <link href="http://localhost:4000/2012/02/21/copy-contents-of-directory-into-another.html" rel="alternate" type="text/html" title="Copy Contents of Directory into Another" />
+      <published>2012-02-21T00:00:00-07:00</published>
+      <updated>2012-02-21T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2012/02/21/copy-contents-of-directory-into-another</id>
+      <content type="html" xml:base="http://localhost:4000/2012/02/21/copy-contents-of-directory-into-another.html">&lt;p&gt;I don’t know why this is so difficult to remember but here it is. Notice the trailing . on the end of source&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ cp -ra /path/to/source/. /path/to/destination&lt;/code&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="bash" />
+      
+        <category term="linux" />
+      
+
+      
+        <summary type="html">I don’t know why this is so difficult to remember but here it is. Notice the trailing . on the end of source</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">SpringOne Notes</title>
+      <link href="http://localhost:4000/2011/11/01/springone-notes.html" rel="alternate" type="text/html" title="SpringOne Notes" />
+      <published>2011-11-01T00:00:00-07:00</published>
+      <updated>2011-11-01T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2011/11/01/springone-notes</id>
+      <content type="html" xml:base="http://localhost:4000/2011/11/01/springone-notes.html">&lt;p&gt;These are general notes I took&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=javap&amp;amp;source=web&amp;amp;cd=1&amp;amp;ved=0CCQQFjAA&amp;amp;url=http%3A%2F%2Fdownload.oracle.com%2Fjavase%2F1%2C5.0%2Fdocs%2Ftooldocs%2Fwindows%2Fjavap.html&amp;amp;ei=ZFOwToWrGarhsQKW7_HhAQ&amp;amp;usg=AFQjCNG0GUKjY_fKSdWAmdt4zLNGJPeXQw&amp;amp;sig2=hGaD0dHJ782TrpTxLJpZTg&quot;&gt;javap&lt;/a&gt; is a decompiler for java classes. Good to know when I want to decompile something&lt;/p&gt;
+
+&lt;p&gt;map ll to ls -al command. Much shorter&lt;/p&gt;
+
+&lt;p&gt;For web development, use polyfill to backfill features of older browsers. See &lt;a href=&quot;http://www.modernizr.com/&quot;&gt;modernizr&lt;/a&gt; for ways to &lt;a href=&quot;http://remysharp.com/2010/10/08/what-is-a-polyfill/&quot;&gt;ployfill&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Use &lt;a href=&quot;http://fmbip.com/#target-selector&quot;&gt;find me by IP&lt;/a&gt; to do health check for features.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="java" />
+      
+        <category term="linux" />
+      
+        <category term="springone2gx" />
+      
+        <category term="web" />
+      
+
+      
+        <summary type="html">These are general notes I took</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Share Folders Between Linux and Windows</title>
+      <link href="http://localhost:4000/2011/09/30/share-folders-between-linux-and-windows.html" rel="alternate" type="text/html" title="Share Folders Between Linux and Windows" />
+      <published>2011-09-30T00:00:00-07:00</published>
+      <updated>2011-09-30T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2011/09/30/share-folders-between-linux-and-windows</id>
+      <content type="html" xml:base="http://localhost:4000/2011/09/30/share-folders-between-linux-and-windows.html">&lt;p&gt;I needed to share a folder between a linux machine and windows. The seceret is using Samba. Fortunatly there are several guides out there that show how to do it. These are my notes:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install Samba
+    &lt;ul&gt;
+      &lt;li&gt;Install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt-get install samba smbfs&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Edit Config `sudo vi /etc/samba/smb.conf&lt;/p&gt;
+
+        &lt;p&gt;# Uncomment and add new line security = user username map = /etc/samba/smbusers`&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Add Samba user `sudo smbpasswd -a &lt;username&gt; sudo vi /etc/samba/smbusers&lt;/username&gt;&lt;/p&gt;
+
+        &lt;p&gt;# Add this line &lt;ubuntuusername&gt; = &quot;&lt;username&gt;&quot;`&lt;/username&gt;&lt;/ubuntuusername&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Configure Shares&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Edit File `sudo vi /etc/samba/smb.conf&lt;/p&gt;
+
+        &lt;p&gt;#======================= Share Definitions =======================&lt;/p&gt;
+
+        &lt;p&gt;# Un-comment the following (and tweak the other settings below to suit) # to enable the default home directory shares. This will share each # user’s home directory as \serverusername [homes] comment = Home Directories browseable = yes&lt;/p&gt;
+
+        &lt;p&gt;# By default, the home directories are exported read-only. Change the # next parameter to ‘no’ if you want to be able to write to them. read only = no&lt;/p&gt;
+
+        &lt;p&gt;# File creation mask is set to 0700 for security reasons. If you want to # create files with group=rw permissions, set next parameter to 0775. ; create mask = 0700&lt;/p&gt;
+
+        &lt;p&gt;# Directory creation mask is set to 0700 for security reasons. If you want to # create dirs. with group=rw permissions, set next parameter to 0775. ; directory mask = 0700&lt;/p&gt;
+
+        &lt;p&gt;# By default, \serverusername shares can be connected to by anyone # with access to the samba server. Un-comment the following parameter # to make sure that only “username” can connect to \serverusername # This might need tweaking when using external authentication schemes valid users = %S&lt;/p&gt;
+
+        &lt;p&gt;`&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Configure Ports&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Open the following ports `netbios-ns - 137/tcp # NETBIOS Name Service netbios-dgm - 138/tcp # NETBIOS Datagram Service netbios-ssn - 139/tcp # NETBIOS session service microsoft-ds - 445/tcp # if you are using Active Directory Other ports&lt;/p&gt;
+
+        &lt;p&gt;Port 389 (TCP) - for LDAP (Active Directory Mode) Port 445 (TCP) - NetBIOS was moved to 445 after 2000 and beyond, (CIFS) Port 901 (TCP) - for SWAT service (not related to client communication)`&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;references&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.ubuntu.com/10.04/serverguide/C/samba-fileserver.html&quot;&gt;Nice Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.howtogeek.com/howto/ubuntu/install-samba-server-on-ubuntu/&quot;&gt;Install Samba&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.howtogeek.com/howto/ubuntu/share-ubuntu-home-directories-using-samba/&quot;&gt;Create Shared&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="linux" />
+      
+        <category term="smb" />
+      
+
+      
+        <summary type="html">I needed to share a folder between a linux machine and windows. The seceret is using Samba. Fortunatly there are several guides out there that show how to do it. These are my notes:</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

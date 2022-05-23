@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/flex/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T15:02:56-07:00</updated>
+  <id>http://localhost:4000/tag/flex/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Flex and Ubuntu</title>
+      <link href="http://localhost:4000/2011/09/30/flex-and-ubuntu.html" rel="alternate" type="text/html" title="Flex and Ubuntu" />
+      <published>2011-09-30T00:00:00-07:00</published>
+      <updated>2011-09-30T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2011/09/30/flex-and-ubuntu</id>
+      <content type="html" xml:base="http://localhost:4000/2011/09/30/flex-and-ubuntu.html">&lt;p&gt;I’m on a project that uses flash for the ui. I want to make a few modification and thought I would try it out. The tutorial ask to install Flash Builder, but I don’t want to spend any money for a fancy IDE. I discovered I can just use the SDK. Should be simple enough.&lt;/p&gt;
+
+&lt;p&gt;It’s just a matter of &lt;a href=&quot;http://opensource.adobe.com/wiki/display/flexsdk/Download+Flex+4&quot;&gt;downloading the SDK&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Unzipping and adding $FLEX_HOME/bin to the Path&lt;/p&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stevelove.org/2009/05/14/how-to-install-and-set-up-adobe-flex-sdk-on-ubuntu-linux/&quot;&gt;Install SDK Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="flash" />
+      
+        <category term="flex" />
+      
+        <category term="linux" />
+      
+
+      
+        <summary type="html">I’m on a project that uses flash for the ui. I want to make a few modification and thought I would try it out. The tutorial ask to install Flash Builder, but I don’t want to spend any money for a fancy IDE. I discovered I can just use the SDK. Should be simple enough.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

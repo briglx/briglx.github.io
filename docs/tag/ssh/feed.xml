@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/ssh/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T15:02:56-07:00</updated>
+  <id>http://localhost:4000/tag/ssh/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Configure SSH</title>
+      <link href="http://localhost:4000/2011/09/30/configure-ssh.html" rel="alternate" type="text/html" title="Configure SSH" />
+      <published>2011-09-30T00:00:00-07:00</published>
+      <updated>2011-09-30T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2011/09/30/configure-ssh</id>
+      <content type="html" xml:base="http://localhost:4000/2011/09/30/configure-ssh.html">&lt;p&gt;I recently set up a few new servers and needed to allow other developers access. Here is how I did it:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add new user&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo adduser bbdiddle&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add user to sudoers&lt;/p&gt;
+
+    &lt;p&gt;`sudo vi /etc/sudoers&lt;/p&gt;
+
+    &lt;p&gt;# Add this line to the sodoers file bbdiddle ALL=(ALL) NOPASSWD:ALL`&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Enable ssh&lt;/p&gt;
+
+    &lt;p&gt;`sudo vi /etc/ssh/sshd_config&lt;/p&gt;
+
+    &lt;p&gt;# Change to yes to allow ssh PasswordAuthentication yes`&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Restart ssh&lt;/p&gt;
+
+    &lt;p&gt;`sudo /etc/init.d/ssh restart&lt;/p&gt;
+
+    &lt;p&gt;# Redhat sudo service sshd restart`&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="linux" />
+      
+        <category term="ssh" />
+      
+
+      
+        <summary type="html">I recently set up a few new servers and needed to allow other developers access. Here is how I did it:</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/ubuntu/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T15:02:56-07:00</updated>
+  <id>http://localhost:4000/tag/ubuntu/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Moving GitLab to an EBS Volume</title>
+      <link href="http://localhost:4000/2014/07/30/moving-gitlab-to-an-ebs-volume.html" rel="alternate" type="text/html" title="Moving GitLab to an EBS Volume" />
+      <published>2014-07-30T00:00:00-07:00</published>
+      <updated>2014-07-30T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2014/07/30/moving-gitlab-to-an-ebs-volume</id>
+      <content type="html" xml:base="http://localhost:4000/2014/07/30/moving-gitlab-to-an-ebs-volume.html">&lt;p&gt;I’ve really enjoyed using &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;GitLab&lt;/a&gt; to manage my git repositories.&lt;/p&gt;
+
+&lt;p&gt;It was really easy to get started because I used a &lt;a href=&quot;https://bitnami.com/stack/gitlab/cloud/amazon&quot;&gt;Bitnami GitLab image&lt;/a&gt; for Amazon. The problem is when I created the instance I chose an Instance store over EBS. I don’t have a really good reason why I did but now I need to move my data to its own volume so I can restart my instance with no fear of loosing data.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Check how much space you have&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt; 
+ /dev/xvda1 9.9G 4.5G 4.9G 48% /
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/xvda1&lt;/code&gt; is the root device volume. 10 GB is the default for ephemeral.&lt;/p&gt;
+
+    &lt;p&gt;I’m at 50% and would like to have more room to grow. However, the real reason is I don’t want to lose my data.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Create and Attach an EBS Volume&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;You need to create the volume in the same available zone as the host computer in order to attach it. Take note of the device name when you attach it. We’ll need this name when we mount the volume.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Format the Volume&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Find which volume is the new one with the list block devices command&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; lsblk
+    
+ xvda1 202:1 0 10G 0 disk / 
+ xvdb 202:16 0 4G 0 disk /mnt 
+ xvdf 202:80 0 100G 0 disk
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xvdf&lt;/code&gt; is the new one because it doesn’t have a mount point associated with it. Format the drive:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;mkfs &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; ext4 /dev/xvdf
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Create a full backup of GitLab&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;First stop the application using the bitnami ctrl script and move to a safe location:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; /opt/bitnami/ctlscript.sh stop 
+ &lt;span class=&quot;nb&quot;&gt;sudo mv&lt;/span&gt; /opt /opt2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Mount the volume&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Although the volume has been attached, it hasn’t been mounted yet. You can see this by running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;df&lt;/code&gt; again:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt;
+ /dev/xvda1 9.9G 4.5G 4.9G 48% /
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;However the list block devices command can see the volume.&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; lsblk
+    
+ xvda1 202:1 0 10G 0 disk / 
+ xvdb 202:16 0 4G 0 disk /mnt 
+ xvdf 202:80 0 100G 0 disk
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xvda1&lt;/code&gt; is mounted as the root file system.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xbdb&lt;/code&gt; is 4 GB mounted as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/mnt&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;We’ll mount the new drive to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/opt&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;sudo mkdir&lt;/span&gt; /opt 
+ &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;mount /dev/xvdf /opt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Restart Gitlab&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Move data over to the new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/opt&lt;/code&gt; drive and restart:&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;cp&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; /opt2/bitnami /opt 
+ &lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; /opt/bitnami/ctlscript.sh start
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Verify the volume and data&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;df&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-h&lt;/span&gt;
+    
+ /dev/xvda1 9.9G 1.2G 8.3G 12% / 
+ /dev/xvdf 99G 3.6G 90G 4% /opt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;I now have 3.6GB moved from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/opt&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/opt&lt;/code&gt; is mounted to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/dev/xvdf&lt;/code&gt; volume.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-add-volume-to-instance.html&quot;&gt;Add a Volume to Your Instance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-attaching-volume.html&quot;&gt;Attaching a Amazon EBS Volume to an Instance&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/block-device-mapping-concepts.html&quot;&gt;Block Device Mapping&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://wiki.bitnami.com/Applications/BitNami_GitLab#How_to_start.2fstop_the_servers.3f&quot;&gt;BitNami GitLab&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="bash" />
+      
+        <category term="ec2" />
+      
+        <category term="linux" />
+      
+        <category term="ubuntu" />
+      
+
+      
+        <summary type="html">I’ve really enjoyed using GitLab to manage my git repositories.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Logging onto EC2</title>
+      <link href="http://localhost:4000/2014/04/01/logging-onto-ec2.html" rel="alternate" type="text/html" title="Logging onto EC2" />
+      <published>2014-04-01T00:00:00-07:00</published>
+      <updated>2014-04-01T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2014/04/01/logging-onto-ec2</id>
+      <content type="html" xml:base="http://localhost:4000/2014/04/01/logging-onto-ec2.html">&lt;p&gt;I tend to forget how to log onto EC2. This morning I spun up a few servers with an Ubuntu image on EC2. As soon as I tried to log on, I received a&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Permission denied (publickey).&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;After doing a &lt;a href=&quot;http://stackoverflow.com/questions/4826706/amazon-ec2-permission-denied-publickey&quot;&gt;quick search&lt;/a&gt; I remembered I needed to add the username on the instance&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ssh -i /path/to/keypair.pem ubuntu@ec2-instancename.compute-1.amazonaws.com&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;So simple.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="aws" />
+      
+        <category term="ec2" />
+      
+        <category term="linux" />
+      
+        <category term="ubuntu" />
+      
+
+      
+        <summary type="html">I tend to forget how to log onto EC2. This morning I spun up a few servers with an Ubuntu image on EC2. As soon as I tried to log on, I received a</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Installing Node and Mongo</title>
+      <link href="http://localhost:4000/2012/01/11/installing-node-and-mongo.html" rel="alternate" type="text/html" title="Installing Node and Mongo" />
+      <published>2012-01-11T00:00:00-07:00</published>
+      <updated>2012-01-11T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2012/01/11/installing-node-and-mongo</id>
+      <content type="html" xml:base="http://localhost:4000/2012/01/11/installing-node-and-mongo.html">&lt;p&gt;I need to install Node and Mongo an a server. These are my notes.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Create Server&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Create new Instance (ami-63be790a)
+        &lt;ul&gt;
+          &lt;li&gt;Ubuntu 10.04 LTS Lucid&lt;/li&gt;
+          &lt;li&gt;EBS boot&lt;/li&gt;
+          &lt;li&gt;Canonical&lt;/li&gt;
+          &lt;li&gt;ubuntu@&lt;/li&gt;
+          &lt;li&gt;64 bit machine because that is what &lt;a href=&quot;http://blog.mongodb.org/post/137788967/32-bit-limitations&quot;&gt;mongo recommends&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;us-east-1&lt;/li&gt;
+          &lt;li&gt;m1.Large&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Linux 2.6.36 kernel&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Create Security Group&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Mongo Ports:
+        &lt;ul&gt;
+          &lt;li&gt;Standalone mongod : 27017&lt;/li&gt;
+          &lt;li&gt;mongos : 27017&lt;/li&gt;
+          &lt;li&gt;shard server (mongod –shardsvr) : 27018&lt;/li&gt;
+          &lt;li&gt;config server (mongod –configsvr) : 27019&lt;/li&gt;
+          &lt;li&gt;web stats page for mongod : add 1000 to port number (28017, by default)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Standard Ports:
+        &lt;ul&gt;
+          &lt;li&gt;20 (ssh)&lt;/li&gt;
+          &lt;li&gt;80 (Http)&lt;/li&gt;
+          &lt;li&gt;443 (Https)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Configure SSH&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Add new user
+ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo adduser bbdiddle&lt;/code&gt;- Add user to sudoers
+ `sudo vi /etc/sudoers&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;# Add this line to the sodoers file bbdiddle ALL=(ALL) NOPASSWD:ALL&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;- Enable ssh
+ &lt;/code&gt;sudo vi /etc/ssh/sshd_config&lt;/p&gt;
+
+    &lt;p&gt;# Change to yes to allow ssh PasswordAuthentication yes&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;- Restart ssh
+ &lt;/code&gt;sudo /etc/init.d/ssh restart`&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Install Mongo&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Download and install
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; curl http://downloads.mongodb.org/linux/mongodb-linux-x86_64-2.0.2.tgz &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; mongo.tgz 
+ &lt;span class=&quot;nb&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-xzvf&lt;/span&gt; mongo.tgz 
+ &lt;span class=&quot;nb&quot;&gt;mv &lt;/span&gt;mongodb-linux-x86_64-2.0.2 /opt/mongo 
+ &lt;span class=&quot;nb&quot;&gt;sudo mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; /mnt/db 
+ &lt;span class=&quot;nb&quot;&gt;sudo chown id&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; /mnt/db
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Test start server
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; ./mongodb-xxxxxxx/bin/mongod
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Running as a Daemon
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ./mongod &lt;span class=&quot;nt&quot;&gt;--fork&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--logpath&lt;/span&gt; /var/log/mongodb.log &lt;span class=&quot;nt&quot;&gt;--logappend&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--dbpath&lt;/span&gt; /mnt/db
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Install Node
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c&quot;&gt;# Install dependencies&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;g++ curl libssl-dev apache2-utils 
+ &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git-core
+
+ &lt;span class=&quot;c&quot;&gt;# Get latest code&lt;/span&gt;
+ git clone https://github.com/joyent/node.git 
+ &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;node
+
+ &lt;span class=&quot;c&quot;&gt;# Make the project &lt;/span&gt;
+ ./configure &lt;span class=&quot;nt&quot;&gt;--prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/opt/node 
+ make 
+ &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;make &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+
+ &lt;span class=&quot;c&quot;&gt;# Edit path variables &lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;vi /etc/bash.bashrc
+ // Add to bottom of file &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/opt/node/bin:.
+
+ &lt;span class=&quot;c&quot;&gt;# Verify Installation&lt;/span&gt;
+ node &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt; 
+ npm &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mongodb.org/display/DOCS/Production+Notes&quot;&gt;Configuring a Machine for Mongo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/joyent/node/wiki/Installation&quot;&gt;Installing Node&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="mongodb" />
+      
+        <category term="nodejs" />
+      
+        <category term="ubuntu" />
+      
+
+      
+        <summary type="html">I need to install Node and Mongo an a server. These are my notes.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Ubuntu’s Window Borders go Missing</title>
+      <link href="http://localhost:4000/2011/07/20/ubuntus-window-borders-go-missing.html" rel="alternate" type="text/html" title="Ubuntu's Window Borders go Missing" />
+      <published>2011-07-20T00:00:00-07:00</published>
+      <updated>2011-07-20T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2011/07/20/ubuntus-window-borders-go-missing</id>
+      <content type="html" xml:base="http://localhost:4000/2011/07/20/ubuntus-window-borders-go-missing.html">&lt;p&gt;From some reason the Window Borders in Ubuntu go missing and disappear. This means I don’t have the minimize or maximize buttons on my window. Fortunatly I was able to find a solution. Open a terminal and run&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metacity --replace&lt;/code&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="ubuntu" />
+      
+
+      
+        <summary type="html">From some reason the Window Borders in Ubuntu go missing and disappear. This means I don’t have the minimize or maximize buttons on my window. Fortunatly I was able to find a solution. Open a terminal and run</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Starting Ubuntu Terminal</title>
+      <link href="http://localhost:4000/2011/07/06/starting-ubuntu-terminal.html" rel="alternate" type="text/html" title="Starting Ubuntu Terminal" />
+      <published>2011-07-06T00:00:00-07:00</published>
+      <updated>2011-07-06T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2011/07/06/starting-ubuntu-terminal</id>
+      <content type="html" xml:base="http://localhost:4000/2011/07/06/starting-ubuntu-terminal.html">&lt;p&gt;From some reason, the menu on my Ubuntu decided to freeze on me. Fortunately I can still be productive from the command line. The only problem is my launcher for the terminal is frozen with the rest of the menus. Thanks to a quick search, I was able to use a keyboard shortcut to launch the terminal. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + Alt + t&lt;/code&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="terminal" />
+      
+        <category term="ubuntu" />
+      
+
+      
+        <summary type="html">From some reason, the menu on my Ubuntu decided to freeze on me. Fortunately I can still be productive from the command line. The only problem is my launcher for the terminal is frozen with the rest of the menus. Thanks to a quick search, I was able to use a keyboard shortcut to launch the terminal. Ctrl + Alt + t</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

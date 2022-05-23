@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/nodejs/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T15:02:56-07:00</updated>
+  <id>http://localhost:4000/tag/nodejs/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Search nodejs with regex and case insensitive</title>
+      <link href="http://localhost:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html" rel="alternate" type="text/html" title="Search nodejs with regex and case insensitive" />
+      <published>2012-04-10T00:00:00-07:00</published>
+      <updated>2012-04-10T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive</id>
+      <content type="html" xml:base="http://localhost:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html">&lt;p&gt;I recently needed to search for documents in mongo using mongoose. I knew I needed a regex but couldn’t figure out how to pass the case insesitive flag. We’ll here is how you do it.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var term = 'Apple'; Ideas.find({'title' : new RegExp(term, &quot;i&quot;)}, function(err, ideas){...});&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/RegExp&quot;&gt;RegEx documentation&lt;/a&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="javascript" />
+      
+        <category term="mongodb" />
+      
+        <category term="mongoose" />
+      
+        <category term="nodejs" />
+      
+        <category term="regex" />
+      
+
+      
+        <summary type="html">I recently needed to search for documents in mongo using mongoose. I knew I needed a regex but couldn’t figure out how to pass the case insesitive flag. We’ll here is how you do it.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Downgrading Node</title>
+      <link href="http://localhost:4000/2012/02/21/downgrading-node.html" rel="alternate" type="text/html" title="Downgrading Node" />
+      <published>2012-02-21T00:00:00-07:00</published>
+      <updated>2012-02-21T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2012/02/21/downgrading-node</id>
+      <content type="html" xml:base="http://localhost:4000/2012/02/21/downgrading-node.html">&lt;p&gt;I recently had to downgrade node and found &lt;a href=&quot;http://www.websector.de/blog/2011/12/15/quick-tip-node-how-to-downgrade-node-js-on-os-x/&quot;&gt;Jens walk through&lt;/a&gt; great.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="nodejs" />
+      
+
+      
+        <summary type="html">I recently had to downgrade node and found Jens walk through great.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Proxy Node through nginx</title>
+      <link href="http://localhost:4000/2012/01/11/proxy-node-through-nginx.html" rel="alternate" type="text/html" title="Proxy Node through nginx" />
+      <published>2012-01-11T00:00:00-07:00</published>
+      <updated>2012-01-11T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2012/01/11/proxy-node-through-nginx</id>
+      <content type="html" xml:base="http://localhost:4000/2012/01/11/proxy-node-through-nginx.html">&lt;p&gt;Once I got node service setup on my server I wasn’t happy with having to specify a port. Looking around I see others use nginx to listen on port 80 and proxy everything to node.&lt;/p&gt;
+
+&lt;p&gt;I really don’t know too much about security but read that in order to run on port 80 you need to run as root. If I run node as root, that could expose my system to hackers who could find an exploit in node and take over my system because I’m running as root. So to avoid that, run nginx in a special way to get port 80 going.&lt;/p&gt;
+
+&lt;p&gt;Although it seems like nginx is now exposed. If not, why can’t I just run node the same way I start nginx?&lt;/p&gt;
+
+&lt;p&gt;Despite my own lack of understanding, having nginx in front will be useful if I want to serve up static images without having to go through node.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Install nginx&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Follow the instruction to install &lt;a href=&quot;http://library.linode.com/web-servers/nginx/installation/debian-6-squeeze&quot;&gt;nginx&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&amp;lt;/li&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Forward request to node&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Edit nginx config at
+ ```bash
+ vi /opt/nginx/conf/nginx.conf&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;worker_processes  1;&lt;/p&gt;
+
+    &lt;p&gt;error_log  /var/log/nginx/error.log notice;&lt;/p&gt;
+
+    &lt;p&gt;events {
+     worker_connections  1024;
+ }&lt;/p&gt;
+
+    &lt;p&gt;http {
+     include       mime.types;
+     default_type  application/octet-stream;
+     access_log    /var/log/nginx/access.log;
+     sendfile      on;
+     keepalive_timeout  65;&lt;/p&gt;
+
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; # Define the node service 
+ upstream node_service {
+     server 127.0.0.1:9451;
+ }
+
+ server {
+     listen       80;
+     server_name  localhost;
+
+     # Proxy traffic to node service
+     location / {
+         # add proxy headers
+         proxy_set_header X-Real-IP $remote_addr;
+         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+         proxy_set_header Host $http_host;
+         proxy_set_header X-NginX-Proxy true;
+         # Here is where node service is specified
+         proxy_pass http://node_service/;
+         proxy_redirect off;
+     }
+ }  }  ```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://pau.calepin.co/how-to-deploy-a-nodejs-application-with-monit-nginx-and-bouncy.html&quot;&gt;Proxy node with nginx&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://library.linode.com/web-servers/nginx/installation/debian-6-squeeze&quot;&gt;Install NGinx&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/6109089/how-do-i-run-node-js-on-port-80&quot;&gt;Point nginx to node&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="nginx" />
+      
+        <category term="nodejs" />
+      
+
+      
+        <summary type="html">Once I got node service setup on my server I wasn’t happy with having to specify a port. Looking around I see others use nginx to listen on port 80 and proxy everything to node.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Installing Node and Mongo</title>
+      <link href="http://localhost:4000/2012/01/11/installing-node-and-mongo.html" rel="alternate" type="text/html" title="Installing Node and Mongo" />
+      <published>2012-01-11T00:00:00-07:00</published>
+      <updated>2012-01-11T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2012/01/11/installing-node-and-mongo</id>
+      <content type="html" xml:base="http://localhost:4000/2012/01/11/installing-node-and-mongo.html">&lt;p&gt;I need to install Node and Mongo an a server. These are my notes.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Create Server&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Create new Instance (ami-63be790a)
+        &lt;ul&gt;
+          &lt;li&gt;Ubuntu 10.04 LTS Lucid&lt;/li&gt;
+          &lt;li&gt;EBS boot&lt;/li&gt;
+          &lt;li&gt;Canonical&lt;/li&gt;
+          &lt;li&gt;ubuntu@&lt;/li&gt;
+          &lt;li&gt;64 bit machine because that is what &lt;a href=&quot;http://blog.mongodb.org/post/137788967/32-bit-limitations&quot;&gt;mongo recommends&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;us-east-1&lt;/li&gt;
+          &lt;li&gt;m1.Large&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Linux 2.6.36 kernel&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Create Security Group&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Mongo Ports:
+        &lt;ul&gt;
+          &lt;li&gt;Standalone mongod : 27017&lt;/li&gt;
+          &lt;li&gt;mongos : 27017&lt;/li&gt;
+          &lt;li&gt;shard server (mongod –shardsvr) : 27018&lt;/li&gt;
+          &lt;li&gt;config server (mongod –configsvr) : 27019&lt;/li&gt;
+          &lt;li&gt;web stats page for mongod : add 1000 to port number (28017, by default)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Standard Ports:
+        &lt;ul&gt;
+          &lt;li&gt;20 (ssh)&lt;/li&gt;
+          &lt;li&gt;80 (Http)&lt;/li&gt;
+          &lt;li&gt;443 (Https)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Configure SSH&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Add new user
+ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo adduser bbdiddle&lt;/code&gt;- Add user to sudoers
+ `sudo vi /etc/sudoers&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;# Add this line to the sodoers file bbdiddle ALL=(ALL) NOPASSWD:ALL&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;- Enable ssh
+ &lt;/code&gt;sudo vi /etc/ssh/sshd_config&lt;/p&gt;
+
+    &lt;p&gt;# Change to yes to allow ssh PasswordAuthentication yes&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;- Restart ssh
+ &lt;/code&gt;sudo /etc/init.d/ssh restart`&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Install Mongo&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Download and install
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; curl http://downloads.mongodb.org/linux/mongodb-linux-x86_64-2.0.2.tgz &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; mongo.tgz 
+ &lt;span class=&quot;nb&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-xzvf&lt;/span&gt; mongo.tgz 
+ &lt;span class=&quot;nb&quot;&gt;mv &lt;/span&gt;mongodb-linux-x86_64-2.0.2 /opt/mongo 
+ &lt;span class=&quot;nb&quot;&gt;sudo mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; /mnt/db 
+ &lt;span class=&quot;nb&quot;&gt;sudo chown id&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; /mnt/db
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Test start server
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; ./mongodb-xxxxxxx/bin/mongod
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Running as a Daemon
+        &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ./mongod &lt;span class=&quot;nt&quot;&gt;--fork&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--logpath&lt;/span&gt; /var/log/mongodb.log &lt;span class=&quot;nt&quot;&gt;--logappend&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--dbpath&lt;/span&gt; /mnt/db
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Install Node
+    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c&quot;&gt;# Install dependencies&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;g++ curl libssl-dev apache2-utils 
+ &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;git-core
+
+ &lt;span class=&quot;c&quot;&gt;# Get latest code&lt;/span&gt;
+ git clone https://github.com/joyent/node.git 
+ &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;node
+
+ &lt;span class=&quot;c&quot;&gt;# Make the project &lt;/span&gt;
+ ./configure &lt;span class=&quot;nt&quot;&gt;--prefix&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/opt/node 
+ make 
+ &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;make &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+
+ &lt;span class=&quot;c&quot;&gt;# Edit path variables &lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;vi /etc/bash.bashrc
+ // Add to bottom of file &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/opt/node/bin:.
+
+ &lt;span class=&quot;c&quot;&gt;# Verify Installation&lt;/span&gt;
+ node &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt; 
+ npm &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mongodb.org/display/DOCS/Production+Notes&quot;&gt;Configuring a Machine for Mongo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/joyent/node/wiki/Installation&quot;&gt;Installing Node&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="mongodb" />
+      
+        <category term="nodejs" />
+      
+        <category term="ubuntu" />
+      
+
+      
+        <summary type="html">I need to install Node and Mongo an a server. These are my notes.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
