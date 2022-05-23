@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/rdf/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T07:38:03-07:00</updated>
+  <id>http://localhost:4000/tag/rdf/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Building an Inferencing Engine</title>
+      <link href="http://localhost:4000/2013/03/29/building-an-inferencing-engine.html" rel="alternate" type="text/html" title="Building an Inferencing Engine" />
+      <published>2013-03-29T00:00:00-07:00</published>
+      <updated>2013-03-29T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2013/03/29/building-an-inferencing-engine</id>
+      <content type="html" xml:base="http://localhost:4000/2013/03/29/building-an-inferencing-engine.html">&lt;p&gt;I’m playing around with the idea of building an &lt;a href=&quot;http://en.wikipedia.org/wiki/Inference_engine&quot;&gt;inference engine&lt;/a&gt; for &lt;a href=&quot;http://www.mongodb.org/&quot;&gt;MongoDB&lt;/a&gt;. The idea is to load up some &lt;a href=&quot;http://www.w3.org/RDF/&quot;&gt;RDF data&lt;/a&gt; and attempt to run queries that use the &lt;a href=&quot;/2012/10/26/what-graphs-and-ontologies-mean-to-you.html&quot; title=&quot;What Graphs and Ontologies mean to you&quot;&gt;ontologies&lt;/a&gt; in the RDF for inferencing. For instance, if I have an ontology that defines an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isParentOf&lt;/code&gt; relationship with an inverse relationship of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isChildOf&lt;/code&gt;, the inferencing engine would know those two relationships are inverse. When the data store only has one record that defines&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;AugustCoppola&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;isParentOf&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;NicolasCage&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I can get a result from the following query even though this record doesn’t exist.&lt;/p&gt;
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;? &lt;span class=&quot;nt&quot;&gt;&amp;lt;isChildOf&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;AugustCoppola&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Looking briefly into how I could do this, I found the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://jena.apache.org/documentation/inference/index.html&quot;&gt;Jena&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://clarkparsia.com/pellet/&quot;&gt;Pellet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://notes.3kbo.com/&quot;&gt;Strategies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The trick is to make it happen.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="inferencing" />
+      
+        <category term="mongodb" />
+      
+        <category term="rdf" />
+      
+
+      
+        <summary type="html">I’m playing around with the idea of building an inference engine for MongoDB. The idea is to load up some RDF data and attempt to run queries that use the ontologies in the RDF for inferencing. For instance, if I have an ontology that defines an isParentOf relationship with an inverse relationship of isChildOf, the inferencing engine would know those two relationships are inverse. When the data store only has one record that defines</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">What Graphs and Ontologies mean to you</title>
+      <link href="http://localhost:4000/2012/10/26/what-graphs-and-ontologies-mean-to-you.html" rel="alternate" type="text/html" title="What Graphs and Ontologies mean to you" />
+      <published>2012-10-26T00:00:00-07:00</published>
+      <updated>2012-10-26T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2012/10/26/what-graphs-and-ontologies-mean-to-you</id>
+      <content type="html" xml:base="http://localhost:4000/2012/10/26/what-graphs-and-ontologies-mean-to-you.html">&lt;p&gt;New projects often introduce new terms which can sometimes be used in different ways between team members. Especial when there are multiple teams. This article will clarify the meaning for the following terms and help explain how they are related to one another.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Graphs&lt;/li&gt;
+  &lt;li&gt;RDF&lt;/li&gt;
+  &lt;li&gt;Ontology&lt;/li&gt;
+  &lt;li&gt;SKOS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most importantly I hope this will help you use the correct term at the right time and help correct someone who may be abusing a term. We need to start off with a  fundamental concept.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-concept&quot;&gt;Basic Concept&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/ontologiesbasics.png&quot; alt=&quot;Simple Graph&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At the most basic level, a graph is a connection of two things. This graph has something connected to something else. &lt;a href=&quot;http://www.w3.org/RDF/&quot;&gt;RDF&lt;/a&gt; is a way we can create these graphs. I won’t go too much into how RDF describes data except it can store the graph as a &lt;a href=&quot;http://www.w3.org/TR/rdf-concepts/#section-triples&quot;&gt;triple&lt;/a&gt; in the form &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(subject, predict, object)&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;At this point we don’t know what each node is or what the meaning of the connection between the nodes are. The graph could be:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(person, married to, person)
+(concept, related to, concept)
+(course, teaches about, concept)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice how I use the &lt;a href=&quot;http://www.w3.org/TR/rdf-concepts/#section-triples&quot;&gt;triple notation&lt;/a&gt; to explain the graph. RDF gives us a general way to define the parts of a graph, but is there a way we could describe what the nodes and the connection mean in a graph. In other words, is there a way we could define the &lt;a href=&quot;http://en.wikipedia.org/wiki/Semantics&quot;&gt;semantics&lt;/a&gt; of the graph.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-an-ontology&quot;&gt;What is an Ontology&lt;/h2&gt;
+
+&lt;p&gt;An ontology defines what and how things are connected together.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(classes, are connected by properties to other, classes)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Returning to our earlier list of things, we can see that the subject and objects are classes and the predicates are the properties.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(person, married, person)
+(concept, related, concept)
+(course, teaches, concept)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;examples&quot;&gt;Examples&lt;/h2&gt;
+
+&lt;p&gt;The best way to see how ontologies work is with a few examples.&lt;/p&gt;
+
+&lt;h3 id=&quot;social-example&quot;&gt;Social Example&lt;/h3&gt;
+
+&lt;p&gt;A Social Ontology could define the following classes and properties. A graph of this ontology would only have those elements.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Class&lt;/th&gt;
+      &lt;th&gt;Properties&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;People&lt;/td&gt;
+      &lt;td&gt;Married To&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Knows&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/socialgraph1.png&quot; alt=&quot;Social Ontology Graph&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;education-example&quot;&gt;Education Example&lt;/h3&gt;
+
+&lt;p&gt;An education institution could define different meanings to the nodes and connections in the graph.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Class&lt;/th&gt;
+      &lt;th&gt;Properties&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Course&lt;/td&gt;
+      &lt;td&gt;Teaches&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Concept&lt;/td&gt;
+      &lt;td&gt;Attends&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Person&lt;/td&gt;
+      &lt;td&gt;Knows&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Friend With&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;This graph could look like&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/educationgraph2.png&quot; alt=&quot;Education Ontology Graph&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;skos-example&quot;&gt;SKOS Example&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.w3.org/2004/02/skos/&quot;&gt;Skos&lt;/a&gt; is a popular ontology. This ontology has concepts that can be related to each other in broader and narrower terms. There a more classes and properties than I show, the important thing is this one ontology can be used to create hierarchies and a lot of other things.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Class&lt;/th&gt;
+      &lt;th&gt;Properties&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Concept&lt;/td&gt;
+      &lt;td&gt;Broader&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Narrower&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/skosgraph.png?w=300&quot; alt=&quot;SKOS Ontology Graph&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;take-aways&quot;&gt;Take Aways&lt;/h2&gt;
+
+&lt;p&gt;The project I’m on has a lot of new terms. Hopefully now we know the difference between an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ontology&lt;/code&gt; and a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SKOS:Concept&lt;/code&gt;. There is a lot more to talk about and this should lay the foundation of a common vocabular of terms.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="graph" />
+      
+        <category term="ontology" />
+      
+        <category term="rdf" />
+      
+        <category term="semantic" />
+      
+        <category term="skos" />
+      
+
+      
+        <summary type="html">New projects often introduce new terms which can sometimes be used in different ways between team members. Especial when there are multiple teams. This article will clarify the meaning for the following terms and help explain how they are related to one another.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

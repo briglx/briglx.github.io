@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/mysql/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T07:38:03-07:00</updated>
+  <id>http://localhost:4000/tag/mysql/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Backup Wordpress</title>
+      <link href="http://localhost:4000/2012/02/10/backup-wordpress.html" rel="alternate" type="text/html" title="Backup Wordpress" />
+      <published>2012-02-10T00:00:00-07:00</published>
+      <updated>2012-02-10T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2012/02/10/backup-wordpress</id>
+      <content type="html" xml:base="http://localhost:4000/2012/02/10/backup-wordpress.html">&lt;p&gt;I had a little scare the other day. For some reason my db for the blog stopped. I thought it would be a good idea to make a backup just in case.&lt;/p&gt;
+
+&lt;p&gt;I have MySQL Workbench on my machine and though it would be trivial. When I tried to connect to my db, I received an error saying I didn’t have access. &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.5/en/access-denied.html&quot;&gt;Looking around&lt;/a&gt; showed I needed to add a new user to the DB with the host I was connecting from. Here is what worked for me.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Add Remote User&lt;/strong&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;From the remote host, connect to local db &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ ./mysql -u root mysql -p&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Insert a new value &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql&amp;gt; insert into user VALUES('HOSTNAME','root',PASSWORD('my_password'), 'Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y', 'Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y','Y', '','','','',0,0,0,0);&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Restart the service &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ cd /opt/bitnami $ sudo ./ctlscript.sh restart mysql&lt;/code&gt;
+ Test connection &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;localhost$ mysql -h REMOTE_HOST -u root -p&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Start the backup&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;This part was easy. I just had to follow the &lt;a href=&quot;http://forum.hostek.com/showthread.php?297-How-to-use-MySQL-Workbench-to-backup-your-MySQL-database&quot;&gt;backup instructions&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I now have a complete backup of my blog data in a nice little file BlogBackup20120210.sql.&lt;/p&gt;
+
+&lt;p&gt;My scenario is using a wordpress stack provided by bitnami. That is why the command to restart is a little different.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="mysql" />
+      
+        <category term="wordpress" />
+      
+
+      
+        <summary type="html">I had a little scare the other day. For some reason my db for the blog stopped. I thought it would be a good idea to make a backup just in case.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

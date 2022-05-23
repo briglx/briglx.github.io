@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/web-design/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T07:38:03-07:00</updated>
+  <id>http://localhost:4000/tag/web-design/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">AjaxWorld - Day 3</title>
+      <link href="http://localhost:4000/2008/10/23/ajaxworld-day-3.html" rel="alternate" type="text/html" title="AjaxWorld - Day 3" />
+      <published>2008-10-23T00:00:00-07:00</published>
+      <updated>2008-10-23T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2008/10/23/ajaxworld-day-3</id>
+      <content type="html" xml:base="http://localhost:4000/2008/10/23/ajaxworld-day-3.html">&lt;p&gt;This last day started off being able to sleep in, but it quickly went downhill when the promised breakfast arrived 45min late. Nevertheless, I did glean a few bits of good information, and only had to walk out of a few sessions. I don’t want to sound like a jerk, but some of the content of the sessions was more like an infomercial than a learning environment. Enough of my rant, on to the tidbits.&lt;/p&gt;
+
+&lt;h2 id=&quot;social-networks-as-a-tool&quot;&gt;Social Networks as a Tool&lt;/h2&gt;
+
+&lt;p&gt;We use social networks everyday to accomplish our jobs. How can we utilize the power of social networks in an computerized environment. Look at your job through the eyes of a social network. In other words, what pieces of information do individual’s own.&lt;/p&gt;
+
+&lt;p&gt;Social networks can help me as a software developer produce higher quality of code.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How: Create tools that utilize the group. For instance, FxCop can produce a list of broken rules when it runs. These broken rules can be placed into a central repository. Then the entire group can access the rules and fix the code. The trick is to make it easy to select a rule, get the code, and make the fix. Bam. Almost like ants doing a little bit of work to get a big job done.&lt;/li&gt;
+  &lt;li&gt;Groups are nodes. Treat group on the graph just like a regular node. It will have its own resources and connections and events. Groups can be used to manage projects&lt;/li&gt;
+  &lt;li&gt;See Ning.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;jquery---modular-code&quot;&gt;JQuery - Modular Code&lt;/h2&gt;
+
+&lt;p&gt;A few people got their feelings hurt when &lt;a href=&quot;http://www.yehudakatz.com/&quot;&gt;Yehuda Katz&lt;/a&gt; changed his presentation from an introduction to JQuery to a more advanced talk on how to write modular code with JQuery. I enjoyed the talk albeit Yehuda rushed through the talk due to his 15 minute tardiness.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use the Addon .listener, .intercept to bind events.&lt;/li&gt;
+  &lt;li&gt;Bind to a higher element than lots of lower elements&lt;/li&gt;
+  &lt;li&gt;Use Event Messaging&lt;/li&gt;
+  &lt;li&gt;Think in High Level Events. Instead of e.keycode == 38 do .trigger(‘uparrow_clicked’)&lt;/li&gt;
+  &lt;li&gt;See LiveQuery. This allows you to bind events to all DIV even if they are not on the page yet. Useful for dynamic text via a widget&lt;/li&gt;
+  &lt;li&gt;See&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;become-a-good-presenter&quot;&gt;Become a good Presenter&lt;/h2&gt;
+
+&lt;p&gt;Walking away from this conference it was easy to spot the great presenters from the lousy ones. Great presenters do the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Prepare quality Content&lt;/li&gt;
+  &lt;li&gt;Format a clean unique presentation&lt;/li&gt;
+  &lt;li&gt;Know the audience&lt;/li&gt;
+  &lt;li&gt;Don’t repeat the exact same general information someone else already covered.&lt;/li&gt;
+  &lt;li&gt;Have quality content&lt;/li&gt;
+  &lt;li&gt;Don’t be an infomercial&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The lousy presenters did basically the opposite&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Show no emotion&lt;/li&gt;
+  &lt;li&gt;Mumble&lt;/li&gt;
+  &lt;li&gt;Appear as though you just saw the content&lt;/li&gt;
+  &lt;li&gt;Put lots of text on each slide&lt;/li&gt;
+  &lt;li&gt;Have misleading presentation titles in attempts to lure unsuspecting attendees&lt;/li&gt;
+  &lt;li&gt;Have poor content&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That’s about it. I’m about to get on the plane and leave beautiful San Jose and look forward to putting to practice the real gems of the conference.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="speaking" />
+      
+        <category term="web-design" />
+      
+
+      
+        <summary type="html">This last day started off being able to sleep in, but it quickly went downhill when the promised breakfast arrived 45min late. Nevertheless, I did glean a few bits of good information, and only had to walk out of a few sessions. I don’t want to sound like a jerk, but some of the content of the sessions was more like an infomercial than a learning environment. Enough of my rant, on to the tidbits.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">AjaxWorld - Day 2</title>
+      <link href="http://localhost:4000/2008/10/22/ajaxworld-day-2.html" rel="alternate" type="text/html" title="AjaxWorld - Day 2" />
+      <published>2008-10-22T00:00:00-07:00</published>
+      <updated>2008-10-22T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2008/10/22/ajaxworld-day-2</id>
+      <content type="html" xml:base="http://localhost:4000/2008/10/22/ajaxworld-day-2.html">&lt;p&gt;Another day and a little more information. This day had a couple of outstanding presentations. The first was by Kevin Lynch the CTO of Adobe. What a great presenter. The other was Douglas Crawford’s survey of JavaScript.&lt;/p&gt;
+
+&lt;h2 id=&quot;general-tips-and-tricks&quot;&gt;General Tips and Tricks&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.jslint.com/&quot;&gt;JsLink&lt;/a&gt; to validate JavaScript&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://developer.yahoo.com/yui/compressor/&quot;&gt;Yui Compressor&lt;/a&gt; for css/JavaScript minification&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.openajax.org/index.php&quot;&gt;OpenAjax&lt;/a&gt; gives ajax guidelines&lt;/p&gt;
+
+&lt;p&gt;Use the # to maintain state within your app.&lt;/p&gt;
+
+&lt;h2 id=&quot;push-data-to-the-cloud&quot;&gt;Push Data to the Cloud&lt;/h2&gt;
+
+&lt;p&gt;Because users are starting to access the web through multiple devices, there is a need to modify your application to run in the different contexts. Kevin Lynch showed a music library application that accessed his person music through the computer, phone, and Wii.&lt;/p&gt;
+
+&lt;h2 id=&quot;manage-large-data&quot;&gt;Manage Large Data&lt;/h2&gt;
+
+&lt;p&gt;Charles Kendrick had a lot of good ideas on how to sort and filter high volume dataset. The idea is similar to chunking data. When a sort needs to happen, push the sort back to the DB if the record count is larger than the client page limit.&lt;/p&gt;
+
+&lt;h2 id=&quot;complete-server-side-solutions&quot;&gt;Complete Server side Solutions&lt;/h2&gt;
+
+&lt;p&gt;This section comprised three different sessions. These included Java Server Face, Google’s GWT, and finally jMaki. The general idea is developers will use tools to create pages that can call back to the server. &lt;a href=&quot;http://www.nofluffjuststuff.com/conference/speaker/karthik_shyamsunder.html&quot;&gt;Karthik Shyamsunder&lt;/a&gt; showed how GWT will actually compile down the Java into JavaScript and also merge all images into a single image. The script created is specific for the browser and version.&lt;/p&gt;
+
+&lt;p&gt;One technique to do partial rendering of pages is to keep track of the DOM tree and perform a Diff between the two DOMs. Then send down the Diff file to have the client update the parts that need to be updated. Very clever.&lt;/p&gt;
+
+&lt;p&gt;Use a publish subscribe bus on the client for inter-component communication.&lt;/p&gt;
+
+&lt;h2 id=&quot;javascript-the-good-parts&quot;&gt;JavaScript the Good Parts&lt;/h2&gt;
+
+&lt;p&gt;This was by far the most informational session. Douglas Crawford presented the ideas found in his book &lt;a href=&quot;http://oreilly.com/catalog/9780596517748/&quot;&gt;JavaScript: The Good Parts.&lt;/a&gt; In it, he showed how different he === and == operators are and how important it is to use the === all the time. He recommended using &lt;a href=&quot;http://www.jslint.com/&quot;&gt;JsLint&lt;/a&gt; to verify your JavaScript to ensure you are following the best practices he found.&lt;/p&gt;
+
+&lt;h2 id=&quot;variable-user-experience&quot;&gt;Variable User Experience&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://markmeeker.com/events/ajaxworld2008&quot;&gt;Mark Meeker&lt;/a&gt; from Obitz showed how they created their application to down grade gracefully. They first develop the page to work with &lt;a href=&quot;http://en.wikipedia.org/wiki/Plain_Old_Semantic_HTML&quot;&gt;POSH&lt;/a&gt;. Then depending on the user’s browser, you can enhance the user experience by hiding detail with JavaScript and CSS. They also use build test to enforce their development standards. They make use of a composite view design. This is where you create many small controls that show specific data and have specific behavior. These controls are then assembled together onto a single page.&lt;/p&gt;
+
+&lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h2&gt;
+
+&lt;p&gt;I think I would like to try writing an application in both GWT and Silverlight. I like the idea of being able to publish a single application have have it live on the network edge through a CDN. For now though, my apps will be widgets and JavaScript based.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="web-design" />
+      
+
+      
+        <summary type="html">Another day and a little more information. This day had a couple of outstanding presentations. The first was by Kevin Lynch the CTO of Adobe. What a great presenter. The other was Douglas Crawford’s survey of JavaScript.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">AjaxWorld - Day 1</title>
+      <link href="http://localhost:4000/2008/10/21/ajaxworld-day-1.html" rel="alternate" type="text/html" title="AjaxWorld - Day 1" />
+      <published>2008-10-21T00:00:00-07:00</published>
+      <updated>2008-10-21T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2008/10/21/ajaxworld-day-1</id>
+      <content type="html" xml:base="http://localhost:4000/2008/10/21/ajaxworld-day-1.html">&lt;p&gt;First day over and I think the overall assessment is not too bad. The sessions started pretty early at 7:30 and went all the way till 8:00pm. That’s ok if all the sessions had been stellar, but I would say they were only ok.&lt;/p&gt;
+
+&lt;p&gt;The day started off with Scott Guthrie showing off some Silverlight and MVC. Some of the talk highlights were:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The more api’s the better. As more companies and application standardize and expose api’s, the easier it is to consume those data and create mashups.&lt;/li&gt;
+  &lt;li&gt;Business’s need to think about multiple channels of delivering content. Users access the web via browsers, TVs, gaming consoles, their phones, and soon much more.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The rest of the sessions seemed to all blend into one. I’ll try to take better notes on day two, but this is what I captured for the rest of the day,. Right away Dave Meeker said don’t reinvent the wheel for social networks. Use third party frameworks and tools. OK. Now on to the big ideas that stood out.&lt;/p&gt;
+
+&lt;h2 id=&quot;use-3d-design&quot;&gt;Use 3D design&lt;/h2&gt;
+
+&lt;p&gt;This means the z dimension on the page and also changing the size of elements according to their relevance. The examples I can think of is the office tool bar and the ITunes Music slider control. The control where on the edge of the screen the images seemed to be filed and stacked close together, but the center image is large and full. The idea is to put the most important content front and center, and push the rest to the sides.&lt;/p&gt;
+
+&lt;h2 id=&quot;ajax-push--comet&quot;&gt;Ajax Push / Comet.&lt;/h2&gt;
+
+&lt;p&gt;Where have I been? I was blown away by this idea of the server being able to update content on the client. &lt;a href=&quot;http://en.wikipedia.org/wiki/Reverse_Ajax&quot;&gt;Ajax Push&lt;/a&gt; makes a lot of sense if you have many clients that are sharing a common resource that can change frequently. Ideas are, collaborative documents,  messaging, and alerts.&lt;/p&gt;
+
+&lt;h2 id=&quot;open-ajax&quot;&gt;Open Ajax&lt;/h2&gt;
+
+&lt;p&gt;I was really excited about &lt;a href=&quot;http://www.openajax.org/&quot;&gt;Open Ajax Alliance&lt;/a&gt;. This is a group that is attempting to create some standards around Ajax. The ideas that stood out to me were the OpenAjax Metadata Specification. This document goes about defining the term Widgets and Ajax api’s. This is a great idea because now toolkits can be created that can read the information. Enterprise should focus on SOA widget end services. Most excitedly is they have a preview tool for widgets, although I forgot where. Widgets become valuable when they can talk to one another. I’m just not entirely sure how they do this.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="web-design" />
+      
+
+      
+        <summary type="html">First day over and I think the overall assessment is not too bad. The sessions started pretty early at 7:30 and went all the way till 8:00pm. That’s ok if all the sessions had been stellar, but I would say they were only ok.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/mongoose/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T07:38:03-07:00</updated>
+  <id>http://localhost:4000/tag/mongoose/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Search nodejs with regex and case insensitive</title>
+      <link href="http://localhost:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html" rel="alternate" type="text/html" title="Search nodejs with regex and case insensitive" />
+      <published>2012-04-10T00:00:00-07:00</published>
+      <updated>2012-04-10T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive</id>
+      <content type="html" xml:base="http://localhost:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html">&lt;p&gt;I recently needed to search for documents in mongo using mongoose. I knew I needed a regex but couldn’t figure out how to pass the case insesitive flag. We’ll here is how you do it.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var term = 'Apple'; Ideas.find({'title' : new RegExp(term, &quot;i&quot;)}, function(err, ideas){...});&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/RegExp&quot;&gt;RegEx documentation&lt;/a&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="javascript" />
+      
+        <category term="mongodb" />
+      
+        <category term="mongoose" />
+      
+        <category term="nodejs" />
+      
+        <category term="regex" />
+      
+
+      
+        <summary type="html">I recently needed to search for documents in mongo using mongoose. I knew I needed a regex but couldn’t figure out how to pass the case insesitive flag. We’ll here is how you do it.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

@@ -11,7 +11,7 @@ tags:
   - "hadoop"
 ---
 
-I have four VM machines in dev and I want to configure my own [hadoop](http://hadoop.apache.org) cluster to use as a tool and analysis. 
+I have four VM machines in dev and I want to configure my own [hadoop](http://hadoop.apache.org) cluster to use as a tool and analysis. 
 
 I'm going to follow the general process out lined by [hadoop's instructions](http://hadoop.apache.org/common/docs/current/cluster_setup.html) and [yahoo help](http://developer.yahoo.com/hadoop/tutorial/module7.html#config-small), [here](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-multi-node-cluster/) and [here](http://www.cloudera.com/blog/2009/08/hadoop-default-ports-quick-reference/).
 

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/jmeter/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T07:38:03-07:00</updated>
+  <id>http://localhost:4000/tag/jmeter/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">A Tour of JMeter – Part 2</title>
+      <link href="http://localhost:4000/2011/03/22/a-tour-of-jmeter-part-2.html" rel="alternate" type="text/html" title="A Tour of JMeter – Part 2" />
+      <published>2011-03-22T00:00:00-07:00</published>
+      <updated>2011-03-22T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2011/03/22/a-tour-of-jmeter-part-2</id>
+      <content type="html" xml:base="http://localhost:4000/2011/03/22/a-tour-of-jmeter-part-2.html">&lt;p&gt;This is the second post in a &lt;a href=&quot;/2011/02/17/a-tour-of-jmeter-part-1.html&quot;&gt;series about Apache JMeter&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;first-test-run&quot;&gt;First Test Run&lt;/h2&gt;
+
+&lt;p&gt;This tour is broken into several sections&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/2011/02/17/a-tour-of-jmeter-part-1.html&quot;&gt;Installing and Recording&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2011/03/22/a-tour-of-jmeter-part-2.html&quot;&gt;First Test Run&lt;/a&gt; (This post)&lt;/li&gt;
+  &lt;li&gt;Improving the Test Run&lt;/li&gt;
+  &lt;li&gt;Advance Techniques&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you followed the first part of the series, you should have JMeter Installed and also have a recording of web actions from the browser. This post will use that recording and replay it in a load test fashion.&lt;/p&gt;
+
+&lt;p&gt;Running the test plan is a matter of&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Adding virtual users to simulate load for the plan&lt;/li&gt;
+  &lt;li&gt;Moving the recording into the test plan&lt;/li&gt;
+  &lt;li&gt;Running and Reviewing the results&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;add-virtual-users&quot;&gt;Add Virtual Users&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Add Users&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Right click on the Test Plan. Select Add -&amp;gt; Threads -&amp;gt; Thread Group.&lt;/li&gt;
+      &lt;li&gt;Edit Number of threads to be the number of users you would like to simulate. I’m using 50 users.&lt;/li&gt;
+      &lt;li&gt;Edit the Ramp-up period. Setting the value to 10 means in 10 seconds all 50 people will be on the site.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/jmeter-testplan0.png&quot; alt=&quot;JMeter-TestPlan0&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Configure Test Plan&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;The recording from part I showed all files that are downloaded when a request is made. You need to pick the items that make the most sense in order to reproduce the expected outcome. In this case. navigating to index.html had dependencies on css and images. So we really just need to add the index file to the test plan.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Right Click on Recording Controller -&amp;gt; index.html and select Copy&lt;/li&gt;
+      &lt;li&gt;Right Click on Test Plan -&amp;gt; Thread Group and select Paste.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/jmeter-testplan1.png&quot; alt=&quot;JMeter-TestPlan1&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Attach Report&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Right Click on Test Plan. Select Add -&amp;gt; Listener -&amp;gt; Summary Report&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/jmeter-testplan2.png&quot; alt=&quot;JMeter-TestPlan2&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Run&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Select Run -&amp;gt; Start&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/jmeter-testplan3.png&quot; alt=&quot;JMeter-TestPlan3&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;There you go. A load test that had 50 users playback a page from a recorded script. This is a very simple load test. Obviously there is room for improvement and creating more sophisticated tests.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="jmeter" />
+      
+
+      
+        <summary type="html">This is the second post in a series about Apache JMeter.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">A Tour of JMeter - Part 1</title>
+      <link href="http://localhost:4000/2011/02/17/a-tour-of-jmeter-part-1.html" rel="alternate" type="text/html" title="A Tour of JMeter - Part 1" />
+      <published>2011-02-17T00:00:00-07:00</published>
+      <updated>2011-02-17T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2011/02/17/a-tour-of-jmeter-part-1</id>
+      <content type="html" xml:base="http://localhost:4000/2011/02/17/a-tour-of-jmeter-part-1.html">&lt;p&gt;I recently had a task to test the performance between two different solutions. After looking around at several tools, I settled on &lt;a href=&quot;http://jakarta.apache.org/jmeter/&quot;&gt;Apache JMeter&lt;/a&gt;. It took a while learning the tool. However, I found it to be extremely useful once I got the idea of how it worked.&lt;/p&gt;
+
+&lt;p&gt;This tour is broken into several sections&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/2011/02/17/a-tour-of-jmeter-part-1.html&quot;&gt;Installing and Recording&lt;/a&gt; (This post)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/2011/03/22/a-tour-of-jmeter-part-2.html&quot;&gt;First Test Run&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Improving the Test Run&lt;/li&gt;
+  &lt;li&gt;Advance Techniques&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
+
+&lt;p&gt;You can quickly start recording web interactions in less than 10 min with the tool. Run these commands in your console.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;wget http://apache.opensourceresources.org//jakarta/jmeter/binaries/jakarta-jmeter-2.4.tgz 
+&lt;span class=&quot;nb&quot;&gt;tar &lt;/span&gt;zxvf jakarta-jmeter-2.4.tgz 
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;jakarta-jmeter-2.4 &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bin/jmeter
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Bam! That fast.&lt;/p&gt;
+
+&lt;h2 id=&quot;record&quot;&gt;Record&lt;/h2&gt;
+
+&lt;p&gt;When JMeter starts, there are two nodes for you to play with.&lt;/p&gt;
+
+&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Test Plan&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;This is what is saved as your test and where all the meat goes.&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Work Bench&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;I used this area to record browser actions&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;p&gt;Recording is just configuring JMeter to listen to the browser and configuring the browser to send info to JMeter.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Add A Proxy in JMeter
+    &lt;ul&gt;
+      &lt;li&gt;Right Click on the Workbench and select &lt;strong&gt;Non-Test Element&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Select &lt;strong&gt;HTTP Proxy Server&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;You can configure the Proxy Server different ways. Just stick to the defaults for now.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Add a Place to capture the recording
+    &lt;ul&gt;
+      &lt;li&gt;Right Click on the Workbench and select &lt;strong&gt;Logic Controller&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Select &lt;strong&gt;Recording Controller&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;You should now have two elements. &lt;img src=&quot;http://localhost:4000/assets/images/record1.png&quot; alt=&quot;Record1&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Configure the Browser to Record
+In FireFox this is done with Edit -&amp;gt; Preferences -&amp;gt; Advance -&amp;gt; Network -&amp;gt; Settings -&amp;gt; Manual Proxy Configuration.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Record Something
+    &lt;ul&gt;
+      &lt;li&gt;Navigate to &lt;a href=&quot;http://jakarta.apache.org/jmeter/usermanual/index.html&quot;&gt;JMeter User Manual&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;JMeter now has your actions recorded &lt;img src=&quot;http://localhost:4000/assets/images/record2.png&quot; alt=&quot;Record2&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;That’s it. You have install, configured and used JMeter to record some browser actions. Next we’ll go into running what was recorded.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="jmeter" />
+      
+
+      
+        <summary type="html">I recently had a task to test the performance between two different solutions. After looking around at several tools, I settled on Apache JMeter. It took a while learning the tool. However, I found it to be extremely useful once I got the idea of how it worked.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">JMeter Tips</title>
+      <link href="http://localhost:4000/2011/02/10/jmeter-tips.html" rel="alternate" type="text/html" title="JMeter Tips" />
+      <published>2011-02-10T00:00:00-07:00</published>
+      <updated>2011-02-10T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2011/02/10/jmeter-tips</id>
+      <content type="html" xml:base="http://localhost:4000/2011/02/10/jmeter-tips.html">&lt;p&gt;Extracting Text from Responses Use the Regular Expression Extractor and have it as a child on the request you want to get data from. Set the template value to $1$ to populate your variable name with the matched item in the group (). Otherwise your variable will be called&lt;/p&gt;
+
+&lt;p&gt;refName - the value of the template refName_gn, where n=0,1,2 - the groups for the match refName_g - the number of groups in the Regex (excluding 0)&lt;/p&gt;
+
+&lt;p&gt;Use Global variable for hostname Be sure to check the Servername on all Http Requet to make sure they are not overriding the global one.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="jmeter" />
+      
+
+      
+        <summary type="html">Extracting Text from Responses Use the Regular Expression Extractor and have it as a child on the request you want to get data from. Set the template value to $1$ to populate your variable name with the matched item in the group (). Otherwise your variable will be called</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

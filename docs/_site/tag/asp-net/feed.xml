@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/asp-net/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T07:38:03-07:00</updated>
+  <id>http://localhost:4000/tag/asp-net/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">ASP.NET Authorization - Out of the Loop</title>
+      <link href="http://localhost:4000/2007/11/14/asp-net-authorization-out-of-the-loop.html" rel="alternate" type="text/html" title="ASP.NET Authorization - Out of the Loop" />
+      <published>2007-11-14T00:00:00-07:00</published>
+      <updated>2007-11-14T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2007/11/14/asp-net-authorization-out-of-the-loop</id>
+      <content type="html" xml:base="http://localhost:4000/2007/11/14/asp-net-authorization-out-of-the-loop.html">&lt;p&gt;Asp.net configuration makes is really easy to apply authorization to different pages.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-problem&quot;&gt;The Problem&lt;/h2&gt;
+
+&lt;p&gt;I have often created projects that have different areas restricted based on user roles. For instance, there might be a section only for administrator and another for power users then another for the general public. I needed a way to ensure users were restricted from accessing pages based on their roles. My solution worked and I thought it was pretty good, but I just realized there is a another way to do it.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-way&quot;&gt;My Way&lt;/h2&gt;
+
+&lt;p&gt;I wanted to ensure that each page would perform a check to see if the current user was authorized to use the page. I created a base page which had an &lt;strong&gt;ApplyAuthorizationRules&lt;/strong&gt; method which was kicked off during &lt;strong&gt;OnInit&lt;/strong&gt;. By default I didn’t do anything in the method so everyone was authorized to access the page by default.&lt;/p&gt;
+
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BasePage&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Page&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;OnInit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;EventArgs&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+        &lt;span class=&quot;k&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;OnInit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+        &lt;span class=&quot;nf&quot;&gt;ApplyAuthorizationRules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+    
+    &lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ApplyAuthorizationRules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+      &lt;span class=&quot;c1&quot;&gt;// By default do nothing. Essentially allow access to everyone. &lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Each page that needed authorization would derive from the base class and override the &lt;strong&gt;ApplyAuthorizationRules&lt;/strong&gt; () method. Notice in the Class Diagram how the AdminPage is overriding the method while the other two pages, SummaryPage and DetailPage, use the default implementation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/UrlAuthzUml.Png&quot; alt=&quot;UrlAuthzUml&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The code in the AdminPage looks something like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AdminPage&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BasePage&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ApplyAuthorizationRules&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;IsInRole&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Roles&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Admin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; 
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+          &lt;span class=&quot;c1&quot;&gt;// Allow &lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+      &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; 
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+          &lt;span class=&quot;n&quot;&gt;Response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Redirect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;~/Unauthorized.aspx&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This method worked great and could handle all of our use cases when we needed to apply authorization. It worked so well I didn’t dig any deeper into other solutions. To be honest I knew that ASP offered some tools for managing users and roles but I thought it was mostly tied to authentication. What to my surprise today when I put two and two together and realized there is an ASP way to handle authorization.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-aspnet-way&quot;&gt;The ASP.NET Way&lt;/h2&gt;
+
+&lt;p&gt;Ever since my first ASP.NET application I have generally used the web.config file to configure authentication. I have generally used something like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;system.web&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;compilation&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;debug=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;authentication&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Forms&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;forms&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;myAppAtuh&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;loginUrl=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/login.aspx&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/authentication&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;authorization&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;deny&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;users=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;?&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/authorization&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/system.web&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I never really took a close look at the &lt;a href=&quot;http://msdn2.microsoft.com/en-us/library/wce3kxhd.aspx&quot;&gt;authorization tag&lt;/a&gt;. I can accomplish everything I was doing programmatically through configuration. With the following example, I’m able to create an Admin section on my app where only those users with an Admin role have access. There is a &lt;a href=&quot;http://msdn2.microsoft.com/en-us/library/b6x6shw7(VS.71).aspx&quot;&gt;special case&lt;/a&gt; that allows users with a Role of ‘Power’ to see the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/Admin/View.aspx&lt;/code&gt; page. You do have to be careful in creating the rules because they do execute in a top down manner.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;system.web&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;compilation&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;debug=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;authentication&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;mode=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Forms&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;forms&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;myAppAtuh&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;loginUrl=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/login.aspx&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/authentication&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;authorization&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;deny&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;users=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;?&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/authorization&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/system.web&amp;gt;&lt;/span&gt; 
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;location&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;allowOverride=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;false&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/Admin/View.aspx&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;system.web&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;authorization&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lockItem=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;allow&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;roles=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Power&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/authorization&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/system.web&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/location&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;location&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;allowOverride=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;false&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/Admin/&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;system.web&amp;gt;&lt;/span&gt; 
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;authorization&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;lockItem=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;allow&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;roles=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Admin&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; 
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;deny&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;users=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;*&quot;&lt;/span&gt;
+    &lt;span class=&quot;err&quot;&gt;&amp;lt;/authorization&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; 
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/system.web&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/location&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;My way isn’t too bad. I do feel bad for not noticing that other people have talked about this before. Doing a &lt;a href=&quot;http://www.google.com/search?q=+Url+Authorization&amp;amp;ie=utf-8&amp;amp;oe=utf-8&amp;amp;aq=t&amp;amp;rls=org.mozilla:en-US:official&amp;amp;client=firefox-a&quot;&gt;simple search&lt;/a&gt; returns a lot of results showing everyone else already knew about the configuration method. Oh well, now I know, and you do too.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="asp-net" />
+      
+
+      
+        <summary type="html">Asp.net configuration makes is really easy to apply authorization to different pages.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Beware Dynamic User Controls in a Web Farm</title>
+      <link href="http://localhost:4000/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html" rel="alternate" type="text/html" title="Beware Dynamic User Controls in a Web Farm" />
+      <published>2007-11-02T00:00:00-07:00</published>
+      <updated>2007-11-02T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2007/11/02/beware-dynamic-user-controls-in-a-web-farm</id>
+      <content type="html" xml:base="http://localhost:4000/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html">&lt;p&gt;Many large sites utilize a web farm with a load balancer. The load balancer will cycle through each server in the farm for each request. Today I assumed our load balancer had &lt;a href=&quot;http://en.wikipedia.org/wiki/Load_balancing_%28computing%29&quot;&gt;persistence&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I think the text from Wikipedia sums my experience today: “But reliance on persistence can cause problems if the persistence fails.” Come to find out, the rules on the load balancer were not setup uniformly and I found a special case where persistence failed.&lt;/p&gt;
+
+&lt;p&gt;My application was creating custom user controls dynamically on a form. The Page class offers two two ways to load a control dynamically:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;public Control LoadControl(string virtualPath); public Control LoadControl(Type t, object[] parameters);&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;My code was using the second method. It stuffed the control’s GetType().AssemblyQualifiedName property into the view state. Then on the PostBack, this information was retrieved from the ViewState to create a Type object and Load the control again.&lt;/p&gt;
+
+&lt;p&gt;One thing I didn’t realize was the AssemblyQualifiedName used the &lt;a href=&quot;http://msdn2.microsoft.com/en-us/library/ms404279.aspx&quot;&gt;Shadow copy&lt;/a&gt; assembly name, which is something like App_Web_XXXXXXXX where X can be any letter or number.&lt;/p&gt;
+
+&lt;p&gt;This would have been fine if persistence didn’t fail on the load balancer. What happened however was the view state saved the type assembly name as App_Web_ob44m7cy.dll, which it was on Server1, but because the load balancer directed the request to Server2, no such file existed. And that was the error I was getting.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Type : System.IO.FileNotFoundException, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089   Message : Could not load file or assembly 'App_Web_ob44m7cy, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. The system cannot find the file specified.   Source : mscorlib&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The fix was two fold, tell the network team they didn’t have uniform rules in place, shame shame shame. Second, don’t rely on persistence being setup on the load balancer. I changed my code to load the control via the path. A pretty simple solution for a strange situation.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="net" />
+      
+        <category term="asp-net" />
+      
+
+      
+        <summary type="html">Many large sites utilize a web farm with a load balancer. The load balancer will cycle through each server in the farm for each request. Today I assumed our load balancer had persistence.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Forms Authentication and Cookies</title>
+      <link href="http://localhost:4000/2007/08/20/forms-authentication-and-cookies.html" rel="alternate" type="text/html" title="Forms Authentication and Cookies" />
+      <published>2007-08-20T00:00:00-07:00</published>
+      <updated>2007-08-20T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2007/08/20/forms-authentication-and-cookies</id>
+      <content type="html" xml:base="http://localhost:4000/2007/08/20/forms-authentication-and-cookies.html">&lt;p&gt;I encountered a strange problem this morning when I tried to turn on Authentication to the ASP.NET 2.0 Website.&lt;/p&gt;
+
+&lt;p&gt;I opened my handy dandy Wrox Professional ASP.NET 2.0 book to chapter 18, Security, and started the simple process of implementing forms authentication. Simple, hah! What happen was my cookies were not being saved. Walking step by step, I first made sure I denied access to any anonymous users.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;authorization&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;denyusers&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&quot;?&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/authorization&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Piece of Cake! I then added my code to redirect to a logon page. (Note: It shouldn’t make a difference using “Mock.aspx” instead of “Logon.aspx”)&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;authenticationmode&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&quot;Forms&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;formsloginUrl&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&quot;Mock.aspx&quot;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;&amp;lt;/authentication&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Inside of Mock.aspx is the code to always authenticate everyone as the same user.&lt;/p&gt;
+
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Submit_Click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sender&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EventArgs&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Always use the same user&lt;/span&gt;
+  &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;userName&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Charle&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;FormsAuthentication&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;RedirectFromLoginPage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;userName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;What happened next was unexpected. I tried to hit my default page and was redirected to the logon page. Good. I clicked the Submit button and poof! I’m back at the logon form. That’s weird I was expecting to go to my default page.&lt;/p&gt;
+
+&lt;p&gt;Using fiddler, I found that my cookie wasn’t being persisted between called. The logon page was setting one but it was lost on the other side.&lt;/p&gt;
+
+&lt;p&gt;After trying several things, I changed my web.config file to the following:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;authenticationmode&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&quot;Forms&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;formsname&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;=&quot;.ASPXAUTH&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;        &lt;/span&gt; &lt;span class=&quot;na&quot;&gt;loginUrl=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Mock.aspx&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;        &lt;/span&gt; &lt;span class=&quot;na&quot;&gt;protection=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;All&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;        &lt;/span&gt; &lt;span class=&quot;na&quot;&gt;timeout=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;30&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;        &lt;/span&gt; &lt;span class=&quot;na&quot;&gt;path=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;        &lt;/span&gt; &lt;span class=&quot;na&quot;&gt;requireSSL=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;false&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;        &lt;/span&gt; &lt;span class=&quot;na&quot;&gt;slidingExpiration=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;true&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;        &lt;/span&gt; &lt;span class=&quot;na&quot;&gt;defaultUrl=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;default.aspx&quot;&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;        &lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cookieless=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;UseCookies&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/authentication&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Making this change made my cookies stick. I’ll have to dig in deeper to see why the first way didn’t work.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="net" />
+      
+        <category term="asp-net" />
+      
+
+      
+        <summary type="html">I encountered a strange problem this morning when I tried to turn on Authentication to the ASP.NET 2.0 Website.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

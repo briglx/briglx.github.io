@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/keras/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T07:38:03-07:00</updated>
+  <id>http://localhost:4000/tag/keras/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">More Time Doesn’t Always Help</title>
+      <link href="http://localhost:4000/2018/06/28/more-time-doesnt-always-help.html" rel="alternate" type="text/html" title="More Time Doesn't Always Help" />
+      <published>2018-06-28T00:00:00-07:00</published>
+      <updated>2018-06-28T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2018/06/28/more-time-doesnt-always-help</id>
+      <content type="html" xml:base="http://localhost:4000/2018/06/28/more-time-doesnt-always-help.html">&lt;p&gt;Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/trainingvalidationaccuracy.png&quot; alt=&quot;TrainingValidationAccuracy&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The model is over-fitting the data somehow. No matter how many more epochs I run, the validation won’t get better.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="keras" />
+      
+        <category term="machine-learning" />
+      
+        <category term="python" />
+      
+        <category term="tensorflow" />
+      
+
+      
+        <summary type="html">Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

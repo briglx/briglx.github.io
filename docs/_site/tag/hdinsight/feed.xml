@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="http://localhost:4000/tag/hdinsight/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T07:38:03-07:00</updated>
+  <id>http://localhost:4000/tag/hdinsight/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">How Long to Deploy a Secure HDInsight Cluster</title>
+      <link href="http://localhost:4000/2017/08/23/how-long-to-deploy-a-secure-hdinsight-cluster.html" rel="alternate" type="text/html" title="How Long to Deploy a Secure HDInsight Cluster" />
+      <published>2017-08-23T00:00:00-07:00</published>
+      <updated>2017-08-23T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2017/08/23/how-long-to-deploy-a-secure-hdinsight-cluster</id>
+      <content type="html" xml:base="http://localhost:4000/2017/08/23/how-long-to-deploy-a-secure-hdinsight-cluster.html">&lt;p&gt;It takes a while to build a secure HDInsight cluster. In my case it was about an hour from start to finish.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/secureclusterdeployment.jpg&quot; alt=&quot;SecureClusterDeployment&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;About half of the work was setting up the VNet and configuring the Domain Controllers. The HDInsight cluster took about 30 mins which his about normal.&lt;/p&gt;
+
+&lt;p&gt;Some steps were dependent on other steps and also some steps were running asynchronously. I didn’t record when I started the process, so I’m using the time of the first time as my zero. Add a few seconds on for the first step to run.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Deployment step&lt;/th&gt;
+      &lt;th&gt;Time from Start (min)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Availability Set&lt;/td&gt;
+      &lt;td&gt;00.00&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Public IP&lt;/td&gt;
+      &lt;td&gt;00.08&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Load Balancer&lt;/td&gt;
+      &lt;td&gt;00.11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;VNet&lt;/td&gt;
+      &lt;td&gt;00.26&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;BDC Nic&lt;/td&gt;
+      &lt;td&gt;00.29&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PDC Nic&lt;/td&gt;
+      &lt;td&gt;00.31&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Storage Account&lt;/td&gt;
+      &lt;td&gt;00.31&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;AD BDC VM&lt;/td&gt;
+      &lt;td&gt;05.30&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;AD PDC VM&lt;/td&gt;
+      &lt;td&gt;05.70&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Prepare BDC Script&lt;/td&gt;
+      &lt;td&gt;12.80&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Create AD Forest Script&lt;/td&gt;
+      &lt;td&gt;23.90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Update Vnet DNS1 Script&lt;/td&gt;
+      &lt;td&gt;24.10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Update BDC Nic Script&lt;/td&gt;
+      &lt;td&gt;24.90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Configure BDC Script&lt;/td&gt;
+      &lt;td&gt;29.70&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Update Vnet DNS2 Script&lt;/td&gt;
+      &lt;td&gt;29.90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Create Cluster&lt;/td&gt;
+      &lt;td&gt;56.00&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="hadoop" />
+      
+        <category term="hdinsight" />
+      
+
+      
+        <summary type="html">It takes a while to build a secure HDInsight cluster. In my case it was about an hour from start to finish.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Here are the differences between HDInsight and Hortonworks HDP</title>
+      <link href="http://localhost:4000/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html" rel="alternate" type="text/html" title="Here are the differences between HDInsight and Hortonworks HDP" />
+      <published>2017-05-08T00:00:00-07:00</published>
+      <updated>2017-05-08T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp</id>
+      <content type="html" xml:base="http://localhost:4000/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html">&lt;p&gt;I get asked a lot about the differences between Microsoft HDInsight and Hortonworks HDP. Turns out there tight coordinated development efforts between the two companies. I was surprised to see how much closer the two products are now today compared to a year ago. Here is what I was able to find.&lt;/p&gt;
+
+&lt;h2 id=&quot;lag-in-versions&quot;&gt;Lag in Versions&lt;/h2&gt;
+
+&lt;p&gt;As of today, 8 May 2017, the current versions are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HDP: 2.6&lt;/li&gt;
+  &lt;li&gt;HDInsight: 3.5. Based on HDP 2.5&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, the first thing we see is HDInsight has a lag between the latest and greatest of Hortonworks. This really results in differences between feature version. That makes sense because Azure is a different beast than a straight IaaS deployments. Microsoft engineers need to make it work with WASB storage and other Azure specific architecture (networking, security, etc).&lt;/p&gt;
+
+&lt;h2 id=&quot;feature-gaps&quot;&gt;Feature Gaps&lt;/h2&gt;
+
+&lt;p&gt;It would be great if all of the features were ported to Azure but they are not. Some priorities are made on what to support. I imagine this is driven by customer demand. Here are the feature not found in HDInsight:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Druid&lt;/li&gt;
+  &lt;li&gt;Solr&lt;/li&gt;
+  &lt;li&gt;Slider&lt;/li&gt;
+  &lt;li&gt;Accumulo&lt;/li&gt;
+  &lt;li&gt;Falcon&lt;/li&gt;
+  &lt;li&gt;Atlas&lt;/li&gt;
+  &lt;li&gt;Flume&lt;/li&gt;
+  &lt;li&gt;Knox&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;p&gt;I found this information from the product pages&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HDP tools found in HDInsight &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning&quot;&gt;https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Apache tools found in HDP &lt;a href=&quot;https://hortonworks.com/products/data-center/hdp/&quot;&gt;https://hortonworks.com/products/data-center/hdp/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hortonworks.com/datasheet/microsoft-azure-hdinsight/&quot;&gt;https://hortonworks.com/datasheet/microsoft-azure-hdinsight/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="azure" />
+      
+        <category term="hadoop" />
+      
+        <category term="hdinsight" />
+      
+        <category term="hdp" />
+      
+
+      
+        <summary type="html">I get asked a lot about the differences between Microsoft HDInsight and Hortonworks HDP. Turns out there tight coordinated development efforts between the two companies. I was surprised to see how much closer the two products are now today compared to a year ago. Here is what I was able to find.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
