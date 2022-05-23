@@ -13,7 +13,7 @@ I really like design patterns and also enjoy learning the why behind some implme
 
 Jon Skeet's [singleton article](http://csharpindepth.com/Articles/General/Singleton.aspx) gives a handfull of implementations of the singleton and explains the difference between them. He talks about how .Net, Java, and C++ all manage memory, threading and instantiation models differently which affect the correctness of the pattern.
 
-Microsoft has a [great article](http://msdn.microsoft.com/en-us/library/ff650316.aspx) that goes a little deeper in some areas but doesn’t talk too much about Lazy loading.
+Microsoft has a [great article](http://msdn.microsoft.com/en-us/library/ff650316.aspx) that goes a little deeper in some areas but doesn't talk too much about Lazy loading.
 
 Finally the folks at dofactory give a [direct implementation](http://www.dofactory.com/Patterns/PatternSingleton.aspx#_self1) from the "Design Patterns" book which each other article references. The dofactory article gives a real world example of a singleton in use and also tries to show how .net can be used to simplify the pattern.
 

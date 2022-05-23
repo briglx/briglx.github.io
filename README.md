@@ -97,3 +97,4 @@ bundle exec jekyll build -s ${jekyllSrc} ${INPUT_CUSTOM_OPTS}
 
 # References
 - Building Locally https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll
+- Minimal Mistakes A Jekyll theme https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/

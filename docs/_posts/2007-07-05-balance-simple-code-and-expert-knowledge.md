@@ -12,7 +12,7 @@ tags:
   - "learning"
 ---
 
-I enjoyed reading [What’s Wrong With This Code (#16)](http://odetocode.com/Blogs/scott/archive/2007/07/02/11050.aspx) because it got me thinking about having in depth knowledge on a subject and [KISS](http://en.wikipedia.org/wiki/KISS_principle). 
+I enjoyed reading [What's Wrong With This Code (#16)](http://odetocode.com/Blogs/scott/archive/2007/07/02/11050.aspx) because it got me thinking about having in depth knowledge on a subject and [KISS](http://en.wikipedia.org/wiki/KISS_principle). 
 
 When I saw the code, I thought it was an overkill for the problem. In the comments I offered a solution that is simple and what seems to have solved the problem. I'll admit that I'm not an expert on JavaScript and I wouldn't be surprised if someone pointed out serious flaws with my code. While I make my way on the path to becoming an expert, I'll continue to solve problems with simple solutions. Borrowing the concept Red/Green/Refactor, from [TDD](http://en.wikipedia.org/wiki/Test-driven_development), 
 

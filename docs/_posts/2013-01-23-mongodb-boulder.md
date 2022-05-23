@@ -10,7 +10,7 @@ date: "2013-01-23"
 tags: 
   - "mongodb"
   - "talks"
-cover: assets/images/mongodb_2013_boulder_1920x1080_1.png
+cover: /assets/images/mongodb_2013_boulder_1920x1080_1.png
 ---
 
 Thanks to 10Gen team in providing me an opportunity to speak at the MongoDB Boulder conference.

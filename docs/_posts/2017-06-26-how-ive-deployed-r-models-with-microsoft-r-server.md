@@ -13,7 +13,7 @@ Many organizations are benefiting from advanced analytics and machine learning. 
 
 Generally deploying models run into two major obstacles technical and organizational. Any solution needs to cover both.
 
-![Create and Deploy Analytics Web Services](/assets/images/image2017-2-15-8-11-28.png)
+![Create and Deploy Analytics Web Services]({{ site.url }}{{ site.baseurl }}/assets/images/image2017-2-15-8-11-28.png)
 
 - Write your models and routines in your local environment.
 - Deploy them as production-ready microservices.
@@ -27,9 +27,9 @@ The best teams version their models using version control software just as it's 
 
 - Navigate to Azure portal
 - Spin up an R Server
-- ![Azure R Server Dashboard](/assets/images/image2017-2-28-14-52-4.png)
+- ![Azure R Server Dashboard]({{ site.url }}{{ site.baseurl }}/assets/images/image2017-2-28-14-52-4.png)
 - Open the network port
-- ![image2017-2-28 14-52-51](/assets/images/image2017-2-28-14-52-51.png)
+- ![image2017-2-28 14-52-51]({{ site.url }}{{ site.baseurl }}/assets/images/image2017-2-28-14-52-51.png)
 
 **Configure Server**
 
@@ -74,11 +74,11 @@ library(mrsdeploy)
 - Inspect swagger.json file
 - Navigate to http://website:12800/api/mtService/v1.0.0/swagger.json
 - Get authorization token with Rest Client
-- ![image2017-2-28 15-4-18](/assets/images/image2017-2-28-15-4-18.png)
-- ![image2017-2-28 15-5-42](/assets/images/image2017-2-28-15-5-42.png)
+- ![image2017-2-28 15-4-18]({{ site.url }}{{ site.baseurl }}/assets/images/image2017-2-28-15-4-18.png)
+- ![image2017-2-28 15-5-42]({{ site.url }}{{ site.baseurl }}/assets/images/image2017-2-28-15-5-42.png)
 - Call Web service with token and parameters
-- ![image2017-2-28 15-14-26](/assets/images/image2017-2-28-15-14-26.png)
-- ![image2017-2-28 15-14-49](/assets/images/image2017-2-28-15-14-49.png)
+- ![image2017-2-28 15-14-26]({{ site.url }}{{ site.baseurl }}/assets/images/image2017-2-28-15-14-26.png)
+- ![image2017-2-28 15-14-49]({{ site.url }}{{ site.baseurl }}/assets/images/image2017-2-28-15-14-49.png)
 
 ## Resources
 

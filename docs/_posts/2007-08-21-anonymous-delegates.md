@@ -174,6 +174,6 @@ class Program
             };
         }
    }
-``
+```
 
 I can create a method that returns a method. What is amazing about this is the ability to pass extra parameter into the dynamic method.

@@ -19,19 +19,19 @@ This first thing is to download the library from Microsoft. Do a search to get t
   
 I'll be using the 2.0 framework in this example. I've set up a project and set a reference to Microsoft.Practices.EnterpriseLibrary.Common and Microsoft.Practices.EnterpriseLibrary.Data. That should get us going.  
   
-![Sample Project](/assets/images/CropperCapture%5B17%5D.Png)
+![Sample Project]({{ site.url }}{{ site.baseurl }}/assets/images/CropperCapture%5B17%5D.Png)
   
 The next step is the start up the EntLibConfig.exe and select File - Open Application and select the app.config file for our project. At first glance, the configuration tool is not at all intuitive. But if you are lucky, you will have a node called Data Access Application Block. If not, then just select your app node and choose to add the Data Application Block manually.  
   
-![App Node](/assets/images/CropperCapture%5B23%5D.Png)
+![App Node]({{ site.url }}{{ site.baseurl }}/assets/images/CropperCapture%5B23%5D.Png)
   
 The vital piece of the Data Application Block is the Connection String setting. I modified the default LocalSqlServer connection to have the settings I need. First I'll change the Provider name for an Oracle Client connection. Unfortunately the tool isn't smart enough to set default connection string values for an oracle connection so you have to manually add, edit, or remove the default nodes under the connection string.  
   
-![Provider](/assets/images/CropperCapture%5B26%5D.Png)  
+![Provider]({{ site.url }}{{ site.baseurl }}/assets/images/CropperCapture%5B26%5D.Png)  
   
 Once you've updated the connection string with the correct values, be sure to select the connection string as the default connection.  
   
-![Default Connection](/assets/images/CropperCapture%5B29%5D.Png)
+![Default Connection]({{ site.url }}{{ site.baseurl }}/assets/images/CropperCapture%5B29%5D.Png)
   
 Save and close the tool. Going back to the application we can see that the app.config was updated with our modifications.  
   
@@ -89,6 +89,4 @@ namespace DataApplicationBlock
 }
 ```
 
-  
-  
 There we have it. Nice and easy steps to get you using the Data Application block.

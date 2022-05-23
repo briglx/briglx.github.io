@@ -29,7 +29,7 @@ Steps to update Trunk with Branch changes
     6. Take Note of the Start and End Revisions. These values will be used later. You will have to log at the log to see what the head revision is.
     7. Click Dry Run to see what files will be affected.
     8. If things looks good, click Merge.  
-        ![SVNMerge](/assets/images/SVNMerge.Png.png)
+        ![SVNMerge]({{ site.url }}{{ site.baseurl }}/assets/images/SVNMerge.Png.png)
 5. Your working copy now has the changes made during the branch. Edit conflicts if any.
 6. Commit you changes with the comment like: "Merged v2.0-branch changes r99026:99343 into the trunk"
 

@@ -12,7 +12,7 @@ tags:
   - "ec2"
   - "linux"
   - "redhat"
-cover: assets/images/firewall-e1367345805612.png
+cover: /assets/images/firewall-e1367345805612.png
 ---
 I just tried to deploy and test an application on EC2 running red hat but couldn't telnet it. 
 

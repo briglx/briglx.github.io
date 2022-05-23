@@ -4,7 +4,7 @@ brig:
   url_full: http://briglamoreaux.com/
   url: briglamoreaux.com
   bio: I solve problems by being insatiably curious.
-  picture: assets/images/brig.jpg
+  picture: /assets/images/brig.jpg
   location: Queen Creek, AZ
   facebook: false
   twitter: briglx

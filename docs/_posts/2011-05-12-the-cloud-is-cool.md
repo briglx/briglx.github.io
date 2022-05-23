@@ -12,7 +12,7 @@ tags:
   - "wordpress"
 ---
 
-I've known about Amazon EC2 service for a while. I've really been interested in trying something out when I heard about AWS’s Free Usage Tier. I could get a server in the cloud free for an entire year. Wow. How can I resist? So today I thought I would try to do something.
+I've known about Amazon EC2 service for a while. I've really been interested in trying something out when I heard about AWS's Free Usage Tier. I could get a server in the cloud free for an entire year. Wow. How can I resist? So today I thought I would try to do something.
 
 I thought I would move my blog to amazon. I found a [great guide](http://cykod.com/blog/post/2010-09-blogging-in-the-cloud-scaling-wordpress3) that I more or less followed. The only places where I deviated were due to me using a single micro instance and the bitnami AMI. But wait, what is a micro instance and an AMI. These were some of the many terms I learned today.
 

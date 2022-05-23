@@ -5,16 +5,17 @@ paginate: 100 # it will paginate after this number
 language: 'en-uk'
 words_per_minute: 200
 
+url: https://briglx.github.io
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /
+# baseurl: 
 
 # Website info
 title: Brig Lamoreaux
 description: Long term storage for a forgetful mind
 # cover: assets/images/blog-cover.jpg
-logo: assets/images/blog-icon.png
-logo_dark: assets/images/blog-icon.png
-favicon: assets/images/favicon.png
+logo: /assets/images/blog-icon.png
+logo_dark: /assets/images/blog-icon.png
+favicon: /assets/images/favicon.png
 CNAME: #add cname for website to be created
 
 # Social info
@@ -34,9 +35,10 @@ disqus_shortname: jekyllt # replace with your disqus username
 # google_analytics: UA-69281367-1 # replace with your GA tracking identifier
 
 # Permalinks
-permalink: /:title
+# permalink: /:title
 # permalink: /author/:author
 # permalink: /tag/:tag
+permalink: date
 
 # Authors' info in `_data/authors.yml`
 # Tags' info in `_data/tags_info.yml`

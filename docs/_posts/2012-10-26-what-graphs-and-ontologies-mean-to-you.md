@@ -13,7 +13,7 @@ tags:
   - "rdf"
   - "semantic"
   - "skos"
-cover: assets/images/ontologiesbasics.png
+cover: /assets/images/ontologiesbasics.png
 ---
 
 New projects often introduce new terms which can sometimes be used in different ways between team members. Especial when there are multiple teams. This article will clarify the meaning for the following terms and help explain how they are related to one another.
@@ -27,7 +27,7 @@ Most importantly I hope this will help you use the correct term at the right tim
 
 ## Basic Concept
 
-![Simple Graph](/assets/images/ontologiesbasics.png)
+![Simple Graph]({{ site.url }}{{ site.baseurl }}/assets/images/ontologiesbasics.png)
 
 At the most basic level, a graph is a connection of two things. This graph has something connected to something else. [RDF](http://www.w3.org/RDF/) is a way we can create these graphs. I won't go too much into how RDF describes data except it can store the graph as a [triple](http://www.w3.org/TR/rdf-concepts/#section-triples) in the form `(subject, predict, object)`.
 
@@ -70,7 +70,7 @@ A Social Ontology could define the following classes and properties. A graph of
 | People | Married To |
 |  | Knows |
 
-![Social Ontology Graph](/assets/images/socialgraph1.png)
+![Social Ontology Graph]({{ site.url }}{{ site.baseurl }}/assets/images/socialgraph1.png)
 
 ### Education Example
 
@@ -85,7 +85,7 @@ An education institution could define different meanings to the nodes and co
 
 This graph could look like
 
-![Education Ontology Graph](/assets/images/educationgraph2.png)
+![Education Ontology Graph]({{ site.url }}{{ site.baseurl }}/assets/images/educationgraph2.png)
 
 ### SKOS Example
 
@@ -96,7 +96,7 @@ This graph could look like
 | Concept | Broader |
 |  | Narrower |
 
-![SKOS Ontology Graph](/assets/images/skosgraph.png?w=300)
+![SKOS Ontology Graph]({{ site.url }}{{ site.baseurl }}/assets/images/skosgraph.png?w=300)
 
 ## Take Aways
 

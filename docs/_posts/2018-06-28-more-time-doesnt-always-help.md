@@ -17,6 +17,6 @@ tags:
 
 Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.
 
-![TrainingValidationAccuracy](/assets/images/trainingvalidationaccuracy.png)
+![TrainingValidationAccuracy]({{ site.url }}{{ site.baseurl }}/assets/images/trainingvalidationaccuracy.png)
 
 The model is over-fitting the data somehow. No matter how many more epochs I run, the validation won't get better.

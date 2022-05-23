@@ -95,13 +95,13 @@ The first thing we'll want to setup is the logging aspect. This makes the Except
 
 Select your app node and choose to add the Logging and Instrumentation Application Block.
 
-![AddBlock](/assets/images/addblock.png)
+![AddBlock]({{ site.url }}{{ site.baseurl }}/assets/images/addblock.png)
 
 The tool allows you to define categories, formatters, and sinks. Sinks are the final resting place for our messages. Sinks can be a flat file or an event log. Formatter are used to turn our message object into a plain text message. The category is where you define what happens to our message object when it is caught.
 
 I modify the Sinks section to have one sink for the Application Event Log.
 
-![SinkSetup](/assets/images/sinksetup.png)
+![SinkSetup]({{ site.url }}{{ site.baseurl }}/assets/images/sinksetup.png)
 
 Modify the categories section to have the three categories defined during the implementation step
 
@@ -111,11 +111,11 @@ Modify the categories section to have the three categories defined during the im
 
 Notice how each category has a single destination. The destination tells Enterprise library to use the default Text Formatter and send it to the Application Event Log Sink.
 
-![LoggingCategory](/assets/images/loggingcategory.png)
+![LoggingCategory]({{ site.url }}{{ site.baseurl }}/assets/images/loggingcategory.png)
 
 One last step in logging is to set up a default category. I like to set mine to default to Error.
 
-![DefaultCategory](/assets/images/defaultcategory.png)
+![DefaultCategory]({{ site.url }}{{ site.baseurl }}/assets/images/defaultcategory.png)
 
 At this point your application should be able to use LogInformational(string message) and LogWarning(string message)with no problems. Setting up the exception handling will take care of the rest.
 
@@ -123,7 +123,7 @@ At this point your application should be able to use LogInformational(string mes
 
 Select your app node and choose to add the Exception Handling Application Block. Select the application block and add a new Exception Policy with the name Error. Add a new Exception Type to the policy that catches all Exceptions. Finally add a new Logging Handler.
 
-![ErrorExceptionPolicy](/assets/images/errorexceptionpolicy.png)
+![ErrorExceptionPolicy]({{ site.url }}{{ site.baseurl }}/assets/images/errorexceptionpolicy.png)
 
 The configuration I use for the Logging Handler of the Error Exception Policy is:
 
@@ -133,13 +133,13 @@ The Warning exception policy is exactly like the Error but with the following va
 
 <table width="400" border="1" cellspacing="0" cellpadding="2"><tbody><tr><td valign="top" width="200">LogCategory</td><td valign="top" width="198">Warning</td></tr><tr><td valign="top" width="200">Priority</td><td valign="top" width="198">5</td></tr><tr><td valign="top" width="200">Severity</td><td valign="top" width="198">Warning</td></tr></tbody></table>
 
-![WarningExceptionPolicy](/assets/images/warningexceptionpolicy.png)
+![WarningExceptionPolicy]({{ site.url }}{{ site.baseurl }}/assets/images/warningexceptionpolicy.png)
 
 With both exception policies setup and using the logging our ILogging class is fully functional. Now it is a simple configuration setting to turn on and off the different logging levels.
 
 Any value larger than the MinimumPriority will be logged. Anything less will not be logged, simple. The values of the categories are: Error-10, Warning-5, and Information-1. I like to set the MinimumPriority to 10 in production.
 
-![MinimumPriority](/assets/images/minimumpriority.png)
+![MinimumPriority]({{ site.url }}{{ site.baseurl }}/assets/images/minimumpriority.png)
 
 ## Wrap Up
 

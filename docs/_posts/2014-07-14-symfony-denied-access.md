@@ -13,7 +13,7 @@ tags:
   - "nginx"
   - "php"
   - "symfony"
-cover: assets/images/sf-logo.png
+cover: /assets/images/sf-logo.png
 ---
 
 Moving my Symfony app to a QA server showed me how rude the server is.

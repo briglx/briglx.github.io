@@ -11,7 +11,7 @@ tags:
   - "software"
   - "apache"
   - "php"
-cover: assets/images/phpapache.jpg
+cover: /assets/images/phpapache.jpg
 ---
 
 I was trying to install a debugger for PHP and had trouble mostly because it turned out I had two different versions of PHP running on my machine. One I installed using homebrew and the other ... well I don't know how it got there.

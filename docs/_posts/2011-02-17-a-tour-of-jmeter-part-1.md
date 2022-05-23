@@ -49,13 +49,13 @@ Recording is just configuring JMeter to listen to the browser and configuring th
   - Right Click on the Workbench and select **Logic Controller**
   - Select **Recording Controller**
 
-  You should now have two elements. ![Record1](/assets/images/record1.png)
+  You should now have two elements. ![Record1]({{ site.url }}{{ site.baseurl }}/assets/images/record1.png)
 - Configure the Browser to Record
   In FireFox this is done with Edit -> Preferences -> Advance -> Network -> Settings -> Manual Proxy Configuration.
 
 - Record Something
   - Navigate to [JMeter User Manual](http://jakarta.apache.org/jmeter/usermanual/index.html)
 
-  JMeter now has your actions recorded ![Record2](/assets/images/record2.png)
+  JMeter now has your actions recorded ![Record2]({{ site.url }}{{ site.baseurl }}/assets/images/record2.png)
 
 That's it. You have install, configured and used JMeter to record some browser actions. Next we'll go into running what was recorded.

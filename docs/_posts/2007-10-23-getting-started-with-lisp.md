@@ -19,11 +19,11 @@ Lisp is known as the [programmable programming language](http://www.paulgraham.c
 
 Lisp has many different dialects. Common Lisp is one dialect. There are several different implementations of Common Lisp similar to the different implementations of C++. The first step is to choose and download a specific Lisp compiler. I decided on Steel Bank Common Lisp (SBCL) for no rhyme or reason. One hurdle to overcome is understanding the unorthodox grid of available downloads.
 
-![SBCLOptions](/assets/images/SBCLOptions.Png)
+![SBCLOptions]({{ site.url }}{{ site.baseurl }}/assets/images/SBCLOptions.Png)
 
 The secret to the grid is to look for your OS in left column and your processor in the top column. I was directed to the yellow square labeled `1.0.9`. This links to a installation file called `sbcl-1.0.9-x86-windows-binary.msi`. Executing the installer will install some files to the in `C:\Program Files\Steel Bank Common Lisp\1.0.9`folder. The most important file is the sbcl.exe. I actually created a shortcut to this file and placed it in my `C:\Documents and Settings\All Users\Start Menu\Programs\Lisp`folder.
 
-![LispShortcut](/assets/images/LispShortcut.Png)
+![LispShortcut]({{ site.url }}{{ site.baseurl }}/assets/images/LispShortcut.Png)
 
 ## Stand your Ground
 

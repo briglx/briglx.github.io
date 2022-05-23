@@ -29,7 +29,7 @@ The plugins for Live Writer really are not named very well, but I'll give them a
 
 In order to do a fair test, I will be comparing how the different tools handle the code in this screen:
 
-![Raw Source](/assets/images/CropperCapture%5B1%5D.jpg)
+![Raw Source]({{ site.url }}{{ site.baseurl }}/assets/images/CropperCapture%5B1%5D.jpg)
 
 ## CopySourceAsHtml
 
@@ -74,7 +74,7 @@ The only bad thing is I am forced to switch to html mode in order to insert the 
 
 This is the first tool I've used as a plugin for Windows Live Writer. After the installation, I see a new option in my Insert list for Insert Code...
 
-![Live Writer](/assets/images/CropperCapture%5B2%5D.jpg)
+![Live Writer]({{ site.url }}{{ site.baseurl }}/assets/images/CropperCapture%5B2%5D.jpg)
 
 The web site for Insert Code describes it as able to format a snippet of text in a number of programming languages such as C#, HTML, MSH, JavaScript, Visual Basic and TSQL.
 
@@ -176,7 +176,7 @@ Sure enough, this tool has kept the colors and font I have defined in VS. The to
 
 The last Live Writer plugin to review is [Code Snippet plugin for Windows Live Writer](http://gallery.live.com/liveItemDetail.aspx?li=d8835a5e-28da-4242-8http://gallery.live.com/liveItemDetail.aspx?li=d4409446-af7f-42ec-aa20-78aa5bac4748&bt=9&pl=82eb-e1a006b083b9&bt=9&pl=8). This follows the same installation as the previous plugins. However, I do get the chance to make some changes before the code is inserted into my page.
 
-![Insert Code Snippet](/assets/images/CropperCapture%5B3%5D.jpg)
+![Insert Code Snippet]({{ site.url }}{{ site.baseurl }}/assets/images/CropperCapture%5B3%5D.jpg)
 
 I stick with the defaults and get the following results:
 

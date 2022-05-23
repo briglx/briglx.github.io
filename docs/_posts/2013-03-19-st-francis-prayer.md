@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Prayer of St. Francis"
 date: "2013-03-19"
-cover: assets/images/evmpb.png
+cover: /assets/images/evmpb.png
 ---
 
 This morning I was able to hear a [beautiful prayer](http://en.wikipedia.org/wiki/Prayer_of_Saint_Francis) at the [East Valley Mayors Prayer Breakfast](http://unitedfoodbank.org/get-involved/events/upcoming-events/evmayorsbreakfast/)

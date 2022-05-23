@@ -1,5 +1,8 @@
+---
+---
+
 <!DOCTYPE html>
-<html>
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
 <head>
 
     <!-- Document Settings -->
@@ -12,11 +15,11 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/screen.edited.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/built/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/built/screen.css' | relative_url }}" />
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/built/screen.edited.css' | relative_url }}" />
+    <link rel="stylesheet" type="text/css" href="{{ '/assets/built/syntax.css' | relative_url }}" />
     <!-- highlight.js -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <style>.hljs { background: none; }</style>
 
     <!--[if IE]>
@@ -62,7 +65,7 @@
                 <section class="poweredby">Powered by <a href="https://jekyllrb.com/">Jekyll</a> using
                     <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a> theme.</section>
                 <nav class="site-footer-nav">
-                    <a href="{{ site.baseurl }}">Latest Posts</a>
+                    <a href="{{ site.url }}{{ site.baseurl }}">Latest Posts</a>
                     {% if site.facebook %}<a href="https://facebook.com/{{ site.facebook }}" target="_blank" rel="noopener">Facebook</a>{% endif %}
                     {% if site.twitter %}<a href="https://twitter.com/{{ site.twitter }}" target="_blank" rel="noopener">Twitter</a>{% endif %}
                     {% if site.github %}<a href="https://github.com/{{ site.github }}" target="_blank" rel="noopener">Github</a>{% endif %}
@@ -79,7 +82,7 @@
             <a class="subscribe-overlay-close" href="#"></a>
             <div class="subscribe-overlay-content">
                 {% if site.logo %}
-                    <img class="subscribe-overlay-logo" src="{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}" />
+                    <img class="subscribe-overlay-logo" src="{{ site.url }}{{ site.baseurl }}{{ site.logo }}" alt="{{ site.title }}" />
                 {% endif %}
                 <h1 class="subscribe-overlay-title">Subscribe to {{ site.title }}</h1>
                 <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
@@ -102,21 +105,21 @@
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="{{ site.baseurl }}assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="{{ '/assets/js/jquery.fitvids.js' | relative_url }}"></script>
 
     <!-- Paginator increased to "infinit" in _config.yml -->
     <!-- if paginator.posts  -->
     <!-- <script>
         var maxPages = parseInt('{{ paginator.total_pages }}');
     </script>
-    <script src="{{ site.baseurl }}assets/js/infinitescroll.js"></script> -->
+    <script src="{{ site.url }}{{ site.baseurl }}/assets/js/infinitescroll.js"></script> -->
     <!-- /endif -->
 
     {% if paginator.total_pages > site.paginate %}
     <script>
         var maxPages = parseInt('{{ paginator.total_pages }}');
     </script>
-    <script src="{{ site.baseurl }}assets/js/infinitescroll.js"></script>
+    <script src="{{ '/assets/js/infinitescroll.js' | relative_url }}"></script>
     {% endif %}
 
 

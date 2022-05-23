@@ -13,7 +13,7 @@ tags:
   - "ec2"
   - "linux"
   - "ubuntu"
-cover: assets/images/gitlab_logo.png
+cover: /assets/images/gitlab_logo.png
 ---
 
 I've really enjoyed using [GitLab](https://about.gitlab.com/) to manage my git repositories. 

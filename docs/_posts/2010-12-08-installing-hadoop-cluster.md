@@ -17,7 +17,7 @@ I'm going to follow the general process out lined by [hadoop's instructions](htt
 
 ## This is what the final setup will look like
 
-![HadoopCluster-Dev](/assets/images/hadoopcluster-dev2.png)
+![HadoopCluster-Dev]({{ site.url }}{{ site.baseurl }}/assets/images/hadoopcluster-dev2.png)
 
 ## Prework
 

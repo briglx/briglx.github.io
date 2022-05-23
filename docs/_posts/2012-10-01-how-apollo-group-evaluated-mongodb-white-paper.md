@@ -10,7 +10,7 @@ date: "2012-10-01"
 tags: 
   - "mongodb"
   - "talks"
-cover: assets/images/mongopaper-1920x360.png
+cover: /assets/images/mongopaper-1920x360.png
 ---
 
 Earlier this year, I did a POC around MongoDB.  
@@ -25,7 +25,7 @@ Good documentation not only helps a project, but also writing a white paper
 The effort to reach out to the community can have large returns.
 Nothing is done alone.
 
-[MongoWhitePaper.pdf](/assets/10gen-apollo-white-paper.pdf)
+[MongoWhitePaper.pdf]({{ '/assets/10gen-apollo-white-paper.pdf' | relative_url }})
 
 
 
@@ -53,6 +53,6 @@ This white paper will walk you through the planning, process and findings of the
 
 ## Downloads
 
-[MongoWhitePaper.pdf](/assets/10gen-apollo-white-paper.pdf)
+[MongoWhitePaper.pdf]({{ '/assets/10gen-apollo-white-paper.pdf' | relative_url }})
 
-<embed src="/assets/10gen-apollo-white-paper.pdf" type="application/pdf"/>
+<embed src="{{ '/assets/10gen-apollo-white-paper.pdf' | relative_url }}" type="application/pdf"/>

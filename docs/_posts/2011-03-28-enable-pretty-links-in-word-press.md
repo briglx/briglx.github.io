@@ -15,7 +15,7 @@ I wanted to enabled "Pretty" permalinks for my blog and found it wasn't just a c
 
 Well, it was just [a click of a button](http://codex.wordpress.org/Using_Permalinks#Using_.22Pretty.22_permalinks) but when I clicked on the button, Wordpress told me: 
 
-> If your `.htaccess` file were writable, we could do this automatically, but it isn’t so these are the `mod_rewrite` rules you should have in your `.htaccess` file.
+> If your `.htaccess` file were writable, we could do this automatically, but it isn't so these are the `mod_rewrite` rules you should have in your `.htaccess` file.
 
 ```xml
 <IfModule mod_rewrite.c> 

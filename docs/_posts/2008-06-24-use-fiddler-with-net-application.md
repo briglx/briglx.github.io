@@ -18,7 +18,7 @@ I often need to watch communication between a web service and my application. Th
 
 Open Fiddler and click on Tools -> Fiddler Options. The Fiddler Options window will pop up and take note of Listen Port number under Proxy Settings. In this case the value is 8888.
 
-![Fiddler Options](/assets/images/CropperCapture%5B71%5D.jpg)
+![Fiddler Options]({{ site.url }}{{ site.baseurl }}/assets/images/CropperCapture%5B71%5D.jpg)
 
 ## Update Web.Config
 

@@ -6,6 +6,7 @@ navigation: True
 title: Finding Missing Images
 date: 2022-05-20
 tags: 
+  - blogging
   - sed
   - awk
   - linux

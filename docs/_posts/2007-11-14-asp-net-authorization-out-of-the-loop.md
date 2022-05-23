@@ -39,7 +39,7 @@ public class BasePage : Page
 
 Each page that needed authorization would derive from the base class and override the **ApplyAuthorizationRules** () method. Notice in the Class Diagram how the AdminPage is overriding the method while the other two pages, SummaryPage and DetailPage, use the default implementation.
 
-![UrlAuthzUml](/assets/images/UrlAuthzUml.Png)
+![UrlAuthzUml]({{ site.url }}{{ site.baseurl }}/assets/images/UrlAuthzUml.Png)
 
 The code in the AdminPage looks something like this:
 

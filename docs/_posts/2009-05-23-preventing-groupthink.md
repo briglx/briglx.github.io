@@ -11,7 +11,7 @@ tags:
   - "management"
 ---
 
-I’ve been looking into the idea of [Groupthink](http://en.wikipedia.org/wiki/Groupthink#prevent) and found a nice list on preventing it.
+I've been looking into the idea of [Groupthink](http://en.wikipedia.org/wiki/Groupthink#prevent) and found a nice list on preventing it.
 
 From Wikipedia:
 

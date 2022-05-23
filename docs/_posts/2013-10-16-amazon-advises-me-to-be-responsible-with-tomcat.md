@@ -11,7 +11,7 @@ tags:
   - "software"
   - "aws"
   - "tomcat"
-cover: assets/images/awstomcat2-e1381951840211.png
+cover: /assets/images/awstomcat2-e1381951840211.png
 ---
 
 I just received an email from Amazon concerning proper Security around Tomcat. Here is part of the message:

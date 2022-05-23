@@ -20,7 +20,7 @@ I started hosting my wiki on Azure way back in 2016. The other day I received a 
 
 ## First Architecture
 
-![Confluence v1 Architecture](/assets/images/confluencev1.png)
+![Confluence v1 Architecture]({{ site.url }}{{ site.baseurl }}/assets/images/confluencev1.png)
 
 The first architecture is really basic. Just two vms. One with confluence installed on it and the other with Postgresql. I configured a separate nsg for each one. Looking back I could have had just one.
 
@@ -43,7 +43,7 @@ Instead of cleaning up the installation I thought I would try a new architecture
 
 ## New Architecture
 
-![confluencev2](/assets/images/confluencev2.png)
+![confluencev2]({{ site.url }}{{ site.baseurl }}/assets/images/confluencev2.png)
 
 I replaced the IaaS database for the Azure Database Postgresql PaaS solution. I don't want to mess around with managing a database. One less thing to think about.
 
