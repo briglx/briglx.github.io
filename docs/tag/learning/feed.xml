@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/learning/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-05-23T15:02:56-07:00</updated>
-  <id>http://localhost:4000/tag/learning/feed.xml</id>
+  <link href="https://briglx.github.io/tag/learning/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T15:20:48-07:00</updated>
+  <id>https://briglx.github.io/tag/learning/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Recent Accomplishments</title>
-      <link href="http://localhost:4000/2013/04/30/recent-accomplishments.html" rel="alternate" type="text/html" title="Recent Accomplishments" />
+      <link href="https://briglx.github.io/2013/04/30/recent-accomplishments.html" rel="alternate" type="text/html" title="Recent Accomplishments" />
       <published>2013-04-30T00:00:00-07:00</published>
       <updated>2013-04-30T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2013/04/30/recent-accomplishments</id>
-      <content type="html" xml:base="http://localhost:4000/2013/04/30/recent-accomplishments.html">&lt;p&gt;I was asked to put together a list of accomplishments I’ve achieved over the past few months. I thought it would be important to focus on different aspects of my career growth.&lt;/p&gt;
+      <id>https://briglx.github.io/2013/04/30/recent-accomplishments</id>
+      <content type="html" xml:base="https://briglx.github.io/2013/04/30/recent-accomplishments.html">&lt;p&gt;I was asked to put together a list of accomplishments I’ve achieved over the past few months. I thought it would be important to focus on different aspects of my career growth.&lt;/p&gt;
 
 &lt;h2 id=&quot;tactical-achievements&quot;&gt;Tactical Achievements&lt;/h2&gt;
 
@@ -102,11 +102,11 @@
   
     <entry>
       <title type="html">Balance Simple Code and Expert Knowledge</title>
-      <link href="http://localhost:4000/2007/07/05/balance-simple-code-and-expert-knowledge.html" rel="alternate" type="text/html" title="Balance Simple Code and Expert Knowledge" />
+      <link href="https://briglx.github.io/2007/07/05/balance-simple-code-and-expert-knowledge.html" rel="alternate" type="text/html" title="Balance Simple Code and Expert Knowledge" />
       <published>2007-07-05T00:00:00-07:00</published>
       <updated>2007-07-05T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2007/07/05/balance-simple-code-and-expert-knowledge</id>
-      <content type="html" xml:base="http://localhost:4000/2007/07/05/balance-simple-code-and-expert-knowledge.html">&lt;p&gt;I enjoyed reading &lt;a href=&quot;http://odetocode.com/Blogs/scott/archive/2007/07/02/11050.aspx&quot;&gt;What’s Wrong With This Code (#16)&lt;/a&gt; because it got me thinking about having in depth knowledge on a subject and &lt;a href=&quot;http://en.wikipedia.org/wiki/KISS_principle&quot;&gt;KISS&lt;/a&gt;.&lt;/p&gt;
+      <id>https://briglx.github.io/2007/07/05/balance-simple-code-and-expert-knowledge</id>
+      <content type="html" xml:base="https://briglx.github.io/2007/07/05/balance-simple-code-and-expert-knowledge.html">&lt;p&gt;I enjoyed reading &lt;a href=&quot;http://odetocode.com/Blogs/scott/archive/2007/07/02/11050.aspx&quot;&gt;What’s Wrong With This Code (#16)&lt;/a&gt; because it got me thinking about having in depth knowledge on a subject and &lt;a href=&quot;http://en.wikipedia.org/wiki/KISS_principle&quot;&gt;KISS&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;When I saw the code, I thought it was an overkill for the problem. In the comments I offered a solution that is simple and what seems to have solved the problem. I’ll admit that I’m not an expert on JavaScript and I wouldn’t be surprised if someone pointed out serious flaws with my code. While I make my way on the path to becoming an expert, I’ll continue to solve problems with simple solutions. Borrowing the concept Red/Green/Refactor, from &lt;a href=&quot;http://en.wikipedia.org/wiki/Test-driven_development&quot;&gt;TDD&lt;/a&gt;,&lt;/p&gt;
 
@@ -144,11 +144,11 @@
   
     <entry>
       <title type="html">Keeping the Blog Alive</title>
-      <link href="http://localhost:4000/2007/07/02/keeping-the-blog-alive.html" rel="alternate" type="text/html" title="Keeping the Blog Alive" />
+      <link href="https://briglx.github.io/2007/07/02/keeping-the-blog-alive.html" rel="alternate" type="text/html" title="Keeping the Blog Alive" />
       <published>2007-07-02T00:00:00-07:00</published>
       <updated>2007-07-02T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2007/07/02/keeping-the-blog-alive</id>
-      <content type="html" xml:base="http://localhost:4000/2007/07/02/keeping-the-blog-alive.html">&lt;p&gt;My daily routine involves reading several different blogs as my way of taking advantage of other people’s great ideas. Most of the things that I read are technical, but mix in with the bunch has been a &lt;a href=&quot;http://www.problogger.net/&quot;&gt;blog about blogs&lt;/a&gt;. For the most part many of the articles I read are in essence a variation on the same theme. It is refreshing to find a diamond in the rough article that really helps to clarify an idea or answer a difficult question. I don’t expect this post to be a diamond, but I do plan for it to help me stay consistent with delivering my own ideas and experiences. The one piece of advice I’ve read is to keep a regular schedule of posting and that is what I’ll do.&lt;/p&gt;</content>
+      <id>https://briglx.github.io/2007/07/02/keeping-the-blog-alive</id>
+      <content type="html" xml:base="https://briglx.github.io/2007/07/02/keeping-the-blog-alive.html">&lt;p&gt;My daily routine involves reading several different blogs as my way of taking advantage of other people’s great ideas. Most of the things that I read are technical, but mix in with the bunch has been a &lt;a href=&quot;http://www.problogger.net/&quot;&gt;blog about blogs&lt;/a&gt;. For the most part many of the articles I read are in essence a variation on the same theme. It is refreshing to find a diamond in the rough article that really helps to clarify an idea or answer a difficult question. I don’t expect this post to be a diamond, but I do plan for it to help me stay consistent with delivering my own ideas and experiences. The one piece of advice I’ve read is to keep a regular schedule of posting and that is what I’ll do.&lt;/p&gt;</content>
 
       
       

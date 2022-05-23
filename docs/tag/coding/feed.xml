@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/coding/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-05-23T15:02:56-07:00</updated>
-  <id>http://localhost:4000/tag/coding/feed.xml</id>
+  <link href="https://briglx.github.io/tag/coding/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T15:20:48-07:00</updated>
+  <id>https://briglx.github.io/tag/coding/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Review of Copy Source As Html Tools</title>
-      <link href="http://localhost:4000/2007/07/19/review-of-copy-source-as-html-tools.html" rel="alternate" type="text/html" title="Review of Copy Source As Html Tools" />
+      <link href="https://briglx.github.io/2007/07/19/review-of-copy-source-as-html-tools.html" rel="alternate" type="text/html" title="Review of Copy Source As Html Tools" />
       <published>2007-07-19T00:00:00-07:00</published>
       <updated>2007-07-19T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2007/07/19/review-of-copy-source-as-html-tools</id>
-      <content type="html" xml:base="http://localhost:4000/2007/07/19/review-of-copy-source-as-html-tools.html">&lt;p&gt;It makes sense that as a blog about .net programming I should include samples of code.&lt;/p&gt;
+      <id>https://briglx.github.io/2007/07/19/review-of-copy-source-as-html-tools</id>
+      <content type="html" xml:base="https://briglx.github.io/2007/07/19/review-of-copy-source-as-html-tools.html">&lt;p&gt;It makes sense that as a blog about .net programming I should include samples of code.&lt;/p&gt;
 
 &lt;p&gt;Code is easier to read when there is syntax highlighting and proper indentation. I’m going to look at four tools that provide a way of displaying source code in Html documents. The first tool is a general add in to Visual Studio and the last tools are specific to &lt;a href=&quot;http://windowslivewriter.spaces.live.com/Lists/cns!D85741BB5E0BE8AA!1340/&quot;&gt;Windows Live Writer&lt;/a&gt;.&lt;/p&gt;
 
@@ -56,7 +56,7 @@
 
 &lt;p&gt;In order to do a fair test, I will be comparing how the different tools handle the code in this screen:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/CropperCapture%5B1%5D.jpg&quot; alt=&quot;Raw Source&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/CropperCapture%5B1%5D.jpg&quot; alt=&quot;Raw Source&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;copysourceashtml&quot;&gt;CopySourceAsHtml&lt;/h2&gt;
 
@@ -100,7 +100,7 @@
 
 &lt;p&gt;This is the first tool I’ve used as a plugin for Windows Live Writer. After the installation, I see a new option in my Insert list for Insert Code…&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/CropperCapture%5B2%5D.jpg&quot; alt=&quot;Live Writer&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/CropperCapture%5B2%5D.jpg&quot; alt=&quot;Live Writer&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The web site for Insert Code describes it as able to format a snippet of text in a number of programming languages such as C#, HTML, MSH, JavaScript, Visual Basic and TSQL.&lt;/p&gt;
 
@@ -198,7 +198,7 @@ margin: 0em;
 
 &lt;p&gt;The last Live Writer plugin to review is &lt;a href=&quot;http://gallery.live.com/liveItemDetail.aspx?li=d8835a5e-28da-4242-8http://gallery.live.com/liveItemDetail.aspx?li=d4409446-af7f-42ec-aa20-78aa5bac4748&amp;amp;bt=9&amp;amp;pl=82eb-e1a006b083b9&amp;amp;bt=9&amp;amp;pl=8&quot;&gt;Code Snippet plugin for Windows Live Writer&lt;/a&gt;. This follows the same installation as the previous plugins. However, I do get the chance to make some changes before the code is inserted into my page.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/CropperCapture%5B3%5D.jpg&quot; alt=&quot;Insert Code Snippet&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/CropperCapture%5B3%5D.jpg&quot; alt=&quot;Insert Code Snippet&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I stick with the defaults and get the following results:&lt;/p&gt;
 
@@ -281,11 +281,11 @@ margin: 0em;
   
     <entry>
       <title type="html">Balance Simple Code and Expert Knowledge</title>
-      <link href="http://localhost:4000/2007/07/05/balance-simple-code-and-expert-knowledge.html" rel="alternate" type="text/html" title="Balance Simple Code and Expert Knowledge" />
+      <link href="https://briglx.github.io/2007/07/05/balance-simple-code-and-expert-knowledge.html" rel="alternate" type="text/html" title="Balance Simple Code and Expert Knowledge" />
       <published>2007-07-05T00:00:00-07:00</published>
       <updated>2007-07-05T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2007/07/05/balance-simple-code-and-expert-knowledge</id>
-      <content type="html" xml:base="http://localhost:4000/2007/07/05/balance-simple-code-and-expert-knowledge.html">&lt;p&gt;I enjoyed reading &lt;a href=&quot;http://odetocode.com/Blogs/scott/archive/2007/07/02/11050.aspx&quot;&gt;What’s Wrong With This Code (#16)&lt;/a&gt; because it got me thinking about having in depth knowledge on a subject and &lt;a href=&quot;http://en.wikipedia.org/wiki/KISS_principle&quot;&gt;KISS&lt;/a&gt;.&lt;/p&gt;
+      <id>https://briglx.github.io/2007/07/05/balance-simple-code-and-expert-knowledge</id>
+      <content type="html" xml:base="https://briglx.github.io/2007/07/05/balance-simple-code-and-expert-knowledge.html">&lt;p&gt;I enjoyed reading &lt;a href=&quot;http://odetocode.com/Blogs/scott/archive/2007/07/02/11050.aspx&quot;&gt;What’s Wrong With This Code (#16)&lt;/a&gt; because it got me thinking about having in depth knowledge on a subject and &lt;a href=&quot;http://en.wikipedia.org/wiki/KISS_principle&quot;&gt;KISS&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;When I saw the code, I thought it was an overkill for the problem. In the comments I offered a solution that is simple and what seems to have solved the problem. I’ll admit that I’m not an expert on JavaScript and I wouldn’t be surprised if someone pointed out serious flaws with my code. While I make my way on the path to becoming an expert, I’ll continue to solve problems with simple solutions. Borrowing the concept Red/Green/Refactor, from &lt;a href=&quot;http://en.wikipedia.org/wiki/Test-driven_development&quot;&gt;TDD&lt;/a&gt;,&lt;/p&gt;
 
@@ -323,11 +323,11 @@ margin: 0em;
   
     <entry>
       <title type="html">Objects, Data, and Actions</title>
-      <link href="http://localhost:4000/2007/06/23/objects-data-and-actions.html" rel="alternate" type="text/html" title="Objects, Data, and Actions" />
+      <link href="https://briglx.github.io/2007/06/23/objects-data-and-actions.html" rel="alternate" type="text/html" title="Objects, Data, and Actions" />
       <published>2007-06-23T00:00:00-07:00</published>
       <updated>2007-06-23T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2007/06/23/objects-data-and-actions</id>
-      <content type="html" xml:base="http://localhost:4000/2007/06/23/objects-data-and-actions.html">&lt;p&gt;I was recently asked what objects are in programming and how a database is related to them. Thinking long and hard about it, I came up with the following example:&lt;/p&gt;
+      <id>https://briglx.github.io/2007/06/23/objects-data-and-actions</id>
+      <content type="html" xml:base="https://briglx.github.io/2007/06/23/objects-data-and-actions.html">&lt;p&gt;I was recently asked what objects are in programming and how a database is related to them. Thinking long and hard about it, I came up with the following example:&lt;/p&gt;
 
 &lt;p&gt;Objects are containers that stores data and code. In fact objects are just like real life objects. Imagine an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Animal&lt;/code&gt; object. Pick any animal you like, it will have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Data&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt;. The data would be things like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Height&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Length&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Age&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Name&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Color&lt;/code&gt;. And Actions could be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Speak&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Walk&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jump&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Eat&lt;/code&gt;.&lt;/p&gt;
 

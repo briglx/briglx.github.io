@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/blogging/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-05-23T15:02:56-07:00</updated>
-  <id>http://localhost:4000/tag/blogging/feed.xml</id>
+  <link href="https://briglx.github.io/tag/blogging/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T15:20:48-07:00</updated>
+  <id>https://briglx.github.io/tag/blogging/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Finding Missing Images</title>
-      <link href="http://localhost:4000/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
+      <link href="https://briglx.github.io/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
       <published>2022-05-20T00:00:00-07:00</published>
       <updated>2022-05-20T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2022/05/20/finding-missing-images</id>
-      <content type="html" xml:base="http://localhost:4000/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
+      <id>https://briglx.github.io/2022/05/20/finding-missing-images</id>
+      <content type="html" xml:base="https://briglx.github.io/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
 
 &lt;p&gt;My strategy is to:&lt;/p&gt;
 &lt;ol&gt;
@@ -184,11 +184,11 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">Review of Copy Source As Html Tools</title>
-      <link href="http://localhost:4000/2007/07/19/review-of-copy-source-as-html-tools.html" rel="alternate" type="text/html" title="Review of Copy Source As Html Tools" />
+      <link href="https://briglx.github.io/2007/07/19/review-of-copy-source-as-html-tools.html" rel="alternate" type="text/html" title="Review of Copy Source As Html Tools" />
       <published>2007-07-19T00:00:00-07:00</published>
       <updated>2007-07-19T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2007/07/19/review-of-copy-source-as-html-tools</id>
-      <content type="html" xml:base="http://localhost:4000/2007/07/19/review-of-copy-source-as-html-tools.html">&lt;p&gt;It makes sense that as a blog about .net programming I should include samples of code.&lt;/p&gt;
+      <id>https://briglx.github.io/2007/07/19/review-of-copy-source-as-html-tools</id>
+      <content type="html" xml:base="https://briglx.github.io/2007/07/19/review-of-copy-source-as-html-tools.html">&lt;p&gt;It makes sense that as a blog about .net programming I should include samples of code.&lt;/p&gt;
 
 &lt;p&gt;Code is easier to read when there is syntax highlighting and proper indentation. I’m going to look at four tools that provide a way of displaying source code in Html documents. The first tool is a general add in to Visual Studio and the last tools are specific to &lt;a href=&quot;http://windowslivewriter.spaces.live.com/Lists/cns!D85741BB5E0BE8AA!1340/&quot;&gt;Windows Live Writer&lt;/a&gt;.&lt;/p&gt;
 
@@ -207,7 +207,7 @@ CropperCapture%5B12%5D.png,0
 
 &lt;p&gt;In order to do a fair test, I will be comparing how the different tools handle the code in this screen:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/CropperCapture%5B1%5D.jpg&quot; alt=&quot;Raw Source&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/CropperCapture%5B1%5D.jpg&quot; alt=&quot;Raw Source&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;copysourceashtml&quot;&gt;CopySourceAsHtml&lt;/h2&gt;
 
@@ -251,7 +251,7 @@ CropperCapture%5B12%5D.png,0
 
 &lt;p&gt;This is the first tool I’ve used as a plugin for Windows Live Writer. After the installation, I see a new option in my Insert list for Insert Code…&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/CropperCapture%5B2%5D.jpg&quot; alt=&quot;Live Writer&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/CropperCapture%5B2%5D.jpg&quot; alt=&quot;Live Writer&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The web site for Insert Code describes it as able to format a snippet of text in a number of programming languages such as C#, HTML, MSH, JavaScript, Visual Basic and TSQL.&lt;/p&gt;
 
@@ -349,7 +349,7 @@ margin: 0em;
 
 &lt;p&gt;The last Live Writer plugin to review is &lt;a href=&quot;http://gallery.live.com/liveItemDetail.aspx?li=d8835a5e-28da-4242-8http://gallery.live.com/liveItemDetail.aspx?li=d4409446-af7f-42ec-aa20-78aa5bac4748&amp;amp;bt=9&amp;amp;pl=82eb-e1a006b083b9&amp;amp;bt=9&amp;amp;pl=8&quot;&gt;Code Snippet plugin for Windows Live Writer&lt;/a&gt;. This follows the same installation as the previous plugins. However, I do get the chance to make some changes before the code is inserted into my page.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/CropperCapture%5B3%5D.jpg&quot; alt=&quot;Insert Code Snippet&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/CropperCapture%5B3%5D.jpg&quot; alt=&quot;Insert Code Snippet&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I stick with the defaults and get the following results:&lt;/p&gt;
 
@@ -432,11 +432,11 @@ margin: 0em;
   
     <entry>
       <title type="html">Keeping the Blog Alive</title>
-      <link href="http://localhost:4000/2007/07/02/keeping-the-blog-alive.html" rel="alternate" type="text/html" title="Keeping the Blog Alive" />
+      <link href="https://briglx.github.io/2007/07/02/keeping-the-blog-alive.html" rel="alternate" type="text/html" title="Keeping the Blog Alive" />
       <published>2007-07-02T00:00:00-07:00</published>
       <updated>2007-07-02T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2007/07/02/keeping-the-blog-alive</id>
-      <content type="html" xml:base="http://localhost:4000/2007/07/02/keeping-the-blog-alive.html">&lt;p&gt;My daily routine involves reading several different blogs as my way of taking advantage of other people’s great ideas. Most of the things that I read are technical, but mix in with the bunch has been a &lt;a href=&quot;http://www.problogger.net/&quot;&gt;blog about blogs&lt;/a&gt;. For the most part many of the articles I read are in essence a variation on the same theme. It is refreshing to find a diamond in the rough article that really helps to clarify an idea or answer a difficult question. I don’t expect this post to be a diamond, but I do plan for it to help me stay consistent with delivering my own ideas and experiences. The one piece of advice I’ve read is to keep a regular schedule of posting and that is what I’ll do.&lt;/p&gt;</content>
+      <id>https://briglx.github.io/2007/07/02/keeping-the-blog-alive</id>
+      <content type="html" xml:base="https://briglx.github.io/2007/07/02/keeping-the-blog-alive.html">&lt;p&gt;My daily routine involves reading several different blogs as my way of taking advantage of other people’s great ideas. Most of the things that I read are technical, but mix in with the bunch has been a &lt;a href=&quot;http://www.problogger.net/&quot;&gt;blog about blogs&lt;/a&gt;. For the most part many of the articles I read are in essence a variation on the same theme. It is refreshing to find a diamond in the rough article that really helps to clarify an idea or answer a difficult question. I don’t expect this post to be a diamond, but I do plan for it to help me stay consistent with delivering my own ideas and experiences. The one piece of advice I’ve read is to keep a regular schedule of posting and that is what I’ll do.&lt;/p&gt;</content>
 
       
       
@@ -468,11 +468,11 @@ margin: 0em;
   
     <entry>
       <title type="html">Live Writer</title>
-      <link href="http://localhost:4000/2007/06/14/live-writer.html" rel="alternate" type="text/html" title="Live Writer" />
+      <link href="https://briglx.github.io/2007/06/14/live-writer.html" rel="alternate" type="text/html" title="Live Writer" />
       <published>2007-06-14T00:00:00-07:00</published>
       <updated>2007-06-14T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2007/06/14/live-writer</id>
-      <content type="html" xml:base="http://localhost:4000/2007/06/14/live-writer.html">&lt;p&gt;I’ve downloaded Windows Live Writer to see how well it will do posting to Blogspot.com, and so far I am very impressed with the interface. One of the features of Live Writer is the ability to select View -&amp;gt; Web Preview. This shows me what the current post will look like using the templates and styles I have set up at Blogspot.&lt;/p&gt;</content>
+      <id>https://briglx.github.io/2007/06/14/live-writer</id>
+      <content type="html" xml:base="https://briglx.github.io/2007/06/14/live-writer.html">&lt;p&gt;I’ve downloaded Windows Live Writer to see how well it will do posting to Blogspot.com, and so far I am very impressed with the interface. One of the features of Live Writer is the ability to select View -&amp;gt; Web Preview. This shows me what the current post will look like using the templates and styles I have set up at Blogspot.&lt;/p&gt;</content>
 
       
       

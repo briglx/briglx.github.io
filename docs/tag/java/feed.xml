@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/java/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-05-23T15:02:56-07:00</updated>
-  <id>http://localhost:4000/tag/java/feed.xml</id>
+  <link href="https://briglx.github.io/tag/java/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T15:20:48-07:00</updated>
+  <id>https://briglx.github.io/tag/java/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">SpringOne Notes</title>
-      <link href="http://localhost:4000/2011/11/01/springone-notes.html" rel="alternate" type="text/html" title="SpringOne Notes" />
+      <link href="https://briglx.github.io/2011/11/01/springone-notes.html" rel="alternate" type="text/html" title="SpringOne Notes" />
       <published>2011-11-01T00:00:00-07:00</published>
       <updated>2011-11-01T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2011/11/01/springone-notes</id>
-      <content type="html" xml:base="http://localhost:4000/2011/11/01/springone-notes.html">&lt;p&gt;These are general notes I took&lt;/p&gt;
+      <id>https://briglx.github.io/2011/11/01/springone-notes</id>
+      <content type="html" xml:base="https://briglx.github.io/2011/11/01/springone-notes.html">&lt;p&gt;These are general notes I took&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=javap&amp;amp;source=web&amp;amp;cd=1&amp;amp;ved=0CCQQFjAA&amp;amp;url=http%3A%2F%2Fdownload.oracle.com%2Fjavase%2F1%2C5.0%2Fdocs%2Ftooldocs%2Fwindows%2Fjavap.html&amp;amp;ei=ZFOwToWrGarhsQKW7_HhAQ&amp;amp;usg=AFQjCNG0GUKjY_fKSdWAmdt4zLNGJPeXQw&amp;amp;sig2=hGaD0dHJ782TrpTxLJpZTg&quot;&gt;javap&lt;/a&gt; is a decompiler for java classes. Good to know when I want to decompile something&lt;/p&gt;
 
@@ -83,11 +83,11 @@
   
     <entry>
       <title type="html">Pains with Java</title>
-      <link href="http://localhost:4000/2010/06/09/pains-with-java.html" rel="alternate" type="text/html" title="Pains with Java" />
+      <link href="https://briglx.github.io/2010/06/09/pains-with-java.html" rel="alternate" type="text/html" title="Pains with Java" />
       <published>2010-06-09T00:00:00-07:00</published>
       <updated>2010-06-09T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2010/06/09/pains-with-java</id>
-      <content type="html" xml:base="http://localhost:4000/2010/06/09/pains-with-java.html">&lt;p&gt;So I’ve spent the last hour trying to solve an elusive error in my project:&lt;/p&gt;
+      <id>https://briglx.github.io/2010/06/09/pains-with-java</id>
+      <content type="html" xml:base="https://briglx.github.io/2010/06/09/pains-with-java.html">&lt;p&gt;So I’ve spent the last hour trying to solve an elusive error in my project:&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;Fatal Error: Unable to find package java.lang in classpath or bootclasspath&quot;&lt;/code&gt;&lt;/p&gt;
 

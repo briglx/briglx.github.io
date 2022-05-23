@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/cacti/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-05-23T15:02:56-07:00</updated>
-  <id>http://localhost:4000/tag/cacti/feed.xml</id>
+  <link href="https://briglx.github.io/tag/cacti/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-05-23T15:20:48-07:00</updated>
+  <id>https://briglx.github.io/tag/cacti/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Getting Started with Cacti</title>
-      <link href="http://localhost:4000/2011/03/11/getting-started-with-cacti.html" rel="alternate" type="text/html" title="Getting Started with Cacti" />
+      <link href="https://briglx.github.io/2011/03/11/getting-started-with-cacti.html" rel="alternate" type="text/html" title="Getting Started with Cacti" />
       <published>2011-03-11T00:00:00-07:00</published>
       <updated>2011-03-11T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2011/03/11/getting-started-with-cacti</id>
-      <content type="html" xml:base="http://localhost:4000/2011/03/11/getting-started-with-cacti.html">&lt;p&gt;I’m going to try this again. I’ve tried to install Cacti once before and had difficulty. Hopefully I can be more successful. I don’t know much about PHP so hopefully that won’t matter.&lt;/p&gt;
+      <id>https://briglx.github.io/2011/03/11/getting-started-with-cacti</id>
+      <content type="html" xml:base="https://briglx.github.io/2011/03/11/getting-started-with-cacti.html">&lt;p&gt;I’m going to try this again. I’ve tried to install Cacti once before and had difficulty. Hopefully I can be more successful. I don’t know much about PHP so hopefully that won’t matter.&lt;/p&gt;
 
 &lt;p&gt;These steps are a mix of my adventure and my attempt to document how to setup cacti on Oracle Enterprise Linux 5.5&lt;/p&gt;
 
@@ -186,7 +186,7 @@
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Done!&lt;/strong&gt; &lt;img src=&quot;http://localhost:4000/assets/images/cacti.png&quot; alt=&quot;Cacti&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Done!&lt;/strong&gt; &lt;img src=&quot;https://briglx.github.io/assets/images/cacti.png&quot; alt=&quot;Cacti&quot; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;I’ll configure cacti in another post. This was too much to get it installed.&lt;/p&gt;
