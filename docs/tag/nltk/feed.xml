@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://briglx.github.io/tag/nltk/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-05-24T07:50:17-07:00</updated>
+  <id>https://briglx.github.io/tag/nltk/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Sentiment Analysis</title>
+      <link href="https://briglx.github.io/2013/03/26/sentiment-analysis.html" rel="alternate" type="text/html" title="Sentiment Analysis" />
+      <published>2013-03-26T00:00:00-07:00</published>
+      <updated>2013-03-26T00:00:00-07:00</updated>
+      <id>https://briglx.github.io/2013/03/26/sentiment-analysis</id>
+      <content type="html" xml:base="https://briglx.github.io/2013/03/26/sentiment-analysis.html">&lt;p&gt;I’d like to know a bit more about the tools and techniques around solving sentiment analysis. Here are a few link’s I’ve found. My focus is to use python.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Sentiment_analysis&quot;&gt;Over view at Wikipedia&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://text-processing.com/demo/sentiment/&quot;&gt;Text Processing Demo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nltk.org/&quot;&gt;nltk&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/japerk/nltk-trainer&quot;&gt;nltk trainer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nltk-trainer.readthedocs.org/en/latest/&quot;&gt;More nltk Trainer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bitbucket.org/japerk/nltk-trainer/src&quot;&gt;Even more nltk&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Part of training a model is to have humans label the data. Here is a typical use case:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Download Data&lt;/li&gt;
+  &lt;li&gt;Present to User&lt;/li&gt;
+  &lt;li&gt;User marks as positive of negative or nutural&lt;/li&gt;
+  &lt;li&gt;Similar to Google Moderator&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="machine-learning" />
+      
+        <category term="nltk" />
+      
+        <category term="python" />
+      
+        <category term="sentiment-analysis" />
+      
+        <category term="technology" />
+      
+
+      
+        <summary type="html">I’d like to know a bit more about the tools and techniques around solving sentiment analysis. Here are a few link’s I’ve found. My focus is to use python.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

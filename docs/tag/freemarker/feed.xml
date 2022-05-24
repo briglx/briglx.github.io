@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://briglx.github.io/tag/freemarker/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-05-24T07:50:17-07:00</updated>
+  <id>https://briglx.github.io/tag/freemarker/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Freemarker not Displaying</title>
+      <link href="https://briglx.github.io/2011/07/20/freemarker-not-displaying.html" rel="alternate" type="text/html" title="Freemarker not Displaying" />
+      <published>2011-07-20T00:00:00-07:00</published>
+      <updated>2011-07-20T00:00:00-07:00</updated>
+      <id>https://briglx.github.io/2011/07/20/freemarker-not-displaying</id>
+      <content type="html" xml:base="https://briglx.github.io/2011/07/20/freemarker-not-displaying.html">&lt;p&gt;I’m putting together a simple web page and trying to learn more about Freemarker. I’ve setup my views for the project like this:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;views
+    &lt;ul&gt;
+      &lt;li&gt;global
+        &lt;ul&gt;
+          &lt;li&gt;base.ftl&lt;/li&gt;
+          &lt;li&gt;footer.ftl&lt;/li&gt;
+          &lt;li&gt;header.ftl&lt;/li&gt;
+          &lt;li&gt;navigation.ftl&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;user
+        &lt;ul&gt;
+          &lt;li&gt;new-user.ftl&lt;/li&gt;
+          &lt;li&gt;view-user.ftl&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;index.ftl&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The base.ftl file is the skeleton page layout which includes the header, content, navigation, and footer.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;#macro myLayout&amp;gt; &amp;lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;#include &quot;header.ftl&quot;/&amp;gt; &amp;lt;#nested/&amp;gt; &amp;lt;#include &quot;navigation.ftl&quot;/&amp;gt; &amp;lt;#include &quot;footer.ftl&quot;/&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;/#macro&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The problem was the navigation wasn’t showing on my new-user.ftl page. It showed with no problems on the index page. The logfile said:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;freemarker.core.InvalidReferenceException: Expression username is undefined on line 18, column 87 in user/new-user.ftl.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Sure enough, I was calling for a model attribute that I hadn’t defined. The navigation wasn’t showing because the base.ftl file calls the details before the navigation. The fix is to use the &lt;a href=&quot;http://freemarker.org/docs/ref_directive_attempt.html&quot;&gt;attempt&lt;/a&gt; keyword and provide default content. Here is the fix:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;#macro myLayout&amp;gt; &amp;lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;#include &quot;header.ftl&quot;/&amp;gt; &amp;lt;#attempt&amp;gt; &amp;lt;#nested/&amp;gt; &amp;lt;#recover&amp;gt; Failed to load content &amp;lt;/#attempt&amp;gt; &amp;lt;#include &quot;navigation.ftl&quot;/&amp;gt; &amp;lt;#include &quot;footer.ftl&quot;/&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;/#macro&amp;gt;&lt;/code&gt;&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="freemarker" />
+      
+
+      
+        <summary type="html">I’m putting together a simple web page and trying to learn more about Freemarker. I’ve setup my views for the project like this:</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

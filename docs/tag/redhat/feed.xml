@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://briglx.github.io/tag/redhat/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-05-24T07:50:17-07:00</updated>
+  <id>https://briglx.github.io/tag/redhat/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Disable firewall on Redhat</title>
+      <link href="https://briglx.github.io/2013/04/30/disable-firewall-on-redhat.html" rel="alternate" type="text/html" title="Disable firewall on Redhat" />
+      <published>2013-04-30T00:00:00-07:00</published>
+      <updated>2013-04-30T00:00:00-07:00</updated>
+      <id>https://briglx.github.io/2013/04/30/disable-firewall-on-redhat</id>
+      <content type="html" xml:base="https://briglx.github.io/2013/04/30/disable-firewall-on-redhat.html">&lt;p&gt;I just tried to deploy and test an application on EC2 running red hat but couldn’t telnet it.&lt;/p&gt;
+
+&lt;p&gt;I configured the security group to allow port 8080, I could see the port was running with netstat&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;netstat &lt;span class=&quot;nt&quot;&gt;-lntp&lt;/span&gt;
+
+tcp 0 0 :::80 :::&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; LISTEN 29031/httpd 
+tcp 0 0 :::8080 :::&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; LISTEN 28923/java
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;However, try as I might I could not telnet. I didn’t have any issues with ssh. Finally I found the problem. Redhat instances have a firewall enabled by default. A quick way around the firewall is to disable it with a simple command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;system-config-firewall-tui
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I’m sure there is a better way to solve this issue that doesn’t expose the server to attacks. I’d love to know.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="software" />
+      
+        <category term="ec2" />
+      
+        <category term="linux" />
+      
+        <category term="redhat" />
+      
+
+      
+        <summary type="html">I just tried to deploy and test an application on EC2 running red hat but couldn’t telnet it.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

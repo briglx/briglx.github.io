@@ -2,7 +2,7 @@
 markdown: kramdown
 highlighter: rouge
 paginate: 100 # it will paginate after this number
-language: 'en-uk'
+language: 'en-us'
 words_per_minute: 200
 
 url: https://briglx.github.io
@@ -12,7 +12,7 @@ url: https://briglx.github.io
 # Website info
 title: Brig Lamoreaux
 description: Long term storage for a forgetful mind
-cover: assets/images/blog-icon.png
+# cover: /assets/images/blog-icon.png
 logo: /assets/images/blog-icon.png
 logo_dark: /assets/images/blog-icon.png
 favicon: /assets/images/favicon.png
@@ -74,7 +74,7 @@ feed:
 # repo: jasper2
 # branch: master
 # relative_source: ../jasper2/
-destination: ../site-pages/
+destination: ../docs/
 production_url:  https://briglx.github.io/
 # source_url:  https://github.com/jekyllt/jasper2/
 

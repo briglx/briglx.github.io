@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://briglx.github.io/tag/blogging/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-05-24T07:50:17-07:00</updated>
+  <id>https://briglx.github.io/tag/blogging/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Finding Missing Images</title>
+      <link href="https://briglx.github.io/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
+      <published>2022-05-20T00:00:00-07:00</published>
+      <updated>2022-05-20T00:00:00-07:00</updated>
+      <id>https://briglx.github.io/2022/05/20/finding-missing-images</id>
+      <content type="html" xml:base="https://briglx.github.io/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
+
+&lt;p&gt;My strategy is to:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Get the list of images I have&lt;/li&gt;
+  &lt;li&gt;Find all the image referenced in the blog&lt;/li&gt;
+  &lt;li&gt;Alert where the reference name &amp;lt;&amp;gt; an actual name&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;getting-the-list-of-images&quot;&gt;Getting the list of images&lt;/h2&gt;
+
+&lt;p&gt;This is really easy&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; /images &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; images_list.csv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;getting-the-images-refereced&quot;&gt;Getting the images refereced&lt;/h2&gt;
+
+&lt;p&gt;This is a bit trickier because I have to look inside the files. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grep&lt;/code&gt; seems like a good way to do this.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Er&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/images/(.+)'&lt;/span&gt; _posts &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; referenced_images.csv
+
+&lt;span class=&quot;nb&quot;&gt;head &lt;/span&gt;referenced_images.csv
+_posts/2014-07-31-what-version-of-php-am-i-running.md:cover: assets/images/phpapache.jpg
+_posts/2011-02-17-a-tour-of-jmeter-part-1.md:  You should now have two elements. &lt;span class=&quot;o&quot;&gt;![&lt;/span&gt;Record1]&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/assets/images/Record1.png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+_posts/2011-02-17-a-tour-of-jmeter-part-1.md:  JMeter now has your actions recorded &lt;span class=&quot;o&quot;&gt;![&lt;/span&gt;Record2]&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/assets/images/Record2.png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I don’t need all the info retured. ow do I just get the image name part.&lt;/p&gt;
+
+&lt;p&gt;looking at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;man grep&lt;/code&gt; the options &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-o -h&lt;/code&gt; look promising.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; -o, --only-matching
+              Print only the matched (non-empty) parts of a matching line, with each such part on a  separate  output
+              line.
+
+ -h, --no-filename
+              Suppress  the  prefixing  of file names on output.  This is the default when there is only one file (or
+              only standard input) to search.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Eroh&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/images/(.+)'&lt;/span&gt; _posts &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; referenced_images.csv
+
+&lt;span class=&quot;nb&quot;&gt;head &lt;/span&gt;referenced_images.csv
+/images/phpapache.jpg
+/images/Record1.png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+/images/Record2.png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+/images/SBCLOptions.Png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I’d like to just get the image name though. Pearl has a &lt;a href=&quot;https://perldoc.perl.org/perlre#Lookaround-Assertions&quot;&gt;look-around assersion&lt;/a&gt; syntax which will check for things before or after the pattern match.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Find a word between foo and bar&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-oP&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'(?&amp;lt;=foo )\w+(?= bar)'&lt;/span&gt; test.txt
+
+&lt;span class=&quot;c&quot;&gt;# Shortcut for the same query&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-oP&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo \K\w+(?= bar)'&lt;/span&gt; test.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I can modify my query to drop everything before the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\K&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rPoh&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/images/\K.+(png|jpe?g|gif)'&lt;/span&gt; _posts &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; referenced_images.csv
+&lt;span class=&quot;nb&quot;&gt;head &lt;/span&gt;referenced_images.csv
+phpapache.jpg
+Record1.png
+Record2.png
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Nice, now I just need to loop over each one in the reference and see if there is a match in the actualls.&lt;/p&gt;
+
+&lt;h2 id=&quot;finding-the-outlyers&quot;&gt;Finding the outlyers&lt;/h2&gt;
+
+&lt;p&gt;I’m sure there is an easier way to do this.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;l&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$l&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-c&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$l&lt;/span&gt; image_list.csv&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; &amp;lt; referenced_images.csv  &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; results.csv
+
+&lt;span class=&quot;nb&quot;&gt;head &lt;/span&gt;results.csv
+phpapache.jpg,1
+Record1.png,0
+Record2.png,0
+trainingvalidation
+
+&lt;span class=&quot;nb&quot;&gt;cat &lt;/span&gt;results.csv | &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' 0'&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $1}'&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; missing_images
+
+&lt;span class=&quot;nb&quot;&gt;head &lt;/span&gt;missing_images
+Record1.png,0
+Record2.png,0
+CropperCapture88.png,0
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now I have my list but don’t know if it’s just missing or has a case of bad formatting.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;nb&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'{print $1;}'&lt;/span&gt; missing_images
+
+&lt;span class=&quot;k&quot;&gt;while &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;read &lt;/span&gt;l&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$l&lt;/span&gt;,&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-ic&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$l&lt;/span&gt; image_list.csv&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt; &amp;lt; missing_images &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; wrong_case.csv
+
+&lt;span class=&quot;nb&quot;&gt;head
+&lt;/span&gt;Record1.png,1
+Record2.png,1
+CropperCapture%5B12%5D.png,0
+
+&lt;span class=&quot;c&quot;&gt;# 1 means it's named wrong&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 0 means it's not in the image list&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Can I grep out a group match https://unix.stackexchange.com/questions/13466/can-grep-output-only-specified-groupings-that-match&lt;/li&gt;
+  &lt;li&gt;Basic Grep info https://linuxize.com/post/regular-expressions-in-grep/&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="blogging" />
+      
+        <category term="sed" />
+      
+        <category term="awk" />
+      
+        <category term="linux" />
+      
+        <category term="software" />
+      
+
+      
+        <summary type="html">As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case myimage.png vs MyImage.png. This is how I checked what other images were named wrong or missing.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Review of Copy Source As Html Tools</title>
+      <link href="https://briglx.github.io/2007/07/19/review-of-copy-source-as-html-tools.html" rel="alternate" type="text/html" title="Review of Copy Source As Html Tools" />
+      <published>2007-07-19T00:00:00-07:00</published>
+      <updated>2007-07-19T00:00:00-07:00</updated>
+      <id>https://briglx.github.io/2007/07/19/review-of-copy-source-as-html-tools</id>
+      <content type="html" xml:base="https://briglx.github.io/2007/07/19/review-of-copy-source-as-html-tools.html">&lt;p&gt;It makes sense that as a blog about .net programming I should include samples of code.&lt;/p&gt;
+
+&lt;p&gt;Code is easier to read when there is syntax highlighting and proper indentation. I’m going to look at four tools that provide a way of displaying source code in Html documents. The first tool is a general add in to Visual Studio and the last tools are specific to &lt;a href=&quot;http://windowslivewriter.spaces.live.com/Lists/cns!D85741BB5E0BE8AA!1340/&quot;&gt;Windows Live Writer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The contestants are the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.jtleigh.com/people/colin/software/CopySourceAsHtml/&quot;&gt;CopySourceAsHtml&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gallery.live.com/liveItemDetail.aspx?li=1f57bd9b-a692-4593-9e9e-e2962d9c0eee&amp;amp;bt=9&amp;amp;pl=8&quot;&gt;Insert Code for Windows Live Writer&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gallery.live.com/liveItemDetail.aspx?li=d8835a5e-28da-4242-82eb-e1a006b083b9&amp;amp;bt=9&amp;amp;pl=8&quot;&gt;Paste from Visual Studio&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gallery.live.com/liveItemDetail.aspx?li=d4409446-af7f-42ec-aa20-78aa5bac4748&amp;amp;bt=9&amp;amp;pl=8&quot;&gt;Code Snippet plugin for Windows Live Writer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The plugins for Live Writer really are not named very well, but I’ll give them a shot anyway.&lt;/p&gt;
+
+&lt;h2 id=&quot;screen-shot&quot;&gt;Screen Shot&lt;/h2&gt;
+
+&lt;p&gt;In order to do a fair test, I will be comparing how the different tools handle the code in this screen:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/CropperCapture%5B1%5D.jpg&quot; alt=&quot;Raw Source&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;copysourceashtml&quot;&gt;CopySourceAsHtml&lt;/h2&gt;
+
+&lt;p&gt;This is an add-in for Visual Studio. Right clicking on the code to copy displays a Copy As Html… option in the context menu. Once clicked, an option box appears which provides additional configuration. I’ve used this tool in the past and have always been satisfied with the results. I selected Wrap words and Embed styles as the only options for the copy which produce the following results:&lt;/p&gt;
+
+&lt;div style=&quot;font-size:10pt;background:white;color:black;font-family:courier new;&quot;&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&lt;span style=&quot;color:blue;&quot;&gt;using&lt;/span&gt; System;&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;
+&lt;/p&gt;&lt;p style=&quot;margin:0;&quot;&gt;&lt;span style=&quot;color:gray;&quot;&gt;///&lt;/span&gt;&lt;span style=&quot;color:gray;&quot;&gt;&amp;lt;summary&amp;gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&lt;span style=&quot;color:gray;&quot;&gt;///&lt;/span&gt;&lt;span style=&quot;color:green;&quot;&gt; Wizard represents a humanoid with special abilities&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&lt;span style=&quot;color:gray;&quot;&gt;///&lt;/span&gt;&lt;span style=&quot;color:gray;&quot;&gt;&amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&lt;span style=&quot;color:blue;&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color:blue;&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color:#2b91af;&quot;&gt;Wizard&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;{&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:blue;&quot;&gt;const&lt;/span&gt; &lt;span style=&quot;color:blue;&quot;&gt;string&lt;/span&gt; Gretting = &lt;span style=&quot;color:#a31515;&quot;&gt;&quot;Greetings and well met.&quot;&lt;/span&gt;;&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;
+&lt;/p&gt;&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:gray;&quot;&gt;///&lt;/span&gt;&lt;span style=&quot;color:gray;&quot;&gt;&amp;lt;summary&amp;gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:gray;&quot;&gt;///&lt;/span&gt;&lt;span style=&quot;color:green;&quot;&gt; Says the greeting.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:gray;&quot;&gt;///&lt;/span&gt;&lt;span style=&quot;color:gray;&quot;&gt;&amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:blue;&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color:blue;&quot;&gt;void&lt;/span&gt; SayGreeting()&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; {&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:green;&quot;&gt;// Ensure it is Daylight Saving Time&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:blue;&quot;&gt;if&lt;/span&gt; (&lt;span style=&quot;color:#2b91af;&quot;&gt;DateTime&lt;/span&gt;.Now.IsDaylightSavingTime())&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:#2b91af;&quot;&gt;Console&lt;/span&gt;.Write(&lt;span style=&quot;color:#2b91af;&quot;&gt;Math&lt;/span&gt;.Abs(&lt;span style=&quot;color:#2b91af;&quot;&gt;Math&lt;/span&gt;.PI + 25.4));&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:blue;&quot;&gt;else&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; {&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;span style=&quot;color:#2b91af;&quot;&gt;Console&lt;/span&gt;.Write(Gretting);&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; }&lt;/p&gt;
+&lt;p style=&quot;margin:0;&quot;&gt;}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Embedding the styles into the code gives the advantage of preserving the color highlighting when your post is picked up by an aggregator. If you do not embed the styles then you will lose the formatting and the code appears as normal text.&lt;/p&gt;
+
+&lt;p&gt;The tools provides options that really allow you to produce exactly what you want.&lt;/p&gt;
+
+&lt;p&gt;The only bad thing is I am forced to switch to html mode in order to insert the code snippet.&lt;/p&gt;
+
+&lt;h2 id=&quot;insert-code-for-windows-live-writer&quot;&gt;Insert Code for Windows Live Writer&lt;/h2&gt;
+
+&lt;p&gt;This is the first tool I’ve used as a plugin for Windows Live Writer. After the installation, I see a new option in my Insert list for Insert Code…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/CropperCapture%5B2%5D.jpg&quot; alt=&quot;Live Writer&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The web site for Insert Code describes it as able to format a snippet of text in a number of programming languages such as C#, HTML, MSH, JavaScript, Visual Basic and TSQL.&lt;/p&gt;
+
+&lt;p&gt;Here is the results of the insert:&lt;/p&gt;
+&lt;style&gt;
+    .csharpcode, .csharpcode pre
+{
+font-size: small;
+color: black;
+font-family: consolas, &quot;Courier New&quot;, courier, monospace;
+background-color: #ffffff;
+/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt
+{
+background-color: #f4f4f4;
+width: 100%;
+margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+&lt;/style&gt;
+
+&lt;pre class=&quot;csharpcode&quot;&gt;&lt;span class=&quot;kwrd&quot;&gt;using&lt;/span&gt; System;
+
+&lt;span class=&quot;rem&quot;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;rem&quot;&gt;/// Wizard represents a humanoid with special abilities&lt;/span&gt;
+&lt;span class=&quot;rem&quot;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;kwrd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kwrd&quot;&gt;class&lt;/span&gt; Wizard
+{
+    &lt;span class=&quot;kwrd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;kwrd&quot;&gt;string&lt;/span&gt; Gretting = &lt;span class=&quot;str&quot;&gt;&quot;Greetings and well met.&quot;&lt;/span&gt;;
+
+    &lt;span class=&quot;rem&quot;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;rem&quot;&gt;/// Says the greeting.&lt;/span&gt;
+    &lt;span class=&quot;rem&quot;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;kwrd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kwrd&quot;&gt;void&lt;/span&gt; SayGreeting()
+    {
+        &lt;span class=&quot;rem&quot;&gt;// Ensure it is Daylight Saving Time&lt;/span&gt;
+        &lt;span class=&quot;kwrd&quot;&gt;if&lt;/span&gt; (DateTime.Now.IsDaylightSavingTime())
+        {
+            Console.Write(Math.Abs(Math.PI + 25.4));
+        }
+        &lt;span class=&quot;kwrd&quot;&gt;else&lt;/span&gt;
+        {
+            Console.Write(Gretting);
+        }
+    }
+}&lt;/pre&gt;
+
+&lt;p&gt;Right away I can see that the color for strings is different that what I have defined in the original. More importantly I see I lost the specific font I had defined. The biggest advantage over CopySourceAsHtml is not forcing me to switch to html mode in order to insert the code. The plugin makes it completely transparent to me.&lt;/p&gt;
+
+&lt;p&gt;I think I’m going to run into trouble on some aggregators when it goes to process the code. Insert Code creates a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;style&amp;gt; &amp;lt;/style&amp;gt;&lt;/code&gt; section where it defines the css classes used to format the code. The tool doesn’t provide the option for me to select embedded styles nor does it give me options to tweak the output.&lt;/p&gt;
+
+&lt;p&gt;One thing I do like is the ability to turn on alternate line background.&lt;/p&gt;
+
+&lt;h2 id=&quot;paste-from-visual-studio&quot;&gt;Paste from Visual Studio&lt;/h2&gt;
+
+&lt;p&gt;This is also an plugin for Windows Live Writer and also has nearly the same number of downloads as Insert Code. From the description on the web page, it can easily transfer syntax highlighted source code from Visual Studio to elegant HTML in Windows Live Writer. Copy from Visual Studio and insert directly to Windows Live Writer to maintain your unique syntax highlighting settings.&lt;/p&gt;
+
+&lt;pre class=&quot;code&quot;&gt;&lt;span style=&quot;color:#0000ff;&quot;&gt;using&lt;/span&gt; System;
+
+&lt;span style=&quot;color:#808080;&quot;&gt;///&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;&amp;lt;summary&amp;gt;&lt;/span&gt;
+&lt;span style=&quot;color:#008000;&quot;&gt;/// Wizard represents a humanoid with special abilities &lt;/span&gt;
+&lt;span style=&quot;color:#808080;&quot;&gt;///&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;&amp;lt;/summary&amp;gt; &lt;/span&gt;
+&lt;span style=&quot;color:#0000ff;&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color:#0000ff;&quot;&gt;class&lt;/span&gt; &lt;span style=&quot;color:#2b91af;&quot;&gt;Wizard &lt;/span&gt;{
+    &lt;span style=&quot;color:#0000ff;&quot;&gt;const&lt;/span&gt; &lt;span style=&quot;color:#0000ff;&quot;&gt;string&lt;/span&gt; Gretting = &lt;span style=&quot;color:#a31515;&quot;&gt;&quot;Greetings and well met.&quot;&lt;/span&gt;;
+
+    &lt;span style=&quot;color:#808080;&quot;&gt;///&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;&amp;lt;summary&amp;gt; &lt;/span&gt;    
+    &lt;span style=&quot;color:#808080;&quot;&gt;///&lt;/span&gt;&lt;span style=&quot;color:#008000;&quot;&gt; Says the greeting. &lt;/span&gt;    
+    &lt;span style=&quot;color:#808080;&quot;&gt;///&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;&amp;lt;/summary&amp;gt; &lt;/span&gt;    
+    &lt;span style=&quot;color:#0000ff;&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color:#0000ff;&quot;&gt;void&lt;/span&gt; SayGreeting()
+    {
+        &lt;span style=&quot;color:#008000;&quot;&gt;// Ensure it is Daylight Saving Time &lt;/span&gt;        
+        &lt;span style=&quot;color:#0000ff;&quot;&gt;if&lt;/span&gt; (&lt;span style=&quot;color:#2b91af;&quot;&gt;DateTime&lt;/span&gt;.Now.IsDaylightSavingTime())
+        {
+            &lt;span style=&quot;color:#2b91af;&quot;&gt;Console&lt;/span&gt;.Write(&lt;span style=&quot;color:#2b91af;&quot;&gt;Math&lt;/span&gt;.Abs(&lt;span style=&quot;color:#2b91af;&quot;&gt;Math&lt;/span&gt;.PI + 25.4));
+        }
+        &lt;span style=&quot;color:#0000ff;&quot;&gt;else &lt;/span&gt;        {
+            &lt;span style=&quot;color:#2b91af;&quot;&gt;Console&lt;/span&gt;.Write(Gretting);
+        }
+    }
+}&lt;/pre&gt;
+
+&lt;p&gt;Sure enough, this tool has kept the colors and font I have defined in VS. The tool doesn’t give me any type of user interface but takes the contents of the clipboard and inserts them as html. I’m guessing the tool uses the rich text formatting that VS provides and builds the styles. I do like that the styles are embedded in the code so I won’t lose any formatting in the aggregators. However, I miss having the opportunity to add any tweaks to the output before it is committed.&lt;/p&gt;
+
+&lt;h2 id=&quot;insert-code-snippet&quot;&gt;Insert Code Snippet&lt;/h2&gt;
+
+&lt;p&gt;The last Live Writer plugin to review is &lt;a href=&quot;http://gallery.live.com/liveItemDetail.aspx?li=d8835a5e-28da-4242-8http://gallery.live.com/liveItemDetail.aspx?li=d4409446-af7f-42ec-aa20-78aa5bac4748&amp;amp;bt=9&amp;amp;pl=82eb-e1a006b083b9&amp;amp;bt=9&amp;amp;pl=8&quot;&gt;Code Snippet plugin for Windows Live Writer&lt;/a&gt;. This follows the same installation as the previous plugins. However, I do get the chance to make some changes before the code is inserted into my page.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/CropperCapture%5B3%5D.jpg&quot; alt=&quot;Insert Code Snippet&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I stick with the defaults and get the following results:&lt;/p&gt;
+
+&lt;div style=&quot;font-size:8pt;margin:20px 0 10px;overflow:auto;width:97.5%;cursor:text;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;max-height:200px;padding:4px;border:gray 1px solid;&quot;&gt;
+&lt;div style=&quot;font-size:8pt;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 1:&lt;/span&gt; &lt;span style=&quot;color:#0000ff;&quot;&gt;using&lt;/span&gt; System;&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 2:&lt;/span&gt;&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 3:&lt;/span&gt; &lt;span style=&quot;color:#008000;&quot;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 4:&lt;/span&gt; &lt;span style=&quot;color:#008000;&quot;&gt;/// Wizard represents a humanoid with special abilities&lt;/span&gt;&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 5:&lt;/span&gt; &lt;span style=&quot;color:#008000;&quot;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 6:&lt;/span&gt; &lt;span style=&quot;color:#0000ff;&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color:#0000ff;&quot;&gt;class&lt;/span&gt; Wizard&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 7:&lt;/span&gt; {&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 8:&lt;/span&gt;     &lt;span style=&quot;color:#0000ff;&quot;&gt;const&lt;/span&gt; &lt;span style=&quot;color:#0000ff;&quot;&gt;string&lt;/span&gt; Gretting = &lt;span style=&quot;color:#006080;&quot;&gt;&quot;Greetings and well met.&quot;&lt;/span&gt;;&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 9:&lt;/span&gt;&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 10:&lt;/span&gt;     &lt;span style=&quot;color:#008000;&quot;&gt;/// &amp;lt;summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 11:&lt;/span&gt;     &lt;span style=&quot;color:#008000;&quot;&gt;/// Says the greeting.&lt;/span&gt;&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 12:&lt;/span&gt;     &lt;span style=&quot;color:#008000;&quot;&gt;/// &amp;lt;/summary&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 13:&lt;/span&gt;     &lt;span style=&quot;color:#0000ff;&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color:#0000ff;&quot;&gt;void&lt;/span&gt; SayGreeting()&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 14:&lt;/span&gt;     {&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 15:&lt;/span&gt;         &lt;span style=&quot;color:#008000;&quot;&gt;// Ensure it is Daylight Saving Time&lt;/span&gt;&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 16:&lt;/span&gt;         &lt;span style=&quot;color:#0000ff;&quot;&gt;if&lt;/span&gt; (DateTime.Now.IsDaylightSavingTime())&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 17:&lt;/span&gt;         {&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 18:&lt;/span&gt;             Console.Write(Math.Abs(Math.PI + 25.4));&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 19:&lt;/span&gt;         }&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 20:&lt;/span&gt;         &lt;span style=&quot;color:#0000ff;&quot;&gt;else&lt;/span&gt;&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 21:&lt;/span&gt;         {&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 22:&lt;/span&gt;             Console.Write(Gretting);&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 23:&lt;/span&gt;         }&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:#f4f4f4;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 24:&lt;/span&gt;     }&lt;/pre&gt;
+&lt;pre style=&quot;font-size:8pt;margin:0;overflow:visible;width:100%;color:black;line-height:12pt;font-family:consolas, 'Courier New', courier, monospace;background-color:white;border-style:none;padding:0;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt; 25:&lt;/span&gt; }&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Not too bad. In fact, besides not keeping my original color and font, I like the end result. I especially like how the styles are embedded inline. I don’t think I would use the line numbers too often but I do like the alternate line background.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-results&quot;&gt;The Results&lt;/h2&gt;
+
+&lt;p&gt;Among all of the tools I will keep two.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.jtleigh.com/people/colin/software/CopySourceAsHtml/&quot;&gt;CopySourceAsHtml&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gallery.live.com/liveItemDetail.aspx?li=d8835a5e-28da-4242-8http://gallery.live.com/liveItemDetail.aspx?li=d4409446-af7f-42ec-aa20-78aa5bac4748&amp;amp;bt=9&amp;amp;pl=82eb-e1a006b083b9&amp;amp;bt=9&amp;amp;pl=8&quot;&gt;Code Snippet plugin&lt;/a&gt; for Windows Live Writer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I will keep &lt;a href=&quot;http://www.jtleigh.com/people/colin/software/CopySourceAsHtml/&quot;&gt;CopySourceAsHtml&lt;/a&gt; so I can get my code into html format whenever I want.&lt;/p&gt;
+
+&lt;p&gt;For Windows Live Writer, I’m going to stick with the aptly named &lt;a href=&quot;http://gallery.live.com/liveItemDetail.aspx?li=d8835a5e-28da-4242-8http://gallery.live.com/liveItemDetail.aspx?li=d4409446-af7f-42ec-aa20-78aa5bac4748&amp;amp;bt=9&amp;amp;pl=82eb-e1a006b083b9&amp;amp;bt=9&amp;amp;pl=8&quot;&gt;Code Snippet plugin for Windows Live Writer&lt;/a&gt;. I chose this as the winner because I am provided options over the results and it has inline styles.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://gallery.live.com/liveItemDetail.aspx?li=1f57bd9b-a692-4593-9e9e-e2962d9c0eee&amp;amp;bt=9&amp;amp;pl=8&quot;&gt;Insert Code for Windows Live Writer&lt;/a&gt; gives me almost the same features but doesn’t provide inline styles which is a must when it comes to aggregators.&lt;/p&gt;
+
+&lt;p&gt;I do wish that more languages were supported in the plugins and hope this will come in time. I know there must be more tools out there to get source code to html but these are the four that I found. If you have a tool that you enjoy, please share it. I’m always looking for ways to improve and make life easier.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="blogging" />
+      
+        <category term="coding" />
+      
+
+      
+        <summary type="html">It makes sense that as a blog about .net programming I should include samples of code.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Keeping the Blog Alive</title>
+      <link href="https://briglx.github.io/2007/07/02/keeping-the-blog-alive.html" rel="alternate" type="text/html" title="Keeping the Blog Alive" />
+      <published>2007-07-02T00:00:00-07:00</published>
+      <updated>2007-07-02T00:00:00-07:00</updated>
+      <id>https://briglx.github.io/2007/07/02/keeping-the-blog-alive</id>
+      <content type="html" xml:base="https://briglx.github.io/2007/07/02/keeping-the-blog-alive.html">&lt;p&gt;My daily routine involves reading several different blogs as my way of taking advantage of other people’s great ideas. Most of the things that I read are technical, but mix in with the bunch has been a &lt;a href=&quot;http://www.problogger.net/&quot;&gt;blog about blogs&lt;/a&gt;. For the most part many of the articles I read are in essence a variation on the same theme. It is refreshing to find a diamond in the rough article that really helps to clarify an idea or answer a difficult question. I don’t expect this post to be a diamond, but I do plan for it to help me stay consistent with delivering my own ideas and experiences. The one piece of advice I’ve read is to keep a regular schedule of posting and that is what I’ll do.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="blogging" />
+      
+        <category term="learning" />
+      
+
+      
+        <summary type="html">My daily routine involves reading several different blogs as my way of taking advantage of other people’s great ideas. Most of the things that I read are technical, but mix in with the bunch has been a blog about blogs. For the most part many of the articles I read are in essence a variation on the same theme. It is refreshing to find a diamond in the rough article that really helps to clarify an idea or answer a difficult question. I don’t expect this post to be a diamond, but I do plan for it to help me stay consistent with delivering my own ideas and experiences. The one piece of advice I’ve read is to keep a regular schedule of posting and that is what I’ll do.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
+      <title type="html">Live Writer</title>
+      <link href="https://briglx.github.io/2007/06/14/live-writer.html" rel="alternate" type="text/html" title="Live Writer" />
+      <published>2007-06-14T00:00:00-07:00</published>
+      <updated>2007-06-14T00:00:00-07:00</updated>
+      <id>https://briglx.github.io/2007/06/14/live-writer</id>
+      <content type="html" xml:base="https://briglx.github.io/2007/06/14/live-writer.html">&lt;p&gt;I’ve downloaded Windows Live Writer to see how well it will do posting to Blogspot.com, and so far I am very impressed with the interface. One of the features of Live Writer is the ability to select View -&amp;gt; Web Preview. This shows me what the current post will look like using the templates and styles I have set up at Blogspot.&lt;/p&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="blogging" />
+      
+
+      
+        <summary type="html">I’ve downloaded Windows Live Writer to see how well it will do posting to Blogspot.com, and so far I am very impressed with the interface. One of the features of Live Writer is the ability to select View -&amp;gt; Web Preview. This shows me what the current post will look like using the templates and styles I have set up at Blogspot.</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom" >
+  <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
+  <link href="https://briglx.github.io/tag/smb/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
+  <updated>2022-05-24T07:50:17-07:00</updated>
+  <id>https://briglx.github.io/tag/smb/feed.xml</id>
+
+  
+  
+  
+
+  
+    <title type="html">Brig Lamoreaux | </title>
+  
+
+  
+    <subtitle>Long term storage for a forgetful mind</subtitle>
+  
+
+  
+
+  
+    
+      
+    
+  
+
+  
+  
+
+  
+    <entry>
+      <title type="html">Share Folders Between Linux and Windows</title>
+      <link href="https://briglx.github.io/2011/09/30/share-folders-between-linux-and-windows.html" rel="alternate" type="text/html" title="Share Folders Between Linux and Windows" />
+      <published>2011-09-30T00:00:00-07:00</published>
+      <updated>2011-09-30T00:00:00-07:00</updated>
+      <id>https://briglx.github.io/2011/09/30/share-folders-between-linux-and-windows</id>
+      <content type="html" xml:base="https://briglx.github.io/2011/09/30/share-folders-between-linux-and-windows.html">&lt;p&gt;I needed to share a folder between a linux machine and windows. The seceret is using Samba. Fortunatly there are several guides out there that show how to do it. These are my notes:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Install Samba
+    &lt;ul&gt;
+      &lt;li&gt;Install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt-get install samba smbfs&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Edit Config `sudo vi /etc/samba/smb.conf&lt;/p&gt;
+
+        &lt;p&gt;# Uncomment and add new line security = user username map = /etc/samba/smbusers`&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Add Samba user `sudo smbpasswd -a &lt;username&gt; sudo vi /etc/samba/smbusers&lt;/username&gt;&lt;/p&gt;
+
+        &lt;p&gt;# Add this line &lt;ubuntuusername&gt; = &quot;&lt;username&gt;&quot;`&lt;/username&gt;&lt;/ubuntuusername&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Configure Shares&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Edit File `sudo vi /etc/samba/smb.conf&lt;/p&gt;
+
+        &lt;p&gt;#======================= Share Definitions =======================&lt;/p&gt;
+
+        &lt;p&gt;# Un-comment the following (and tweak the other settings below to suit) # to enable the default home directory shares. This will share each # user’s home directory as \serverusername [homes] comment = Home Directories browseable = yes&lt;/p&gt;
+
+        &lt;p&gt;# By default, the home directories are exported read-only. Change the # next parameter to ‘no’ if you want to be able to write to them. read only = no&lt;/p&gt;
+
+        &lt;p&gt;# File creation mask is set to 0700 for security reasons. If you want to # create files with group=rw permissions, set next parameter to 0775. ; create mask = 0700&lt;/p&gt;
+
+        &lt;p&gt;# Directory creation mask is set to 0700 for security reasons. If you want to # create dirs. with group=rw permissions, set next parameter to 0775. ; directory mask = 0700&lt;/p&gt;
+
+        &lt;p&gt;# By default, \serverusername shares can be connected to by anyone # with access to the samba server. Un-comment the following parameter # to make sure that only “username” can connect to \serverusername # This might need tweaking when using external authentication schemes valid users = %S&lt;/p&gt;
+
+        &lt;p&gt;`&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Configure Ports&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Open the following ports `netbios-ns - 137/tcp # NETBIOS Name Service netbios-dgm - 138/tcp # NETBIOS Datagram Service netbios-ssn - 139/tcp # NETBIOS session service microsoft-ds - 445/tcp # if you are using Active Directory Other ports&lt;/p&gt;
+
+        &lt;p&gt;Port 389 (TCP) - for LDAP (Active Directory Mode) Port 445 (TCP) - NetBIOS was moved to 445 after 2000 and beyond, (CIFS) Port 901 (TCP) - for SWAT service (not related to client communication)`&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;references&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://help.ubuntu.com/10.04/serverguide/C/samba-fileserver.html&quot;&gt;Nice Guide&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.howtogeek.com/howto/ubuntu/install-samba-server-on-ubuntu/&quot;&gt;Install Samba&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.howtogeek.com/howto/ubuntu/share-ubuntu-home-directories-using-samba/&quot;&gt;Create Shared&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="linux" />
+      
+        <category term="smb" />
+      
+
+      
+        <summary type="html">I needed to share a folder between a linux machine and windows. The seceret is using Samba. Fortunatly there are several guides out there that show how to do it. These are my notes:</summary>
+      
+
+      
+      
+    </entry>
+  
+</feed>
