@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Checking out TSLearn</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Long term storage for a forgetful mind" />
+    <link rel="shortcut icon" href="https://briglx.github.io/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://briglx.github.io/2018/03/29/checking-out-tsflow.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Brig Lamoreaux" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Checking out TSLearn" />
+    <meta property="og:description" content="I’m toying around with my new dashcam videos and thought I would try to build a neural network. I found Adam Geitgey’s article really interesting. My setup Surface Book Graphics Card GeForce 900M Series (Notebooks) GeForce 940M (1 GB) 5.0 Compute Capability Windows 10 x86_64 Python 2.7.14 Anaconda 5.1 CUDA 9.0" />
+    <meta property="og:url" content="https://briglx.github.io/2018/03/29/checking-out-tsflow.html" />
+    <meta property="og:image" content="https://briglx.github.ioassets/images/blog-icon.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2018-03-29T00:00:00-07:00" />
+    <meta property="article:modified_time" content="2018-03-29T00:00:00-07:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Checking out TSLearn" />
+    <meta name="twitter:description" content="I’m toying around with my new dashcam videos and thought I would try to build a neural network. I found Adam Geitgey’s article really interesting. My setup Surface Book Graphics Card GeForce 900M Series (Notebooks) GeForce 940M (1 GB) 5.0 Compute Capability Windows 10 x86_64 Python 2.7.14 Anaconda 5.1 CUDA 9.0" />
+    <meta name="twitter:url" content="https://briglx.github.io" />
+    <meta name="twitter:image" content="https://briglx.github.ioassets/images/blog-icon.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Brig Lamoreaux" />
+    <meta name="twitter:site" content="@briglx" />
+    <meta name="twitter:creator" content="@briglx" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Brig Lamoreaux",
+        "logo": "https://briglx.github.io/assets/images/blog-icon.png"
+    },
+    "url": "https://briglx.github.io/2018/03/29/checking-out-tsflow.html",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://briglx.github.ioassets/images/blog-icon.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://briglx.github.io/2018/03/29/checking-out-tsflow.html"
+    },
+    "description": "I’m toying around with my new dashcam videos and thought I would try to build a neural network. I found Adam Geitgey’s article really interesting. My setup Surface Book Graphics Card GeForce 900M Series (Notebooks) GeForce 940M (1 GB) 5.0 Compute Capability Windows 10 x86_64 Python 2.7.14 Anaconda 5.1 CUDA 9.0"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Checking out TSLearn" href="https://briglx.github.io/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="https://briglx.github.io"><img src="https://briglx.github.io/assets/images/blog-icon.png" alt="Brig Lamoreaux" /></a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="https://briglx.github.io">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="https://briglx.github.io/about/">About</a></li>
+    <!-- <li class="nav-getting-started" role="menuitem"><a href="https://briglx.github.iotag/getting-started/">Papers</a></li> -->
+    <li class="nav-talks" role="menuitem"><a href="https://briglx.github.io/tag/talks/">Talks</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+                <a class="social-link social-link-tw" href="https://twitter.com/briglx" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  post no-image">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="29 March 2018">29 March 2018</time>
+                    
+                </section>
+                <h1 class="post-full-title">Checking out TSLearn</h1>
+            </header>
+
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>I’m toying around with my new dashcam videos and thought I would try to build a neural network. I found <a href="https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721">Adam Geitgey’s article</a> really interesting.</p>
+
+<p><strong>My setup</strong></p>
+
+<ul>
+  <li>Surface Book</li>
+  <li>Graphics Card GeForce 900M Series (Notebooks)
+    <ul>
+      <li>GeForce 940M (1 GB)</li>
+      <li>5.0 Compute Capability</li>
+    </ul>
+  </li>
+  <li>Windows 10 x86_64</li>
+  <li>Python 2.7.14 Anaconda 5.1</li>
+  <li>CUDA 9.0</li>
+  <li>cuDNN v7.1.2 (Mar 21, 2018), for CUDA 9.0</li>
+</ul>
+
+<p>TFLearn requires TensorFlow</p>
+
+<p><strong>Installing TensorFlow - Prerequisites</strong></p>
+
+<ul>
+  <li>CUDA® Toolkit 9.0.
+    <ul>
+      <li>Base Installer cuda_9.0.176_win10_network.exe</li>
+      <li>Patch 1 (Released Jan 25, 2018)</li>
+      <li>Patch 3 (Released Mar 5, 2018)</li>
+    </ul>
+  </li>
+  <li>cuDNN v7.0</li>
+  <li>TensorFlow</li>
+  <li>Python 3</li>
+</ul>
+
+<p>Step</p>
+
+<h2 id="install-cudo-driver">Install Cudo Driver</h2>
+
+<p>Check for valid installation</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvcc <span class="nt">--version</span>
+
+nvcc: NVIDIA <span class="o">(</span>R<span class="o">)</span> Cuda compiler driver
+Copyright <span class="o">(</span>c<span class="o">)</span> 2005-2017 NVIDIA Corporation
+Built on Fri_Sep__1_21:08:32_Central_Daylight_Time_2017
+Cuda compilation tools, release 9.0, V9.0.176
+</code></pre></div></div>
+
+<p>Build Projects and run device query</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deviceQuery
+
+deviceQuery Starting...
+
+ CUDA Device Query <span class="o">(</span>Runtime API<span class="o">)</span> version <span class="o">(</span>CUDART static linking<span class="o">)</span>
+
+Detected 1 CUDA Capable device<span class="o">(</span>s<span class="o">)</span>
+
+Device 0: <span class="s2">"GeForce GPU"</span>
+  CUDA Driver Version / Runtime Version          9.0 / 9.0
+  CUDA Capability Major/Minor version number:    5.0
+  Total amount of global memory:                 1024 MBytes <span class="o">(</span>1073741824 bytes<span class="o">)</span>
+  <span class="o">(</span> 3<span class="o">)</span> Multiprocessors, <span class="o">(</span>128<span class="o">)</span> CUDA Cores/MP:     384 CUDA Cores
+  GPU Max Clock rate:                            993 MHz <span class="o">(</span>0.99 GHz<span class="o">)</span>
+  Memory Clock rate:                             2505 Mhz
+  Memory Bus Width:                              64-bit
+  L2 Cache Size:                                 1048576 bytes
+  Maximum Texture Dimension Size <span class="o">(</span>x,y,z<span class="o">)</span>         <span class="nv">1D</span><span class="o">=(</span>65536<span class="o">)</span>, <span class="nv">2D</span><span class="o">=(</span>65536, 65536<span class="o">)</span>, <span class="nv">3D</span><span class="o">=(</span>4096, 4096, 4096<span class="o">)</span>
+  Maximum Layered 1D Texture Size, <span class="o">(</span>num<span class="o">)</span> layers  <span class="nv">1D</span><span class="o">=(</span>16384<span class="o">)</span>, 2048 layers
+  Maximum Layered 2D Texture Size, <span class="o">(</span>num<span class="o">)</span> layers  <span class="nv">2D</span><span class="o">=(</span>16384, 16384<span class="o">)</span>, 2048 layers
+  Total amount of constant memory:               65536 bytes
+  Total amount of shared memory per block:       49152 bytes
+  Total number of registers available per block: 65536
+  Warp size:                                     32
+  Maximum number of threads per multiprocessor:  2048
+  Maximum number of threads per block:           1024
+  Max dimension size of a thread block <span class="o">(</span>x,y,z<span class="o">)</span>: <span class="o">(</span>1024, 1024, 64<span class="o">)</span>
+  Max dimension size of a grid size    <span class="o">(</span>x,y,z<span class="o">)</span>: <span class="o">(</span>2147483647, 65535, 65535<span class="o">)</span>
+  Maximum memory pitch:                          2147483647 bytes
+  Texture alignment:                             512 bytes
+  Concurrent copy and kernel execution:          Yes with 1 copy engine<span class="o">(</span>s<span class="o">)</span>
+  Run <span class="nb">time </span>limit on kernels:                     Yes
+  Integrated GPU sharing Host Memory:            No
+  Support host page-locked memory mapping:       Yes
+  Alignment requirement <span class="k">for </span>Surfaces:            Yes
+  Device has ECC support:                        Disabled
+  CUDA Device Driver Mode <span class="o">(</span>TCC or WDDM<span class="o">)</span>:         WDDM <span class="o">(</span>Windows Display Driver Model<span class="o">)</span>
+  Device supports Unified Addressing <span class="o">(</span>UVA<span class="o">)</span>:      Yes
+  Supports Cooperative Kernel Launch:            No
+  Supports MultiDevice Co-op Kernel Launch:      No
+  Device PCI Domain ID / Bus ID / location ID:   0 / 1 / 0
+  Compute Mode:
+     &lt; Default <span class="o">(</span>multiple host threads can use ::cudaSetDevice<span class="o">()</span> with device simultaneously<span class="o">)</span> <span class="o">&gt;</span>
+
+deviceQuery, CUDA Driver <span class="o">=</span> CUDART, CUDA Driver Version <span class="o">=</span> 9.0, CUDA Runtime Version <span class="o">=</span> 9.0, NumDevs <span class="o">=</span> 1
+Result <span class="o">=</span> PASS
+
+</code></pre></div></div>
+
+<h2 id="install-cudnn">Install cuDNN</h2>
+
+<p>Installed Download cuDNN v7.1.2 (Mar 21, 2018), for CUDA 9.0</p>
+
+<p>Copied files from zip to</p>
+
+<pre><code class="language-dos">\cuda\bin\cudnn64_7.dll to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin. 
+\cuda\include\cudnn.h to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include. 
+\cuda\lib\x64\cudnn.lib to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64.
+</code></pre>
+
+<h2 id="install-python-3">Install Python 3</h2>
+
+<p>Tensor Flow requires python three. Use conda to create a new environment</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda create <span class="nt">-n</span> py36 <span class="nv">python</span><span class="o">=</span>3.6 anaconda
+
+<span class="c"># To activate this environment, use:</span>
+<span class="c"># &gt; activate py36</span>
+<span class="c">#</span>
+<span class="c"># To deactivate an active environment, use:</span>
+<span class="c"># &gt; deactivate</span>
+
+activate py36
+
+conda <span class="nb">install </span>pip
+</code></pre></div></div>
+
+<h2 id="install-tslearn">Install TSLearn</h2>
+
+<p>pip install tflearn</p>
+
+<h2 id="errors">Errors</h2>
+
+<p>Must use CUDA 9.0 NOT 9.1</p>
+
+<blockquote>
+  <p>ImportError: Could not find ‘cudart64_90.dll’. TensorFlow requires that this DLL be installed in a directory that is named in your %PATH% environment variable. Download and install CUDA 9.0 from this URL: <a href="https://developer.nvidia.com/cuda-toolkit">https://developer.nvidia.com/cuda-toolkit</a></p>
+</blockquote>
+
+<h2 id="references"><strong>References</strong></h2>
+
+<ul>
+  <li>Tensor Flow on Windows <a href="https://www.tensorflow.org/install/install_windows">https://www.tensorflow.org/install/install_windows</a></li>
+  <li>Cudu Installation <a href="http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/">http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/</a></li>
+  <li>Cudo Developer Toolkit <a href="https://developer.nvidia.com/cuda-downloads?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exenetwork">https://developer.nvidia.com/cuda-downloads?target_os=Windows&amp;target_arch=x86_64&amp;target_version=10&amp;target_type=exenetwork</a></li>
+  <li>cuDNN installation <a href="http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-windows">http://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html#install-windowshttps://developer.nvidia.com/cudnn</a></li>
+</ul>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="https://briglx.github.io/assets/images/brig.jpg" alt="brig" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="https://briglx.github.io/author/brig">Brig Lamoreaux</a></h4>
+                                
+                                    <p>I solve problems by being insatiably curious.</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="https://briglx.github.io/author/brig">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="https://briglx.github.io/2018/04/13/surprising-results-with-python-thumbnails.html">
+                <div class="post-card-image" style="background-image: url(https://briglx.github.io/assets/images/comparepythonthumbnailsfeature.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="https://briglx.github.io/2018/04/13/surprising-results-with-python-thumbnails.html">
+                <header class="post-card-header">
+                    
+                        
+                            
+                               <span class="post-card-tags">Software</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Python</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Surprising Results with Python Thumbnails</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>I’ve been working with images recently and am using a technique for a hashing algorithm. This technique resized the image to a 9x8 gray scale image.
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="https://briglx.github.io/assets/images/brig.jpg" alt="Brig Lamoreaux" />
+                        
+                        <span class="post-card-author">
+                            <a href="https://briglx.github.io/author/brig/">Brig Lamoreaux</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      2 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="https://briglx.github.io/2017/08/24/parse-azure-deployment-status.html">
+                <header class="post-card-header">
+                    
+                        
+                            
+                               <span class="post-card-tags">Software</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Azure</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Python</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Parse Azure Deployment Status</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>I’ve been making a lot of deployments that take a while to finish. There is an api call to fetch the status of the operations.
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="https://briglx.github.io/assets/images/brig.jpg" alt="Brig Lamoreaux" />
+                        
+                        <span class="post-card-author">
+                            <a href="https://briglx.github.io/author/brig/">Brig Lamoreaux</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://briglx.github.io">
+            
+                <img src="https://briglx.github.io/assets/images/blog-icon.png" alt="Brig Lamoreaux icon" />
+            
+            <span>Brig Lamoreaux</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Checking out TSLearn</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Checking+out+TSLearn&amp;url=https://briglx.github.io/2018/03/29/checking-out-tsflow.html"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <!-- <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://briglx.github.io/2018/03/29/checking-out-tsflow.html"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a> -->
+        <a class="floating-header-share-li" href="https://www.linkedin.com/shareArticle?url=https://briglx.github.io/2018/03/29/checking-out-tsflow.html"
+            target="_blank" title="Share on LinkedIn"
+            onclick="window.open(this.href, 'share-linkedin','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M 7.1628571,32 H 0.52857143 V 10.634823 H 7.1628571 Z M 3.8421429,7.7204162 C 1.7207143,7.7204162 0,5.9632001 0,3.8416831 a 3.8421429,3.842303 0 0 1 7.6842857,0 c 0,2.121517 -1.7214286,3.8787331 -3.8421428,3.8787331 z M 31.992857,32 h -6.62 V 21.599566 c 0,-2.478674 -0.05,-5.657378 -3.449286,-5.657378 -3.449285,0 -3.977857,2.692969 -3.977857,5.478799 V 32 H 11.318571 V 10.634823 h 6.362858 v 2.914408 h 0.09286 C 18.66,11.870589 20.823571,10.099087 24.051429,10.099087 30.765714,10.099087 32,14.5207 32,20.263796 V 32 Z" /></svg>
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://briglx.github.io">Brig Lamoreaux</a> &copy; 2022</section>
+                <section class="poweredby">Powered by <a href="https://jekyllrb.com/">Jekyll</a> using
+                    <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a> theme.</section>
+                <nav class="site-footer-nav">
+                    <a href="https://briglx.github.io">Latest Posts</a>
+                    
+                    <a href="https://twitter.com/briglx" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://github.com/briglx" target="_blank" rel="noopener">Github</a>
+                    <a href="https://linkedin.com/in/briglamoreaux" target="_blank" rel="noopener">LinkedIn</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="https://briglx.github.io/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+  <!-- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+ </script> -->
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+
+
+</body>
+</html>

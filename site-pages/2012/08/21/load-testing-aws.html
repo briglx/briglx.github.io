@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>Load Testing with AWS</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Long term storage for a forgetful mind" />
+    <link rel="shortcut icon" href="https://briglx.github.io/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://briglx.github.io/2012/08/21/load-testing-aws.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Brig Lamoreaux" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Load Testing with AWS" />
+    <meta property="og:description" content="Spinning up servers on Amazon has been such a great way to test software. I recently did a performance test of MongoDB and put together a process and a few scripts that helped me load test a server with 128 clients. Here is the approach I used: Stand Up Server" />
+    <meta property="og:url" content="https://briglx.github.io/2012/08/21/load-testing-aws.html" />
+    <meta property="og:image" content="https://briglx.github.ioassets/images/blog-icon.png" />
+    <meta property="article:publisher" content="https://www.facebook.com/" />
+    <meta property="article:author" content="https://www.facebook.com/" />
+    <meta property="article:published_time" content="2012-08-21T00:00:00-07:00" />
+    <meta property="article:modified_time" content="2012-08-21T00:00:00-07:00" />
+    <meta property="article:tag" content="software" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Load Testing with AWS" />
+    <meta name="twitter:description" content="Spinning up servers on Amazon has been such a great way to test software. I recently did a performance test of MongoDB and put together a process and a few scripts that helped me load test a server with 128 clients. Here is the approach I used: Stand Up Server" />
+    <meta name="twitter:url" content="https://briglx.github.io" />
+    <meta name="twitter:image" content="https://briglx.github.ioassets/images/blog-icon.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Brig Lamoreaux" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="software" />
+    <meta name="twitter:site" content="@briglx" />
+    <meta name="twitter:creator" content="@briglx" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Brig Lamoreaux",
+        "logo": "https://briglx.github.io/assets/images/blog-icon.png"
+    },
+    "url": "https://briglx.github.io/2012/08/21/load-testing-aws.html",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://briglx.github.ioassets/images/blog-icon.png",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://briglx.github.io/2012/08/21/load-testing-aws.html"
+    },
+    "description": "Spinning up servers on Amazon has been such a great way to test software. I recently did a performance test of MongoDB and put together a process and a few scripts that helped me load test a server with 128 clients. Here is the approach I used: Stand Up Server"
+}
+    </script>
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="Load Testing with AWS" href="https://briglx.github.io/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="https://briglx.github.io"><img src="https://briglx.github.io/assets/images/blog-icon.png" alt="Brig Lamoreaux" /></a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="https://briglx.github.io">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="https://briglx.github.io/about/">About</a></li>
+    <!-- <li class="nav-getting-started" role="menuitem"><a href="https://briglx.github.iotag/getting-started/">Papers</a></li> -->
+    <li class="nav-talks" role="menuitem"><a href="https://briglx.github.io/tag/talks/">Talks</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            
+            
+                <a class="social-link social-link-tw" href="https://twitter.com/briglx" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+            
+        </div>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-software tag-aws tag-bash tag-ec2 tag-javascript tag-mongodb post no-image">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="21 August 2012">21 August 2012</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='https://briglx.github.io/tag/software/'>SOFTWARE</a>,
+                            
+                        
+                            
+                               <a href='https://briglx.github.io/tag/aws/'>AWS</a>,
+                            
+                        
+                            
+                               <a href='https://briglx.github.io/tag/bash/'>BASH</a>,
+                            
+                        
+                            
+                               <a href='https://briglx.github.io/tag/ec2/'>EC2</a>,
+                            
+                        
+                            
+                               <a href='https://briglx.github.io/tag/javascript/'>JAVASCRIPT</a>,
+                            
+                        
+                            
+                               <a href='https://briglx.github.io/tag/mongodb/'>MONGODB</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">Load Testing with AWS</h1>
+            </header>
+
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <p>Spinning up servers on Amazon has been such a great way to test software. I recently did a performance test of <a href="http://www.mongodb.org/" title="MongoDB">MongoDB</a> and put together a process and a few scripts that helped me load test a server with 128 clients. Here is the approach I used:</p>
+
+<ul>
+  <li>Stand Up Server</li>
+  <li>Create Client Image</li>
+  <li>Load Test Script</li>
+  <li>Utility Scripts</li>
+</ul>
+
+<h2 id="stand-up-server">Stand Up Server</h2>
+
+<p>The first step was to setup and configure a MongoDB instance on a machine designated as the server. All of the clients will hit this server. This is the machine that I wanted to monitor for performance. For my test, I looked at the cpu load, memory usage, interrupts/sec, and CS/sec. My goal was to discover Mongo’s performance in Amazon.</p>
+
+<h2 id="create-client-image">Create Client Image</h2>
+
+<p>Creating an image of the client helps to spin up additional clients fast. With one image, I could create up to 128 client at one time. I could even change the size of the client from a small machine to a large one, not that it would matter much. The most important thing I could do was spin up my clients in different availability zones and even regions. Although moving to a different region required me to create a new AIM because AIM’s can’t be transferred between regions like east or west.</p>
+
+<p>My client started with an Ubuntu image <a href="/2011/05/12/the-cloud-is-cool.html" title="The Cloud is Cool">which I like</a>. I <a href="/2012/01/11/installing-node-and-mongo.html" title="Installing Node and Mongo">configured Mongo</a> and copied the my JavaScript load script to the machine. I finally created a small script to start the client with the test script</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># mymongoserver = 192.168.0.1 </span>
+mongo 192.168.0.1/courses <span class="nt">--quiet</span> loadTest.js <span class="o">&gt;</span> results.csv
+</code></pre></div></div>
+
+<h2 id="load-test-script">Load Test Script</h2>
+
+<p>The load test is a simple JavaScript file that randomly selects an id from an array of two thousand possibilities. It then queried Mongo for a resource with the id. Very simple. The best part was learning that I could start the Mongo client with a JavaScript file. Every second the script writes out information on the response time like: current, running average, min, and max.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">db</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">getSiblingDB</span><span class="p">(</span><span class="dl">'</span><span class="s1">courses</span><span class="dl">'</span><span class="p">);</span>
+ 
+<span class="kd">var</span> <span class="nx">profileIds</span> <span class="o">=</span>  <span class="p">[</span> <span class="dl">"</span><span class="s2">1000045137</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">and</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">two</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">thousand</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">more</span><span class="dl">"</span> <span class="p">];</span>
+<span class="kd">var</span> <span class="nx">rnd</span><span class="p">,</span> <span class="nx">max</span><span class="p">,</span> <span class="nx">start</span><span class="p">,</span> <span class="nx">curId</span><span class="p">,</span> <span class="nx">item</span><span class="p">,</span> <span class="nx">diff</span><span class="p">,</span> <span class="nx">interval</span><span class="p">,</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">aveLatency</span><span class="p">,</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">delStart</span><span class="p">;</span>
+ 
+<span class="nx">j</span> <span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="nx">aveLatency</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="nx">minLatency</span><span class="o">=</span><span class="mi">1000</span><span class="p">;</span>
+<span class="nx">maxLatency</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="nx">max</span> <span class="o">=</span> <span class="nx">profileIds</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="nx">max</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
+<span class="nx">interval</span> <span class="o">=</span> <span class="nx">max</span> <span class="o">/</span> <span class="mi">20</span><span class="p">;</span>
+<span class="nx">delStart</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">).</span><span class="nx">getTime</span><span class="p">();</span>
+ 
+<span class="nx">print</span><span class="p">(</span><span class="dl">'</span><span class="s1">Latency, Running-Ave, Min, Max</span><span class="dl">'</span><span class="p">);</span>
+ 
+<span class="k">for</span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nx">i</span><span class="o">&lt;=</span><span class="nx">max</span><span class="p">;</span><span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>   
+  <span class="nx">rnd</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="nx">profileIds</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>   
+  <span class="nx">curId</span> <span class="o">=</span> <span class="nx">profileIds</span><span class="p">[</span><span class="nx">rnd</span><span class="p">];</span>   
+  <span class="c1">// Capture Response time   </span>
+  <span class="nx">start</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">).</span><span class="nx">getTime</span><span class="p">();</span>   
+  <span class="nx">item</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">CourseOfferiningMemberships</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span><span class="dl">"</span><span class="s2">profile.id</span><span class="dl">"</span><span class="p">:</span><span class="nx">curId</span><span class="p">});</span>   
+  <span class="nx">diff</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">).</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">-</span> <span class="nx">start</span><span class="p">;</span> 
+  <span class="c1">// Calculate Latency in ms   </span>
+  <span class="c1">// Display Sample Data every second   </span>
+  <span class="k">if</span><span class="p">((</span><span class="nx">start</span> <span class="o">-</span> <span class="nx">delStart</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1000</span><span class="p">)</span> <span class="p">{</span>
+ 
+    <span class="k">if</span><span class="p">(</span><span class="nx">diff</span> <span class="o">&lt;</span> <span class="nx">minLatency</span><span class="p">){</span>         
+      <span class="nx">minLatency</span> <span class="o">=</span> <span class="nx">diff</span><span class="p">;</span>     
+    <span class="p">}</span>     
+    <span class="k">if</span><span class="p">(</span><span class="nx">diff</span> <span class="o">&gt;</span> <span class="nx">maxLatency</span><span class="p">){</span>
+      <span class="nx">maxLatency</span> <span class="o">=</span> <span class="nx">diff</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+    <span class="c1">// Calc moving average</span>
+    <span class="nx">aveLatency</span> <span class="o">=</span> <span class="nx">cumAverage</span><span class="p">(</span><span class="nx">diff</span><span class="p">,</span> <span class="nx">aveLatency</span><span class="p">,</span> <span class="nx">j</span><span class="p">);</span>
+    <span class="nx">j</span><span class="o">++</span><span class="p">;</span>
+ 
+    <span class="nx">print</span><span class="p">(</span><span class="nx">diff</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">, </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">aveLatency</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">, </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">minLatency</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">, </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">maxLatency</span><span class="p">);</span>
+    <span class="nx">delStart</span> <span class="o">=</span> <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">).</span><span class="nx">getTime</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="utility-scripts">Utility Scripts</h2>
+
+<p>There were two utility scripts I created. The first was a general administration of the <a href="http://en.wikipedia.org/wiki/Amazon_Web_Services" title="Amazon Web Services">AWS</a> instances. This had my AWS credentials and would loop over each of the instances that were based off my Client Image. Some of the things I would do is:</p>
+
+<ul>
+  <li>Start clients in increments of 1,2,4,8,16 etc.</li>
+  <li>Get the domain name of the instances</li>
+  <li>Terminate instances.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">boto.ec2</span> <span class="kn">import</span> <span class="n">connect_to_region</span>
+<span class="kn">from</span> <span class="nn">boto.ec2.connection</span> <span class="kn">import</span> <span class="n">EC2Connection</span>
+ 
+<span class="c1">#conn = connect_to_region('us-west-1', aws_access_key_id='MY_ACCESS_KEY_ID', aws_secret_access_key='MY_SECRET_KEY')
+</span><span class="n">conn</span> <span class="o">=</span> <span class="n">connect_to_region</span><span class="p">(</span><span class="s">'us-east-1'</span><span class="p">,</span> <span class="n">aws_access_key_id</span><span class="o">=</span><span class="s">'MY_ACCESS_KEY_ID'</span><span class="p">,</span> <span class="n">aws_secret_access_key</span><span class="o">=</span><span class="s">'MY_SECRET_KEY'</span><span class="p">)</span>
+ 
+<span class="n">instances</span> <span class="o">=</span> <span class="p">[]</span>
+ 
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">conn</span><span class="p">.</span><span class="n">get_all_instances</span><span class="p">():</span>
+  <span class="n">instances</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">r</span><span class="p">.</span><span class="n">instances</span><span class="p">)</span>
+ 
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">instances</span><span class="p">:</span>
+  <span class="k">if</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">state</span> <span class="o">==</span> <span class="s">'running'</span>  <span class="ow">and</span> <span class="p">(</span><span class="s">"Mongo-Client"</span> <span class="ow">in</span> <span class="n">item</span><span class="p">.</span><span class="n">tags</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"Name"</span><span class="p">))):</span>
+    <span class="k">print</span> <span class="s">'%s</span><span class="se">\t</span><span class="s">%s'</span> <span class="o">%</span> <span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="n">tags</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"Name"</span><span class="p">),</span> <span class="n">item</span><span class="p">.</span><span class="n">public_dns_name</span><span class="p">)</span>
+    <span class="n">item</span><span class="p">.</span><span class="n">terminate</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>The second script is my remote control script. This script allows me to:</p>
+
+<ul>
+  <li>start the load script</li>
+  <li>quickly ssh</li>
+  <li>update the script</li>
+  <li>clear results</li>
+  <li>get results</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+ 
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="nv">$1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+    </span><span class="nb">echo</span> <span class="s2">"Usage: </span><span class="nv">$0</span><span class="s2"> &lt;command&gt;&lt;/command&gt;"</span>
+    <span class="nb">exit </span>1
+<span class="k">fi
+ 
+</span><span class="nv">servers</span><span class="o">=(</span>myserver1.compute-1.amazonaws.com
+myserver2.compute-1.amazonaws.com
+...
+<span class="o">)</span>
+ 
+<span class="c"># Example commands</span>
+<span class="c"># loadtest start 4</span>
+<span class="c"># loadtest start 8</span>
+<span class="c"># loadtest copy 4 /path/to/file</span>
+ 
+<span class="k">case</span> <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span> <span class="k">in
+    </span>ssh<span class="p">)</span>
+        <span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="nv">$2</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+            </span><span class="nb">echo</span> <span class="s2">"Usage: </span><span class="nv">$0</span><span class="s2"> ssh "</span>
+            <span class="nb">exit </span>1
+        <span class="k">fi
+ 
+        </span><span class="nb">echo</span> <span class="s2">"Quick login to </span><span class="nv">$servers</span><span class="s2">[</span><span class="nv">$2</span><span class="s2">]"</span>
+        ssh <span class="nt">-o</span> <span class="nv">StrictHostKeyChecking</span><span class="o">=</span>no <span class="k">${</span><span class="nv">servers</span><span class="p">[</span><span class="nv">$2</span><span class="p">]</span><span class="k">}</span>
+        <span class="p">;;</span>
+    updateKey<span class="p">)</span>
+ 
+        <span class="nb">echo</span> <span class="s2">"Update Key"</span>
+        <span class="k">for </span>s <span class="k">in</span> <span class="k">${</span><span class="nv">servers</span><span class="p">[@]</span><span class="k">}</span><span class="p">;</span><span class="k">do
+            </span><span class="nb">printf</span> <span class="s2">"Updating </span><span class="k">${</span><span class="nv">s</span><span class="k">}</span><span class="s2">...</span><span class="se">\n</span><span class="s2">"</span>
+            <span class="nb">cat</span> ~/.ssh/id_rsa.pub | ssh <span class="nt">-o</span> <span class="nv">StrictHostKeyChecking</span><span class="o">=</span>no  <span class="k">${</span><span class="nv">s</span><span class="k">}</span> <span class="s1">'cat &gt;&gt; .ssh/authorized_keys'</span>
+        <span class="k">done
+        </span><span class="nb">printf</span> <span class="s2">" Done</span><span class="se">\n</span><span class="s2">"</span>
+        <span class="p">;;</span>
+    updateScript<span class="p">)</span>
+ 
+        <span class="nb">echo</span> <span class="s2">"Updating Script"</span>
+        <span class="k">for </span>s <span class="k">in</span> <span class="k">${</span><span class="nv">servers</span><span class="p">[@]</span><span class="k">}</span><span class="p">;</span><span class="k">do
+            </span><span class="nb">printf</span> <span class="s2">"Copying to </span><span class="k">${</span><span class="nv">s</span><span class="k">}</span><span class="s2">...</span><span class="se">\n</span><span class="s2">"</span>
+            <span class="nb">cat</span> ./mongoScripts/loadTest.js | ssh <span class="nt">-o</span> <span class="nv">StrictHostKeyChecking</span><span class="o">=</span>no <span class="k">${</span><span class="nv">s</span><span class="k">}</span> <span class="s1">'cat &gt; /tmp/loadTest.js'</span> &amp;
+        <span class="k">done
+        </span><span class="nb">wait
+        echo</span> <span class="s2">"Done"</span>
+        <span class="p">;;</span>
+    <span class="nb">exec</span><span class="p">)</span>
+        <span class="c"># execute  statement</span>
+ 
+        <span class="nb">echo</span> <span class="s2">"Executing command"</span>
+        <span class="k">for </span>s <span class="k">in</span> <span class="k">${</span><span class="nv">servers</span><span class="p">[@]</span><span class="k">}</span><span class="p">;</span><span class="k">do
+            </span><span class="nb">printf</span> <span class="s2">"Executing on </span><span class="k">${</span><span class="nv">s</span><span class="k">}</span><span class="s2">...</span><span class="se">\n</span><span class="s2">"</span>
+            ssh <span class="nt">-o</span> <span class="nv">StrictHostKeyChecking</span><span class="o">=</span>no <span class="k">${</span><span class="nv">s</span><span class="k">}</span> <span class="s1">'ls'</span>
+        <span class="k">done
+        </span><span class="nb">echo</span> <span class="s2">"Done"</span>
+        <span class="p">;;</span>
+ 
+    start<span class="p">)</span>
+        <span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="nv">$2</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+            </span><span class="nb">echo</span> <span class="s2">"Usage: </span><span class="nv">$0</span><span class="s2"> start "</span>
+            <span class="nb">exit </span>1
+        <span class="k">fi</span>
+        <span class="c">#    /path/to/mongo IP_TO_MONGO/courses --quiet /tmp/loadTestSamll.js &gt; results.csv</span>
+        <span class="nv">i</span><span class="o">=</span>0
+        <span class="k">while</span> <span class="o">[</span> <span class="nv">$i</span> <span class="nt">-lt</span> <span class="nv">$2</span> <span class="o">]</span><span class="p">;</span><span class="k">do
+            </span><span class="nb">printf</span> <span class="s2">"Starting Script on </span><span class="k">${</span><span class="nv">servers</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="k">}</span><span class="s2">...</span><span class="se">\n</span><span class="s2">"</span>
+            ssh <span class="nt">-o</span> <span class="nv">StrictHostKeyChecking</span><span class="o">=</span>no <span class="k">${</span><span class="nv">servers</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="k">}</span> <span class="s1">':&gt;/tmp/results.csv;/opt/mongo-latest/bin/mongo IP_TO_MONGO/courses --quiet /tmp/loadTest.js &gt; /tmp/results.csv'</span> &amp;
+            <span class="c">#ssh ${servers[$i]} 'mongo-latest/bin/; ls' &amp;</span>
+ 
+            <span class="nb">let </span><span class="nv">i</span><span class="o">=</span>i+1
+        <span class="k">done
+        </span><span class="nb">wait
+        echo</span> <span class="s2">"Done"</span>
+        <span class="p">;;</span>
+    clear-results<span class="p">)</span>
+        <span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="nv">$2</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+            </span><span class="nb">echo</span> <span class="s2">"Usage: </span><span class="nv">$0</span><span class="s2"> results "</span>
+            <span class="nb">exit </span>1
+        <span class="k">fi
+        </span><span class="nv">i</span><span class="o">=</span>0
+        <span class="k">while</span> <span class="o">[</span> <span class="nv">$i</span> <span class="nt">-lt</span> <span class="nv">$2</span> <span class="o">]</span><span class="p">;</span><span class="k">do
+            </span><span class="nb">printf</span> <span class="s2">"Clearing results on </span><span class="k">${</span><span class="nv">servers</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="k">}</span><span class="s2">..."</span>
+            ssh <span class="k">${</span><span class="nv">servers</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="k">}</span> <span class="s1">'rm /tmp/results.csv'</span>
+            <span class="nb">let </span><span class="nv">i</span><span class="o">=</span>i+1
+            <span class="nb">printf</span> <span class="s2">"Done"</span>
+        <span class="k">done</span>
+        <span class="p">;;</span>
+    results<span class="p">)</span>
+        <span class="k">if</span> <span class="o">[</span> <span class="nt">-z</span> <span class="nv">$2</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+            </span><span class="nb">echo</span> <span class="s2">"Usage: </span><span class="nv">$0</span><span class="s2"> results "</span>
+            <span class="nb">exit </span>1
+        <span class="k">fi
+        </span><span class="nv">i</span><span class="o">=</span>0
+        <span class="k">while</span> <span class="o">[</span> <span class="nv">$i</span> <span class="nt">-lt</span> <span class="nv">$2</span> <span class="o">]</span><span class="p">;</span><span class="k">do
+            </span><span class="nb">echo</span> <span class="s2">"Fetching results on </span><span class="k">${</span><span class="nv">servers</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="k">}</span><span class="s2">..."</span>
+            ssh <span class="k">${</span><span class="nv">servers</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="k">}</span> <span class="s1">'tail -n 1 /tmp/results.csv'</span> &amp;
+            <span class="nb">let </span><span class="nv">i</span><span class="o">=</span>i+1
+        <span class="k">done
+        </span><span class="nb">wait
+        printf</span> <span class="s2">"Done"</span>
+        <span class="p">;;</span>
+    <span class="k">*</span><span class="p">)</span>
+        <span class="nb">echo</span> <span class="s2">$"Usage: </span><span class="nv">$0</span><span class="s2"> {ssh|updateKey|updateScript|start|results}"</span>
+        <span class="nb">exit </span>1
+<span class="k">esac
+</span><span class="nb">exit </span>0
+</code></pre></div></div>
+
+<h2 id="results">Results</h2>
+
+<p>It took me a while to build these scripts and find how to remotely control the Mongo clients. This may not be the most effective way to perform a load test on Mongo, but it is a way that worked very well for me. At one point, I was able to run the test on 128 clients and get the results in less than two minutes. Please let me know if there are better tools to do this, I’m sure there are.</p>
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="https://briglx.github.io/assets/images/brig.jpg" alt="brig" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="https://briglx.github.io/author/brig">Brig Lamoreaux</a></h4>
+                                
+                                    <p>I solve problems by being insatiably curious.</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="https://briglx.github.io/author/brig">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(https://briglx.github.ioassets/images/blog-icon.png)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Brig Lamoreaux &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="https://briglx.github.io/tag/software/">Software</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/2022/05/20/finding-missing-images.html">Finding Missing Images</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/2018/09/13/updating-and-migrating-confluence.html">Updating and Migrating Confluence</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/2018/08/28/boilerplate-raspbian-setup.html">Boilerplate Raspbian Setup</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="https://briglx.github.io/tag/software/">
+                                
+                                    See all 22 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="https://briglx.github.io/2012/10/01/how-apollo-group-evaluated-mongodb-white-paper.html">
+                <div class="post-card-image" style="background-image: url(https://briglx.github.io/assets/images/mongopaper-1920x360.png)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="https://briglx.github.io/2012/10/01/how-apollo-group-evaluated-mongodb-white-paper.html">
+                <header class="post-card-header">
+                    
+                        
+                            
+                               <span class="post-card-tags">Mongodb</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Talks</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">How Apollo Group Evaluated MongoDB White Paper</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Earlier this year, I did a POC around MongoDB.
+
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="https://briglx.github.io/assets/images/brig.jpg" alt="Brig Lamoreaux" />
+                        
+                        <span class="post-card-author">
+                            <a href="https://briglx.github.io/author/brig/">Brig Lamoreaux</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="https://briglx.github.io/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html">
+                <header class="post-card-header">
+                    
+                        
+                            
+                               <span class="post-card-tags">Software</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Javascript</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Mongodb</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Mongoose</span>
+                            
+                        
+                            
+                               <span class="post-card-tags">Nodejs</span>
+                            
+                        
+                            
+                                <span class="post-card-tags">Regex</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">Search nodejs with regex and case insensitive</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>I recently needed to search for documents in mongo using mongoose. I knew I needed a regex but couldn’t figure out how to pass the case insesitive flag. We’ll here is how you</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="https://briglx.github.io/assets/images/brig.jpg" alt="Brig Lamoreaux" />
+                        
+                        <span class="post-card-author">
+                            <a href="https://briglx.github.io/author/brig/">Brig Lamoreaux</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://briglx.github.io">
+            
+                <img src="https://briglx.github.io/assets/images/blog-icon.png" alt="Brig Lamoreaux icon" />
+            
+            <span>Brig Lamoreaux</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Load Testing with AWS</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Load+Testing+with+AWS&amp;url=https://briglx.github.io/2012/08/21/load-testing-aws.html"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <!-- <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://briglx.github.io/2012/08/21/load-testing-aws.html"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a> -->
+        <a class="floating-header-share-li" href="https://www.linkedin.com/shareArticle?url=https://briglx.github.io/2012/08/21/load-testing-aws.html"
+            target="_blank" title="Share on LinkedIn"
+            onclick="window.open(this.href, 'share-linkedin','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M 7.1628571,32 H 0.52857143 V 10.634823 H 7.1628571 Z M 3.8421429,7.7204162 C 1.7207143,7.7204162 0,5.9632001 0,3.8416831 a 3.8421429,3.842303 0 0 1 7.6842857,0 c 0,2.121517 -1.7214286,3.8787331 -3.8421428,3.8787331 z M 31.992857,32 h -6.62 V 21.599566 c 0,-2.478674 -0.05,-5.657378 -3.449286,-5.657378 -3.449285,0 -3.977857,2.692969 -3.977857,5.478799 V 32 H 11.318571 V 10.634823 h 6.362858 v 2.914408 h 0.09286 C 18.66,11.870589 20.823571,10.099087 24.051429,10.099087 30.765714,10.099087 32,14.5207 32,20.263796 V 32 Z" /></svg>
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://briglx.github.io">Brig Lamoreaux</a> &copy; 2022</section>
+                <section class="poweredby">Powered by <a href="https://jekyllrb.com/">Jekyll</a> using
+                    <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a> theme.</section>
+                <nav class="site-footer-nav">
+                    <a href="https://briglx.github.io">Latest Posts</a>
+                    
+                    <a href="https://twitter.com/briglx" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://github.com/briglx" target="_blank" rel="noopener">Github</a>
+                    <a href="https://linkedin.com/in/briglamoreaux" target="_blank" rel="noopener">LinkedIn</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="https://briglx.github.io/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+<script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+  <!-- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+
+ </script> -->
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+
+
+</body>
+</html>

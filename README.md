@@ -92,6 +92,33 @@ bundle exec jekyll build -s ${jekyllSrc} ${INPUT_CUSTOM_OPTS}
 # prettier.format(filename, options)
 ```
 
+# Building Site
+
+Jekyll uses the files in `/source` and outputs to `/site-pages`. GitHub points to this folder to serve the site.
+
+I can't use GitHub action to build until I can resolve the `tags` issue for #16.
+
+In the meantime just build and deploy:
+
+```bash
+
+# Github uses this image https://github.com/actions/virtual-environments/blob/ubuntu20/20220515.1/images/linux/Ubuntu2004-Readme.md
+# ruby --version 2.7.0.p0
+# RubyGems 3.1.2
+# https://github.com/actions/jekyll-build-pages
+# image: 'docker://ghcr.io/actions/jekyll-build-pages:v1.0.3'
+# https://github.com/actions/jekyll-build-pages/blob/main/Dockerfile
+# ARG RUBY_VERSION=2.7.4
+# FROM ruby:$RUBY_VERSION-slim#
+
+
+cd /path/to/project/source
+bundle exec jekyll build 
+
+
+#
+```
+
 # Theme Ideas
 - See https://dribbble.com/shots/18046803-Blogging-App-Design/attachments/13234820?mode=media
 
