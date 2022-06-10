@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Finding Public IP Details</title>
+        
+          <description>&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 10 Jun 2022 00:00:00 -0700</pubDate>
+        <link>
+        https://briglx.github.io/2022/06/10/finding-public-ip-details.html</link>
+        <guid isPermaLink="true">https://briglx.github.io/2022/06/10/finding-public-ip-details.html</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Finding Missing Images</title>
         
           <description>&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;

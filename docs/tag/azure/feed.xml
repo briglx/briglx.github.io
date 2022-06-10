@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://briglx.github.io/tag/azure/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-05-24T07:50:17-07:00</updated>
+  <updated>2022-06-10T15:52:35-07:00</updated>
   <id>https://briglx.github.io/tag/azure/feed.xml</id>
 
   
@@ -30,6 +30,310 @@
   
   
 
+  
+    <entry>
+      <title type="html">Finding Public IP Details</title>
+      <link href="https://briglx.github.io/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
+      <published>2022-06-10T00:00:00-07:00</published>
+      <updated>2022-06-10T00:00:00-07:00</updated>
+      <id>https://briglx.github.io/2022/06/10/finding-public-ip-details</id>
+      <content type="html" xml:base="https://briglx.github.io/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
+
+&lt;p&gt;The goal is to see the different types of resources public ips are assocaited like:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;VMs&lt;/li&gt;
+  &lt;li&gt;Scalesets&lt;/li&gt;
+  &lt;li&gt;Bastion hosts&lt;/li&gt;
+  &lt;li&gt;gateways&lt;/li&gt;
+  &lt;li&gt;etc&lt;/li&gt;
+  &lt;li&gt;not associated.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After playing around with the query languange and discovering that it doesn’t implement the entire language, no &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt; keyword, I came up with the following:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-kusto&quot;&gt;resources 
+| where type =~ 'Microsoft.Network/publicIPAddresses'
+| project  
+    id, 
+    joinId = iff(isempty(properties.ipConfiguration.id), '', tolower(strcat('/', strcat_array(array_slice(split(properties.ipConfiguration.id,'/'), 1, -3), '/')))),
+    orphaned = iff(isempty(properties.ipConfiguration.id), true, false),
+    pubipname = name, 
+    resourceGroup,
+    ipAddress = properties.ipAddress
+| extend _provider = iff(orphaned, dynamic([{}]), split(split(joinId, 'providers')[1], '/'))
+| extend associated_to_provider = iif(orphaned, '', strcat_delim('/',_provider[1], _provider[2]))
+| join kind=leftouter(
+    resources
+    | project id = tolower(id), name 
+    ) on $left.joinId == $right.id
+| project 
+    id, name = pubipname, ipAddress, orphaned,  associated_to_name = name, associated_to_provider, associated_to_id = joinId
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This creates a result of:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ID&lt;/th&gt;
+      &lt;th&gt;NAME&lt;/th&gt;
+      &lt;th&gt;IPADDRESS&lt;/th&gt;
+      &lt;th&gt;ORPHANED&lt;/th&gt;
+      &lt;th&gt;ASSOCIATED_TO_NAME&lt;/th&gt;
+      &lt;th&gt;ASSOCIATED_TO_PROVIDER&lt;/th&gt;
+      &lt;th&gt;ASSOCIATED_TO_ID&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/ASI-RG/providers/Microsoft.Network/publicIPAddresses/SyslogAgent-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;SyslogAgent-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;syslogagent126&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/asi-rg/providers/microsoft.network/networkinterfaces/syslogagent126&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/ASI-RG/providers/Microsoft.Network/publicIPAddresses/SyslogAgent2-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;SyslogAgent2-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;SyslogAgent2-nic&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/asi-rg/providers/microsoft.network/networkinterfaces/syslogagent2-nic&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/ASI-RG/providers/Microsoft.Network/publicIPAddresses/sentinelagent1-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;sentinelagent1-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;sentinelagent1-nic&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/asi-rg/providers/microsoft.network/networkinterfaces/sentinelagent1-nic&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/Telegraf-InfluxDB-Grafana/providers/Microsoft.Network/publicIPAddresses/Telegraf-InfluxDB-Grafana-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;Telegraf-InfluxDB-Grafana-ip&lt;/td&gt;
+      &lt;td&gt;104.210.56.85&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;telegraf-influxdb-gr68&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/telegraf-influxdb-grafana/providers/microsoft.network/networkinterfaces/telegraf-influxdb-gr68&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/blxBilling/providers/Microsoft.Network/publicIPAddresses/PowerBIReports-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;PowerBIReports-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;powerbireports726&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/blxbilling/providers/microsoft.network/networkinterfaces/powerbireports726&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/blxBilling/providers/Microsoft.Network/publicIPAddresses/bastionHosts&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;bastionHosts&lt;/td&gt;
+      &lt;td&gt;192.168.17.43&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;blxBillingvnet425-bastion&lt;/td&gt;
+      &lt;td&gt;microsoft.network/bastionhosts&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/blxbilling/providers/microsoft.network/bastionhosts/blxbillingvnet425-bastion&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/confluence/providers/Microsoft.Network/publicIPAddresses/confluence&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;confluence&lt;/td&gt;
+      &lt;td&gt;192.168.17.45&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;confluence768&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/confluence/providers/microsoft.network/networkinterfaces/confluence768&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/confluence/providers/Microsoft.Network/publicIPAddresses/confluence-app-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;confluence-app-ip&lt;/td&gt;
+      &lt;td&gt;192.168.17.4&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;confluence-app991&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/confluence/providers/microsoft.network/networkinterfaces/confluence-app991&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/confluence/providers/Microsoft.Network/publicIPAddresses/confluence-database&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;confluence-database&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;confluence-database729&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/confluence/providers/microsoft.network/networkinterfaces/confluence-database729&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/Ubuntu2-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;Ubuntu2-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;ubuntu2105&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/development/providers/microsoft.network/networkinterfaces/ubuntu2105&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/aerotest-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;aerotest-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;aerotest635&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/development/providers/microsoft.network/networkinterfaces/aerotest635&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/blxlogtest-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;blxlogtest-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;blxlogtest803&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/development/providers/microsoft.network/networkinterfaces/blxlogtest803&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/buildmachine-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;buildmachine-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;buildmachine966&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/development/providers/microsoft.network/networkinterfaces/buildmachine966&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/development-vnet-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;development-vnet-ip&lt;/td&gt;
+      &lt;td&gt;192.168.17.5&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;development-vnet-bastion&lt;/td&gt;
+      &lt;td&gt;microsoft.network/bastionhosts&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/development/providers/microsoft.network/bastionhosts/development-vnet-bastion&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/devpubip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;devpubip&lt;/td&gt;
+      &lt;td&gt;192.168.17.100&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;devgateway&lt;/td&gt;
+      &lt;td&gt;microsoft.network/virtualnetworkgateways&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/development/providers/microsoft.network/virtualnetworkgateways/devgateway&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/homeassistant-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;homeassistant-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;homeassistant92&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/development/providers/microsoft.network/networkinterfaces/homeassistant92&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/mongodb-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;mongodb-ip&lt;/td&gt;
+      &lt;td&gt;192.168.17.200&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/mytestpolicyvm-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;mytestpolicyvm-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;mytestpolicyvm172&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/development/providers/microsoft.network/networkinterfaces/mytestpolicyvm172&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/myubuntu-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;myubuntu-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;myubuntu718&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/development/providers/microsoft.network/networkinterfaces/myubuntu718&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/ubuntu-pip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;ubuntu-pip&lt;/td&gt;
+      &lt;td&gt;192.168.17.201&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;ubuntu194&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/development/providers/microsoft.network/networkinterfaces/ubuntu194&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/ubuntu1704-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;ubuntu1704-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;ubuntu1704435&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/development/providers/microsoft.network/networkinterfaces/ubuntu1704435&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/development/providers/Microsoft.Network/publicIPAddresses/ubuntu17102-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;ubuntu17102-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;ubuntu17102672&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/development/providers/microsoft.network/networkinterfaces/ubuntu17102672&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/logic_demo/providers/Microsoft.Network/publicIPAddresses/kafka-vm-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;kafka-vm-ip&lt;/td&gt;
+      &lt;td&gt;192.168.17.204&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourceGroups/logic_demo/providers/Microsoft.Network/publicIPAddresses/testkafka-ip&lt;/subscription_id&gt;&lt;/td&gt;
+      &lt;td&gt;testkafka-ip&lt;/td&gt;
+      &lt;td&gt;null&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;testkafka258&lt;/td&gt;
+      &lt;td&gt;microsoft.network/networkinterfaces&lt;/td&gt;
+      &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/logic_demo/providers/microsoft.network/networkinterfaces/testkafka258&lt;/subscription_id&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="cloud" />
+      
+        <category term="kusto" />
+      
+        <category term="azure" />
+      
+
+      
+        <summary type="html">I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.</summary>
+      
+
+      
+      
+    </entry>
   
     <entry>
       <title type="html">Parse Azure Deployment Status</title>
