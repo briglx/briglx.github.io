@@ -115,7 +115,11 @@ In the meantime just build and deploy:
 cd /path/to/project/source
 bundle exec jekyll build 
 
-
+cd ..
+git add docs/*
+git checkout docs/.nojekyll
+git commit -m '...'
+git post
 #
 ```
 

@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://briglx.github.io/tag/nlp/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-06-10T15:52:35-07:00</updated>
-  <id>https://briglx.github.io/tag/nlp/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/nlp/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-06-13T14:25:09-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/nlp/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Extract Terms from Text</title>
-      <link href="https://briglx.github.io/2014/01/10/extract-terms-from-text.html" rel="alternate" type="text/html" title="Extract Terms from Text" />
+      <link href="https://www.briglamoreaux.com/2014/01/10/extract-terms-from-text.html" rel="alternate" type="text/html" title="Extract Terms from Text" />
       <published>2014-01-10T00:00:00-07:00</published>
       <updated>2014-01-10T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2014/01/10/extract-terms-from-text</id>
-      <content type="html" xml:base="https://briglx.github.io/2014/01/10/extract-terms-from-text.html">&lt;p&gt;I’ve been playing around with NLP. I wanted to see if I could extract terms from text. With the help of the internet, I found &lt;a href=&quot;http://stackoverflow.com/questions/1575246/how-do-i-extract-keywords-used-in-text/1575345#1575345&quot;&gt;some answers&lt;/a&gt;. It boils down to:&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2014/01/10/extract-terms-from-text</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2014/01/10/extract-terms-from-text.html">&lt;p&gt;I’ve been playing around with NLP. I wanted to see if I could extract terms from text. With the help of the internet, I found &lt;a href=&quot;http://stackoverflow.com/questions/1575246/how-do-i-extract-keywords-used-in-text/1575345#1575345&quot;&gt;some answers&lt;/a&gt;. It boils down to:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://pypi.python.org/pypi/topia.termextract/&quot;&gt;python topia library&lt;/a&gt;&lt;/li&gt;

@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://briglx.github.io/tag/json/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-06-10T15:52:35-07:00</updated>
-  <id>https://briglx.github.io/tag/json/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/json/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-06-13T14:25:09-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/json/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Json Serialization</title>
-      <link href="https://briglx.github.io/2009/02/04/json-serialization.html" rel="alternate" type="text/html" title="Json Serialization" />
+      <link href="https://www.briglamoreaux.com/2009/02/04/json-serialization.html" rel="alternate" type="text/html" title="Json Serialization" />
       <published>2009-02-04T00:00:00-07:00</published>
       <updated>2009-02-04T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2009/02/04/json-serialization</id>
-      <content type="html" xml:base="https://briglx.github.io/2009/02/04/json-serialization.html">&lt;p&gt;I’ve been having fun trying to implement an idea I have. Part of the idea involves caching objects to &lt;a href=&quot;http://www.danga.com/memcached/&quot;&gt;memcached&lt;/a&gt; in &lt;a href=&quot;http://json.org/&quot;&gt;Json&lt;/a&gt; format. The idea being that the object saved to memcached wouldn’t be bound to .Net specific methodology.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2009/02/04/json-serialization</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2009/02/04/json-serialization.html">&lt;p&gt;I’ve been having fun trying to implement an idea I have. Part of the idea involves caching objects to &lt;a href=&quot;http://www.danga.com/memcached/&quot;&gt;memcached&lt;/a&gt; in &lt;a href=&quot;http://json.org/&quot;&gt;Json&lt;/a&gt; format. The idea being that the object saved to memcached wouldn’t be bound to .Net specific methodology.&lt;/p&gt;
 
 &lt;h2 id=&quot;whats-out-there&quot;&gt;What’s out There&lt;/h2&gt;
 

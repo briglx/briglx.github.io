@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://briglx.github.io/tag/probability/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-06-10T15:52:35-07:00</updated>
-  <id>https://briglx.github.io/tag/probability/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/probability/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-06-13T14:25:09-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/probability/feed.xml</id>
 
   
   
@@ -33,24 +33,24 @@
   
     <entry>
       <title type="html">Modeling Student Knowlege</title>
-      <link href="https://briglx.github.io/2012/10/05/modeling-student-knowlege.html" rel="alternate" type="text/html" title="Modeling Student Knowlege" />
+      <link href="https://www.briglamoreaux.com/2012/10/05/modeling-student-knowlege.html" rel="alternate" type="text/html" title="Modeling Student Knowlege" />
       <published>2012-10-05T00:00:00-07:00</published>
       <updated>2012-10-05T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2012/10/05/modeling-student-knowlege</id>
-      <content type="html" xml:base="https://briglx.github.io/2012/10/05/modeling-student-knowlege.html">&lt;p&gt;I’m enrolled in the Stanford course &lt;a href=&quot;https://www.coursera.org/course/pgm&quot;&gt;Probabilistic Graphical Models&lt;/a&gt; offered by Coursera and found a very interesting scenario concerning ways to determine and model the intelligence of a student.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2012/10/05/modeling-student-knowlege</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2012/10/05/modeling-student-knowlege.html">&lt;p&gt;I’m enrolled in the Stanford course &lt;a href=&quot;https://www.coursera.org/course/pgm&quot;&gt;Probabilistic Graphical Models&lt;/a&gt; offered by Coursera and found a very interesting scenario concerning ways to determine and model the intelligence of a student.&lt;/p&gt;
 
 &lt;h2 id=&quot;isolated-case&quot;&gt;Isolated Case&lt;/h2&gt;
 
-&lt;p&gt;The first step in modeling student knowledge is to capture the information. One simple case is to look at the student’s final grade in a few classes. Suppose one student did well in the first and third course and poor in the second.&lt;img src=&quot;https://briglx.github.io/assets/images/studentview.png&quot; alt=&quot;StudentView&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;The first step in modeling student knowledge is to capture the information. One simple case is to look at the student’s final grade in a few classes. Suppose one student did well in the first and third course and poor in the second.&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/studentview.png&quot; alt=&quot;StudentView&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I could choose to model the intelligence of this student by first claiming that the typical student will have an 80% chance of having high intelligence. When I observe a student performing well in the first class, I can bump up his probability of having high intelligence a little, let’s say to 90%. If I observe poor performance in the second class, I can bump the probability down a little to 85%. So after two classes the student has an 85% probably of heigh intelligence. This isn’t the only information I have though.&lt;/p&gt;
 
 &lt;h2 id=&quot;network-effect&quot;&gt;Network Effect&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/networkview.png&quot; alt=&quot;Network Effect&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/networkview.png&quot; alt=&quot;Network Effect&quot; /&gt;
 When I observe all student in all classes, I suddenly have access to a lot more information the help determine the intelligence of the student in my model. Specifically I have additional information about the course the student did poor in.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/networkcourseview.png&quot; alt=&quot;Course Detail in Network&quot; /&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/networkcourseview.png&quot; alt=&quot;Course Detail in Network&quot; /&gt;
 Looking at the entire network, I have additional evidence that shows course 2 is a very easy course because all the other students did well. What does this additional information really give me though?&lt;/p&gt;
 
 &lt;h2 id=&quot;local-vs-global-scope&quot;&gt;Local vs Global Scope&lt;/h2&gt;

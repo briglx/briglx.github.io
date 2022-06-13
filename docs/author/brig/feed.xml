@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://briglx.github.io/author/brig/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://briglx.github.io/" rel="alternate" type="text/html" />
-  <updated>2022-06-10T15:52:35-07:00</updated>
-  <id>https://briglx.github.io/author/brig/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/author/brig/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-06-13T14:25:09-07:00</updated>
+  <id>https://www.briglamoreaux.com/author/brig/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Finding Public IP Details</title>
-      <link href="https://briglx.github.io/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
+      <link href="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
       <published>2022-06-10T00:00:00-07:00</published>
       <updated>2022-06-10T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2022/06/10/finding-public-ip-details</id>
-      <content type="html" xml:base="https://briglx.github.io/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
 
 &lt;p&gt;The goal is to see the different types of resources public ips are assocaited like:&lt;/p&gt;
 
@@ -337,11 +337,11 @@
   
     <entry>
       <title type="html">Finding Missing Images</title>
-      <link href="https://briglx.github.io/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
+      <link href="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
       <published>2022-05-20T00:00:00-07:00</published>
       <updated>2022-05-20T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2022/05/20/finding-missing-images</id>
-      <content type="html" xml:base="https://briglx.github.io/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2022/05/20/finding-missing-images</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
 
 &lt;p&gt;My strategy is to:&lt;/p&gt;
 &lt;ol&gt;
@@ -488,15 +488,15 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">Updating and Migrating Confluence</title>
-      <link href="https://briglx.github.io/2018/09/13/updating-and-migrating-confluence.html" rel="alternate" type="text/html" title="Updating and Migrating Confluence" />
+      <link href="https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence.html" rel="alternate" type="text/html" title="Updating and Migrating Confluence" />
       <published>2018-09-13T00:00:00-07:00</published>
       <updated>2018-09-13T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2018/09/13/updating-and-migrating-confluence</id>
-      <content type="html" xml:base="https://briglx.github.io/2018/09/13/updating-and-migrating-confluence.html">&lt;p&gt;I started hosting my wiki on Azure way back in 2016. The other day I received a message that I was  not using managed disks and I should upgrade. So I pushed the upgrade button and kicked off a two day outage which resulted in me pulling my hair out, migrating, looking at logs, and changing databases.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence.html">&lt;p&gt;I started hosting my wiki on Azure way back in 2016. The other day I received a message that I was  not using managed disks and I should upgrade. So I pushed the upgrade button and kicked off a two day outage which resulted in me pulling my hair out, migrating, looking at logs, and changing databases.&lt;/p&gt;
 
 &lt;h2 id=&quot;first-architecture&quot;&gt;First Architecture&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/confluencev1.png&quot; alt=&quot;Confluence v1 Architecture&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/confluencev1.png&quot; alt=&quot;Confluence v1 Architecture&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The first architecture is really basic. Just two vms. One with confluence installed on it and the other with Postgresql. I configured a separate nsg for each one. Looking back I could have had just one.&lt;/p&gt;
 
@@ -529,7 +529,7 @@ CropperCapture%5B12%5D.png,0
 
 &lt;h2 id=&quot;new-architecture&quot;&gt;New Architecture&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/confluencev2.png&quot; alt=&quot;confluencev2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/confluencev2.png&quot; alt=&quot;confluencev2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I replaced the IaaS database for the Azure Database Postgresql PaaS solution. I don’t want to mess around with managing a database. One less thing to think about.&lt;/p&gt;
 
@@ -597,11 +597,11 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">Boilerplate Raspbian Setup</title>
-      <link href="https://briglx.github.io/2018/08/28/boilerplate-raspbian-setup.html" rel="alternate" type="text/html" title="Boilerplate Raspbian Setup" />
+      <link href="https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup.html" rel="alternate" type="text/html" title="Boilerplate Raspbian Setup" />
       <published>2018-08-28T00:00:00-07:00</published>
       <updated>2018-08-28T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2018/08/28/boilerplate-raspbian-setup</id>
-      <content type="html" xml:base="https://briglx.github.io/2018/08/28/boilerplate-raspbian-setup.html">&lt;p&gt;I tend to flash my raspberry pies a lot. Here are the steps I follow to get to my working state.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup.html">&lt;p&gt;I tend to flash my raspberry pies a lot. Here are the steps I follow to get to my working state.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Flash with latest raspbian image https://www.raspberrypi.org/downloads/raspbian/&lt;/li&gt;
@@ -727,13 +727,13 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">More Time Doesn’t Always Help</title>
-      <link href="https://briglx.github.io/2018/06/28/more-time-doesnt-always-help.html" rel="alternate" type="text/html" title="More Time Doesn't Always Help" />
+      <link href="https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html" rel="alternate" type="text/html" title="More Time Doesn't Always Help" />
       <published>2018-06-28T00:00:00-07:00</published>
       <updated>2018-06-28T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2018/06/28/more-time-doesnt-always-help</id>
-      <content type="html" xml:base="https://briglx.github.io/2018/06/28/more-time-doesnt-always-help.html">&lt;p&gt;Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html">&lt;p&gt;Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/trainingvalidationaccuracy.png&quot; alt=&quot;TrainingValidationAccuracy&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/trainingvalidationaccuracy.png&quot; alt=&quot;TrainingValidationAccuracy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The model is over-fitting the data somehow. No matter how many more epochs I run, the validation won’t get better.&lt;/p&gt;</content>
 
@@ -773,11 +773,11 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">Surprising Results with Python Thumbnails</title>
-      <link href="https://briglx.github.io/2018/04/13/surprising-results-with-python-thumbnails.html" rel="alternate" type="text/html" title="Surprising Results with Python Thumbnails" />
+      <link href="https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails.html" rel="alternate" type="text/html" title="Surprising Results with Python Thumbnails" />
       <published>2018-04-13T00:00:00-07:00</published>
       <updated>2018-04-13T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2018/04/13/surprising-results-with-python-thumbnails</id>
-      <content type="html" xml:base="https://briglx.github.io/2018/04/13/surprising-results-with-python-thumbnails.html">&lt;p&gt;I’ve been working with images recently and am using a technique for a hashing algorithm. This technique resized the image to a 9x8 gray scale image.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails.html">&lt;p&gt;I’ve been working with images recently and am using a technique for a hashing algorithm. This technique resized the image to a 9x8 gray scale image.&lt;/p&gt;
 
 &lt;p&gt;I found five different ways to do it with a few surprising results:&lt;/p&gt;
 
@@ -865,19 +865,19 @@ plt.show()
 
 &lt;p&gt;&lt;strong&gt;Image 1 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/comparepythonthumbnails01.png&quot; alt=&quot;comparePythonThumbnails01&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails01.png&quot; alt=&quot;comparePythonThumbnails01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 2 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/comparepythonthumbnails02.png&quot; alt=&quot;comparePythonThumbnails02&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails02.png&quot; alt=&quot;comparePythonThumbnails02&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 3 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/comparepythonthumbnails03.png&quot; alt=&quot;comparePythonThumbnails03&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails03.png&quot; alt=&quot;comparePythonThumbnails03&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 4 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/comparepythonthumbnails04.png&quot; alt=&quot;comparePythonThumbnails04&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails04.png&quot; alt=&quot;comparePythonThumbnails04&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There are a few things I noticed:&lt;/p&gt;
 
@@ -893,19 +893,19 @@ plt.show()
 
 &lt;p&gt;&lt;strong&gt;Image 1 - Gray Scaled&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/comparepythonthumbnails01bw.png&quot; alt=&quot;comparePythonThumbnails01bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails01bw.png&quot; alt=&quot;comparePythonThumbnails01bw&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 2 - Gray Scaled&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/comparepythonthumbnails02bw.png&quot; alt=&quot;comparePythonThumbnails02bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails02bw.png&quot; alt=&quot;comparePythonThumbnails02bw&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 3 - Gray Scale&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/comparepythonthumbnails03bw.png&quot; alt=&quot;comparePythonThumbnails03bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails03bw.png&quot; alt=&quot;comparePythonThumbnails03bw&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 4 - Gray Scale&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/comparepythonthumbnails04bw.png&quot; alt=&quot;comparePythonThumbnails04bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails04bw.png&quot; alt=&quot;comparePythonThumbnails04bw&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
@@ -941,11 +941,11 @@ plt.show()
   
     <entry>
       <title type="html">Checking out TSLearn</title>
-      <link href="https://briglx.github.io/2018/03/29/checking-out-tsflow.html" rel="alternate" type="text/html" title="Checking out TSLearn" />
+      <link href="https://www.briglamoreaux.com/2018/03/29/checking-out-tsflow.html" rel="alternate" type="text/html" title="Checking out TSLearn" />
       <published>2018-03-29T00:00:00-07:00</published>
       <updated>2018-03-29T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2018/03/29/checking-out-tsflow</id>
-      <content type="html" xml:base="https://briglx.github.io/2018/03/29/checking-out-tsflow.html">&lt;p&gt;I’m toying around with my new dashcam videos and thought I would try to build a neural network. I found &lt;a href=&quot;https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721&quot;&gt;Adam Geitgey’s article&lt;/a&gt; really interesting.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2018/03/29/checking-out-tsflow</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2018/03/29/checking-out-tsflow.html">&lt;p&gt;I’m toying around with my new dashcam videos and thought I would try to build a neural network. I found &lt;a href=&quot;https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721&quot;&gt;Adam Geitgey’s article&lt;/a&gt; really interesting.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;My setup&lt;/strong&gt;&lt;/p&gt;
 
@@ -1120,11 +1120,11 @@ conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip
   
     <entry>
       <title type="html">Parse Azure Deployment Status</title>
-      <link href="https://briglx.github.io/2017/08/24/parse-azure-deployment-status.html" rel="alternate" type="text/html" title="Parse Azure Deployment Status" />
+      <link href="https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status.html" rel="alternate" type="text/html" title="Parse Azure Deployment Status" />
       <published>2017-08-24T00:00:00-07:00</published>
       <updated>2017-08-24T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2017/08/24/parse-azure-deployment-status</id>
-      <content type="html" xml:base="https://briglx.github.io/2017/08/24/parse-azure-deployment-status.html">&lt;p&gt;I’ve been making a lot of deployments that take a while to finish. There is an api call to fetch the status of the operations.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status.html">&lt;p&gt;I’ve been making a lot of deployments that take a while to finish. There is an api call to fetch the status of the operations.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;azure group deployment operation list --name deploymentname --resource-group rgname&lt;/code&gt;&lt;/p&gt;
 
@@ -1166,13 +1166,13 @@ conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip
   
     <entry>
       <title type="html">How Long to Deploy a Secure HDInsight Cluster</title>
-      <link href="https://briglx.github.io/2017/08/23/how-long-to-deploy-a-secure-hdinsight-cluster.html" rel="alternate" type="text/html" title="How Long to Deploy a Secure HDInsight Cluster" />
+      <link href="https://www.briglamoreaux.com/2017/08/23/how-long-to-deploy-a-secure-hdinsight-cluster.html" rel="alternate" type="text/html" title="How Long to Deploy a Secure HDInsight Cluster" />
       <published>2017-08-23T00:00:00-07:00</published>
       <updated>2017-08-23T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2017/08/23/how-long-to-deploy-a-secure-hdinsight-cluster</id>
-      <content type="html" xml:base="https://briglx.github.io/2017/08/23/how-long-to-deploy-a-secure-hdinsight-cluster.html">&lt;p&gt;It takes a while to build a secure HDInsight cluster. In my case it was about an hour from start to finish.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2017/08/23/how-long-to-deploy-a-secure-hdinsight-cluster</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2017/08/23/how-long-to-deploy-a-secure-hdinsight-cluster.html">&lt;p&gt;It takes a while to build a secure HDInsight cluster. In my case it was about an hour from start to finish.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/secureclusterdeployment.jpg&quot; alt=&quot;SecureClusterDeployment&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/secureclusterdeployment.jpg&quot; alt=&quot;SecureClusterDeployment&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;About half of the work was setting up the VNet and configuring the Domain Controllers. The HDInsight cluster took about 30 mins which his about normal.&lt;/p&gt;
 
@@ -1283,15 +1283,15 @@ conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip
   
     <entry>
       <title type="html">How I’ve deployed R Models with Microsoft R Server</title>
-      <link href="https://briglx.github.io/2017/06/26/how-ive-deployed-r-models-with-microsoft-r-server.html" rel="alternate" type="text/html" title="How I've deployed R Models with Microsoft R Server" />
+      <link href="https://www.briglamoreaux.com/2017/06/26/how-ive-deployed-r-models-with-microsoft-r-server.html" rel="alternate" type="text/html" title="How I've deployed R Models with Microsoft R Server" />
       <published>2017-06-26T00:00:00-07:00</published>
       <updated>2017-06-26T00:00:00-07:00</updated>
-      <id>https://briglx.github.io/2017/06/26/how-ive-deployed-r-models-with-microsoft-r-server</id>
-      <content type="html" xml:base="https://briglx.github.io/2017/06/26/how-ive-deployed-r-models-with-microsoft-r-server.html">&lt;p&gt;Many organizations are benefiting from advanced analytics and machine learning. I work with a lot of teams who create amazing data analytics models and who need to then deploy them in a way to be useful. This is what I’ve seen and one way to deploy models.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2017/06/26/how-ive-deployed-r-models-with-microsoft-r-server</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2017/06/26/how-ive-deployed-r-models-with-microsoft-r-server.html">&lt;p&gt;Many organizations are benefiting from advanced analytics and machine learning. I work with a lot of teams who create amazing data analytics models and who need to then deploy them in a way to be useful. This is what I’ve seen and one way to deploy models.&lt;/p&gt;
 
 &lt;p&gt;Generally deploying models run into two major obstacles technical and organizational. Any solution needs to cover both.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/image2017-2-15-8-11-28.png&quot; alt=&quot;Create and Deploy Analytics Web Services&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-15-8-11-28.png&quot; alt=&quot;Create and Deploy Analytics Web Services&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Write your models and routines in your local environment.&lt;/li&gt;
@@ -1308,9 +1308,9 @@ conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip
 &lt;ul&gt;
   &lt;li&gt;Navigate to Azure portal&lt;/li&gt;
   &lt;li&gt;Spin up an R Server&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/image2017-2-28-14-52-4.png&quot; alt=&quot;Azure R Server Dashboard&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-28-14-52-4.png&quot; alt=&quot;Azure R Server Dashboard&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;Open the network port&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/image2017-2-28-14-52-51.png&quot; alt=&quot;image2017-2-28 14-52-51&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-28-14-52-51.png&quot; alt=&quot;image2017-2-28 14-52-51&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Configure Server&lt;/strong&gt;&lt;/p&gt;
@@ -1361,11 +1361,11 @@ library&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mrsdeploy&lt;span class=&qu
   &lt;li&gt;Inspect swagger.json file&lt;/li&gt;
   &lt;li&gt;Navigate to http://website:12800/api/mtService/v1.0.0/swagger.json&lt;/li&gt;
   &lt;li&gt;Get authorization token with Rest Client&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/image2017-2-28-15-4-18.png&quot; alt=&quot;image2017-2-28 15-4-18&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/image2017-2-28-15-5-42.png&quot; alt=&quot;image2017-2-28 15-5-42&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-28-15-4-18.png&quot; alt=&quot;image2017-2-28 15-4-18&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-28-15-5-42.png&quot; alt=&quot;image2017-2-28 15-5-42&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;Call Web service with token and parameters&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/image2017-2-28-15-14-26.png&quot; alt=&quot;image2017-2-28 15-14-26&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;https://briglx.github.io/assets/images/image2017-2-28-15-14-49.png&quot; alt=&quot;image2017-2-28 15-14-49&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-28-15-14-26.png&quot; alt=&quot;image2017-2-28 15-14-26&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-28-15-14-49.png&quot; alt=&quot;image2017-2-28 15-14-49&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
