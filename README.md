@@ -119,7 +119,7 @@ cd ..
 git add docs/*
 git checkout docs/.nojekyll
 git commit -m '...'
-git post
+git push
 #
 ```
 
