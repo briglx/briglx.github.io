@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://www.briglamoreaux.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" /><updated>2022-06-21T17:49:45-07:00</updated><id>https://www.briglamoreaux.com/feed.xml</id><title type="html">Brig Lamoreaux</title><subtitle>Long term storage for a forgetful mind</subtitle><entry><title type="html">Finding Public IP Details</title><link href="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" /><published>2022-06-10T00:00:00-07:00</published><updated>2022-06-10T00:00:00-07:00</updated><id>https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details</id><content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://www.briglamoreaux.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" /><updated>2022-07-13T18:46:46-07:00</updated><id>https://www.briglamoreaux.com/feed.xml</id><title type="html">Brig Lamoreaux</title><subtitle>Long term storage for a forgetful mind</subtitle><entry><title type="html">Finding Public IP Details</title><link href="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" /><published>2022-06-10T00:00:00-07:00</published><updated>2022-06-10T00:00:00-07:00</updated><id>https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details</id><content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
 
 &lt;p&gt;The goal is to see the different types of resources public ips are assocaited like:&lt;/p&gt;
 
@@ -264,7 +264,223 @@
       &lt;td&gt;/subscriptions/&lt;subscription_id&gt;/resourcegroups/logic_demo/providers/microsoft.network/networkinterfaces/testkafka258&lt;/subscription_id&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Brig Lamoreaux</name></author><category term="cloud" /><category term="kusto" /><category term="azure" /><summary type="html">I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.</summary></entry><entry><title type="html">Finding Missing Images</title><link href="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" /><published>2022-05-20T00:00:00-07:00</published><updated>2022-05-20T00:00:00-07:00</updated><id>https://www.briglamoreaux.com/2022/05/20/finding-missing-images</id><content type="html" xml:base="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
+&lt;/table&gt;</content><author><name>Brig Lamoreaux</name></author><category term="cloud" /><category term="kusto" /><category term="azure" /><summary type="html">I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.</summary></entry><entry><title type="html">Cost Optimization Maturity Model</title><link href="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" /><published>2022-06-10T00:00:00-07:00</published><updated>2022-06-10T00:00:00-07:00</updated><id>https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model</id><content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;Several times a month I’m asked to join customer calls around cost optimization because I have helped really large Azure customers get a better handle on their cloud spend. I’d like to share my experience and help you to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Describe the Cost Optimization Maturity path cloud adopters take&lt;/li&gt;
+  &lt;li&gt;Identify the various Cost Optimization Tools and Solutions available to cloud adoptors and common Gaps and Limitations&lt;/li&gt;
+  &lt;li&gt;Deliver Cloud Financial Management Conversations&lt;/li&gt;
+  &lt;li&gt;Name Cost Optimization Recipes and Discuss how to share Recipes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;phase-1---freaking-out&quot;&gt;Phase 1 - Freaking Out&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The first phase is watching the bill grow overtime without any understanding around why. This is really scary because it feels like you are sitting in a raft without a paddle moving through wild water careening towards a giant cliff.&lt;/p&gt;
+
+&lt;p&gt;There’s not much to do in this phase other than completely ignore the slowly growing problem, or ask from some help.&lt;/p&gt;
+
+&lt;h2 id=&quot;phase-2---finding-tools&quot;&gt;Phase 2 - Finding Tools&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Learning about tools that will help you manage cost is what distinquishes Phase 2 from Phase 1. Now we have a few things to help manage the costs. On Azure, there are tools like:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Documentation&lt;/li&gt;
+  &lt;li&gt;Azure Advisor&lt;/li&gt;
+  &lt;li&gt;Azure Cost Management and Billing Portal&lt;/li&gt;
+  &lt;li&gt;Azure Cost Management (Power BI App)&lt;/li&gt;
+  &lt;li&gt;Power BI Cost Management Connector (Power BI Desktop)&lt;/li&gt;
+  &lt;li&gt;Well Architected Framework Cost Optimization Workbook&lt;/li&gt;
+  &lt;li&gt;Additional Tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;documentation&quot;&gt;Documentation&lt;/h3&gt;
+
+&lt;p&gt;Two great sources around best practices can be found in the CAF and WAF. Search for terms like Cost or billing.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Microsoft Cloud Adoption Framework (CAF) for Azure &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/&quot;&gt;https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Microsoft Azure Well-Architected Framework (WAF) &lt;a href=&quot;https://aka.ms/architecture/framework&quot;&gt;https://aka.ms/architecture/framework&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;azure-advisor&quot;&gt;Azure Advisor&lt;/h3&gt;
+
+&lt;p&gt;Azure Advisor is an amazing product. It monitors predefined best practices, alerts you when there are exceptions, and allows you to take action to mitigate the issue.&lt;/p&gt;
+
+&lt;p&gt;It will provide cost recommendations based on your usage and configurations, such as:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Shut down unused VMs&lt;/li&gt;
+  &lt;li&gt;Rightsize underused VMs&lt;/li&gt;
+  &lt;li&gt;Buy Reserved Instances for consistent resources&lt;/li&gt;
+  &lt;li&gt;Delete idle network gateways&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Many alerts have step-by-step guidance to easily remediate recommendations.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can review Advisor recommendations in the Azure portal: &lt;a href=&quot;https://aka.ms/azureadvisor&quot;&gt;aka.ms/azureadvisor&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;azure-cost-management-and-billing-portal&quot;&gt;Azure Cost Management and Billing Portal&lt;/h3&gt;
+
+&lt;p&gt;Azure Cost Managment (ACM) and Billing Portal is gaining so many new features I can’t keep up. Use it to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Explore Cost&lt;/li&gt;
+  &lt;li&gt;Manage Reservations&lt;/li&gt;
+  &lt;li&gt;Set spending thresholds and more&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;azure-cost-management--billing-power-bi-app&quot;&gt;Azure Cost Management + Billing Power BI App&lt;/h3&gt;
+
+&lt;p&gt;An azure enterprise aggreement administrator can run the &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/analyze-cost-data-azure-cost-management-power-bi-template-app&quot;&gt;Azure Cost Management (ACM) Power BI template application&lt;/a&gt; by logging into the Power BI Service at https://powerbi.com&lt;/p&gt;
+
+&lt;p&gt;The solution connects into the Azure Billing API has pre-configured reports:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Account overview&lt;/li&gt;
+  &lt;li&gt;Consumed Usage by Subscriptions and Resource Groups&lt;/li&gt;
+  &lt;li&gt;Top 5 Usage drivers&lt;/li&gt;
+  &lt;li&gt;Consumed Usage by Services&lt;/li&gt;
+  &lt;li&gt;Windows Server Hybrid License Usage&lt;/li&gt;
+  &lt;li&gt;VM RI Coverage (shared and single recommendation)&lt;/li&gt;
+  &lt;li&gt;RI Savings, Chargeback, purchases&lt;/li&gt;
+  &lt;li&gt;Pricesheet&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can also create ad hoc reports using the underlying data. This is generally my go to solution to show off how to slice and dice billing data for those who are looking for specialized reports.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;azure-cost-management-connector-for-power-bi&quot;&gt;Azure Cost Management Connector for Power BI&lt;/h3&gt;
+
+&lt;p&gt;When I can’t slice and dice the way I want with the ACM Power BI Template App, I turn to use the full-blown PowerBI desktop app and connect into the Billing Data directly using the &lt;a href=&quot;https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-azure-cost-management&quot;&gt;Cost Management Connector for Power BI&lt;/a&gt;. This let’s me split or join columns, aggregate data, and do any data clensing or preparation I can think of. I can also join it with other data sources.&lt;/p&gt;
+
+&lt;p&gt;When a really difficult request comes in, like a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;point in time comparison&lt;/code&gt; report, I fire up Power BI Desktop and use this tool.&lt;/p&gt;
+
+&lt;h3 id=&quot;waf-cost-optimzation-workbook&quot;&gt;WAF Cost Optimzation Workbook&lt;/h3&gt;
+
+&lt;p&gt;Microsoft has a service where engineers can sit with a customer and analyze the environment. One tool the team uses is the Well Architected Framework Cost Optimization Workbook. It is a deployable Workbook to Azure Monitor and queries Azure logs and the Azure Graph API to inspect the current environment. Some of the reports include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Idle/unattached items&lt;/li&gt;
+  &lt;li&gt;Orphaned resources&lt;/li&gt;
+  &lt;li&gt;Unattached Public IPs&lt;/li&gt;
+  &lt;li&gt;Hybrid benefits and more&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;additional-tools&quot;&gt;Additional Tools&lt;/h3&gt;
+
+&lt;p&gt;Other goto tools to help better understand costs include&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/pricing/calculator/&quot;&gt;Azure Pricing Calculator&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/migrate/&quot;&gt;Azure Migrate&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/hybrid/&quot;&gt;Azure Hybrid Benefits&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;And more&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;phase-3---outgrowing-the-tools&quot;&gt;Phase 3 - Outgrowing the Tools&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At some point the tools either don’t provide the information we need or the data is too large to use the tools. 
+My experience has been when an organization reaches the $2M / month in consumption the file size for billing data approaches 2-3GB. Excell and PowerBI start to slow down.&lt;/p&gt;
+
+&lt;p&gt;Organization will sometimes sit in this spot for various reasons before moving onto the next phase. At this point the organization really has to mature and commit to treating cost management as more than just a one-off activity and instead integrate it as part of the strategy and culture of cloud adoption.&lt;/p&gt;
+
+&lt;h2 id=&quot;phase-4---create-a-new-tool&quot;&gt;Phase 4 - Create a New Tool&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When I faced this phase several years ago, I was toying around with &lt;a href=&quot;https://github.com/briglx/AzureBillingReports&quot;&gt;a solution&lt;/a&gt; from my background in big data and interviewed my coleagues with other large organization asking how they solved the problem. The responses were consistent with my solution.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The architecture is a modern datawarehouse pipeline which is scalable and can:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ingest data from multiple data sources&lt;/li&gt;
+  &lt;li&gt;Process and enrich the data&lt;/li&gt;
+  &lt;li&gt;Save in a long-term database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Deploying the pipeline solves so many chalenges and creates more overhead as well. But the cost is well worth the benefit.&lt;/p&gt;
+
+&lt;p&gt;No longer do we need to worry about the size of the billing data, or the number of sources we combign and aggregate. No longer do we wait for reports to return results because the database is hyper-tuned for the final reports.&lt;/p&gt;
+
+&lt;h2 id=&quot;phase-5---wrong-audience&quot;&gt;Phase 5 - Wrong Audience&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Phase 5 is a cycle of cost cutting and organic growth. The behavior shows up anytime during the maturity growth phases because it’s more of an issue around how to think about cost management. I put it here because implementing a big data pipeline is a lot easier than changing the hearts and minds of an entire organization.&lt;/p&gt;
+
+&lt;p&gt;The main ideas here are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Effective Leaders execute against a Strategy&lt;/li&gt;
+  &lt;li&gt;Teams should focus on delivering value&lt;/li&gt;
+  &lt;li&gt;Spending money is not the issue, Trust is&lt;/li&gt;
+  &lt;li&gt;Different audiences require different reports&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A good leader does not want to arbitrarily cut cost not only because it’s a poor way of managing a business but because it lacks a strategy. The effort is defined as a financial metric instead of impact to core Business value unique to the organization.&lt;/p&gt;
+
+&lt;p&gt;Accross the board cost cutting also hurts the teams who rally to meet the commitment. The unpredictable cost cutting exercise impacts the teams ability the work on value creation.  In addition, some teams may already be efficient in their space and forced to sacrifice reliability, functionality, or security in order to meet the cost cutting goals.&lt;/p&gt;
+
+&lt;p&gt;Generally leadership teams don’t have a problem spending money in an investment they believe in. The cycle of cost cutting and organic growth is an indicator that the leadership lacks confidence in the cloud and the team managing it.&lt;/p&gt;
+
+&lt;p&gt;Executives need to see measure the health of the investment. This includes monitoring KPIs around Business Outcomes which align to overal strategy. As part of the FinOps organization, I see more and more organizations moving towards measuring business outcomes instead of cost cutting.&lt;/p&gt;
+
+&lt;p&gt;Operation teams ask for reports that can monitor the health of the environment and enforce corporate standards and policies. They want tools to help them with Charge Back models of Cloud Costs.&lt;/p&gt;
+
+&lt;p&gt;Development Teams can use reports that will help them comply with standards and implement improvement recommendations and best practices. Teams can integrate small positive changes each sprint without impact to feature development.&lt;/p&gt;
+
+&lt;p&gt;Analysts need the tools to explore the data and find edge cases that will inform future strategies.&lt;/p&gt;
+
+&lt;h3 id=&quot;define-a-strategy&quot;&gt;Define a Strategy&lt;/h3&gt;
+
+&lt;p&gt;Moving from seeking and destroying cost to strategic thinking requires a three phased approach:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Define Best Practices&lt;/li&gt;
+  &lt;li&gt;Measure and Monitor&lt;/li&gt;
+  &lt;li&gt;Remediate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I like to think I’m extending the capability of Azure Advisor with this method.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Best Practices&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;These are technology agnostic and should be defined in a way that everyone can aggree on:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Turn off Development Machines on the Weekend&lt;/li&gt;
+  &lt;li&gt;Resize VMs to have high utilization&lt;/li&gt;
+  &lt;li&gt;Apply reservations recomendations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;See https://aka.ms/architecture/framework for more.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Measure and Monitor&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With the right visulization, leaders can trus teams are moving in the right direction. They see the stratgy of best practices being implement in real time. They have the information needed in order to make decisions.&lt;/p&gt;
+
+&lt;h2 id=&quot;phase-6---recipies&quot;&gt;Phase 6 - Recipies&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipies&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The last phase is an organization developing reports that measure best practices. The organization has a common data schema from the pipeline to quickly create new reports. The reports Measure new Best Practices and teams can Discover and Share recipies between organizations.&lt;/p&gt;</content><author><name>Brig Lamoreaux</name></author><category term="cloud" /><category term="cost" /><category term="optimization" /><category term="finops" /><category term="azure" /><summary type="html">Several times a month I’m asked to join customer calls around cost optimization because I have helped really large Azure customers get a better handle on their cloud spend. I’d like to share my experience and help you to:</summary></entry><entry><title type="html">Finding Missing Images</title><link href="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" /><published>2022-05-20T00:00:00-07:00</published><updated>2022-05-20T00:00:00-07:00</updated><id>https://www.briglamoreaux.com/2022/05/20/finding-missing-images</id><content type="html" xml:base="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
 
 &lt;p&gt;My strategy is to:&lt;/p&gt;
 &lt;ol&gt;
@@ -900,100 +1116,4 @@ conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip
       &lt;td&gt;56.00&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Brig Lamoreaux</name></author><category term="hadoop" /><category term="hdinsight" /><summary type="html">It takes a while to build a secure HDInsight cluster. In my case it was about an hour from start to finish.</summary></entry><entry><title type="html">How I’ve deployed R Models with Microsoft R Server</title><link href="https://www.briglamoreaux.com/2017/06/26/how-ive-deployed-r-models-with-microsoft-r-server.html" rel="alternate" type="text/html" title="How I’ve deployed R Models with Microsoft R Server" /><published>2017-06-26T00:00:00-07:00</published><updated>2017-06-26T00:00:00-07:00</updated><id>https://www.briglamoreaux.com/2017/06/26/how-ive-deployed-r-models-with-microsoft-r-server</id><content type="html" xml:base="https://www.briglamoreaux.com/2017/06/26/how-ive-deployed-r-models-with-microsoft-r-server.html">&lt;p&gt;Many organizations are benefiting from advanced analytics and machine learning. I work with a lot of teams who create amazing data analytics models and who need to then deploy them in a way to be useful. This is what I’ve seen and one way to deploy models.&lt;/p&gt;
-
-&lt;p&gt;Generally deploying models run into two major obstacles technical and organizational. Any solution needs to cover both.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-15-8-11-28.png&quot; alt=&quot;Create and Deploy Analytics Web Services&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Write your models and routines in your local environment.&lt;/li&gt;
-  &lt;li&gt;Deploy them as production-ready microservices.&lt;/li&gt;
-  &lt;li&gt;Update your models and routines and version the microservice.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The best teams version their models using version control software just as it’s used in software development.&lt;/p&gt;
-
-&lt;h1 id=&quot;step-by-step&quot;&gt;Step by Step&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;Stand up R Server in Azure&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Navigate to Azure portal&lt;/li&gt;
-  &lt;li&gt;Spin up an R Server&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-28-14-52-4.png&quot; alt=&quot;Azure R Server Dashboard&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Open the network port&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-28-14-52-51.png&quot; alt=&quot;image2017-2-28 14-52-51&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Configure Server&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ssh onto the machine&lt;/li&gt;
-  &lt;li&gt;Launch Admin utility and configure password and server&lt;/li&gt;
-  &lt;li&gt;
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /usr/lib64/microsoft-deployr/9.0.1/
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;dotnet Microsoft.DeployR.Utils.AdminUtil/Microsoft.DeployR.Utils.AdminUtil.dll
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Install RClient&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Download R Client&lt;/li&gt;
-  &lt;li&gt;Configure RStudio to use R Client&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Create and Deploy Model&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;## MODEL DEPLOYMENT EXAMPLE ##&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;########################################################## # Load mrsdeploy package on R Server # ##########################################################&lt;/span&gt;
-library&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;mrsdeploy&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;########################################################## # Create &amp;amp; Test a Logistic Regression Model # ##########################################################&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Use logistic regression equation of vehicle transmission # in the data set mtcars to estimate the probability of # a vehicle being fitted with a manual transmission # based on horsepower (hp) and weight (wt)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Create glm model with `mtcars` dataset carsModel &amp;lt;- glm(formula = am ~ hp + wt, data = mtcars, family = binomial)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Produce a prediction function that can use the model manualTransmission &amp;lt;- function(hp, wt) { newdata &amp;lt;- data.frame(hp = hp, wt = wt) predict(carsModel, newdata, type = &quot;response&quot;) }&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# test function locally by printing results print(manualTransmission(120, 2.8)) # 0.6418125&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;########################################################## # Log into Microsoft R Server # ##########################################################&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Use `remoteLogin` to authenticate with R Server using # the local admin account. Use session = false so no # remote R session started remoteLogin(&quot;http://localhost:12800&quot;, username = &quot;admin&quot;, password = &quot;&quot;, session = FALSE)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;########################################################## # Publish Model as a Service # ##########################################################&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Publish as service using `publishService()` function from # `mrsdeploy` package. Name service &quot;mtService&quot; and provide # unique version number. Assign service to the variable `api` api &amp;lt;- publishService( &quot;mtService&quot;, code = manualTransmission, model = carsModel, inputs = list(hp = &quot;numeric&quot;, wt = &quot;numeric&quot;), outputs = list(answer = &quot;numeric&quot;), v = &quot;v1.0.0&quot; )&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;########################################################## # Consume Service in R # ##########################################################&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Print capabilities that define the service holdings: service # name, version, descriptions, inputs, outputs, and the # name of the function to be consumed print(api$capabilities())&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Consume service by calling function, `manualTransmission` # contained in this service result &amp;lt;- api$manualTransmission(120, 2.8)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Print response output named `answer` print(result$output(&quot;answer&quot;)) # 0.6418125&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;########################################################## # Get Service-specific Swagger File in R # ##########################################################&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# During this authenticated session, download the # Swagger-based JSON file that defines this service swagger &amp;lt;- api$swagger() cat(swagger, file = &quot;swagger.json&quot;, append = FALSE)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Share Swagger-based JSON with those who need to consume it`&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Use Rest Api&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Inspect swagger.json file&lt;/li&gt;
-  &lt;li&gt;Navigate to http://website:12800/api/mtService/v1.0.0/swagger.json&lt;/li&gt;
-  &lt;li&gt;Get authorization token with Rest Client&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-28-15-4-18.png&quot; alt=&quot;image2017-2-28 15-4-18&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-28-15-5-42.png&quot; alt=&quot;image2017-2-28 15-5-42&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;Call Web service with token and parameters&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-28-15-14-26.png&quot; alt=&quot;image2017-2-28 15-14-26&quot; /&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/image2017-2-28-15-14-49.png&quot; alt=&quot;image2017-2-28 15-14-49&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;resources&quot;&gt;Resources&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;About Deploy R &lt;a href=&quot;https://msdn.microsoft.com/microsoft-r/deployr-about&quot;&gt;https://msdn.microsoft.com/microsoft-r/deployr-about&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Configure R Server for Operationalize &lt;a href=&quot;https://msdn.microsoft.com/en-us/microsoft-r/operationalize/configuration-initial&quot;&gt;https://msdn.microsoft.com/en-us/microsoft-r/operationalize/configuration-initial&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Launch R Server Admin Utility &lt;a href=&quot;https://msdn.microsoft.com/en-us/microsoft-r/operationalize/admin-utility#launch&quot;&gt;https://msdn.microsoft.com/en-us/microsoft-r/operationalize/admin-utility#launch&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Getting started as Data Scientist &lt;a href=&quot;https://msdn.microsoft.com/en-us/microsoft-r/operationalize/data-scientist-get-started&quot;&gt;https://msdn.microsoft.com/en-us/microsoft-r/operationalize/data-scientist-get-started&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Microsoft R Overview &lt;a href=&quot;https://msdn.microsoft.com/en-us/microsoft-r/index&quot;&gt;https://msdn.microsoft.com/en-us/microsoft-r/index&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Getting Started with R &lt;a href=&quot;https://mran.microsoft.com/documents/getting-started/&quot;&gt;https://mran.microsoft.com/documents/getting-started/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;About RServer &lt;a href=&quot;https://msdn.microsoft.com/en-us/microsoft-r/deployr-about&quot;&gt;https://msdn.microsoft.com/en-us/microsoft-r/deployr-about&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;RServer vs &lt;a href=&quot;https://www.reddit.com/r/rstats/comments/3n4dg0/deployr_vs_plumber/&quot;&gt;https://www.reddit.com/r/rstats/comments/3n4dg0/deployr_vs_plumber/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Azure Functions &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview&quot;&gt;https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;R Models via web services &lt;a href=&quot;http://blog.algorithmia.com/deploying-r-models-production-web-services/&quot;&gt;http://blog.algorithmia.com/deploying-r-models-production-web-services/&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Stack Overflow Deploy R Models &lt;a href=&quot;http://stackoverflow.com/questions/22309236/options-for-deploying-r-models-in-production&quot;&gt;http://stackoverflow.com/questions/22309236/options-for-deploying-r-models-in-production&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Azure Function Continuous Deployment &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/azure-functions/functions-continuous-deployment&quot;&gt;https://docs.microsoft.com/en-us/azure/azure-functions/functions-continuous-deployment&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Brig Lamoreaux</name></author><summary type="html">Many organizations are benefiting from advanced analytics and machine learning. I work with a lot of teams who create amazing data analytics models and who need to then deploy them in a way to be useful. This is what I’ve seen and one way to deploy models.</summary></entry></feed>
+&lt;/table&gt;</content><author><name>Brig Lamoreaux</name></author><category term="hadoop" /><category term="hdinsight" /><summary type="html">It takes a while to build a secure HDInsight cluster. In my case it was about an hour from start to finish.</summary></entry></feed>

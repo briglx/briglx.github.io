@@ -8,6 +8,21 @@
     
       
       <item>
+        <title>Cost Optimization Maturity Model</title>
+        
+          <description>&lt;p&gt;Several times a month I’m asked to join customer calls around cost optimization because I have helped really large Azure customers get a better handle on their cloud spend. I’d like to share my experience and help you to:&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 10 Jun 2022 00:00:00 -0700</pubDate>
+        <link>
+        https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html</link>
+        <guid isPermaLink="true">https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Finding Public IP Details</title>
         
           <description>&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
