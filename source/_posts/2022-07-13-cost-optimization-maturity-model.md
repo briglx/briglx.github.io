@@ -15,62 +15,49 @@ subclass: 'post'
 author: brig
 ---
 
-Several times a month I'm asked to join customer calls around cost optimization because I have helped really large Azure customers get a better handle on their cloud spend. I'd like to share my experience and help you to:
-
-- Describe the Cost Optimization Maturity path cloud adopters take
-- Identify the various Cost Optimization Tools and Solutions available to cloud adoptors and common Gaps and Limitations
-- Deliver Cloud Financial Management Conversations
-- Name Cost Optimization Recipes and Discuss how to share Recipes
+In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization. 
 
 ## Phase 1 - Freaking Out
 
 ![Phase 1 - Awareness]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-phase1.png)
 
-The first phase is watching the bill grow overtime without any understanding around why. This is really scary because it feels like you are sitting in a raft without a paddle moving through wild water careening towards a giant cliff. 
-
-There's not much to do in this phase other than completely ignore the slowly growing problem, or ask from some help.
+The first phase is moving to the cloud and watching the bill grow over time without understanding why. There is not much to do in this phase other than completely ignoring the slowly growing problem or asking for help.
 
 ## Phase 2 - Finding Tools
 
 ![Phase 2 - Tools]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-phase2.png)
 
-Learning about tools that will help you manage cost is what distinquishes Phase 2 from Phase 1. Now we have a few things to help manage the costs. On Azure, there are tools like:
+Learning about cost management tools distinguishes Phase 2 from Phase 1. Azure includes tools like:
 
-- Documentation
+- Documentation of Best Practices
 - Azure Advisor
 - Azure Cost Management and Billing Portal
 - Azure Cost Management (Power BI App)
 - Power BI Cost Management Connector (Power BI Desktop)
-- Well Architected Framework Cost Optimization Workbook
+- Well-Architected Framework Cost Optimization Workbook
 - Additional Tools
 
 
 ### Documentation
 
-Two great sources around best practices can be found in the CAF and WAF. Search for terms like Cost or billing.
-
-- Microsoft Cloud Adoption Framework (CAF) for Azure [https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/)
-- Microsoft Azure Well-Architected Framework (WAF) [https://aka.ms/architecture/framework](https://aka.ms/architecture/framework)
+The [Microsoft Cloud Adoption Framework ](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/)(CAF) and the [Microsoft Azure Well-Architected Framework](https://aka.ms/architecture/framework)(WAF) are excellent sources for cost management best practices.
 
 ### Azure Advisor
 
-Azure Advisor is an amazing product. It monitors predefined best practices, alerts you when there are exceptions, and allows you to take action to mitigate the issue.
+[Azure Advisor](https://azure.microsoft.com/en-us/services/advisor/) is my number one go-to product for cost optimization. It monitors predefined best practices, alerts on exceptions, and allows you to remediate issues. In addition, it provides cost recommendations based on your usage and configurations:
 
-It will provide cost recommendations based on your usage and configurations, such as:
 - Shut down unused VMs
 - Rightsize underused VMs
 - Buy Reserved Instances for consistent resources
 - Delete idle network gateways
 
-Many alerts have step-by-step guidance to easily remediate recommendations.
-
 ![Azure Advisor]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-advisor.png)
 
-You can review Advisor recommendations in the Azure portal: [aka.ms/azureadvisor](https://aka.ms/azureadvisor)
+Review Advisor recommendations in the Azure portal: [aka.ms/azureadvisor](https://aka.ms/azureadvisor)
 
 ### Azure Cost Management and Billing Portal
 
-Azure Cost Managment (ACM) and Billing Portal is gaining so many new features I can't keep up. Use it to:
+I can't keep up with all of the new features in the [Azure Cost Management and Billing Portal](https://docs.microsoft.com/en-us/azure/cost-management-billing/)(ACM). Use it to:
 
 - Explore Cost
 - Manage Reservations
@@ -81,9 +68,9 @@ Azure Cost Managment (ACM) and Billing Portal is gaining so many new features I 
 
 ### Azure Cost Management + Billing Power BI App
 
-An azure enterprise aggreement administrator can run the [Azure Cost Management (ACM) Power BI template application](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/analyze-cost-data-azure-cost-management-power-bi-template-app) by logging into the Power BI Service at https://powerbi.com
 
-The solution connects into the Azure Billing API has pre-configured reports:
+An azure enterprise agreement administrator can run the [Azure Cost Management (ACM) Power BI template application](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/analyze-cost-data-azure-cost-management-power-bi-template-app) by logging into the Power BI Service at https://powerbi.com. The solution connects to the Azure Billing API and has pre-configured reports:
+
 - Account overview
 - Consumed Usage by Subscriptions and Resource Groups
 - Top 5 Usage drivers
@@ -91,21 +78,23 @@ The solution connects into the Azure Billing API has pre-configured reports:
 - Windows Server Hybrid License Usage
 - VM RI Coverage (shared and single recommendation)
 - RI Savings, Chargeback, purchases
-- Pricesheet
+- Price sheet
 
-You can also create ad hoc reports using the underlying data. This is generally my go to solution to show off how to slice and dice billing data for those who are looking for specialized reports.
+You can also create ad hoc reports using the underlying data. I will use the ACM Power BI Template App to show off how to slice and dice billing data for customers looking for specialized reports.
 
 ![ACM Power BI Template App]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-amc_pbi_app.png)
 
 ### Azure Cost Management Connector for Power BI
 
-When I can't slice and dice the way I want with the ACM Power BI Template App, I turn to use the full-blown PowerBI desktop app and connect into the Billing Data directly using the [Cost Management Connector for Power BI](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-azure-cost-management). This let's me split or join columns, aggregate data, and do any data clensing or preparation I can think of. I can also join it with other data sources.
+When I can't slice and dice the way I want with the ACM Power BI Template App, I  connect to the billing data directly with the Power BI desktop using the [Cost Management Connector for Power BI](https://docs.microsoft.com/en-us/power-bi/connect-data/desktop-connect-azure-cost-management). The connector lets me split and join columns, aggregate data, cleanse data, and any other data preparation I need. Not only can I manipulate the billing data, but I can also join external data sources with my data to create more meaningful reports.
 
-When a really difficult request comes in, like a `point in time comparison` report, I fire up Power BI Desktop and use this tool. 
+When a tricky request comes in, like a `point-in-time comparison` report, I fire up Power BI Desktop to do the job.
+
+![ACM Power BI Template App]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-azure-cost-management-connector)
 
 ### WAF Cost Optimzation Workbook
 
-Microsoft has a service where engineers can sit with a customer and analyze the environment. One tool the team uses is the Well Architected Framework Cost Optimization Workbook. It is a deployable Workbook to Azure Monitor and queries Azure logs and the Azure Graph API to inspect the current environment. Some of the reports include:
+Microsoft has a service where engineers can sit with customers to analyze their environment. One tool the team uses is the Well-Architected Framework (WAF) Cost Optimization Workbook. The workbook is deployed into Azure Monitor and queries Azure logs and the Azure Graph API to inspect the current environment. Some of the reports include:
 
 - Idle/unattached items
 - Orphaned resources
@@ -127,60 +116,58 @@ Other goto tools to help better understand costs include
 
 ![Phase 3 - Outgrowing tools]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-phase3.png)
 
-At some point the tools either don't provide the information we need or the data is too large to use the tools. 
-My experience has been when an organization reaches the $2M / month in consumption the file size for billing data approaches 2-3GB. Excell and PowerBI start to slow down. 
+At some point, the tools either fail to provide needed information or are overwhelmed by the amount of data. In my experience, this moment comes when an organization reaches the $2M / month in consumption and the file size for billing data approaches 2-3GB. Excel and PowerBI start to slow down with files this large.
 
-Organization will sometimes sit in this spot for various reasons before moving onto the next phase. At this point the organization really has to mature and commit to treating cost management as more than just a one-off activity and instead integrate it as part of the strategy and culture of cloud adoption.
+Organizations stay in Phase 3 for various reasons before moving out. The primary reason organizations remain in Phase 3 is because of the coordinating effort to integrate cost-management as part of the strategy and culture of the organization as opposed to looking at it as a one-off activity.
 
 ## Phase 4 - Create a New Tool
 
 ![Phase 4 - New Tool]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-phase4.png)
 
-When I faced this phase several years ago, I was toying around with [a solution](https://github.com/briglx/AzureBillingReports) from my background in big data and interviewed my coleagues with other large organization asking how they solved the problem. The responses were consistent with my solution. 
+When I faced this phase several years ago, I designed and [implemented a solution](https://github.com/briglx/AzureBillingReports) using my background in big data. After deploying it, I interviewed colleagues in other large organizations asking how they solved the problem. The responses were consistent with my solution's modern data warehouse pipeline architecture. 
 
 ![Big Data Enterprise Solution]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-big-data-arch.png)
 
-The architecture is a modern datawarehouse pipeline which is scalable and can:
+This scalable solution can:
 
 - Ingest data from multiple data sources
 - Process and enrich the data
-- Save in a long-term database
+- Persist data in a long-term database
 
-Deploying the pipeline solves so many chalenges and creates more overhead as well. But the cost is well worth the benefit.
-
-No longer do we need to worry about the size of the billing data, or the number of sources we combign and aggregate. No longer do we wait for reports to return results because the database is hyper-tuned for the final reports. 
-
+Deploying the pipeline creates more overhead, however, it solves diverse challenges making the cost well worth the benefit. The pipeline scales to ingest growing billing data and growing data sources. Reports are lighting fast because the database is hyper-tuned to the most common queries. This new tool solves most problems but can not fix the one in the next phase.
 
 ## Phase 5 - Wrong Audience
 
 ![Phase 5 - Wong Audience]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-phase5.png)
 
-Phase 5 is a cycle of cost cutting and organic growth. The behavior shows up anytime during the maturity growth phases because it's more of an issue around how to think about cost management. I put it here because implementing a big data pipeline is a lot easier than changing the hearts and minds of an entire organization.
+Phase 5 is a cycle of cost-cutting and organic growth. The behavior can show up anytime during the maturity growth phases because it is more of a mindset about cost management instead of a limitation of the tools. I put it here because implementing a big-data pipeline is less complicated than changing the hearts and minds of an entire organization.
 
-The main ideas here are:
+Moving through this phase will require:
 
-- Effective Leaders execute against a Strategy
-- Teams should focus on delivering value
-- Spending money is not the issue, Trust is
-- Different audiences require different reports
+- Teams focusing on delivering value
+- Organizations to understand that spending money is not a problem
+- Providing different tools to different audiences
+- Leaders to execute against a Strategy
 
-A good leader does not want to arbitrarily cut cost not only because it's a poor way of managing a business but because it lacks a strategy. The effort is defined as a financial metric instead of impact to core Business value unique to the organization.
+A good leader does not want to arbitrarily cut costs because it negatively impacts teams, is a poor way to measure successful business impact and lacks a strategy.
 
-Accross the board cost cutting also hurts the teams who rally to meet the commitment. The unpredictable cost cutting exercise impacts the teams ability the work on value creation.  In addition, some teams may already be efficient in their space and forced to sacrifice reliability, functionality, or security in order to meet the cost cutting goals.
+Unpredictable cost-cutting impacts teams by taking away time from activities that create business value. In addition, cost-cutting forces cost-efficient teams to sacrifice reliability, functionality, or security to meet the cost-cutting goals.
 
-Generally leadership teams don't have a problem spending money in an investment they believe in. The cycle of cost cutting and organic growth is an indicator that the leadership lacks confidence in the cloud and the team managing it. 
+Measuring cost is an important part of running a successful business but is the wrong measurement for the various departments delivering business impact. Executives, operation teams, development teams, and analysts have different needs. 
 
-Executives need to see measure the health of the investment. This includes monitoring KPIs around Business Outcomes which align to overal strategy. As part of the FinOps organization, I see more and more organizations moving towards measuring business outcomes instead of cost cutting. 
+Generally, executives have no problem spending money on an investment they trust. The cycle of cost-cutting and organic growth indicates a lack of confidence in the cloud and the team managing it. Leaders need key performance indicators (KPIs)s focused on business best practices to help them trust the cloud investment.
 
-Operation teams ask for reports that can monitor the health of the environment and enforce corporate standards and policies. They want tools to help them with Charge Back models of Cloud Costs.
+Cloud operation teams need to monitor and enforce corporate standards and policies. They want tools to help them with chargeback models of cloud costs.
 
-Development Teams can use reports that will help them comply with standards and implement improvement recommendations and best practices. Teams can integrate small positive changes each sprint without impact to feature development.
+Development teams need reports that show how to comply with standards, implement best practices, and remediate alerts. Teams also need the flexibility to integrate small positive changes each sprint without impacting feature development.
 
-Analysts need the tools to explore the data and find edge cases that will inform future strategies.
+Analysts need tools to explore the data and find edge cases to inform future strategies.
+
+Each department has different priorities around understading cloud usage and cost, performance tracking, and cloud optimization. The key is to move from arbitrary cost-cutting to a clear strategy. 
 
 ### Define a Strategy
 
-Moving from seeking and destroying cost to strategic thinking requires a three phased approach:
+Moving from seeking and destroying cost to strategic thinking requires a three-phased approach:
 
 - Define Best Practices
 - Measure and Monitor
@@ -188,26 +175,28 @@ Moving from seeking and destroying cost to strategic thinking requires a three p
 
 ![Three phased Approach]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-strategy.png)
 
-I like to think I'm extending the capability of Azure Advisor with this method. 
+This method extends the capability of Azure Advisor to include custom business best practices.
 
 **Best Practices**
 
-These are technology agnostic and should be defined in a way that everyone can aggree on:
+Define best practices agnostic to technology and in a way everyone can agree on. For example:
 
 - Turn off Development Machines on the Weekend
 - Resize VMs to have high utilization
-- Apply reservations recomendations
+- Apply reservations recommendations
 
-See https://aka.ms/architecture/framework for more.
+See [https://aka.ms/architecture/framework](https://aka.ms/architecture/framework) for more.
 
 **Measure and Monitor**
 
 ![Measure and Monitor]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-measure-monitor.png)
 
-With the right visulization, leaders can trus teams are moving in the right direction. They see the stratgy of best practices being implement in real time. They have the information needed in order to make decisions.
+The best visualizations provide essential information each department needs. Reports designed to build trust for executives should show the current status of a best practice and the historical progress. Provide visualization that provides information needed to make real-time decisions.
+
+Organizations move out of phase 5 when it replaces the mindset of seeking-and-destroying costs to strategically monitor and measuring best practices. 
 
 ## Phase 6 - Recipies
 
 ![Phase 6 - Recipies]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-phase6.png)
 
-The last phase is an organization developing reports that measure best practices. The organization has a common data schema from the pipeline to quickly create new reports. The reports Measure new Best Practices and teams can Discover and Share recipies between organizations.
+The last phase in the maturity model is when an organization can scale developing reports that measure best practices. Scaling will require centralizing data collection, a common data schema, and discoverability. In this environment, teams can create, discover, and share new reports.
