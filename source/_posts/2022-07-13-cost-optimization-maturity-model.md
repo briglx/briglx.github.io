@@ -68,7 +68,6 @@ I can't keep up with all of the new features in the [Azure Cost Management and B
 
 ### Azure Cost Management + Billing Power BI App
 
-
 An azure enterprise agreement administrator can run the [Azure Cost Management (ACM) Power BI template application](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/analyze-cost-data-azure-cost-management-power-bi-template-app) by logging into the Power BI Service at https://powerbi.com. The solution connects to the Azure Billing API and has pre-configured reports:
 
 - Account overview
@@ -90,7 +89,7 @@ When I can't slice and dice the way I want with the ACM Power BI Template App, I
 
 When a tricky request comes in, like a `point-in-time comparison` report, I fire up Power BI Desktop to do the job.
 
-![ACM Power BI Template App]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-azure-cost-management-connector)
+![ACM Power BI Template App]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-azure-cost-management-connector.png)
 
 ### WAF Cost Optimzation Workbook
 
