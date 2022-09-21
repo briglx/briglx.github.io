@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/proxy/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/proxy/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/proxy/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/proxy/feed.xml</id>
 
   
   
@@ -33,17 +33,17 @@
   
     <entry>
       <title type="html">Use Fiddler with .Net Application</title>
-      <link href="http://localhost:4000/2008/06/24/use-fiddler-with-net-application.html" rel="alternate" type="text/html" title="Use Fiddler with .Net Application" />
+      <link href="https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application.html" rel="alternate" type="text/html" title="Use Fiddler with .Net Application" />
       <published>2008-06-24T00:00:00-07:00</published>
       <updated>2008-06-24T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2008/06/24/use-fiddler-with-net-application</id>
-      <content type="html" xml:base="http://localhost:4000/2008/06/24/use-fiddler-with-net-application.html">&lt;p&gt;I often need to watch communication between a web service and my application. The best way I’ve found is to configure my app to use Fiddler as a proxy between my application and the web service. Once configured, I can watch the traffic. The simple step that I keep forgetting is the entry in the Web.Config file.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application.html">&lt;p&gt;I often need to watch communication between a web service and my application. The best way I’ve found is to configure my app to use Fiddler as a proxy between my application and the web service. Once configured, I can watch the traffic. The simple step that I keep forgetting is the entry in the Web.Config file.&lt;/p&gt;
 
 &lt;h2 id=&quot;get-fiddler-settings&quot;&gt;Get Fiddler Settings&lt;/h2&gt;
 
 &lt;p&gt;Open Fiddler and click on Tools -&amp;gt; Fiddler Options. The Fiddler Options window will pop up and take note of Listen Port number under Proxy Settings. In this case the value is 8888.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/CropperCapture%5B71%5D.jpg&quot; alt=&quot;Fiddler Options&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B71%5D.jpg&quot; alt=&quot;Fiddler Options&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;update-webconfig&quot;&gt;Update Web.Config&lt;/h2&gt;
 

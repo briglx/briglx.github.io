@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/svn/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/svn/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/svn/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/svn/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Practical SVN Branching and Merging</title>
-      <link href="http://localhost:4000/2008/03/28/practical-svn-branching-and-merging.html" rel="alternate" type="text/html" title="Practical SVN Branching and Merging" />
+      <link href="https://www.briglamoreaux.com/2008/03/28/practical-svn-branching-and-merging.html" rel="alternate" type="text/html" title="Practical SVN Branching and Merging" />
       <published>2008-03-28T00:00:00-07:00</published>
       <updated>2008-03-28T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2008/03/28/practical-svn-branching-and-merging</id>
-      <content type="html" xml:base="http://localhost:4000/2008/03/28/practical-svn-branching-and-merging.html">&lt;p&gt;I love SVN and the ability to branch and tag my repository.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2008/03/28/practical-svn-branching-and-merging</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2008/03/28/practical-svn-branching-and-merging.html">&lt;p&gt;I love SVN and the ability to branch and tag my repository.&lt;/p&gt;
 
 &lt;p&gt;I work on a two week release cycle with each revision being a version change. In SVN, I create a branch when I go into QA. Just about once a month I need to make a fix in QA which requires the need to merge a the branch fix into the trunk. Here are the steps I use in order to make that happen.&lt;/p&gt;
 
@@ -57,7 +57,7 @@
       &lt;li&gt;Take Note of the Start and End Revisions. These values will be used later. You will have to log at the log to see what the head revision is.&lt;/li&gt;
       &lt;li&gt;Click Dry Run to see what files will be affected.&lt;/li&gt;
       &lt;li&gt;If things looks good, click Merge.&lt;br /&gt;
- &lt;img src=&quot;http://localhost:4000/assets/images/SVNMerge.Png.png&quot; alt=&quot;SVNMerge&quot; /&gt;&lt;/li&gt;
+ &lt;img src=&quot;https://www.briglamoreaux.com/assets/images/SVNMerge.Png.png&quot; alt=&quot;SVNMerge&quot; /&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;Your working copy now has the changes made during the branch. Edit conflicts if any.&lt;/li&gt;

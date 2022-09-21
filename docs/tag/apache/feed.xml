@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/apache/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/apache/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/apache/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/apache/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">What Version of PHP am I Running</title>
-      <link href="http://localhost:4000/2014/07/31/what-version-of-php-am-i-running.html" rel="alternate" type="text/html" title="What Version of PHP am I Running" />
+      <link href="https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running.html" rel="alternate" type="text/html" title="What Version of PHP am I Running" />
       <published>2014-07-31T00:00:00-07:00</published>
       <updated>2014-07-31T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2014/07/31/what-version-of-php-am-i-running</id>
-      <content type="html" xml:base="http://localhost:4000/2014/07/31/what-version-of-php-am-i-running.html">&lt;p&gt;I was trying to install a debugger for PHP and had trouble mostly because it turned out I had two different versions of PHP running on my machine. One I installed using homebrew and the other … well I don’t know how it got there.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running.html">&lt;p&gt;I was trying to install a debugger for PHP and had trouble mostly because it turned out I had two different versions of PHP running on my machine. One I installed using homebrew and the other … well I don’t know how it got there.&lt;/p&gt;
 
 &lt;p&gt;Nevertheless, this is how I found out which one I was using.&lt;/p&gt;
 

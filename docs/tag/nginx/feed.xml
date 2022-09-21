@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/nginx/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/nginx/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/nginx/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/nginx/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Symfony denied Access</title>
-      <link href="http://localhost:4000/2014/07/14/symfony-denied-access.html" rel="alternate" type="text/html" title="Symfony denied Access" />
+      <link href="https://www.briglamoreaux.com/2014/07/14/symfony-denied-access.html" rel="alternate" type="text/html" title="Symfony denied Access" />
       <published>2014-07-14T00:00:00-07:00</published>
       <updated>2014-07-14T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2014/07/14/symfony-denied-access</id>
-      <content type="html" xml:base="http://localhost:4000/2014/07/14/symfony-denied-access.html">&lt;p&gt;Moving my Symfony app to a QA server showed me how rude the server is.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2014/07/14/symfony-denied-access</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/14/symfony-denied-access.html">&lt;p&gt;Moving my Symfony app to a QA server showed me how rude the server is.&lt;/p&gt;
 
 &lt;p&gt;I could see the home page right after I copied the project to the new machine with not problem (except for modifying &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.config.php&lt;/code&gt; and various file permission ownership issues). Nevertheless, the real problem came when I tried navigating to any other route besides the index. Each time I would get a 403 Access denied error.&lt;/p&gt;
 
@@ -103,11 +103,11 @@ root 1436 1 6 17:49 ? 00:00:00 php-fpm: master process &lt;span class=&quot;o&qu
   
     <entry>
       <title type="html">Proxy Node through nginx</title>
-      <link href="http://localhost:4000/2012/01/11/proxy-node-through-nginx.html" rel="alternate" type="text/html" title="Proxy Node through nginx" />
+      <link href="https://www.briglamoreaux.com/2012/01/11/proxy-node-through-nginx.html" rel="alternate" type="text/html" title="Proxy Node through nginx" />
       <published>2012-01-11T00:00:00-07:00</published>
       <updated>2012-01-11T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2012/01/11/proxy-node-through-nginx</id>
-      <content type="html" xml:base="http://localhost:4000/2012/01/11/proxy-node-through-nginx.html">&lt;p&gt;Once I got node service setup on my server I wasn’t happy with having to specify a port. Looking around I see others use nginx to listen on port 80 and proxy everything to node.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2012/01/11/proxy-node-through-nginx</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2012/01/11/proxy-node-through-nginx.html">&lt;p&gt;Once I got node service setup on my server I wasn’t happy with having to specify a port. Looking around I see others use nginx to listen on port 80 and proxy everything to node.&lt;/p&gt;
 
 &lt;p&gt;I really don’t know too much about security but read that in order to run on port 80 you need to run as root. If I run node as root, that could expose my system to hackers who could find an exploit in node and take over my system because I’m running as root. So to avoid that, run nginx in a special way to get port 80 going.&lt;/p&gt;
 

@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/minecraft/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/minecraft/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/minecraft/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/minecraft/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Minecraft Server</title>
-      <link href="http://localhost:4000/2022/07/31/minecraft-server.html" rel="alternate" type="text/html" title="Minecraft Server" />
+      <link href="https://www.briglamoreaux.com/2022/07/31/minecraft-server.html" rel="alternate" type="text/html" title="Minecraft Server" />
       <published>2022-07-31T00:00:00-07:00</published>
       <updated>2022-07-31T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2022/07/31/minecraft-server</id>
-      <content type="html" xml:base="http://localhost:4000/2022/07/31/minecraft-server.html">&lt;p&gt;Setting up minecraft on azure for fun.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2022/07/31/minecraft-server</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2022/07/31/minecraft-server.html">&lt;p&gt;Setting up minecraft on azure for fun.&lt;/p&gt;
 
 &lt;p&gt;Setup Server&lt;/p&gt;
 

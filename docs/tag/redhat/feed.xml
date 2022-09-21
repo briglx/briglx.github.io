@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/redhat/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/redhat/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/redhat/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/redhat/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Disable firewall on Redhat</title>
-      <link href="http://localhost:4000/2013/04/30/disable-firewall-on-redhat.html" rel="alternate" type="text/html" title="Disable firewall on Redhat" />
+      <link href="https://www.briglamoreaux.com/2013/04/30/disable-firewall-on-redhat.html" rel="alternate" type="text/html" title="Disable firewall on Redhat" />
       <published>2013-04-30T00:00:00-07:00</published>
       <updated>2013-04-30T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2013/04/30/disable-firewall-on-redhat</id>
-      <content type="html" xml:base="http://localhost:4000/2013/04/30/disable-firewall-on-redhat.html">&lt;p&gt;I just tried to deploy and test an application on EC2 running red hat but couldn’t telnet it.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2013/04/30/disable-firewall-on-redhat</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2013/04/30/disable-firewall-on-redhat.html">&lt;p&gt;I just tried to deploy and test an application on EC2 running red hat but couldn’t telnet it.&lt;/p&gt;
 
 &lt;p&gt;I configured the security group to allow port 8080, I could see the port was running with netstat&lt;/p&gt;
 

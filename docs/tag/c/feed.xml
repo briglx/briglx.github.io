@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/c/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/c/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/c/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/c/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">How to Convert Integers to Strings in C#</title>
-      <link href="http://localhost:4000/2007/08/31/how-to-convert-integers-to-strings-in-c.html" rel="alternate" type="text/html" title="How to Convert Integers to Strings in C#" />
+      <link href="https://www.briglamoreaux.com/2007/08/31/how-to-convert-integers-to-strings-in-c.html" rel="alternate" type="text/html" title="How to Convert Integers to Strings in C#" />
       <published>2007-08-31T00:00:00-07:00</published>
       <updated>2007-08-31T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2007/08/31/how-to-convert-integers-to-strings-in-c</id>
-      <content type="html" xml:base="http://localhost:4000/2007/08/31/how-to-convert-integers-to-strings-in-c.html">&lt;p&gt;I’ve been working with converting strings to integers and have a few options at my disposal.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2007/08/31/how-to-convert-integers-to-strings-in-c</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/31/how-to-convert-integers-to-strings-in-c.html">&lt;p&gt;I’ve been working with converting strings to integers and have a few options at my disposal.&lt;/p&gt;
 
 &lt;p&gt;In the past I’ve bounce between using Convert.Int32(string) and Int.Parse(string). I’ve decided to look into what really goes on under the covers between these different options.&lt;/p&gt;
 

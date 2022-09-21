@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/ubuntu/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/ubuntu/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/ubuntu/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/ubuntu/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Moving GitLab to an EBS Volume</title>
-      <link href="http://localhost:4000/2014/07/30/moving-gitlab-to-an-ebs-volume.html" rel="alternate" type="text/html" title="Moving GitLab to an EBS Volume" />
+      <link href="https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume.html" rel="alternate" type="text/html" title="Moving GitLab to an EBS Volume" />
       <published>2014-07-30T00:00:00-07:00</published>
       <updated>2014-07-30T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2014/07/30/moving-gitlab-to-an-ebs-volume</id>
-      <content type="html" xml:base="http://localhost:4000/2014/07/30/moving-gitlab-to-an-ebs-volume.html">&lt;p&gt;I’ve really enjoyed using &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;GitLab&lt;/a&gt; to manage my git repositories.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume.html">&lt;p&gt;I’ve really enjoyed using &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;GitLab&lt;/a&gt; to manage my git repositories.&lt;/p&gt;
 
 &lt;p&gt;It was really easy to get started because I used a &lt;a href=&quot;https://bitnami.com/stack/gitlab/cloud/amazon&quot;&gt;Bitnami GitLab image&lt;/a&gt; for Amazon. The problem is when I created the instance I chose an Instance store over EBS. I don’t have a really good reason why I did but now I need to move my data to its own volume so I can restart my instance with no fear of loosing data.&lt;/p&gt;
 
@@ -179,11 +179,11 @@
   
     <entry>
       <title type="html">Logging onto EC2</title>
-      <link href="http://localhost:4000/2014/04/01/logging-onto-ec2.html" rel="alternate" type="text/html" title="Logging onto EC2" />
+      <link href="https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2.html" rel="alternate" type="text/html" title="Logging onto EC2" />
       <published>2014-04-01T00:00:00-07:00</published>
       <updated>2014-04-01T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2014/04/01/logging-onto-ec2</id>
-      <content type="html" xml:base="http://localhost:4000/2014/04/01/logging-onto-ec2.html">&lt;p&gt;I tend to forget how to log onto EC2. This morning I spun up a few servers with an Ubuntu image on EC2. As soon as I tried to log on, I received a&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2.html">&lt;p&gt;I tend to forget how to log onto EC2. This morning I spun up a few servers with an Ubuntu image on EC2. As soon as I tried to log on, I received a&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Permission denied (publickey).&lt;/code&gt;&lt;/p&gt;
 
@@ -229,11 +229,11 @@
   
     <entry>
       <title type="html">Installing Node and Mongo</title>
-      <link href="http://localhost:4000/2012/01/11/installing-node-and-mongo.html" rel="alternate" type="text/html" title="Installing Node and Mongo" />
+      <link href="https://www.briglamoreaux.com/2012/01/11/installing-node-and-mongo.html" rel="alternate" type="text/html" title="Installing Node and Mongo" />
       <published>2012-01-11T00:00:00-07:00</published>
       <updated>2012-01-11T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2012/01/11/installing-node-and-mongo</id>
-      <content type="html" xml:base="http://localhost:4000/2012/01/11/installing-node-and-mongo.html">&lt;p&gt;I need to install Node and Mongo an a server. These are my notes.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2012/01/11/installing-node-and-mongo</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2012/01/11/installing-node-and-mongo.html">&lt;p&gt;I need to install Node and Mongo an a server. These are my notes.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -373,11 +373,11 @@
   
     <entry>
       <title type="html">Ubuntu’s Window Borders go Missing</title>
-      <link href="http://localhost:4000/2011/07/20/ubuntus-window-borders-go-missing.html" rel="alternate" type="text/html" title="Ubuntu's Window Borders go Missing" />
+      <link href="https://www.briglamoreaux.com/2011/07/20/ubuntus-window-borders-go-missing.html" rel="alternate" type="text/html" title="Ubuntu's Window Borders go Missing" />
       <published>2011-07-20T00:00:00-07:00</published>
       <updated>2011-07-20T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2011/07/20/ubuntus-window-borders-go-missing</id>
-      <content type="html" xml:base="http://localhost:4000/2011/07/20/ubuntus-window-borders-go-missing.html">&lt;p&gt;From some reason the Window Borders in Ubuntu go missing and disappear. This means I don’t have the minimize or maximize buttons on my window. Fortunatly I was able to find a solution. Open a terminal and run&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2011/07/20/ubuntus-window-borders-go-missing</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2011/07/20/ubuntus-window-borders-go-missing.html">&lt;p&gt;From some reason the Window Borders in Ubuntu go missing and disappear. This means I don’t have the minimize or maximize buttons on my window. Fortunatly I was able to find a solution. Open a terminal and run&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metacity --replace&lt;/code&gt;&lt;/p&gt;</content>
 
@@ -409,11 +409,11 @@
   
     <entry>
       <title type="html">Starting Ubuntu Terminal</title>
-      <link href="http://localhost:4000/2011/07/06/starting-ubuntu-terminal.html" rel="alternate" type="text/html" title="Starting Ubuntu Terminal" />
+      <link href="https://www.briglamoreaux.com/2011/07/06/starting-ubuntu-terminal.html" rel="alternate" type="text/html" title="Starting Ubuntu Terminal" />
       <published>2011-07-06T00:00:00-07:00</published>
       <updated>2011-07-06T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2011/07/06/starting-ubuntu-terminal</id>
-      <content type="html" xml:base="http://localhost:4000/2011/07/06/starting-ubuntu-terminal.html">&lt;p&gt;From some reason, the menu on my Ubuntu decided to freeze on me. Fortunately I can still be productive from the command line. The only problem is my launcher for the terminal is frozen with the rest of the menus. Thanks to a quick search, I was able to use a keyboard shortcut to launch the terminal. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + Alt + t&lt;/code&gt;&lt;/p&gt;</content>
+      <id>https://www.briglamoreaux.com/2011/07/06/starting-ubuntu-terminal</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2011/07/06/starting-ubuntu-terminal.html">&lt;p&gt;From some reason, the menu on my Ubuntu decided to freeze on me. Fortunately I can still be productive from the command line. The only problem is my launcher for the terminal is frozen with the rest of the menus. Thanks to a quick search, I was able to use a keyboard shortcut to launch the terminal. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + Alt + t&lt;/code&gt;&lt;/p&gt;</content>
 
       
       

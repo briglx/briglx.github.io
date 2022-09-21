@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/wordpress/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/wordpress/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/wordpress/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/wordpress/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Backup Wordpress</title>
-      <link href="http://localhost:4000/2012/02/10/backup-wordpress.html" rel="alternate" type="text/html" title="Backup Wordpress" />
+      <link href="https://www.briglamoreaux.com/2012/02/10/backup-wordpress.html" rel="alternate" type="text/html" title="Backup Wordpress" />
       <published>2012-02-10T00:00:00-07:00</published>
       <updated>2012-02-10T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2012/02/10/backup-wordpress</id>
-      <content type="html" xml:base="http://localhost:4000/2012/02/10/backup-wordpress.html">&lt;p&gt;I had a little scare the other day. For some reason my db for the blog stopped. I thought it would be a good idea to make a backup just in case.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2012/02/10/backup-wordpress</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2012/02/10/backup-wordpress.html">&lt;p&gt;I had a little scare the other day. For some reason my db for the blog stopped. I thought it would be a good idea to make a backup just in case.&lt;/p&gt;
 
 &lt;p&gt;I have MySQL Workbench on my machine and though it would be trivial. When I tried to connect to my db, I received an error saying I didn’t have access. &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.5/en/access-denied.html&quot;&gt;Looking around&lt;/a&gt; showed I needed to add a new user to the DB with the host I was connecting from. Here is what worked for me.&lt;/p&gt;
 
@@ -93,11 +93,11 @@
   
     <entry>
       <title type="html">The Cloud is Cool</title>
-      <link href="http://localhost:4000/2011/05/12/the-cloud-is-cool.html" rel="alternate" type="text/html" title="The Cloud is Cool" />
+      <link href="https://www.briglamoreaux.com/2011/05/12/the-cloud-is-cool.html" rel="alternate" type="text/html" title="The Cloud is Cool" />
       <published>2011-05-12T00:00:00-07:00</published>
       <updated>2011-05-12T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2011/05/12/the-cloud-is-cool</id>
-      <content type="html" xml:base="http://localhost:4000/2011/05/12/the-cloud-is-cool.html">&lt;p&gt;I’ve known about Amazon EC2 service for a while. I’ve really been interested in trying something out when I heard about AWS’s Free Usage Tier. I could get a server in the cloud free for an entire year. Wow. How can I resist? So today I thought I would try to do something.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2011/05/12/the-cloud-is-cool</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2011/05/12/the-cloud-is-cool.html">&lt;p&gt;I’ve known about Amazon EC2 service for a while. I’ve really been interested in trying something out when I heard about AWS’s Free Usage Tier. I could get a server in the cloud free for an entire year. Wow. How can I resist? So today I thought I would try to do something.&lt;/p&gt;
 
 &lt;p&gt;I thought I would move my blog to amazon. I found a &lt;a href=&quot;http://cykod.com/blog/post/2010-09-blogging-in-the-cloud-scaling-wordpress3&quot;&gt;great guide&lt;/a&gt; that I more or less followed. The only places where I deviated were due to me using a single micro instance and the bitnami AMI. But wait, what is a micro instance and an AMI. These were some of the many terms I learned today.&lt;/p&gt;
 
@@ -164,11 +164,11 @@
   
     <entry>
       <title type="html">Enable Pretty Links in Word Press</title>
-      <link href="http://localhost:4000/2011/03/28/enable-pretty-links-in-word-press.html" rel="alternate" type="text/html" title="Enable Pretty Links in Word Press" />
+      <link href="https://www.briglamoreaux.com/2011/03/28/enable-pretty-links-in-word-press.html" rel="alternate" type="text/html" title="Enable Pretty Links in Word Press" />
       <published>2011-03-28T00:00:00-07:00</published>
       <updated>2011-03-28T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2011/03/28/enable-pretty-links-in-word-press</id>
-      <content type="html" xml:base="http://localhost:4000/2011/03/28/enable-pretty-links-in-word-press.html">&lt;p&gt;I wanted to enabled “Pretty” permalinks for my blog and found it wasn’t just a click of the button.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2011/03/28/enable-pretty-links-in-word-press</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2011/03/28/enable-pretty-links-in-word-press.html">&lt;p&gt;I wanted to enabled “Pretty” permalinks for my blog and found it wasn’t just a click of the button.&lt;/p&gt;
 
 &lt;p&gt;Well, it was just &lt;a href=&quot;http://codex.wordpress.org/Using_Permalinks#Using_.22Pretty.22_permalinks&quot;&gt;a click of a button&lt;/a&gt; but when I clicked on the button, Wordpress told me:&lt;/p&gt;
 
@@ -217,11 +217,11 @@ RewriteRule . /wordpress/index.php [L]
   
     <entry>
       <title type="html">Updating Wordpress</title>
-      <link href="http://localhost:4000/2010/11/03/updating-wordpress.html" rel="alternate" type="text/html" title="Updating Wordpress" />
+      <link href="https://www.briglamoreaux.com/2010/11/03/updating-wordpress.html" rel="alternate" type="text/html" title="Updating Wordpress" />
       <published>2010-11-03T00:00:00-07:00</published>
       <updated>2010-11-03T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2010/11/03/updating-wordpress</id>
-      <content type="html" xml:base="http://localhost:4000/2010/11/03/updating-wordpress.html">&lt;p&gt;Well, since I’ve been playing around with wordpress, I thought I would update it to the latest version. Mostly because I wanted to get rid of the annoying upgrade banner. So First things first&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2010/11/03/updating-wordpress</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2010/11/03/updating-wordpress.html">&lt;p&gt;Well, since I’ve been playing around with wordpress, I thought I would update it to the latest version. Mostly because I wanted to get rid of the annoying upgrade banner. So First things first&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Backup Files

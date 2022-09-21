@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/author/brig/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/author/brig/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/author/brig/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/author/brig/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Minecraft Server</title>
-      <link href="http://localhost:4000/2022/07/31/minecraft-server.html" rel="alternate" type="text/html" title="Minecraft Server" />
+      <link href="https://www.briglamoreaux.com/2022/07/31/minecraft-server.html" rel="alternate" type="text/html" title="Minecraft Server" />
       <published>2022-07-31T00:00:00-07:00</published>
       <updated>2022-07-31T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2022/07/31/minecraft-server</id>
-      <content type="html" xml:base="http://localhost:4000/2022/07/31/minecraft-server.html">&lt;p&gt;Setting up minecraft on azure for fun.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2022/07/31/minecraft-server</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2022/07/31/minecraft-server.html">&lt;p&gt;Setting up minecraft on azure for fun.&lt;/p&gt;
 
 &lt;p&gt;Setup Server&lt;/p&gt;
 
@@ -138,11 +138,11 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Finding Public IP Details</title>
-      <link href="http://localhost:4000/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
+      <link href="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
       <published>2022-06-10T00:00:00-07:00</published>
       <updated>2022-06-10T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2022/06/10/finding-public-ip-details</id>
-      <content type="html" xml:base="http://localhost:4000/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
 
 &lt;p&gt;The goal is to see the different types of resources public ips are assocaited like:&lt;/p&gt;
 
@@ -442,21 +442,21 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Cost Optimization Maturity Model</title>
-      <link href="http://localhost:4000/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" />
+      <link href="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" />
       <published>2022-06-10T00:00:00-07:00</published>
       <updated>2022-06-10T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2022/06/10/cost-optimization-maturity-model</id>
-      <content type="html" xml:base="http://localhost:4000/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-1---freaking-out&quot;&gt;Phase 1 - Freaking Out&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The first phase is moving to the cloud and watching the bill grow over time without understanding why. There is not much to do in this phase other than completely ignoring the slowly growing problem or asking for help.&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-2---finding-tools&quot;&gt;Phase 2 - Finding Tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Learning about cost management tools distinguishes Phase 2 from Phase 1. Azure includes tools like:&lt;/p&gt;
 
@@ -485,7 +485,7 @@ systemctl status minecraft.service
   &lt;li&gt;Delete idle network gateways&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Review Advisor recommendations in the Azure portal: &lt;a href=&quot;https://aka.ms/azureadvisor&quot;&gt;aka.ms/azureadvisor&lt;/a&gt;&lt;/p&gt;
 
@@ -499,7 +499,7 @@ systemctl status minecraft.service
   &lt;li&gt;Set spending thresholds and more&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;azure-cost-management--billing-power-bi-app&quot;&gt;Azure Cost Management + Billing Power BI App&lt;/h3&gt;
 
@@ -518,7 +518,7 @@ systemctl status minecraft.service
 
 &lt;p&gt;You can also create ad hoc reports using the underlying data. I will use the ACM Power BI Template App to show off how to slice and dice billing data for customers looking for specialized reports.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;azure-cost-management-connector-for-power-bi&quot;&gt;Azure Cost Management Connector for Power BI&lt;/h3&gt;
 
@@ -526,7 +526,7 @@ systemctl status minecraft.service
 
 &lt;p&gt;When a tricky request comes in, like a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;point-in-time comparison&lt;/code&gt; report, I fire up Power BI Desktop to do the job.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-azure-cost-management-connector.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-azure-cost-management-connector.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;waf-cost-optimzation-workbook&quot;&gt;WAF Cost Optimzation Workbook&lt;/h3&gt;
 
@@ -539,7 +539,7 @@ systemctl status minecraft.service
   &lt;li&gt;Hybrid benefits and more&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;additional-tools&quot;&gt;Additional Tools&lt;/h3&gt;
 
@@ -554,7 +554,7 @@ systemctl status minecraft.service
 
 &lt;h2 id=&quot;phase-3---outgrowing-the-tools&quot;&gt;Phase 3 - Outgrowing the Tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At some point, the tools either fail to provide needed information or are overwhelmed by the amount of data. In my experience, this moment comes when an organization reaches the $2M / month in consumption and the file size for billing data approaches 2-3GB. Excel and PowerBI start to slow down with files this large.&lt;/p&gt;
 
@@ -562,11 +562,11 @@ systemctl status minecraft.service
 
 &lt;h2 id=&quot;phase-4---create-a-new-tool&quot;&gt;Phase 4 - Create a New Tool&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;When I faced this phase several years ago, I designed and &lt;a href=&quot;https://github.com/briglx/AzureBillingReports&quot;&gt;implemented a solution&lt;/a&gt; using my background in big data. After deploying it, I interviewed colleagues in other large organizations asking how they solved the problem. The responses were consistent with my solution’s modern data warehouse pipeline architecture.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This scalable solution can:&lt;/p&gt;
 
@@ -580,7 +580,7 @@ systemctl status minecraft.service
 
 &lt;h2 id=&quot;phase-5---wrong-audience&quot;&gt;Phase 5 - Wrong Audience&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Phase 5 is a cycle of cost-cutting and organic growth. The behavior can show up anytime during the maturity growth phases because it is more of a mindset about cost management instead of a limitation of the tools. I put it here because implementing a big-data pipeline is less complicated than changing the hearts and minds of an entire organization.&lt;/p&gt;
 
@@ -619,7 +619,7 @@ systemctl status minecraft.service
   &lt;li&gt;Remediate&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This method extends the capability of Azure Advisor to include custom business best practices.&lt;/p&gt;
 
@@ -637,7 +637,7 @@ systemctl status minecraft.service
 
 &lt;p&gt;&lt;strong&gt;Measure and Monitor&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The best visualizations provide essential information each department needs. Reports designed to build trust for executives should show the current status of a best practice and the historical progress. Provide visualization that provides information needed to make real-time decisions.&lt;/p&gt;
 
@@ -645,7 +645,7 @@ systemctl status minecraft.service
 
 &lt;h2 id=&quot;phase-6---recipies&quot;&gt;Phase 6 - Recipies&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipies&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipies&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The last phase in the maturity model is when an organization can scale developing reports that measure best practices. Scaling will require centralizing data collection, a common data schema, and discoverability. In this environment, teams can create, discover, and share new reports.&lt;/p&gt;</content>
 
@@ -685,11 +685,11 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Finding Missing Images</title>
-      <link href="http://localhost:4000/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
+      <link href="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
       <published>2022-05-20T00:00:00-07:00</published>
       <updated>2022-05-20T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2022/05/20/finding-missing-images</id>
-      <content type="html" xml:base="http://localhost:4000/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2022/05/20/finding-missing-images</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
 
 &lt;p&gt;My strategy is to:&lt;/p&gt;
 &lt;ol&gt;
@@ -836,15 +836,15 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">Updating and Migrating Confluence</title>
-      <link href="http://localhost:4000/2018/09/13/updating-and-migrating-confluence.html" rel="alternate" type="text/html" title="Updating and Migrating Confluence" />
+      <link href="https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence.html" rel="alternate" type="text/html" title="Updating and Migrating Confluence" />
       <published>2018-09-13T00:00:00-07:00</published>
       <updated>2018-09-13T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2018/09/13/updating-and-migrating-confluence</id>
-      <content type="html" xml:base="http://localhost:4000/2018/09/13/updating-and-migrating-confluence.html">&lt;p&gt;I started hosting my wiki on Azure way back in 2016. The other day I received a message that I was  not using managed disks and I should upgrade. So I pushed the upgrade button and kicked off a two day outage which resulted in me pulling my hair out, migrating, looking at logs, and changing databases.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence.html">&lt;p&gt;I started hosting my wiki on Azure way back in 2016. The other day I received a message that I was  not using managed disks and I should upgrade. So I pushed the upgrade button and kicked off a two day outage which resulted in me pulling my hair out, migrating, looking at logs, and changing databases.&lt;/p&gt;
 
 &lt;h2 id=&quot;first-architecture&quot;&gt;First Architecture&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/confluencev1.png&quot; alt=&quot;Confluence v1 Architecture&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/confluencev1.png&quot; alt=&quot;Confluence v1 Architecture&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The first architecture is really basic. Just two vms. One with confluence installed on it and the other with Postgresql. I configured a separate nsg for each one. Looking back I could have had just one.&lt;/p&gt;
 
@@ -877,7 +877,7 @@ CropperCapture%5B12%5D.png,0
 
 &lt;h2 id=&quot;new-architecture&quot;&gt;New Architecture&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/confluencev2.png&quot; alt=&quot;confluencev2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/confluencev2.png&quot; alt=&quot;confluencev2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I replaced the IaaS database for the Azure Database Postgresql PaaS solution. I don’t want to mess around with managing a database. One less thing to think about.&lt;/p&gt;
 
@@ -945,11 +945,11 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">Boilerplate Raspbian Setup</title>
-      <link href="http://localhost:4000/2018/08/28/boilerplate-raspbian-setup.html" rel="alternate" type="text/html" title="Boilerplate Raspbian Setup" />
+      <link href="https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup.html" rel="alternate" type="text/html" title="Boilerplate Raspbian Setup" />
       <published>2018-08-28T00:00:00-07:00</published>
       <updated>2018-08-28T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2018/08/28/boilerplate-raspbian-setup</id>
-      <content type="html" xml:base="http://localhost:4000/2018/08/28/boilerplate-raspbian-setup.html">&lt;p&gt;I tend to flash my raspberry pies a lot. Here are the steps I follow to get to my working state.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup.html">&lt;p&gt;I tend to flash my raspberry pies a lot. Here are the steps I follow to get to my working state.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Flash with latest raspbian image https://www.raspberrypi.org/downloads/raspbian/&lt;/li&gt;
@@ -1075,13 +1075,13 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">More Time Doesn’t Always Help</title>
-      <link href="http://localhost:4000/2018/06/28/more-time-doesnt-always-help.html" rel="alternate" type="text/html" title="More Time Doesn't Always Help" />
+      <link href="https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html" rel="alternate" type="text/html" title="More Time Doesn't Always Help" />
       <published>2018-06-28T00:00:00-07:00</published>
       <updated>2018-06-28T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2018/06/28/more-time-doesnt-always-help</id>
-      <content type="html" xml:base="http://localhost:4000/2018/06/28/more-time-doesnt-always-help.html">&lt;p&gt;Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html">&lt;p&gt;Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/trainingvalidationaccuracy.png&quot; alt=&quot;TrainingValidationAccuracy&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/trainingvalidationaccuracy.png&quot; alt=&quot;TrainingValidationAccuracy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The model is over-fitting the data somehow. No matter how many more epochs I run, the validation won’t get better.&lt;/p&gt;</content>
 
@@ -1121,11 +1121,11 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">Surprising Results with Python Thumbnails</title>
-      <link href="http://localhost:4000/2018/04/13/surprising-results-with-python-thumbnails.html" rel="alternate" type="text/html" title="Surprising Results with Python Thumbnails" />
+      <link href="https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails.html" rel="alternate" type="text/html" title="Surprising Results with Python Thumbnails" />
       <published>2018-04-13T00:00:00-07:00</published>
       <updated>2018-04-13T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2018/04/13/surprising-results-with-python-thumbnails</id>
-      <content type="html" xml:base="http://localhost:4000/2018/04/13/surprising-results-with-python-thumbnails.html">&lt;p&gt;I’ve been working with images recently and am using a technique for a hashing algorithm. This technique resized the image to a 9x8 gray scale image.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails.html">&lt;p&gt;I’ve been working with images recently and am using a technique for a hashing algorithm. This technique resized the image to a 9x8 gray scale image.&lt;/p&gt;
 
 &lt;p&gt;I found five different ways to do it with a few surprising results:&lt;/p&gt;
 
@@ -1213,19 +1213,19 @@ plt.show()
 
 &lt;p&gt;&lt;strong&gt;Image 1 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails01.png&quot; alt=&quot;comparePythonThumbnails01&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails01.png&quot; alt=&quot;comparePythonThumbnails01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 2 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails02.png&quot; alt=&quot;comparePythonThumbnails02&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails02.png&quot; alt=&quot;comparePythonThumbnails02&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 3 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails03.png&quot; alt=&quot;comparePythonThumbnails03&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails03.png&quot; alt=&quot;comparePythonThumbnails03&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 4 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails04.png&quot; alt=&quot;comparePythonThumbnails04&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails04.png&quot; alt=&quot;comparePythonThumbnails04&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There are a few things I noticed:&lt;/p&gt;
 
@@ -1241,19 +1241,19 @@ plt.show()
 
 &lt;p&gt;&lt;strong&gt;Image 1 - Gray Scaled&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails01bw.png&quot; alt=&quot;comparePythonThumbnails01bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails01bw.png&quot; alt=&quot;comparePythonThumbnails01bw&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 2 - Gray Scaled&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails02bw.png&quot; alt=&quot;comparePythonThumbnails02bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails02bw.png&quot; alt=&quot;comparePythonThumbnails02bw&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 3 - Gray Scale&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails03bw.png&quot; alt=&quot;comparePythonThumbnails03bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails03bw.png&quot; alt=&quot;comparePythonThumbnails03bw&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 4 - Gray Scale&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails04bw.png&quot; alt=&quot;comparePythonThumbnails04bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails04bw.png&quot; alt=&quot;comparePythonThumbnails04bw&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
@@ -1289,11 +1289,11 @@ plt.show()
   
     <entry>
       <title type="html">Checking out TSLearn</title>
-      <link href="http://localhost:4000/2018/03/29/checking-out-tsflow.html" rel="alternate" type="text/html" title="Checking out TSLearn" />
+      <link href="https://www.briglamoreaux.com/2018/03/29/checking-out-tsflow.html" rel="alternate" type="text/html" title="Checking out TSLearn" />
       <published>2018-03-29T00:00:00-07:00</published>
       <updated>2018-03-29T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2018/03/29/checking-out-tsflow</id>
-      <content type="html" xml:base="http://localhost:4000/2018/03/29/checking-out-tsflow.html">&lt;p&gt;I’m toying around with my new dashcam videos and thought I would try to build a neural network. I found &lt;a href=&quot;https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721&quot;&gt;Adam Geitgey’s article&lt;/a&gt; really interesting.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2018/03/29/checking-out-tsflow</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2018/03/29/checking-out-tsflow.html">&lt;p&gt;I’m toying around with my new dashcam videos and thought I would try to build a neural network. I found &lt;a href=&quot;https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721&quot;&gt;Adam Geitgey’s article&lt;/a&gt; really interesting.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;My setup&lt;/strong&gt;&lt;/p&gt;
 
@@ -1468,11 +1468,11 @@ conda &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pip
   
     <entry>
       <title type="html">Parse Azure Deployment Status</title>
-      <link href="http://localhost:4000/2017/08/24/parse-azure-deployment-status.html" rel="alternate" type="text/html" title="Parse Azure Deployment Status" />
+      <link href="https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status.html" rel="alternate" type="text/html" title="Parse Azure Deployment Status" />
       <published>2017-08-24T00:00:00-07:00</published>
       <updated>2017-08-24T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2017/08/24/parse-azure-deployment-status</id>
-      <content type="html" xml:base="http://localhost:4000/2017/08/24/parse-azure-deployment-status.html">&lt;p&gt;I’ve been making a lot of deployments that take a while to finish. There is an api call to fetch the status of the operations.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status.html">&lt;p&gt;I’ve been making a lot of deployments that take a while to finish. There is an api call to fetch the status of the operations.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;azure group deployment operation list --name deploymentname --resource-group rgname&lt;/code&gt;&lt;/p&gt;
 

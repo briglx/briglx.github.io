@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/code-generation/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/code-generation/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/code-generation/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/code-generation/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Generate CRUD</title>
-      <link href="http://localhost:4000/2007/08/17/generate-crud.html" rel="alternate" type="text/html" title="Generate CRUD" />
+      <link href="https://www.briglamoreaux.com/2007/08/17/generate-crud.html" rel="alternate" type="text/html" title="Generate CRUD" />
       <published>2007-08-17T00:00:00-07:00</published>
       <updated>2007-08-17T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2007/08/17/generate-crud</id>
-      <content type="html" xml:base="http://localhost:4000/2007/08/17/generate-crud.html">&lt;p&gt;Seeing how I’m working on a project that deals with a SQL database and several tables, I decided I didn’t want to mess around with writing all the code for my data CRUD functionality (Create Read Update Delete). Which, indecently, I feel no developer should ever waste their time with CRUD.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2007/08/17/generate-crud</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/17/generate-crud.html">&lt;p&gt;Seeing how I’m working on a project that deals with a SQL database and several tables, I decided I didn’t want to mess around with writing all the code for my data CRUD functionality (Create Read Update Delete). Which, indecently, I feel no developer should ever waste their time with CRUD.&lt;/p&gt;
 
 &lt;p&gt;Now I know that I’m not alone in these feelings and many bright and talented developers have created some very slick tools to do what I have done, CodeSmith being the best I’ve ever used. But I’m curious and I enjoy solving problems with code. So my little app, when provided an Entity name like Student, will do the following:&lt;/p&gt;
 
@@ -56,16 +56,16 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Starting up the application displays a stunning UI where the user can provide an entity name and click Render.&lt;br /&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/CropperCapture%5B12%5D.png&quot; alt=&quot;Entity Form&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B12%5D.png&quot; alt=&quot;Entity Form&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The application will inspect the SQL table and create the SQL scripts needed to create the CRUD stored procedures. One of the tricky things I had to do was check the field type to see if a size is required, like varchar(50).&lt;br /&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/CropperCapture%5B13%5D.png&quot; alt=&quot;Crud Form&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B13%5D.png&quot; alt=&quot;Crud Form&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Since I am really lazy, I decided to have the application generate test data and a script so I could run through and make sure the stored procedures worked all right. Based on the field type, the generated test data is created to match.&lt;br /&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/CropperCapture%5B14%5D.png&quot; alt=&quot;Test Script&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B14%5D.png&quot; alt=&quot;Test Script&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;My favorite part of all of this is getting the code written for me. I really like Rocky Lhotka’s CSLA business objects. Especially the way he has all of the data access routines on the objects themselves.&lt;br /&gt;
-&lt;img src=&quot;http://localhost:4000/assets/images/CropperCapture%5B15%5D.png&quot; alt=&quot;CSLA Input&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B15%5D.png&quot; alt=&quot;CSLA Input&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Even thought this application does a lot for me already, you can probably see some areas for improvement. Most notably is the “Form1” in the title bar. I would also like to revamp the syntax highlighting engine. Right now it just looks for specific words to highlight. I think adding a parser would really add some value.&lt;br /&gt;
 One other major improvement would be to add a template system similar to CodeSmith. Right now it doesn’t use templates to generate the code. This makes updates difficult. But it play-around code so I’m not too upset by that. One final big part would be to select a generic database. Once again I have it hard coded to point to my project’s database. Once I get all of these updates in, I think I will have a pretty neat little tool.&lt;/p&gt;</content>

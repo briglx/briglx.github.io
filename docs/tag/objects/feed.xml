@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/objects/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/objects/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/objects/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/objects/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Objects, Data, and Actions</title>
-      <link href="http://localhost:4000/2007/06/23/objects-data-and-actions.html" rel="alternate" type="text/html" title="Objects, Data, and Actions" />
+      <link href="https://www.briglamoreaux.com/2007/06/23/objects-data-and-actions.html" rel="alternate" type="text/html" title="Objects, Data, and Actions" />
       <published>2007-06-23T00:00:00-07:00</published>
       <updated>2007-06-23T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2007/06/23/objects-data-and-actions</id>
-      <content type="html" xml:base="http://localhost:4000/2007/06/23/objects-data-and-actions.html">&lt;p&gt;I was recently asked what objects are in programming and how a database is related to them. Thinking long and hard about it, I came up with the following example:&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2007/06/23/objects-data-and-actions</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2007/06/23/objects-data-and-actions.html">&lt;p&gt;I was recently asked what objects are in programming and how a database is related to them. Thinking long and hard about it, I came up with the following example:&lt;/p&gt;
 
 &lt;p&gt;Objects are containers that stores data and code. In fact objects are just like real life objects. Imagine an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Animal&lt;/code&gt; object. Pick any animal you like, it will have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Data&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Actions&lt;/code&gt;. The data would be things like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Height&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Length&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Age&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Name&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Color&lt;/code&gt;. And Actions could be &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Speak&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Walk&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Jump&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Eat&lt;/code&gt;.&lt;/p&gt;
 

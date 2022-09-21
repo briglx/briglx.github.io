@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/terminal/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/terminal/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/terminal/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/terminal/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Starting Ubuntu Terminal</title>
-      <link href="http://localhost:4000/2011/07/06/starting-ubuntu-terminal.html" rel="alternate" type="text/html" title="Starting Ubuntu Terminal" />
+      <link href="https://www.briglamoreaux.com/2011/07/06/starting-ubuntu-terminal.html" rel="alternate" type="text/html" title="Starting Ubuntu Terminal" />
       <published>2011-07-06T00:00:00-07:00</published>
       <updated>2011-07-06T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2011/07/06/starting-ubuntu-terminal</id>
-      <content type="html" xml:base="http://localhost:4000/2011/07/06/starting-ubuntu-terminal.html">&lt;p&gt;From some reason, the menu on my Ubuntu decided to freeze on me. Fortunately I can still be productive from the command line. The only problem is my launcher for the terminal is frozen with the rest of the menus. Thanks to a quick search, I was able to use a keyboard shortcut to launch the terminal. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + Alt + t&lt;/code&gt;&lt;/p&gt;</content>
+      <id>https://www.briglamoreaux.com/2011/07/06/starting-ubuntu-terminal</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2011/07/06/starting-ubuntu-terminal.html">&lt;p&gt;From some reason, the menu on my Ubuntu decided to freeze on me. Fortunately I can still be productive from the command line. The only problem is my launcher for the terminal is frozen with the rest of the menus. Thanks to a quick search, I was able to use a keyboard shortcut to launch the terminal. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + Alt + t&lt;/code&gt;&lt;/p&gt;</content>
 
       
       

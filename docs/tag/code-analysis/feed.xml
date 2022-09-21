@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/code-analysis/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/code-analysis/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/code-analysis/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/code-analysis/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Automating Quality Code with FXCop</title>
-      <link href="http://localhost:4000/2009/05/23/automating-quality-code-with-fxcop.html" rel="alternate" type="text/html" title="Automating Quality Code with FXCop" />
+      <link href="https://www.briglamoreaux.com/2009/05/23/automating-quality-code-with-fxcop.html" rel="alternate" type="text/html" title="Automating Quality Code with FXCop" />
       <published>2009-05-23T00:00:00-07:00</published>
       <updated>2009-05-23T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2009/05/23/automating-quality-code-with-fxcop</id>
-      <content type="html" xml:base="http://localhost:4000/2009/05/23/automating-quality-code-with-fxcop.html">&lt;p&gt;&lt;a href=&quot;http://www.gotdotnet.com/Team/FxCop/&quot;&gt;FXCop&lt;/a&gt; is a tool that can analyze .NET manage code for conformance to design guidelines and your own custom rules. I recently found a great document that explicitly outlines how to create you own custom rules from &lt;a href=&quot;http://www.binarycoder.net/fxcop/&quot;&gt;Jason Kresowaty&lt;/a&gt;. Some possible custom rules I am considering include:&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2009/05/23/automating-quality-code-with-fxcop</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2009/05/23/automating-quality-code-with-fxcop.html">&lt;p&gt;&lt;a href=&quot;http://www.gotdotnet.com/Team/FxCop/&quot;&gt;FXCop&lt;/a&gt; is a tool that can analyze .NET manage code for conformance to design guidelines and your own custom rules. I recently found a great document that explicitly outlines how to create you own custom rules from &lt;a href=&quot;http://www.binarycoder.net/fxcop/&quot;&gt;Jason Kresowaty&lt;/a&gt;. Some possible custom rules I am considering include:&lt;/p&gt;
 
 &lt;h2 id=&quot;security-rules&quot;&gt;Security Rules&lt;/h2&gt;
 

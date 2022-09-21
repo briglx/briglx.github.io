@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/web/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/web/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/web/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/web/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">SpringOne Notes</title>
-      <link href="http://localhost:4000/2011/11/01/springone-notes.html" rel="alternate" type="text/html" title="SpringOne Notes" />
+      <link href="https://www.briglamoreaux.com/2011/11/01/springone-notes.html" rel="alternate" type="text/html" title="SpringOne Notes" />
       <published>2011-11-01T00:00:00-07:00</published>
       <updated>2011-11-01T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2011/11/01/springone-notes</id>
-      <content type="html" xml:base="http://localhost:4000/2011/11/01/springone-notes.html">&lt;p&gt;These are general notes I took&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2011/11/01/springone-notes</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2011/11/01/springone-notes.html">&lt;p&gt;These are general notes I took&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=javap&amp;amp;source=web&amp;amp;cd=1&amp;amp;ved=0CCQQFjAA&amp;amp;url=http%3A%2F%2Fdownload.oracle.com%2Fjavase%2F1%2C5.0%2Fdocs%2Ftooldocs%2Fwindows%2Fjavap.html&amp;amp;ei=ZFOwToWrGarhsQKW7_HhAQ&amp;amp;usg=AFQjCNG0GUKjY_fKSdWAmdt4zLNGJPeXQw&amp;amp;sig2=hGaD0dHJ782TrpTxLJpZTg&quot;&gt;javap&lt;/a&gt; is a decompiler for java classes. Good to know when I want to decompile something&lt;/p&gt;
 
@@ -83,11 +83,11 @@
   
     <entry>
       <title type="html">Javascript Templating</title>
-      <link href="http://localhost:4000/2011/11/01/javascript-templating.html" rel="alternate" type="text/html" title="Javascript Templating" />
+      <link href="https://www.briglamoreaux.com/2011/11/01/javascript-templating.html" rel="alternate" type="text/html" title="Javascript Templating" />
       <published>2011-11-01T00:00:00-07:00</published>
       <updated>2011-11-01T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2011/11/01/javascript-templating</id>
-      <content type="html" xml:base="http://localhost:4000/2011/11/01/javascript-templating.html">&lt;p&gt;Way back in 2008 I was really getting into JavaScript development and created a small templating object.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2011/11/01/javascript-templating</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2011/11/01/javascript-templating.html">&lt;p&gt;Way back in 2008 I was really getting into JavaScript development and created a small templating object.&lt;/p&gt;
 
 &lt;p&gt;The basic idea is to keep view code all in the same location. In this case the view is a html page. JavaScript will update the view. Any new elements on the page should be defined on the page in a hidden template. Notice the naming convention using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-t&lt;/code&gt; for templates.&lt;/p&gt;
 

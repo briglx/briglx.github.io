@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://localhost:4000/tag/ec2/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
-  <updated>2022-09-20T20:18:07-07:00</updated>
-  <id>http://localhost:4000/tag/ec2/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/ec2/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2022-09-21T09:38:16-07:00</updated>
+  <id>https://www.briglamoreaux.com/tag/ec2/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Moving GitLab to an EBS Volume</title>
-      <link href="http://localhost:4000/2014/07/30/moving-gitlab-to-an-ebs-volume.html" rel="alternate" type="text/html" title="Moving GitLab to an EBS Volume" />
+      <link href="https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume.html" rel="alternate" type="text/html" title="Moving GitLab to an EBS Volume" />
       <published>2014-07-30T00:00:00-07:00</published>
       <updated>2014-07-30T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2014/07/30/moving-gitlab-to-an-ebs-volume</id>
-      <content type="html" xml:base="http://localhost:4000/2014/07/30/moving-gitlab-to-an-ebs-volume.html">&lt;p&gt;I’ve really enjoyed using &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;GitLab&lt;/a&gt; to manage my git repositories.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume.html">&lt;p&gt;I’ve really enjoyed using &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;GitLab&lt;/a&gt; to manage my git repositories.&lt;/p&gt;
 
 &lt;p&gt;It was really easy to get started because I used a &lt;a href=&quot;https://bitnami.com/stack/gitlab/cloud/amazon&quot;&gt;Bitnami GitLab image&lt;/a&gt; for Amazon. The problem is when I created the instance I chose an Instance store over EBS. I don’t have a really good reason why I did but now I need to move my data to its own volume so I can restart my instance with no fear of loosing data.&lt;/p&gt;
 
@@ -179,11 +179,11 @@
   
     <entry>
       <title type="html">Logging onto EC2</title>
-      <link href="http://localhost:4000/2014/04/01/logging-onto-ec2.html" rel="alternate" type="text/html" title="Logging onto EC2" />
+      <link href="https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2.html" rel="alternate" type="text/html" title="Logging onto EC2" />
       <published>2014-04-01T00:00:00-07:00</published>
       <updated>2014-04-01T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2014/04/01/logging-onto-ec2</id>
-      <content type="html" xml:base="http://localhost:4000/2014/04/01/logging-onto-ec2.html">&lt;p&gt;I tend to forget how to log onto EC2. This morning I spun up a few servers with an Ubuntu image on EC2. As soon as I tried to log on, I received a&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2.html">&lt;p&gt;I tend to forget how to log onto EC2. This morning I spun up a few servers with an Ubuntu image on EC2. As soon as I tried to log on, I received a&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Permission denied (publickey).&lt;/code&gt;&lt;/p&gt;
 
@@ -229,11 +229,11 @@
   
     <entry>
       <title type="html">Disable firewall on Redhat</title>
-      <link href="http://localhost:4000/2013/04/30/disable-firewall-on-redhat.html" rel="alternate" type="text/html" title="Disable firewall on Redhat" />
+      <link href="https://www.briglamoreaux.com/2013/04/30/disable-firewall-on-redhat.html" rel="alternate" type="text/html" title="Disable firewall on Redhat" />
       <published>2013-04-30T00:00:00-07:00</published>
       <updated>2013-04-30T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2013/04/30/disable-firewall-on-redhat</id>
-      <content type="html" xml:base="http://localhost:4000/2013/04/30/disable-firewall-on-redhat.html">&lt;p&gt;I just tried to deploy and test an application on EC2 running red hat but couldn’t telnet it.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2013/04/30/disable-firewall-on-redhat</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2013/04/30/disable-firewall-on-redhat.html">&lt;p&gt;I just tried to deploy and test an application on EC2 running red hat but couldn’t telnet it.&lt;/p&gt;
 
 &lt;p&gt;I configured the security group to allow port 8080, I could see the port was running with netstat&lt;/p&gt;
 
@@ -284,11 +284,11 @@ tcp 0 0 :::8080 :::&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; LISTEN 28923/j
   
     <entry>
       <title type="html">Load Testing with AWS</title>
-      <link href="http://localhost:4000/2012/08/21/load-testing-aws.html" rel="alternate" type="text/html" title="Load Testing with AWS" />
+      <link href="https://www.briglamoreaux.com/2012/08/21/load-testing-aws.html" rel="alternate" type="text/html" title="Load Testing with AWS" />
       <published>2012-08-21T00:00:00-07:00</published>
       <updated>2012-08-21T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2012/08/21/load-testing-aws</id>
-      <content type="html" xml:base="http://localhost:4000/2012/08/21/load-testing-aws.html">&lt;p&gt;Spinning up servers on Amazon has been such a great way to test software. I recently did a performance test of &lt;a href=&quot;http://www.mongodb.org/&quot; title=&quot;MongoDB&quot;&gt;MongoDB&lt;/a&gt; and put together a process and a few scripts that helped me load test a server with 128 clients. Here is the approach I used:&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2012/08/21/load-testing-aws</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2012/08/21/load-testing-aws.html">&lt;p&gt;Spinning up servers on Amazon has been such a great way to test software. I recently did a performance test of &lt;a href=&quot;http://www.mongodb.org/&quot; title=&quot;MongoDB&quot;&gt;MongoDB&lt;/a&gt; and put together a process and a few scripts that helped me load test a server with 128 clients. Here is the approach I used:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Stand Up Server&lt;/li&gt;
@@ -546,11 +546,11 @@ myserver2.compute-1.amazonaws.com
   
     <entry>
       <title type="html">Import that Image</title>
-      <link href="http://localhost:4000/2012/03/14/import-that-image.html" rel="alternate" type="text/html" title="Import that Image" />
+      <link href="https://www.briglamoreaux.com/2012/03/14/import-that-image.html" rel="alternate" type="text/html" title="Import that Image" />
       <published>2012-03-14T00:00:00-07:00</published>
       <updated>2012-03-14T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2012/03/14/import-that-image</id>
-      <content type="html" xml:base="http://localhost:4000/2012/03/14/import-that-image.html">&lt;p&gt;I just had to import a VM image onto EC2. Here is how I did it.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2012/03/14/import-that-image</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2012/03/14/import-that-image.html">&lt;p&gt;I just had to import a VM image onto EC2. Here is how I did it.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Prepare the Image.&lt;/li&gt;
@@ -660,11 +660,11 @@ myserver2.compute-1.amazonaws.com
   
     <entry>
       <title type="html">The Cloud is Cool</title>
-      <link href="http://localhost:4000/2011/05/12/the-cloud-is-cool.html" rel="alternate" type="text/html" title="The Cloud is Cool" />
+      <link href="https://www.briglamoreaux.com/2011/05/12/the-cloud-is-cool.html" rel="alternate" type="text/html" title="The Cloud is Cool" />
       <published>2011-05-12T00:00:00-07:00</published>
       <updated>2011-05-12T00:00:00-07:00</updated>
-      <id>http://localhost:4000/2011/05/12/the-cloud-is-cool</id>
-      <content type="html" xml:base="http://localhost:4000/2011/05/12/the-cloud-is-cool.html">&lt;p&gt;I’ve known about Amazon EC2 service for a while. I’ve really been interested in trying something out when I heard about AWS’s Free Usage Tier. I could get a server in the cloud free for an entire year. Wow. How can I resist? So today I thought I would try to do something.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2011/05/12/the-cloud-is-cool</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2011/05/12/the-cloud-is-cool.html">&lt;p&gt;I’ve known about Amazon EC2 service for a while. I’ve really been interested in trying something out when I heard about AWS’s Free Usage Tier. I could get a server in the cloud free for an entire year. Wow. How can I resist? So today I thought I would try to do something.&lt;/p&gt;
 
 &lt;p&gt;I thought I would move my blog to amazon. I found a &lt;a href=&quot;http://cykod.com/blog/post/2010-09-blogging-in-the-cloud-scaling-wordpress3&quot;&gt;great guide&lt;/a&gt; that I more or less followed. The only places where I deviated were due to me using a single micro instance and the bitnami AMI. But wait, what is a micro instance and an AMI. These were some of the many terms I learned today.&lt;/p&gt;
 
