@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/rabbitmq/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-07-19T16:57:46-07:00</updated>
-  <id>https://www.briglamoreaux.com/tag/rabbitmq/feed.xml</id>
+  <link href="http://localhost:4000/tag/rabbitmq/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-09-20T20:18:07-07:00</updated>
+  <id>http://localhost:4000/tag/rabbitmq/feed.xml</id>
 
   
   
@@ -33,15 +33,15 @@
   
     <entry>
       <title type="html">Queues</title>
-      <link href="https://www.briglamoreaux.com/2011/11/01/queues.html" rel="alternate" type="text/html" title="Queues" />
+      <link href="http://localhost:4000/2011/11/01/queues.html" rel="alternate" type="text/html" title="Queues" />
       <published>2011-11-01T00:00:00-07:00</published>
       <updated>2011-11-01T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2011/11/01/queues</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2011/11/01/queues.html">&lt;p&gt;I attended the &lt;a href=&quot;http://www.springone2gx.com/conference/chicago/2011/10/home&quot;&gt;SpringOne 2GX conference&lt;/a&gt; in Chicago and had a great time. It’s always nice to learn a new thing or two. I wanted to take time to write down one of the things I learned about queues. &lt;a href=&quot;http://www.springone2gx.com/conference/speaker/rob_harrop&quot;&gt;Rob Harrop&lt;/a&gt; gave a great presentation on &lt;a href=&quot;http://www.rabbitmq.com&quot;&gt;RabbitMQ&lt;/a&gt; which is an &lt;a href=&quot;http://www.amqp.org/&quot;&gt;AMQP&lt;/a&gt; compliant queue.&lt;/p&gt;
+      <id>http://localhost:4000/2011/11/01/queues</id>
+      <content type="html" xml:base="http://localhost:4000/2011/11/01/queues.html">&lt;p&gt;I attended the &lt;a href=&quot;http://www.springone2gx.com/conference/chicago/2011/10/home&quot;&gt;SpringOne 2GX conference&lt;/a&gt; in Chicago and had a great time. It’s always nice to learn a new thing or two. I wanted to take time to write down one of the things I learned about queues. &lt;a href=&quot;http://www.springone2gx.com/conference/speaker/rob_harrop&quot;&gt;Rob Harrop&lt;/a&gt; gave a great presentation on &lt;a href=&quot;http://www.rabbitmq.com&quot;&gt;RabbitMQ&lt;/a&gt; which is an &lt;a href=&quot;http://www.amqp.org/&quot;&gt;AMQP&lt;/a&gt; compliant queue.&lt;/p&gt;
 
 &lt;h2 id=&quot;basic-message-flow&quot;&gt;Basic Message Flow&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/queue1.png&quot; alt=&quot;Queue1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/queue1.png&quot; alt=&quot;Queue1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;A. On the most basic level, Producers publish messages into an exchange with a specific key. For instance:&lt;/p&gt;
 
@@ -55,7 +55,7 @@
 
 &lt;p&gt;If you do want to have multiple consumers receive the same message in a broadcast way, all yoou need to do is create two queues with the same routing rules.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/queue2.png&quot; alt=&quot;Queue2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/queue2.png&quot; alt=&quot;Queue2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this case the message is routed to both Queue 1 and queue 2. For Queue 1, the two consumer will get the messages round robin.&lt;/p&gt;
 

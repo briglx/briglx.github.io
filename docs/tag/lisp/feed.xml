@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/lisp/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-07-19T16:57:46-07:00</updated>
-  <id>https://www.briglamoreaux.com/tag/lisp/feed.xml</id>
+  <link href="http://localhost:4000/tag/lisp/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-09-20T20:18:07-07:00</updated>
+  <id>http://localhost:4000/tag/lisp/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Getting Started with Lisp</title>
-      <link href="https://www.briglamoreaux.com/2007/10/23/getting-started-with-lisp.html" rel="alternate" type="text/html" title="Getting Started with Lisp" />
+      <link href="http://localhost:4000/2007/10/23/getting-started-with-lisp.html" rel="alternate" type="text/html" title="Getting Started with Lisp" />
       <published>2007-10-23T00:00:00-07:00</published>
       <updated>2007-10-23T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2007/10/23/getting-started-with-lisp</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2007/10/23/getting-started-with-lisp.html">&lt;p&gt;Lisp is an old and powerful language that influences modern languages like C#. Lisp is also difficult to jump into. I’ll outline where to go to download a compiler and the steps needed to start using Lisp today.&lt;/p&gt;
+      <id>http://localhost:4000/2007/10/23/getting-started-with-lisp</id>
+      <content type="html" xml:base="http://localhost:4000/2007/10/23/getting-started-with-lisp.html">&lt;p&gt;Lisp is an old and powerful language that influences modern languages like C#. Lisp is also difficult to jump into. I’ll outline where to go to download a compiler and the steps needed to start using Lisp today.&lt;/p&gt;
 
 &lt;p&gt;Lisp is known as the &lt;a href=&quot;http://www.paulgraham.com/quotes.html&quot;&gt;programmable programming language&lt;/a&gt;. I became interested in Lisp when I learned how many of the sexy features in C#, like anonymous delegates, were implemented in Lisp 20 years ago. I wanted to find out more about Lisp but I didn’t know where to start. The first step I found is to setup a Lisp environment.&lt;/p&gt;
 
@@ -45,11 +45,11 @@
 
 &lt;p&gt;Lisp has many different dialects. Common Lisp is one dialect. There are several different implementations of Common Lisp similar to the different implementations of C++. The first step is to choose and download a specific Lisp compiler. I decided on Steel Bank Common Lisp (SBCL) for no rhyme or reason. One hurdle to overcome is understanding the unorthodox grid of available downloads.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/SBCLOptions.Png&quot; alt=&quot;SBCLOptions&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/SBCLOptions.Png&quot; alt=&quot;SBCLOptions&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The secret to the grid is to look for your OS in left column and your processor in the top column. I was directed to the yellow square labeled &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1.0.9&lt;/code&gt;. This links to a installation file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sbcl-1.0.9-x86-windows-binary.msi&lt;/code&gt;. Executing the installer will install some files to the in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Program Files\Steel Bank Common Lisp\1.0.9&lt;/code&gt;folder. The most important file is the sbcl.exe. I actually created a shortcut to this file and placed it in my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;C:\Documents and Settings\All Users\Start Menu\Programs\Lisp&lt;/code&gt;folder.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/LispShortcut.Png&quot; alt=&quot;LispShortcut&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/LispShortcut.Png&quot; alt=&quot;LispShortcut&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;stand-your-ground&quot;&gt;Stand your Ground&lt;/h2&gt;
 

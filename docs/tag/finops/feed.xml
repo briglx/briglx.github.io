@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/finops/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-07-19T16:57:46-07:00</updated>
-  <id>https://www.briglamoreaux.com/tag/finops/feed.xml</id>
+  <link href="http://localhost:4000/tag/finops/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-09-20T20:18:07-07:00</updated>
+  <id>http://localhost:4000/tag/finops/feed.xml</id>
 
   
   
@@ -33,21 +33,21 @@
   
     <entry>
       <title type="html">Cost Optimization Maturity Model</title>
-      <link href="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" />
+      <link href="http://localhost:4000/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" />
       <published>2022-06-10T00:00:00-07:00</published>
       <updated>2022-06-10T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.&lt;/p&gt;
+      <id>http://localhost:4000/2022/06/10/cost-optimization-maturity-model</id>
+      <content type="html" xml:base="http://localhost:4000/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-1---freaking-out&quot;&gt;Phase 1 - Freaking Out&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The first phase is moving to the cloud and watching the bill grow over time without understanding why. There is not much to do in this phase other than completely ignoring the slowly growing problem or asking for help.&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-2---finding-tools&quot;&gt;Phase 2 - Finding Tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Learning about cost management tools distinguishes Phase 2 from Phase 1. Azure includes tools like:&lt;/p&gt;
 
@@ -76,7 +76,7 @@
   &lt;li&gt;Delete idle network gateways&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Review Advisor recommendations in the Azure portal: &lt;a href=&quot;https://aka.ms/azureadvisor&quot;&gt;aka.ms/azureadvisor&lt;/a&gt;&lt;/p&gt;
 
@@ -90,7 +90,7 @@
   &lt;li&gt;Set spending thresholds and more&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;azure-cost-management--billing-power-bi-app&quot;&gt;Azure Cost Management + Billing Power BI App&lt;/h3&gt;
 
@@ -109,7 +109,7 @@
 
 &lt;p&gt;You can also create ad hoc reports using the underlying data. I will use the ACM Power BI Template App to show off how to slice and dice billing data for customers looking for specialized reports.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;azure-cost-management-connector-for-power-bi&quot;&gt;Azure Cost Management Connector for Power BI&lt;/h3&gt;
 
@@ -117,7 +117,7 @@
 
 &lt;p&gt;When a tricky request comes in, like a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;point-in-time comparison&lt;/code&gt; report, I fire up Power BI Desktop to do the job.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-azure-cost-management-connector.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-azure-cost-management-connector.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;waf-cost-optimzation-workbook&quot;&gt;WAF Cost Optimzation Workbook&lt;/h3&gt;
 
@@ -130,7 +130,7 @@
   &lt;li&gt;Hybrid benefits and more&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;additional-tools&quot;&gt;Additional Tools&lt;/h3&gt;
 
@@ -145,7 +145,7 @@
 
 &lt;h2 id=&quot;phase-3---outgrowing-the-tools&quot;&gt;Phase 3 - Outgrowing the Tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At some point, the tools either fail to provide needed information or are overwhelmed by the amount of data. In my experience, this moment comes when an organization reaches the $2M / month in consumption and the file size for billing data approaches 2-3GB. Excel and PowerBI start to slow down with files this large.&lt;/p&gt;
 
@@ -153,11 +153,11 @@
 
 &lt;h2 id=&quot;phase-4---create-a-new-tool&quot;&gt;Phase 4 - Create a New Tool&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;When I faced this phase several years ago, I designed and &lt;a href=&quot;https://github.com/briglx/AzureBillingReports&quot;&gt;implemented a solution&lt;/a&gt; using my background in big data. After deploying it, I interviewed colleagues in other large organizations asking how they solved the problem. The responses were consistent with my solution’s modern data warehouse pipeline architecture.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This scalable solution can:&lt;/p&gt;
 
@@ -171,7 +171,7 @@
 
 &lt;h2 id=&quot;phase-5---wrong-audience&quot;&gt;Phase 5 - Wrong Audience&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Phase 5 is a cycle of cost-cutting and organic growth. The behavior can show up anytime during the maturity growth phases because it is more of a mindset about cost management instead of a limitation of the tools. I put it here because implementing a big-data pipeline is less complicated than changing the hearts and minds of an entire organization.&lt;/p&gt;
 
@@ -210,7 +210,7 @@
   &lt;li&gt;Remediate&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This method extends the capability of Azure Advisor to include custom business best practices.&lt;/p&gt;
 
@@ -228,7 +228,7 @@
 
 &lt;p&gt;&lt;strong&gt;Measure and Monitor&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The best visualizations provide essential information each department needs. Reports designed to build trust for executives should show the current status of a best practice and the historical progress. Provide visualization that provides information needed to make real-time decisions.&lt;/p&gt;
 
@@ -236,7 +236,7 @@
 
 &lt;h2 id=&quot;phase-6---recipies&quot;&gt;Phase 6 - Recipies&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipies&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipies&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The last phase in the maturity model is when an organization can scale developing reports that measure best practices. Scaling will require centralizing data collection, a common data schema, and discoverability. In this environment, teams can create, discover, and share new reports.&lt;/p&gt;</content>
 

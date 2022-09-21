@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/maven/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-07-19T16:57:46-07:00</updated>
-  <id>https://www.briglamoreaux.com/tag/maven/feed.xml</id>
+  <link href="http://localhost:4000/tag/maven/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-09-20T20:18:07-07:00</updated>
+  <id>http://localhost:4000/tag/maven/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Debugging a Tomcat Application</title>
-      <link href="https://www.briglamoreaux.com/2011/07/05/debugging-a-tomcat-application.html" rel="alternate" type="text/html" title="Debugging a Tomcat Application" />
+      <link href="http://localhost:4000/2011/07/05/debugging-a-tomcat-application.html" rel="alternate" type="text/html" title="Debugging a Tomcat Application" />
       <published>2011-07-05T00:00:00-07:00</published>
       <updated>2011-07-05T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2011/07/05/debugging-a-tomcat-application</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2011/07/05/debugging-a-tomcat-application.html">&lt;p&gt;I primarily develop web applications but have been out of it for a while and needed to look at old code for a reminder. Well here is how I configure a project to debug in tomcat.&lt;/p&gt;
+      <id>http://localhost:4000/2011/07/05/debugging-a-tomcat-application</id>
+      <content type="html" xml:base="http://localhost:4000/2011/07/05/debugging-a-tomcat-application.html">&lt;p&gt;I primarily develop web applications but have been out of it for a while and needed to look at old code for a reminder. Well here is how I configure a project to debug in tomcat.&lt;/p&gt;
 
 &lt;p&gt;There are two parts to debugging the application&lt;/p&gt;
 

@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/python/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-07-19T16:57:46-07:00</updated>
-  <id>https://www.briglamoreaux.com/tag/python/feed.xml</id>
+  <link href="http://localhost:4000/tag/python/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-09-20T20:18:07-07:00</updated>
+  <id>http://localhost:4000/tag/python/feed.xml</id>
 
   
   
@@ -33,13 +33,13 @@
   
     <entry>
       <title type="html">More Time Doesn’t Always Help</title>
-      <link href="https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html" rel="alternate" type="text/html" title="More Time Doesn't Always Help" />
+      <link href="http://localhost:4000/2018/06/28/more-time-doesnt-always-help.html" rel="alternate" type="text/html" title="More Time Doesn't Always Help" />
       <published>2018-06-28T00:00:00-07:00</published>
       <updated>2018-06-28T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html">&lt;p&gt;Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.&lt;/p&gt;
+      <id>http://localhost:4000/2018/06/28/more-time-doesnt-always-help</id>
+      <content type="html" xml:base="http://localhost:4000/2018/06/28/more-time-doesnt-always-help.html">&lt;p&gt;Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/trainingvalidationaccuracy.png&quot; alt=&quot;TrainingValidationAccuracy&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/trainingvalidationaccuracy.png&quot; alt=&quot;TrainingValidationAccuracy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The model is over-fitting the data somehow. No matter how many more epochs I run, the validation won’t get better.&lt;/p&gt;</content>
 
@@ -79,11 +79,11 @@
   
     <entry>
       <title type="html">Surprising Results with Python Thumbnails</title>
-      <link href="https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails.html" rel="alternate" type="text/html" title="Surprising Results with Python Thumbnails" />
+      <link href="http://localhost:4000/2018/04/13/surprising-results-with-python-thumbnails.html" rel="alternate" type="text/html" title="Surprising Results with Python Thumbnails" />
       <published>2018-04-13T00:00:00-07:00</published>
       <updated>2018-04-13T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails.html">&lt;p&gt;I’ve been working with images recently and am using a technique for a hashing algorithm. This technique resized the image to a 9x8 gray scale image.&lt;/p&gt;
+      <id>http://localhost:4000/2018/04/13/surprising-results-with-python-thumbnails</id>
+      <content type="html" xml:base="http://localhost:4000/2018/04/13/surprising-results-with-python-thumbnails.html">&lt;p&gt;I’ve been working with images recently and am using a technique for a hashing algorithm. This technique resized the image to a 9x8 gray scale image.&lt;/p&gt;
 
 &lt;p&gt;I found five different ways to do it with a few surprising results:&lt;/p&gt;
 
@@ -171,19 +171,19 @@ plt.show()
 
 &lt;p&gt;&lt;strong&gt;Image 1 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails01.png&quot; alt=&quot;comparePythonThumbnails01&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails01.png&quot; alt=&quot;comparePythonThumbnails01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 2 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails02.png&quot; alt=&quot;comparePythonThumbnails02&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails02.png&quot; alt=&quot;comparePythonThumbnails02&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 3 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails03.png&quot; alt=&quot;comparePythonThumbnails03&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails03.png&quot; alt=&quot;comparePythonThumbnails03&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 4 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails04.png&quot; alt=&quot;comparePythonThumbnails04&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails04.png&quot; alt=&quot;comparePythonThumbnails04&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There are a few things I noticed:&lt;/p&gt;
 
@@ -199,19 +199,19 @@ plt.show()
 
 &lt;p&gt;&lt;strong&gt;Image 1 - Gray Scaled&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails01bw.png&quot; alt=&quot;comparePythonThumbnails01bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails01bw.png&quot; alt=&quot;comparePythonThumbnails01bw&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 2 - Gray Scaled&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails02bw.png&quot; alt=&quot;comparePythonThumbnails02bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails02bw.png&quot; alt=&quot;comparePythonThumbnails02bw&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 3 - Gray Scale&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails03bw.png&quot; alt=&quot;comparePythonThumbnails03bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails03bw.png&quot; alt=&quot;comparePythonThumbnails03bw&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 4 - Gray Scale&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails04bw.png&quot; alt=&quot;comparePythonThumbnails04bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/comparepythonthumbnails04bw.png&quot; alt=&quot;comparePythonThumbnails04bw&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
@@ -247,11 +247,11 @@ plt.show()
   
     <entry>
       <title type="html">Parse Azure Deployment Status</title>
-      <link href="https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status.html" rel="alternate" type="text/html" title="Parse Azure Deployment Status" />
+      <link href="http://localhost:4000/2017/08/24/parse-azure-deployment-status.html" rel="alternate" type="text/html" title="Parse Azure Deployment Status" />
       <published>2017-08-24T00:00:00-07:00</published>
       <updated>2017-08-24T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status.html">&lt;p&gt;I’ve been making a lot of deployments that take a while to finish. There is an api call to fetch the status of the operations.&lt;/p&gt;
+      <id>http://localhost:4000/2017/08/24/parse-azure-deployment-status</id>
+      <content type="html" xml:base="http://localhost:4000/2017/08/24/parse-azure-deployment-status.html">&lt;p&gt;I’ve been making a lot of deployments that take a while to finish. There is an api call to fetch the status of the operations.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;azure group deployment operation list --name deploymentname --resource-group rgname&lt;/code&gt;&lt;/p&gt;
 
@@ -293,11 +293,11 @@ plt.show()
   
     <entry>
       <title type="html">Extract Terms from Text</title>
-      <link href="https://www.briglamoreaux.com/2014/01/10/extract-terms-from-text.html" rel="alternate" type="text/html" title="Extract Terms from Text" />
+      <link href="http://localhost:4000/2014/01/10/extract-terms-from-text.html" rel="alternate" type="text/html" title="Extract Terms from Text" />
       <published>2014-01-10T00:00:00-07:00</published>
       <updated>2014-01-10T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2014/01/10/extract-terms-from-text</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2014/01/10/extract-terms-from-text.html">&lt;p&gt;I’ve been playing around with NLP. I wanted to see if I could extract terms from text. With the help of the internet, I found &lt;a href=&quot;http://stackoverflow.com/questions/1575246/how-do-i-extract-keywords-used-in-text/1575345#1575345&quot;&gt;some answers&lt;/a&gt;. It boils down to:&lt;/p&gt;
+      <id>http://localhost:4000/2014/01/10/extract-terms-from-text</id>
+      <content type="html" xml:base="http://localhost:4000/2014/01/10/extract-terms-from-text.html">&lt;p&gt;I’ve been playing around with NLP. I wanted to see if I could extract terms from text. With the help of the internet, I found &lt;a href=&quot;http://stackoverflow.com/questions/1575246/how-do-i-extract-keywords-used-in-text/1575345#1575345&quot;&gt;some answers&lt;/a&gt;. It boils down to:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://pypi.python.org/pypi/topia.termextract/&quot;&gt;python topia library&lt;/a&gt;&lt;/li&gt;
@@ -399,11 +399,11 @@ plt.show()
   
     <entry>
       <title type="html">Sentiment Analysis</title>
-      <link href="https://www.briglamoreaux.com/2013/03/26/sentiment-analysis.html" rel="alternate" type="text/html" title="Sentiment Analysis" />
+      <link href="http://localhost:4000/2013/03/26/sentiment-analysis.html" rel="alternate" type="text/html" title="Sentiment Analysis" />
       <published>2013-03-26T00:00:00-07:00</published>
       <updated>2013-03-26T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2013/03/26/sentiment-analysis</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2013/03/26/sentiment-analysis.html">&lt;p&gt;I’d like to know a bit more about the tools and techniques around solving sentiment analysis. Here are a few link’s I’ve found. My focus is to use python.&lt;/p&gt;
+      <id>http://localhost:4000/2013/03/26/sentiment-analysis</id>
+      <content type="html" xml:base="http://localhost:4000/2013/03/26/sentiment-analysis.html">&lt;p&gt;I’d like to know a bit more about the tools and techniques around solving sentiment analysis. Here are a few link’s I’ve found. My focus is to use python.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Sentiment_analysis&quot;&gt;Over view at Wikipedia&lt;/a&gt;&lt;/li&gt;
@@ -461,11 +461,11 @@ plt.show()
   
     <entry>
       <title type="html">Python and Screen Scraping</title>
-      <link href="https://www.briglamoreaux.com/2011/01/14/python-and-screen-scraping.html" rel="alternate" type="text/html" title="Python and Screen Scraping" />
+      <link href="http://localhost:4000/2011/01/14/python-and-screen-scraping.html" rel="alternate" type="text/html" title="Python and Screen Scraping" />
       <published>2011-01-14T00:00:00-07:00</published>
       <updated>2011-01-14T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2011/01/14/python-and-screen-scraping</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2011/01/14/python-and-screen-scraping.html">&lt;p&gt;I wanted to do a quick test on a website using Python. I knew about &lt;a href=&quot;http://www.crummy.com/software/BeautifulSoup&quot;&gt;beautifulsoup&lt;/a&gt; but I wanted the power of JQuery. So I found &lt;a href=&quot;http://pypi.python.org/pypi/pyquery&quot;&gt;pyquery&lt;/a&gt;.&lt;/p&gt;
+      <id>http://localhost:4000/2011/01/14/python-and-screen-scraping</id>
+      <content type="html" xml:base="http://localhost:4000/2011/01/14/python-and-screen-scraping.html">&lt;p&gt;I wanted to do a quick test on a website using Python. I knew about &lt;a href=&quot;http://www.crummy.com/software/BeautifulSoup&quot;&gt;beautifulsoup&lt;/a&gt; but I wanted the power of JQuery. So I found &lt;a href=&quot;http://pypi.python.org/pypi/pyquery&quot;&gt;pyquery&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I found some &lt;a href=&quot;http://blog.jeffbalogh.org/post/89619207/pyquery-a-jquery-like-library-for-python&quot;&gt;instructions&lt;/a&gt; to get started and noticed some people complaing about how difficult it is to get installed. Hmm I wonder why?&lt;/p&gt;
 
@@ -528,11 +528,11 @@ make
   
     <entry>
       <title type="html">First Impressions of Google App Engine</title>
-      <link href="https://www.briglamoreaux.com/2009/02/01/first-impressions-of-google-app-engine.html" rel="alternate" type="text/html" title="First Impressions of Google App Engine" />
+      <link href="http://localhost:4000/2009/02/01/first-impressions-of-google-app-engine.html" rel="alternate" type="text/html" title="First Impressions of Google App Engine" />
       <published>2009-02-01T00:00:00-07:00</published>
       <updated>2009-02-01T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2009/02/01/first-impressions-of-google-app-engine</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2009/02/01/first-impressions-of-google-app-engine.html">&lt;p&gt;So I thought I would try to see what &lt;a href=&quot;http://code.google.com/appengine/&quot;&gt;Google App Engine&lt;/a&gt; is all about. My main goal is to learn python a little better and also try to get a better understanding of how to build applications that can&lt;/p&gt;
+      <id>http://localhost:4000/2009/02/01/first-impressions-of-google-app-engine</id>
+      <content type="html" xml:base="http://localhost:4000/2009/02/01/first-impressions-of-google-app-engine.html">&lt;p&gt;So I thought I would try to see what &lt;a href=&quot;http://code.google.com/appengine/&quot;&gt;Google App Engine&lt;/a&gt; is all about. My main goal is to learn python a little better and also try to get a better understanding of how to build applications that can&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Handle a lot of load&lt;/li&gt;

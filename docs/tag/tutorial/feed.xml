@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/tutorial/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-07-19T16:57:46-07:00</updated>
-  <id>https://www.briglamoreaux.com/tag/tutorial/feed.xml</id>
+  <link href="http://localhost:4000/tag/tutorial/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-09-20T20:18:07-07:00</updated>
+  <id>http://localhost:4000/tag/tutorial/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Installing Ejabberd - Part II</title>
-      <link href="https://www.briglamoreaux.com/2011/04/06/installing-ejabberd-part-ii.html" rel="alternate" type="text/html" title="Installing Ejabberd - Part II" />
+      <link href="http://localhost:4000/2011/04/06/installing-ejabberd-part-ii.html" rel="alternate" type="text/html" title="Installing Ejabberd - Part II" />
       <published>2011-04-06T00:00:00-07:00</published>
       <updated>2011-04-06T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2011/04/06/installing-ejabberd-part-ii</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2011/04/06/installing-ejabberd-part-ii.html">&lt;p&gt;So my &lt;a href=&quot;/2011/04/06/installing-ejabberd.html&quot;&gt;first attempt&lt;/a&gt; at installing ejabberd ended with the app not being able to start up.&lt;/p&gt;
+      <id>http://localhost:4000/2011/04/06/installing-ejabberd-part-ii</id>
+      <content type="html" xml:base="http://localhost:4000/2011/04/06/installing-ejabberd-part-ii.html">&lt;p&gt;So my &lt;a href=&quot;/2011/04/06/installing-ejabberd.html&quot;&gt;first attempt&lt;/a&gt; at installing ejabberd ended with the app not being able to start up.&lt;/p&gt;
 
 &lt;p&gt;I think this could be due to the fact that I was monkeying around with adding the ejabberd user and group and also the possiblity of a bad setup because &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/usr/sbin&lt;/code&gt; isn’t in the path. So I’m going to try again on a new clean server.&lt;/p&gt;
 

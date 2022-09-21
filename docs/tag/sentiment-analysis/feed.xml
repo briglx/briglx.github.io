@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/sentiment-analysis/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-07-19T16:57:46-07:00</updated>
-  <id>https://www.briglamoreaux.com/tag/sentiment-analysis/feed.xml</id>
+  <link href="http://localhost:4000/tag/sentiment-analysis/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-09-20T20:18:07-07:00</updated>
+  <id>http://localhost:4000/tag/sentiment-analysis/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Sentiment Analysis</title>
-      <link href="https://www.briglamoreaux.com/2013/03/26/sentiment-analysis.html" rel="alternate" type="text/html" title="Sentiment Analysis" />
+      <link href="http://localhost:4000/2013/03/26/sentiment-analysis.html" rel="alternate" type="text/html" title="Sentiment Analysis" />
       <published>2013-03-26T00:00:00-07:00</published>
       <updated>2013-03-26T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2013/03/26/sentiment-analysis</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2013/03/26/sentiment-analysis.html">&lt;p&gt;I’d like to know a bit more about the tools and techniques around solving sentiment analysis. Here are a few link’s I’ve found. My focus is to use python.&lt;/p&gt;
+      <id>http://localhost:4000/2013/03/26/sentiment-analysis</id>
+      <content type="html" xml:base="http://localhost:4000/2013/03/26/sentiment-analysis.html">&lt;p&gt;I’d like to know a bit more about the tools and techniques around solving sentiment analysis. Here are a few link’s I’ve found. My focus is to use python.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Sentiment_analysis&quot;&gt;Over view at Wikipedia&lt;/a&gt;&lt;/li&gt;

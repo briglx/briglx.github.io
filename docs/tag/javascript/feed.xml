@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/javascript/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-07-19T16:57:46-07:00</updated>
-  <id>https://www.briglamoreaux.com/tag/javascript/feed.xml</id>
+  <link href="http://localhost:4000/tag/javascript/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-09-20T20:18:07-07:00</updated>
+  <id>http://localhost:4000/tag/javascript/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Load Testing with AWS</title>
-      <link href="https://www.briglamoreaux.com/2012/08/21/load-testing-aws.html" rel="alternate" type="text/html" title="Load Testing with AWS" />
+      <link href="http://localhost:4000/2012/08/21/load-testing-aws.html" rel="alternate" type="text/html" title="Load Testing with AWS" />
       <published>2012-08-21T00:00:00-07:00</published>
       <updated>2012-08-21T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2012/08/21/load-testing-aws</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2012/08/21/load-testing-aws.html">&lt;p&gt;Spinning up servers on Amazon has been such a great way to test software. I recently did a performance test of &lt;a href=&quot;http://www.mongodb.org/&quot; title=&quot;MongoDB&quot;&gt;MongoDB&lt;/a&gt; and put together a process and a few scripts that helped me load test a server with 128 clients. Here is the approach I used:&lt;/p&gt;
+      <id>http://localhost:4000/2012/08/21/load-testing-aws</id>
+      <content type="html" xml:base="http://localhost:4000/2012/08/21/load-testing-aws.html">&lt;p&gt;Spinning up servers on Amazon has been such a great way to test software. I recently did a performance test of &lt;a href=&quot;http://www.mongodb.org/&quot; title=&quot;MongoDB&quot;&gt;MongoDB&lt;/a&gt; and put together a process and a few scripts that helped me load test a server with 128 clients. Here is the approach I used:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Stand Up Server&lt;/li&gt;
@@ -295,11 +295,11 @@ myserver2.compute-1.amazonaws.com
   
     <entry>
       <title type="html">Search nodejs with regex and case insensitive</title>
-      <link href="https://www.briglamoreaux.com/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html" rel="alternate" type="text/html" title="Search nodejs with regex and case insensitive" />
+      <link href="http://localhost:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html" rel="alternate" type="text/html" title="Search nodejs with regex and case insensitive" />
       <published>2012-04-10T00:00:00-07:00</published>
       <updated>2012-04-10T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2012/04/10/search-nodejs-with-regex-and-case-insensitive</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html">&lt;p&gt;I recently needed to search for documents in mongo using mongoose. I knew I needed a regex but couldn’t figure out how to pass the case insesitive flag. We’ll here is how you do it.&lt;/p&gt;
+      <id>http://localhost:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive</id>
+      <content type="html" xml:base="http://localhost:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html">&lt;p&gt;I recently needed to search for documents in mongo using mongoose. I knew I needed a regex but couldn’t figure out how to pass the case insesitive flag. We’ll here is how you do it.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var term = 'Apple'; Ideas.find({'title' : new RegExp(term, &quot;i&quot;)}, function(err, ideas){...});&lt;/code&gt;&lt;/p&gt;
 
@@ -345,11 +345,11 @@ myserver2.compute-1.amazonaws.com
   
     <entry>
       <title type="html">Javascript Templating</title>
-      <link href="https://www.briglamoreaux.com/2011/11/01/javascript-templating.html" rel="alternate" type="text/html" title="Javascript Templating" />
+      <link href="http://localhost:4000/2011/11/01/javascript-templating.html" rel="alternate" type="text/html" title="Javascript Templating" />
       <published>2011-11-01T00:00:00-07:00</published>
       <updated>2011-11-01T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2011/11/01/javascript-templating</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2011/11/01/javascript-templating.html">&lt;p&gt;Way back in 2008 I was really getting into JavaScript development and created a small templating object.&lt;/p&gt;
+      <id>http://localhost:4000/2011/11/01/javascript-templating</id>
+      <content type="html" xml:base="http://localhost:4000/2011/11/01/javascript-templating.html">&lt;p&gt;Way back in 2008 I was really getting into JavaScript development and created a small templating object.&lt;/p&gt;
 
 &lt;p&gt;The basic idea is to keep view code all in the same location. In this case the view is a html page. JavaScript will update the view. Any new elements on the page should be defined on the page in a hidden template. Notice the naming convention using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-t&lt;/code&gt; for templates.&lt;/p&gt;
 

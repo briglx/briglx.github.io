@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/mysql/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-07-19T16:57:46-07:00</updated>
-  <id>https://www.briglamoreaux.com/tag/mysql/feed.xml</id>
+  <link href="http://localhost:4000/tag/mysql/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-09-20T20:18:07-07:00</updated>
+  <id>http://localhost:4000/tag/mysql/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Backup Wordpress</title>
-      <link href="https://www.briglamoreaux.com/2012/02/10/backup-wordpress.html" rel="alternate" type="text/html" title="Backup Wordpress" />
+      <link href="http://localhost:4000/2012/02/10/backup-wordpress.html" rel="alternate" type="text/html" title="Backup Wordpress" />
       <published>2012-02-10T00:00:00-07:00</published>
       <updated>2012-02-10T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2012/02/10/backup-wordpress</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2012/02/10/backup-wordpress.html">&lt;p&gt;I had a little scare the other day. For some reason my db for the blog stopped. I thought it would be a good idea to make a backup just in case.&lt;/p&gt;
+      <id>http://localhost:4000/2012/02/10/backup-wordpress</id>
+      <content type="html" xml:base="http://localhost:4000/2012/02/10/backup-wordpress.html">&lt;p&gt;I had a little scare the other day. For some reason my db for the blog stopped. I thought it would be a good idea to make a backup just in case.&lt;/p&gt;
 
 &lt;p&gt;I have MySQL Workbench on my machine and though it would be trivial. When I tried to connect to my db, I received an error saying I didn’t have access. &lt;a href=&quot;http://dev.mysql.com/doc/refman/5.5/en/access-denied.html&quot;&gt;Looking around&lt;/a&gt; showed I needed to add a new user to the DB with the host I was connecting from. Here is what worked for me.&lt;/p&gt;
 

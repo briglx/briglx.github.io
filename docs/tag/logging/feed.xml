@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/logging/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-07-19T16:57:46-07:00</updated>
-  <id>https://www.briglamoreaux.com/tag/logging/feed.xml</id>
+  <link href="http://localhost:4000/tag/logging/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-09-20T20:18:07-07:00</updated>
+  <id>http://localhost:4000/tag/logging/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Logging Best Practices</title>
-      <link href="https://www.briglamoreaux.com/2008/04/21/logging-best-practices.html" rel="alternate" type="text/html" title="Logging Best Practices" />
+      <link href="http://localhost:4000/2008/04/21/logging-best-practices.html" rel="alternate" type="text/html" title="Logging Best Practices" />
       <published>2008-04-21T00:00:00-07:00</published>
       <updated>2008-04-21T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2008/04/21/logging-best-practices</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2008/04/21/logging-best-practices.html">&lt;p&gt;I just read a presentation from &lt;a href=&quot;http://www.certconf.org/presentations/2005/files/WC4.pdf&quot;&gt;Network Intelligence&lt;/a&gt; on putting together a &lt;a href=&quot;http://www.acronymfinder.com/af-query.asp?Acronym=siem&quot;&gt;SIEM&lt;/a&gt; solution. I really don’t know that much about SIEM, but what I do know is when my application breaks, I want to know what happened and have access to the logs as quickly and easily as possible.&lt;/p&gt;
+      <id>http://localhost:4000/2008/04/21/logging-best-practices</id>
+      <content type="html" xml:base="http://localhost:4000/2008/04/21/logging-best-practices.html">&lt;p&gt;I just read a presentation from &lt;a href=&quot;http://www.certconf.org/presentations/2005/files/WC4.pdf&quot;&gt;Network Intelligence&lt;/a&gt; on putting together a &lt;a href=&quot;http://www.acronymfinder.com/af-query.asp?Acronym=siem&quot;&gt;SIEM&lt;/a&gt; solution. I really don’t know that much about SIEM, but what I do know is when my application breaks, I want to know what happened and have access to the logs as quickly and easily as possible.&lt;/p&gt;
 
 &lt;p&gt;I’ve talked about &lt;a href=&quot;http://blog.framework-it.net/2007/07/how-to-implement-logging.html&quot;&gt;how to implement Logging&lt;/a&gt; in an application before, but this presentation sparked a few thoughts.&lt;/p&gt;
 
@@ -89,11 +89,11 @@
   
     <entry>
       <title type="html">How to Implement logging</title>
-      <link href="https://www.briglamoreaux.com/2007/07/18/how-to-implement-logging.html" rel="alternate" type="text/html" title="How to Implement logging" />
+      <link href="http://localhost:4000/2007/07/18/how-to-implement-logging.html" rel="alternate" type="text/html" title="How to Implement logging" />
       <published>2007-07-18T00:00:00-07:00</published>
       <updated>2007-07-18T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2007/07/18/how-to-implement-logging</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2007/07/18/how-to-implement-logging.html">&lt;p&gt;We are getting ready to send our first child off to kindergarten and I wish I could be a fly on the wall to see how he enjoys his first day of school. Secretly I want to make sure he remembers the one-two punch I taught him in case someone tries to bully him around. Fortunately at work I have much more control over keeping track of my applications once I send them into production. The secret is Logging.&lt;/p&gt;
+      <id>http://localhost:4000/2007/07/18/how-to-implement-logging</id>
+      <content type="html" xml:base="http://localhost:4000/2007/07/18/how-to-implement-logging.html">&lt;p&gt;We are getting ready to send our first child off to kindergarten and I wish I could be a fly on the wall to see how he enjoys his first day of school. Secretly I want to make sure he remembers the one-two punch I taught him in case someone tries to bully him around. Fortunately at work I have much more control over keeping track of my applications once I send them into production. The secret is Logging.&lt;/p&gt;
 
 &lt;p&gt;Our team has used three major logging implementations. Log4Net, Enterprise Library, and a homegrown solution. What we have discovered is the importance of making the implementation transparent to our application.&lt;/p&gt;
 
@@ -176,13 +176,13 @@
 
 &lt;p&gt;Select your app node and choose to add the Logging and Instrumentation Application Block.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/addblock.png&quot; alt=&quot;AddBlock&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/addblock.png&quot; alt=&quot;AddBlock&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The tool allows you to define categories, formatters, and sinks. Sinks are the final resting place for our messages. Sinks can be a flat file or an event log. Formatter are used to turn our message object into a plain text message. The category is where you define what happens to our message object when it is caught.&lt;/p&gt;
 
 &lt;p&gt;I modify the Sinks section to have one sink for the Application Event Log.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/sinksetup.png&quot; alt=&quot;SinkSetup&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/sinksetup.png&quot; alt=&quot;SinkSetup&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Modify the categories section to have the three categories defined during the implementation step&lt;/p&gt;
 
@@ -194,11 +194,11 @@
 
 &lt;p&gt;Notice how each category has a single destination. The destination tells Enterprise library to use the default Text Formatter and send it to the Application Event Log Sink.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/loggingcategory.png&quot; alt=&quot;LoggingCategory&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/loggingcategory.png&quot; alt=&quot;LoggingCategory&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;One last step in logging is to set up a default category. I like to set mine to default to Error.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/defaultcategory.png&quot; alt=&quot;DefaultCategory&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/defaultcategory.png&quot; alt=&quot;DefaultCategory&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At this point your application should be able to use LogInformational(string message) and LogWarning(string message)with no problems. Setting up the exception handling will take care of the rest.&lt;/p&gt;
 
@@ -206,7 +206,7 @@
 
 &lt;p&gt;Select your app node and choose to add the Exception Handling Application Block. Select the application block and add a new Exception Policy with the name Error. Add a new Exception Type to the policy that catches all Exceptions. Finally add a new Logging Handler.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/errorexceptionpolicy.png&quot; alt=&quot;ErrorExceptionPolicy&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/errorexceptionpolicy.png&quot; alt=&quot;ErrorExceptionPolicy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The configuration I use for the Logging Handler of the Error Exception Policy is:&lt;/p&gt;
 
@@ -216,13 +216,13 @@
 
 &lt;table width=&quot;400&quot; border=&quot;1&quot; cellspacing=&quot;0&quot; cellpadding=&quot;2&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;200&quot;&gt;LogCategory&lt;/td&gt;&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;Warning&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;200&quot;&gt;Priority&lt;/td&gt;&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td valign=&quot;top&quot; width=&quot;200&quot;&gt;Severity&lt;/td&gt;&lt;td valign=&quot;top&quot; width=&quot;198&quot;&gt;Warning&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/warningexceptionpolicy.png&quot; alt=&quot;WarningExceptionPolicy&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/warningexceptionpolicy.png&quot; alt=&quot;WarningExceptionPolicy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;With both exception policies setup and using the logging our ILogging class is fully functional. Now it is a simple configuration setting to turn on and off the different logging levels.&lt;/p&gt;
 
 &lt;p&gt;Any value larger than the MinimumPriority will be logged. Anything less will not be logged, simple. The values of the categories are: Error-10, Warning-5, and Information-1. I like to set the MinimumPriority to 10 in production.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/minimumpriority.png&quot; alt=&quot;MinimumPriority&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/minimumpriority.png&quot; alt=&quot;MinimumPriority&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;wrap-up&quot;&gt;Wrap Up&lt;/h2&gt;
 

@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/cloud/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-07-19T16:57:46-07:00</updated>
-  <id>https://www.briglamoreaux.com/tag/cloud/feed.xml</id>
+  <link href="http://localhost:4000/tag/cloud/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://localhost:4000/" rel="alternate" type="text/html" />
+  <updated>2022-09-20T20:18:07-07:00</updated>
+  <id>http://localhost:4000/tag/cloud/feed.xml</id>
 
   
   
@@ -32,22 +32,127 @@
 
   
     <entry>
+      <title type="html">Minecraft Server</title>
+      <link href="http://localhost:4000/2022/07/31/minecraft-server.html" rel="alternate" type="text/html" title="Minecraft Server" />
+      <published>2022-07-31T00:00:00-07:00</published>
+      <updated>2022-07-31T00:00:00-07:00</updated>
+      <id>http://localhost:4000/2022/07/31/minecraft-server</id>
+      <content type="html" xml:base="http://localhost:4000/2022/07/31/minecraft-server.html">&lt;p&gt;Setting up minecraft on azure for fun.&lt;/p&gt;
+
+&lt;p&gt;Setup Server&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c&quot;&gt;# Create linux server&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# tbd script&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ssh server ip&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Install Java&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt upgrade &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;openjdk-16-jre-headless
+
+&lt;span class=&quot;c&quot;&gt;# Setup User and dir&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;adduser &lt;span class=&quot;nt&quot;&gt;--system&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--home&lt;/span&gt; /srv/minecraft-server minecraft
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;addgroup &lt;span class=&quot;nt&quot;&gt;--system&lt;/span&gt; minecraft
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;adduser minecraft minecraft &lt;span class=&quot;c&quot;&gt;# this adds user &quot;minecraft&quot; to the group &quot;minecraft&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo chown&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; minecraft.minecraft /srv/minecraft-server
+
+&lt;span class=&quot;c&quot;&gt;# Switch to user&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-u&lt;/span&gt; minecraft bash
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /srv/minecraft-server
+
+&lt;span class=&quot;c&quot;&gt;# Download 1.19 jar from https://www.minecraft.net/en-us/download/server&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#  wget https://launcher.mojang.com/v1/objects/e00c4052dac1d59a1188b2aa9d5a87113aaf1122/server.jar&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# mv server.jar minecraft_server.1.19.jar&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# Create startup script&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;vi /etc/systemd/system/minecraft.service
+&lt;span class=&quot;nb&quot;&gt;sudo chmod &lt;/span&gt;664 /etc/systemd/system/minecraft.service
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Unit] 
+&lt;span class=&quot;nv&quot;&gt;Description&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;start and stop the minecraft-server 
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Service]
+&lt;span class=&quot;nv&quot;&gt;WorkingDirectory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/srv/minecraft-server
+&lt;span class=&quot;nv&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;minecraft
+&lt;span class=&quot;nv&quot;&gt;Group&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;minecraft
+
+&lt;span class=&quot;nv&quot;&gt;ExecStart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/usr/bin/java &lt;span class=&quot;nt&quot;&gt;-Xms10G&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-Xmx10G&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:+UseG1GC &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:+ParallelRefProcEnabled &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:MaxGCPauseMillis&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;200 &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:+UnlockExperimentalVMOptions &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:+DisableExplicitGC &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:+AlwaysPreTouch &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:G1NewSizePercent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;30 &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:G1MaxNewSizePercent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;40 &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:G1HeapRegionSize&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;8M &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:G1ReservePercent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;20 &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:G1HeapWastePercent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5 &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:G1MixedGCCountTarget&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4 &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:InitiatingHeapOccupancyPercent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;15 &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:G1MixedGCLiveThresholdPercent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;90 &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:G1RSetUpdatingPauseTimePercent&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;5 &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:SurvivorRatio&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;32 &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:+PerfDisableSharedMem &lt;span class=&quot;nt&quot;&gt;-XX&lt;/span&gt;:MaxTenuringThreshold&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;nt&quot;&gt;-Dusing&lt;/span&gt;.aikars.flags&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;https://mcflags.emc.gs &lt;span class=&quot;nt&quot;&gt;-Daikars&lt;/span&gt;.new.flags&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-jar&lt;/span&gt; server.jar nogui
+
+&lt;span class=&quot;nv&quot;&gt;Restart&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;on-failure
+&lt;span class=&quot;nv&quot;&gt;RestartSec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;20 5
+
+&lt;span class=&quot;nv&quot;&gt;StandardInput&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;null
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Install]
+&lt;span class=&quot;nv&quot;&gt;WantedBy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;multi-user.target
+
+&lt;span class=&quot;c&quot;&gt;# ...&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Enable service&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl &lt;span class=&quot;nb&quot;&gt;enable &lt;/span&gt;minecraft.service
+
+&lt;span class=&quot;c&quot;&gt;# Start service&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl start minecraft.service
+
+&lt;span class=&quot;c&quot;&gt;# Get status&lt;/span&gt;
+systemctl status minecraft.service 
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://minecraft.fandom.com/wiki/Tutorials/Setting_up_a_server&lt;/li&gt;
+  &lt;li&gt;Startup scripts https://gist.github.com/dotStart/ea0455714a0942474635&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="cloud" />
+      
+        <category term="azure" />
+      
+        <category term="minecraft" />
+      
+
+      
+        <summary type="html">Setting up minecraft on azure for fun.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Cost Optimization Maturity Model</title>
-      <link href="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" />
+      <link href="http://localhost:4000/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" />
       <published>2022-06-10T00:00:00-07:00</published>
       <updated>2022-06-10T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.&lt;/p&gt;
+      <id>http://localhost:4000/2022/06/10/cost-optimization-maturity-model</id>
+      <content type="html" xml:base="http://localhost:4000/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-1---freaking-out&quot;&gt;Phase 1 - Freaking Out&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The first phase is moving to the cloud and watching the bill grow over time without understanding why. There is not much to do in this phase other than completely ignoring the slowly growing problem or asking for help.&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-2---finding-tools&quot;&gt;Phase 2 - Finding Tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Learning about cost management tools distinguishes Phase 2 from Phase 1. Azure includes tools like:&lt;/p&gt;
 
@@ -76,7 +181,7 @@
   &lt;li&gt;Delete idle network gateways&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Review Advisor recommendations in the Azure portal: &lt;a href=&quot;https://aka.ms/azureadvisor&quot;&gt;aka.ms/azureadvisor&lt;/a&gt;&lt;/p&gt;
 
@@ -90,7 +195,7 @@
   &lt;li&gt;Set spending thresholds and more&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;azure-cost-management--billing-power-bi-app&quot;&gt;Azure Cost Management + Billing Power BI App&lt;/h3&gt;
 
@@ -109,7 +214,7 @@
 
 &lt;p&gt;You can also create ad hoc reports using the underlying data. I will use the ACM Power BI Template App to show off how to slice and dice billing data for customers looking for specialized reports.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;azure-cost-management-connector-for-power-bi&quot;&gt;Azure Cost Management Connector for Power BI&lt;/h3&gt;
 
@@ -117,7 +222,7 @@
 
 &lt;p&gt;When a tricky request comes in, like a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;point-in-time comparison&lt;/code&gt; report, I fire up Power BI Desktop to do the job.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-azure-cost-management-connector.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-azure-cost-management-connector.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;waf-cost-optimzation-workbook&quot;&gt;WAF Cost Optimzation Workbook&lt;/h3&gt;
 
@@ -130,7 +235,7 @@
   &lt;li&gt;Hybrid benefits and more&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;additional-tools&quot;&gt;Additional Tools&lt;/h3&gt;
 
@@ -145,7 +250,7 @@
 
 &lt;h2 id=&quot;phase-3---outgrowing-the-tools&quot;&gt;Phase 3 - Outgrowing the Tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At some point, the tools either fail to provide needed information or are overwhelmed by the amount of data. In my experience, this moment comes when an organization reaches the $2M / month in consumption and the file size for billing data approaches 2-3GB. Excel and PowerBI start to slow down with files this large.&lt;/p&gt;
 
@@ -153,11 +258,11 @@
 
 &lt;h2 id=&quot;phase-4---create-a-new-tool&quot;&gt;Phase 4 - Create a New Tool&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;When I faced this phase several years ago, I designed and &lt;a href=&quot;https://github.com/briglx/AzureBillingReports&quot;&gt;implemented a solution&lt;/a&gt; using my background in big data. After deploying it, I interviewed colleagues in other large organizations asking how they solved the problem. The responses were consistent with my solution’s modern data warehouse pipeline architecture.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This scalable solution can:&lt;/p&gt;
 
@@ -171,7 +276,7 @@
 
 &lt;h2 id=&quot;phase-5---wrong-audience&quot;&gt;Phase 5 - Wrong Audience&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Phase 5 is a cycle of cost-cutting and organic growth. The behavior can show up anytime during the maturity growth phases because it is more of a mindset about cost management instead of a limitation of the tools. I put it here because implementing a big-data pipeline is less complicated than changing the hearts and minds of an entire organization.&lt;/p&gt;
 
@@ -210,7 +315,7 @@
   &lt;li&gt;Remediate&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This method extends the capability of Azure Advisor to include custom business best practices.&lt;/p&gt;
 
@@ -228,7 +333,7 @@
 
 &lt;p&gt;&lt;strong&gt;Measure and Monitor&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The best visualizations provide essential information each department needs. Reports designed to build trust for executives should show the current status of a best practice and the historical progress. Provide visualization that provides information needed to make real-time decisions.&lt;/p&gt;
 
@@ -236,7 +341,7 @@
 
 &lt;h2 id=&quot;phase-6---recipies&quot;&gt;Phase 6 - Recipies&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipies&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipies&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The last phase in the maturity model is when an organization can scale developing reports that measure best practices. Scaling will require centralizing data collection, a common data schema, and discoverability. In this environment, teams can create, discover, and share new reports.&lt;/p&gt;</content>
 
@@ -276,11 +381,11 @@
   
     <entry>
       <title type="html">Finding Public IP Details</title>
-      <link href="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
+      <link href="http://localhost:4000/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
       <published>2022-06-10T00:00:00-07:00</published>
       <updated>2022-06-10T00:00:00-07:00</updated>
-      <id>https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
+      <id>http://localhost:4000/2022/06/10/finding-public-ip-details</id>
+      <content type="html" xml:base="http://localhost:4000/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
 
 &lt;p&gt;The goal is to see the different types of resources public ips are assocaited like:&lt;/p&gt;
 
