@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/logging/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/logging/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Logging Best Practices</title>
       <link href="https://www.briglamoreaux.com/2008/04/21/logging-best-practices.html" rel="alternate" type="text/html" title="Logging Best Practices" />
-      <published>2008-04-21T00:00:00-07:00</published>
-      <updated>2008-04-21T00:00:00-07:00</updated>
+      <published>2008-04-21T00:00:00+00:00</published>
+      <updated>2008-04-21T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2008/04/21/logging-best-practices</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2008/04/21/logging-best-practices.html">&lt;p&gt;I just read a presentation from &lt;a href=&quot;http://www.certconf.org/presentations/2005/files/WC4.pdf&quot;&gt;Network Intelligence&lt;/a&gt; on putting together a &lt;a href=&quot;http://www.acronymfinder.com/af-query.asp?Acronym=siem&quot;&gt;SIEM&lt;/a&gt; solution. I really don’t know that much about SIEM, but what I do know is when my application breaks, I want to know what happened and have access to the logs as quickly and easily as possible.&lt;/p&gt;
 
@@ -90,8 +90,8 @@
     <entry>
       <title type="html">How to Implement logging</title>
       <link href="https://www.briglamoreaux.com/2007/07/18/how-to-implement-logging.html" rel="alternate" type="text/html" title="How to Implement logging" />
-      <published>2007-07-18T00:00:00-07:00</published>
-      <updated>2007-07-18T00:00:00-07:00</updated>
+      <published>2007-07-18T00:00:00+00:00</published>
+      <updated>2007-07-18T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2007/07/18/how-to-implement-logging</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2007/07/18/how-to-implement-logging.html">&lt;p&gt;We are getting ready to send our first child off to kindergarten and I wish I could be a fly on the wall to see how he enjoys his first day of school. Secretly I want to make sure he remembers the one-two punch I taught him in case someone tries to bully him around. Fortunately at work I have much more control over keeping track of my applications once I send them into production. The secret is Logging.&lt;/p&gt;
 

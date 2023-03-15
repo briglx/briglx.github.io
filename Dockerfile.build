@@ -18,7 +18,15 @@ RUN apt-get update \
     locales \
     nodejs
 
-COPY Gemfile Gemfile
+# Helpful aliases
+RUN echo 'alias ll='"'"'ls $LS_OPTIONS -al'"'"'' >> /etc/bash.bashrc 
+
+# Create app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+# Copy Files
+COPY source/Gemfile Gemfile
 
 RUN NOKOGIRI_USE_SYSTEM_LIBRARIES=true bundle install
 
@@ -29,7 +37,7 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
-COPY entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh entrypoint.sh
 
-# ENTRYPOINT ["/entrypoint.sh"]
-ENTRYPOINT ["/bin/bash"]
+CMD ["/usr/src/app/entrypoint.sh"]
+# ENTRYPOINT /bin/bash

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/testing/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/testing/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">When a Bug is Found</title>
       <link href="https://www.briglamoreaux.com/2007/07/17/when-a-bug-is-found.html" rel="alternate" type="text/html" title="When a Bug is Found" />
-      <published>2007-07-17T00:00:00-07:00</published>
-      <updated>2007-07-17T00:00:00-07:00</updated>
+      <published>2007-07-17T00:00:00+00:00</published>
+      <updated>2007-07-17T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2007/07/17/when-a-bug-is-found</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2007/07/17/when-a-bug-is-found.html">&lt;p&gt;&lt;a href=&quot;http://www.jamesshore.com/Agile-Book/no_bugs.html&quot;&gt;James Shore&lt;/a&gt; talks about the concept of being bug free and has many recommendations on how to reach that goal. At my desk I have the following guide hanging on the wall to help me in my quest.&lt;/p&gt;
 

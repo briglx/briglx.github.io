@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/intellij/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/intellij/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Pains with Java</title>
       <link href="https://www.briglamoreaux.com/2010/06/09/pains-with-java.html" rel="alternate" type="text/html" title="Pains with Java" />
-      <published>2010-06-09T00:00:00-07:00</published>
-      <updated>2010-06-09T00:00:00-07:00</updated>
+      <published>2010-06-09T00:00:00+00:00</published>
+      <updated>2010-06-09T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2010/06/09/pains-with-java</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2010/06/09/pains-with-java.html">&lt;p&gt;So I’ve spent the last hour trying to solve an elusive error in my project:&lt;/p&gt;
 

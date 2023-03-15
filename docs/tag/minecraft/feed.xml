@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/minecraft/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/minecraft/feed.xml</id>
 
   
@@ -32,10 +32,91 @@
 
   
     <entry>
+      <title type="html">Update Minecraft Server</title>
+      <link href="https://www.briglamoreaux.com/2023/03/13/update-minecraft-server.html" rel="alternate" type="text/html" title="Update Minecraft Server" />
+      <published>2023-03-13T00:00:00+00:00</published>
+      <updated>2023-03-13T00:00:00+00:00</updated>
+      <id>https://www.briglamoreaux.com/2023/03/13/update-minecraft-server</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2023/03/13/update-minecraft-server.html">&lt;p&gt;It’s that time of year again when I need to update the minecraft server but I forgot how.&lt;/p&gt;
+
+&lt;p&gt;Looks like the installed version is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minecraft_server.1.19.2.jar&lt;/code&gt; and the latest is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minecraft_server.1.19.3.jar&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c&quot;&gt;# Let's update the basics&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get update
+
+&lt;span class=&quot;c&quot;&gt;# Stop current Server&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl stop minecraft.service
+
+&lt;span class=&quot;c&quot;&gt;# Backup server&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;DATE_FORMAT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;%F_%H-%M-%S&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;TIMESTAMP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt; +&lt;span class=&quot;nv&quot;&gt;$DATE_FORMAT&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;SERVER_WORLDS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/srv/minecraft-server/world
+&lt;span class=&quot;nv&quot;&gt;BACKUP_DIRECTORY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/brlamore/minecraft/backups
+&lt;span class=&quot;nv&quot;&gt;ARCHIVE_FILE_NAME&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TIMESTAMP&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.tar.gz&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;ARCHIVE_PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$BACKUP_DIRECTORY&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ARCHIVE_FILE_NAME&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Create Backup folder&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dirname&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ARCHIVE_PATH&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Backup world&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-cf&lt;/span&gt; - &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;SERVER_WORLDS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[@]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; | &lt;span class=&quot;nb&quot;&gt;gzip&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-cv&lt;/span&gt; -&lt;span class=&quot;s2&quot;&gt;&quot;3&quot;&lt;/span&gt; - &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ARCHIVE_PATH&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; 2&amp;gt;&amp;gt; /dev/null
+
+&lt;span class=&quot;c&quot;&gt;# Check status&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;EXIT_CODES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PIPESTATUS&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[@]&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Download 1.19 jar from https://www.minecraft.net/en-us/download/server&lt;/span&gt;
+wget https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade5336ca7ae/server.jar
+
+&lt;span class=&quot;nb&quot;&gt;sudo mkdir&lt;/span&gt; /srv/minecraft-server/versions/1.19.4
+&lt;span class=&quot;nb&quot;&gt;sudo mv &lt;/span&gt;server.jar /srv/minecraft-server/versions/1.19.4/server.1.19.4.jar
+&lt;span class=&quot;nb&quot;&gt;sudo mv&lt;/span&gt; /srv/minecraft-server/server.jar &lt;span class=&quot;s2&quot;&gt;&quot;/srv/minecraft-server/versions/old/server.old.&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$TIMESTAMP&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.jar&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo cp&lt;/span&gt; /srv/minecraft-server/versions/1.19.4/server.1.19.4.jar /srv/minecraft-server/server.jar
+&lt;span class=&quot;nb&quot;&gt;sudo chown&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-R&lt;/span&gt; minecraft.minecraft /srv/minecraft-server
+
+&lt;span class=&quot;c&quot;&gt;# Restart service&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;systemctl start minecraft.service
+
+&lt;span class=&quot;c&quot;&gt;# Get status&lt;/span&gt;
+systemctl status minecraft.service 
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="cloud" />
+      
+        <category term="azure" />
+      
+        <category term="minecraft" />
+      
+
+      
+        <summary type="html">It’s that time of year again when I need to update the minecraft server but I forgot how.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Minecraft Server</title>
       <link href="https://www.briglamoreaux.com/2022/07/31/minecraft-server.html" rel="alternate" type="text/html" title="Minecraft Server" />
-      <published>2022-07-31T00:00:00-07:00</published>
-      <updated>2022-07-31T00:00:00-07:00</updated>
+      <published>2022-07-31T00:00:00+00:00</published>
+      <updated>2022-07-31T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2022/07/31/minecraft-server</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2022/07/31/minecraft-server.html">&lt;p&gt;Setting up minecraft on azure for fun.&lt;/p&gt;
 

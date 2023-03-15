@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/lisp/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/lisp/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Getting Started with Lisp</title>
       <link href="https://www.briglamoreaux.com/2007/10/23/getting-started-with-lisp.html" rel="alternate" type="text/html" title="Getting Started with Lisp" />
-      <published>2007-10-23T00:00:00-07:00</published>
-      <updated>2007-10-23T00:00:00-07:00</updated>
+      <published>2007-10-23T00:00:00+00:00</published>
+      <updated>2007-10-23T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2007/10/23/getting-started-with-lisp</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2007/10/23/getting-started-with-lisp.html">&lt;p&gt;Lisp is an old and powerful language that influences modern languages like C#. Lisp is also difficult to jump into. I’ll outline where to go to download a compiler and the steps needed to start using Lisp today.&lt;/p&gt;
 

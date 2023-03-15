@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/nlp/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/nlp/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Extract Terms from Text</title>
       <link href="https://www.briglamoreaux.com/2014/01/10/extract-terms-from-text.html" rel="alternate" type="text/html" title="Extract Terms from Text" />
-      <published>2014-01-10T00:00:00-07:00</published>
-      <updated>2014-01-10T00:00:00-07:00</updated>
+      <published>2014-01-10T00:00:00+00:00</published>
+      <updated>2014-01-10T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2014/01/10/extract-terms-from-text</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2014/01/10/extract-terms-from-text.html">&lt;p&gt;I’ve been playing around with NLP. I wanted to see if I could extract terms from text. With the help of the internet, I found &lt;a href=&quot;http://stackoverflow.com/questions/1575246/how-do-i-extract-keywords-used-in-text/1575345#1575345&quot;&gt;some answers&lt;/a&gt;. It boils down to:&lt;/p&gt;
 

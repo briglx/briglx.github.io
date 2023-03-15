@@ -8,13 +8,43 @@
     
       
       <item>
+        <title>Update Minecraft Server</title>
+        
+          <description>&lt;p&gt;It’s that time of year again when I need to update the minecraft server but I forgot how.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+        <link>
+        https://www.briglamoreaux.com/2023/03/13/update-minecraft-server.html</link>
+        <guid isPermaLink="true">https://www.briglamoreaux.com/2023/03/13/update-minecraft-server.html</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Computer Names</title>
+        
+          <description>&lt;p&gt;I enjoy getting sucked into things that tickle my brain. One such activity is coming up with names for my computers/projects/etc. I’ve settled on a naming &lt;a href=&quot;https://github.com/briglx/computer-name-generator&quot;&gt;convension for computers&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+        <link>
+        https://www.briglamoreaux.com/2022/12/21/computer-names.html</link>
+        <guid isPermaLink="true">https://www.briglamoreaux.com/2022/12/21/computer-names.html</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>Minecraft Server</title>
         
           <description>&lt;p&gt;Setting up minecraft on azure for fun.&lt;/p&gt;
 
 </description>
         
-        <pubDate>Sun, 31 Jul 2022 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 31 Jul 2022 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2022/07/31/minecraft-server.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2022/07/31/minecraft-server.html</guid>
@@ -29,7 +59,7 @@
 
 </description>
         
-        <pubDate>Fri, 10 Jun 2022 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 10 Jun 2022 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html</guid>
@@ -44,7 +74,7 @@
 
 </description>
         
-        <pubDate>Fri, 10 Jun 2022 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 10 Jun 2022 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html</guid>
@@ -59,7 +89,7 @@
 
 </description>
         
-        <pubDate>Fri, 20 May 2022 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html</guid>
@@ -74,7 +104,7 @@
 
 </description>
         
-        <pubDate>Thu, 13 Sep 2018 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence.html</guid>
@@ -89,7 +119,7 @@
 
 </description>
         
-        <pubDate>Tue, 28 Aug 2018 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 28 Aug 2018 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup.html</guid>
@@ -104,7 +134,7 @@
 
 </description>
         
-        <pubDate>Thu, 28 Jun 2018 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 28 Jun 2018 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html</guid>
@@ -119,7 +149,7 @@
 
 </description>
         
-        <pubDate>Fri, 13 Apr 2018 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 13 Apr 2018 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails.html</guid>
@@ -134,7 +164,7 @@
 
 </description>
         
-        <pubDate>Thu, 29 Mar 2018 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2018/03/29/checking-out-tsflow.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2018/03/29/checking-out-tsflow.html</guid>
@@ -149,7 +179,7 @@
 
 </description>
         
-        <pubDate>Thu, 24 Aug 2017 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 24 Aug 2017 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status.html</guid>
@@ -164,7 +194,7 @@
 
 </description>
         
-        <pubDate>Wed, 23 Aug 2017 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2017/08/23/how-long-to-deploy-a-secure-hdinsight-cluster.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2017/08/23/how-long-to-deploy-a-secure-hdinsight-cluster.html</guid>
@@ -179,7 +209,7 @@
 
 </description>
         
-        <pubDate>Mon, 26 Jun 2017 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2017/06/26/how-ive-deployed-r-models-with-microsoft-r-server.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2017/06/26/how-ive-deployed-r-models-with-microsoft-r-server.html</guid>
@@ -194,7 +224,7 @@
 
 </description>
         
-        <pubDate>Thu, 15 Jun 2017 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2017/06/15/how-i-fetched-data-from-hive-in-r-with-hdinsight.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2017/06/15/how-i-fetched-data-from-hive-in-r-with-hdinsight.html</guid>
@@ -209,7 +239,7 @@
 
 </description>
         
-        <pubDate>Mon, 08 May 2017 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 08 May 2017 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html</guid>
@@ -224,7 +254,7 @@
 
 </description>
         
-        <pubDate>Thu, 31 Jul 2014 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 31 Jul 2014 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running.html</guid>
@@ -239,7 +269,7 @@
 
 </description>
         
-        <pubDate>Wed, 30 Jul 2014 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 30 Jul 2014 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume.html</guid>
@@ -254,7 +284,7 @@
 
 </description>
         
-        <pubDate>Mon, 14 Jul 2014 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 14 Jul 2014 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2014/07/14/symfony-denied-access.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2014/07/14/symfony-denied-access.html</guid>
@@ -269,7 +299,7 @@
 
 </description>
         
-        <pubDate>Tue, 01 Apr 2014 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 01 Apr 2014 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2.html</guid>
@@ -284,7 +314,7 @@
 
 </description>
         
-        <pubDate>Fri, 10 Jan 2014 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 10 Jan 2014 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2014/01/10/extract-terms-from-text.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2014/01/10/extract-terms-from-text.html</guid>
@@ -301,7 +331,7 @@
 
 </description>
         
-        <pubDate>Wed, 23 Oct 2013 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 23 Oct 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/10/23/the-men-of-issa.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/10/23/the-men-of-issa.html</guid>
@@ -316,7 +346,7 @@
 
 </description>
         
-        <pubDate>Wed, 16 Oct 2013 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/10/16/amazon-advises-me-to-be-responsible-with-tomcat.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/10/16/amazon-advises-me-to-be-responsible-with-tomcat.html</guid>
@@ -331,7 +361,7 @@
 
 </description>
         
-        <pubDate>Sat, 07 Sep 2013 00:00:00 -0700</pubDate>
+        <pubDate>Sat, 07 Sep 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/09/07/changing-the-water-filters.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/09/07/changing-the-water-filters.html</guid>
@@ -346,7 +376,7 @@
 
 </description>
         
-        <pubDate>Mon, 26 Aug 2013 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 26 Aug 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/08/26/mentor-teaches-how-to-argue.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/08/26/mentor-teaches-how-to-argue.html</guid>
@@ -361,7 +391,7 @@
 
 </description>
         
-        <pubDate>Tue, 04 Jun 2013 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 04 Jun 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/06/04/4runner-po770-error-code.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/06/04/4runner-po770-error-code.html</guid>
@@ -376,7 +406,7 @@
 
 </description>
         
-        <pubDate>Tue, 07 May 2013 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 07 May 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/05/07/tack-and-diplomacy.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/05/07/tack-and-diplomacy.html</guid>
@@ -391,7 +421,7 @@
 
 </description>
         
-        <pubDate>Tue, 30 Apr 2013 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/04/30/recent-accomplishments.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/04/30/recent-accomplishments.html</guid>
@@ -406,7 +436,7 @@
 
 </description>
         
-        <pubDate>Tue, 30 Apr 2013 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/04/30/disable-firewall-on-redhat.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/04/30/disable-firewall-on-redhat.html</guid>
@@ -421,7 +451,7 @@
 
 </description>
         
-        <pubDate>Mon, 15 Apr 2013 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 15 Apr 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/04/15/networking-is-important.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/04/15/networking-is-important.html</guid>
@@ -436,7 +466,7 @@
 
 </description>
         
-        <pubDate>Fri, 29 Mar 2013 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 29 Mar 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/03/29/building-an-inferencing-engine.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/03/29/building-an-inferencing-engine.html</guid>
@@ -451,7 +481,7 @@
 
 </description>
         
-        <pubDate>Tue, 26 Mar 2013 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 26 Mar 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/03/26/sentiment-analysis.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/03/26/sentiment-analysis.html</guid>
@@ -466,7 +496,7 @@
 
 </description>
         
-        <pubDate>Tue, 19 Mar 2013 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 19 Mar 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/03/19/st-francis-prayer.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/03/19/st-francis-prayer.html</guid>
@@ -481,7 +511,7 @@
 
 </description>
         
-        <pubDate>Wed, 23 Jan 2013 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 23 Jan 2013 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2013/01/23/mongodb-boulder.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2013/01/23/mongodb-boulder.html</guid>
@@ -496,7 +526,7 @@
 
 </description>
         
-        <pubDate>Thu, 13 Dec 2012 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 13 Dec 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/12/13/conference-and-webinar.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/12/13/conference-and-webinar.html</guid>
@@ -511,7 +541,7 @@
 
 </description>
         
-        <pubDate>Thu, 08 Nov 2012 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 08 Nov 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/11/08/heading-to-mongosv.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/11/08/heading-to-mongosv.html</guid>
@@ -526,7 +556,7 @@
 
 </description>
         
-        <pubDate>Fri, 26 Oct 2012 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 26 Oct 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/10/26/what-graphs-and-ontologies-mean-to-you.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/10/26/what-graphs-and-ontologies-mean-to-you.html</guid>
@@ -541,7 +571,7 @@
 
 </description>
         
-        <pubDate>Fri, 19 Oct 2012 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 19 Oct 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/10/19/oracle-openworld-mongodb-use-case.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/10/19/oracle-openworld-mongodb-use-case.html</guid>
@@ -556,7 +586,7 @@
 
 </description>
         
-        <pubDate>Fri, 05 Oct 2012 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 05 Oct 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/10/05/modeling-student-knowlege.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/10/05/modeling-student-knowlege.html</guid>
@@ -571,7 +601,7 @@
 
 </description>
         
-        <pubDate>Mon, 01 Oct 2012 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 01 Oct 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/10/01/how-apollo-group-evaluated-mongodb-white-paper.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/10/01/how-apollo-group-evaluated-mongodb-white-paper.html</guid>
@@ -586,7 +616,7 @@
 
 </description>
         
-        <pubDate>Tue, 21 Aug 2012 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 21 Aug 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/08/21/load-testing-aws.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/08/21/load-testing-aws.html</guid>
@@ -601,7 +631,7 @@
 
 </description>
         
-        <pubDate>Tue, 10 Apr 2012 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html</guid>
@@ -616,7 +646,7 @@
 
 </description>
         
-        <pubDate>Wed, 14 Mar 2012 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 14 Mar 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/03/14/import-that-image.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/03/14/import-that-image.html</guid>
@@ -630,7 +660,7 @@
           <description>&lt;p&gt;I recently had to downgrade node and found &lt;a href=&quot;http://www.websector.de/blog/2011/12/15/quick-tip-node-how-to-downgrade-node-js-on-os-x/&quot;&gt;Jens walk through&lt;/a&gt; great.&lt;/p&gt;
 </description>
         
-        <pubDate>Tue, 21 Feb 2012 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 21 Feb 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/02/21/downgrading-node.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/02/21/downgrading-node.html</guid>
@@ -645,7 +675,7 @@
 
 </description>
         
-        <pubDate>Tue, 21 Feb 2012 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 21 Feb 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/02/21/copy-contents-of-directory-into-another.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/02/21/copy-contents-of-directory-into-another.html</guid>
@@ -660,7 +690,7 @@
 
 </description>
         
-        <pubDate>Fri, 10 Feb 2012 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 10 Feb 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/02/10/backup-wordpress.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/02/10/backup-wordpress.html</guid>
@@ -675,7 +705,7 @@
 
 </description>
         
-        <pubDate>Wed, 11 Jan 2012 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 11 Jan 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/01/11/proxy-node-through-nginx.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/01/11/proxy-node-through-nginx.html</guid>
@@ -690,7 +720,7 @@
 
 </description>
         
-        <pubDate>Wed, 11 Jan 2012 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 11 Jan 2012 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2012/01/11/installing-node-and-mongo.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2012/01/11/installing-node-and-mongo.html</guid>
@@ -705,7 +735,7 @@
 
 </description>
         
-        <pubDate>Tue, 01 Nov 2011 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 01 Nov 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/11/01/springone-notes.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/11/01/springone-notes.html</guid>
@@ -720,7 +750,7 @@
 
 </description>
         
-        <pubDate>Tue, 01 Nov 2011 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 01 Nov 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/11/01/queues.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/11/01/queues.html</guid>
@@ -735,7 +765,7 @@
 
 </description>
         
-        <pubDate>Tue, 01 Nov 2011 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 01 Nov 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/11/01/javascript-templating.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/11/01/javascript-templating.html</guid>
@@ -750,7 +780,7 @@
 
 </description>
         
-        <pubDate>Fri, 30 Sep 2011 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 30 Sep 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/09/30/share-folders-between-linux-and-windows.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/09/30/share-folders-between-linux-and-windows.html</guid>
@@ -765,7 +795,7 @@
 
 </description>
         
-        <pubDate>Fri, 30 Sep 2011 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 30 Sep 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/09/30/flex-and-ubuntu.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/09/30/flex-and-ubuntu.html</guid>
@@ -780,7 +810,7 @@
 
 </description>
         
-        <pubDate>Fri, 30 Sep 2011 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 30 Sep 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/09/30/configure-ssh.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/09/30/configure-ssh.html</guid>
@@ -795,7 +825,7 @@
 
 </description>
         
-        <pubDate>Wed, 20 Jul 2011 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 20 Jul 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/07/20/ubuntus-window-borders-go-missing.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/07/20/ubuntus-window-borders-go-missing.html</guid>
@@ -810,7 +840,7 @@
 
 </description>
         
-        <pubDate>Wed, 20 Jul 2011 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 20 Jul 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/07/20/freemarker-not-displaying.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/07/20/freemarker-not-displaying.html</guid>
@@ -824,7 +854,7 @@
           <description>&lt;p&gt;From some reason, the menu on my Ubuntu decided to freeze on me. Fortunately I can still be productive from the command line. The only problem is my launcher for the terminal is frozen with the rest of the menus. Thanks to a quick search, I was able to use a keyboard shortcut to launch the terminal. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + Alt + t&lt;/code&gt;&lt;/p&gt;
 </description>
         
-        <pubDate>Wed, 06 Jul 2011 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 06 Jul 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/07/06/starting-ubuntu-terminal.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/07/06/starting-ubuntu-terminal.html</guid>
@@ -839,7 +869,7 @@
 
 </description>
         
-        <pubDate>Tue, 05 Jul 2011 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 05 Jul 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/07/05/debugging-a-tomcat-application.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/07/05/debugging-a-tomcat-application.html</guid>
@@ -854,7 +884,7 @@
 
 </description>
         
-        <pubDate>Mon, 13 Jun 2011 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 13 Jun 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/06/13/singleton-pattern-for-net.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/06/13/singleton-pattern-for-net.html</guid>
@@ -869,7 +899,7 @@
 
 </description>
         
-        <pubDate>Thu, 12 May 2011 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 12 May 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/05/12/the-cloud-is-cool.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/05/12/the-cloud-is-cool.html</guid>
@@ -884,7 +914,7 @@
 
 </description>
         
-        <pubDate>Mon, 09 May 2011 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 09 May 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/05/09/organizing-technical-information.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/05/09/organizing-technical-information.html</guid>
@@ -899,7 +929,7 @@
 
 </description>
         
-        <pubDate>Wed, 06 Apr 2011 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 06 Apr 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/04/06/installing-ejabberd.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/04/06/installing-ejabberd.html</guid>
@@ -914,7 +944,7 @@
 
 </description>
         
-        <pubDate>Wed, 06 Apr 2011 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 06 Apr 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/04/06/installing-ejabberd-part-ii.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/04/06/installing-ejabberd-part-ii.html</guid>
@@ -929,7 +959,7 @@
 
 </description>
         
-        <pubDate>Wed, 30 Mar 2011 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 30 Mar 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/03/30/improve-performance-of-mod_rewrite.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/03/30/improve-performance-of-mod_rewrite.html</guid>
@@ -944,7 +974,7 @@
 
 </description>
         
-        <pubDate>Mon, 28 Mar 2011 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 28 Mar 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/03/28/enable-pretty-links-in-word-press.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/03/28/enable-pretty-links-in-word-press.html</guid>
@@ -959,7 +989,7 @@
 
 </description>
         
-        <pubDate>Wed, 23 Mar 2011 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 23 Mar 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/03/23/improving-presentations.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/03/23/improving-presentations.html</guid>
@@ -974,7 +1004,7 @@
 
 </description>
         
-        <pubDate>Tue, 22 Mar 2011 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 22 Mar 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/03/22/a-tour-of-jmeter-part-2.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/03/22/a-tour-of-jmeter-part-2.html</guid>
@@ -989,7 +1019,7 @@
 
 </description>
         
-        <pubDate>Fri, 11 Mar 2011 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/03/11/getting-started-with-cacti.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/03/11/getting-started-with-cacti.html</guid>
@@ -1004,7 +1034,7 @@
 
 </description>
         
-        <pubDate>Thu, 17 Feb 2011 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 17 Feb 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/02/17/a-tour-of-jmeter-part-1.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/02/17/a-tour-of-jmeter-part-1.html</guid>
@@ -1019,7 +1049,7 @@
 
 </description>
         
-        <pubDate>Thu, 10 Feb 2011 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 10 Feb 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/02/10/jmeter-tips.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/02/10/jmeter-tips.html</guid>
@@ -1034,7 +1064,7 @@
 
 </description>
         
-        <pubDate>Thu, 27 Jan 2011 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 27 Jan 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/01/27/automate-standards-compliance.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/01/27/automate-standards-compliance.html</guid>
@@ -1049,7 +1079,7 @@
 
 </description>
         
-        <pubDate>Wed, 19 Jan 2011 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 19 Jan 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/01/19/week-11-03-objectives-fe.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/01/19/week-11-03-objectives-fe.html</guid>
@@ -1064,7 +1094,7 @@
 
 </description>
         
-        <pubDate>Wed, 19 Jan 2011 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 19 Jan 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/01/19/303.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/01/19/303.html</guid>
@@ -1079,7 +1109,7 @@
 
 </description>
         
-        <pubDate>Fri, 14 Jan 2011 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 14 Jan 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/01/14/python-and-screen-scraping.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/01/14/python-and-screen-scraping.html</guid>
@@ -1094,7 +1124,7 @@
 
 </description>
         
-        <pubDate>Fri, 14 Jan 2011 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 14 Jan 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/01/14/debugging-salesforce.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/01/14/debugging-salesforce.html</guid>
@@ -1109,7 +1139,7 @@
 
 </description>
         
-        <pubDate>Thu, 13 Jan 2011 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 13 Jan 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/01/13/travel-tips.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/01/13/travel-tips.html</guid>
@@ -1124,7 +1154,7 @@
 
 </description>
         
-        <pubDate>Tue, 11 Jan 2011 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 11 Jan 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/01/11/getting-started-with-salesforce-com.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/01/11/getting-started-with-salesforce-com.html</guid>
@@ -1139,7 +1169,7 @@
 
 </description>
         
-        <pubDate>Tue, 11 Jan 2011 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 11 Jan 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/01/11/custom-ui-on-salesforce.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/01/11/custom-ui-on-salesforce.html</guid>
@@ -1154,7 +1184,7 @@
 
 </description>
         
-        <pubDate>Tue, 11 Jan 2011 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 11 Jan 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/01/11/coding-on-salesforce.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/01/11/coding-on-salesforce.html</guid>
@@ -1169,7 +1199,7 @@
 
 </description>
         
-        <pubDate>Mon, 03 Jan 2011 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 03 Jan 2011 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2011/01/03/using-riak.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2011/01/03/using-riak.html</guid>
@@ -1184,7 +1214,7 @@
 
 </description>
         
-        <pubDate>Wed, 15 Dec 2010 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 15 Dec 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/12/15/getting-started-with-ruby-on-rail-in-eclipse.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/12/15/getting-started-with-ruby-on-rail-in-eclipse.html</guid>
@@ -1201,7 +1231,7 @@
 &lt;/ul&gt;
 </description>
         
-        <pubDate>Wed, 15 Dec 2010 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 15 Dec 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/12/15/exploring-heroku.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/12/15/exploring-heroku.html</guid>
@@ -1216,7 +1246,7 @@
 
 </description>
         
-        <pubDate>Wed, 15 Dec 2010 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 15 Dec 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/12/15/development-platforms.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/12/15/development-platforms.html</guid>
@@ -1240,7 +1270,7 @@
 &lt;/ul&gt;
 </description>
         
-        <pubDate>Tue, 14 Dec 2010 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 14 Dec 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/12/14/week-50-objectives-fe.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/12/14/week-50-objectives-fe.html</guid>
@@ -1255,7 +1285,7 @@
 
 </description>
         
-        <pubDate>Tue, 14 Dec 2010 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 14 Dec 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/12/14/rapid-development-frameworks.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/12/14/rapid-development-frameworks.html</guid>
@@ -1270,7 +1300,7 @@
 
 </description>
         
-        <pubDate>Fri, 10 Dec 2010 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 10 Dec 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/12/10/setup-password-less-ssh-login.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/12/10/setup-password-less-ssh-login.html</guid>
@@ -1285,7 +1315,7 @@
 
 </description>
         
-        <pubDate>Thu, 09 Dec 2010 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/12/09/week-49-objectives-fe.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/12/09/week-49-objectives-fe.html</guid>
@@ -1303,7 +1333,7 @@
 &lt;/ul&gt;
 </description>
         
-        <pubDate>Wed, 08 Dec 2010 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 08 Dec 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/12/08/week-49-objective.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/12/08/week-49-objective.html</guid>
@@ -1318,7 +1348,7 @@
 
 </description>
         
-        <pubDate>Wed, 08 Dec 2010 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 08 Dec 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/12/08/installing-hadoop-cluster.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/12/08/installing-hadoop-cluster.html</guid>
@@ -1333,7 +1363,7 @@
 
 </description>
         
-        <pubDate>Thu, 02 Dec 2010 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 02 Dec 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/12/02/finding-bad-code.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/12/02/finding-bad-code.html</guid>
@@ -1348,7 +1378,7 @@
 
 </description>
         
-        <pubDate>Wed, 03 Nov 2010 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 03 Nov 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/11/03/updating-wordpress.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/11/03/updating-wordpress.html</guid>
@@ -1363,7 +1393,7 @@
 
 </description>
         
-        <pubDate>Tue, 02 Nov 2010 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 02 Nov 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/11/02/trying-to-blog-more.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/11/02/trying-to-blog-more.html</guid>
@@ -1378,7 +1408,7 @@
 
 </description>
         
-        <pubDate>Wed, 22 Sep 2010 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 22 Sep 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/09/22/scientific-process.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/09/22/scientific-process.html</guid>
@@ -1393,7 +1423,7 @@
 
 </description>
         
-        <pubDate>Tue, 29 Jun 2010 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 29 Jun 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/06/29/development-cadence.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/06/29/development-cadence.html</guid>
@@ -1408,7 +1438,7 @@
 
 </description>
         
-        <pubDate>Thu, 17 Jun 2010 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 17 Jun 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/06/17/selenium-testing.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/06/17/selenium-testing.html</guid>
@@ -1423,7 +1453,7 @@
 
 </description>
         
-        <pubDate>Wed, 16 Jun 2010 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 16 Jun 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/06/16/my-hadoop-training.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/06/16/my-hadoop-training.html</guid>
@@ -1438,7 +1468,7 @@
 
 </description>
         
-        <pubDate>Tue, 15 Jun 2010 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 15 Jun 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/06/15/beginning-programming-again.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/06/15/beginning-programming-again.html</guid>
@@ -1453,7 +1483,7 @@
 
 </description>
         
-        <pubDate>Wed, 09 Jun 2010 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 09 Jun 2010 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2010/06/09/pains-with-java.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2010/06/09/pains-with-java.html</guid>
@@ -1468,7 +1498,7 @@
 
 </description>
         
-        <pubDate>Sat, 23 May 2009 00:00:00 -0700</pubDate>
+        <pubDate>Sat, 23 May 2009 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2009/05/23/preventing-groupthink.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2009/05/23/preventing-groupthink.html</guid>
@@ -1483,7 +1513,7 @@
 
 </description>
         
-        <pubDate>Sat, 23 May 2009 00:00:00 -0700</pubDate>
+        <pubDate>Sat, 23 May 2009 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2009/05/23/automating-quality-code-with-fxcop.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2009/05/23/automating-quality-code-with-fxcop.html</guid>
@@ -1498,7 +1528,7 @@
 
 </description>
         
-        <pubDate>Wed, 04 Feb 2009 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 04 Feb 2009 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2009/02/04/json-serialization.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2009/02/04/json-serialization.html</guid>
@@ -1513,7 +1543,7 @@
 
 </description>
         
-        <pubDate>Sun, 01 Feb 2009 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 01 Feb 2009 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2009/02/01/first-impressions-of-google-app-engine.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2009/02/01/first-impressions-of-google-app-engine.html</guid>
@@ -1528,7 +1558,7 @@
 
 </description>
         
-        <pubDate>Thu, 23 Oct 2008 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 23 Oct 2008 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2008/10/23/ajaxworld-day-3.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2008/10/23/ajaxworld-day-3.html</guid>
@@ -1543,7 +1573,7 @@
 
 </description>
         
-        <pubDate>Wed, 22 Oct 2008 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 22 Oct 2008 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2008/10/22/ajaxworld-day-2.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2008/10/22/ajaxworld-day-2.html</guid>
@@ -1558,7 +1588,7 @@
 
 </description>
         
-        <pubDate>Tue, 21 Oct 2008 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 21 Oct 2008 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2008/10/21/ajaxworld-day-1.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2008/10/21/ajaxworld-day-1.html</guid>
@@ -1573,7 +1603,7 @@
 
 </description>
         
-        <pubDate>Tue, 24 Jun 2008 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 24 Jun 2008 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application.html</guid>
@@ -1588,7 +1618,7 @@
 
 </description>
         
-        <pubDate>Mon, 21 Apr 2008 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 21 Apr 2008 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2008/04/21/logging-best-practices.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2008/04/21/logging-best-practices.html</guid>
@@ -1603,7 +1633,7 @@
 
 </description>
         
-        <pubDate>Fri, 28 Mar 2008 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 28 Mar 2008 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2008/03/28/practical-svn-branching-and-merging.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2008/03/28/practical-svn-branching-and-merging.html</guid>
@@ -1618,7 +1648,7 @@
 
 </description>
         
-        <pubDate>Wed, 14 Nov 2007 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 14 Nov 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/11/14/asp-net-authorization-out-of-the-loop.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/11/14/asp-net-authorization-out-of-the-loop.html</guid>
@@ -1633,7 +1663,7 @@
 
 </description>
         
-        <pubDate>Fri, 02 Nov 2007 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 02 Nov 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html</guid>
@@ -1648,7 +1678,7 @@
 
 </description>
         
-        <pubDate>Tue, 23 Oct 2007 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 23 Oct 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/10/23/getting-started-with-lisp.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/10/23/getting-started-with-lisp.html</guid>
@@ -1663,7 +1693,7 @@
 
 </description>
         
-        <pubDate>Fri, 31 Aug 2007 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 31 Aug 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/08/31/how-to-convert-integers-to-strings-in-c.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/08/31/how-to-convert-integers-to-strings-in-c.html</guid>
@@ -1678,7 +1708,7 @@
 
 </description>
         
-        <pubDate>Tue, 21 Aug 2007 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 21 Aug 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/08/21/anonymous-delegates.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/08/21/anonymous-delegates.html</guid>
@@ -1693,7 +1723,7 @@
 
 </description>
         
-        <pubDate>Mon, 20 Aug 2007 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 20 Aug 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/08/20/forms-authentication-and-cookies.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/08/20/forms-authentication-and-cookies.html</guid>
@@ -1708,7 +1738,7 @@
 
 </description>
         
-        <pubDate>Sun, 19 Aug 2007 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 19 Aug 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/08/19/soap-and-fiddler.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/08/19/soap-and-fiddler.html</guid>
@@ -1723,7 +1753,7 @@
 
 </description>
         
-        <pubDate>Sun, 19 Aug 2007 00:00:00 -0700</pubDate>
+        <pubDate>Sun, 19 Aug 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/08/19/enterprise-library-data-access-block.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/08/19/enterprise-library-data-access-block.html</guid>
@@ -1738,7 +1768,7 @@
 
 </description>
         
-        <pubDate>Fri, 17 Aug 2007 00:00:00 -0700</pubDate>
+        <pubDate>Fri, 17 Aug 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/08/17/generate-crud.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/08/17/generate-crud.html</guid>
@@ -1753,7 +1783,7 @@
 
 </description>
         
-        <pubDate>Thu, 16 Aug 2007 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 16 Aug 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/08/16/net-development-trees-part-ii.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/08/16/net-development-trees-part-ii.html</guid>
@@ -1770,7 +1800,7 @@
 
 </description>
         
-        <pubDate>Wed, 15 Aug 2007 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 15 Aug 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/08/15/net-development-trees-part-i.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/08/15/net-development-trees-part-i.html</guid>
@@ -1785,7 +1815,7 @@
 
 </description>
         
-        <pubDate>Wed, 15 Aug 2007 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 15 Aug 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/08/15/desert-code-camp.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/08/15/desert-code-camp.html</guid>
@@ -1800,7 +1830,7 @@
 
 </description>
         
-        <pubDate>Thu, 19 Jul 2007 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 19 Jul 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/07/19/review-of-copy-source-as-html-tools.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/07/19/review-of-copy-source-as-html-tools.html</guid>
@@ -1815,7 +1845,7 @@
 
 </description>
         
-        <pubDate>Wed, 18 Jul 2007 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 18 Jul 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/07/18/how-to-implement-logging.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/07/18/how-to-implement-logging.html</guid>
@@ -1830,7 +1860,7 @@
 
 </description>
         
-        <pubDate>Tue, 17 Jul 2007 00:00:00 -0700</pubDate>
+        <pubDate>Tue, 17 Jul 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/07/17/when-a-bug-is-found.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/07/17/when-a-bug-is-found.html</guid>
@@ -1845,7 +1875,7 @@
 
 </description>
         
-        <pubDate>Wed, 11 Jul 2007 00:00:00 -0700</pubDate>
+        <pubDate>Wed, 11 Jul 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/07/11/ruby-array-randomize.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/07/11/ruby-array-randomize.html</guid>
@@ -1860,7 +1890,7 @@
 
 </description>
         
-        <pubDate>Thu, 05 Jul 2007 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 05 Jul 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/07/05/balance-simple-code-and-expert-knowledge.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/07/05/balance-simple-code-and-expert-knowledge.html</guid>
@@ -1874,7 +1904,7 @@
           <description>&lt;p&gt;My daily routine involves reading several different blogs as my way of taking advantage of other people’s great ideas. Most of the things that I read are technical, but mix in with the bunch has been a &lt;a href=&quot;http://www.problogger.net/&quot;&gt;blog about blogs&lt;/a&gt;. For the most part many of the articles I read are in essence a variation on the same theme. It is refreshing to find a diamond in the rough article that really helps to clarify an idea or answer a difficult question. I don’t expect this post to be a diamond, but I do plan for it to help me stay consistent with delivering my own ideas and experiences. The one piece of advice I’ve read is to keep a regular schedule of posting and that is what I’ll do.&lt;/p&gt;
 </description>
         
-        <pubDate>Mon, 02 Jul 2007 00:00:00 -0700</pubDate>
+        <pubDate>Mon, 02 Jul 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/07/02/keeping-the-blog-alive.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/07/02/keeping-the-blog-alive.html</guid>
@@ -1889,7 +1919,7 @@
 
 </description>
         
-        <pubDate>Sat, 23 Jun 2007 00:00:00 -0700</pubDate>
+        <pubDate>Sat, 23 Jun 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/06/23/objects-data-and-actions.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/06/23/objects-data-and-actions.html</guid>
@@ -1903,7 +1933,7 @@
           <description>&lt;p&gt;I’ve downloaded Windows Live Writer to see how well it will do posting to Blogspot.com, and so far I am very impressed with the interface. One of the features of Live Writer is the ability to select View -&amp;gt; Web Preview. This shows me what the current post will look like using the templates and styles I have set up at Blogspot.&lt;/p&gt;
 </description>
         
-        <pubDate>Thu, 14 Jun 2007 00:00:00 -0700</pubDate>
+        <pubDate>Thu, 14 Jun 2007 00:00:00 +0000</pubDate>
         <link>
         https://www.briglamoreaux.com/2007/06/14/live-writer.html</link>
         <guid isPermaLink="true">https://www.briglamoreaux.com/2007/06/14/live-writer.html</guid>

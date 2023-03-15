@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/web/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/web/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">SpringOne Notes</title>
       <link href="https://www.briglamoreaux.com/2011/11/01/springone-notes.html" rel="alternate" type="text/html" title="SpringOne Notes" />
-      <published>2011-11-01T00:00:00-07:00</published>
-      <updated>2011-11-01T00:00:00-07:00</updated>
+      <published>2011-11-01T00:00:00+00:00</published>
+      <updated>2011-11-01T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2011/11/01/springone-notes</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2011/11/01/springone-notes.html">&lt;p&gt;These are general notes I took&lt;/p&gt;
 
@@ -84,8 +84,8 @@
     <entry>
       <title type="html">Javascript Templating</title>
       <link href="https://www.briglamoreaux.com/2011/11/01/javascript-templating.html" rel="alternate" type="text/html" title="Javascript Templating" />
-      <published>2011-11-01T00:00:00-07:00</published>
-      <updated>2011-11-01T00:00:00-07:00</updated>
+      <published>2011-11-01T00:00:00+00:00</published>
+      <updated>2011-11-01T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2011/11/01/javascript-templating</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2011/11/01/javascript-templating.html">&lt;p&gt;Way back in 2008 I was really getting into JavaScript development and created a small templating object.&lt;/p&gt;
 

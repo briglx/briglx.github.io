@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/performance/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/performance/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Recent Accomplishments</title>
       <link href="https://www.briglamoreaux.com/2013/04/30/recent-accomplishments.html" rel="alternate" type="text/html" title="Recent Accomplishments" />
-      <published>2013-04-30T00:00:00-07:00</published>
-      <updated>2013-04-30T00:00:00-07:00</updated>
+      <published>2013-04-30T00:00:00+00:00</published>
+      <updated>2013-04-30T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2013/04/30/recent-accomplishments</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2013/04/30/recent-accomplishments.html">&lt;p&gt;I was asked to put together a list of accomplishments I’ve achieved over the past few months. I thought it would be important to focus on different aspects of my career growth.&lt;/p&gt;
 
@@ -103,8 +103,8 @@
     <entry>
       <title type="html">Finding Bad Code</title>
       <link href="https://www.briglamoreaux.com/2010/12/02/finding-bad-code.html" rel="alternate" type="text/html" title="Finding Bad Code" />
-      <published>2010-12-02T00:00:00-07:00</published>
-      <updated>2010-12-02T00:00:00-07:00</updated>
+      <published>2010-12-02T00:00:00+00:00</published>
+      <updated>2010-12-02T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2010/12/02/finding-bad-code</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2010/12/02/finding-bad-code.html">&lt;p&gt;I’ve been working on parsing 1 million records into a local graph. I noticed that it was taking a while so I put together a test app to find where the problem could be. The tests was creating &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int.MaxValue&lt;/code&gt; number of vertices into the HashRepository.&lt;/p&gt;
 

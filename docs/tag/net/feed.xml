@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/net/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/net/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Json Serialization</title>
       <link href="https://www.briglamoreaux.com/2009/02/04/json-serialization.html" rel="alternate" type="text/html" title="Json Serialization" />
-      <published>2009-02-04T00:00:00-07:00</published>
-      <updated>2009-02-04T00:00:00-07:00</updated>
+      <published>2009-02-04T00:00:00+00:00</published>
+      <updated>2009-02-04T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2009/02/04/json-serialization</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2009/02/04/json-serialization.html">&lt;p&gt;I’ve been having fun trying to implement an idea I have. Part of the idea involves caching objects to &lt;a href=&quot;http://www.danga.com/memcached/&quot;&gt;memcached&lt;/a&gt; in &lt;a href=&quot;http://json.org/&quot;&gt;Json&lt;/a&gt; format. The idea being that the object saved to memcached wouldn’t be bound to .Net specific methodology.&lt;/p&gt;
 
@@ -101,8 +101,8 @@
     <entry>
       <title type="html">Use Fiddler with .Net Application</title>
       <link href="https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application.html" rel="alternate" type="text/html" title="Use Fiddler with .Net Application" />
-      <published>2008-06-24T00:00:00-07:00</published>
-      <updated>2008-06-24T00:00:00-07:00</updated>
+      <published>2008-06-24T00:00:00+00:00</published>
+      <updated>2008-06-24T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application.html">&lt;p&gt;I often need to watch communication between a web service and my application. The best way I’ve found is to configure my app to use Fiddler as a proxy between my application and the web service. Once configured, I can watch the traffic. The simple step that I keep forgetting is the entry in the Web.Config file.&lt;/p&gt;
 
@@ -156,8 +156,8 @@
     <entry>
       <title type="html">Beware Dynamic User Controls in a Web Farm</title>
       <link href="https://www.briglamoreaux.com/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html" rel="alternate" type="text/html" title="Beware Dynamic User Controls in a Web Farm" />
-      <published>2007-11-02T00:00:00-07:00</published>
-      <updated>2007-11-02T00:00:00-07:00</updated>
+      <published>2007-11-02T00:00:00+00:00</published>
+      <updated>2007-11-02T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2007/11/02/beware-dynamic-user-controls-in-a-web-farm</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html">&lt;p&gt;Many large sites utilize a web farm with a load balancer. The load balancer will cycle through each server in the farm for each request. Today I assumed our load balancer had &lt;a href=&quot;http://en.wikipedia.org/wiki/Load_balancing_%28computing%29&quot;&gt;persistence&lt;/a&gt;.&lt;/p&gt;
 
@@ -208,8 +208,8 @@
     <entry>
       <title type="html">How to Convert Integers to Strings in C#</title>
       <link href="https://www.briglamoreaux.com/2007/08/31/how-to-convert-integers-to-strings-in-c.html" rel="alternate" type="text/html" title="How to Convert Integers to Strings in C#" />
-      <published>2007-08-31T00:00:00-07:00</published>
-      <updated>2007-08-31T00:00:00-07:00</updated>
+      <published>2007-08-31T00:00:00+00:00</published>
+      <updated>2007-08-31T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2007/08/31/how-to-convert-integers-to-strings-in-c</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/31/how-to-convert-integers-to-strings-in-c.html">&lt;p&gt;I’ve been working with converting strings to integers and have a few options at my disposal.&lt;/p&gt;
 
@@ -303,8 +303,8 @@
     <entry>
       <title type="html">Anonymous Delegates</title>
       <link href="https://www.briglamoreaux.com/2007/08/21/anonymous-delegates.html" rel="alternate" type="text/html" title="Anonymous Delegates" />
-      <published>2007-08-21T00:00:00-07:00</published>
-      <updated>2007-08-21T00:00:00-07:00</updated>
+      <published>2007-08-21T00:00:00+00:00</published>
+      <updated>2007-08-21T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2007/08/21/anonymous-delegates</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/21/anonymous-delegates.html">&lt;p&gt;I never thought I would use anonymous delegates mostly because I didn’t fully understand what benefit they could give me.&lt;/p&gt;
 
@@ -498,8 +498,8 @@
     <entry>
       <title type="html">Forms Authentication and Cookies</title>
       <link href="https://www.briglamoreaux.com/2007/08/20/forms-authentication-and-cookies.html" rel="alternate" type="text/html" title="Forms Authentication and Cookies" />
-      <published>2007-08-20T00:00:00-07:00</published>
-      <updated>2007-08-20T00:00:00-07:00</updated>
+      <published>2007-08-20T00:00:00+00:00</published>
+      <updated>2007-08-20T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2007/08/20/forms-authentication-and-cookies</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/20/forms-authentication-and-cookies.html">&lt;p&gt;I encountered a strange problem this morning when I tried to turn on Authentication to the ASP.NET 2.0 Website.&lt;/p&gt;
 
@@ -579,8 +579,8 @@
     <entry>
       <title type="html">Soap and Fiddler</title>
       <link href="https://www.briglamoreaux.com/2007/08/19/soap-and-fiddler.html" rel="alternate" type="text/html" title="Soap and Fiddler" />
-      <published>2007-08-19T00:00:00-07:00</published>
-      <updated>2007-08-19T00:00:00-07:00</updated>
+      <published>2007-08-19T00:00:00+00:00</published>
+      <updated>2007-08-19T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2007/08/19/soap-and-fiddler</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/19/soap-and-fiddler.html">&lt;p&gt;A coworker told me about a strange error he was getting when trying to call a webservice with an ASP 2.0 application. My first thought was, use &lt;a href=&quot;http://www.fiddlertool.com/fiddler/&quot;&gt;Fiddler&lt;/a&gt; and inspect the soap call directly.&lt;/p&gt;
 
@@ -652,8 +652,8 @@
     <entry>
       <title type="html">Enterprise Library - Data Access Block</title>
       <link href="https://www.briglamoreaux.com/2007/08/19/enterprise-library-data-access-block.html" rel="alternate" type="text/html" title="Enterprise Library - Data Access Block" />
-      <published>2007-08-19T00:00:00-07:00</published>
-      <updated>2007-08-19T00:00:00-07:00</updated>
+      <published>2007-08-19T00:00:00+00:00</published>
+      <updated>2007-08-19T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2007/08/19/enterprise-library-data-access-block</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/19/enterprise-library-data-access-block.html">&lt;p&gt;The &lt;a href=&quot;http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnpag2/html/entlib2.asp&quot;&gt;Enterprise Library&lt;/a&gt; from Microsoft is a great framework to quickly get started with coding.&lt;/p&gt;
 
@@ -761,8 +761,8 @@
     <entry>
       <title type="html">Generate CRUD</title>
       <link href="https://www.briglamoreaux.com/2007/08/17/generate-crud.html" rel="alternate" type="text/html" title="Generate CRUD" />
-      <published>2007-08-17T00:00:00-07:00</published>
-      <updated>2007-08-17T00:00:00-07:00</updated>
+      <published>2007-08-17T00:00:00+00:00</published>
+      <updated>2007-08-17T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2007/08/17/generate-crud</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/17/generate-crud.html">&lt;p&gt;Seeing how I’m working on a project that deals with a SQL database and several tables, I decided I didn’t want to mess around with writing all the code for my data CRUD functionality (Create Read Update Delete). Which, indecently, I feel no developer should ever waste their time with CRUD.&lt;/p&gt;
 
@@ -828,8 +828,8 @@ One other major improvement would be to add a template system similar to CodeSmi
     <entry>
       <title type="html">.Net Development Trees part II</title>
       <link href="https://www.briglamoreaux.com/2007/08/16/net-development-trees-part-ii.html" rel="alternate" type="text/html" title=".Net Development Trees part II" />
-      <published>2007-08-16T00:00:00-07:00</published>
-      <updated>2007-08-16T00:00:00-07:00</updated>
+      <published>2007-08-16T00:00:00+00:00</published>
+      <updated>2007-08-16T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2007/08/16/net-development-trees-part-ii</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/16/net-development-trees-part-ii.html">&lt;p&gt;I’ve found that taking thought in setting up your project development tree can really help with unit testing and having continuous integration for you projects.&lt;/p&gt;
 

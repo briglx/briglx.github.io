@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/proxy/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/proxy/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Use Fiddler with .Net Application</title>
       <link href="https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application.html" rel="alternate" type="text/html" title="Use Fiddler with .Net Application" />
-      <published>2008-06-24T00:00:00-07:00</published>
-      <updated>2008-06-24T00:00:00-07:00</updated>
+      <published>2008-06-24T00:00:00+00:00</published>
+      <updated>2008-06-24T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application.html">&lt;p&gt;I often need to watch communication between a web service and my application. The best way I’ve found is to configure my app to use Fiddler as a proxy between my application and the web service. Once configured, I can watch the traffic. The simple step that I keep forgetting is the entry in the Web.Config file.&lt;/p&gt;
 

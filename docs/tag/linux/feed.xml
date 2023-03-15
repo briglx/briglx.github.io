@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/linux/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/linux/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Finding Missing Images</title>
       <link href="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
-      <published>2022-05-20T00:00:00-07:00</published>
-      <updated>2022-05-20T00:00:00-07:00</updated>
+      <published>2022-05-20T00:00:00+00:00</published>
+      <updated>2022-05-20T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2022/05/20/finding-missing-images</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
 
@@ -185,8 +185,8 @@ CropperCapture%5B12%5D.png,0
     <entry>
       <title type="html">Updating and Migrating Confluence</title>
       <link href="https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence.html" rel="alternate" type="text/html" title="Updating and Migrating Confluence" />
-      <published>2018-09-13T00:00:00-07:00</published>
-      <updated>2018-09-13T00:00:00-07:00</updated>
+      <published>2018-09-13T00:00:00+00:00</published>
+      <updated>2018-09-13T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence.html">&lt;p&gt;I started hosting my wiki on Azure way back in 2016. The other day I received a message that I was  not using managed disks and I should upgrade. So I pushed the upgrade button and kicked off a two day outage which resulted in me pulling my hair out, migrating, looking at logs, and changing databases.&lt;/p&gt;
 
@@ -294,8 +294,8 @@ CropperCapture%5B12%5D.png,0
     <entry>
       <title type="html">Boilerplate Raspbian Setup</title>
       <link href="https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup.html" rel="alternate" type="text/html" title="Boilerplate Raspbian Setup" />
-      <published>2018-08-28T00:00:00-07:00</published>
-      <updated>2018-08-28T00:00:00-07:00</updated>
+      <published>2018-08-28T00:00:00+00:00</published>
+      <updated>2018-08-28T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup.html">&lt;p&gt;I tend to flash my raspberry pies a lot. Here are the steps I follow to get to my working state.&lt;/p&gt;
 
@@ -424,8 +424,8 @@ CropperCapture%5B12%5D.png,0
     <entry>
       <title type="html">Moving GitLab to an EBS Volume</title>
       <link href="https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume.html" rel="alternate" type="text/html" title="Moving GitLab to an EBS Volume" />
-      <published>2014-07-30T00:00:00-07:00</published>
-      <updated>2014-07-30T00:00:00-07:00</updated>
+      <published>2014-07-30T00:00:00+00:00</published>
+      <updated>2014-07-30T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume.html">&lt;p&gt;I’ve really enjoyed using &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;GitLab&lt;/a&gt; to manage my git repositories.&lt;/p&gt;
 
@@ -570,8 +570,8 @@ CropperCapture%5B12%5D.png,0
     <entry>
       <title type="html">Symfony denied Access</title>
       <link href="https://www.briglamoreaux.com/2014/07/14/symfony-denied-access.html" rel="alternate" type="text/html" title="Symfony denied Access" />
-      <published>2014-07-14T00:00:00-07:00</published>
-      <updated>2014-07-14T00:00:00-07:00</updated>
+      <published>2014-07-14T00:00:00+00:00</published>
+      <updated>2014-07-14T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2014/07/14/symfony-denied-access</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/14/symfony-denied-access.html">&lt;p&gt;Moving my Symfony app to a QA server showed me how rude the server is.&lt;/p&gt;
 
@@ -640,8 +640,8 @@ root 1436 1 6 17:49 ? 00:00:00 php-fpm: master process &lt;span class=&quot;o&qu
     <entry>
       <title type="html">Logging onto EC2</title>
       <link href="https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2.html" rel="alternate" type="text/html" title="Logging onto EC2" />
-      <published>2014-04-01T00:00:00-07:00</published>
-      <updated>2014-04-01T00:00:00-07:00</updated>
+      <published>2014-04-01T00:00:00+00:00</published>
+      <updated>2014-04-01T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2.html">&lt;p&gt;I tend to forget how to log onto EC2. This morning I spun up a few servers with an Ubuntu image on EC2. As soon as I tried to log on, I received a&lt;/p&gt;
 
@@ -690,8 +690,8 @@ root 1436 1 6 17:49 ? 00:00:00 php-fpm: master process &lt;span class=&quot;o&qu
     <entry>
       <title type="html">Disable firewall on Redhat</title>
       <link href="https://www.briglamoreaux.com/2013/04/30/disable-firewall-on-redhat.html" rel="alternate" type="text/html" title="Disable firewall on Redhat" />
-      <published>2013-04-30T00:00:00-07:00</published>
-      <updated>2013-04-30T00:00:00-07:00</updated>
+      <published>2013-04-30T00:00:00+00:00</published>
+      <updated>2013-04-30T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2013/04/30/disable-firewall-on-redhat</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2013/04/30/disable-firewall-on-redhat.html">&lt;p&gt;I just tried to deploy and test an application on EC2 running red hat but couldn’t telnet it.&lt;/p&gt;
 
@@ -745,8 +745,8 @@ tcp 0 0 :::8080 :::&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; LISTEN 28923/j
     <entry>
       <title type="html">Copy Contents of Directory into Another</title>
       <link href="https://www.briglamoreaux.com/2012/02/21/copy-contents-of-directory-into-another.html" rel="alternate" type="text/html" title="Copy Contents of Directory into Another" />
-      <published>2012-02-21T00:00:00-07:00</published>
-      <updated>2012-02-21T00:00:00-07:00</updated>
+      <published>2012-02-21T00:00:00+00:00</published>
+      <updated>2012-02-21T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2012/02/21/copy-contents-of-directory-into-another</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2012/02/21/copy-contents-of-directory-into-another.html">&lt;p&gt;I don’t know why this is so difficult to remember but here it is. Notice the trailing . on the end of source&lt;/p&gt;
 
@@ -783,8 +783,8 @@ tcp 0 0 :::8080 :::&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; LISTEN 28923/j
     <entry>
       <title type="html">SpringOne Notes</title>
       <link href="https://www.briglamoreaux.com/2011/11/01/springone-notes.html" rel="alternate" type="text/html" title="SpringOne Notes" />
-      <published>2011-11-01T00:00:00-07:00</published>
-      <updated>2011-11-01T00:00:00-07:00</updated>
+      <published>2011-11-01T00:00:00+00:00</published>
+      <updated>2011-11-01T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2011/11/01/springone-notes</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2011/11/01/springone-notes.html">&lt;p&gt;These are general notes I took&lt;/p&gt;
 
@@ -833,8 +833,8 @@ tcp 0 0 :::8080 :::&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; LISTEN 28923/j
     <entry>
       <title type="html">Share Folders Between Linux and Windows</title>
       <link href="https://www.briglamoreaux.com/2011/09/30/share-folders-between-linux-and-windows.html" rel="alternate" type="text/html" title="Share Folders Between Linux and Windows" />
-      <published>2011-09-30T00:00:00-07:00</published>
-      <updated>2011-09-30T00:00:00-07:00</updated>
+      <published>2011-09-30T00:00:00+00:00</published>
+      <updated>2011-09-30T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2011/09/30/share-folders-between-linux-and-windows</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2011/09/30/share-folders-between-linux-and-windows.html">&lt;p&gt;I needed to share a folder between a linux machine and windows. The seceret is using Samba. Fortunatly there are several guides out there that show how to do it. These are my notes:&lt;/p&gt;
 

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/tensorflow/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/tensorflow/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">More Time Doesn’t Always Help</title>
       <link href="https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html" rel="alternate" type="text/html" title="More Time Doesn't Always Help" />
-      <published>2018-06-28T00:00:00-07:00</published>
-      <updated>2018-06-28T00:00:00-07:00</updated>
+      <published>2018-06-28T00:00:00+00:00</published>
+      <updated>2018-06-28T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html">&lt;p&gt;Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.&lt;/p&gt;
 

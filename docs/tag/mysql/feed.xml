@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/mysql/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/mysql/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Backup Wordpress</title>
       <link href="https://www.briglamoreaux.com/2012/02/10/backup-wordpress.html" rel="alternate" type="text/html" title="Backup Wordpress" />
-      <published>2012-02-10T00:00:00-07:00</published>
-      <updated>2012-02-10T00:00:00-07:00</updated>
+      <published>2012-02-10T00:00:00+00:00</published>
+      <updated>2012-02-10T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2012/02/10/backup-wordpress</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2012/02/10/backup-wordpress.html">&lt;p&gt;I had a little scare the other day. For some reason my db for the blog stopped. I thought it would be a good idea to make a backup just in case.&lt;/p&gt;
 

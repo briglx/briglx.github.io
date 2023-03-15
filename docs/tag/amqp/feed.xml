@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/amqp/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/amqp/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Queues</title>
       <link href="https://www.briglamoreaux.com/2011/11/01/queues.html" rel="alternate" type="text/html" title="Queues" />
-      <published>2011-11-01T00:00:00-07:00</published>
-      <updated>2011-11-01T00:00:00-07:00</updated>
+      <published>2011-11-01T00:00:00+00:00</published>
+      <updated>2011-11-01T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2011/11/01/queues</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2011/11/01/queues.html">&lt;p&gt;I attended the &lt;a href=&quot;http://www.springone2gx.com/conference/chicago/2011/10/home&quot;&gt;SpringOne 2GX conference&lt;/a&gt; in Chicago and had a great time. It’s always nice to learn a new thing or two. I wanted to take time to write down one of the things I learned about queues. &lt;a href=&quot;http://www.springone2gx.com/conference/speaker/rob_harrop&quot;&gt;Rob Harrop&lt;/a&gt; gave a great presentation on &lt;a href=&quot;http://www.rabbitmq.com&quot;&gt;RabbitMQ&lt;/a&gt; which is an &lt;a href=&quot;http://www.amqp.org/&quot;&gt;AMQP&lt;/a&gt; compliant queue.&lt;/p&gt;
 

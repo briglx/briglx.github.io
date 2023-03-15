@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/freemarker/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/freemarker/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Freemarker not Displaying</title>
       <link href="https://www.briglamoreaux.com/2011/07/20/freemarker-not-displaying.html" rel="alternate" type="text/html" title="Freemarker not Displaying" />
-      <published>2011-07-20T00:00:00-07:00</published>
-      <updated>2011-07-20T00:00:00-07:00</updated>
+      <published>2011-07-20T00:00:00+00:00</published>
+      <updated>2011-07-20T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2011/07/20/freemarker-not-displaying</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2011/07/20/freemarker-not-displaying.html">&lt;p&gt;I’m putting together a simple web page and trying to learn more about Freemarker. I’ve setup my views for the project like this:&lt;/p&gt;
 

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/bash/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/bash/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Moving GitLab to an EBS Volume</title>
       <link href="https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume.html" rel="alternate" type="text/html" title="Moving GitLab to an EBS Volume" />
-      <published>2014-07-30T00:00:00-07:00</published>
-      <updated>2014-07-30T00:00:00-07:00</updated>
+      <published>2014-07-30T00:00:00+00:00</published>
+      <updated>2014-07-30T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume.html">&lt;p&gt;I’ve really enjoyed using &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;GitLab&lt;/a&gt; to manage my git repositories.&lt;/p&gt;
 
@@ -180,8 +180,8 @@
     <entry>
       <title type="html">Load Testing with AWS</title>
       <link href="https://www.briglamoreaux.com/2012/08/21/load-testing-aws.html" rel="alternate" type="text/html" title="Load Testing with AWS" />
-      <published>2012-08-21T00:00:00-07:00</published>
-      <updated>2012-08-21T00:00:00-07:00</updated>
+      <published>2012-08-21T00:00:00+00:00</published>
+      <updated>2012-08-21T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2012/08/21/load-testing-aws</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2012/08/21/load-testing-aws.html">&lt;p&gt;Spinning up servers on Amazon has been such a great way to test software. I recently did a performance test of &lt;a href=&quot;http://www.mongodb.org/&quot; title=&quot;MongoDB&quot;&gt;MongoDB&lt;/a&gt; and put together a process and a few scripts that helped me load test a server with 128 clients. Here is the approach I used:&lt;/p&gt;
 
@@ -442,8 +442,8 @@ myserver2.compute-1.amazonaws.com
     <entry>
       <title type="html">Copy Contents of Directory into Another</title>
       <link href="https://www.briglamoreaux.com/2012/02/21/copy-contents-of-directory-into-another.html" rel="alternate" type="text/html" title="Copy Contents of Directory into Another" />
-      <published>2012-02-21T00:00:00-07:00</published>
-      <updated>2012-02-21T00:00:00-07:00</updated>
+      <published>2012-02-21T00:00:00+00:00</published>
+      <updated>2012-02-21T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2012/02/21/copy-contents-of-directory-into-another</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2012/02/21/copy-contents-of-directory-into-another.html">&lt;p&gt;I don’t know why this is so difficult to remember but here it is. Notice the trailing . on the end of source&lt;/p&gt;
 

@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/rdf/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/rdf/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Building an Inferencing Engine</title>
       <link href="https://www.briglamoreaux.com/2013/03/29/building-an-inferencing-engine.html" rel="alternate" type="text/html" title="Building an Inferencing Engine" />
-      <published>2013-03-29T00:00:00-07:00</published>
-      <updated>2013-03-29T00:00:00-07:00</updated>
+      <published>2013-03-29T00:00:00+00:00</published>
+      <updated>2013-03-29T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2013/03/29/building-an-inferencing-engine</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2013/03/29/building-an-inferencing-engine.html">&lt;p&gt;I’m playing around with the idea of building an &lt;a href=&quot;http://en.wikipedia.org/wiki/Inference_engine&quot;&gt;inference engine&lt;/a&gt; for &lt;a href=&quot;http://www.mongodb.org/&quot;&gt;MongoDB&lt;/a&gt;. The idea is to load up some &lt;a href=&quot;http://www.w3.org/RDF/&quot;&gt;RDF data&lt;/a&gt; and attempt to run queries that use the &lt;a href=&quot;/2012/10/26/what-graphs-and-ontologies-mean-to-you.html&quot; title=&quot;What Graphs and Ontologies mean to you&quot;&gt;ontologies&lt;/a&gt; in the RDF for inferencing. For instance, if I have an ontology that defines an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isParentOf&lt;/code&gt; relationship with an inverse relationship of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isChildOf&lt;/code&gt;, the inferencing engine would know those two relationships are inverse. When the data store only has one record that defines&lt;/p&gt;
 
@@ -91,8 +91,8 @@
     <entry>
       <title type="html">What Graphs and Ontologies mean to you</title>
       <link href="https://www.briglamoreaux.com/2012/10/26/what-graphs-and-ontologies-mean-to-you.html" rel="alternate" type="text/html" title="What Graphs and Ontologies mean to you" />
-      <published>2012-10-26T00:00:00-07:00</published>
-      <updated>2012-10-26T00:00:00-07:00</updated>
+      <published>2012-10-26T00:00:00+00:00</published>
+      <updated>2012-10-26T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2012/10/26/what-graphs-and-ontologies-mean-to-you</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2012/10/26/what-graphs-and-ontologies-mean-to-you.html">&lt;p&gt;New projects often introduce new terms which can sometimes be used in different ways between team members. Especial when there are multiple teams. This article will clarify the meaning for the following terms and help explain how they are related to one another.&lt;/p&gt;
 

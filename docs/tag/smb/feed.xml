@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/smb/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/smb/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Share Folders Between Linux and Windows</title>
       <link href="https://www.briglamoreaux.com/2011/09/30/share-folders-between-linux-and-windows.html" rel="alternate" type="text/html" title="Share Folders Between Linux and Windows" />
-      <published>2011-09-30T00:00:00-07:00</published>
-      <updated>2011-09-30T00:00:00-07:00</updated>
+      <published>2011-09-30T00:00:00+00:00</published>
+      <updated>2011-09-30T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2011/09/30/share-folders-between-linux-and-windows</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2011/09/30/share-folders-between-linux-and-windows.html">&lt;p&gt;I needed to share a folder between a linux machine and windows. The seceret is using Samba. Fortunatly there are several guides out there that show how to do it. These are my notes:&lt;/p&gt;
 

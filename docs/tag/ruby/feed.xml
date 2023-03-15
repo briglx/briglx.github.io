@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/ruby/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/ruby/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Ruby Array Randomize</title>
       <link href="https://www.briglamoreaux.com/2007/07/11/ruby-array-randomize.html" rel="alternate" type="text/html" title="Ruby Array Randomize" />
-      <published>2007-07-11T00:00:00-07:00</published>
-      <updated>2007-07-11T00:00:00-07:00</updated>
+      <published>2007-07-11T00:00:00+00:00</published>
+      <updated>2007-07-11T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2007/07/11/ruby-array-randomize</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2007/07/11/ruby-array-randomize.html">&lt;p&gt;I needed the ability to randomize the order of an array. This is useful when you have a set collection of questions in a survey that you want to shuffle before you present them to the user. After looking around a bit, I didn’t find anything that worked. Here is what I pieced together with my limited knowledge of Ruby.&lt;/p&gt;
 

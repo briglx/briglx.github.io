@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/pgm/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/pgm/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Modeling Student Knowlege</title>
       <link href="https://www.briglamoreaux.com/2012/10/05/modeling-student-knowlege.html" rel="alternate" type="text/html" title="Modeling Student Knowlege" />
-      <published>2012-10-05T00:00:00-07:00</published>
-      <updated>2012-10-05T00:00:00-07:00</updated>
+      <published>2012-10-05T00:00:00+00:00</published>
+      <updated>2012-10-05T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2012/10/05/modeling-student-knowlege</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2012/10/05/modeling-student-knowlege.html">&lt;p&gt;I’m enrolled in the Stanford course &lt;a href=&quot;https://www.coursera.org/course/pgm&quot;&gt;Probabilistic Graphical Models&lt;/a&gt; offered by Coursera and found a very interesting scenario concerning ways to determine and model the intelligence of a student.&lt;/p&gt;
 

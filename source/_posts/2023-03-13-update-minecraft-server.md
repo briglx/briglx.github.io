@@ -43,11 +43,12 @@ tar -cf - "${SERVER_WORLDS[@]}" | gzip -cv -"3" - > "$ARCHIVE_PATH" 2>> /dev/nul
 EXIT_CODES=("${PIPESTATUS[@]}")
 
 # Download 1.19 jar from https://www.minecraft.net/en-us/download/server
-wget https://piston-data.mojang.com/v1/objects/c9df48efed58511cdd0213c56b9013a7b5c9ac1f/server.jar
+wget https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade5336ca7ae/server.jar
 
-sudo mv server.jar /srv/minecraft-server/minecraft_server.1.19.3.jar
-sudo mv /srv/minecraft-server/server.jar "/srv/minecraft-server/server.old.$TIMESTAMP.jar"
-cp /srv/minecraft-server/minecraft_server.1.19.3.jar /srv/minecraft-server/server.jar
+sudo mkdir /srv/minecraft-server/versions/1.19.4
+sudo mv server.jar /srv/minecraft-server/versions/1.19.4/server.1.19.4.jar
+sudo mv /srv/minecraft-server/server.jar "/srv/minecraft-server/versions/old/server.old.$TIMESTAMP.jar"
+sudo cp /srv/minecraft-server/versions/1.19.4/server.1.19.4.jar /srv/minecraft-server/server.jar
 sudo chown -R minecraft.minecraft /srv/minecraft-server
 
 # Restart service

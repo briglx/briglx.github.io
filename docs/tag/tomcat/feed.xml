@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/tomcat/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2022-09-21T09:38:16-07:00</updated>
+  <updated>2023-03-15T00:27:36+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/tomcat/feed.xml</id>
 
   
@@ -34,8 +34,8 @@
     <entry>
       <title type="html">Amazon Advises me to be Responsible with Tomcat</title>
       <link href="https://www.briglamoreaux.com/2013/10/16/amazon-advises-me-to-be-responsible-with-tomcat.html" rel="alternate" type="text/html" title="Amazon Advises me to be Responsible with Tomcat" />
-      <published>2013-10-16T00:00:00-07:00</published>
-      <updated>2013-10-16T00:00:00-07:00</updated>
+      <published>2013-10-16T00:00:00+00:00</published>
+      <updated>2013-10-16T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2013/10/16/amazon-advises-me-to-be-responsible-with-tomcat</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2013/10/16/amazon-advises-me-to-be-responsible-with-tomcat.html">&lt;p&gt;I just received an email from Amazon concerning proper Security around Tomcat. Here is part of the message:&lt;/p&gt;
 
@@ -107,8 +107,8 @@
     <entry>
       <title type="html">Debugging a Tomcat Application</title>
       <link href="https://www.briglamoreaux.com/2011/07/05/debugging-a-tomcat-application.html" rel="alternate" type="text/html" title="Debugging a Tomcat Application" />
-      <published>2011-07-05T00:00:00-07:00</published>
-      <updated>2011-07-05T00:00:00-07:00</updated>
+      <published>2011-07-05T00:00:00+00:00</published>
+      <updated>2011-07-05T00:00:00+00:00</updated>
       <id>https://www.briglamoreaux.com/2011/07/05/debugging-a-tomcat-application</id>
       <content type="html" xml:base="https://www.briglamoreaux.com/2011/07/05/debugging-a-tomcat-application.html">&lt;p&gt;I primarily develop web applications but have been out of it for a while and needed to look at old code for a reminder. Well here is how I configure a project to debug in tomcat.&lt;/p&gt;
 

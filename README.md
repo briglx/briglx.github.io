@@ -111,10 +111,16 @@ In the meantime just build and deploy:
 # ARG RUBY_VERSION=2.7.4
 # FROM ruby:$RUBY_VERSION-slim#
 
+# Start Docker image
+docker build --pull --rm -f "Dockerfile.build" -t blog_build:latest "."
+docker run --rm -it --env-file .env --mount type=bind,src="$(pwd)/docs",target=/usr/src/app/docs --mount type=bind,src="$(pwd)/source",target=/usr/src/app/source --name blog_build blog_build:latest
+$ ./entrypoint.sh
+$ exit
 
-cd /path/to/project/source
-bundle exec jekyll build 
+# cd /path/to/project/source
+# bundle exec jekyll build 
 
+# Commit changes to git
 cd ..
 git add docs/*
 git checkout docs/.nojekyll
@@ -122,6 +128,41 @@ git commit -m '...'
 git push
 #
 ```
+
+# Docker Notes
+
+```bash
+
+# The docker image runs
+ruby -v
+# ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
+gem -v
+# 3.1.6
+gcc -v
+# gcc version 10.2.1 20210110 (Debian 10.2.1-6)
+g++ -v
+# gcc version 10.2.1 20210110 (Debian 10.2.1-6)
+make -v
+# GNU Make 4.3
+jekyll --version
+# jekyll 3.9.0
+bundler --version
+# Bundler version 2.1.4
+
+# Build the image
+docker build --pull --rm -f "Dockerfile.build" -t blog_build:latest "."
+
+# Run the server
+docker run --rm -it --env-file .env -v /source:/usr/src/app/source -v /docs:/usr/src/app/docs --name blog_build blog_build:latest
+docker run --rm -it --env-file .env --mount type=bind,src="$(pwd)/docs",target=/usr/src/app/docs --mount type=bind,src="$(pwd)/source",target=/usr/src/app/source --name blog_build blog_build:latest
+
+
+# Migrate Database
+# docker container exec -it --env-file .env blog_build /usr/src/app/migrate_database.sh 
+
+
+```
+
 
 # Theme Ideas
 - See https://dribbble.com/shots/18046803-Blogging-App-Design/attachments/13234820?mode=media
