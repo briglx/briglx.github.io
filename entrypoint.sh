@@ -1,12 +1,12 @@
-# #!/bin/bash
+#!/bin/bash
 
-# #######################################################################################################
-# #
-# # Calls github-pages executable to build the site using whitelisted plugins and supported configuration
-# #
-# #######################################################################################################
+#######################################################################################################
+#
+# Build the site using whitelisted plugins and supported configuration
+#
+#######################################################################################################
 
-# set -o errexit
+set -o errexit
 
 # SOURCE_DIRECTORY=${GITHUB_WORKSPACE}/$INPUT_SOURCE
 # DESTINATION_DIRECTORY=${GITHUB_WORKSPACE}/$INPUT_DESTINATION

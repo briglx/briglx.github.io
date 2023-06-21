@@ -164,6 +164,20 @@ docker run --rm -it --env-file .env --mount type=bind,src="$(pwd)/docs",target=/
 ```
 
 
+Run the docker image
+```bash
+docker build --pull --rm -f "Dockerfile.build" -t blog_build:latest "."
+
+docker run -p 4000:4000 --env-file .env -v $(pwd):/site --name blog_build blog_build:latest
+
+docker run --rm -it --env-file .env -p 0.0.0.0:4000:4000 --mount type=bind,src="$(pwd)/docs",target=/usr/src/app/docs --mount type=bind,src="$(pwd)/source",target=/usr/src/app/source blog_build:latest
+
+> bundle exec jekyll serve
+
+```
+
+
+
 # Theme Ideas
 - See https://dribbble.com/shots/18046803-Blogging-App-Design/attachments/13234820?mode=media
 

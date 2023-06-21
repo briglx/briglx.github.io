@@ -9,7 +9,7 @@
 # RUN jekyll build
 
 ARG RUBY_VERSION=2.7.4
-FROM ruby:$RUBY_VERSION-slim
+FROM ruby:$RUBY_VERSION-slim as jekyll
 
 RUN apt-get update \
   && apt-get install -y \
@@ -39,5 +39,21 @@ ENV LC_ALL en_US.UTF-8
 
 COPY entrypoint.sh entrypoint.sh
 
-CMD ["/usr/src/app/entrypoint.sh"]
-# ENTRYPOINT /bin/bash
+# EXPOSE 4000
+RUN ruby --version
+RUN gem --version
+WORKDIR /usr/src/app/source
+
+# CMD [ "--help" ]
+
+# FROM jekyll as jekyll-serve
+
+# # CMD ["/usr/src/app/entrypoint.sh"]
+ENTRYPOINT [ "/bin/bash" ]
+# CMD ["jekyll", "serve", "--force_polling", "-H", "0.0.0.0", "-P", "4000" ]
+
+# WORKDIR /usr/src/app/source
+
+# ENTRYPOINT [ "jekyll" ]
+
+# CMD [ "bundle", "exec", "jekyll", "serve", "--force_polling", "-H", "0.0.0.0", "-P", "4000" ]
