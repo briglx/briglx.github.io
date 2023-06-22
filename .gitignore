@@ -36,6 +36,9 @@ node_modules
 
 *.Zone.Identifier
 
+# Gulp CSS build dir
+source/assets/built/*.*
+
 # Other
 Gemfile.lock
 */Gemfile.lock

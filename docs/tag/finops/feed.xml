@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/tag/finops/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T18:18:20+00:00</updated>
+  <updated>2023-06-22T21:58:50+00:00</updated>
   <id>https://www.briglamoreaux.com/tag/finops/feed.xml</id>
 
   
@@ -288,44 +288,49 @@ Some of these are:&lt;/p&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Visualization&lt;/td&gt;
-      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Show what it should look like&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Data Schema&lt;/td&gt;
+      &lt;td&gt;Define the minimum data set required to create the visual&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Data Source&lt;/td&gt;
+      &lt;td&gt;Is this a database, web server, etc. Including version.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Data Transformation&lt;/td&gt;
+      &lt;td&gt;Show how to convert from the source data to the data schema&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Remediation&lt;/td&gt;
+      &lt;td&gt;Steps to comply with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLO&lt;/code&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Overview
-    &lt;ul&gt;
-      &lt;li&gt;Objective&lt;/li&gt;
-      &lt;li&gt;Visualization&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Data Schema&lt;/li&gt;
-  &lt;li&gt;Data Source and Transformation&lt;/li&gt;
-  &lt;li&gt;Remediatin&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;p&gt;Example: Orphaned Disks&lt;/p&gt;
 
-&lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
-&lt;p&gt;Best Practice: As an organization, have 90% attached disk (&amp;lt;10% orphaned)&lt;/p&gt;
+&lt;div class=&quot;example&quot;&gt;
 
-&lt;p&gt;&lt;strong&gt;Sketch&lt;/strong&gt;
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-sketch.jpgg&quot; alt=&quot;Orphaned Disks Sketch&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;PowerBI Example&lt;/strong&gt;
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-pbi.jpgg&quot; alt=&quot;Orphaned Disks PowerBI&quot; /&gt;&lt;/p&gt;
+### Overview
+Best Practice: As an organization, have 90% attached disk (&amp;lt;10% orphaned)
 
-&lt;h3 id=&quot;schema&quot;&gt;Schema&lt;/h3&gt;
+**Sketch**
+![Orphaned Disks Sketch](https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-sketch.jpgg)
 
-&lt;p&gt;Parameters may include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;optimal_percentage&lt;/code&gt; As the target to compare cost&lt;/li&gt;
-&lt;/ul&gt;
+**PowerBI Example**
+![Orphaned Disks PowerBI](https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-pbi.jpgg)
 
-&lt;p&gt;&lt;strong&gt;Single Table&lt;/strong&gt;
+### Schema
+
+Parameters may include:
+* `optimal_percentage` As the target to compare cost
+
+**Single Table**
 | Field | Type | Notes |
-|——-|——|——-|
+|-------|------|-------|
 | date |   | |
 | subscription_name |  | Filter  |
 | subscription_id | nvarchar(100) | Filter |
@@ -339,176 +344,83 @@ Some of these are:&lt;/p&gt;
 | is_latest | | Indicates the most recent data |
 | is_optimal_forcast | | Indicates optimal forecast |
 | forecast_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=False |
-| optimal_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=True |&lt;/p&gt;
+| optimal_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=True |
 
-&lt;h3 id=&quot;example-data&quot;&gt;Example Data&lt;/h3&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Date&lt;/th&gt;
-      &lt;th&gt;SubscriptionName&lt;/th&gt;
-      &lt;th&gt;SubscriptionId&lt;/th&gt;
-      &lt;th&gt;ResourceGroup&lt;/th&gt;
-      &lt;th&gt;Total Disk Count&lt;/th&gt;
-      &lt;th&gt;Orphan Count&lt;/th&gt;
-      &lt;th&gt;Attached Count&lt;/th&gt;
-      &lt;th&gt;AttachedDiskPercent&lt;/th&gt;
-      &lt;th&gt;Cost&lt;/th&gt;
-      &lt;th&gt;IsForecast&lt;/th&gt;
-      &lt;th&gt;IsLatest&lt;/th&gt;
-      &lt;th&gt;IsOptimalForcast&lt;/th&gt;
-      &lt;th&gt;ForecastCost&lt;/th&gt;
-      &lt;th&gt;OptimalCost&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1/1/2023&lt;/td&gt;
-      &lt;td&gt;CORP&lt;/td&gt;
-      &lt;td&gt;/subscriptions/00000000-0000-2222-0000-000000000000&lt;/td&gt;
-      &lt;td&gt;rg-dev&lt;/td&gt;
-      &lt;td&gt;10&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;50%&lt;/td&gt;
-      &lt;td&gt;200&lt;/td&gt;
-      &lt;td&gt;FALSE&lt;/td&gt;
-      &lt;td&gt;FALSE&lt;/td&gt;
-      &lt;td&gt;FALSE&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1/1/2023&lt;/td&gt;
-      &lt;td&gt;CORP&lt;/td&gt;
-      &lt;td&gt;/subscriptions/00000000-0000-2222-0000-000000000000&lt;/td&gt;
-      &lt;td&gt;rg-prod&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;8&lt;/td&gt;
-      &lt;td&gt;12&lt;/td&gt;
-      &lt;td&gt;60%&lt;/td&gt;
-      &lt;td&gt;400&lt;/td&gt;
-      &lt;td&gt;FALSE&lt;/td&gt;
-      &lt;td&gt;FALSE&lt;/td&gt;
-      &lt;td&gt;FALSE&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1/1/2023&lt;/td&gt;
-      &lt;td&gt;CORP&lt;/td&gt;
-      &lt;td&gt;/subscriptions/00000000-0000-2222-0000-000000000000&lt;/td&gt;
-      &lt;td&gt;rg-qa&lt;/td&gt;
-      &lt;td&gt;20&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;13&lt;/td&gt;
-      &lt;td&gt;65%&lt;/td&gt;
-      &lt;td&gt;400&lt;/td&gt;
-      &lt;td&gt;FALSE&lt;/td&gt;
-      &lt;td&gt;FALSE&lt;/td&gt;
-      &lt;td&gt;FALSE&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;1/1/2023&lt;/td&gt;
-      &lt;td&gt;ENG&lt;/td&gt;
-      &lt;td&gt;/subscriptions/00000000-0000-2222-0000-000000000003&lt;/td&gt;
-      &lt;td&gt;rg-dev&lt;/td&gt;
-      &lt;td&gt;7&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;57%&lt;/td&gt;
-      &lt;td&gt;140&lt;/td&gt;
-      &lt;td&gt;FALSE&lt;/td&gt;
-      &lt;td&gt;FALSE&lt;/td&gt;
-      &lt;td&gt;FALSE&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+### Example Data
 
-&lt;p&gt;See full dataset &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;path/to/sample/dataset.csv&lt;/code&gt;&lt;/p&gt;
+|Date|SubscriptionName|SubscriptionId|ResourceGroup|Total Disk Count|Orphan Count|Attached Count|AttachedDiskPercent|Cost|IsForecast|IsLatest|IsOptimalForcast|ForecastCost|OptimalCost|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|1/1/2023|CORP|/subscriptions/00000000-0000-2222-0000-000000000000|rg-dev|10|5|5|50%|200|FALSE|FALSE|FALSE|0|0|
+|1/1/2023|CORP|/subscriptions/00000000-0000-2222-0000-000000000000|rg-prod|20|8|12|60%|400|FALSE|FALSE|FALSE|0|0|
+|1/1/2023|CORP|/subscriptions/00000000-0000-2222-0000-000000000000|rg-qa|20|7|13|65%|400|FALSE|FALSE|FALSE|0|0|
+|1/1/2023|ENG|/subscriptions/00000000-0000-2222-0000-000000000003|rg-dev|7|3|4|57%|140|FALSE|FALSE|FALSE|0|0|
 
-&lt;h3 id=&quot;source-data&quot;&gt;Source Data&lt;/h3&gt;
+See full dataset `path/to/sample/dataset.csv`
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Source&lt;/th&gt;
-      &lt;th&gt;Version&lt;/th&gt;
-      &lt;th&gt;Details&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Common Data Schema&lt;/td&gt;
-      &lt;td&gt;Latest&lt;/td&gt;
-      &lt;td&gt;AmortizedCost&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Azure Graph API Query&lt;/td&gt;
-      &lt;td&gt;v1.0&lt;/td&gt;
-      &lt;td&gt;resources&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+### Source Data
 
-&lt;p&gt;&lt;strong&gt;AmortizedCost SQL Query&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; 
-  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResourceId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;SUM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CostInBillingCurrency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Cost&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AmortizedCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;GROUP&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ResourceId&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+| Source | Version | Details |
+|--------|---------|---------|
+| Common Data Schema | Latest | AmortizedCost |
+| Azure Graph API Query | v1.0 | resources |
 
-&lt;p&gt;&lt;strong&gt;Azure Graph API Query&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;resources
+**AmortizedCost SQL Query**
+```sql
+SELECT 
+  [Date]
+  , [ResourceId]
+  , SUM([CostInBillingCurrency]) as Cost
+FROM
+  [AmortizedCost]
+GROUP BY
+  [Date]
+  , [ResourceId]
+```
+
+**Azure Graph API Query**
+```
+resources
 | where type has &quot;microsoft.compute/disks&quot;
 | extend diskState = tostring(properties.diskState)
 | project current_date = format_datetime(now(), 'yyy-MM-dd'), subscriptionId, resourceGroup, id, sku_name = sku.name, diskState, managedBy, is_orphaned = (diskState == 'Unattached' or managedBy == &quot;&quot;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+``` 
 
-&lt;h3 id=&quot;transformation&quot;&gt;Transformation&lt;/h3&gt;
+### Transformation
 
-&lt;p&gt;Join AmortizedCost and Azure Graph API Query by ResourceID and Date&lt;/p&gt;
+Join AmortizedCost and Azure Graph API Query by ResourceID and Date
 
-&lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; 
-  &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subscription_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subscription_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resource_group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_orphaned&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;SUM&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CostInBillingCurrency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cost&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AmortizedCost&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;JOIN&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;GRAPH_QUERY&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;ON&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resource_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resource_id&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;GROUP&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;BY&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subscription_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subscription_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;resource_group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;is_orphaned&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+```sql
+SELECT 
+  a.[date]
+  , a.[subscription_name]
+  , a.[subscription_id]
+  , a.[resource_group]
+  , b.[is_orphaned]
+  , SUM(a.[CostInBillingCurrency]) as cost
+FROM
+  [AmortizedCost] as a
+JOIN
+  GRAPH_QUERY as b
+ON a.date = b.date and a.resource_id = b.resource_id
+GROUP BY
+  a.[date]
+  , a.[subscription_name]
+  , a.[subscription_id]
+  , a.[resource_group]
+  , b.[is_orphaned]
+```
 
-&lt;h3 id=&quot;remediation&quot;&gt;Remediation&lt;/h3&gt;
+### Remediation
 
-&lt;ul&gt;
-  &lt;li&gt;Delete Disks
-    &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;az vm disk delete &lt;span class=&quot;nt&quot;&gt;--id&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$disk_resource_id&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+* Delete Disks
+```bash
+az vm disk delete --id $disk_resource_id
+```
 
-&lt;h2 id=&quot;benefits&quot;&gt;Benefits&lt;/h2&gt;
+## Benefits
+
+&lt;/div&gt;
 
 &lt;p&gt;This is a long post to really just guide organizations in developing a strategy around cost optimization and move away from a reactionary seek and destroy mindset.&lt;/p&gt;
 

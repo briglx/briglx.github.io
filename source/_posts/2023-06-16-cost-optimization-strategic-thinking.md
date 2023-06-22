@@ -208,16 +208,16 @@ The framework for a recipe is:
 | Section | Detail |
 |---------|----------|
 | Overview | Define the Best Practice, `SLO` |
-| Visualization | 
-
-* Overview
-  * Objective
-  * Visualization
-* Data Schema
-* Data Source and Transformation
-* Remediatin
+| Visualization | Show what it should look like |
+| Data Schema | Define the minimum data set required to create the visual |
+| Data Source | Is this a database, web server, etc. Including version. |
+| Data Transformation | Show how to convert from the source data to the data schema |
+| Remediation | Steps to comply with `SLO` |
 
 Example: Orphaned Disks
+
+<div class="example">
+
 
 ### Overview
 Best Practice: As an organization, have 90% attached disk (<10% orphaned)
@@ -324,6 +324,8 @@ az vm disk delete --id $disk_resource_id
 ```
 
 ## Benefits
+
+</div>
 
 This is a long post to really just guide organizations in developing a strategy around cost optimization and move away from a reactionary seek and destroy mindset.
 

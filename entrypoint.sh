@@ -36,5 +36,17 @@ set -o errexit
 # cd "$PAGES_GEM_HOME"
 # $GITHUB_PAGES build "$VERBOSE" "$FUTURE" --source "$SOURCE_DIRECTORY" --destination "$DESTINATION_DIRECTORY"
 
+# Rebuild css 
 cd source
+npm install
+gulp build
+
+# build site
+bundle install 
 bundle exec jekyll build 
+
+# Tell github not to create site
+touch ../docs/.nojekyll
+
+# Remove gemspec
+rm ../docs/jasper2.gemspec

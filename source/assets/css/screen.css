@@ -48,6 +48,10 @@ body {
     text-indent: -9999px;
 }
 
+.example {
+    background-color: color-mod(var(--midgrey) l(-25%));
+}
+
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */

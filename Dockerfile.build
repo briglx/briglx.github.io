@@ -11,12 +11,21 @@
 ARG RUBY_VERSION=2.7.4
 FROM ruby:$RUBY_VERSION-slim as jekyll
 
-RUN apt-get update \
-  && apt-get install -y \
+RUN apt-get update && \
+    apt-get install -y curl && \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get install -y nodejs \
     build-essential \
     git \
     locales \
     nodejs
+
+# Install npm packages
+COPY source/package.json .
+RUN npm install
+
+# Install Gulp globally
+RUN npm install -g gulp-cli
 
 # Helpful aliases
 RUN echo 'alias ll='"'"'ls $LS_OPTIONS -al'"'"'' >> /etc/bash.bashrc 
@@ -39,16 +48,10 @@ ENV LC_ALL en_US.UTF-8
 
 COPY entrypoint.sh entrypoint.sh
 
-# EXPOSE 4000
-RUN ruby --version
-RUN gem --version
-WORKDIR /usr/src/app/source
-
 # CMD [ "--help" ]
-
 # FROM jekyll as jekyll-serve
-
 # # CMD ["/usr/src/app/entrypoint.sh"]
+
 ENTRYPOINT [ "/bin/bash" ]
 # CMD ["jekyll", "serve", "--force_polling", "-H", "0.0.0.0", "-P", "4000" ]
 

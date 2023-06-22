@@ -131,6 +131,9 @@ git push
 # Docker Notes
 
 ```bash
+# CHeck OS Version
+cat /etc/os-release
+# PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
 # The docker image runs
 ruby -v
 # ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
@@ -163,13 +166,21 @@ Run the docker image
 # Build image
 docker build --pull --rm -f "Dockerfile.build" -t blog_build:latest "."
 
+
+
 # Run Image
 docker run --rm -it --env-file .env -p 4000:4000 --mount type=bind,src="$(pwd)/docs",target=/usr/src/app/docs --mount type=bind,src="$(pwd)/source",target=/usr/src/app/source blog_build:latest
+# Generate site
+> jekyll build
+# Run site to test
 > jekyll serve -H 172.17.0.2
 
 # Or Run Image
 docker run --rm -it --env-file .env -p 0.0.0.0:4000:4000 --mount type=bind,src="$(pwd)/docs",target=/usr/src/app/docs --mount type=bind,src="$(pwd)/source",target=/usr/src/app/source blog_build:latest
-> bundle exec jekyll serve -H 0.0.0.0 -P 4000
+# Generate site
+> jekyll build
+# Run site to test
+> jekyll serve -H 0.0.0.0 -P 4000
 ```
 
 # Theme Ideas
