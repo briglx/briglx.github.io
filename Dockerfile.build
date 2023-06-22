@@ -48,15 +48,5 @@ ENV LC_ALL en_US.UTF-8
 
 COPY entrypoint.sh entrypoint.sh
 
-# CMD [ "--help" ]
-# FROM jekyll as jekyll-serve
-# # CMD ["/usr/src/app/entrypoint.sh"]
-
-ENTRYPOINT [ "/bin/bash" ]
-# CMD ["jekyll", "serve", "--force_polling", "-H", "0.0.0.0", "-P", "4000" ]
-
-# WORKDIR /usr/src/app/source
-
-# ENTRYPOINT [ "jekyll" ]
-
-# CMD [ "bundle", "exec", "jekyll", "serve", "--force_polling", "-H", "0.0.0.0", "-P", "4000" ]
+# ENTRYPOINT [ "/bin/bash" ]
+ENTRYPOINT [ "/usr/src/app/entrypoint.sh" ]

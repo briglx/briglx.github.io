@@ -36,17 +36,51 @@ set -o errexit
 # cd "$PAGES_GEM_HOME"
 # $GITHUB_PAGES build "$VERBOSE" "$FUTURE" --source "$SOURCE_DIRECTORY" --destination "$DESTINATION_DIRECTORY"
 
-# Rebuild css 
-cd source
-npm install
-gulp build
 
-# build site
-bundle install 
-bundle exec jekyll build 
+#!/bin/bash
 
-# Tell github not to create site
-touch ../docs/.nojekyll
+action="${1:-build}"
 
-# Remove gemspec
-rm ../docs/jasper2.gemspec
+case "$action" in
+  build)
+    # Add build logic here
+    echo "Running build..."
+    # Rebuild css 
+    cd source
+    npm install
+    gulp build
+
+    # build site
+    bundle install 
+    bundle exec jekyll build 
+    # Tell github not to create site
+    touch ../docs/.nojekyll
+
+    # Remove gemspec
+    rm ../docs/jasper2.gemspec
+    ;;
+  serve)
+    # Add serve logic here
+    echo "Running serve..."
+    # Rebuild css 
+    cd source
+    npm install
+    gulp build
+
+    # build site
+    bundle install 
+    bundle exec jekyll serve -H 172.17.0.2 
+    # Tell github not to create site
+    touch ../docs/.nojekyll
+
+    # Remove gemspec
+    rm ../docs/jasper2.gemspec
+    ;;
+  *)
+    echo "Invalid action: $action. Available actions: build, serve"
+    ;;
+esac
+
+
+
+

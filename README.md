@@ -231,6 +231,15 @@ codespell -D - -D .codespell_dict
 shellcheck *.sh
 ```
 
+Build the Blog
+```bash
+./helper.sh build
+
+# Serve local
+./helper.sh serve
+# navigate to localhost:4000
+```
+
 # References
 - Building Locally https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll
 - Minimal Mistakes A Jekyll theme https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
