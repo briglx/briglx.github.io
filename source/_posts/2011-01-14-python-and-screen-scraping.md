@@ -13,9 +13,9 @@ tags:
 
 I wanted to do a quick test on a website using Python. I knew about [beautifulsoup](http://www.crummy.com/software/BeautifulSoup) but I wanted the power of JQuery. So I found [pyquery](http://pypi.python.org/pypi/pyquery).
 
-I found some [instructions](http://blog.jeffbalogh.org/post/89619207/pyquery-a-jquery-like-library-for-python) to get started and noticed some people complaing about how difficult it is to get installed. Hmm I wonder why?
+I found some [instructions](http://blog.jeffbalogh.org/post/89619207/pyquery-a-jquery-like-library-for-python) to get started and noticed some people complaining about how difficult it is to get installed. Hmm I wonder why?
 
-It only needs a dependecy to `lxml` which has a [dependency](http://codespeak.net/lxml/installation.html) to [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall#installing-easy-install) which needs [setuptools](http://pypi.python.org/pypi/setuptools#downloads). Oh, that's why people complain. Oh well let's try.
+It only needs a dependency to `lxml` which has a [dependency](http://codespeak.net/lxml/installation.html) to [easy_install](http://peak.telecommunity.com/DevCenter/EasyInstall#installing-easy-install) which needs [setuptools](http://pypi.python.org/pypi/setuptools#downloads). Oh, that's why people complain. Oh well let's try.
 
 - I downloaded Download the [setuptools-0.6c11-py2.6.egg](http://pypi.python.org/pypi/setuptools#downloads) because my version of Python is 2.6
 - Run setuptools as if it were a shell script. Apparently this installs easy_install
@@ -44,4 +44,4 @@ make
 sudo make install
 ```
 
-Still errors... I'm stoping
+Still errors... I'm stopping

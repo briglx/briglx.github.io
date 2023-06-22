@@ -32,4 +32,4 @@ Open your Web.Config file and add the entry. Make sure the port on the address m
 </system.net>
 ```
 
-Other web refrenced talk about setting other attributes on the proxy element, but don't These seem to make it fail. Just the simple solution from [Rick Strahl](http://www.west-wind.com/WebLog/posts/277966.aspx) will make it work.
+Other web referenced talk about setting other attributes on the proxy element, but don't These seem to make it fail. Just the simple solution from [Rick Strahl](http://www.west-wind.com/WebLog/posts/277966.aspx) will make it work.

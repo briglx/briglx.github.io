@@ -9,9 +9,9 @@ title: "Singleton Pattern for .NET"
 date: "2011-06-13"
 ---
 
-I really like design patterns and also enjoy learning the why behind some implmenetations. Although the singleton pattern is one of the most widely used patterns around, it is also one that can be really hard to get write. After searching around to understand how to implment the Singleton in C# and the .net runtime, I found three great artcles that gave me what I needed:
+I really like design patterns and also enjoy learning the why behind some implementations. Although the singleton pattern is one of the most widely used patterns around, it is also one that can be really hard to get write. After searching around to understand how to implement the Singleton in C# and the .net runtime, I found three great artcles that gave me what I needed:
 
-Jon Skeet's [singleton article](http://csharpindepth.com/Articles/General/Singleton.aspx) gives a handfull of implementations of the singleton and explains the difference between them. He talks about how .Net, Java, and C++ all manage memory, threading and instantiation models differently which affect the correctness of the pattern.
+Jon Skeet's [singleton article](http://csharpindepth.com/Articles/General/Singleton.aspx) gives a handful of implementations of the singleton and explains the difference between them. He talks about how .Net, Java, and C++ all manage memory, threading and instantiation models differently which affect the correctness of the pattern.
 
 Microsoft has a [great article](http://msdn.microsoft.com/en-us/library/ff650316.aspx) that goes a little deeper in some areas but doesn't talk too much about Lazy loading.
 

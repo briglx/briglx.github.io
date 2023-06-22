@@ -91,7 +91,7 @@ When a tricky request comes in, like a `point-in-time comparison` report, I fire
 
 ![ACM Power BI Template App]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-azure-cost-management-connector.png)
 
-### WAF Cost Optimzation Workbook
+### WAF Cost Optimization Workbook
 
 Microsoft has a service where engineers can sit with customers to analyze their environment. One tool the team uses is the Well-Architected Framework (WAF) Cost Optimization Workbook. The workbook is deployed into Azure Monitor and queries Azure logs and the Azure Graph API to inspect the current environment. Some of the reports include:
 
@@ -194,8 +194,8 @@ The best visualizations provide essential information each department needs. Rep
 
 Organizations move out of phase 5 when it replaces the mindset of seeking-and-destroying costs to strategically monitor and measuring best practices. 
 
-## Phase 6 - Recipies
+## Phase 6 - Recipes
 
-![Phase 6 - Recipies]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-phase6.png)
+![Phase 6 - Recipes]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-phase6.png)
 
 The last phase in the maturity model is when an organization can scale developing reports that measure best practices. Scaling will require centralizing data collection, a common data schema, and discoverability. In this environment, teams can create, discover, and share new reports.

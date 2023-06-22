@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/tensorflow/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-21T04:58:07+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/tensorflow/feed.xml</id>
+  <link href="http://0.0.0.0:4000/tag/tensorflow/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:11:47+00:00</updated>
+  <id>http://0.0.0.0:4000/tag/tensorflow/feed.xml</id>
 
   
   
@@ -33,13 +33,13 @@
   
     <entry>
       <title type="html">More Time Doesn’t Always Help</title>
-      <link href="https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html" rel="alternate" type="text/html" title="More Time Doesn't Always Help" />
+      <link href="http://0.0.0.0:4000/2018/06/28/more-time-doesnt-always-help.html" rel="alternate" type="text/html" title="More Time Doesn't Always Help" />
       <published>2018-06-28T00:00:00+00:00</published>
       <updated>2018-06-28T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html">&lt;p&gt;Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2018/06/28/more-time-doesnt-always-help</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2018/06/28/more-time-doesnt-always-help.html">&lt;p&gt;Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/trainingvalidationaccuracy.png&quot; alt=&quot;TrainingValidationAccuracy&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/trainingvalidationaccuracy.png&quot; alt=&quot;TrainingValidationAccuracy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The model is over-fitting the data somehow. No matter how many more epochs I run, the validation won’t get better.&lt;/p&gt;</content>
 

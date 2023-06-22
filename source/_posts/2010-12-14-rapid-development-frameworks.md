@@ -19,7 +19,7 @@ I've been looking into different frameworks that "promise" faster development. H
 - [MVC](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 - [ORM](http://en.wikipedia.org/wiki/Object-relational_mapping)
 - [Active Record](http://en.wikipedia.org/wiki/Active_record_pattern)
-- UI Templeting
+- UI Templating
 
 ## Noteworthy Frameworks
 

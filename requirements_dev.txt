@@ -1,0 +1,6 @@
+# Dev Requirements
+-r requirements.txt
+
+codespell==2.2.4
+pre-commit==3.3.2
+pre-commit-hooks==4.4.0

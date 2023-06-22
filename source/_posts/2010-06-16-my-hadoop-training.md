@@ -13,7 +13,7 @@ tags:
 
 Hadoop has been difficult getting into. I just don't have enough linux/java training to help with understanding some of the foundational concepts. However, today I learned some valuable information.
 
-1. hadoop is a umbrella project for serveral other things (hdfs, mapreduce)
+1. hadoop is a umbrella project for several other things (hdfs, mapreduce)
 2. The program hadoop give me access to hdfs
 3. I can use the FSShell (>hadoop fs -ls)
 

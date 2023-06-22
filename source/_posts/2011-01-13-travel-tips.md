@@ -37,7 +37,7 @@ I have witnessed first hand a man soiling himself on a bus and leaving a mess. I
 
 While in China town, only eat at restaurants where real Chinese people are eating.
 
-The glare of bright florescent lights, lack of music, grouchy servers, overpriced mediocre food, and no customers except for the handful of tourist tricked into entering the restaurant may take the joy out of eating in China town.
+The glare of bright fluorescent lights, lack of music, grouchy servers, overpriced mediocre food, and no customers except for the handful of tourist tricked into entering the restaurant may take the joy out of eating in China town.
 
 Check flight times.
 

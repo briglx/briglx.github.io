@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/11/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-21T04:58:07+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/11/feed.xml</id>
+  <link href="http://0.0.0.0:4000/tag/11/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:11:47+00:00</updated>
+  <id>http://0.0.0.0:4000/tag/11/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Mentor teaches how to argue</title>
-      <link href="https://www.briglamoreaux.com/2013/08/26/mentor-teaches-how-to-argue.html" rel="alternate" type="text/html" title="Mentor teaches how to argue" />
+      <link href="http://0.0.0.0:4000/2013/08/26/mentor-teaches-how-to-argue.html" rel="alternate" type="text/html" title="Mentor teaches how to argue" />
       <published>2013-08-26T00:00:00+00:00</published>
       <updated>2013-08-26T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2013/08/26/mentor-teaches-how-to-argue</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2013/08/26/mentor-teaches-how-to-argue.html">&lt;p&gt;Notes from Mark Castrovinci 1:1&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2013/08/26/mentor-teaches-how-to-argue</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2013/08/26/mentor-teaches-how-to-argue.html">&lt;p&gt;Notes from Mark Castrovinci 1:1&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Focus on an Organization approach to instill greatness…
@@ -105,11 +105,11 @@
   
     <entry>
       <title type="html">Tack and Diplomacy</title>
-      <link href="https://www.briglamoreaux.com/2013/05/07/tack-and-diplomacy.html" rel="alternate" type="text/html" title="Tack and Diplomacy" />
+      <link href="http://0.0.0.0:4000/2013/05/07/tack-and-diplomacy.html" rel="alternate" type="text/html" title="Tack and Diplomacy" />
       <published>2013-05-07T00:00:00+00:00</published>
       <updated>2013-05-07T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2013/05/07/tack-and-diplomacy</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2013/05/07/tack-and-diplomacy.html">&lt;p&gt;Notes from Mark Lipshaw&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2013/05/07/tack-and-diplomacy</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2013/05/07/tack-and-diplomacy.html">&lt;p&gt;Notes from Mark Lipshaw&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Tack and Diplomacy
@@ -161,11 +161,11 @@
   
     <entry>
       <title type="html">Recent Accomplishments</title>
-      <link href="https://www.briglamoreaux.com/2013/04/30/recent-accomplishments.html" rel="alternate" type="text/html" title="Recent Accomplishments" />
+      <link href="http://0.0.0.0:4000/2013/04/30/recent-accomplishments.html" rel="alternate" type="text/html" title="Recent Accomplishments" />
       <published>2013-04-30T00:00:00+00:00</published>
       <updated>2013-04-30T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2013/04/30/recent-accomplishments</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2013/04/30/recent-accomplishments.html">&lt;p&gt;I was asked to put together a list of accomplishments I’ve achieved over the past few months. I thought it would be important to focus on different aspects of my career growth.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2013/04/30/recent-accomplishments</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2013/04/30/recent-accomplishments.html">&lt;p&gt;I was asked to put together a list of accomplishments I’ve achieved over the past few months. I thought it would be important to focus on different aspects of my career growth.&lt;/p&gt;
 
 &lt;h2 id=&quot;tactical-achievements&quot;&gt;Tactical Achievements&lt;/h2&gt;
 
@@ -230,11 +230,11 @@
   
     <entry>
       <title type="html">Networking is Important</title>
-      <link href="https://www.briglamoreaux.com/2013/04/15/networking-is-important.html" rel="alternate" type="text/html" title="Networking is Important" />
+      <link href="http://0.0.0.0:4000/2013/04/15/networking-is-important.html" rel="alternate" type="text/html" title="Networking is Important" />
       <published>2013-04-15T00:00:00+00:00</published>
       <updated>2013-04-15T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2013/04/15/networking-is-important</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2013/04/15/networking-is-important.html">&lt;p&gt;These are the notes form a one on one with Mark Castrovinci.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2013/04/15/networking-is-important</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2013/04/15/networking-is-important.html">&lt;p&gt;These are the notes form a one on one with Mark Castrovinci.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Networking is very important&lt;/li&gt;

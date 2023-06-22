@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/awk/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-21T04:58:07+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/awk/feed.xml</id>
+  <link href="http://0.0.0.0:4000/tag/awk/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:11:47+00:00</updated>
+  <id>http://0.0.0.0:4000/tag/awk/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Finding Missing Images</title>
-      <link href="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
+      <link href="http://0.0.0.0:4000/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
       <published>2022-05-20T00:00:00+00:00</published>
       <updated>2022-05-20T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2022/05/20/finding-missing-images</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2022/05/20/finding-missing-images</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
 
 &lt;p&gt;My strategy is to:&lt;/p&gt;
 &lt;ol&gt;
@@ -64,7 +64,7 @@ _posts/2011-02-17-a-tour-of-jmeter-part-1.md:  You should now have two elements.
 _posts/2011-02-17-a-tour-of-jmeter-part-1.md:  JMeter now has your actions recorded &lt;span class=&quot;o&quot;&gt;![&lt;/span&gt;Record2]&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/assets/images/Record2.png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;I don’t need all the info retured. ow do I just get the image name part.&lt;/p&gt;
+&lt;p&gt;I don’t need all the info returned. ow do I just get the image name part.&lt;/p&gt;
 
 &lt;p&gt;looking at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;man grep&lt;/code&gt; the options &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-o -h&lt;/code&gt; look promising.&lt;/p&gt;
 
@@ -86,7 +86,7 @@ _posts/2011-02-17-a-tour-of-jmeter-part-1.md:  JMeter now has your actions recor
 /images/SBCLOptions.Png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;I’d like to just get the image name though. Pearl has a &lt;a href=&quot;https://perldoc.perl.org/perlre#Lookaround-Assertions&quot;&gt;look-around assersion&lt;/a&gt; syntax which will check for things before or after the pattern match.&lt;/p&gt;
+&lt;p&gt;I’d like to just get the image name though. Pearl has a &lt;a href=&quot;https://perldoc.perl.org/perlre#Lookaround-Assertions&quot;&gt;look-around assertion&lt;/a&gt; syntax which will check for things before or after the pattern match.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Find a word between foo and bar&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-oP&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'(?&amp;lt;=foo )\w+(?= bar)'&lt;/span&gt; test.txt

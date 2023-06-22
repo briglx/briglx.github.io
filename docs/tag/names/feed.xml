@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/names/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-21T04:58:07+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/names/feed.xml</id>
+  <link href="http://0.0.0.0:4000/tag/names/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:11:47+00:00</updated>
+  <id>http://0.0.0.0:4000/tag/names/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Computer Names</title>
-      <link href="https://www.briglamoreaux.com/2022/12/21/computer-names.html" rel="alternate" type="text/html" title="Computer Names" />
+      <link href="http://0.0.0.0:4000/2022/12/21/computer-names.html" rel="alternate" type="text/html" title="Computer Names" />
       <published>2022-12-21T00:00:00+00:00</published>
       <updated>2022-12-21T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2022/12/21/computer-names</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2022/12/21/computer-names.html">&lt;p&gt;I enjoy getting sucked into things that tickle my brain. One such activity is coming up with names for my computers/projects/etc. I’ve settled on a naming &lt;a href=&quot;https://github.com/briglx/computer-name-generator&quot;&gt;convension for computers&lt;/a&gt;.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2022/12/21/computer-names</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2022/12/21/computer-names.html">&lt;p&gt;I enjoy getting sucked into things that tickle my brain. One such activity is coming up with names for my computers/projects/etc. I’ve settled on a naming &lt;a href=&quot;https://github.com/briglx/computer-name-generator&quot;&gt;convention for computers&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Here is a list of some favorites:&lt;/p&gt;
 
@@ -65,7 +65,7 @@
       
 
       
-        <summary type="html">I enjoy getting sucked into things that tickle my brain. One such activity is coming up with names for my computers/projects/etc. I’ve settled on a naming convension for computers.</summary>
+        <summary type="html">I enjoy getting sucked into things that tickle my brain. One such activity is coming up with names for my computers/projects/etc. I’ve settled on a naming convention for computers.</summary>
       
 
       

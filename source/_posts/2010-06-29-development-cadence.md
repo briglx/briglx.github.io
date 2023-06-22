@@ -9,7 +9,7 @@ title: "Development Cadence"
 date: "2010-06-29"
 ---
 
-I've noticed in my own development processes, I tend to emphasize architecture. But there needs to be ballance between each during each sprint.
+I've noticed in my own development processes, I tend to emphasize architecture. But there needs to be balance between each during each sprint.
 
 - Features for the business
 - Architecture

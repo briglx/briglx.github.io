@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/aws/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-21T04:58:07+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/aws/feed.xml</id>
+  <link href="http://0.0.0.0:4000/tag/aws/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:11:47+00:00</updated>
+  <id>http://0.0.0.0:4000/tag/aws/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Logging onto EC2</title>
-      <link href="https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2.html" rel="alternate" type="text/html" title="Logging onto EC2" />
+      <link href="http://0.0.0.0:4000/2014/04/01/logging-onto-ec2.html" rel="alternate" type="text/html" title="Logging onto EC2" />
       <published>2014-04-01T00:00:00+00:00</published>
       <updated>2014-04-01T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2014/04/01/logging-onto-ec2.html">&lt;p&gt;I tend to forget how to log onto EC2. This morning I spun up a few servers with an Ubuntu image on EC2. As soon as I tried to log on, I received a&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2014/04/01/logging-onto-ec2</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2014/04/01/logging-onto-ec2.html">&lt;p&gt;I tend to forget how to log onto EC2. This morning I spun up a few servers with an Ubuntu image on EC2. As soon as I tried to log on, I received a&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Permission denied (publickey).&lt;/code&gt;&lt;/p&gt;
 
@@ -83,11 +83,11 @@
   
     <entry>
       <title type="html">Amazon Advises me to be Responsible with Tomcat</title>
-      <link href="https://www.briglamoreaux.com/2013/10/16/amazon-advises-me-to-be-responsible-with-tomcat.html" rel="alternate" type="text/html" title="Amazon Advises me to be Responsible with Tomcat" />
+      <link href="http://0.0.0.0:4000/2013/10/16/amazon-advises-me-to-be-responsible-with-tomcat.html" rel="alternate" type="text/html" title="Amazon Advises me to be Responsible with Tomcat" />
       <published>2013-10-16T00:00:00+00:00</published>
       <updated>2013-10-16T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2013/10/16/amazon-advises-me-to-be-responsible-with-tomcat</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2013/10/16/amazon-advises-me-to-be-responsible-with-tomcat.html">&lt;p&gt;I just received an email from Amazon concerning proper Security around Tomcat. Here is part of the message:&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2013/10/16/amazon-advises-me-to-be-responsible-with-tomcat</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2013/10/16/amazon-advises-me-to-be-responsible-with-tomcat.html">&lt;p&gt;I just received an email from Amazon concerning proper Security around Tomcat. Here is part of the message:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;You can avoid being vulnerable to attackers by following the below best practices to increase the security of your Tomcat installation:&lt;/p&gt;
@@ -156,11 +156,11 @@
   
     <entry>
       <title type="html">Load Testing with AWS</title>
-      <link href="https://www.briglamoreaux.com/2012/08/21/load-testing-aws.html" rel="alternate" type="text/html" title="Load Testing with AWS" />
+      <link href="http://0.0.0.0:4000/2012/08/21/load-testing-aws.html" rel="alternate" type="text/html" title="Load Testing with AWS" />
       <published>2012-08-21T00:00:00+00:00</published>
       <updated>2012-08-21T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2012/08/21/load-testing-aws</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2012/08/21/load-testing-aws.html">&lt;p&gt;Spinning up servers on Amazon has been such a great way to test software. I recently did a performance test of &lt;a href=&quot;http://www.mongodb.org/&quot; title=&quot;MongoDB&quot;&gt;MongoDB&lt;/a&gt; and put together a process and a few scripts that helped me load test a server with 128 clients. Here is the approach I used:&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2012/08/21/load-testing-aws</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2012/08/21/load-testing-aws.html">&lt;p&gt;Spinning up servers on Amazon has been such a great way to test software. I recently did a performance test of &lt;a href=&quot;http://www.mongodb.org/&quot; title=&quot;MongoDB&quot;&gt;MongoDB&lt;/a&gt; and put together a process and a few scripts that helped me load test a server with 128 clients. Here is the approach I used:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Stand Up Server&lt;/li&gt;

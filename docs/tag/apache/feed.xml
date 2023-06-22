@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/apache/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-21T04:58:07+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/apache/feed.xml</id>
+  <link href="http://0.0.0.0:4000/tag/apache/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:11:47+00:00</updated>
+  <id>http://0.0.0.0:4000/tag/apache/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">What Version of PHP am I Running</title>
-      <link href="https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running.html" rel="alternate" type="text/html" title="What Version of PHP am I Running" />
+      <link href="http://0.0.0.0:4000/2014/07/31/what-version-of-php-am-i-running.html" rel="alternate" type="text/html" title="What Version of PHP am I Running" />
       <published>2014-07-31T00:00:00+00:00</published>
       <updated>2014-07-31T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running.html">&lt;p&gt;I was trying to install a debugger for PHP and had trouble mostly because it turned out I had two different versions of PHP running on my machine. One I installed using homebrew and the other … well I don’t know how it got there.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2014/07/31/what-version-of-php-am-i-running</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2014/07/31/what-version-of-php-am-i-running.html">&lt;p&gt;I was trying to install a debugger for PHP and had trouble mostly because it turned out I had two different versions of PHP running on my machine. One I installed using homebrew and the other … well I don’t know how it got there.&lt;/p&gt;
 
 &lt;p&gt;Nevertheless, this is how I found out which one I was using.&lt;/p&gt;
 
@@ -61,7 +61,7 @@
 
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  vi /etc/apache2/httpd.conf
     
-  &lt;span class=&quot;c&quot;&gt;# Edit thie ine&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# Edit the line&lt;/span&gt;
   LoadModule php5_module /usr/local/opt/php55/libexec/apache2/libphp5.so
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;

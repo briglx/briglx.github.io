@@ -29,7 +29,7 @@ Setting up an application to point to Fiddler is a little different between .NET
 
 Apparently for .NET 2.0 this isn't needed anymore. My guess is somehow application in 2.0 use the WinINET API. If an application implements this API then when Fiddler has the "Act as System Proxy" checked, all http traffic will use fiddler as the proxy. Pretty neat!
 
-So now fiddler is capturing all of the http traffic for our app and that includes the SOAP calls to the webservice. The error, "Underlying connection was closed", is being thrown after one call to the web service is made and a seccond call is attempted. Doing some digging found Fiddler has a rule built in just for this error. Go to Fiddler and un-comment the connection closure rule in Rules -> Customize Rules ->| OnBeforeResponse.
+So now fiddler is capturing all of the http traffic for our app and that includes the SOAP calls to the webservice. The error, "Underlying connection was closed", is being thrown after one call to the web service is made and a second call is attempted. Doing some digging found Fiddler has a rule built in just for this error. Go to Fiddler and un-comment the connection closure rule in Rules -> Customize Rules ->| OnBeforeResponse.
 
 ```js
 static function OnBeforeResponse(oSession:Fiddler.Session)

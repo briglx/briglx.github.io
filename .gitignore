@@ -31,7 +31,10 @@ vendor
 Gemfile.lock
 node_modules
 
+.venv
+.env
 
+*.Zone.Identifier
 
 # Other
 Gemfile.lock

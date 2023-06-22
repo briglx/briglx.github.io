@@ -9,7 +9,7 @@ title: "Organizing Technical Information"
 date: "2011-05-09"
 ---
 
-I like to organize information. Mostly because I tend to forget things. Here is a template of what I find usefull.
+I like to organize information. Mostly because I tend to forget things. Here is a template of what I find useful.
 
 This checklist includes items that an Architect should be responsible for when creating a service.
 

@@ -18,7 +18,7 @@ cover: /assets/images/gitlab_logo.png
 
 I've really enjoyed using [GitLab](https://about.gitlab.com/) to manage my git repositories. 
 
-It was really easy to get started because I used a [Bitnami GitLab image](https://bitnami.com/stack/gitlab/cloud/amazon) for Amazon. The problem is when I created the instance I chose an Instance store over EBS. I don't have a really good reason why I did but now I need to move my data to its own volume so I can restart my instance with no fear of loosing data.
+It was really easy to get started because I used a [Bitnami GitLab image](https://bitnami.com/stack/gitlab/cloud/amazon) for Amazon. The problem is when I created the instance I chose an Instance store over EBS. I don't have a really good reason why I did but now I need to move my data to its own volume so I can restart my instance with no fear of losing data.
 
 1. **Check how much space you have**
     

@@ -5,7 +5,7 @@ navigation: True
 class: post-template
 subclass: 'post'
 author: brig
-title: "Modeling Student Knowlege"
+title: "Modeling Student Knowledge"
 date: "2012-10-05"
 tags: 
   - "coursera"
@@ -19,7 +19,7 @@ I'm enrolled in the Stanford course [Probabilistic Graphical Models](https://www
 
 The first step in modeling student knowledge is to capture the information. One simple case is to look at the student's final grade in a few classes. Suppose one student did well in the first and third course and poor in the second.![StudentView]({{ site.url }}{{ site.baseurl }}/assets/images/studentview.png)
 
-I could choose to model the intelligence of this student by first claiming that the typical student will have an 80% chance of having high intelligence. When I observe a student performing well in the first class, I can bump up his probability of having high intelligence a little, let's say to 90%. If I observe poor performance in the second class, I can bump the probability down a little to 85%. So after two classes the student has an 85% probably of heigh intelligence. This isn't the only information I have though.
+I could choose to model the intelligence of this student by first claiming that the typical student will have an 80% chance of having high intelligence. When I observe a student performing well in the first class, I can bump up his probability of having high intelligence a little, let's say to 90%. If I observe poor performance in the second class, I can bump the probability down a little to 85%. So after two classes the student has an 85% probably of high intelligence. This isn't the only information I have though.
 
 ## Network Effect
 

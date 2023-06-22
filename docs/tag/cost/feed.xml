@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/cost/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-21T04:58:07+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/cost/feed.xml</id>
+  <link href="http://0.0.0.0:4000/tag/cost/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:11:47+00:00</updated>
+  <id>http://0.0.0.0:4000/tag/cost/feed.xml</id>
 
   
   
@@ -33,24 +33,41 @@
   
     <entry>
       <title type="html">Cost Optimization Strategic Thinking</title>
-      <link href="https://www.briglamoreaux.com/2023/06/16/cost-optimization-strategic-thinking.html" rel="alternate" type="text/html" title="Cost Optimization Strategic Thinking" />
+      <link href="http://0.0.0.0:4000/2023/06/16/cost-optimization-strategic-thinking.html" rel="alternate" type="text/html" title="Cost Optimization Strategic Thinking" />
       <published>2023-06-16T00:00:00+00:00</published>
       <updated>2023-06-16T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2023/06/16/cost-optimization-strategic-thinking</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2023/06/16/cost-optimization-strategic-thinking.html">&lt;p&gt;I previously talked about the maturity path organizations go through adopting Cloud Cost Optimization. Sense then, I’ve created a session and workshop guiding executive teams how to have a strategic mindset for Cost Optimization. This session is great to deliver any time in the maturity path and is most relevant to organizations struggling to understand and control cost despite deploying a data pipeline to standardize cost data. I like to tell people it will help the organization move away from reactively chasing fires and towards measuring best practices.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2023/06/16/cost-optimization-strategic-thinking</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2023/06/16/cost-optimization-strategic-thinking.html">&lt;p&gt;This post will outline how to develop a strategic approach to manage costs in cloud services.&lt;/p&gt;
 
-&lt;p&gt;The session objectives are:&lt;/p&gt;
+&lt;p&gt;I previously talked about the &lt;a href=&quot;/2022/06/10/cost-optimization-maturity-model.html&quot;&gt;maturity path&lt;/a&gt; organizations go through when adopting Cloud Cost Optimization. Since then, I’ve created a session and workshop guiding executive teams on how to have a strategic mindset for Cost Optimization. They gain the ability to:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Recognizing the organization mindset&lt;/li&gt;
+  &lt;li&gt;Recognize the current organization mindset&lt;/li&gt;
   &lt;li&gt;Understand how to develop strategic based reporting using primary cost drivers&lt;/li&gt;
   &lt;li&gt;Establish a framework to capture and prioritize requirements.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;move-away-from-the-fire&quot;&gt;Move away from the Fire&lt;/h2&gt;
+&lt;h2 id=&quot;move-away-from-firefighting&quot;&gt;Move Away From Firefighting&lt;/h2&gt;
 
-&lt;p&gt;I’m often pulled into calls where customers are overwhelmed and frustrated and say something along the lines of “Help! Our storage cost is too high.” I completely understand how large and complex cloud cost optimization is and how difficult it can be to know where to start. 
-I coach teams to recognize when they are in a seek and destroy mindset chasing fires and encourage them to adopt the strategic three phased approach:&lt;/p&gt;
+&lt;p&gt;Often, I am contacted by customers who feel overwhelmed and frustrated, they might share something like:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“Help! Our storage cost is too high.”&lt;/p&gt;
+
+  &lt;p&gt;“Help! Our compute is underutilzed.”&lt;/p&gt;
+
+  &lt;p&gt;“😱! Our ☁️ is too 🤑.”&lt;/p&gt;
+
+  &lt;p&gt;“😭!! ⛈️ 💵 📈 🤯 😖 🔥 😵‍💫”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;When I hear this, I know the organization isn’t following a strategy. They are in a “seek and destroy” cost mindset chasing anything that looks like it will save cost. These groups are asking for tools to deploy or building large complex dashboards that can slice and dice data a hundred different ways. It’s an environment that feels like a constant fire fight against a runaway inferno.&lt;/p&gt;
+
+&lt;p&gt;I completely understand the complexity of cloud cost management and the difficulty in knowng where to start. The most successful organizations move from a “seek and destroy” mindset towards developing and executing a strategy.&lt;/p&gt;
+
+&lt;h2 id=&quot;strategy-built-around-best-practices&quot;&gt;Strategy built around Best Practices&lt;/h2&gt;
+
+&lt;p&gt;A popular strategy is to:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Define Best Practices&lt;/li&gt;
@@ -58,119 +75,162 @@ I coach teams to recognize when they are in a seek and destroy mindset chasing f
   &lt;li&gt;Define and Implement Remediation methods&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This approach changes traditional reporting by turning it into measuring the compliance of best practices. In addition, it creates a place for organizations to define how to remediate in the event they are not in compliance.
-Leadership teams love this approach because it is nothing more than defining a plan, measuring progress, and creating playbooks to stay on target. It’s data driven, able to hold team accountable, and outcome based.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20230616-three-phased-strategy.png&quot; alt=&quot;Three Phased Strategy&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This approach changes traditional reporting by turning it into measuring compliance with best practices. Additionally, it creates a place for organizations to define how to remediate in the event they are not in compliance.
+Leadership teams love this approach because it is nothing more than defining a plan, measuring progress, and creating playbooks to stay on target. It’s data driven, promotes team accountability, and focuses on outcomes.&lt;/p&gt;
 
 &lt;p&gt;Defining best practices can be difficult and is sometimes more art than science. One technique I like to use is to look at the primary cost drivers of a service.&lt;/p&gt;
 
-&lt;h2 id=&quot;primary-cost-drivers-lead-the-way&quot;&gt;Primary Cost Drivers Lead the Way&lt;/h2&gt;
-&lt;p&gt;Most services have several different drivers that go into the final cost. These can be found in the documentation or using the Azure Pricing Calculator.&lt;/p&gt;
+&lt;h3 id=&quot;a-primer-on-cost-drivers&quot;&gt;A Primer on Cost Drivers&lt;/h3&gt;
+&lt;p&gt;Most services have several different drivers that go into the final cost. These can typically be found in the documentation or pricing calculators.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-primary-cost-drivers-source.png&quot; alt=&quot;Storage Primary Cost Driver Sources&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20230616-storage-primary-cost-drivers-source.png&quot; alt=&quot;Storage Primary Cost Driver Sources&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;For Azure Blob Storage these include:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Azure Blob Storage Pricing&lt;/strong&gt;: File Structure, Redundancy, Region, Access Tier, Capacity, Reservation, and Operations&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Pricing Calculator&lt;/strong&gt;: Region, Type, Performance, Storage Type, Access Tier, Redundancy, Capacity, Reservation, and Operations&lt;/p&gt;
-
-&lt;p&gt;I wrote a small tool to help me identify the primary cost drivers for storage using a technique called &lt;a href=&quot;https://en.wikipedia.org/wiki/Dimensionality_reduction&quot;&gt;feature reduction.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Turns out the primary cost drivers for storage are:&lt;/p&gt;
+&lt;p&gt;For example, in Azure Blob Storage, the primary cost drivers include file structure, redundancy, region, access tier, capacity, reservation, and operations. I wrote a small tool to help me identify the primary cost drivers for storage using a technique called &lt;a href=&quot;https://en.wikipedia.org/wiki/Dimensionality_reduction&quot;&gt;feature reduction.&lt;/a&gt;. Turns out the primary cost drivers for storage are:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Capacity&lt;/li&gt;
   &lt;li&gt;Access Tier&lt;/li&gt;
-  &lt;li&gt;Redundency&lt;/li&gt;
+  &lt;li&gt;Redundancy&lt;/li&gt;
   &lt;li&gt;Region&lt;/li&gt;
   &lt;li&gt;… all others&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-primary-cost-drivers.png&quot; alt=&quot;Storage Primary Cost Drivers&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20230616-storage-primary-cost-drivers.png&quot; alt=&quot;Storage Primary Cost Drivers&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;It makes sense that capacity is the top cost driver because the more data I put into storage the more it’s going to cost. I was suprised to see that access tier had a larger influence on cost than redundency.&lt;/p&gt;
+&lt;p&gt;It makes sense that capacity is the top cost driver because the more data I put into storage the more it’s going to cost. I was surprised to see that access tier had a larger influence on cost than redundancy.&lt;/p&gt;
 
-&lt;p&gt;Identifying the cost drivers is usefull in a few ways:&lt;/p&gt;
+&lt;p&gt;Identifying the cost drivers is useful in a few ways:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Allows me break the problem into smaller pieces&lt;/li&gt;
-  &lt;li&gt;Use the relative impact of each cost drivers to prioritize efforts and develop a road map&lt;/li&gt;
+  &lt;li&gt;Allows breaking down the problem into smaller, more manageable pieces.&lt;/li&gt;
+  &lt;li&gt;Helps prioritize efforts and develop a roadmap based on the relative impact of each cost driver.&lt;/li&gt;
   &lt;li&gt;Provides a starting point to brainstorm best practices&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;defining-a-best-practice-for-cost-drivers&quot;&gt;Defining a Best Practice for Cost Drivers&lt;/h2&gt;
+&lt;h3 id=&quot;example-from-driver-to-best-practice&quot;&gt;Example From Driver to Best Practice&lt;/h3&gt;
 
-&lt;p&gt;Now that we have our top cost drivers, we need to define best practices. This is what the organization can implement the powerful leadership principle of &lt;a href=&quot;https://www.linkedin.com/pulse/leadership-principles-1-do-what-you-say-melissa-hosgood/&quot;&gt;“Do what you say you will do”&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In our quest to develop a strategy we will implement the powerful leadership principle of &lt;a href=&quot;https://www.linkedin.com/pulse/leadership-principles-1-do-what-you-say-melissa-hosgood/&quot;&gt;“Do what you say you will do”&lt;/a&gt; and use our top cost drivers to define the best practices we will follow. 
+For each cost driver, consider not only how you can influence cost, but how do you want to run your organization.&lt;/p&gt;
 
-&lt;p&gt;For each cost driver, consider not only how you can influence cost, but how do you want to run your organization.&lt;/p&gt;
+&lt;p&gt;Brainstorm activities for each Storage Cost Drivers&lt;/p&gt;
 
-&lt;p&gt;Example Brainstorm for Storage Cost Drivers:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Capacity
-    &lt;ul&gt;
-      &lt;li&gt;Reduce Capacity
+&lt;table&gt;
+  &lt;thead&gt;
+  &lt;tr&gt;&lt;th&gt;Driver&lt;/th&gt;&lt;th&gt;Activity&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Capacity&lt;/td&gt;
+      &lt;td&gt;
         &lt;ul&gt;
-          &lt;li&gt;Data Compression&lt;/li&gt;
-          &lt;li&gt;Deduplication&lt;/li&gt;
-          &lt;li&gt;Resize VM Drives&lt;/li&gt;
-          &lt;li&gt;Data Retention Policies&lt;/li&gt;
+          &lt;li&gt;Reduce Capacity
+            &lt;ul&gt;
+              &lt;li&gt;Data Compression&lt;/li&gt;
+              &lt;li&gt;Deduplication&lt;/li&gt;
+              &lt;li&gt;Resize VM Drives&lt;/li&gt;
+              &lt;li&gt;Data Retention Policies&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Reserve Capacity
+            &lt;ul&gt;
+              &lt;li&gt;Limitation Apply&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
         &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Reserve Capacity
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Access Tier&lt;/td&gt;
+      &lt;td&gt;
         &lt;ul&gt;
-          &lt;li&gt;Only Block Blob and Azure Data Lake Storage Gen2&lt;/li&gt;
-          &lt;li&gt;Premium not eligible&lt;/li&gt;
-          &lt;li&gt;Region, Access Tier, and Redundancy dependent&lt;/li&gt;
-          &lt;li&gt;Purchase Units of 100TiB and 1PiB for 1-3yrs&lt;/li&gt;
+          &lt;li&gt;Organize data into access tiers
+          &lt;/li&gt;
+          &lt;li&gt;Automatically move data between access tiers
+          &lt;/li&gt;
         &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Access Tier
-    &lt;ul&gt;
-      &lt;li&gt;Organize data into access tiers&lt;/li&gt;
-      &lt;li&gt;Automatically move data between access tiers&lt;/li&gt;
-      &lt;li&gt;…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;…&lt;/li&gt;
-&lt;/ul&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;
+        ...
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-&lt;p&gt;Example Best Practices:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Storage - Capacity: As an organization have 50% of data stored in a compressed format (snappy, gzip, lzo, etc.)&lt;/li&gt;
-  &lt;li&gt;Storage - Capacity: As an organization have 95% of data active retention age and 5% expired&lt;/li&gt;
-  &lt;li&gt;Storage - Capacity: As an organization have 80% Reserved Capacity for all eligible storage&lt;/li&gt;
-  &lt;li&gt;Storage - Access Tier: As an organization have 90% Aligned Data&lt;/li&gt;
-  &lt;li&gt;Storage - Access Tier: As an organization have 95% data with lifecycle policies applied&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Define Best Practices from brainstorming activity:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Activity&lt;/th&gt;
+      &lt;th&gt;Best Practice&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Reduce Capacity&lt;/td&gt;
+      &lt;td&gt;As an organization have 50% of data stored in a compressed format (snappy, gzip, lzo, etc.)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Reduce Capacity&lt;/td&gt;
+      &lt;td&gt;As an organization have 95% of data active retention age and 5% expired&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Reserve Capacity&lt;/td&gt;
+      &lt;td&gt;As an organization have 80% Reserved Capacity for all eligible storage&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Organize Tiers&lt;/td&gt;
+      &lt;td&gt;As an organization have 90% Aligned Data&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Automate Tiers&lt;/td&gt;
+      &lt;td&gt;As an organization have 95% data with lifecycle policies applied&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;p&gt;We now have a collection of best practices to follow. Setting a goal means nothing if it isn’t tracked.&lt;/p&gt;
 
-&lt;h2 id=&quot;measure-compliance&quot;&gt;Measure Compliance&lt;/h2&gt;
+&lt;h3 id=&quot;measure-compliance&quot;&gt;Measure Compliance&lt;/h3&gt;
 
-&lt;p&gt;The management guru Peter Drucker once said, “If you can’t measure it you can’t improve it.” Our task now is to measure our compliance to the best practice standards we have defined.&lt;/p&gt;
+&lt;p&gt;The management guru Peter Drucker once said,&lt;/p&gt;
 
-&lt;p&gt;Include the following capabilities:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;“If you can’t measure it you can’t improve it.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Our task now is to measure our compliance to the best practice standards we have defined. This is the steps that looks most similar to traditional reporting because we will create visuals. The most effective visuals need to incorporate the follow capabilities:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Separate composite metrics into atomic units. Ie. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;total_cost&lt;/code&gt; into  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;quantity&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unit_cost&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Display current &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLI&lt;/code&gt; as a percentage. Ie. 78% Data Aligned of total data in past 24hrs.&lt;/li&gt;
-  &lt;li&gt;Prefer fewer SLI states. Ideally no more than three. Ie. Aligned, MisAlligned&lt;/li&gt;
+  &lt;li&gt;Separate composite metrics into atomic units. Ie. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;total_cost&lt;/code&gt; into  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;quantity&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unit_cost&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Display service level indicators, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLI&lt;/code&gt;, as a percentage.&lt;/li&gt;
+  &lt;li&gt;Prefer fewer &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLI&lt;/code&gt; states. Ideally no more than three.&lt;/li&gt;
   &lt;li&gt;Display Historical Trends. This is key in building trust for leadership.&lt;/li&gt;
-  &lt;li&gt;Forcast next period’s SLI and Cost&lt;/li&gt;
-  &lt;li&gt;Calculate Organization SLO and Cost&lt;/li&gt;
-  &lt;li&gt;Display Potential Savings as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Forecast Cost&lt;/code&gt; - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Forecast SLO Cost&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Forecast next period’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLI&lt;/code&gt; and Cost&lt;/li&gt;
+  &lt;li&gt;Calculate Organization service level objective &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLO&lt;/code&gt; and Cost&lt;/li&gt;
+  &lt;li&gt;Calculate cost if the organizaton meet its &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLO&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Display Potential Savings&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-access-tier.png&quot; alt=&quot;Access Tier&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20230616-storage-access-tier.png&quot; alt=&quot;Access Tier&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This chart shows the organization target &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aligned data&lt;/code&gt; SLO of 95%. We can see the current SLI is 78% aligned an 22% misaligned.
-It also shows historic values for Quantity, SLI State, and Cost. This breakout is useful because often times teams may spend a lot of time to improve an environemnt but cost remain the same. By breaking out quanity from cost, teams can demonstrate to leadership teams the amount of optimization improvement happening.
-For instance, between the second and third months, Cost went down but the total footprint incrased. This happened becasue the team improved the percentance of aligned data effectivly lowering the unit cost theirby lowering total cost.
-Finally, the forecast shows the expected growth in the environment for total storage, along with the expected aligned data and the associated costs. It then shows what the cost would be if the organization acheived it’s target SLO of 95%.
-The diffeence between the forecast and the target is the potential savings of $1,687.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;As an organization have 90% Aligned Data&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Following these standards in visualising best practices has the following benifits:&lt;/p&gt;
+&lt;p&gt;This chart shows the organization &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aligned data&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLO&lt;/code&gt; of 95%. We can see the current &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLI&lt;/code&gt; is 78% aligned an 22% misaligned.&lt;/p&gt;
+
+&lt;p&gt;It also shows historic values for Quantity, SLI State, and Cost. This breakout is useful because teams may spend a lot implementing cost improvements but cost remain the same or worse go up. By breaking out quantity from cost, teams can demonstrate to leadership the improvements in efficiencies.&lt;/p&gt;
+
+&lt;p&gt;For instance, between the second and third months, Cost went down but the total footprint incrased. This happened because the team improved the percentance of aligned data effectivly lowering the unit cost theirby lowering total cost.&lt;/p&gt;
+
+&lt;p&gt;Finally, the forecast shows the expected growth in the environment for total storage, along with the expected aligned data and the associated costs. It then shows what the cost would be if the organization achieved it’s target SLO of 95%.&lt;/p&gt;
+
+&lt;p&gt;The diffeence between the forecast and the target is the potential savings of $1,687.&lt;/p&gt;
+
+&lt;p&gt;Following these standards in visualising best practices has the following benefits:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Leadership and Operations teams can priorities efforts to target improvements that have the largest potential savings&lt;/li&gt;
   &lt;li&gt;Operations team can demonstrate optimization efforts that oftentimes gets lost when strickly looking at cost&lt;/li&gt;
@@ -178,11 +238,33 @@ The diffeence between the forecast and the target is the potential savings of $1
   &lt;li&gt;Standard SLI provide a common language to the organization that allows teams to create new Best Practices and SLO&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The final steps in democratizing data is establishing a framework to capture requirements&lt;/p&gt;
+&lt;h3 id=&quot;remediate-the-offence&quot;&gt;Remediate the Offence&lt;/h3&gt;
+
+&lt;p&gt;In the event there is a missed &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLO&lt;/code&gt; the most successful organizations establish a plan on how to meet the target. This could look like:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Defining Run-books&lt;/li&gt;
+  &lt;li&gt;Instructions on how to apply an Azure Policy&lt;/li&gt;
+  &lt;li&gt;Links to documentation on how to enable ‘Auto-shutdown’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Generally there is a central team who is defining the best practices and remediations and the downstream teams attempt to comply with the best practices.&lt;/p&gt;
+
+&lt;p&gt;The point is to give the downstream team the tools or information to be successful.&lt;/p&gt;
+
+&lt;h3 id=&quot;finally-a-strategy&quot;&gt;Finally a Strategy&lt;/h3&gt;
+
+&lt;p&gt;We now have a strategy and information to guide the implementation. Our strategy is:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Define Best practices based on primary Cost Drivers. Captured as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Service Level Objectives&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Measure our Compliance to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLO&lt;/code&gt; and show potential cost savings between forecasted cost and SLO objective cost&lt;/li&gt;
+  &lt;li&gt;Publish and implement remediation methods.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With the strategy in place mature organizations establish a framework to capture requirements and scale beyond the core team.&lt;/p&gt;
 
 &lt;h2 id=&quot;recipes-for-best-practices&quot;&gt;Recipes for Best Practices&lt;/h2&gt;
 
-&lt;p&gt;I’ve been using the term Recipe to describe the various request organizaton have asked me for help with cost optimization.
+&lt;p&gt;I’ve been using the term Recipe to describe the various request organizaton have asked me for help with cost optimization. These include the best practices established in our strategy.
 Some of these are:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;I want to turn of dev machines on the weekend&lt;/li&gt;
@@ -192,22 +274,35 @@ Some of these are:&lt;/p&gt;
 
 &lt;p&gt;The framework for a recipe is:&lt;/p&gt;
 
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Section&lt;/th&gt;
+      &lt;th&gt;Detail&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Overview&lt;/td&gt;
+      &lt;td&gt;Define the Best Practice, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SLO&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Visualization&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Overview
     &lt;ul&gt;
       &lt;li&gt;Objective&lt;/li&gt;
-      &lt;li&gt;Vizualiztion&lt;/li&gt;
+      &lt;li&gt;Visualization&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Data Schema&lt;/li&gt;
   &lt;li&gt;Data Source and Transformation&lt;/li&gt;
-  &lt;li&gt;Remediation&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A few best practices include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Versioning the recipe and the source data&lt;/li&gt;
-  &lt;li&gt;Using Standard data sources&lt;/li&gt;
+  &lt;li&gt;Remediatin&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Example: Orphaned Disks&lt;/p&gt;
@@ -216,10 +311,10 @@ Some of these are:&lt;/p&gt;
 &lt;p&gt;Best Practice: As an organization, have 90% attached disk (&amp;lt;10% orphaned)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Sketch&lt;/strong&gt;
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-sketch.jpgg&quot; alt=&quot;Orphaned Disks Sketch&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20230616-storage-orphaned-disks-sketch.jpgg&quot; alt=&quot;Orphaned Disks Sketch&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;PowerBI Example&lt;/strong&gt;
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-pbi.jpgg&quot; alt=&quot;Orphaned Disks PowerBI&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20230616-storage-orphaned-disks-pbi.jpgg&quot; alt=&quot;Orphaned Disks PowerBI&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;schema&quot;&gt;Schema&lt;/h3&gt;
 
@@ -237,10 +332,10 @@ Some of these are:&lt;/p&gt;
 | resource_group | nvarchar(100) | Filter |
 | orphaned_disk_count | |
 | attached_disk_count | |
-| total_disk_count | | Calcuated orphaned + attached 
+| total_disk_count | | Calculated orphaned + attached 
 | attached_disk_percent | | Calculated attached / total | 
 | cost | | |
-| is_forecast | | Forcasted data |
+| is_forecast | | Forecasted data |
 | is_latest | | Indicates the most recent data |
 | is_optimal_forcast | | Indicates optimal forecast |
 | forecast_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=False |
@@ -350,7 +445,7 @@ Some of these are:&lt;/p&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;Common Data Schema&lt;/td&gt;
-      &lt;td&gt;Lastest&lt;/td&gt;
+      &lt;td&gt;Latest&lt;/td&gt;
       &lt;td&gt;AmortizedCost&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
@@ -423,7 +518,7 @@ Some of these are:&lt;/p&gt;
   &lt;li&gt;Use the recipe format to define SLOs&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;If you do this then you enjoy the benifits of:&lt;/p&gt;
+&lt;p&gt;If you do this then you enjoy the benefits of:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Standardize data set&lt;/li&gt;
   &lt;li&gt;Data lineage&lt;/li&gt;
@@ -435,7 +530,7 @@ Some of these are:&lt;/p&gt;
   &lt;li&gt;Roadmap based on Top Spend and Top cost drivers&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;appendex&quot;&gt;Appendex&lt;/h2&gt;
+&lt;h2 id=&quot;appendix&quot;&gt;Appendix&lt;/h2&gt;
 
 &lt;p&gt;Terminology&lt;/p&gt;
 &lt;ul&gt;
@@ -471,7 +566,7 @@ Some of these are:&lt;/p&gt;
       
 
       
-        <summary type="html">I previously talked about the maturity path organizations go through adopting Cloud Cost Optimization. Sense then, I’ve created a session and workshop guiding executive teams how to have a strategic mindset for Cost Optimization. This session is great to deliver any time in the maturity path and is most relevant to organizations struggling to understand and control cost despite deploying a data pipeline to standardize cost data. I like to tell people it will help the organization move away from reactively chasing fires and towards measuring best practices.</summary>
+        <summary type="html">This post will outline how to develop a strategic approach to manage costs in cloud services.</summary>
       
 
       
@@ -480,21 +575,21 @@ Some of these are:&lt;/p&gt;
   
     <entry>
       <title type="html">Cost Optimization Maturity Model</title>
-      <link href="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" />
+      <link href="http://0.0.0.0:4000/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" />
       <published>2022-06-10T00:00:00+00:00</published>
       <updated>2022-06-10T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2022/06/10/cost-optimization-maturity-model</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-1---freaking-out&quot;&gt;Phase 1 - Freaking Out&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The first phase is moving to the cloud and watching the bill grow over time without understanding why. There is not much to do in this phase other than completely ignoring the slowly growing problem or asking for help.&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-2---finding-tools&quot;&gt;Phase 2 - Finding Tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Learning about cost management tools distinguishes Phase 2 from Phase 1. Azure includes tools like:&lt;/p&gt;
 
@@ -523,7 +618,7 @@ Some of these are:&lt;/p&gt;
   &lt;li&gt;Delete idle network gateways&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Review Advisor recommendations in the Azure portal: &lt;a href=&quot;https://aka.ms/azureadvisor&quot;&gt;aka.ms/azureadvisor&lt;/a&gt;&lt;/p&gt;
 
@@ -537,7 +632,7 @@ Some of these are:&lt;/p&gt;
   &lt;li&gt;Set spending thresholds and more&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;azure-cost-management--billing-power-bi-app&quot;&gt;Azure Cost Management + Billing Power BI App&lt;/h3&gt;
 
@@ -556,7 +651,7 @@ Some of these are:&lt;/p&gt;
 
 &lt;p&gt;You can also create ad hoc reports using the underlying data. I will use the ACM Power BI Template App to show off how to slice and dice billing data for customers looking for specialized reports.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;azure-cost-management-connector-for-power-bi&quot;&gt;Azure Cost Management Connector for Power BI&lt;/h3&gt;
 
@@ -564,9 +659,9 @@ Some of these are:&lt;/p&gt;
 
 &lt;p&gt;When a tricky request comes in, like a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;point-in-time comparison&lt;/code&gt; report, I fire up Power BI Desktop to do the job.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-azure-cost-management-connector.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-azure-cost-management-connector.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;waf-cost-optimzation-workbook&quot;&gt;WAF Cost Optimzation Workbook&lt;/h3&gt;
+&lt;h3 id=&quot;waf-cost-optimization-workbook&quot;&gt;WAF Cost Optimization Workbook&lt;/h3&gt;
 
 &lt;p&gt;Microsoft has a service where engineers can sit with customers to analyze their environment. One tool the team uses is the Well-Architected Framework (WAF) Cost Optimization Workbook. The workbook is deployed into Azure Monitor and queries Azure logs and the Azure Graph API to inspect the current environment. Some of the reports include:&lt;/p&gt;
 
@@ -577,7 +672,7 @@ Some of these are:&lt;/p&gt;
   &lt;li&gt;Hybrid benefits and more&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;additional-tools&quot;&gt;Additional Tools&lt;/h3&gt;
 
@@ -592,7 +687,7 @@ Some of these are:&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-3---outgrowing-the-tools&quot;&gt;Phase 3 - Outgrowing the Tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At some point, the tools either fail to provide needed information or are overwhelmed by the amount of data. In my experience, this moment comes when an organization reaches the $2M / month in consumption and the file size for billing data approaches 2-3GB. Excel and PowerBI start to slow down with files this large.&lt;/p&gt;
 
@@ -600,11 +695,11 @@ Some of these are:&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-4---create-a-new-tool&quot;&gt;Phase 4 - Create a New Tool&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;When I faced this phase several years ago, I designed and &lt;a href=&quot;https://github.com/briglx/AzureBillingReports&quot;&gt;implemented a solution&lt;/a&gt; using my background in big data. After deploying it, I interviewed colleagues in other large organizations asking how they solved the problem. The responses were consistent with my solution’s modern data warehouse pipeline architecture.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This scalable solution can:&lt;/p&gt;
 
@@ -618,7 +713,7 @@ Some of these are:&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-5---wrong-audience&quot;&gt;Phase 5 - Wrong Audience&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Phase 5 is a cycle of cost-cutting and organic growth. The behavior can show up anytime during the maturity growth phases because it is more of a mindset about cost management instead of a limitation of the tools. I put it here because implementing a big-data pipeline is less complicated than changing the hearts and minds of an entire organization.&lt;/p&gt;
 
@@ -657,7 +752,7 @@ Some of these are:&lt;/p&gt;
   &lt;li&gt;Remediate&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This method extends the capability of Azure Advisor to include custom business best practices.&lt;/p&gt;
 
@@ -675,15 +770,15 @@ Some of these are:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Measure and Monitor&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The best visualizations provide essential information each department needs. Reports designed to build trust for executives should show the current status of a best practice and the historical progress. Provide visualization that provides information needed to make real-time decisions.&lt;/p&gt;
 
 &lt;p&gt;Organizations move out of phase 5 when it replaces the mindset of seeking-and-destroying costs to strategically monitor and measuring best practices.&lt;/p&gt;
 
-&lt;h2 id=&quot;phase-6---recipies&quot;&gt;Phase 6 - Recipies&lt;/h2&gt;
+&lt;h2 id=&quot;phase-6---recipes&quot;&gt;Phase 6 - Recipes&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipies&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipes&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The last phase in the maturity model is when an organization can scale developing reports that measure best practices. Scaling will require centralizing data collection, a common data schema, and discoverability. In this environment, teams can create, discover, and share new reports.&lt;/p&gt;</content>
 

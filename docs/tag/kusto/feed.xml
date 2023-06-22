@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/kusto/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-21T04:58:07+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/kusto/feed.xml</id>
+  <link href="http://0.0.0.0:4000/tag/kusto/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:11:47+00:00</updated>
+  <id>http://0.0.0.0:4000/tag/kusto/feed.xml</id>
 
   
   
@@ -33,13 +33,13 @@
   
     <entry>
       <title type="html">Finding Public IP Details</title>
-      <link href="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
+      <link href="http://0.0.0.0:4000/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
       <published>2022-06-10T00:00:00+00:00</published>
       <updated>2022-06-10T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2022/06/10/finding-public-ip-details</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
 
-&lt;p&gt;The goal is to see the different types of resources public ips are assocaited like:&lt;/p&gt;
+&lt;p&gt;The goal is to see the different types of resources public ips are associated like:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;VMs&lt;/li&gt;
@@ -50,7 +50,7 @@
   &lt;li&gt;not associated.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;After playing around with the query languange and discovering that it doesn’t implement the entire language, no &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt; keyword, I came up with the following:&lt;/p&gt;
+&lt;p&gt;After playing around with the query language and discovering that it doesn’t implement the entire language, no &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt; keyword, I came up with the following:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-kusto&quot;&gt;resources 
 | where type =~ 'Microsoft.Network/publicIPAddresses'

@@ -18,7 +18,7 @@ If I can't get something out of a new tool or methodology, why use it. With anon
 
 ## Problem
 
-What is the best way to add filtering capability on a specilized collection? After looking at related problem sets, I found the `public T Find(System.Predicate<T> match)` method which is implemented on `System.Collections.Generic.List`. A Predicateis a special delegate that takes in an object, and returns true. Suppose I have a collection of names and I would like to check if a name is long. I could do the following
+What is the best way to add filtering capability on a specialized collection? After looking at related problem sets, I found the `public T Find(System.Predicate<T> match)` method which is implemented on `System.Collections.Generic.List`. A Predicateis a special delegate that takes in an object, and returns true. Suppose I have a collection of names and I would like to check if a name is long. I could do the following
 
 ```cs
 class Program
@@ -55,7 +55,7 @@ class Program
             names.Add("Billy");
             names.Add("Susan");
             names.Add("Ed");
-            // WrapIsLongName up insided of Predicate delegate.
+            // WrapIsLongName up inside of Predicate delegate.
             Predicate<string> longNameMethod = new Predicate<string>(IsLongName);
             List<string> longNames = names.FindAll(longNameMethod);
             Console.WriteLine("There are {0} long names", longNames.Count);
@@ -82,7 +82,7 @@ class Program
             names.Add("Billy");
             names.Add("Susan");
             names.Add("Ed");
-            // WrapIsLongName up insided of Predicate delegate.
+            // WrapIsLongName up inside of Predicate delegate.
             Predicate<string> longNameMethod = new Predicate<string>(IsLongName);
             Predicate<string> mgbName = new Predicate<string>(IsMGBName);
             List<string> longNames = names.FindAll(longNameMethod);
@@ -124,7 +124,7 @@ class Program
             names.Add("Billy");
             names.Add("Susan");
             names.Add("Ed");
-            // WrapIsLongName up insided of Predicate delegate.
+            // WrapIsLongName up inside of Predicate delegate.
             Predicate<string> longNameMethod = newPredicate<string>(IsLongName);
             Predicate<string> mgbName = newPredicate<string>(IsMGBName);
             List<string> longNames = names.FindAll(delegate(string name) { return name.Length > 4; });

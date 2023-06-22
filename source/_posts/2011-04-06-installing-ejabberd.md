@@ -13,7 +13,7 @@ I'm working on a project that needs to stand up an XMPP server. I've decided on 
 
 1. Download and install
     - First I Downloaded [ejabberd 2.1.6](http://www.process-one.net/en/ejabberd/downloads) 64bit version for linux.
-    - I then unziped and installed
+    - I then unzipped and installed
     `$ gzip -d ejabberd-2.1.6-linux-x86_64-installer.bin.gz $ chmod +x ejabberd-2.1.6-linux-x86_64-installer.bin $ ./ejabberd-2.1.6-linux-x86_64-installer.bin`- I followed all the defaults except for where to install it. I decided on /opt/ejabberd/
 2. Run
     - Add new user for ejabberd to run under. Note that these commands live under /user/sbin/

@@ -12,7 +12,7 @@ tags:
   - "smb"
 ---
 
-I needed to share a folder between a linux machine and windows. The seceret is using Samba. Fortunatly there are several guides out there that show how to do it. These are my notes:
+I needed to share a folder between a linux machine and windows. The seceret is using Samba. Fortunately there are several guides out there that show how to do it. These are my notes:
 
 1. Install Samba
     - Install `sudo apt-get install samba smbfs`
@@ -28,7 +28,7 @@ I needed to share a folder between a linux machine and windows. The seceret is u
         
         #======================= Share Definitions =======================
         
-        # Un-comment the following (and tweak the other settings below to suit) # to enable the default home directory shares. This will share each # user's home directory as \serverusername [homes] comment = Home Directories browseable = yes
+        # Un-comment the following (and tweak the other settings below to suit) # to enable the default home directory shares. This will share each # user's home directory as \serverusername [homes] comment = Home Directories browsable = yes
         
         # By default, the home directories are exported read-only. Change the # next parameter to 'no' if you want to be able to write to them. read only = no
         

@@ -24,7 +24,7 @@ I found five different ways to do it with a few surprising results:
 
 ## The Code
 
-The first part of the code loads the image file, covert it to black and white, and then resizes it down to an 9x8 thumbnail.
+The first part of the code loads the image file, convert it to black and white, and then resizes it down to an 9x8 thumbnail.
 
 The rgb3gray and rgb2gray2 methods are custom functions that attempt to convert an RGB [n,d,3] matrix into a gray scale.
 

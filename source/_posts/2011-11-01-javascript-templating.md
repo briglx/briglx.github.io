@@ -65,7 +65,7 @@ Here is the very simple template to get the job done. Nothing special here.
 /****************************************************************************/
 /// <summary>
 /// An object that uses an html template and data to produce merged html.
-/// </summmary>
+/// </summary>
 helios.template = function(text){
     this._pattern = $.trim(text);
 }

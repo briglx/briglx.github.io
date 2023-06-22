@@ -1,0 +1,5 @@
+[tool.codespell]
+count = ''
+quiet-level = 3
+skip = './.*,*.csv,*.json,*.pyc,./docs/_build/*,./htmlcov/*,*.egg-info,atom.xml,feed.xml,docs,*.pdf,Gemfile.lock,./source/assets/built'
+ignore-words = '.codespell_ignore'

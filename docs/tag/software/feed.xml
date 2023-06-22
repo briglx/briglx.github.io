@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/software/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-21T04:58:07+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/software/feed.xml</id>
+  <link href="http://0.0.0.0:4000/tag/software/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:11:47+00:00</updated>
+  <id>http://0.0.0.0:4000/tag/software/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Finding Missing Images</title>
-      <link href="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
+      <link href="http://0.0.0.0:4000/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
       <published>2022-05-20T00:00:00+00:00</published>
       <updated>2022-05-20T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2022/05/20/finding-missing-images</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2022/05/20/finding-missing-images</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
 
 &lt;p&gt;My strategy is to:&lt;/p&gt;
 &lt;ol&gt;
@@ -64,7 +64,7 @@ _posts/2011-02-17-a-tour-of-jmeter-part-1.md:  You should now have two elements.
 _posts/2011-02-17-a-tour-of-jmeter-part-1.md:  JMeter now has your actions recorded &lt;span class=&quot;o&quot;&gt;![&lt;/span&gt;Record2]&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;/assets/images/Record2.png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;I don’t need all the info retured. ow do I just get the image name part.&lt;/p&gt;
+&lt;p&gt;I don’t need all the info returned. ow do I just get the image name part.&lt;/p&gt;
 
 &lt;p&gt;looking at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;man grep&lt;/code&gt; the options &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-o -h&lt;/code&gt; look promising.&lt;/p&gt;
 
@@ -86,7 +86,7 @@ _posts/2011-02-17-a-tour-of-jmeter-part-1.md:  JMeter now has your actions recor
 /images/SBCLOptions.Png&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;I’d like to just get the image name though. Pearl has a &lt;a href=&quot;https://perldoc.perl.org/perlre#Lookaround-Assertions&quot;&gt;look-around assersion&lt;/a&gt; syntax which will check for things before or after the pattern match.&lt;/p&gt;
+&lt;p&gt;I’d like to just get the image name though. Pearl has a &lt;a href=&quot;https://perldoc.perl.org/perlre#Lookaround-Assertions&quot;&gt;look-around assertion&lt;/a&gt; syntax which will check for things before or after the pattern match.&lt;/p&gt;
 
 &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Find a word between foo and bar&lt;/span&gt;
 &lt;span class=&quot;nb&quot;&gt;grep&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-oP&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'(?&amp;lt;=foo )\w+(?= bar)'&lt;/span&gt; test.txt
@@ -184,15 +184,15 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">Updating and Migrating Confluence</title>
-      <link href="https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence.html" rel="alternate" type="text/html" title="Updating and Migrating Confluence" />
+      <link href="http://0.0.0.0:4000/2018/09/13/updating-and-migrating-confluence.html" rel="alternate" type="text/html" title="Updating and Migrating Confluence" />
       <published>2018-09-13T00:00:00+00:00</published>
       <updated>2018-09-13T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence.html">&lt;p&gt;I started hosting my wiki on Azure way back in 2016. The other day I received a message that I was  not using managed disks and I should upgrade. So I pushed the upgrade button and kicked off a two day outage which resulted in me pulling my hair out, migrating, looking at logs, and changing databases.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2018/09/13/updating-and-migrating-confluence</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2018/09/13/updating-and-migrating-confluence.html">&lt;p&gt;I started hosting my wiki on Azure way back in 2016. The other day I received a message that I was  not using managed disks and I should upgrade. So I pushed the upgrade button and kicked off a two day outage which resulted in me pulling my hair out, migrating, looking at logs, and changing databases.&lt;/p&gt;
 
 &lt;h2 id=&quot;first-architecture&quot;&gt;First Architecture&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/confluencev1.png&quot; alt=&quot;Confluence v1 Architecture&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/confluencev1.png&quot; alt=&quot;Confluence v1 Architecture&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The first architecture is really basic. Just two vms. One with confluence installed on it and the other with Postgresql. I configured a separate nsg for each one. Looking back I could have had just one.&lt;/p&gt;
 
@@ -225,7 +225,7 @@ CropperCapture%5B12%5D.png,0
 
 &lt;h2 id=&quot;new-architecture&quot;&gt;New Architecture&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/confluencev2.png&quot; alt=&quot;confluencev2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/confluencev2.png&quot; alt=&quot;confluencev2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I replaced the IaaS database for the Azure Database Postgresql PaaS solution. I don’t want to mess around with managing a database. One less thing to think about.&lt;/p&gt;
 
@@ -293,11 +293,11 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">Boilerplate Raspbian Setup</title>
-      <link href="https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup.html" rel="alternate" type="text/html" title="Boilerplate Raspbian Setup" />
+      <link href="http://0.0.0.0:4000/2018/08/28/boilerplate-raspbian-setup.html" rel="alternate" type="text/html" title="Boilerplate Raspbian Setup" />
       <published>2018-08-28T00:00:00+00:00</published>
       <updated>2018-08-28T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup.html">&lt;p&gt;I tend to flash my raspberry pies a lot. Here are the steps I follow to get to my working state.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2018/08/28/boilerplate-raspbian-setup</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2018/08/28/boilerplate-raspbian-setup.html">&lt;p&gt;I tend to flash my raspberry pies a lot. Here are the steps I follow to get to my working state.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Flash with latest raspbian image https://www.raspberrypi.org/downloads/raspbian/&lt;/li&gt;
@@ -423,13 +423,13 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">More Time Doesn’t Always Help</title>
-      <link href="https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html" rel="alternate" type="text/html" title="More Time Doesn't Always Help" />
+      <link href="http://0.0.0.0:4000/2018/06/28/more-time-doesnt-always-help.html" rel="alternate" type="text/html" title="More Time Doesn't Always Help" />
       <published>2018-06-28T00:00:00+00:00</published>
       <updated>2018-06-28T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2018/06/28/more-time-doesnt-always-help.html">&lt;p&gt;Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2018/06/28/more-time-doesnt-always-help</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2018/06/28/more-time-doesnt-always-help.html">&lt;p&gt;Continuing on with Keras, there is a simple IMDB data set with movie ratings.  Building a quick model and training over a few epochs shows the training accuracy goes up to the high 90%. However, the validation accuracy hovers around 87%.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/trainingvalidationaccuracy.png&quot; alt=&quot;TrainingValidationAccuracy&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/trainingvalidationaccuracy.png&quot; alt=&quot;TrainingValidationAccuracy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The model is over-fitting the data somehow. No matter how many more epochs I run, the validation won’t get better.&lt;/p&gt;</content>
 
@@ -469,11 +469,11 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">Surprising Results with Python Thumbnails</title>
-      <link href="https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails.html" rel="alternate" type="text/html" title="Surprising Results with Python Thumbnails" />
+      <link href="http://0.0.0.0:4000/2018/04/13/surprising-results-with-python-thumbnails.html" rel="alternate" type="text/html" title="Surprising Results with Python Thumbnails" />
       <published>2018-04-13T00:00:00+00:00</published>
       <updated>2018-04-13T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2018/04/13/surprising-results-with-python-thumbnails.html">&lt;p&gt;I’ve been working with images recently and am using a technique for a hashing algorithm. This technique resized the image to a 9x8 gray scale image.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2018/04/13/surprising-results-with-python-thumbnails</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2018/04/13/surprising-results-with-python-thumbnails.html">&lt;p&gt;I’ve been working with images recently and am using a technique for a hashing algorithm. This technique resized the image to a 9x8 gray scale image.&lt;/p&gt;
 
 &lt;p&gt;I found five different ways to do it with a few surprising results:&lt;/p&gt;
 
@@ -486,7 +486,7 @@ CropperCapture%5B12%5D.png,0
 
 &lt;h2 id=&quot;the-code&quot;&gt;The Code&lt;/h2&gt;
 
-&lt;p&gt;The first part of the code loads the image file, covert it to black and white, and then resizes it down to an 9x8 thumbnail.&lt;/p&gt;
+&lt;p&gt;The first part of the code loads the image file, convert it to black and white, and then resizes it down to an 9x8 thumbnail.&lt;/p&gt;
 
 &lt;p&gt;The rgb3gray and rgb2gray2 methods are custom functions that attempt to convert an RGB [n,d,3] matrix into a gray scale.&lt;/p&gt;
 
@@ -561,19 +561,19 @@ plt.show()
 
 &lt;p&gt;&lt;strong&gt;Image 1 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails01.png&quot; alt=&quot;comparePythonThumbnails01&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/comparepythonthumbnails01.png&quot; alt=&quot;comparePythonThumbnails01&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 2 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails02.png&quot; alt=&quot;comparePythonThumbnails02&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/comparepythonthumbnails02.png&quot; alt=&quot;comparePythonThumbnails02&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 3 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails03.png&quot; alt=&quot;comparePythonThumbnails03&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/comparepythonthumbnails03.png&quot; alt=&quot;comparePythonThumbnails03&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 4 - Color&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails04.png&quot; alt=&quot;comparePythonThumbnails04&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/comparepythonthumbnails04.png&quot; alt=&quot;comparePythonThumbnails04&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There are a few things I noticed:&lt;/p&gt;
 
@@ -589,19 +589,19 @@ plt.show()
 
 &lt;p&gt;&lt;strong&gt;Image 1 - Gray Scaled&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails01bw.png&quot; alt=&quot;comparePythonThumbnails01bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/comparepythonthumbnails01bw.png&quot; alt=&quot;comparePythonThumbnails01bw&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 2 - Gray Scaled&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails02bw.png&quot; alt=&quot;comparePythonThumbnails02bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/comparepythonthumbnails02bw.png&quot; alt=&quot;comparePythonThumbnails02bw&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 3 - Gray Scale&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails03bw.png&quot; alt=&quot;comparePythonThumbnails03bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/comparepythonthumbnails03bw.png&quot; alt=&quot;comparePythonThumbnails03bw&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Image 4 - Gray Scale&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/comparepythonthumbnails04bw.png&quot; alt=&quot;comparePythonThumbnails04bw&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/comparepythonthumbnails04bw.png&quot; alt=&quot;comparePythonThumbnails04bw&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
@@ -637,11 +637,11 @@ plt.show()
   
     <entry>
       <title type="html">Parse Azure Deployment Status</title>
-      <link href="https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status.html" rel="alternate" type="text/html" title="Parse Azure Deployment Status" />
+      <link href="http://0.0.0.0:4000/2017/08/24/parse-azure-deployment-status.html" rel="alternate" type="text/html" title="Parse Azure Deployment Status" />
       <published>2017-08-24T00:00:00+00:00</published>
       <updated>2017-08-24T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status.html">&lt;p&gt;I’ve been making a lot of deployments that take a while to finish. There is an api call to fetch the status of the operations.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2017/08/24/parse-azure-deployment-status</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2017/08/24/parse-azure-deployment-status.html">&lt;p&gt;I’ve been making a lot of deployments that take a while to finish. There is an api call to fetch the status of the operations.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;azure group deployment operation list --name deploymentname --resource-group rgname&lt;/code&gt;&lt;/p&gt;
 
@@ -683,11 +683,11 @@ plt.show()
   
     <entry>
       <title type="html">Here are the differences between HDInsight and Hortonworks HDP</title>
-      <link href="https://www.briglamoreaux.com/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html" rel="alternate" type="text/html" title="Here are the differences between HDInsight and Hortonworks HDP" />
+      <link href="http://0.0.0.0:4000/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html" rel="alternate" type="text/html" title="Here are the differences between HDInsight and Hortonworks HDP" />
       <published>2017-05-08T00:00:00+00:00</published>
       <updated>2017-05-08T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html">&lt;p&gt;I get asked a lot about the differences between Microsoft HDInsight and Hortonworks HDP. Turns out there tight coordinated development efforts between the two companies. I was surprised to see how much closer the two products are now today compared to a year ago. Here is what I was able to find.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html">&lt;p&gt;I get asked a lot about the differences between Microsoft HDInsight and Hortonworks HDP. Turns out there tight coordinated development efforts between the two companies. I was surprised to see how much closer the two products are now today compared to a year ago. Here is what I was able to find.&lt;/p&gt;
 
 &lt;h2 id=&quot;lag-in-versions&quot;&gt;Lag in Versions&lt;/h2&gt;
 
@@ -761,11 +761,11 @@ plt.show()
   
     <entry>
       <title type="html">What Version of PHP am I Running</title>
-      <link href="https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running.html" rel="alternate" type="text/html" title="What Version of PHP am I Running" />
+      <link href="http://0.0.0.0:4000/2014/07/31/what-version-of-php-am-i-running.html" rel="alternate" type="text/html" title="What Version of PHP am I Running" />
       <published>2014-07-31T00:00:00+00:00</published>
       <updated>2014-07-31T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running.html">&lt;p&gt;I was trying to install a debugger for PHP and had trouble mostly because it turned out I had two different versions of PHP running on my machine. One I installed using homebrew and the other … well I don’t know how it got there.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2014/07/31/what-version-of-php-am-i-running</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2014/07/31/what-version-of-php-am-i-running.html">&lt;p&gt;I was trying to install a debugger for PHP and had trouble mostly because it turned out I had two different versions of PHP running on my machine. One I installed using homebrew and the other … well I don’t know how it got there.&lt;/p&gt;
 
 &lt;p&gt;Nevertheless, this is how I found out which one I was using.&lt;/p&gt;
 
@@ -789,7 +789,7 @@ plt.show()
 
     &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  vi /etc/apache2/httpd.conf
     
-  &lt;span class=&quot;c&quot;&gt;# Edit thie ine&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;# Edit the line&lt;/span&gt;
   LoadModule php5_module /usr/local/opt/php55/libexec/apache2/libphp5.so
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
@@ -843,13 +843,13 @@ From the command line you can check which &lt;code class=&quot;language-plaintex
   
     <entry>
       <title type="html">Moving GitLab to an EBS Volume</title>
-      <link href="https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume.html" rel="alternate" type="text/html" title="Moving GitLab to an EBS Volume" />
+      <link href="http://0.0.0.0:4000/2014/07/30/moving-gitlab-to-an-ebs-volume.html" rel="alternate" type="text/html" title="Moving GitLab to an EBS Volume" />
       <published>2014-07-30T00:00:00+00:00</published>
       <updated>2014-07-30T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/30/moving-gitlab-to-an-ebs-volume.html">&lt;p&gt;I’ve really enjoyed using &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;GitLab&lt;/a&gt; to manage my git repositories.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2014/07/30/moving-gitlab-to-an-ebs-volume</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2014/07/30/moving-gitlab-to-an-ebs-volume.html">&lt;p&gt;I’ve really enjoyed using &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;GitLab&lt;/a&gt; to manage my git repositories.&lt;/p&gt;
 
-&lt;p&gt;It was really easy to get started because I used a &lt;a href=&quot;https://bitnami.com/stack/gitlab/cloud/amazon&quot;&gt;Bitnami GitLab image&lt;/a&gt; for Amazon. The problem is when I created the instance I chose an Instance store over EBS. I don’t have a really good reason why I did but now I need to move my data to its own volume so I can restart my instance with no fear of loosing data.&lt;/p&gt;
+&lt;p&gt;It was really easy to get started because I used a &lt;a href=&quot;https://bitnami.com/stack/gitlab/cloud/amazon&quot;&gt;Bitnami GitLab image&lt;/a&gt; for Amazon. The problem is when I created the instance I chose an Instance store over EBS. I don’t have a really good reason why I did but now I need to move my data to its own volume so I can restart my instance with no fear of losing data.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -989,11 +989,11 @@ From the command line you can check which &lt;code class=&quot;language-plaintex
   
     <entry>
       <title type="html">Symfony denied Access</title>
-      <link href="https://www.briglamoreaux.com/2014/07/14/symfony-denied-access.html" rel="alternate" type="text/html" title="Symfony denied Access" />
+      <link href="http://0.0.0.0:4000/2014/07/14/symfony-denied-access.html" rel="alternate" type="text/html" title="Symfony denied Access" />
       <published>2014-07-14T00:00:00+00:00</published>
       <updated>2014-07-14T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2014/07/14/symfony-denied-access</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/14/symfony-denied-access.html">&lt;p&gt;Moving my Symfony app to a QA server showed me how rude the server is.&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2014/07/14/symfony-denied-access</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2014/07/14/symfony-denied-access.html">&lt;p&gt;Moving my Symfony app to a QA server showed me how rude the server is.&lt;/p&gt;
 
 &lt;p&gt;I could see the home page right after I copied the project to the new machine with not problem (except for modifying &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.config.php&lt;/code&gt; and various file permission ownership issues). Nevertheless, the real problem came when I tried navigating to any other route besides the index. Each time I would get a 403 Access denied error.&lt;/p&gt;
 

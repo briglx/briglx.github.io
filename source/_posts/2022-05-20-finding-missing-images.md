@@ -43,7 +43,7 @@ _posts/2011-02-17-a-tour-of-jmeter-part-1.md:  You should now have two elements.
 _posts/2011-02-17-a-tour-of-jmeter-part-1.md:  JMeter now has your actions recorded ![Record2](/assets/images/Record2.png)
 ```
 
-I don't need all the info retured. ow do I just get the image name part.
+I don't need all the info returned. ow do I just get the image name part.
 
 looking at `man grep` the options `-o -h` look promising.
 
@@ -67,7 +67,7 @@ head referenced_images.csv
 /images/SBCLOptions.Png)
 ```
 
-I'd like to just get the image name though. Pearl has a [look-around assersion](https://perldoc.perl.org/perlre#Lookaround-Assertions) syntax which will check for things before or after the pattern match. 
+I'd like to just get the image name though. Pearl has a [look-around assertion](https://perldoc.perl.org/perlre#Lookaround-Assertions) syntax which will check for things before or after the pattern match. 
 
 ```bash
 # Find a word between foo and bar

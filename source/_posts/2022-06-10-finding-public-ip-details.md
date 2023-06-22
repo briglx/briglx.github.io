@@ -15,7 +15,7 @@ author: brig
 
 I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.
 
-The goal is to see the different types of resources public ips are assocaited like:
+The goal is to see the different types of resources public ips are associated like:
 
 - VMs
 - Scalesets
@@ -24,7 +24,7 @@ The goal is to see the different types of resources public ips are assocaited li
 - etc
 - not associated.
 
-After playing around with the query languange and discovering that it doesn't implement the entire language, no `let` keyword, I came up with the following:
+After playing around with the query language and discovering that it doesn't implement the entire language, no `let` keyword, I came up with the following:
 
 ```kusto
 resources 

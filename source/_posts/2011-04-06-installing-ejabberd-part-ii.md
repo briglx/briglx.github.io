@@ -15,7 +15,7 @@ tags:
 
 So my [first attempt]({% post_url 2011-04-06-installing-ejabberd %}) at installing ejabberd ended with the app not being able to start up. 
 
-I think this could be due to the fact that I was monkeying around with adding the ejabberd user and group and also the possiblity of a bad setup because `/usr/sbin` isn't in the path. So I'm going to try again on a new clean server.
+I think this could be due to the fact that I was monkeying around with adding the ejabberd user and group and also the possibility of a bad setup because `/usr/sbin` isn't in the path. So I'm going to try again on a new clean server.
 
 1. First I made sure the `/usr/sbin` was in the path.
     - Edit `/etc/profile` to include the path 

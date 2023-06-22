@@ -85,12 +85,12 @@ Set values in `conf/hdfs-site.xml`
 <!--
 <property>
     <name>dfs.name.dir</name>
-    <value>/u01/accts/a.brlamore/tmp/path/to/namenode/namesapce/</value>
+    <value>/u01/accts/a.brlamore/tmp/path/to/namenode/namespace/</value>
 <description>Where the NameNode metadata should be stored. Default location is ${hadoop.tmp.dir}/dfs/name. Suggested location /home/hadoop/dfs/name</description>
 </property>
 <property>
     <name>dfs.data.dir</name>
-    <value>/u01/accts/a.brlamore/tmp/path/to/datanode/namesapce/</value>
+    <value>/u01/accts/a.brlamore/tmp/path/to/datanode/namespace/</value>
     <description>Where DataNodes store their blocks. Default location ${hadoop.tmp.dir}/dfs/data. Suggested location /home/hadoop/dfs/data</description>
 </property>
 -->

@@ -47,7 +47,7 @@ Here are how they compare to each other
 
 ## NProperty Test
 
-I still don't feel comfortable with the serializer as the culprit for the quadratic growth. Instead of creating a lot of Verticies, I will just create one vertex and add a lot of properties using the default serializer. This had a much better growth.
+I still don't feel comfortable with the serializer as the culprit for the quadratic growth. Instead of creating a lot of Vertices, I will just create one vertex and add a lot of properties using the default serializer. This had a much better growth.
 
 <img loading="lazy" class="alignnone" title="NPropertyTest Default Serializer" src="http://chart.apis.google.com/chart?chxt=x,y&amp;chs=300x225&amp;cht=s&amp;chds=0,50,0,100,0,100&amp;chd=t:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,-1|0,1,3,4,5,7,8,10,12,13,15,16,18,21,23,25,26,28,30,31,33,36,37,39,41,44,49,51,53,56,58,60,62,64,66,68,70,73,75,77,79,82,84,86,88,90,92,94,100,-1,-1,-1|84,23,69,81,47,94,60,93,64,54" alt="" width="300" height="225">
 

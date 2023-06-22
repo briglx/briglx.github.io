@@ -98,6 +98,6 @@ This graph could look like
 
 ![SKOS Ontology Graph]({{ site.url }}{{ site.baseurl }}/assets/images/skosgraph.png?w=300)
 
-## Take Aways
+## Take Away
 
 The project I'm on has a lot of new terms. Hopefully now we know the difference between an `ontology` and a `SKOS:Concept`. There is a lot more to talk about and this should lay the foundation of a common vocabular of terms.

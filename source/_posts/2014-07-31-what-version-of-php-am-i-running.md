@@ -37,7 +37,7 @@ Nevertheless, this is how I found out which one I was using.
     ```bash
     vi /etc/apache2/httpd.conf
     
-    # Edit thie ine
+    # Edit the line
     LoadModule php5_module /usr/local/opt/php55/libexec/apache2/libphp5.so
     ```
     

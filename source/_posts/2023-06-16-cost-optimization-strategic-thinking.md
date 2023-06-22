@@ -15,124 +15,189 @@ subclass: 'post'
 author: brig
 ---
 
-I previously talked about the maturity path organizations go through adopting Cloud Cost Optimization. Sense then, I've created a session and workshop guiding executive teams how to have a strategic mindset for Cost Optimization. This session is great to deliver any time in the maturity path and is most relevant to organizations struggling to understand and control cost despite deploying a data pipeline to standardize cost data. I like to tell people it will help the organization move away from reactively chasing fires and towards measuring best practices.
+This post will outline how to develop a strategic approach to manage costs in cloud services.
 
-The session objectives are:
+I previously talked about the [maturity path]({%post_url 2022-07-13-cost-optimization-maturity-model %}) organizations go through when adopting Cloud Cost Optimization. Since then, I’ve created a session and workshop guiding executive teams on how to have a strategic mindset for Cost Optimization. They gain the ability to:
 
-* Recognizing the organization mindset
+* Recognize the current organization mindset
 * Understand how to develop strategic based reporting using primary cost drivers
 * Establish a framework to capture and prioritize requirements.
 
-## Move away from the Fire
+## Move Away From Firefighting
 
-I'm often pulled into calls where customers are overwhelmed and frustrated and say something along the lines of "Help! Our storage cost is too high." I completely understand how large and complex cloud cost optimization is and how difficult it can be to know where to start. 
-I coach teams to recognize when they are in a seek and destroy mindset chasing fires and encourage them to adopt the strategic three phased approach:
+Often, I am contacted by customers who feel overwhelmed and frustrated, they might share something like:
+
+> "Help! Our storage cost is too high."
+>
+> "Help! Our compute is underutilzed." 
+>
+> "😱! Our ☁️ is too 🤑." 
+>
+> "😭!! ⛈️ 💵 📈 🤯 😖 🔥 😵‍💫" 
+
+When I hear this, I know the organization isn't following a strategy. They are in a "seek and destroy" cost mindset chasing anything that looks like it will save cost. These groups are asking for tools to deploy or building large complex dashboards that can slice and dice data a hundred different ways. It's an environment that feels like a constant fire fight against a runaway inferno.
+
+I completely understand the complexity of cloud cost management and the difficulty in knowng where to start. The most successful organizations move from a "seek and destroy" mindset towards developing and executing a strategy.
+
+## Strategy built around Best Practices 
+
+A popular strategy is to:
 
 * Define Best Practices
 * Measure or Monitor compliance to the best practice
 * Define and Implement Remediation methods
 
-This approach changes traditional reporting by turning it into measuring the compliance of best practices. In addition, it creates a place for organizations to define how to remediate in the event they are not in compliance.
-Leadership teams love this approach because it is nothing more than defining a plan, measuring progress, and creating playbooks to stay on target. It's data driven, able to hold team accountable, and outcome based.
+![Three Phased Strategy]({{ site.url }}{{ site.baseurl }}/assets/images/20230616-three-phased-strategy.png)
+
+This approach changes traditional reporting by turning it into measuring compliance with best practices. Additionally, it creates a place for organizations to define how to remediate in the event they are not in compliance.
+Leadership teams love this approach because it is nothing more than defining a plan, measuring progress, and creating playbooks to stay on target. It's data driven, promotes team accountability, and focuses on outcomes.
 
 Defining best practices can be difficult and is sometimes more art than science. One technique I like to use is to look at the primary cost drivers of a service.
 
-## Primary Cost Drivers Lead the Way
-Most services have several different drivers that go into the final cost. These can be found in the documentation or using the Azure Pricing Calculator. 
+### A Primer on Cost Drivers
+Most services have several different drivers that go into the final cost. These can typically be found in the documentation or pricing calculators. 
 
 ![Storage Primary Cost Driver Sources]({{ site.url }}{{ site.baseurl }}/assets/images/20230616-storage-primary-cost-drivers-source.png)
 
-For Azure Blob Storage these include:
-
-**Azure Blob Storage Pricing**: File Structure, Redundancy, Region, Access Tier, Capacity, Reservation, and Operations
-
-**Pricing Calculator**: Region, Type, Performance, Storage Type, Access Tier, Redundancy, Capacity, Reservation, and Operations 
-
-I wrote a small tool to help me identify the primary cost drivers for storage using a technique called [feature reduction.](https://en.wikipedia.org/wiki/Dimensionality_reduction)
-
-Turns out the primary cost drivers for storage are:
+For example, in Azure Blob Storage, the primary cost drivers include file structure, redundancy, region, access tier, capacity, reservation, and operations. I wrote a small tool to help me identify the primary cost drivers for storage using a technique called [feature reduction.](https://en.wikipedia.org/wiki/Dimensionality_reduction). Turns out the primary cost drivers for storage are:
 * Capacity
 * Access Tier
-* Redundency
+* Redundancy
 * Region
 * ... all others
 
 ![Storage Primary Cost Drivers]({{ site.url }}{{ site.baseurl }}/assets/images/20230616-storage-primary-cost-drivers.png)
 
-It makes sense that capacity is the top cost driver because the more data I put into storage the more it's going to cost. I was suprised to see that access tier had a larger influence on cost than redundency.
+It makes sense that capacity is the top cost driver because the more data I put into storage the more it's going to cost. I was surprised to see that access tier had a larger influence on cost than redundancy.
 
-Identifying the cost drivers is usefull in a few ways:
-* Allows me break the problem into smaller pieces
-* Use the relative impact of each cost drivers to prioritize efforts and develop a road map
+Identifying the cost drivers is useful in a few ways:
+* Allows breaking down the problem into smaller, more manageable pieces.
+* Helps prioritize efforts and develop a roadmap based on the relative impact of each cost driver.
 * Provides a starting point to brainstorm best practices
 
-## Defining a Best Practice for Cost Drivers
+### Example From Driver to Best Practice
 
-Now that we have our top cost drivers, we need to define best practices. This is what the organization can implement the powerful leadership principle of ["Do what you say you will do"](https://www.linkedin.com/pulse/leadership-principles-1-do-what-you-say-melissa-hosgood/)
+In our quest to develop a strategy we will implement the powerful leadership principle of ["Do what you say you will do"](https://www.linkedin.com/pulse/leadership-principles-1-do-what-you-say-melissa-hosgood/) and use our top cost drivers to define the best practices we will follow. 
+For each cost driver, consider not only how you can influence cost, but how do you want to run your organization. 
 
-For each cost driver, consider not only how you can influence cost, but how do you want to run your organization.
+Brainstorm activities for each Storage Cost Drivers
 
-Example Brainstorm for Storage Cost Drivers:
+<table>
+  <thead>
+  <tr><th>Driver</th><th>Activity</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Capacity</td>
+      <td>
+        <ul>
+          <li>Reduce Capacity
+            <ul>
+              <li>Data Compression</li>
+              <li>Deduplication</li>
+              <li>Resize VM Drives</li>
+              <li>Data Retention Policies</li>
+            </ul>
+          </li>
+          <li>Reserve Capacity
+            <ul>
+              <li>Limitation Apply</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Access Tier</td>
+      <td>
+        <ul>
+          <li>Organize data into access tiers
+          </li>
+          <li>Automatically move data between access tiers
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>...</td>
+      <td>
+        ...
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-* Capacity
-  * Reduce Capacity
-    * Data Compression
-    * Deduplication
-    * Resize VM Drives
-    * Data Retention Policies
-  * Reserve Capacity
-    * Only Block Blob and Azure Data Lake Storage Gen2
-    * Premium not eligible
-    * Region, Access Tier, and Redundancy dependent
-    * Purchase Units of 100TiB and 1PiB for 1-3yrs
-  * ...
-* Access Tier
-  * Organize data into access tiers
-  * Automatically move data between access tiers
-  * ...
-* ...
+Define Best Practices from brainstorming activity:
 
-Example Best Practices:
-* Storage - Capacity: As an organization have 50% of data stored in a compressed format (snappy, gzip, lzo, etc.)
-* Storage - Capacity: As an organization have 95% of data active retention age and 5% expired 
-* Storage - Capacity: As an organization have 80% Reserved Capacity for all eligible storage
-* Storage - Access Tier: As an organization have 90% Aligned Data
-* Storage - Access Tier: As an organization have 95% data with lifecycle policies applied
+| Activity | Best Practice |
+|-------------|----------------|
+| Reduce Capacity | As an organization have 50% of data stored in a compressed format (snappy, gzip, lzo, etc.) |
+| Reduce Capacity | As an organization have 95% of data active retention age and 5% expired |
+| Reserve Capacity | As an organization have 80% Reserved Capacity for all eligible storage |
+| Organize Tiers | As an organization have 90% Aligned Data |
+| Automate Tiers | As an organization have 95% data with lifecycle policies applied |
 
 We now have a collection of best practices to follow. Setting a goal means nothing if it isn't tracked.
 
-## Measure Compliance
+### Measure Compliance
 
-The management guru Peter Drucker once said, “If you can’t measure it you can’t improve it.” Our task now is to measure our compliance to the best practice standards we have defined.
+The management guru Peter Drucker once said, 
 
-Include the following capabilities:
-* Separate composite metrics into atomic units. Ie. `total_cost` into  `quantity` and `unit_cost`
-* Display current `SLI` as a percentage. Ie. 78% Data Aligned of total data in past 24hrs.
-* Prefer fewer SLI states. Ideally no more than three. Ie. Aligned, MisAlligned 
+> “If you can’t measure it you can’t improve it.” 
+
+Our task now is to measure our compliance to the best practice standards we have defined. This is the steps that looks most similar to traditional reporting because we will create visuals. The most effective visuals need to incorporate the follow capabilities:
+* Separate composite metrics into atomic units. Ie. `total_cost` into  `quantity` and `unit_cost`.
+* Display service level indicators, `SLI`, as a percentage.
+* Prefer fewer `SLI` states. Ideally no more than three. 
 * Display Historical Trends. This is key in building trust for leadership.
-* Forcast next period's SLI and Cost
-* Calculate Organization SLO and Cost
-* Display Potential Savings as `Forecast Cost` - `Forecast SLO Cost`.
+* Forecast next period's `SLI` and Cost
+* Calculate Organization service level objective `SLO` and Cost
+* Calculate cost if the organizaton meet its `SLO`.
+* Display Potential Savings
   
 ![Access Tier]({{ site.url }}{{ site.baseurl }}/assets/images/20230616-storage-access-tier.png)
 
-This chart shows the organization target `aligned data` SLO of 95%. We can see the current SLI is 78% aligned an 22% misaligned.
-It also shows historic values for Quantity, SLI State, and Cost. This breakout is useful because often times teams may spend a lot of time to improve an environemnt but cost remain the same. By breaking out quanity from cost, teams can demonstrate to leadership teams the amount of optimization improvement happening.
-For instance, between the second and third months, Cost went down but the total footprint incrased. This happened becasue the team improved the percentance of aligned data effectivly lowering the unit cost theirby lowering total cost.
-Finally, the forecast shows the expected growth in the environment for total storage, along with the expected aligned data and the associated costs. It then shows what the cost would be if the organization acheived it's target SLO of 95%.
+> As an organization have 90% Aligned Data
+
+This chart shows the organization `aligned data` `SLO` of 95%. We can see the current `SLI` is 78% aligned an 22% misaligned.
+
+It also shows historic values for Quantity, SLI State, and Cost. This breakout is useful because teams may spend a lot implementing cost improvements but cost remain the same or worse go up. By breaking out quantity from cost, teams can demonstrate to leadership the improvements in efficiencies.
+
+For instance, between the second and third months, Cost went down but the total footprint incrased. This happened because the team improved the percentance of aligned data effectivly lowering the unit cost theirby lowering total cost.
+
+Finally, the forecast shows the expected growth in the environment for total storage, along with the expected aligned data and the associated costs. It then shows what the cost would be if the organization achieved it's target SLO of 95%.
+
 The diffeence between the forecast and the target is the potential savings of $1,687.
 
-Following these standards in visualising best practices has the following benifits:
+Following these standards in visualising best practices has the following benefits:
 * Leadership and Operations teams can priorities efforts to target improvements that have the largest potential savings
 * Operations team can demonstrate optimization efforts that oftentimes gets lost when strickly looking at cost
 * Reports are Action oriented to improve SLO. Leaders love this approach
 * Standard SLI provide a common language to the organization that allows teams to create new Best Practices and SLO
 
-The final steps in democratizing data is establishing a framework to capture requirements
+### Remediate the Offence
+
+In the event there is a missed `SLO` the most successful organizations establish a plan on how to meet the target. This could look like:
+* Defining Run-books
+* Instructions on how to apply an Azure Policy
+* Links to documentation on how to enable 'Auto-shutdown' 
+
+Generally there is a central team who is defining the best practices and remediations and the downstream teams attempt to comply with the best practices.
+
+The point is to give the downstream team the tools or information to be successful. 
+
+### Finally a Strategy
+
+We now have a strategy and information to guide the implementation. Our strategy is:
+* Define Best practices based on primary Cost Drivers. Captured as `Service Level Objectives`
+* Measure our Compliance to the `SLO` and show potential cost savings between forecasted cost and SLO objective cost
+* Publish and implement remediation methods.
+
+With the strategy in place mature organizations establish a framework to capture requirements and scale beyond the core team.
 
 ## Recipes for Best Practices
 
-I've been using the term Recipe to describe the various request organizaton have asked me for help with cost optimization.
+I've been using the term Recipe to describe the various request organizaton have asked me for help with cost optimization. These include the best practices established in our strategy.
 Some of these are:
 * I want to turn of dev machines on the weekend
 * I don't want premium storage in dev environments
@@ -140,16 +205,17 @@ Some of these are:
 
 The framework for a recipe is:
 
+| Section | Detail |
+|---------|----------|
+| Overview | Define the Best Practice, `SLO` |
+| Visualization | 
+
 * Overview
   * Objective
-  * Vizualiztion
+  * Visualization
 * Data Schema
 * Data Source and Transformation
-* Remediation
-
-A few best practices include:
-* Versioning the recipe and the source data
-* Using Standard data sources
+* Remediatin
 
 Example: Orphaned Disks
 
@@ -176,10 +242,10 @@ Parameters may include:
 | resource_group | nvarchar(100) | Filter |
 | orphaned_disk_count | |
 | attached_disk_count | |
-| total_disk_count | | Calcuated orphaned + attached 
+| total_disk_count | | Calculated orphaned + attached 
 | attached_disk_percent | | Calculated attached / total | 
 | cost | | |
-| is_forecast | | Forcasted data |
+| is_forecast | | Forecasted data |
 | is_latest | | Indicates the most recent data |
 | is_optimal_forcast | | Indicates optimal forecast |
 | forecast_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=False |
@@ -201,7 +267,7 @@ See full dataset `path/to/sample/dataset.csv`
 
 | Source | Version | Details |
 |--------|---------|---------|
-| Common Data Schema | Lastest | AmortizedCost |
+| Common Data Schema | Latest | AmortizedCost |
 | Azure Graph API Query | v1.0 | resources |
 
 **AmortizedCost SQL Query**
@@ -265,7 +331,7 @@ It boils down to:
 * Use primary cost drivers to create best practices
 * Use the recipe format to define SLOs
 
-If you do this then you enjoy the benifits of:
+If you do this then you enjoy the benefits of:
 * Standardize data set
 * Data lineage
 * Clearly defined SLI and SLO
@@ -275,7 +341,7 @@ If you do this then you enjoy the benifits of:
 * Business focuses on acheicing SLO instead of chasing fires
 * Roadmap based on Top Spend and Top cost drivers
 
-## Appendex
+## Appendix
 
 Terminology
 * `Service Level Indicator (SLI)` Clearly Defined Quantitative measurement

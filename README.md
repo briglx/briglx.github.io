@@ -17,7 +17,7 @@ The goal is to move from Wordpress to GitHub pages.
 * Use `wordpress-export-to-markdown` tool to convert
 * Use `Jasper2` theme
 
-The migration isn't perfect. There are several issues between coversion and implementing Jasper2 theme.
+The migration isn't perfect. There are several issues between conversion and implementing Jasper2 theme.
 
 ## Convert Wordpress to Markdown
 
@@ -101,7 +101,6 @@ I can't use GitHub action to build until I can resolve the `tags` issue for #16.
 In the meantime just build and deploy:
 
 ```bash
-
 # Github uses this image https://github.com/actions/virtual-environments/blob/ubuntu20/20220515.1/images/linux/Ubuntu2004-Readme.md
 # ruby --version 2.7.0.p0
 # RubyGems 3.1.2
@@ -132,7 +131,6 @@ git push
 # Docker Notes
 
 ```bash
-
 # The docker image runs
 ruby -v
 # ruby 2.7.4p191 (2021-07-07 revision a21a3b7d23) [x86_64-linux]
@@ -156,30 +154,71 @@ docker build --pull --rm -f "Dockerfile.build" -t blog_build:latest "."
 docker run --rm -it --env-file .env -v /source:/usr/src/app/source -v /docs:/usr/src/app/docs --name blog_build blog_build:latest
 docker run --rm -it --env-file .env --mount type=bind,src="$(pwd)/docs",target=/usr/src/app/docs --mount type=bind,src="$(pwd)/source",target=/usr/src/app/source --name blog_build blog_build:latest
 
-
 # Migrate Database
 # docker container exec -it --env-file .env blog_build /usr/src/app/migrate_database.sh 
-
-
 ```
-
 
 Run the docker image
 ```bash
+# Build image
 docker build --pull --rm -f "Dockerfile.build" -t blog_build:latest "."
 
-docker run -p 4000:4000 --env-file .env -v $(pwd):/site --name blog_build blog_build:latest
+# Run Image
+docker run --rm -it --env-file .env -p 4000:4000 --mount type=bind,src="$(pwd)/docs",target=/usr/src/app/docs --mount type=bind,src="$(pwd)/source",target=/usr/src/app/source blog_build:latest
+> jekyll serve -H 172.17.0.2
 
+# Or Run Image
 docker run --rm -it --env-file .env -p 0.0.0.0:4000:4000 --mount type=bind,src="$(pwd)/docs",target=/usr/src/app/docs --mount type=bind,src="$(pwd)/source",target=/usr/src/app/source blog_build:latest
-
-> bundle exec jekyll serve
-
+> bundle exec jekyll serve -H 0.0.0.0 -P 4000
 ```
-
-
 
 # Theme Ideas
 - See https://dribbble.com/shots/18046803-Blogging-App-Design/attachments/13234820?mode=media
+
+
+# Dev Setup
+
+Setup your dev environment
+
+```bash
+# Windows
+# virtualenv \path\to\.venv -p path\to\specific_version_python.exe
+# C:\Users\!Admin\AppData\Local\Programs\Python\Python310\python.exe -m venv .venv
+# .venv\scripts\activate
+
+# Linux
+# virtualenv .venv /usr/local/bin/python3.10
+# python3.10 -m venv .venv
+# python3 -m venv .venv
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Update pip
+python -m pip install --upgrade pip
+
+deactivate
+```
+
+Install dependencies and configure local.env.
+
+```bash
+# Install dependencies
+pip install -r requirements_dev.txt
+
+# Replace settings in local.env
+cp example.env .env
+
+# Optional - Load .env into bash ENV vars
+# set -o allexport; source .env; set +o allexport
+```
+Testing
+
+Now that you have all test dependencies installed, you can run tests on the project:
+
+```bash
+codespell -D - -D .codespell_dict
+shellcheck *.sh
+```
 
 # References
 - Building Locally https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll

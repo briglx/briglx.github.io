@@ -5,8 +5,8 @@ Little script that replaces comment characters to html,
 found in the *.hbs files.
 """
 
-import os
 import glob
+import os
 
 if __name__ == '__main__':
 

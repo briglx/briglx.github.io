@@ -15,4 +15,4 @@ Extracting Text from Responses Use the Regular Expression Extractor and have it 
 
 refName - the value of the template refName_gn, where n=0,1,2 - the groups for the match refName_g - the number of groups in the Regex (excluding 0)
 
-Use Global variable for hostname Be sure to check the Servername on all Http Requet to make sure they are not overriding the global one.
+Use Global variable for hostname Be sure to check the Servername on all Http Request to make sure they are not overriding the global one.

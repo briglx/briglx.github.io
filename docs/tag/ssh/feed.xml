@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/ssh/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-21T04:58:07+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/ssh/feed.xml</id>
+  <link href="http://0.0.0.0:4000/tag/ssh/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:11:47+00:00</updated>
+  <id>http://0.0.0.0:4000/tag/ssh/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Configure SSH</title>
-      <link href="https://www.briglamoreaux.com/2011/09/30/configure-ssh.html" rel="alternate" type="text/html" title="Configure SSH" />
+      <link href="http://0.0.0.0:4000/2011/09/30/configure-ssh.html" rel="alternate" type="text/html" title="Configure SSH" />
       <published>2011-09-30T00:00:00+00:00</published>
       <updated>2011-09-30T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2011/09/30/configure-ssh</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2011/09/30/configure-ssh.html">&lt;p&gt;I recently set up a few new servers and needed to allow other developers access. Here is how I did it:&lt;/p&gt;
+      <id>http://0.0.0.0:4000/2011/09/30/configure-ssh</id>
+      <content type="html" xml:base="http://0.0.0.0:4000/2011/09/30/configure-ssh.html">&lt;p&gt;I recently set up a few new servers and needed to allow other developers access. Here is how I did it:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
