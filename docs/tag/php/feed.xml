@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://0.0.0.0:4000/tag/php/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T18:11:47+00:00</updated>
-  <id>http://0.0.0.0:4000/tag/php/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/php/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:18:20+00:00</updated>
+  <id>https://www.briglamoreaux.com/tag/php/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">What Version of PHP am I Running</title>
-      <link href="http://0.0.0.0:4000/2014/07/31/what-version-of-php-am-i-running.html" rel="alternate" type="text/html" title="What Version of PHP am I Running" />
+      <link href="https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running.html" rel="alternate" type="text/html" title="What Version of PHP am I Running" />
       <published>2014-07-31T00:00:00+00:00</published>
       <updated>2014-07-31T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2014/07/31/what-version-of-php-am-i-running</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2014/07/31/what-version-of-php-am-i-running.html">&lt;p&gt;I was trying to install a debugger for PHP and had trouble mostly because it turned out I had two different versions of PHP running on my machine. One I installed using homebrew and the other … well I don’t know how it got there.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/31/what-version-of-php-am-i-running.html">&lt;p&gt;I was trying to install a debugger for PHP and had trouble mostly because it turned out I had two different versions of PHP running on my machine. One I installed using homebrew and the other … well I don’t know how it got there.&lt;/p&gt;
 
 &lt;p&gt;Nevertheless, this is how I found out which one I was using.&lt;/p&gt;
 
@@ -115,11 +115,11 @@ From the command line you can check which &lt;code class=&quot;language-plaintex
   
     <entry>
       <title type="html">Symfony denied Access</title>
-      <link href="http://0.0.0.0:4000/2014/07/14/symfony-denied-access.html" rel="alternate" type="text/html" title="Symfony denied Access" />
+      <link href="https://www.briglamoreaux.com/2014/07/14/symfony-denied-access.html" rel="alternate" type="text/html" title="Symfony denied Access" />
       <published>2014-07-14T00:00:00+00:00</published>
       <updated>2014-07-14T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2014/07/14/symfony-denied-access</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2014/07/14/symfony-denied-access.html">&lt;p&gt;Moving my Symfony app to a QA server showed me how rude the server is.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2014/07/14/symfony-denied-access</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/14/symfony-denied-access.html">&lt;p&gt;Moving my Symfony app to a QA server showed me how rude the server is.&lt;/p&gt;
 
 &lt;p&gt;I could see the home page right after I copied the project to the new machine with not problem (except for modifying &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.config.php&lt;/code&gt; and various file permission ownership issues). Nevertheless, the real problem came when I tried navigating to any other route besides the index. Each time I would get a 403 Access denied error.&lt;/p&gt;
 

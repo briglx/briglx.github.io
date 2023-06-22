@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://0.0.0.0:4000/tag/ruby/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T18:11:47+00:00</updated>
-  <id>http://0.0.0.0:4000/tag/ruby/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/ruby/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:18:20+00:00</updated>
+  <id>https://www.briglamoreaux.com/tag/ruby/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Ruby Array Randomize</title>
-      <link href="http://0.0.0.0:4000/2007/07/11/ruby-array-randomize.html" rel="alternate" type="text/html" title="Ruby Array Randomize" />
+      <link href="https://www.briglamoreaux.com/2007/07/11/ruby-array-randomize.html" rel="alternate" type="text/html" title="Ruby Array Randomize" />
       <published>2007-07-11T00:00:00+00:00</published>
       <updated>2007-07-11T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2007/07/11/ruby-array-randomize</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2007/07/11/ruby-array-randomize.html">&lt;p&gt;I needed the ability to randomize the order of an array. This is useful when you have a set collection of questions in a survey that you want to shuffle before you present them to the user. After looking around a bit, I didn’t find anything that worked. Here is what I pieced together with my limited knowledge of Ruby.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2007/07/11/ruby-array-randomize</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2007/07/11/ruby-array-randomize.html">&lt;p&gt;I needed the ability to randomize the order of an array. This is useful when you have a set collection of questions in a survey that you want to shuffle before you present them to the user. After looking around a bit, I didn’t find anything that worked. Here is what I pieced together with my limited knowledge of Ruby.&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Created by Brig R.Lamoreaux&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;# Date: 11 July 2007&lt;/span&gt;

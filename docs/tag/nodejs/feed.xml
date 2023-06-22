@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://0.0.0.0:4000/tag/nodejs/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T18:11:47+00:00</updated>
-  <id>http://0.0.0.0:4000/tag/nodejs/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/nodejs/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:18:20+00:00</updated>
+  <id>https://www.briglamoreaux.com/tag/nodejs/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Search nodejs with regex and case insensitive</title>
-      <link href="http://0.0.0.0:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html" rel="alternate" type="text/html" title="Search nodejs with regex and case insensitive" />
+      <link href="https://www.briglamoreaux.com/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html" rel="alternate" type="text/html" title="Search nodejs with regex and case insensitive" />
       <published>2012-04-10T00:00:00+00:00</published>
       <updated>2012-04-10T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html">&lt;p&gt;I recently needed to search for documents in mongo using mongoose. I knew I needed a regex but couldn’t figure out how to pass the case insensitive flag. We’ll here is how you do it.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2012/04/10/search-nodejs-with-regex-and-case-insensitive</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html">&lt;p&gt;I recently needed to search for documents in mongo using mongoose. I knew I needed a regex but couldn’t figure out how to pass the case insensitive flag. We’ll here is how you do it.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var term = 'Apple'; Ideas.find({'title' : new RegExp(term, &quot;i&quot;)}, function(err, ideas){...});&lt;/code&gt;&lt;/p&gt;
 
@@ -83,11 +83,11 @@
   
     <entry>
       <title type="html">Downgrading Node</title>
-      <link href="http://0.0.0.0:4000/2012/02/21/downgrading-node.html" rel="alternate" type="text/html" title="Downgrading Node" />
+      <link href="https://www.briglamoreaux.com/2012/02/21/downgrading-node.html" rel="alternate" type="text/html" title="Downgrading Node" />
       <published>2012-02-21T00:00:00+00:00</published>
       <updated>2012-02-21T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2012/02/21/downgrading-node</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2012/02/21/downgrading-node.html">&lt;p&gt;I recently had to downgrade node and found &lt;a href=&quot;http://www.websector.de/blog/2011/12/15/quick-tip-node-how-to-downgrade-node-js-on-os-x/&quot;&gt;Jens walk through&lt;/a&gt; great.&lt;/p&gt;</content>
+      <id>https://www.briglamoreaux.com/2012/02/21/downgrading-node</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2012/02/21/downgrading-node.html">&lt;p&gt;I recently had to downgrade node and found &lt;a href=&quot;http://www.websector.de/blog/2011/12/15/quick-tip-node-how-to-downgrade-node-js-on-os-x/&quot;&gt;Jens walk through&lt;/a&gt; great.&lt;/p&gt;</content>
 
       
       
@@ -119,11 +119,11 @@
   
     <entry>
       <title type="html">Proxy Node through nginx</title>
-      <link href="http://0.0.0.0:4000/2012/01/11/proxy-node-through-nginx.html" rel="alternate" type="text/html" title="Proxy Node through nginx" />
+      <link href="https://www.briglamoreaux.com/2012/01/11/proxy-node-through-nginx.html" rel="alternate" type="text/html" title="Proxy Node through nginx" />
       <published>2012-01-11T00:00:00+00:00</published>
       <updated>2012-01-11T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2012/01/11/proxy-node-through-nginx</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2012/01/11/proxy-node-through-nginx.html">&lt;p&gt;Once I got node service setup on my server I wasn’t happy with having to specify a port. Looking around I see others use nginx to listen on port 80 and proxy everything to node.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2012/01/11/proxy-node-through-nginx</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2012/01/11/proxy-node-through-nginx.html">&lt;p&gt;Once I got node service setup on my server I wasn’t happy with having to specify a port. Looking around I see others use nginx to listen on port 80 and proxy everything to node.&lt;/p&gt;
 
 &lt;p&gt;I really don’t know too much about security but read that in order to run on port 80 you need to run as root. If I run node as root, that could expose my system to hackers who could find an exploit in node and take over my system because I’m running as root. So to avoid that, run nginx in a special way to get port 80 going.&lt;/p&gt;
 
@@ -229,11 +229,11 @@
   
     <entry>
       <title type="html">Installing Node and Mongo</title>
-      <link href="http://0.0.0.0:4000/2012/01/11/installing-node-and-mongo.html" rel="alternate" type="text/html" title="Installing Node and Mongo" />
+      <link href="https://www.briglamoreaux.com/2012/01/11/installing-node-and-mongo.html" rel="alternate" type="text/html" title="Installing Node and Mongo" />
       <published>2012-01-11T00:00:00+00:00</published>
       <updated>2012-01-11T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2012/01/11/installing-node-and-mongo</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2012/01/11/installing-node-and-mongo.html">&lt;p&gt;I need to install Node and Mongo an a server. These are my notes.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2012/01/11/installing-node-and-mongo</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2012/01/11/installing-node-and-mongo.html">&lt;p&gt;I need to install Node and Mongo an a server. These are my notes.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;

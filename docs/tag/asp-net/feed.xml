@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://0.0.0.0:4000/tag/asp-net/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T18:11:47+00:00</updated>
-  <id>http://0.0.0.0:4000/tag/asp-net/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/asp-net/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:18:20+00:00</updated>
+  <id>https://www.briglamoreaux.com/tag/asp-net/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">ASP.NET Authorization - Out of the Loop</title>
-      <link href="http://0.0.0.0:4000/2007/11/14/asp-net-authorization-out-of-the-loop.html" rel="alternate" type="text/html" title="ASP.NET Authorization - Out of the Loop" />
+      <link href="https://www.briglamoreaux.com/2007/11/14/asp-net-authorization-out-of-the-loop.html" rel="alternate" type="text/html" title="ASP.NET Authorization - Out of the Loop" />
       <published>2007-11-14T00:00:00+00:00</published>
       <updated>2007-11-14T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2007/11/14/asp-net-authorization-out-of-the-loop</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2007/11/14/asp-net-authorization-out-of-the-loop.html">&lt;p&gt;Asp.net configuration makes is really easy to apply authorization to different pages.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2007/11/14/asp-net-authorization-out-of-the-loop</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2007/11/14/asp-net-authorization-out-of-the-loop.html">&lt;p&gt;Asp.net configuration makes is really easy to apply authorization to different pages.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-problem&quot;&gt;The Problem&lt;/h2&gt;
 
@@ -64,7 +64,7 @@
 
 &lt;p&gt;Each page that needed authorization would derive from the base class and override the &lt;strong&gt;ApplyAuthorizationRules&lt;/strong&gt; () method. Notice in the Class Diagram how the AdminPage is overriding the method while the other two pages, SummaryPage and DetailPage, use the default implementation.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/UrlAuthzUml.Png&quot; alt=&quot;UrlAuthzUml&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/UrlAuthzUml.Png&quot; alt=&quot;UrlAuthzUml&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The code in the AdminPage looks something like this:&lt;/p&gt;
 
@@ -162,11 +162,11 @@
   
     <entry>
       <title type="html">Beware Dynamic User Controls in a Web Farm</title>
-      <link href="http://0.0.0.0:4000/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html" rel="alternate" type="text/html" title="Beware Dynamic User Controls in a Web Farm" />
+      <link href="https://www.briglamoreaux.com/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html" rel="alternate" type="text/html" title="Beware Dynamic User Controls in a Web Farm" />
       <published>2007-11-02T00:00:00+00:00</published>
       <updated>2007-11-02T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2007/11/02/beware-dynamic-user-controls-in-a-web-farm</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html">&lt;p&gt;Many large sites utilize a web farm with a load balancer. The load balancer will cycle through each server in the farm for each request. Today I assumed our load balancer had &lt;a href=&quot;http://en.wikipedia.org/wiki/Load_balancing_%28computing%29&quot;&gt;persistence&lt;/a&gt;.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2007/11/02/beware-dynamic-user-controls-in-a-web-farm</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html">&lt;p&gt;Many large sites utilize a web farm with a load balancer. The load balancer will cycle through each server in the farm for each request. Today I assumed our load balancer had &lt;a href=&quot;http://en.wikipedia.org/wiki/Load_balancing_%28computing%29&quot;&gt;persistence&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I think the text from Wikipedia sums my experience today: “But reliance on persistence can cause problems if the persistence fails.” Come to find out, the rules on the load balancer were not setup uniformly and I found a special case where persistence failed.&lt;/p&gt;
 
@@ -214,11 +214,11 @@
   
     <entry>
       <title type="html">Forms Authentication and Cookies</title>
-      <link href="http://0.0.0.0:4000/2007/08/20/forms-authentication-and-cookies.html" rel="alternate" type="text/html" title="Forms Authentication and Cookies" />
+      <link href="https://www.briglamoreaux.com/2007/08/20/forms-authentication-and-cookies.html" rel="alternate" type="text/html" title="Forms Authentication and Cookies" />
       <published>2007-08-20T00:00:00+00:00</published>
       <updated>2007-08-20T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2007/08/20/forms-authentication-and-cookies</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2007/08/20/forms-authentication-and-cookies.html">&lt;p&gt;I encountered a strange problem this morning when I tried to turn on Authentication to the ASP.NET 2.0 Website.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2007/08/20/forms-authentication-and-cookies</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/20/forms-authentication-and-cookies.html">&lt;p&gt;I encountered a strange problem this morning when I tried to turn on Authentication to the ASP.NET 2.0 Website.&lt;/p&gt;
 
 &lt;p&gt;I opened my handy dandy Wrox Professional ASP.NET 2.0 book to chapter 18, Security, and started the simple process of implementing forms authentication. Simple, hah! What happen was my cookies were not being saved. Walking step by step, I first made sure I denied access to any anonymous users.&lt;/p&gt;
 

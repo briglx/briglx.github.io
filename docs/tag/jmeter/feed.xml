@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://0.0.0.0:4000/tag/jmeter/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T18:11:47+00:00</updated>
-  <id>http://0.0.0.0:4000/tag/jmeter/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/jmeter/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:18:20+00:00</updated>
+  <id>https://www.briglamoreaux.com/tag/jmeter/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">A Tour of JMeter – Part 2</title>
-      <link href="http://0.0.0.0:4000/2011/03/22/a-tour-of-jmeter-part-2.html" rel="alternate" type="text/html" title="A Tour of JMeter – Part 2" />
+      <link href="https://www.briglamoreaux.com/2011/03/22/a-tour-of-jmeter-part-2.html" rel="alternate" type="text/html" title="A Tour of JMeter – Part 2" />
       <published>2011-03-22T00:00:00+00:00</published>
       <updated>2011-03-22T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2011/03/22/a-tour-of-jmeter-part-2</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2011/03/22/a-tour-of-jmeter-part-2.html">&lt;p&gt;This is the second post in a &lt;a href=&quot;/2011/02/17/a-tour-of-jmeter-part-1.html&quot;&gt;series about Apache JMeter&lt;/a&gt;.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2011/03/22/a-tour-of-jmeter-part-2</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2011/03/22/a-tour-of-jmeter-part-2.html">&lt;p&gt;This is the second post in a &lt;a href=&quot;/2011/02/17/a-tour-of-jmeter-part-1.html&quot;&gt;series about Apache JMeter&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;first-test-run&quot;&gt;First Test Run&lt;/h2&gt;
 
@@ -70,7 +70,7 @@
       &lt;li&gt;Edit the Ramp-up period. Setting the value to 10 means in 10 seconds all 50 people will be on the site.&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/jmeter-testplan0.png&quot; alt=&quot;JMeter-TestPlan0&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/jmeter-testplan0.png&quot; alt=&quot;JMeter-TestPlan0&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Configure Test Plan&lt;/strong&gt;&lt;/p&gt;
@@ -82,21 +82,21 @@
       &lt;li&gt;Right Click on Test Plan -&amp;gt; Thread Group and select Paste.&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/jmeter-testplan1.png&quot; alt=&quot;JMeter-TestPlan1&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/jmeter-testplan1.png&quot; alt=&quot;JMeter-TestPlan1&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Attach Report&lt;/strong&gt;
     &lt;ul&gt;
       &lt;li&gt;Right Click on Test Plan. Select Add -&amp;gt; Listener -&amp;gt; Summary Report&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/jmeter-testplan2.png&quot; alt=&quot;JMeter-TestPlan2&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/jmeter-testplan2.png&quot; alt=&quot;JMeter-TestPlan2&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;strong&gt;Run&lt;/strong&gt;
     &lt;ul&gt;
       &lt;li&gt;Select Run -&amp;gt; Start&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/jmeter-testplan3.png&quot; alt=&quot;JMeter-TestPlan3&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/jmeter-testplan3.png&quot; alt=&quot;JMeter-TestPlan3&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -130,11 +130,11 @@
   
     <entry>
       <title type="html">A Tour of JMeter - Part 1</title>
-      <link href="http://0.0.0.0:4000/2011/02/17/a-tour-of-jmeter-part-1.html" rel="alternate" type="text/html" title="A Tour of JMeter - Part 1" />
+      <link href="https://www.briglamoreaux.com/2011/02/17/a-tour-of-jmeter-part-1.html" rel="alternate" type="text/html" title="A Tour of JMeter - Part 1" />
       <published>2011-02-17T00:00:00+00:00</published>
       <updated>2011-02-17T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2011/02/17/a-tour-of-jmeter-part-1</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2011/02/17/a-tour-of-jmeter-part-1.html">&lt;p&gt;I recently had a task to test the performance between two different solutions. After looking around at several tools, I settled on &lt;a href=&quot;http://jakarta.apache.org/jmeter/&quot;&gt;Apache JMeter&lt;/a&gt;. It took a while learning the tool. However, I found it to be extremely useful once I got the idea of how it worked.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2011/02/17/a-tour-of-jmeter-part-1</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2011/02/17/a-tour-of-jmeter-part-1.html">&lt;p&gt;I recently had a task to test the performance between two different solutions. After looking around at several tools, I settled on &lt;a href=&quot;http://jakarta.apache.org/jmeter/&quot;&gt;Apache JMeter&lt;/a&gt;. It took a while learning the tool. However, I found it to be extremely useful once I got the idea of how it worked.&lt;/p&gt;
 
 &lt;p&gt;This tour is broken into several sections&lt;/p&gt;
 
@@ -179,7 +179,7 @@
       &lt;li&gt;Select &lt;strong&gt;Recording Controller&lt;/strong&gt;&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;You should now have two elements. &lt;img src=&quot;http://0.0.0.0:4000/assets/images/record1.png&quot; alt=&quot;Record1&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;You should now have two elements. &lt;img src=&quot;https://www.briglamoreaux.com/assets/images/record1.png&quot; alt=&quot;Record1&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Configure the Browser to Record
@@ -190,7 +190,7 @@ In FireFox this is done with Edit -&amp;gt; Preferences -&amp;gt; Advance -&amp;
       &lt;li&gt;Navigate to &lt;a href=&quot;http://jakarta.apache.org/jmeter/usermanual/index.html&quot;&gt;JMeter User Manual&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 
-    &lt;p&gt;JMeter now has your actions recorded &lt;img src=&quot;http://0.0.0.0:4000/assets/images/record2.png&quot; alt=&quot;Record2&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;JMeter now has your actions recorded &lt;img src=&quot;https://www.briglamoreaux.com/assets/images/record2.png&quot; alt=&quot;Record2&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -224,11 +224,11 @@ In FireFox this is done with Edit -&amp;gt; Preferences -&amp;gt; Advance -&amp;
   
     <entry>
       <title type="html">JMeter Tips</title>
-      <link href="http://0.0.0.0:4000/2011/02/10/jmeter-tips.html" rel="alternate" type="text/html" title="JMeter Tips" />
+      <link href="https://www.briglamoreaux.com/2011/02/10/jmeter-tips.html" rel="alternate" type="text/html" title="JMeter Tips" />
       <published>2011-02-10T00:00:00+00:00</published>
       <updated>2011-02-10T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2011/02/10/jmeter-tips</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2011/02/10/jmeter-tips.html">&lt;p&gt;Extracting Text from Responses Use the Regular Expression Extractor and have it as a child on the request you want to get data from. Set the template value to $1$ to populate your variable name with the matched item in the group (). Otherwise your variable will be called&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2011/02/10/jmeter-tips</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2011/02/10/jmeter-tips.html">&lt;p&gt;Extracting Text from Responses Use the Regular Expression Extractor and have it as a child on the request you want to get data from. Set the template value to $1$ to populate your variable name with the matched item in the group (). Otherwise your variable will be called&lt;/p&gt;
 
 &lt;p&gt;refName - the value of the template refName_gn, where n=0,1,2 - the groups for the match refName_g - the number of groups in the Regex (excluding 0)&lt;/p&gt;
 

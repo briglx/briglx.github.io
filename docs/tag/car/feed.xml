@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://0.0.0.0:4000/tag/car/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T18:11:47+00:00</updated>
-  <id>http://0.0.0.0:4000/tag/car/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/car/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:18:20+00:00</updated>
+  <id>https://www.briglamoreaux.com/tag/car/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">4Runner PO770 Error Code</title>
-      <link href="http://0.0.0.0:4000/2013/06/04/4runner-po770-error-code.html" rel="alternate" type="text/html" title="4Runner PO770 Error Code" />
+      <link href="https://www.briglamoreaux.com/2013/06/04/4runner-po770-error-code.html" rel="alternate" type="text/html" title="4Runner PO770 Error Code" />
       <published>2013-06-04T00:00:00+00:00</published>
       <updated>2013-06-04T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2013/06/04/4runner-po770-error-code</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2013/06/04/4runner-po770-error-code.html">&lt;p&gt;I just had the engine light come on the 4Runner. Looking around here is what I found. Fortunately for me, my transmission fluid level was low. Adding a little fluid fixed the problem.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2013/06/04/4runner-po770-error-code</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2013/06/04/4runner-po770-error-code.html">&lt;p&gt;I just had the engine light come on the 4Runner. Looking around here is what I found. Fortunately for me, my transmission fluid level was low. Adding a little fluid fixed the problem.&lt;/p&gt;
 
 &lt;h2 id=&quot;background&quot;&gt;Background&lt;/h2&gt;
 

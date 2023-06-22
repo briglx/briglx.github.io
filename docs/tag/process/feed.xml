@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://0.0.0.0:4000/tag/process/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T18:11:47+00:00</updated>
-  <id>http://0.0.0.0:4000/tag/process/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/process/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:18:20+00:00</updated>
+  <id>https://www.briglamoreaux.com/tag/process/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">When a Bug is Found</title>
-      <link href="http://0.0.0.0:4000/2007/07/17/when-a-bug-is-found.html" rel="alternate" type="text/html" title="When a Bug is Found" />
+      <link href="https://www.briglamoreaux.com/2007/07/17/when-a-bug-is-found.html" rel="alternate" type="text/html" title="When a Bug is Found" />
       <published>2007-07-17T00:00:00+00:00</published>
       <updated>2007-07-17T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2007/07/17/when-a-bug-is-found</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2007/07/17/when-a-bug-is-found.html">&lt;p&gt;&lt;a href=&quot;http://www.jamesshore.com/Agile-Book/no_bugs.html&quot;&gt;James Shore&lt;/a&gt; talks about the concept of being bug free and has many recommendations on how to reach that goal. At my desk I have the following guide hanging on the wall to help me in my quest.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2007/07/17/when-a-bug-is-found</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2007/07/17/when-a-bug-is-found.html">&lt;p&gt;&lt;a href=&quot;http://www.jamesshore.com/Agile-Book/no_bugs.html&quot;&gt;James Shore&lt;/a&gt; talks about the concept of being bug free and has many recommendations on how to reach that goal. At my desk I have the following guide hanging on the wall to help me in my quest.&lt;/p&gt;
 
 &lt;p&gt;First:&lt;/p&gt;
 

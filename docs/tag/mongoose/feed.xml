@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://0.0.0.0:4000/tag/mongoose/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T18:11:47+00:00</updated>
-  <id>http://0.0.0.0:4000/tag/mongoose/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/mongoose/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:18:20+00:00</updated>
+  <id>https://www.briglamoreaux.com/tag/mongoose/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Search nodejs with regex and case insensitive</title>
-      <link href="http://0.0.0.0:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html" rel="alternate" type="text/html" title="Search nodejs with regex and case insensitive" />
+      <link href="https://www.briglamoreaux.com/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html" rel="alternate" type="text/html" title="Search nodejs with regex and case insensitive" />
       <published>2012-04-10T00:00:00+00:00</published>
       <updated>2012-04-10T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html">&lt;p&gt;I recently needed to search for documents in mongo using mongoose. I knew I needed a regex but couldn’t figure out how to pass the case insensitive flag. We’ll here is how you do it.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2012/04/10/search-nodejs-with-regex-and-case-insensitive</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2012/04/10/search-nodejs-with-regex-and-case-insensitive.html">&lt;p&gt;I recently needed to search for documents in mongo using mongoose. I knew I needed a regex but couldn’t figure out how to pass the case insensitive flag. We’ll here is how you do it.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var term = 'Apple'; Ideas.find({'title' : new RegExp(term, &quot;i&quot;)}, function(err, ideas){...});&lt;/code&gt;&lt;/p&gt;
 

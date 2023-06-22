@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://0.0.0.0:4000/tag/semantic/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T18:11:47+00:00</updated>
-  <id>http://0.0.0.0:4000/tag/semantic/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/semantic/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2023-06-22T18:18:20+00:00</updated>
+  <id>https://www.briglamoreaux.com/tag/semantic/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">What Graphs and Ontologies mean to you</title>
-      <link href="http://0.0.0.0:4000/2012/10/26/what-graphs-and-ontologies-mean-to-you.html" rel="alternate" type="text/html" title="What Graphs and Ontologies mean to you" />
+      <link href="https://www.briglamoreaux.com/2012/10/26/what-graphs-and-ontologies-mean-to-you.html" rel="alternate" type="text/html" title="What Graphs and Ontologies mean to you" />
       <published>2012-10-26T00:00:00+00:00</published>
       <updated>2012-10-26T00:00:00+00:00</updated>
-      <id>http://0.0.0.0:4000/2012/10/26/what-graphs-and-ontologies-mean-to-you</id>
-      <content type="html" xml:base="http://0.0.0.0:4000/2012/10/26/what-graphs-and-ontologies-mean-to-you.html">&lt;p&gt;New projects often introduce new terms which can sometimes be used in different ways between team members. Especial when there are multiple teams. This article will clarify the meaning for the following terms and help explain how they are related to one another.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2012/10/26/what-graphs-and-ontologies-mean-to-you</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2012/10/26/what-graphs-and-ontologies-mean-to-you.html">&lt;p&gt;New projects often introduce new terms which can sometimes be used in different ways between team members. Especial when there are multiple teams. This article will clarify the meaning for the following terms and help explain how they are related to one another.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Graphs&lt;/li&gt;
@@ -50,7 +50,7 @@
 
 &lt;h2 id=&quot;basic-concept&quot;&gt;Basic Concept&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/ontologiesbasics.png&quot; alt=&quot;Simple Graph&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/ontologiesbasics.png&quot; alt=&quot;Simple Graph&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At the most basic level, a graph is a connection of two things. This graph has something connected to something else. &lt;a href=&quot;http://www.w3.org/RDF/&quot;&gt;RDF&lt;/a&gt; is a way we can create these graphs. I won’t go too much into how RDF describes data except it can store the graph as a &lt;a href=&quot;http://www.w3.org/TR/rdf-concepts/#section-triples&quot;&gt;triple&lt;/a&gt; in the form &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(subject, predict, object)&lt;/code&gt;.&lt;/p&gt;
 
@@ -104,7 +104,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/socialgraph1.png&quot; alt=&quot;Social Ontology Graph&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/socialgraph1.png&quot; alt=&quot;Social Ontology Graph&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;education-example&quot;&gt;Education Example&lt;/h3&gt;
 
@@ -139,7 +139,7 @@
 
 &lt;p&gt;This graph could look like&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/educationgraph2.png&quot; alt=&quot;Education Ontology Graph&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/educationgraph2.png&quot; alt=&quot;Education Ontology Graph&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;skos-example&quot;&gt;SKOS Example&lt;/h3&gt;
 
@@ -164,7 +164,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://0.0.0.0:4000/assets/images/skosgraph.png?w=300&quot; alt=&quot;SKOS Ontology Graph&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/skosgraph.png?w=300&quot; alt=&quot;SKOS Ontology Graph&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;take-away&quot;&gt;Take Away&lt;/h2&gt;
 
