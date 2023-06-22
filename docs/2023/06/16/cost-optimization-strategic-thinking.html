@@ -455,28 +455,29 @@ Some of these are:</p>
   </tbody>
 </table>
 
-<p>Example: Orphaned Disks</p>
+<p>Example: Orphaned Disks {}</p>
 
-<div class="example">
+<p>::::: {#example .example}</p>
 
+<h3 id="overview">Overview</h3>
+<p>Best Practice: As an organization, have 90% attached disk (&lt;10% orphaned)</p>
 
-### Overview
-Best Practice: As an organization, have 90% attached disk (&lt;10% orphaned)
+<p><strong>Sketch</strong>
+<img src="https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-sketch.jpgg" alt="Orphaned Disks Sketch" /></p>
 
-**Sketch**
-![Orphaned Disks Sketch](https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-sketch.jpgg)
+<p><strong>PowerBI Example</strong>
+<img src="https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-pbi.jpgg" alt="Orphaned Disks PowerBI" /></p>
 
-**PowerBI Example**
-![Orphaned Disks PowerBI](https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-pbi.jpgg)
+<h3 id="schema">Schema</h3>
 
-### Schema
+<p>Parameters may include:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">optimal_percentage</code> As the target to compare cost</li>
+</ul>
 
-Parameters may include:
-* `optimal_percentage` As the target to compare cost
-
-**Single Table**
+<p><strong>Single Table</strong>
 | Field | Type | Notes |
-|-------|------|-------|
+|——-|——|——-|
 | date |   | |
 | subscription_name |  | Filter  |
 | subscription_id | nvarchar(100) | Filter |
@@ -490,83 +491,180 @@ Parameters may include:
 | is_latest | | Indicates the most recent data |
 | is_optimal_forcast | | Indicates optimal forecast |
 | forecast_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=False |
-| optimal_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=True |
+| optimal_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=True |</p>
 
+<h3 id="example-data">Example Data</h3>
 
-### Example Data
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>SubscriptionName</th>
+      <th>SubscriptionId</th>
+      <th>ResourceGroup</th>
+      <th>Total Disk Count</th>
+      <th>Orphan Count</th>
+      <th>Attached Count</th>
+      <th>AttachedDiskPercent</th>
+      <th>Cost</th>
+      <th>IsForecast</th>
+      <th>IsLatest</th>
+      <th>IsOptimalForcast</th>
+      <th>ForecastCost</th>
+      <th>OptimalCost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1/1/2023</td>
+      <td>CORP</td>
+      <td>/subscriptions/00000000-0000-2222-0000-000000000000</td>
+      <td>rg-dev</td>
+      <td>10</td>
+      <td>5</td>
+      <td>5</td>
+      <td>50%</td>
+      <td>200</td>
+      <td>FALSE</td>
+      <td>FALSE</td>
+      <td>FALSE</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1/1/2023</td>
+      <td>CORP</td>
+      <td>/subscriptions/00000000-0000-2222-0000-000000000000</td>
+      <td>rg-prod</td>
+      <td>20</td>
+      <td>8</td>
+      <td>12</td>
+      <td>60%</td>
+      <td>400</td>
+      <td>FALSE</td>
+      <td>FALSE</td>
+      <td>FALSE</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1/1/2023</td>
+      <td>CORP</td>
+      <td>/subscriptions/00000000-0000-2222-0000-000000000000</td>
+      <td>rg-qa</td>
+      <td>20</td>
+      <td>7</td>
+      <td>13</td>
+      <td>65%</td>
+      <td>400</td>
+      <td>FALSE</td>
+      <td>FALSE</td>
+      <td>FALSE</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>1/1/2023</td>
+      <td>ENG</td>
+      <td>/subscriptions/00000000-0000-2222-0000-000000000003</td>
+      <td>rg-dev</td>
+      <td>7</td>
+      <td>3</td>
+      <td>4</td>
+      <td>57%</td>
+      <td>140</td>
+      <td>FALSE</td>
+      <td>FALSE</td>
+      <td>FALSE</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
 
-|Date|SubscriptionName|SubscriptionId|ResourceGroup|Total Disk Count|Orphan Count|Attached Count|AttachedDiskPercent|Cost|IsForecast|IsLatest|IsOptimalForcast|ForecastCost|OptimalCost|
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|1/1/2023|CORP|/subscriptions/00000000-0000-2222-0000-000000000000|rg-dev|10|5|5|50%|200|FALSE|FALSE|FALSE|0|0|
-|1/1/2023|CORP|/subscriptions/00000000-0000-2222-0000-000000000000|rg-prod|20|8|12|60%|400|FALSE|FALSE|FALSE|0|0|
-|1/1/2023|CORP|/subscriptions/00000000-0000-2222-0000-000000000000|rg-qa|20|7|13|65%|400|FALSE|FALSE|FALSE|0|0|
-|1/1/2023|ENG|/subscriptions/00000000-0000-2222-0000-000000000003|rg-dev|7|3|4|57%|140|FALSE|FALSE|FALSE|0|0|
+<p>See full dataset <code class="language-plaintext highlighter-rouge">path/to/sample/dataset.csv</code></p>
 
-See full dataset `path/to/sample/dataset.csv`
+<h3 id="source-data">Source Data</h3>
 
-### Source Data
+<table>
+  <thead>
+    <tr>
+      <th>Source</th>
+      <th>Version</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Common Data Schema</td>
+      <td>Latest</td>
+      <td>AmortizedCost</td>
+    </tr>
+    <tr>
+      <td>Azure Graph API Query</td>
+      <td>v1.0</td>
+      <td>resources</td>
+    </tr>
+  </tbody>
+</table>
 
-| Source | Version | Details |
-|--------|---------|---------|
-| Common Data Schema | Latest | AmortizedCost |
-| Azure Graph API Query | v1.0 | resources |
+<p><strong>AmortizedCost SQL Query</strong></p>
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+  <span class="p">[</span><span class="nb">Date</span><span class="p">]</span>
+  <span class="p">,</span> <span class="p">[</span><span class="n">ResourceId</span><span class="p">]</span>
+  <span class="p">,</span> <span class="k">SUM</span><span class="p">([</span><span class="n">CostInBillingCurrency</span><span class="p">])</span> <span class="k">as</span> <span class="n">Cost</span>
+<span class="k">FROM</span>
+  <span class="p">[</span><span class="n">AmortizedCost</span><span class="p">]</span>
+<span class="k">GROUP</span> <span class="k">BY</span>
+  <span class="p">[</span><span class="nb">Date</span><span class="p">]</span>
+  <span class="p">,</span> <span class="p">[</span><span class="n">ResourceId</span><span class="p">]</span>
+</code></pre></div></div>
 
-**AmortizedCost SQL Query**
-```sql
-SELECT 
-  [Date]
-  , [ResourceId]
-  , SUM([CostInBillingCurrency]) as Cost
-FROM
-  [AmortizedCost]
-GROUP BY
-  [Date]
-  , [ResourceId]
-```
-
-**Azure Graph API Query**
-```
-resources
+<p><strong>Azure Graph API Query</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>resources
 | where type has "microsoft.compute/disks"
 | extend diskState = tostring(properties.diskState)
 | project current_date = format_datetime(now(), 'yyy-MM-dd'), subscriptionId, resourceGroup, id, sku_name = sku.name, diskState, managedBy, is_orphaned = (diskState == 'Unattached' or managedBy == "")
-``` 
+</code></pre></div></div>
 
-### Transformation
+<h3 id="transformation">Transformation</h3>
 
-Join AmortizedCost and Azure Graph API Query by ResourceID and Date
+<p>Join AmortizedCost and Azure Graph API Query by ResourceID and Date</p>
 
-```sql
-SELECT 
-  a.[date]
-  , a.[subscription_name]
-  , a.[subscription_id]
-  , a.[resource_group]
-  , b.[is_orphaned]
-  , SUM(a.[CostInBillingCurrency]) as cost
-FROM
-  [AmortizedCost] as a
-JOIN
-  GRAPH_QUERY as b
-ON a.date = b.date and a.resource_id = b.resource_id
-GROUP BY
-  a.[date]
-  , a.[subscription_name]
-  , a.[subscription_id]
-  , a.[resource_group]
-  , b.[is_orphaned]
-```
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
+  <span class="n">a</span><span class="p">.[</span><span class="nb">date</span><span class="p">]</span>
+  <span class="p">,</span> <span class="n">a</span><span class="p">.[</span><span class="n">subscription_name</span><span class="p">]</span>
+  <span class="p">,</span> <span class="n">a</span><span class="p">.[</span><span class="n">subscription_id</span><span class="p">]</span>
+  <span class="p">,</span> <span class="n">a</span><span class="p">.[</span><span class="n">resource_group</span><span class="p">]</span>
+  <span class="p">,</span> <span class="n">b</span><span class="p">.[</span><span class="n">is_orphaned</span><span class="p">]</span>
+  <span class="p">,</span> <span class="k">SUM</span><span class="p">(</span><span class="n">a</span><span class="p">.[</span><span class="n">CostInBillingCurrency</span><span class="p">])</span> <span class="k">as</span> <span class="n">cost</span>
+<span class="k">FROM</span>
+  <span class="p">[</span><span class="n">AmortizedCost</span><span class="p">]</span> <span class="k">as</span> <span class="n">a</span>
+<span class="k">JOIN</span>
+  <span class="n">GRAPH_QUERY</span> <span class="k">as</span> <span class="n">b</span>
+<span class="k">ON</span> <span class="n">a</span><span class="p">.</span><span class="nb">date</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="nb">date</span> <span class="k">and</span> <span class="n">a</span><span class="p">.</span><span class="n">resource_id</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">resource_id</span>
+<span class="k">GROUP</span> <span class="k">BY</span>
+  <span class="n">a</span><span class="p">.[</span><span class="nb">date</span><span class="p">]</span>
+  <span class="p">,</span> <span class="n">a</span><span class="p">.[</span><span class="n">subscription_name</span><span class="p">]</span>
+  <span class="p">,</span> <span class="n">a</span><span class="p">.[</span><span class="n">subscription_id</span><span class="p">]</span>
+  <span class="p">,</span> <span class="n">a</span><span class="p">.[</span><span class="n">resource_group</span><span class="p">]</span>
+  <span class="p">,</span> <span class="n">b</span><span class="p">.[</span><span class="n">is_orphaned</span><span class="p">]</span>
+</code></pre></div></div>
 
-### Remediation
+<h3 id="remediation">Remediation</h3>
 
-* Delete Disks
-```bash
-az vm disk delete --id $disk_resource_id
-```
+<ul>
+  <li>Delete Disks
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>az vm disk delete <span class="nt">--id</span> <span class="nv">$disk_resource_id</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
 
-## Benefits
+<p>:::::</p>
 
-</div>
+<h2 id="benefits">Benefits</h2>
+
+<p>&lt;/div&gt;</p>
 
 <p>This is a long post to really just guide organizations in developing a strategy around cost optimization and move away from a reactionary seek and destroy mindset.</p>
 

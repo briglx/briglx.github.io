@@ -214,9 +214,10 @@ The framework for a recipe is:
 | Data Transformation | Show how to convert from the source data to the data schema |
 | Remediation | Steps to comply with `SLO` |
 
-Example: Orphaned Disks
+Example: Orphaned Disks {}
 
-<div class="example">
+::::: {#example .example}
+
 
 
 ### Overview
@@ -322,6 +323,8 @@ GROUP BY
 ```bash
 az vm disk delete --id $disk_resource_id
 ```
+
+:::::
 
 ## Benefits
 
