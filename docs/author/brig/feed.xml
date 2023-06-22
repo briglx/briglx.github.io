@@ -4,7 +4,7 @@
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
   <link href="https://www.briglamoreaux.com/author/brig/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T22:10:01+00:00</updated>
+  <updated>2023-06-22T22:21:27+00:00</updated>
   <id>https://www.briglamoreaux.com/author/brig/feed.xml</id>
 
   
@@ -309,18 +309,16 @@ Some of these are:&lt;/p&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Example: Orphaned Disks {}&lt;/p&gt;
-
-&lt;p&gt;::::: {#example .example}&lt;/p&gt;
+&lt;p&gt;Example: Orphaned Disks&lt;/p&gt;
 
 &lt;h3 id=&quot;overview&quot;&gt;Overview&lt;/h3&gt;
 &lt;p&gt;Best Practice: As an organization, have 90% attached disk (&amp;lt;10% orphaned)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Sketch&lt;/strong&gt;
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-sketch.jpgg&quot; alt=&quot;Orphaned Disks Sketch&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-sketch.jpg&quot; alt=&quot;Orphaned Disks Sketch&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;PowerBI Example&lt;/strong&gt;
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-pbi.jpgg&quot; alt=&quot;Orphaned Disks PowerBI&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-pbi.jpg&quot; alt=&quot;Orphaned Disks PowerBI&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;schema&quot;&gt;Schema&lt;/h3&gt;
 
@@ -329,23 +327,87 @@ Some of these are:&lt;/p&gt;
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;optimal_percentage&lt;/code&gt; As the target to compare cost&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Single Table&lt;/strong&gt;
-| Field | Type | Notes |
-|——-|——|——-|
-| date |   | |
-| subscription_name |  | Filter  |
-| subscription_id | nvarchar(100) | Filter |
-| resource_group | nvarchar(100) | Filter |
-| orphaned_disk_count | |
-| attached_disk_count | |
-| total_disk_count | | Calculated orphaned + attached 
-| attached_disk_percent | | Calculated attached / total | 
-| cost | | |
-| is_forecast | | Forecasted data |
-| is_latest | | Indicates the most recent data |
-| is_optimal_forcast | | Indicates optimal forecast |
-| forecast_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=False |
-| optimal_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=True |&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Field&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Notes&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;date&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;subscription_name&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Filter&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;subscription_id&lt;/td&gt;
+      &lt;td&gt;nvarchar(100)&lt;/td&gt;
+      &lt;td&gt;Filter&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;resource_group&lt;/td&gt;
+      &lt;td&gt;nvarchar(100)&lt;/td&gt;
+      &lt;td&gt;Filter&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;orphaned_disk_count&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;attached_disk_count&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;total_disk_count&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Calculated orphaned + attached&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;attached_disk_percent&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Calculated attached / total&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cost&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;is_forecast&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Forecasted data&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;is_latest&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Indicates the most recent data&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;is_optimal_forcast&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Indicates optimal forecast&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;forecast_cost&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Calculated cost if record is_forecast=True and is_optimal_forecast=False&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;optimal_cost&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Calculated cost if record is_forecast=True and is_optimal_forecast=True&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;h3 id=&quot;example-data&quot;&gt;Example Data&lt;/h3&gt;
 
@@ -452,7 +514,7 @@ Some of these are:&lt;/p&gt;
     &lt;tr&gt;
       &lt;td&gt;Common Data Schema&lt;/td&gt;
       &lt;td&gt;Latest&lt;/td&gt;
-      &lt;td&gt;AmortizedCost&lt;/td&gt;
+      &lt;td&gt;AmortizedCost table&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Azure Graph API Query&lt;/td&gt;
@@ -482,8 +544,7 @@ Some of these are:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;transformation&quot;&gt;Transformation&lt;/h3&gt;
-
-&lt;p&gt;Join AmortizedCost and Azure Graph API Query by ResourceID and Date&lt;/p&gt;
+&lt;p&gt;Join &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AmortizedCost&lt;/code&gt; table and Azure Graph API Query by ResourceID and Date&lt;/p&gt;
 
 &lt;div class=&quot;language-sql highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;SELECT&lt;/span&gt; 
   &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
@@ -514,11 +575,7 @@ Some of these are:&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;:::::&lt;/p&gt;
-
 &lt;h2 id=&quot;benefits&quot;&gt;Benefits&lt;/h2&gt;
-
-&lt;p&gt;&amp;lt;/div&amp;gt;&lt;/p&gt;
 
 &lt;p&gt;This is a long post to really just guide organizations in developing a strategy around cost optimization and move away from a reactionary seek and destroy mindset.&lt;/p&gt;
 
@@ -542,12 +599,26 @@ Some of these are:&lt;/p&gt;
 
 &lt;h2 id=&quot;appendix&quot;&gt;Appendix&lt;/h2&gt;
 
-&lt;p&gt;Terminology&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Service Level Indicator (SLI)&lt;/code&gt; Clearly Defined Quantitative measurement&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Service Level Objectives (SLO)&lt;/code&gt; Target value&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Service Level Agreement (SLA)&lt;/code&gt; Targets and consenquences promised to users&lt;/li&gt;
-&lt;/ul&gt;</content>
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Term&lt;/td&gt;
+      &lt;td&gt;Definition&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Service Level Indicator (SLI)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Clearly Defined Quantitative measurement&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Service Level Objectives (SLO)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Target value&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Service Level Agreement (SLA)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Targets and consenquences promised to users&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content>
 
       
       

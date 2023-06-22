@@ -214,35 +214,30 @@ The framework for a recipe is:
 | Data Transformation | Show how to convert from the source data to the data schema |
 | Remediation | Steps to comply with `SLO` |
 
-Example: Orphaned Disks {}
-
-::::: {#example .example}
-
-
+Example: Orphaned Disks
 
 ### Overview
 Best Practice: As an organization, have 90% attached disk (<10% orphaned)
 
 **Sketch**
-![Orphaned Disks Sketch]({{ site.url }}{{ site.baseurl }}/assets/images/20230616-storage-orphaned-disks-sketch.jpgg)
+![Orphaned Disks Sketch]({{ site.url }}{{ site.baseurl }}/assets/images/20230616-storage-orphaned-disks-sketch.jpg)
 
 **PowerBI Example**
-![Orphaned Disks PowerBI]({{ site.url }}{{ site.baseurl }}/assets/images/20230616-storage-orphaned-disks-pbi.jpgg)
+![Orphaned Disks PowerBI]({{ site.url }}{{ site.baseurl }}/assets/images/20230616-storage-orphaned-disks-pbi.jpg)
 
 ### Schema
 
 Parameters may include:
 * `optimal_percentage` As the target to compare cost
 
-**Single Table**
 | Field | Type | Notes |
 |-------|------|-------|
-| date |   | |
+| date  |      |       |
 | subscription_name |  | Filter  |
 | subscription_id | nvarchar(100) | Filter |
 | resource_group | nvarchar(100) | Filter |
-| orphaned_disk_count | |
-| attached_disk_count | |
+| orphaned_disk_count |          |        |
+| attached_disk_count |           |       |
 | total_disk_count | | Calculated orphaned + attached 
 | attached_disk_percent | | Calculated attached / total | 
 | cost | | |
@@ -251,7 +246,6 @@ Parameters may include:
 | is_optimal_forcast | | Indicates optimal forecast |
 | forecast_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=False |
 | optimal_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=True |
-
 
 ### Example Data
 
@@ -268,7 +262,7 @@ See full dataset `path/to/sample/dataset.csv`
 
 | Source | Version | Details |
 |--------|---------|---------|
-| Common Data Schema | Latest | AmortizedCost |
+| Common Data Schema | Latest | AmortizedCost table|
 | Azure Graph API Query | v1.0 | resources |
 
 **AmortizedCost SQL Query**
@@ -293,8 +287,7 @@ resources
 ``` 
 
 ### Transformation
-
-Join AmortizedCost and Azure Graph API Query by ResourceID and Date
+Join `AmortizedCost` table and Azure Graph API Query by ResourceID and Date
 
 ```sql
 SELECT 
@@ -324,11 +317,7 @@ GROUP BY
 az vm disk delete --id $disk_resource_id
 ```
 
-:::::
-
 ## Benefits
-
-</div>
 
 This is a long post to really just guide organizations in developing a strategy around cost optimization and move away from a reactionary seek and destroy mindset.
 
@@ -348,7 +337,7 @@ If you do this then you enjoy the benefits of:
 
 ## Appendix
 
-Terminology
-* `Service Level Indicator (SLI)` Clearly Defined Quantitative measurement
-* `Service Level Objectives (SLO)` Target value
-* `Service Level Agreement (SLA)` Targets and consenquences promised to users
+| Term | Definition |
+|`Service Level Indicator (SLI)` | Clearly Defined Quantitative measurement |
+| `Service Level Objectives (SLO)` | Target value |
+| `Service Level Agreement (SLA)` | Targets and consenquences promised to users |

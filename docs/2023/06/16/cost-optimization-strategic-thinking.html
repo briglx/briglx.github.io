@@ -455,18 +455,16 @@ Some of these are:</p>
   </tbody>
 </table>
 
-<p>Example: Orphaned Disks {}</p>
-
-<p>::::: {#example .example}</p>
+<p>Example: Orphaned Disks</p>
 
 <h3 id="overview">Overview</h3>
 <p>Best Practice: As an organization, have 90% attached disk (&lt;10% orphaned)</p>
 
 <p><strong>Sketch</strong>
-<img src="https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-sketch.jpgg" alt="Orphaned Disks Sketch" /></p>
+<img src="https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-sketch.jpg" alt="Orphaned Disks Sketch" /></p>
 
 <p><strong>PowerBI Example</strong>
-<img src="https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-pbi.jpgg" alt="Orphaned Disks PowerBI" /></p>
+<img src="https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-pbi.jpg" alt="Orphaned Disks PowerBI" /></p>
 
 <h3 id="schema">Schema</h3>
 
@@ -475,23 +473,87 @@ Some of these are:</p>
   <li><code class="language-plaintext highlighter-rouge">optimal_percentage</code> As the target to compare cost</li>
 </ul>
 
-<p><strong>Single Table</strong>
-| Field | Type | Notes |
-|——-|——|——-|
-| date |   | |
-| subscription_name |  | Filter  |
-| subscription_id | nvarchar(100) | Filter |
-| resource_group | nvarchar(100) | Filter |
-| orphaned_disk_count | |
-| attached_disk_count | |
-| total_disk_count | | Calculated orphaned + attached 
-| attached_disk_percent | | Calculated attached / total | 
-| cost | | |
-| is_forecast | | Forecasted data |
-| is_latest | | Indicates the most recent data |
-| is_optimal_forcast | | Indicates optimal forecast |
-| forecast_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=False |
-| optimal_cost | | Calculated cost if record is_forecast=True and is_optimal_forecast=True |</p>
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Type</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>date</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>subscription_name</td>
+      <td> </td>
+      <td>Filter</td>
+    </tr>
+    <tr>
+      <td>subscription_id</td>
+      <td>nvarchar(100)</td>
+      <td>Filter</td>
+    </tr>
+    <tr>
+      <td>resource_group</td>
+      <td>nvarchar(100)</td>
+      <td>Filter</td>
+    </tr>
+    <tr>
+      <td>orphaned_disk_count</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>attached_disk_count</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>total_disk_count</td>
+      <td> </td>
+      <td>Calculated orphaned + attached</td>
+    </tr>
+    <tr>
+      <td>attached_disk_percent</td>
+      <td> </td>
+      <td>Calculated attached / total</td>
+    </tr>
+    <tr>
+      <td>cost</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>is_forecast</td>
+      <td> </td>
+      <td>Forecasted data</td>
+    </tr>
+    <tr>
+      <td>is_latest</td>
+      <td> </td>
+      <td>Indicates the most recent data</td>
+    </tr>
+    <tr>
+      <td>is_optimal_forcast</td>
+      <td> </td>
+      <td>Indicates optimal forecast</td>
+    </tr>
+    <tr>
+      <td>forecast_cost</td>
+      <td> </td>
+      <td>Calculated cost if record is_forecast=True and is_optimal_forecast=False</td>
+    </tr>
+    <tr>
+      <td>optimal_cost</td>
+      <td> </td>
+      <td>Calculated cost if record is_forecast=True and is_optimal_forecast=True</td>
+    </tr>
+  </tbody>
+</table>
 
 <h3 id="example-data">Example Data</h3>
 
@@ -598,7 +660,7 @@ Some of these are:</p>
     <tr>
       <td>Common Data Schema</td>
       <td>Latest</td>
-      <td>AmortizedCost</td>
+      <td>AmortizedCost table</td>
     </tr>
     <tr>
       <td>Azure Graph API Query</td>
@@ -628,8 +690,7 @@ Some of these are:</p>
 </code></pre></div></div>
 
 <h3 id="transformation">Transformation</h3>
-
-<p>Join AmortizedCost and Azure Graph API Query by ResourceID and Date</p>
+<p>Join <code class="language-plaintext highlighter-rouge">AmortizedCost</code> table and Azure Graph API Query by ResourceID and Date</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> 
   <span class="n">a</span><span class="p">.[</span><span class="nb">date</span><span class="p">]</span>
@@ -660,11 +721,7 @@ Some of these are:</p>
   </li>
 </ul>
 
-<p>:::::</p>
-
 <h2 id="benefits">Benefits</h2>
-
-<p>&lt;/div&gt;</p>
 
 <p>This is a long post to really just guide organizations in developing a strategy around cost optimization and move away from a reactionary seek and destroy mindset.</p>
 
@@ -688,12 +745,26 @@ Some of these are:</p>
 
 <h2 id="appendix">Appendix</h2>
 
-<p>Terminology</p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">Service Level Indicator (SLI)</code> Clearly Defined Quantitative measurement</li>
-  <li><code class="language-plaintext highlighter-rouge">Service Level Objectives (SLO)</code> Target value</li>
-  <li><code class="language-plaintext highlighter-rouge">Service Level Agreement (SLA)</code> Targets and consenquences promised to users</li>
-</ul>
+<table>
+  <tbody>
+    <tr>
+      <td>Term</td>
+      <td>Definition</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Service Level Indicator (SLI)</code></td>
+      <td>Clearly Defined Quantitative measurement</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Service Level Objectives (SLO)</code></td>
+      <td>Target value</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">Service Level Agreement (SLA)</code></td>
+      <td>Targets and consenquences promised to users</td>
+    </tr>
+  </tbody>
+</table>
 
                 </div>
             </section>
