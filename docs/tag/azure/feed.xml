@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/azure/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T22:42:12+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/azure/feed.xml</id>
+  <link href="http://172.17.0.2:4000/tag/azure/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://172.17.0.2:4000/" rel="alternate" type="text/html" />
+  <updated>2023-11-11T00:30:05+00:00</updated>
+  <id>http://172.17.0.2:4000/tag/azure/feed.xml</id>
 
   
   
@@ -32,12 +32,267 @@
 
   
     <entry>
+      <title type="html">Analyzing Azure Pricing</title>
+      <link href="http://172.17.0.2:4000/2023/11/10/analyzing-azure-pricing.html" rel="alternate" type="text/html" title="Analyzing Azure Pricing" />
+      <published>2023-11-10T00:00:00+00:00</published>
+      <updated>2023-11-10T00:00:00+00:00</updated>
+      <id>http://172.17.0.2:4000/2023/11/10/analyzing-azure-pricing</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2023/11/10/analyzing-azure-pricing.html">&lt;p&gt;Customer often ask me about how to analyze their Azure costs.  This is a very broad question and there are many ways to answer it.  This post will focus on the different types of prices, discounts, and offers that are available.  I will also provide some examples of how to use the Azure APIs to analyze your costs.&lt;/p&gt;
+
+&lt;h2 id=&quot;azure-pricing&quot;&gt;Azure Pricing&lt;/h2&gt;
+
+&lt;p&gt;Azure has a number of different pricing models. The broadest categories are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/&quot;&gt;Pay-as-you-go&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/pricing/enterprise-agreement/&quot;&gt;Azure Enterprise Agreement (EA)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/pricing/microsoft-customer-agreement/&quot;&gt;Microsoft Customer Agreement (MCA)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/pricing/microsoft-partner-agreement/&quot;&gt;Microsoft Partner Agreement (MPA)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then you can get discounts on the prices based on:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/pricing/reservations/&quot;&gt;Azure Reservations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/pricing/reserved-vm-instances/&quot;&gt;Reserved Instances&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/pricing/hybrid-benefit/&quot;&gt;Azure Hybrid Benefit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/pricing/spot/&quot;&gt;Azure Spot Instances&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/pricing/dev-test/&quot;&gt;Azure Dev/Test Pricing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://azure.microsoft.com/en-us/free/&quot;&gt;Azure Free Account&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;and more…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The question I get asked most often is how do I analyize my costs. I like to use a few specific Azure apis.&lt;/p&gt;
+
+&lt;h2 id=&quot;azure-apis&quot;&gt;Azure APIs&lt;/h2&gt;
+
+&lt;p&gt;These are the primary APIs I use to analyze Azure costs.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;API&lt;/th&gt;
+      &lt;th&gt;URL&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices?view=rest-cost-management-2023-08-01&quot;&gt;Retail Price Sheet API&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;https://prices.azure.com/api/retail/prices?api-version=2023-01-01-preview&amp;amp;meterRegion=’primary’&lt;/td&gt;
+      &lt;td&gt;Get the retail prices for Azure services.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/rest/api/cost-management/price-sheet?view=rest-cost-management-2023-08-01&quot;&gt;Negotiated Price Sheet API&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;GET https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Consumption/pricesheets/default?api-version=2023-05-01&lt;/td&gt;
+      &lt;td&gt;Get the negotiated discounted price sheet for EA agreements.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/ingest-azure-usage-at-scale&quot;&gt;Exported Billing Data&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;https://management.azure.com/{scope}/providers/Microsoft.CostManagement/exports/{exportName}?api-version=2020-06-01&lt;/td&gt;
+      &lt;td&gt;Shows what was actually paid for Azure services.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;I use the Retail Price Sheet as the baseline for service costs. However, this is not typically the price that you will pay.  The Negotiated Price Sheet will show you the discounted price that you will pay.  The Exported Billing Data will show you what you actually paid.  The difference between the Retail Price Sheet and the Negotiated Price Sheet/Exported Billing Data is the discount that you received.&lt;/p&gt;
+
+&lt;p&gt;Exported Billing Data have two datasets:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;ActualCost - Shows when you pay for an RI&lt;/li&gt;
+  &lt;li&gt;AmortizedCost - Shows when you use an RI. Best used for chargeback.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The key columns are from the AmortizedCost dataset:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Column&lt;/th&gt;
+      &lt;th&gt;Description&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EffectivePrice&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Cost after Discounts and RIs&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Pay-as-you-goPrice&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Retail Price.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UnitPrice&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Price with Discounts. No RI applied&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;azure-pricing-analyzing-example&quot;&gt;Azure Pricing Analyzing Example&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;As an Organization I want to have 90% of candidate VMs to be covered by an RI&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20231110-recipe-compute-ri-covered.png&quot; alt=&quot;Compute - RI Covered&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This an example Recipe, which I’ve talked about in &lt;a href=&quot;https://www.brigl.com/blog/2021/06/16/cost-optimization-strategic-thinking/&quot;&gt;Cost Optimization Strategic Thinking&lt;/a&gt;, where the goal is to have 90% of candidate VMs covered by an RI.&lt;/p&gt;
+
+&lt;p&gt;The next step is to define the scheme and the source for the data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Schema&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Parameters may include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;optimal_percentage&lt;/code&gt; As the target to compare cost&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Field&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Notes&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;date&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;subscription_name&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;Filter&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;subscription_id&lt;/td&gt;
+      &lt;td&gt;nvarchar(100)&lt;/td&gt;
+      &lt;td&gt;Filter&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;resource_group&lt;/td&gt;
+      &lt;td&gt;nvarchar(100)&lt;/td&gt;
+      &lt;td&gt;Filter&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ri_candidate_vm_count&lt;/td&gt;
+      &lt;td&gt;int&lt;/td&gt;
+      &lt;td&gt;Count of vms that match a specific requirement.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ri_covered_vm_count&lt;/td&gt;
+      &lt;td&gt;int&lt;/td&gt;
+      &lt;td&gt;Count of vms that used ri pricing. Compare &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UnitPrice&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EffectivePrice&lt;/code&gt; from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AmortizedCost&lt;/code&gt; to see when an RI is used.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ri_uncovered_vm_count&lt;/td&gt;
+      &lt;td&gt;int&lt;/td&gt;
+      &lt;td&gt;Calculated ri_candidate_vm_count - ri_covered_vm_count&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cost&lt;/td&gt;
+      &lt;td&gt;decimal&lt;/td&gt;
+      &lt;td&gt;Total cost for all VMs&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;optimal_cost&lt;/td&gt;
+      &lt;td&gt;decimal&lt;/td&gt;
+      &lt;td&gt;Calculated cost targeting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;optimal_percentage&lt;/code&gt; coverage goal.&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;is_forecast&lt;/td&gt;
+      &lt;td&gt;bool&lt;/td&gt;
+      &lt;td&gt;Forecasted data&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The key pieces of data are around calculated the forecasted cost and the optimal cost.  The forecasted cost is the cost that you will pay if you do nothing.  The optimal cost is the cost that you will pay if you meet your goal.  The difference between the two is the savings.&lt;/p&gt;
+
+&lt;p&gt;So we need to figure out where to source the data for each of these fields.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Source Data&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cost
+    &lt;ul&gt;
+      &lt;li&gt;Found in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EffectivePrice&lt;/code&gt; column of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Exported Billing Data&lt;/code&gt; AmortizedCost dataset.&lt;/li&gt;
+      &lt;li&gt;This shows what we end up paying including all discounts.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;cost (forecasted)
+    &lt;ul&gt;
+      &lt;li&gt;Found in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Quantity&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EffectivePrice&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UnitPrice&lt;/code&gt; columns of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Exported Billing Data&lt;/code&gt; AmortizedCost dataset.&lt;/li&gt;
+      &lt;li&gt;Use these fields during the previous time period and predict what the next time period quantity will be.&lt;/li&gt;
+      &lt;li&gt;Use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UnitPrice&lt;/code&gt; from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Negotiated Price Sheet API&lt;/code&gt; for any servcices not found in the historic billing data.&lt;/li&gt;
+      &lt;li&gt;The Price Sheet data includes discounted prices but not reservations.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;optimal_cost
+    &lt;ul&gt;
+      &lt;li&gt;Find the ri price for each of the vm types in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ri_candidate_vm_count&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;EffectivePrice&lt;/code&gt; from  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Exported Billing Data&lt;/code&gt; AmortizedCost or calculate the percetange discount from the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;UnitPrice&lt;/code&gt; from the Retail Price Sheet API&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-cost-mgt-data&quot;&gt;Understand Cost Management data&lt;/a&gt; 
+&lt;a href=&quot;https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices?view=rest-cost-management-2023-08-01&quot;&gt;Azure Retail Prices overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/azure/cost-management-billing/automate/migrate-ea-reporting-arm-apis-overview&quot;&gt;Cost Management APIs overview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/rest/api/billing/enterprise/billing-enterprise-api-pricesheet&quot;&gt;Reporting APIs for Enterprise customers - Price Sheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/ingest-azure-usage-at-scale&quot;&gt;Retrieve large cost datasets recurringly with exports from Cost Management&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-export-acm-data?tabs=azure-portal&quot;&gt;Create and Manage Exported Data&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/azure/cost-management-billing/automate/understand-usage-details-fields?source=recommendations&quot;&gt;Understand cost details fields&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/rest/api/cost-management/&quot;&gt;Azure Cost Management REST API&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices?view=rest-cost-management-2023-08-01&quot;&gt;Azure Cost Management REST API - Retail Prices&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/rest/api/cost-management/price-sheet?view=rest-cost-management-2023-08-01&quot;&gt;Azure Cost Management REST API - Price Sheet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/rest/api/cost-management/generate-cost-details-report?view=rest-cost-management-2023-08-01&quot;&gt;Azure Cost Management REST API - Usage Details&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://learn.microsoft.com/en-us/rest/api/cost-management/exports/create-or-update?view=rest-cost-management-2023-08-01&amp;amp;tabs=HTTP&quot;&gt;Azure Cost Management REST API - Exports&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+
+      
+      
+      
+      
+      
+
+      <author>
+          <name>Brig Lamoreaux</name>
+        
+        
+      </author>
+
+      
+
+      
+        <category term="cloud" />
+      
+        <category term="cost" />
+      
+        <category term="optimization" />
+      
+        <category term="finops" />
+      
+        <category term="azure" />
+      
+
+      
+        <summary type="html">Customer often ask me about how to analyze their Azure costs. This is a very broad question and there are many ways to answer it. This post will focus on the different types of prices, discounts, and offers that are available. I will also provide some examples of how to use the Azure APIs to analyze your costs.</summary>
+      
+
+      
+      
+    </entry>
+  
+    <entry>
       <title type="html">Cost Optimization Strategic Thinking</title>
-      <link href="https://www.briglamoreaux.com/2023/06/16/cost-optimization-strategic-thinking.html" rel="alternate" type="text/html" title="Cost Optimization Strategic Thinking" />
+      <link href="http://172.17.0.2:4000/2023/06/16/cost-optimization-strategic-thinking.html" rel="alternate" type="text/html" title="Cost Optimization Strategic Thinking" />
       <published>2023-06-16T00:00:00+00:00</published>
       <updated>2023-06-16T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2023/06/16/cost-optimization-strategic-thinking</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2023/06/16/cost-optimization-strategic-thinking.html">&lt;p&gt;This post will outline how to develop a strategic approach to manage costs in cloud services.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2023/06/16/cost-optimization-strategic-thinking</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2023/06/16/cost-optimization-strategic-thinking.html">&lt;p&gt;This post will outline how to develop a strategic approach to manage costs in cloud services.&lt;/p&gt;
 
 &lt;p&gt;I previously talked about the &lt;a href=&quot;/2022/06/10/cost-optimization-maturity-model.html&quot;&gt;maturity path&lt;/a&gt; organizations go through when adopting Cloud Cost Optimization. Since then, I’ve created a session and workshop guiding executive teams on how to have a strategic mindset for Cost Optimization. They gain the ability to:&lt;/p&gt;
 
@@ -75,7 +330,7 @@
   &lt;li&gt;Define and Implement Remediation methods&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-three-phased-strategy.png&quot; alt=&quot;Three Phased Strategy&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20230616-three-phased-strategy.png&quot; alt=&quot;Three Phased Strategy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This approach changes traditional reporting by turning it into measuring compliance with best practices. Additionally, it creates a place for organizations to define how to remediate in the event they are not in compliance.
 Leadership teams love this approach because it is nothing more than defining a plan, measuring progress, and creating playbooks to stay on target. It’s data driven, promotes team accountability, and focuses on outcomes.&lt;/p&gt;
@@ -85,7 +340,7 @@ Leadership teams love this approach because it is nothing more than defining a p
 &lt;h3 id=&quot;a-primer-on-cost-drivers&quot;&gt;A Primer on Cost Drivers&lt;/h3&gt;
 &lt;p&gt;Most services have several different drivers that go into the final cost. These can typically be found in the documentation or pricing calculators.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-primary-cost-drivers-source.png&quot; alt=&quot;Storage Primary Cost Driver Sources&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20230616-storage-primary-cost-drivers-source.png&quot; alt=&quot;Storage Primary Cost Driver Sources&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For example, in Azure Blob Storage, the primary cost drivers include file structure, redundancy, region, access tier, capacity, reservation, and operations. I wrote a small tool to help me identify the primary cost drivers for storage using a technique called &lt;a href=&quot;https://en.wikipedia.org/wiki/Dimensionality_reduction&quot;&gt;feature reduction.&lt;/a&gt;. Turns out the primary cost drivers for storage are:&lt;/p&gt;
 &lt;ul&gt;
@@ -96,7 +351,7 @@ Leadership teams love this approach because it is nothing more than defining a p
   &lt;li&gt;… all others&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-primary-cost-drivers.png&quot; alt=&quot;Storage Primary Cost Drivers&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20230616-storage-primary-cost-drivers.png&quot; alt=&quot;Storage Primary Cost Drivers&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It makes sense that capacity is the top cost driver because the more data I put into storage the more it’s going to cost. I was surprised to see that access tier had a larger influence on cost than redundancy.&lt;/p&gt;
 
@@ -214,7 +469,7 @@ For each cost driver, consider not only how you can influence cost, but how do y
   &lt;li&gt;Display Potential Savings&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-access-tier.png&quot; alt=&quot;Access Tier&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20230616-storage-access-tier.png&quot; alt=&quot;Access Tier&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;As an organization have 90% Aligned Data&lt;/p&gt;
@@ -315,10 +570,10 @@ Some of these are:&lt;/p&gt;
 &lt;p&gt;Best Practice: As an organization, have 90% attached disk (&amp;lt;10% orphaned)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Sketch&lt;/strong&gt;
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-sketch.jpg&quot; alt=&quot;Orphaned Disks Sketch&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20230616-storage-orphaned-disks-sketch.jpg&quot; alt=&quot;Orphaned Disks Sketch&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;PowerBI Example&lt;/strong&gt;
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-pbi.jpg&quot; alt=&quot;Orphaned Disks PowerBI&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20230616-storage-orphaned-disks-pbi.jpg&quot; alt=&quot;Orphaned Disks PowerBI&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;schema&quot;&gt;Schema&lt;/h3&gt;
 
@@ -656,11 +911,11 @@ Some of these are:&lt;/p&gt;
   
     <entry>
       <title type="html">Update Minecraft Server</title>
-      <link href="https://www.briglamoreaux.com/2023/03/13/update-minecraft-server.html" rel="alternate" type="text/html" title="Update Minecraft Server" />
+      <link href="http://172.17.0.2:4000/2023/03/13/update-minecraft-server.html" rel="alternate" type="text/html" title="Update Minecraft Server" />
       <published>2023-03-13T00:00:00+00:00</published>
       <updated>2023-03-13T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2023/03/13/update-minecraft-server</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2023/03/13/update-minecraft-server.html">&lt;p&gt;It’s that time of year again when I need to update the minecraft server but I forgot how.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2023/03/13/update-minecraft-server</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2023/03/13/update-minecraft-server.html">&lt;p&gt;It’s that time of year again when I need to update the minecraft server but I forgot how.&lt;/p&gt;
 
 &lt;p&gt;Looks like the installed version is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minecraft_server.1.19.2.jar&lt;/code&gt; and the latest is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minecraft_server.1.19.3.jar&lt;/code&gt;&lt;/p&gt;
 
@@ -737,11 +992,11 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Minecraft Server</title>
-      <link href="https://www.briglamoreaux.com/2022/07/31/minecraft-server.html" rel="alternate" type="text/html" title="Minecraft Server" />
+      <link href="http://172.17.0.2:4000/2022/07/31/minecraft-server.html" rel="alternate" type="text/html" title="Minecraft Server" />
       <published>2022-07-31T00:00:00+00:00</published>
       <updated>2022-07-31T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2022/07/31/minecraft-server</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2022/07/31/minecraft-server.html">&lt;p&gt;Setting up minecraft on azure for fun.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2022/07/31/minecraft-server</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2022/07/31/minecraft-server.html">&lt;p&gt;Setting up minecraft on azure for fun.&lt;/p&gt;
 
 &lt;p&gt;Setup Server&lt;/p&gt;
 
@@ -842,21 +1097,21 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Cost Optimization Maturity Model</title>
-      <link href="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" />
+      <link href="http://172.17.0.2:4000/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" />
       <published>2022-06-10T00:00:00+00:00</published>
       <updated>2022-06-10T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2022/06/10/cost-optimization-maturity-model</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-1---freaking-out&quot;&gt;Phase 1 - Freaking Out&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The first phase is moving to the cloud and watching the bill grow over time without understanding why. There is not much to do in this phase other than completely ignoring the slowly growing problem or asking for help.&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-2---finding-tools&quot;&gt;Phase 2 - Finding Tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Learning about cost management tools distinguishes Phase 2 from Phase 1. Azure includes tools like:&lt;/p&gt;
 
@@ -885,7 +1140,7 @@ systemctl status minecraft.service
   &lt;li&gt;Delete idle network gateways&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Review Advisor recommendations in the Azure portal: &lt;a href=&quot;https://aka.ms/azureadvisor&quot;&gt;aka.ms/azureadvisor&lt;/a&gt;&lt;/p&gt;
 
@@ -899,7 +1154,7 @@ systemctl status minecraft.service
   &lt;li&gt;Set spending thresholds and more&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;azure-cost-management--billing-power-bi-app&quot;&gt;Azure Cost Management + Billing Power BI App&lt;/h3&gt;
 
@@ -918,7 +1173,7 @@ systemctl status minecraft.service
 
 &lt;p&gt;You can also create ad hoc reports using the underlying data. I will use the ACM Power BI Template App to show off how to slice and dice billing data for customers looking for specialized reports.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;azure-cost-management-connector-for-power-bi&quot;&gt;Azure Cost Management Connector for Power BI&lt;/h3&gt;
 
@@ -926,7 +1181,7 @@ systemctl status minecraft.service
 
 &lt;p&gt;When a tricky request comes in, like a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;point-in-time comparison&lt;/code&gt; report, I fire up Power BI Desktop to do the job.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-azure-cost-management-connector.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-azure-cost-management-connector.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;waf-cost-optimization-workbook&quot;&gt;WAF Cost Optimization Workbook&lt;/h3&gt;
 
@@ -939,7 +1194,7 @@ systemctl status minecraft.service
   &lt;li&gt;Hybrid benefits and more&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;additional-tools&quot;&gt;Additional Tools&lt;/h3&gt;
 
@@ -954,7 +1209,7 @@ systemctl status minecraft.service
 
 &lt;h2 id=&quot;phase-3---outgrowing-the-tools&quot;&gt;Phase 3 - Outgrowing the Tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At some point, the tools either fail to provide needed information or are overwhelmed by the amount of data. In my experience, this moment comes when an organization reaches the $2M / month in consumption and the file size for billing data approaches 2-3GB. Excel and PowerBI start to slow down with files this large.&lt;/p&gt;
 
@@ -962,11 +1217,11 @@ systemctl status minecraft.service
 
 &lt;h2 id=&quot;phase-4---create-a-new-tool&quot;&gt;Phase 4 - Create a New Tool&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;When I faced this phase several years ago, I designed and &lt;a href=&quot;https://github.com/briglx/AzureBillingReports&quot;&gt;implemented a solution&lt;/a&gt; using my background in big data. After deploying it, I interviewed colleagues in other large organizations asking how they solved the problem. The responses were consistent with my solution’s modern data warehouse pipeline architecture.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This scalable solution can:&lt;/p&gt;
 
@@ -980,7 +1235,7 @@ systemctl status minecraft.service
 
 &lt;h2 id=&quot;phase-5---wrong-audience&quot;&gt;Phase 5 - Wrong Audience&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Phase 5 is a cycle of cost-cutting and organic growth. The behavior can show up anytime during the maturity growth phases because it is more of a mindset about cost management instead of a limitation of the tools. I put it here because implementing a big-data pipeline is less complicated than changing the hearts and minds of an entire organization.&lt;/p&gt;
 
@@ -1019,7 +1274,7 @@ systemctl status minecraft.service
   &lt;li&gt;Remediate&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This method extends the capability of Azure Advisor to include custom business best practices.&lt;/p&gt;
 
@@ -1037,7 +1292,7 @@ systemctl status minecraft.service
 
 &lt;p&gt;&lt;strong&gt;Measure and Monitor&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The best visualizations provide essential information each department needs. Reports designed to build trust for executives should show the current status of a best practice and the historical progress. Provide visualization that provides information needed to make real-time decisions.&lt;/p&gt;
 
@@ -1045,7 +1300,7 @@ systemctl status minecraft.service
 
 &lt;h2 id=&quot;phase-6---recipes&quot;&gt;Phase 6 - Recipes&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipes&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipes&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The last phase in the maturity model is when an organization can scale developing reports that measure best practices. Scaling will require centralizing data collection, a common data schema, and discoverability. In this environment, teams can create, discover, and share new reports.&lt;/p&gt;</content>
 
@@ -1085,11 +1340,11 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Finding Public IP Details</title>
-      <link href="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
+      <link href="http://172.17.0.2:4000/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
       <published>2022-06-10T00:00:00+00:00</published>
       <updated>2022-06-10T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2022/06/10/finding-public-ip-details</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
 
 &lt;p&gt;The goal is to see the different types of resources public ips are associated like:&lt;/p&gt;
 
@@ -1389,11 +1644,11 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Parse Azure Deployment Status</title>
-      <link href="https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status.html" rel="alternate" type="text/html" title="Parse Azure Deployment Status" />
+      <link href="http://172.17.0.2:4000/2017/08/24/parse-azure-deployment-status.html" rel="alternate" type="text/html" title="Parse Azure Deployment Status" />
       <published>2017-08-24T00:00:00+00:00</published>
       <updated>2017-08-24T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2017/08/24/parse-azure-deployment-status.html">&lt;p&gt;I’ve been making a lot of deployments that take a while to finish. There is an api call to fetch the status of the operations.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2017/08/24/parse-azure-deployment-status</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2017/08/24/parse-azure-deployment-status.html">&lt;p&gt;I’ve been making a lot of deployments that take a while to finish. There is an api call to fetch the status of the operations.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;azure group deployment operation list --name deploymentname --resource-group rgname&lt;/code&gt;&lt;/p&gt;
 
@@ -1435,11 +1690,11 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Here are the differences between HDInsight and Hortonworks HDP</title>
-      <link href="https://www.briglamoreaux.com/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html" rel="alternate" type="text/html" title="Here are the differences between HDInsight and Hortonworks HDP" />
+      <link href="http://172.17.0.2:4000/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html" rel="alternate" type="text/html" title="Here are the differences between HDInsight and Hortonworks HDP" />
       <published>2017-05-08T00:00:00+00:00</published>
       <updated>2017-05-08T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html">&lt;p&gt;I get asked a lot about the differences between Microsoft HDInsight and Hortonworks HDP. Turns out there tight coordinated development efforts between the two companies. I was surprised to see how much closer the two products are now today compared to a year ago. Here is what I was able to find.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2017/05/08/here-are-the-differences-between-hdinsight-and-hortonworks-hdp.html">&lt;p&gt;I get asked a lot about the differences between Microsoft HDInsight and Hortonworks HDP. Turns out there tight coordinated development efforts between the two companies. I was surprised to see how much closer the two products are now today compared to a year ago. Here is what I was able to find.&lt;/p&gt;
 
 &lt;h2 id=&quot;lag-in-versions&quot;&gt;Lag in Versions&lt;/h2&gt;
 

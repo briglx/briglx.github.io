@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/net/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T22:42:12+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/net/feed.xml</id>
+  <link href="http://172.17.0.2:4000/tag/net/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://172.17.0.2:4000/" rel="alternate" type="text/html" />
+  <updated>2023-11-11T00:30:05+00:00</updated>
+  <id>http://172.17.0.2:4000/tag/net/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Json Serialization</title>
-      <link href="https://www.briglamoreaux.com/2009/02/04/json-serialization.html" rel="alternate" type="text/html" title="Json Serialization" />
+      <link href="http://172.17.0.2:4000/2009/02/04/json-serialization.html" rel="alternate" type="text/html" title="Json Serialization" />
       <published>2009-02-04T00:00:00+00:00</published>
       <updated>2009-02-04T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2009/02/04/json-serialization</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2009/02/04/json-serialization.html">&lt;p&gt;I’ve been having fun trying to implement an idea I have. Part of the idea involves caching objects to &lt;a href=&quot;http://www.danga.com/memcached/&quot;&gt;memcached&lt;/a&gt; in &lt;a href=&quot;http://json.org/&quot;&gt;Json&lt;/a&gt; format. The idea being that the object saved to memcached wouldn’t be bound to .Net specific methodology.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2009/02/04/json-serialization</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2009/02/04/json-serialization.html">&lt;p&gt;I’ve been having fun trying to implement an idea I have. Part of the idea involves caching objects to &lt;a href=&quot;http://www.danga.com/memcached/&quot;&gt;memcached&lt;/a&gt; in &lt;a href=&quot;http://json.org/&quot;&gt;Json&lt;/a&gt; format. The idea being that the object saved to memcached wouldn’t be bound to .Net specific methodology.&lt;/p&gt;
 
 &lt;h2 id=&quot;whats-out-there&quot;&gt;What’s out There&lt;/h2&gt;
 
@@ -100,17 +100,17 @@
   
     <entry>
       <title type="html">Use Fiddler with .Net Application</title>
-      <link href="https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application.html" rel="alternate" type="text/html" title="Use Fiddler with .Net Application" />
+      <link href="http://172.17.0.2:4000/2008/06/24/use-fiddler-with-net-application.html" rel="alternate" type="text/html" title="Use Fiddler with .Net Application" />
       <published>2008-06-24T00:00:00+00:00</published>
       <updated>2008-06-24T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2008/06/24/use-fiddler-with-net-application.html">&lt;p&gt;I often need to watch communication between a web service and my application. The best way I’ve found is to configure my app to use Fiddler as a proxy between my application and the web service. Once configured, I can watch the traffic. The simple step that I keep forgetting is the entry in the Web.Config file.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2008/06/24/use-fiddler-with-net-application</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2008/06/24/use-fiddler-with-net-application.html">&lt;p&gt;I often need to watch communication between a web service and my application. The best way I’ve found is to configure my app to use Fiddler as a proxy between my application and the web service. Once configured, I can watch the traffic. The simple step that I keep forgetting is the entry in the Web.Config file.&lt;/p&gt;
 
 &lt;h2 id=&quot;get-fiddler-settings&quot;&gt;Get Fiddler Settings&lt;/h2&gt;
 
 &lt;p&gt;Open Fiddler and click on Tools -&amp;gt; Fiddler Options. The Fiddler Options window will pop up and take note of Listen Port number under Proxy Settings. In this case the value is 8888.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B71%5D.jpg&quot; alt=&quot;Fiddler Options&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/CropperCapture%5B71%5D.jpg&quot; alt=&quot;Fiddler Options&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;update-webconfig&quot;&gt;Update Web.Config&lt;/h2&gt;
 
@@ -155,11 +155,11 @@
   
     <entry>
       <title type="html">Beware Dynamic User Controls in a Web Farm</title>
-      <link href="https://www.briglamoreaux.com/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html" rel="alternate" type="text/html" title="Beware Dynamic User Controls in a Web Farm" />
+      <link href="http://172.17.0.2:4000/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html" rel="alternate" type="text/html" title="Beware Dynamic User Controls in a Web Farm" />
       <published>2007-11-02T00:00:00+00:00</published>
       <updated>2007-11-02T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2007/11/02/beware-dynamic-user-controls-in-a-web-farm</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html">&lt;p&gt;Many large sites utilize a web farm with a load balancer. The load balancer will cycle through each server in the farm for each request. Today I assumed our load balancer had &lt;a href=&quot;http://en.wikipedia.org/wiki/Load_balancing_%28computing%29&quot;&gt;persistence&lt;/a&gt;.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2007/11/02/beware-dynamic-user-controls-in-a-web-farm</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2007/11/02/beware-dynamic-user-controls-in-a-web-farm.html">&lt;p&gt;Many large sites utilize a web farm with a load balancer. The load balancer will cycle through each server in the farm for each request. Today I assumed our load balancer had &lt;a href=&quot;http://en.wikipedia.org/wiki/Load_balancing_%28computing%29&quot;&gt;persistence&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I think the text from Wikipedia sums my experience today: “But reliance on persistence can cause problems if the persistence fails.” Come to find out, the rules on the load balancer were not setup uniformly and I found a special case where persistence failed.&lt;/p&gt;
 
@@ -207,11 +207,11 @@
   
     <entry>
       <title type="html">How to Convert Integers to Strings in C#</title>
-      <link href="https://www.briglamoreaux.com/2007/08/31/how-to-convert-integers-to-strings-in-c.html" rel="alternate" type="text/html" title="How to Convert Integers to Strings in C#" />
+      <link href="http://172.17.0.2:4000/2007/08/31/how-to-convert-integers-to-strings-in-c.html" rel="alternate" type="text/html" title="How to Convert Integers to Strings in C#" />
       <published>2007-08-31T00:00:00+00:00</published>
       <updated>2007-08-31T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2007/08/31/how-to-convert-integers-to-strings-in-c</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/31/how-to-convert-integers-to-strings-in-c.html">&lt;p&gt;I’ve been working with converting strings to integers and have a few options at my disposal.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2007/08/31/how-to-convert-integers-to-strings-in-c</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2007/08/31/how-to-convert-integers-to-strings-in-c.html">&lt;p&gt;I’ve been working with converting strings to integers and have a few options at my disposal.&lt;/p&gt;
 
 &lt;p&gt;In the past I’ve bounce between using Convert.Int32(string) and Int.Parse(string). I’ve decided to look into what really goes on under the covers between these different options.&lt;/p&gt;
 
@@ -302,11 +302,11 @@
   
     <entry>
       <title type="html">Anonymous Delegates</title>
-      <link href="https://www.briglamoreaux.com/2007/08/21/anonymous-delegates.html" rel="alternate" type="text/html" title="Anonymous Delegates" />
+      <link href="http://172.17.0.2:4000/2007/08/21/anonymous-delegates.html" rel="alternate" type="text/html" title="Anonymous Delegates" />
       <published>2007-08-21T00:00:00+00:00</published>
       <updated>2007-08-21T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2007/08/21/anonymous-delegates</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/21/anonymous-delegates.html">&lt;p&gt;I never thought I would use anonymous delegates mostly because I didn’t fully understand what benefit they could give me.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2007/08/21/anonymous-delegates</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2007/08/21/anonymous-delegates.html">&lt;p&gt;I never thought I would use anonymous delegates mostly because I didn’t fully understand what benefit they could give me.&lt;/p&gt;
 
 &lt;p&gt;If I can’t get something out of a new tool or methodology, why use it. With anonymous delegates I can get a lot of great things. Specifically simple solutions to my problems&lt;/p&gt;
 
@@ -497,11 +497,11 @@
   
     <entry>
       <title type="html">Forms Authentication and Cookies</title>
-      <link href="https://www.briglamoreaux.com/2007/08/20/forms-authentication-and-cookies.html" rel="alternate" type="text/html" title="Forms Authentication and Cookies" />
+      <link href="http://172.17.0.2:4000/2007/08/20/forms-authentication-and-cookies.html" rel="alternate" type="text/html" title="Forms Authentication and Cookies" />
       <published>2007-08-20T00:00:00+00:00</published>
       <updated>2007-08-20T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2007/08/20/forms-authentication-and-cookies</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/20/forms-authentication-and-cookies.html">&lt;p&gt;I encountered a strange problem this morning when I tried to turn on Authentication to the ASP.NET 2.0 Website.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2007/08/20/forms-authentication-and-cookies</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2007/08/20/forms-authentication-and-cookies.html">&lt;p&gt;I encountered a strange problem this morning when I tried to turn on Authentication to the ASP.NET 2.0 Website.&lt;/p&gt;
 
 &lt;p&gt;I opened my handy dandy Wrox Professional ASP.NET 2.0 book to chapter 18, Security, and started the simple process of implementing forms authentication. Simple, hah! What happen was my cookies were not being saved. Walking step by step, I first made sure I denied access to any anonymous users.&lt;/p&gt;
 
@@ -578,11 +578,11 @@
   
     <entry>
       <title type="html">Soap and Fiddler</title>
-      <link href="https://www.briglamoreaux.com/2007/08/19/soap-and-fiddler.html" rel="alternate" type="text/html" title="Soap and Fiddler" />
+      <link href="http://172.17.0.2:4000/2007/08/19/soap-and-fiddler.html" rel="alternate" type="text/html" title="Soap and Fiddler" />
       <published>2007-08-19T00:00:00+00:00</published>
       <updated>2007-08-19T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2007/08/19/soap-and-fiddler</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/19/soap-and-fiddler.html">&lt;p&gt;A coworker told me about a strange error he was getting when trying to call a webservice with an ASP 2.0 application. My first thought was, use &lt;a href=&quot;http://www.fiddlertool.com/fiddler/&quot;&gt;Fiddler&lt;/a&gt; and inspect the soap call directly.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2007/08/19/soap-and-fiddler</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2007/08/19/soap-and-fiddler.html">&lt;p&gt;A coworker told me about a strange error he was getting when trying to call a webservice with an ASP 2.0 application. My first thought was, use &lt;a href=&quot;http://www.fiddlertool.com/fiddler/&quot;&gt;Fiddler&lt;/a&gt; and inspect the soap call directly.&lt;/p&gt;
 
 &lt;p&gt;Setting up an application to point to Fiddler is a little different between .NET 1.1 and .NET 2.0. In 1.1 apps you’ll need to configure the app.config or web.config to use Fiddler as a proxy. Add the following to the config file.&lt;/p&gt;
 
@@ -651,11 +651,11 @@
   
     <entry>
       <title type="html">Enterprise Library - Data Access Block</title>
-      <link href="https://www.briglamoreaux.com/2007/08/19/enterprise-library-data-access-block.html" rel="alternate" type="text/html" title="Enterprise Library - Data Access Block" />
+      <link href="http://172.17.0.2:4000/2007/08/19/enterprise-library-data-access-block.html" rel="alternate" type="text/html" title="Enterprise Library - Data Access Block" />
       <published>2007-08-19T00:00:00+00:00</published>
       <updated>2007-08-19T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2007/08/19/enterprise-library-data-access-block</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/19/enterprise-library-data-access-block.html">&lt;p&gt;The &lt;a href=&quot;http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnpag2/html/entlib2.asp&quot;&gt;Enterprise Library&lt;/a&gt; from Microsoft is a great framework to quickly get started with coding.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2007/08/19/enterprise-library-data-access-block</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2007/08/19/enterprise-library-data-access-block.html">&lt;p&gt;The &lt;a href=&quot;http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnpag2/html/entlib2.asp&quot;&gt;Enterprise Library&lt;/a&gt; from Microsoft is a great framework to quickly get started with coding.&lt;/p&gt;
 
 &lt;p&gt;I’ve been using the Data Access Blocks for a while now and love them. What I’ve notice though is I don’t really have a document that will quickly get me started. That’s what this post is for. Here are the steps to get up and running with the Data Access block.&lt;/p&gt;
 
@@ -663,19 +663,19 @@
 
 &lt;p&gt;I’ll be using the 2.0 framework in this example. I’ve set up a project and set a reference to Microsoft.Practices.EnterpriseLibrary.Common and Microsoft.Practices.EnterpriseLibrary.Data. That should get us going.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B17%5D.Png&quot; alt=&quot;Sample Project&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/CropperCapture%5B17%5D.Png&quot; alt=&quot;Sample Project&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The next step is the start up the EntLibConfig.exe and select File - Open Application and select the app.config file for our project. At first glance, the configuration tool is not at all intuitive. But if you are lucky, you will have a node called Data Access Application Block. If not, then just select your app node and choose to add the Data Application Block manually.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B23%5D.Png&quot; alt=&quot;App Node&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/CropperCapture%5B23%5D.Png&quot; alt=&quot;App Node&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The vital piece of the Data Application Block is the Connection String setting. I modified the default LocalSqlServer connection to have the settings I need. First I’ll change the Provider name for an Oracle Client connection. Unfortunately the tool isn’t smart enough to set default connection string values for an oracle connection so you have to manually add, edit, or remove the default nodes under the connection string.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B26%5D.Png&quot; alt=&quot;Provider&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/CropperCapture%5B26%5D.Png&quot; alt=&quot;Provider&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Once you’ve updated the connection string with the correct values, be sure to select the connection string as the default connection.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B29%5D.Png&quot; alt=&quot;Default Connection&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/CropperCapture%5B29%5D.Png&quot; alt=&quot;Default Connection&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Save and close the tool. Going back to the application we can see that the app.config was updated with our modifications.&lt;/p&gt;
 
@@ -760,11 +760,11 @@
   
     <entry>
       <title type="html">Generate CRUD</title>
-      <link href="https://www.briglamoreaux.com/2007/08/17/generate-crud.html" rel="alternate" type="text/html" title="Generate CRUD" />
+      <link href="http://172.17.0.2:4000/2007/08/17/generate-crud.html" rel="alternate" type="text/html" title="Generate CRUD" />
       <published>2007-08-17T00:00:00+00:00</published>
       <updated>2007-08-17T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2007/08/17/generate-crud</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/17/generate-crud.html">&lt;p&gt;Seeing how I’m working on a project that deals with a SQL database and several tables, I decided I didn’t want to mess around with writing all the code for my data CRUD functionality (Create Read Update Delete). Which, indecently, I feel no developer should ever waste their time with CRUD.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2007/08/17/generate-crud</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2007/08/17/generate-crud.html">&lt;p&gt;Seeing how I’m working on a project that deals with a SQL database and several tables, I decided I didn’t want to mess around with writing all the code for my data CRUD functionality (Create Read Update Delete). Which, indecently, I feel no developer should ever waste their time with CRUD.&lt;/p&gt;
 
 &lt;p&gt;Now I know that I’m not alone in these feelings and many bright and talented developers have created some very slick tools to do what I have done, CodeSmith being the best I’ve ever used. But I’m curious and I enjoy solving problems with code. So my little app, when provided an Entity name like Student, will do the following:&lt;/p&gt;
 
@@ -783,16 +783,16 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Starting up the application displays a stunning UI where the user can provide an entity name and click Render.&lt;br /&gt;
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B12%5D.png&quot; alt=&quot;Entity Form&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://172.17.0.2:4000/assets/images/CropperCapture%5B12%5D.png&quot; alt=&quot;Entity Form&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The application will inspect the SQL table and create the SQL scripts needed to create the CRUD stored procedures. One of the tricky things I had to do was check the field type to see if a size is required, like varchar(50).&lt;br /&gt;
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B13%5D.png&quot; alt=&quot;Crud Form&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://172.17.0.2:4000/assets/images/CropperCapture%5B13%5D.png&quot; alt=&quot;Crud Form&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Since I am really lazy, I decided to have the application generate test data and a script so I could run through and make sure the stored procedures worked all right. Based on the field type, the generated test data is created to match.&lt;br /&gt;
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B14%5D.png&quot; alt=&quot;Test Script&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://172.17.0.2:4000/assets/images/CropperCapture%5B14%5D.png&quot; alt=&quot;Test Script&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;My favorite part of all of this is getting the code written for me. I really like Rocky Lhotka’s CSLA business objects. Especially the way he has all of the data access routines on the objects themselves.&lt;br /&gt;
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B15%5D.png&quot; alt=&quot;CSLA Input&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://172.17.0.2:4000/assets/images/CropperCapture%5B15%5D.png&quot; alt=&quot;CSLA Input&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Even thought this application does a lot for me already, you can probably see some areas for improvement. Most notably is the “Form1” in the title bar. I would also like to revamp the syntax highlighting engine. Right now it just looks for specific words to highlight. I think adding a parser would really add some value.&lt;br /&gt;
 One other major improvement would be to add a template system similar to CodeSmith. Right now it doesn’t use templates to generate the code. This makes updates difficult. But it play-around code so I’m not too upset by that. One final big part would be to select a generic database. Once again I have it hard coded to point to my project’s database. Once I get all of these updates in, I think I will have a pretty neat little tool.&lt;/p&gt;</content>
@@ -827,11 +827,11 @@ One other major improvement would be to add a template system similar to CodeSmi
   
     <entry>
       <title type="html">.Net Development Trees part II</title>
-      <link href="https://www.briglamoreaux.com/2007/08/16/net-development-trees-part-ii.html" rel="alternate" type="text/html" title=".Net Development Trees part II" />
+      <link href="http://172.17.0.2:4000/2007/08/16/net-development-trees-part-ii.html" rel="alternate" type="text/html" title=".Net Development Trees part II" />
       <published>2007-08-16T00:00:00+00:00</published>
       <updated>2007-08-16T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2007/08/16/net-development-trees-part-ii</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/16/net-development-trees-part-ii.html">&lt;p&gt;I’ve found that taking thought in setting up your project development tree can really help with unit testing and having continuous integration for you projects.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2007/08/16/net-development-trees-part-ii</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2007/08/16/net-development-trees-part-ii.html">&lt;p&gt;I’ve found that taking thought in setting up your project development tree can really help with unit testing and having continuous integration for you projects.&lt;/p&gt;
 
 &lt;p&gt;This is the second installment of a presentation I put on during Desert Code Camp.&lt;/p&gt;
 
@@ -854,7 +854,7 @@ One other major improvement would be to add a template system similar to CodeSmi
 &lt;h2 id=&quot;sample-project&quot;&gt;Sample Project&lt;/h2&gt;
 
 &lt;p&gt;Using Visual Studio 2005, I created a solution called Castor with several projects in it. The entire solution is in the nice development tree structure under the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/castor/src/&lt;/code&gt; folder. Here is what the solution looks like. 
-&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B7%5D.png&quot; alt=&quot;Castor Project&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;http://172.17.0.2:4000/assets/images/CropperCapture%5B7%5D.png&quot; alt=&quot;Castor Project&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;first-step-build&quot;&gt;First Step: Build&lt;/h2&gt;
 
@@ -880,7 +880,7 @@ One other major improvement would be to add a template system similar to CodeSmi
 
 &lt;h2 id=&quot;build-type&quot;&gt;Build Type&lt;/h2&gt;
 
-&lt;p&gt;Setting up the AutomatedDebug configuration is pretty easy to do in Visual Studio 2005. Just click on Build -&amp;gt; Configuration Manager. &lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B8%5D.png&quot; alt=&quot;Build Configure&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Setting up the AutomatedDebug configuration is pretty easy to do in Visual Studio 2005. Just click on Build -&amp;gt; Configuration Manager. &lt;img src=&quot;http://172.17.0.2:4000/assets/images/CropperCapture%5B8%5D.png&quot; alt=&quot;Build Configure&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;gobat&quot;&gt;Go.bat&lt;/h2&gt;
 
@@ -889,7 +889,7 @@ One other major improvement would be to add a template system similar to CodeSmi
 &lt;div class=&quot;language-bat highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@tools\nant\NAnt.exe &lt;span class=&quot;na&quot;&gt;-buildfile&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;:Castor&lt;/span&gt;.build &lt;span class=&quot;err&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;And with that, we can open up a prompt at our project root and type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go&lt;/code&gt;. We should get something like the following with a nice little ‘Build Successful’ at the end. &lt;img src=&quot;https://www.briglamoreaux.com/assets/images/CropperCapture%5B10%5D.png&quot; alt=&quot;Success&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;And with that, we can open up a prompt at our project root and type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;go&lt;/code&gt;. We should get something like the following with a nice little ‘Build Successful’ at the end. &lt;img src=&quot;http://172.17.0.2:4000/assets/images/CropperCapture%5B10%5D.png&quot; alt=&quot;Success&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;That does it for this installment. Next I’ll dig into adding value to our build script by including auto unit testing.&lt;/p&gt;</content>
 

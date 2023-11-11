@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/closure/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T22:42:12+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/closure/feed.xml</id>
+  <link href="http://172.17.0.2:4000/tag/closure/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://172.17.0.2:4000/" rel="alternate" type="text/html" />
+  <updated>2023-11-11T00:30:05+00:00</updated>
+  <id>http://172.17.0.2:4000/tag/closure/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Anonymous Delegates</title>
-      <link href="https://www.briglamoreaux.com/2007/08/21/anonymous-delegates.html" rel="alternate" type="text/html" title="Anonymous Delegates" />
+      <link href="http://172.17.0.2:4000/2007/08/21/anonymous-delegates.html" rel="alternate" type="text/html" title="Anonymous Delegates" />
       <published>2007-08-21T00:00:00+00:00</published>
       <updated>2007-08-21T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2007/08/21/anonymous-delegates</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2007/08/21/anonymous-delegates.html">&lt;p&gt;I never thought I would use anonymous delegates mostly because I didn’t fully understand what benefit they could give me.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2007/08/21/anonymous-delegates</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2007/08/21/anonymous-delegates.html">&lt;p&gt;I never thought I would use anonymous delegates mostly because I didn’t fully understand what benefit they could give me.&lt;/p&gt;
 
 &lt;p&gt;If I can’t get something out of a new tool or methodology, why use it. With anonymous delegates I can get a lot of great things. Specifically simple solutions to my problems&lt;/p&gt;
 

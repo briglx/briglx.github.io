@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/web-design/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T22:42:12+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/web-design/feed.xml</id>
+  <link href="http://172.17.0.2:4000/tag/web-design/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://172.17.0.2:4000/" rel="alternate" type="text/html" />
+  <updated>2023-11-11T00:30:05+00:00</updated>
+  <id>http://172.17.0.2:4000/tag/web-design/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">AjaxWorld - Day 3</title>
-      <link href="https://www.briglamoreaux.com/2008/10/23/ajaxworld-day-3.html" rel="alternate" type="text/html" title="AjaxWorld - Day 3" />
+      <link href="http://172.17.0.2:4000/2008/10/23/ajaxworld-day-3.html" rel="alternate" type="text/html" title="AjaxWorld - Day 3" />
       <published>2008-10-23T00:00:00+00:00</published>
       <updated>2008-10-23T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2008/10/23/ajaxworld-day-3</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2008/10/23/ajaxworld-day-3.html">&lt;p&gt;This last day started off being able to sleep in, but it quickly went downhill when the promised breakfast arrived 45min late. Nevertheless, I did glean a few bits of good information, and only had to walk out of a few sessions. I don’t want to sound like a jerk, but some of the content of the sessions was more like an infomercial than a learning environment. Enough of my rant, on to the tidbits.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2008/10/23/ajaxworld-day-3</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2008/10/23/ajaxworld-day-3.html">&lt;p&gt;This last day started off being able to sleep in, but it quickly went downhill when the promised breakfast arrived 45min late. Nevertheless, I did glean a few bits of good information, and only had to walk out of a few sessions. I don’t want to sound like a jerk, but some of the content of the sessions was more like an infomercial than a learning environment. Enough of my rant, on to the tidbits.&lt;/p&gt;
 
 &lt;h2 id=&quot;social-networks-as-a-tool&quot;&gt;Social Networks as a Tool&lt;/h2&gt;
 
@@ -120,11 +120,11 @@
   
     <entry>
       <title type="html">AjaxWorld - Day 2</title>
-      <link href="https://www.briglamoreaux.com/2008/10/22/ajaxworld-day-2.html" rel="alternate" type="text/html" title="AjaxWorld - Day 2" />
+      <link href="http://172.17.0.2:4000/2008/10/22/ajaxworld-day-2.html" rel="alternate" type="text/html" title="AjaxWorld - Day 2" />
       <published>2008-10-22T00:00:00+00:00</published>
       <updated>2008-10-22T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2008/10/22/ajaxworld-day-2</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2008/10/22/ajaxworld-day-2.html">&lt;p&gt;Another day and a little more information. This day had a couple of outstanding presentations. The first was by Kevin Lynch the CTO of Adobe. What a great presenter. The other was Douglas Crawford’s survey of JavaScript.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2008/10/22/ajaxworld-day-2</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2008/10/22/ajaxworld-day-2.html">&lt;p&gt;Another day and a little more information. This day had a couple of outstanding presentations. The first was by Kevin Lynch the CTO of Adobe. What a great presenter. The other was Douglas Crawford’s survey of JavaScript.&lt;/p&gt;
 
 &lt;h2 id=&quot;general-tips-and-tricks&quot;&gt;General Tips and Tricks&lt;/h2&gt;
 
@@ -192,11 +192,11 @@
   
     <entry>
       <title type="html">AjaxWorld - Day 1</title>
-      <link href="https://www.briglamoreaux.com/2008/10/21/ajaxworld-day-1.html" rel="alternate" type="text/html" title="AjaxWorld - Day 1" />
+      <link href="http://172.17.0.2:4000/2008/10/21/ajaxworld-day-1.html" rel="alternate" type="text/html" title="AjaxWorld - Day 1" />
       <published>2008-10-21T00:00:00+00:00</published>
       <updated>2008-10-21T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2008/10/21/ajaxworld-day-1</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2008/10/21/ajaxworld-day-1.html">&lt;p&gt;First day over and I think the overall assessment is not too bad. The sessions started pretty early at 7:30 and went all the way till 8:00pm. That’s ok if all the sessions had been stellar, but I would say they were only ok.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2008/10/21/ajaxworld-day-1</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2008/10/21/ajaxworld-day-1.html">&lt;p&gt;First day over and I think the overall assessment is not too bad. The sessions started pretty early at 7:30 and went all the way till 8:00pm. That’s ok if all the sessions had been stellar, but I would say they were only ok.&lt;/p&gt;
 
 &lt;p&gt;The day started off with Scott Guthrie showing off some Silverlight and MVC. Some of the talk highlights were:&lt;/p&gt;
 

@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/kusto/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T22:42:12+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/kusto/feed.xml</id>
+  <link href="http://172.17.0.2:4000/tag/kusto/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://172.17.0.2:4000/" rel="alternate" type="text/html" />
+  <updated>2023-11-11T00:30:05+00:00</updated>
+  <id>http://172.17.0.2:4000/tag/kusto/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Finding Public IP Details</title>
-      <link href="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
+      <link href="http://172.17.0.2:4000/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
       <published>2022-06-10T00:00:00+00:00</published>
       <updated>2022-06-10T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2022/06/10/finding-public-ip-details</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
 
 &lt;p&gt;The goal is to see the different types of resources public ips are associated like:&lt;/p&gt;
 

@@ -238,7 +238,7 @@ Parameters may include:
 | resource_group | nvarchar(100) | Filter |
 | orphaned_disk_count |          |        |
 | attached_disk_count |           |       |
-| total_disk_count | | Calculated orphaned + attached 
+| total_disk_count | | Calculated orphaned + attached |
 | attached_disk_percent | | Calculated attached / total | 
 | cost | | |
 | is_forecast | | Forecasted data |

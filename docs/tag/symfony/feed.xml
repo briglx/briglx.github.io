@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="https://www.briglamoreaux.com/tag/symfony/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
-  <updated>2023-06-22T22:42:12+00:00</updated>
-  <id>https://www.briglamoreaux.com/tag/symfony/feed.xml</id>
+  <link href="http://172.17.0.2:4000/tag/symfony/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="http://172.17.0.2:4000/" rel="alternate" type="text/html" />
+  <updated>2023-11-11T00:30:05+00:00</updated>
+  <id>http://172.17.0.2:4000/tag/symfony/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Symfony denied Access</title>
-      <link href="https://www.briglamoreaux.com/2014/07/14/symfony-denied-access.html" rel="alternate" type="text/html" title="Symfony denied Access" />
+      <link href="http://172.17.0.2:4000/2014/07/14/symfony-denied-access.html" rel="alternate" type="text/html" title="Symfony denied Access" />
       <published>2014-07-14T00:00:00+00:00</published>
       <updated>2014-07-14T00:00:00+00:00</updated>
-      <id>https://www.briglamoreaux.com/2014/07/14/symfony-denied-access</id>
-      <content type="html" xml:base="https://www.briglamoreaux.com/2014/07/14/symfony-denied-access.html">&lt;p&gt;Moving my Symfony app to a QA server showed me how rude the server is.&lt;/p&gt;
+      <id>http://172.17.0.2:4000/2014/07/14/symfony-denied-access</id>
+      <content type="html" xml:base="http://172.17.0.2:4000/2014/07/14/symfony-denied-access.html">&lt;p&gt;Moving my Symfony app to a QA server showed me how rude the server is.&lt;/p&gt;
 
 &lt;p&gt;I could see the home page right after I copied the project to the new machine with not problem (except for modifying &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;app.config.php&lt;/code&gt; and various file permission ownership issues). Nevertheless, the real problem came when I tried navigating to any other route besides the index. Each time I would get a 403 Access denied error.&lt;/p&gt;
 

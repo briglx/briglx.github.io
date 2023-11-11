@@ -1,0 +1,9 @@
+{
+    "esbonio.sphinx.confDir": "${workspaceFolder}",
+    "esbonio.sphinx.srcDir": "${workspaceFolder}",
+    "python.formatting.provider": "black",
+    // https://code.visualstudio.com/docs/python/testing#_pytest-configuration-settings
+    "python.testing.pytestEnabled": false,
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.linting.banditEnabled": true
+}

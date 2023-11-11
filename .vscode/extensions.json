@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode", 
+        "IronGeek.vscode-env",
+        "timonwong.shellcheck",
+        "ms-python.python",
+        "ms-azuretools.vscode-docker",
+        "esbenp.prettier-vscode",
+        "EditorConfig.EditorConfig",
+        "GitHub.copilot",
+        "hediet.vscode-drawio"
+    ]
+}
