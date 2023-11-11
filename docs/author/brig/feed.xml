@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://172.17.0.2:4000/author/brig/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://172.17.0.2:4000/" rel="alternate" type="text/html" />
-  <updated>2023-11-11T00:30:05+00:00</updated>
-  <id>http://172.17.0.2:4000/author/brig/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/author/brig/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2023-11-11T22:59:29+00:00</updated>
+  <id>https://www.briglamoreaux.com/author/brig/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Analyzing Azure Pricing</title>
-      <link href="http://172.17.0.2:4000/2023/11/10/analyzing-azure-pricing.html" rel="alternate" type="text/html" title="Analyzing Azure Pricing" />
+      <link href="https://www.briglamoreaux.com/2023/11/10/analyzing-azure-pricing.html" rel="alternate" type="text/html" title="Analyzing Azure Pricing" />
       <published>2023-11-10T00:00:00+00:00</published>
       <updated>2023-11-10T00:00:00+00:00</updated>
-      <id>http://172.17.0.2:4000/2023/11/10/analyzing-azure-pricing</id>
-      <content type="html" xml:base="http://172.17.0.2:4000/2023/11/10/analyzing-azure-pricing.html">&lt;p&gt;Customer often ask me about how to analyze their Azure costs.  This is a very broad question and there are many ways to answer it.  This post will focus on the different types of prices, discounts, and offers that are available.  I will also provide some examples of how to use the Azure APIs to analyze your costs.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2023/11/10/analyzing-azure-pricing</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2023/11/10/analyzing-azure-pricing.html">&lt;p&gt;Customer often ask me about how to analyze their Azure costs.  This is a very broad question and there are many ways to answer it.  This post will focus on the different types of prices, discounts, and offers that are available.  I will also provide some examples of how to use the Azure APIs to analyze your costs.&lt;/p&gt;
 
 &lt;h2 id=&quot;azure-pricing&quot;&gt;Azure Pricing&lt;/h2&gt;
 
@@ -132,7 +132,7 @@
 
 &lt;p&gt;&lt;strong&gt;As an Organization I want to have 90% of candidate VMs to be covered by an RI&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20231110-recipe-compute-ri-covered.png&quot; alt=&quot;Compute - RI Covered&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20231110-recipe-compute-ri-covered.png&quot; alt=&quot;Compute - RI Covered&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This an example Recipe, which I’ve talked about in &lt;a href=&quot;https://www.brigl.com/blog/2021/06/16/cost-optimization-strategic-thinking/&quot;&gt;Cost Optimization Strategic Thinking&lt;/a&gt;, where the goal is to have 90% of candidate VMs covered by an RI.&lt;/p&gt;
 
@@ -288,11 +288,11 @@
   
     <entry>
       <title type="html">Cost Optimization Strategic Thinking</title>
-      <link href="http://172.17.0.2:4000/2023/06/16/cost-optimization-strategic-thinking.html" rel="alternate" type="text/html" title="Cost Optimization Strategic Thinking" />
+      <link href="https://www.briglamoreaux.com/2023/06/16/cost-optimization-strategic-thinking.html" rel="alternate" type="text/html" title="Cost Optimization Strategic Thinking" />
       <published>2023-06-16T00:00:00+00:00</published>
       <updated>2023-06-16T00:00:00+00:00</updated>
-      <id>http://172.17.0.2:4000/2023/06/16/cost-optimization-strategic-thinking</id>
-      <content type="html" xml:base="http://172.17.0.2:4000/2023/06/16/cost-optimization-strategic-thinking.html">&lt;p&gt;This post will outline how to develop a strategic approach to manage costs in cloud services.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2023/06/16/cost-optimization-strategic-thinking</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2023/06/16/cost-optimization-strategic-thinking.html">&lt;p&gt;This post will outline how to develop a strategic approach to manage costs in cloud services.&lt;/p&gt;
 
 &lt;p&gt;I previously talked about the &lt;a href=&quot;/2022/06/10/cost-optimization-maturity-model.html&quot;&gt;maturity path&lt;/a&gt; organizations go through when adopting Cloud Cost Optimization. Since then, I’ve created a session and workshop guiding executive teams on how to have a strategic mindset for Cost Optimization. They gain the ability to:&lt;/p&gt;
 
@@ -330,7 +330,7 @@
   &lt;li&gt;Define and Implement Remediation methods&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20230616-three-phased-strategy.png&quot; alt=&quot;Three Phased Strategy&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-three-phased-strategy.png&quot; alt=&quot;Three Phased Strategy&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This approach changes traditional reporting by turning it into measuring compliance with best practices. Additionally, it creates a place for organizations to define how to remediate in the event they are not in compliance.
 Leadership teams love this approach because it is nothing more than defining a plan, measuring progress, and creating playbooks to stay on target. It’s data driven, promotes team accountability, and focuses on outcomes.&lt;/p&gt;
@@ -340,7 +340,7 @@ Leadership teams love this approach because it is nothing more than defining a p
 &lt;h3 id=&quot;a-primer-on-cost-drivers&quot;&gt;A Primer on Cost Drivers&lt;/h3&gt;
 &lt;p&gt;Most services have several different drivers that go into the final cost. These can typically be found in the documentation or pricing calculators.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20230616-storage-primary-cost-drivers-source.png&quot; alt=&quot;Storage Primary Cost Driver Sources&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-primary-cost-drivers-source.png&quot; alt=&quot;Storage Primary Cost Driver Sources&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For example, in Azure Blob Storage, the primary cost drivers include file structure, redundancy, region, access tier, capacity, reservation, and operations. I wrote a small tool to help me identify the primary cost drivers for storage using a technique called &lt;a href=&quot;https://en.wikipedia.org/wiki/Dimensionality_reduction&quot;&gt;feature reduction.&lt;/a&gt;. Turns out the primary cost drivers for storage are:&lt;/p&gt;
 &lt;ul&gt;
@@ -351,7 +351,7 @@ Leadership teams love this approach because it is nothing more than defining a p
   &lt;li&gt;… all others&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20230616-storage-primary-cost-drivers.png&quot; alt=&quot;Storage Primary Cost Drivers&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-primary-cost-drivers.png&quot; alt=&quot;Storage Primary Cost Drivers&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It makes sense that capacity is the top cost driver because the more data I put into storage the more it’s going to cost. I was surprised to see that access tier had a larger influence on cost than redundancy.&lt;/p&gt;
 
@@ -469,7 +469,7 @@ For each cost driver, consider not only how you can influence cost, but how do y
   &lt;li&gt;Display Potential Savings&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20230616-storage-access-tier.png&quot; alt=&quot;Access Tier&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-access-tier.png&quot; alt=&quot;Access Tier&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;As an organization have 90% Aligned Data&lt;/p&gt;
@@ -570,10 +570,10 @@ Some of these are:&lt;/p&gt;
 &lt;p&gt;Best Practice: As an organization, have 90% attached disk (&amp;lt;10% orphaned)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Sketch&lt;/strong&gt;
-&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20230616-storage-orphaned-disks-sketch.jpg&quot; alt=&quot;Orphaned Disks Sketch&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-sketch.jpg&quot; alt=&quot;Orphaned Disks Sketch&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;PowerBI Example&lt;/strong&gt;
-&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20230616-storage-orphaned-disks-pbi.jpg&quot; alt=&quot;Orphaned Disks PowerBI&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20230616-storage-orphaned-disks-pbi.jpg&quot; alt=&quot;Orphaned Disks PowerBI&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;schema&quot;&gt;Schema&lt;/h3&gt;
 
@@ -911,11 +911,11 @@ Some of these are:&lt;/p&gt;
   
     <entry>
       <title type="html">Update Minecraft Server</title>
-      <link href="http://172.17.0.2:4000/2023/03/13/update-minecraft-server.html" rel="alternate" type="text/html" title="Update Minecraft Server" />
+      <link href="https://www.briglamoreaux.com/2023/03/13/update-minecraft-server.html" rel="alternate" type="text/html" title="Update Minecraft Server" />
       <published>2023-03-13T00:00:00+00:00</published>
       <updated>2023-03-13T00:00:00+00:00</updated>
-      <id>http://172.17.0.2:4000/2023/03/13/update-minecraft-server</id>
-      <content type="html" xml:base="http://172.17.0.2:4000/2023/03/13/update-minecraft-server.html">&lt;p&gt;It’s that time of year again when I need to update the minecraft server but I forgot how.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2023/03/13/update-minecraft-server</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2023/03/13/update-minecraft-server.html">&lt;p&gt;It’s that time of year again when I need to update the minecraft server but I forgot how.&lt;/p&gt;
 
 &lt;p&gt;Looks like the installed version is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minecraft_server.1.19.2.jar&lt;/code&gt; and the latest is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;minecraft_server.1.19.3.jar&lt;/code&gt;&lt;/p&gt;
 
@@ -992,11 +992,11 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Computer Names</title>
-      <link href="http://172.17.0.2:4000/2022/12/21/computer-names.html" rel="alternate" type="text/html" title="Computer Names" />
+      <link href="https://www.briglamoreaux.com/2022/12/21/computer-names.html" rel="alternate" type="text/html" title="Computer Names" />
       <published>2022-12-21T00:00:00+00:00</published>
       <updated>2022-12-21T00:00:00+00:00</updated>
-      <id>http://172.17.0.2:4000/2022/12/21/computer-names</id>
-      <content type="html" xml:base="http://172.17.0.2:4000/2022/12/21/computer-names.html">&lt;p&gt;I enjoy getting sucked into things that tickle my brain. One such activity is coming up with names for my computers/projects/etc. I’ve settled on a naming &lt;a href=&quot;https://github.com/briglx/computer-name-generator&quot;&gt;convention for computers&lt;/a&gt;.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2022/12/21/computer-names</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2022/12/21/computer-names.html">&lt;p&gt;I enjoy getting sucked into things that tickle my brain. One such activity is coming up with names for my computers/projects/etc. I’ve settled on a naming &lt;a href=&quot;https://github.com/briglx/computer-name-generator&quot;&gt;convention for computers&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Here is a list of some favorites:&lt;/p&gt;
 
@@ -1033,11 +1033,11 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Minecraft Server</title>
-      <link href="http://172.17.0.2:4000/2022/07/31/minecraft-server.html" rel="alternate" type="text/html" title="Minecraft Server" />
+      <link href="https://www.briglamoreaux.com/2022/07/31/minecraft-server.html" rel="alternate" type="text/html" title="Minecraft Server" />
       <published>2022-07-31T00:00:00+00:00</published>
       <updated>2022-07-31T00:00:00+00:00</updated>
-      <id>http://172.17.0.2:4000/2022/07/31/minecraft-server</id>
-      <content type="html" xml:base="http://172.17.0.2:4000/2022/07/31/minecraft-server.html">&lt;p&gt;Setting up minecraft on azure for fun.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2022/07/31/minecraft-server</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2022/07/31/minecraft-server.html">&lt;p&gt;Setting up minecraft on azure for fun.&lt;/p&gt;
 
 &lt;p&gt;Setup Server&lt;/p&gt;
 
@@ -1138,11 +1138,11 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Finding Public IP Details</title>
-      <link href="http://172.17.0.2:4000/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
+      <link href="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html" rel="alternate" type="text/html" title="Finding Public IP Details" />
       <published>2022-06-10T00:00:00+00:00</published>
       <updated>2022-06-10T00:00:00+00:00</updated>
-      <id>http://172.17.0.2:4000/2022/06/10/finding-public-ip-details</id>
-      <content type="html" xml:base="http://172.17.0.2:4000/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/finding-public-ip-details.html">&lt;p&gt;I was recently asked how to query Azure Resource Graph to find details about what a public ip is associated to.&lt;/p&gt;
 
 &lt;p&gt;The goal is to see the different types of resources public ips are associated like:&lt;/p&gt;
 
@@ -1442,21 +1442,21 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Cost Optimization Maturity Model</title>
-      <link href="http://172.17.0.2:4000/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" />
+      <link href="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html" rel="alternate" type="text/html" title="Cost Optimization Maturity Model" />
       <published>2022-06-10T00:00:00+00:00</published>
       <updated>2022-06-10T00:00:00+00:00</updated>
-      <id>http://172.17.0.2:4000/2022/06/10/cost-optimization-maturity-model</id>
-      <content type="html" xml:base="http://172.17.0.2:4000/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2022/06/10/cost-optimization-maturity-model.html">&lt;p&gt;In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-1---freaking-out&quot;&gt;Phase 1 - Freaking Out&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase1.png&quot; alt=&quot;Phase 1 - Awareness&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The first phase is moving to the cloud and watching the bill grow over time without understanding why. There is not much to do in this phase other than completely ignoring the slowly growing problem or asking for help.&lt;/p&gt;
 
 &lt;h2 id=&quot;phase-2---finding-tools&quot;&gt;Phase 2 - Finding Tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase2.png&quot; alt=&quot;Phase 2 - Tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Learning about cost management tools distinguishes Phase 2 from Phase 1. Azure includes tools like:&lt;/p&gt;
 
@@ -1485,7 +1485,7 @@ systemctl status minecraft.service
   &lt;li&gt;Delete idle network gateways&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-advisor.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Review Advisor recommendations in the Azure portal: &lt;a href=&quot;https://aka.ms/azureadvisor&quot;&gt;aka.ms/azureadvisor&lt;/a&gt;&lt;/p&gt;
 
@@ -1499,7 +1499,7 @@ systemctl status minecraft.service
   &lt;li&gt;Set spending thresholds and more&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-cost_management_billing.png&quot; alt=&quot;Azure Advisor&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;azure-cost-management--billing-power-bi-app&quot;&gt;Azure Cost Management + Billing Power BI App&lt;/h3&gt;
 
@@ -1518,7 +1518,7 @@ systemctl status minecraft.service
 
 &lt;p&gt;You can also create ad hoc reports using the underlying data. I will use the ACM Power BI Template App to show off how to slice and dice billing data for customers looking for specialized reports.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;azure-cost-management-connector-for-power-bi&quot;&gt;Azure Cost Management Connector for Power BI&lt;/h3&gt;
 
@@ -1526,7 +1526,7 @@ systemctl status minecraft.service
 
 &lt;p&gt;When a tricky request comes in, like a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;point-in-time comparison&lt;/code&gt; report, I fire up Power BI Desktop to do the job.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-azure-cost-management-connector.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-azure-cost-management-connector.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;waf-cost-optimization-workbook&quot;&gt;WAF Cost Optimization Workbook&lt;/h3&gt;
 
@@ -1539,7 +1539,7 @@ systemctl status minecraft.service
   &lt;li&gt;Hybrid benefits and more&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-amc_pbi_app.png&quot; alt=&quot;ACM Power BI Template App&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;additional-tools&quot;&gt;Additional Tools&lt;/h3&gt;
 
@@ -1554,7 +1554,7 @@ systemctl status minecraft.service
 
 &lt;h2 id=&quot;phase-3---outgrowing-the-tools&quot;&gt;Phase 3 - Outgrowing the Tools&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase3.png&quot; alt=&quot;Phase 3 - Outgrowing tools&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At some point, the tools either fail to provide needed information or are overwhelmed by the amount of data. In my experience, this moment comes when an organization reaches the $2M / month in consumption and the file size for billing data approaches 2-3GB. Excel and PowerBI start to slow down with files this large.&lt;/p&gt;
 
@@ -1562,11 +1562,11 @@ systemctl status minecraft.service
 
 &lt;h2 id=&quot;phase-4---create-a-new-tool&quot;&gt;Phase 4 - Create a New Tool&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase4.png&quot; alt=&quot;Phase 4 - New Tool&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;When I faced this phase several years ago, I designed and &lt;a href=&quot;https://github.com/briglx/AzureBillingReports&quot;&gt;implemented a solution&lt;/a&gt; using my background in big data. After deploying it, I interviewed colleagues in other large organizations asking how they solved the problem. The responses were consistent with my solution’s modern data warehouse pipeline architecture.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-big-data-arch.png&quot; alt=&quot;Big Data Enterprise Solution&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This scalable solution can:&lt;/p&gt;
 
@@ -1580,7 +1580,7 @@ systemctl status minecraft.service
 
 &lt;h2 id=&quot;phase-5---wrong-audience&quot;&gt;Phase 5 - Wrong Audience&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase5.png&quot; alt=&quot;Phase 5 - Wong Audience&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Phase 5 is a cycle of cost-cutting and organic growth. The behavior can show up anytime during the maturity growth phases because it is more of a mindset about cost management instead of a limitation of the tools. I put it here because implementing a big-data pipeline is less complicated than changing the hearts and minds of an entire organization.&lt;/p&gt;
 
@@ -1619,7 +1619,7 @@ systemctl status minecraft.service
   &lt;li&gt;Remediate&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-strategy.png&quot; alt=&quot;Three phased Approach&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This method extends the capability of Azure Advisor to include custom business best practices.&lt;/p&gt;
 
@@ -1637,7 +1637,7 @@ systemctl status minecraft.service
 
 &lt;p&gt;&lt;strong&gt;Measure and Monitor&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-measure-monitor.png&quot; alt=&quot;Measure and Monitor&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The best visualizations provide essential information each department needs. Reports designed to build trust for executives should show the current status of a best practice and the historical progress. Provide visualization that provides information needed to make real-time decisions.&lt;/p&gt;
 
@@ -1645,7 +1645,7 @@ systemctl status minecraft.service
 
 &lt;h2 id=&quot;phase-6---recipes&quot;&gt;Phase 6 - Recipes&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipes&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/20220713-cloud-maturity-phase6.png&quot; alt=&quot;Phase 6 - Recipes&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The last phase in the maturity model is when an organization can scale developing reports that measure best practices. Scaling will require centralizing data collection, a common data schema, and discoverability. In this environment, teams can create, discover, and share new reports.&lt;/p&gt;</content>
 
@@ -1685,11 +1685,11 @@ systemctl status minecraft.service
   
     <entry>
       <title type="html">Finding Missing Images</title>
-      <link href="http://172.17.0.2:4000/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
+      <link href="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html" rel="alternate" type="text/html" title="Finding Missing Images" />
       <published>2022-05-20T00:00:00+00:00</published>
       <updated>2022-05-20T00:00:00+00:00</updated>
-      <id>http://172.17.0.2:4000/2022/05/20/finding-missing-images</id>
-      <content type="html" xml:base="http://172.17.0.2:4000/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2022/05/20/finding-missing-images</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2022/05/20/finding-missing-images.html">&lt;p&gt;As part of my blog migration, I discovered one of my images wasn’t showing because it had the wrong case &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;myimage.png&lt;/code&gt; vs &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MyImage.png&lt;/code&gt;. This is how I checked what other images were named wrong or missing.&lt;/p&gt;
 
 &lt;p&gt;My strategy is to:&lt;/p&gt;
 &lt;ol&gt;
@@ -1836,15 +1836,15 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">Updating and Migrating Confluence</title>
-      <link href="http://172.17.0.2:4000/2018/09/13/updating-and-migrating-confluence.html" rel="alternate" type="text/html" title="Updating and Migrating Confluence" />
+      <link href="https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence.html" rel="alternate" type="text/html" title="Updating and Migrating Confluence" />
       <published>2018-09-13T00:00:00+00:00</published>
       <updated>2018-09-13T00:00:00+00:00</updated>
-      <id>http://172.17.0.2:4000/2018/09/13/updating-and-migrating-confluence</id>
-      <content type="html" xml:base="http://172.17.0.2:4000/2018/09/13/updating-and-migrating-confluence.html">&lt;p&gt;I started hosting my wiki on Azure way back in 2016. The other day I received a message that I was  not using managed disks and I should upgrade. So I pushed the upgrade button and kicked off a two day outage which resulted in me pulling my hair out, migrating, looking at logs, and changing databases.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2018/09/13/updating-and-migrating-confluence.html">&lt;p&gt;I started hosting my wiki on Azure way back in 2016. The other day I received a message that I was  not using managed disks and I should upgrade. So I pushed the upgrade button and kicked off a two day outage which resulted in me pulling my hair out, migrating, looking at logs, and changing databases.&lt;/p&gt;
 
 &lt;h2 id=&quot;first-architecture&quot;&gt;First Architecture&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/confluencev1.png&quot; alt=&quot;Confluence v1 Architecture&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/confluencev1.png&quot; alt=&quot;Confluence v1 Architecture&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;The first architecture is really basic. Just two vms. One with confluence installed on it and the other with Postgresql. I configured a separate nsg for each one. Looking back I could have had just one.&lt;/p&gt;
 
@@ -1877,7 +1877,7 @@ CropperCapture%5B12%5D.png,0
 
 &lt;h2 id=&quot;new-architecture&quot;&gt;New Architecture&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://172.17.0.2:4000/assets/images/confluencev2.png&quot; alt=&quot;confluencev2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.briglamoreaux.com/assets/images/confluencev2.png&quot; alt=&quot;confluencev2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I replaced the IaaS database for the Azure Database Postgresql PaaS solution. I don’t want to mess around with managing a database. One less thing to think about.&lt;/p&gt;
 
@@ -1945,11 +1945,11 @@ CropperCapture%5B12%5D.png,0
   
     <entry>
       <title type="html">Boilerplate Raspbian Setup</title>
-      <link href="http://172.17.0.2:4000/2018/08/28/boilerplate-raspbian-setup.html" rel="alternate" type="text/html" title="Boilerplate Raspbian Setup" />
+      <link href="https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup.html" rel="alternate" type="text/html" title="Boilerplate Raspbian Setup" />
       <published>2018-08-28T00:00:00+00:00</published>
       <updated>2018-08-28T00:00:00+00:00</updated>
-      <id>http://172.17.0.2:4000/2018/08/28/boilerplate-raspbian-setup</id>
-      <content type="html" xml:base="http://172.17.0.2:4000/2018/08/28/boilerplate-raspbian-setup.html">&lt;p&gt;I tend to flash my raspberry pies a lot. Here are the steps I follow to get to my working state.&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2018/08/28/boilerplate-raspbian-setup.html">&lt;p&gt;I tend to flash my raspberry pies a lot. Here are the steps I follow to get to my working state.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Flash with latest raspbian image https://www.raspberrypi.org/downloads/raspbian/&lt;/li&gt;

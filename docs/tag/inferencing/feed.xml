@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://172.17.0.2:4000/tag/inferencing/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://172.17.0.2:4000/" rel="alternate" type="text/html" />
-  <updated>2023-11-11T00:30:05+00:00</updated>
-  <id>http://172.17.0.2:4000/tag/inferencing/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/inferencing/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2023-11-11T22:59:29+00:00</updated>
+  <id>https://www.briglamoreaux.com/tag/inferencing/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">Building an Inferencing Engine</title>
-      <link href="http://172.17.0.2:4000/2013/03/29/building-an-inferencing-engine.html" rel="alternate" type="text/html" title="Building an Inferencing Engine" />
+      <link href="https://www.briglamoreaux.com/2013/03/29/building-an-inferencing-engine.html" rel="alternate" type="text/html" title="Building an Inferencing Engine" />
       <published>2013-03-29T00:00:00+00:00</published>
       <updated>2013-03-29T00:00:00+00:00</updated>
-      <id>http://172.17.0.2:4000/2013/03/29/building-an-inferencing-engine</id>
-      <content type="html" xml:base="http://172.17.0.2:4000/2013/03/29/building-an-inferencing-engine.html">&lt;p&gt;I’m playing around with the idea of building an &lt;a href=&quot;http://en.wikipedia.org/wiki/Inference_engine&quot;&gt;inference engine&lt;/a&gt; for &lt;a href=&quot;http://www.mongodb.org/&quot;&gt;MongoDB&lt;/a&gt;. The idea is to load up some &lt;a href=&quot;http://www.w3.org/RDF/&quot;&gt;RDF data&lt;/a&gt; and attempt to run queries that use the &lt;a href=&quot;/2012/10/26/what-graphs-and-ontologies-mean-to-you.html&quot; title=&quot;What Graphs and Ontologies mean to you&quot;&gt;ontologies&lt;/a&gt; in the RDF for inferencing. For instance, if I have an ontology that defines an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isParentOf&lt;/code&gt; relationship with an inverse relationship of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isChildOf&lt;/code&gt;, the inferencing engine would know those two relationships are inverse. When the data store only has one record that defines&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2013/03/29/building-an-inferencing-engine</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2013/03/29/building-an-inferencing-engine.html">&lt;p&gt;I’m playing around with the idea of building an &lt;a href=&quot;http://en.wikipedia.org/wiki/Inference_engine&quot;&gt;inference engine&lt;/a&gt; for &lt;a href=&quot;http://www.mongodb.org/&quot;&gt;MongoDB&lt;/a&gt;. The idea is to load up some &lt;a href=&quot;http://www.w3.org/RDF/&quot;&gt;RDF data&lt;/a&gt; and attempt to run queries that use the &lt;a href=&quot;/2012/10/26/what-graphs-and-ontologies-mean-to-you.html&quot; title=&quot;What Graphs and Ontologies mean to you&quot;&gt;ontologies&lt;/a&gt; in the RDF for inferencing. For instance, if I have an ontology that defines an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isParentOf&lt;/code&gt; relationship with an inverse relationship of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;isChildOf&lt;/code&gt;, the inferencing engine would know those two relationships are inverse. When the data store only has one record that defines&lt;/p&gt;
 
 &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;AugustCoppola&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;isParentOf&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;NicolasCage&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;

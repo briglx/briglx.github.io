@@ -2,10 +2,10 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" >
   <generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator>
-  <link href="http://172.17.0.2:4000/tag/app-engine/feed.xml" rel="self" type="application/atom+xml" />
-  <link href="http://172.17.0.2:4000/" rel="alternate" type="text/html" />
-  <updated>2023-11-11T00:30:05+00:00</updated>
-  <id>http://172.17.0.2:4000/tag/app-engine/feed.xml</id>
+  <link href="https://www.briglamoreaux.com/tag/app-engine/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://www.briglamoreaux.com/" rel="alternate" type="text/html" />
+  <updated>2023-11-11T22:59:29+00:00</updated>
+  <id>https://www.briglamoreaux.com/tag/app-engine/feed.xml</id>
 
   
   
@@ -33,11 +33,11 @@
   
     <entry>
       <title type="html">First Impressions of Google App Engine</title>
-      <link href="http://172.17.0.2:4000/2009/02/01/first-impressions-of-google-app-engine.html" rel="alternate" type="text/html" title="First Impressions of Google App Engine" />
+      <link href="https://www.briglamoreaux.com/2009/02/01/first-impressions-of-google-app-engine.html" rel="alternate" type="text/html" title="First Impressions of Google App Engine" />
       <published>2009-02-01T00:00:00+00:00</published>
       <updated>2009-02-01T00:00:00+00:00</updated>
-      <id>http://172.17.0.2:4000/2009/02/01/first-impressions-of-google-app-engine</id>
-      <content type="html" xml:base="http://172.17.0.2:4000/2009/02/01/first-impressions-of-google-app-engine.html">&lt;p&gt;So I thought I would try to see what &lt;a href=&quot;http://code.google.com/appengine/&quot;&gt;Google App Engine&lt;/a&gt; is all about. My main goal is to learn python a little better and also try to get a better understanding of how to build applications that can&lt;/p&gt;
+      <id>https://www.briglamoreaux.com/2009/02/01/first-impressions-of-google-app-engine</id>
+      <content type="html" xml:base="https://www.briglamoreaux.com/2009/02/01/first-impressions-of-google-app-engine.html">&lt;p&gt;So I thought I would try to see what &lt;a href=&quot;http://code.google.com/appengine/&quot;&gt;Google App Engine&lt;/a&gt; is all about. My main goal is to learn python a little better and also try to get a better understanding of how to build applications that can&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Handle a lot of load&lt;/li&gt;
