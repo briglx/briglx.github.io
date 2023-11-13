@@ -47,12 +47,7 @@ jobs:
           node --version
           gulp --version
       - name: Build with Jekyll
-        run: |
-          cd source
-          npm install
-          gulp build
-          bundle install
-          bundle exec jekyll build
+        run: ./script/devops.sh build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
