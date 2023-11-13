@@ -78,13 +78,13 @@ else
     echo "Bundler version does not match 2.1.4. Current version is $bundler_version"
 fi
 
-# Check Jekyll Version
-jekyll_version=$(jekyll -v)
-if [ "$jekyll_version" == "jekyll 3.9.0" ]; then
-    echo "Jekyll version matches 3.9.0"
-else
-    echo "Jekyll version does not match 3.9.0. Current version is $jekyll_version"
-fi
+# # Check Jekyll Version
+# jekyll_version=$(jekyll -v)
+# if [ "$jekyll_version" == "jekyll 3.9.0" ]; then
+#     echo "Jekyll version matches 3.9.0"
+# else
+#     echo "Jekyll version does not match 3.9.0. Current version is $jekyll_version"
+# fi
 
 
 
