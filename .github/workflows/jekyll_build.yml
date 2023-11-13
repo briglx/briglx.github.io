@@ -37,15 +37,6 @@ jobs:
         uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
         with:
           ruby-version: '3.1' # Not needed with a .ruby-version file
-      - name: Check Versions
-        run: |
-          ruby -v
-          gem -v
-          bundle -v
-          make -v
-          npm --version
-          node --version
-          gulp --version
       - name: Build with Jekyll
         run: ./script/devops.sh build
       - name: Upload artifact
