@@ -33,9 +33,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
+        with:
+          ruby-version: '3.1' # Not needed with a .ruby-version file
+      - name: Build with Jekyll
+        run: |
+          cd source
+          npm install
+          gulp build
+          bundle install
+          bundle exec jekyll build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
