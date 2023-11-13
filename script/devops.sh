@@ -6,7 +6,7 @@
 # Params
 #   COMMAND: build or serve
 ######################################################
-echo starting script
+echo starting script - devops.sh
 
 # Stop on errors
 set -e
@@ -14,6 +14,9 @@ set -e
 ## Globals
 PROJ_ROOT_PATH=$(cd "$(dirname "$0")"/..; pwd)
 echo "Project root: $PROJ_ROOT_PATH"
+
+# Print dependency versions
+"${PROJ_ROOT_PATH}/script/validate_dependencies.sh"
 
 # SOURCE_DIRECTORY=${GITHUB_WORKSPACE}/$INPUT_SOURCE
 # DESTINATION_DIRECTORY=${GITHUB_WORKSPACE}/$INPUT_DESTINATION
@@ -45,11 +48,19 @@ echo "Project root: $PROJ_ROOT_PATH"
 
 action="${1:-build}"
 
+echo
+echo 
+pwd
+ls -al
+echo ls "${PROJ_ROOT_PATH}/source"
+echo 
+
 case "$action" in
   build)
     # Add build logic here
     echo "Running build..."
     # Rebuild css 
+    echo cd "${PROJ_ROOT_PATH}/source"
     cd "${PROJ_ROOT_PATH}/source"
     npm install
     gulp build
@@ -58,10 +69,10 @@ case "$action" in
     bundle install 
     bundle exec jekyll build 
     # Tell github not to create site
-    touch "${PROJ_ROOT_PATH}/docs/.nojekyll"
+    touch "${PROJ_ROOT_PATH}/_site/.nojekyll"
 
     # Remove gemspec
-    rm "${PROJ_ROOT_PATH}/docs/jasper2.gemspec"
+    rm "${PROJ_ROOT_PATH}/_site/jasper2.gemspec"
     ;;
   serve)
     # Add serve logic here
@@ -75,10 +86,10 @@ case "$action" in
     bundle install 
     bundle exec jekyll serve
     # Tell github not to create site
-    touch "${PROJ_ROOT_PATH}/docs/.nojekyll"
+    touch "${PROJ_ROOT_PATH}/_site/.nojekyll"
 
     # Remove gemspec
-    rm "${PROJ_ROOT_PATH}/docs/jasper2.gemspec"
+    rm "${PROJ_ROOT_PATH}/_site/jasper2.gemspec"
     ;;
   *)
     echo "Invalid action: $action. Available actions: build, serve"

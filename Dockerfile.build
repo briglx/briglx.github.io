@@ -46,7 +46,7 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
-COPY entrypoint.sh entrypoint.sh
+COPY ./script/ script/
 
 # ENTRYPOINT [ "/bin/bash" ]
-ENTRYPOINT [ "/usr/src/app/entrypoint.sh" ]
+ENTRYPOINT [ "/usr/src/app/script/devops.sh" ]

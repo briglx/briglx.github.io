@@ -204,10 +204,10 @@ Run the Site
 
 ```bash
 # Build
-./script/helper.sh build
+./script/devops.sh build
 
 # Serve local
-./script/helper.sh serve
+./script/devops.sh serve
 ```
 Browse to the sample application at http://localhost:4000 in a web browser.
 
@@ -254,10 +254,10 @@ git pull
 - If everything looks good, build the site and commit your changes:
 ```bash
 # Build the site if running outside of devcontainer
-./script/helper.sh build
+./script/devops_docker.sh build
 
 # Build the site if running inside of devcontainer
-./script/entrypoint.sh build
+./script/devops.sh build
 
 # Commit changes to git
 git add docs/*
