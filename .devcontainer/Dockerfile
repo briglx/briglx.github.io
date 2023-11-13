@@ -38,7 +38,6 @@ RUN chsh -s $(which zsh)
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install npm packages
-RUN pwd
 WORKDIR /app
 RUN npm install
 

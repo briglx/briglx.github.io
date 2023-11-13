@@ -119,7 +119,12 @@ jekyll --version
 # jekyll 3.9.0
 bundler --version
 # Bundler version 2.1.4
-
+npm --version
+# 6.14.18
+node --version
+# v14.21.3
+gulp --version
+# CLI version: 2.3.0
 # # Build the image
 # docker build --pull --rm -f "Dockerfile.build" -t blog_build:latest "."
 
@@ -199,10 +204,10 @@ Run the Site
 
 ```bash
 # Build
-./helper.sh build
+./script/helper.sh build
 
 # Serve local
-./helper.sh serve
+./script/helper.sh serve
 ```
 Browse to the sample application at http://localhost:4000 in a web browser.
 
@@ -241,31 +246,31 @@ shellcheck *.sh
 Here are the steps to modify, build, and commit new changes:
 
 - From your repo's main branch, get the latest changes:
-  ```bash
-  git pull
-  ```
+```bash
+git pull
+```
 - Make your changes, create a post, or fix issues.
 - Test your changes and check for style violations. <br> Consider adding tests to ensure that your code works.
 - If everything looks good, build the site and commit your changes:
-  ```bash
-  # Build the site if running outside of devcontainer
-  ./helper.sh build
+```bash
+# Build the site if running outside of devcontainer
+./script/helper.sh build
 
-  # Build the site if running inside of devcontainer
-  ./entrypoint.sh build
+# Build the site if running inside of devcontainer
+./script/entrypoint.sh build
 
-  # Commit changes to git
-  git add docs/*
-  git add <any additional files needed>
-  git checkout docs/.nojekyll
-  git commit -m "..."
-  ```
+# Commit changes to git
+git add docs/*
+git add <any additional files needed>
+git checkout docs/.nojekyll
+git commit -m "..."
+```
   - Write a meaningful commit message and not only something like `Update` or `Fix`.
   - Use a capital letter to start with your commit message and do not finish with a full-stop (period).
   - Write your commit message using the imperative voice, e.g. `Add some feature` not `Adds some feature`.
 - Push your committed changes back to GitHub:
-  ```bash
-  git push origin HEAD
+```bash
+git push origin HEAD
   ```
 
 # References
