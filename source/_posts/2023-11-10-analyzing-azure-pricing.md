@@ -15,7 +15,7 @@ subclass: 'post'
 author: brig
 ---
 
-Customer often ask me about how to analyze their Azure costs.  This is a very broad question and there are many ways to answer it.  This post will focus on the different types of prices, discounts, and offers that are available.  I will also provide some examples of how to use the Azure APIs to analyze your costs.
+Customers often ask me about how to analyze their Azure costs.  This is a very broad question and there are many ways to answer it.  This post will focus on the different types of prices, discounts, and offers that are available.  I will also provide some examples of how to use the Azure APIs to analyze your costs.
 
 ## Azure Pricing
 
