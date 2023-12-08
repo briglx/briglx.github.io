@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install -y \
   libssl-dev \
   locales \
   nodejs \
+  shellcheck \
   wget \
   zsh \
   zlib1g-dev \
@@ -45,23 +46,23 @@ RUN npm install
 RUN npm install -g gulp-cli
 
 # Install python
-RUN wget https://www.python.org/ftp/python/3.10.12/Python-3.10.12.tgz && tar -xf Python-3.10.*.tgz 
+RUN wget https://www.python.org/ftp/python/3.10.12/Python-3.10.12.tgz && tar -xf Python-3.10.*.tgz
 WORKDIR /app/Python-3.10.12
-RUN /app/Python-3.10.12/configure --prefix=/usr/local --enable-optimizations --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib" 
-RUN make -j $(nproc) 
+RUN /app/Python-3.10.12/configure --prefix=/usr/local --enable-optimizations --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib"
+RUN make -j $(nproc)
 RUN make altinstall
 RUN update-alternatives --install /usr/bin/python python /usr/local/bin/python3.10 1
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/local/bin/python3.10 1
 
 # # Helpful aliases
-RUN echo 'alias ll='"'"'ls $LS_OPTIONS -al'"'"'' >> /etc/bash.bashrc 
+RUN echo 'alias ll='"'"'ls $LS_OPTIONS -al'"'"'' >> /etc/bash.bashrc
 
 # Create app directory
 # RUN mkdir -p /usr/src/app
 WORKDIR /app
 COPY source/Gemfile /app/
 COPY source/Gemfile.lock /app/
-ENV NOKOGIRI_USE_SYSTEM_LIBRARIES=true 
+ENV NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 RUN bundle install
 
 RUN \

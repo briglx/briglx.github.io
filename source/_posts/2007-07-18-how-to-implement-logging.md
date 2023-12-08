@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "How to Implement logging"
 date: "2007-07-18"
-tags: 
+tags:
   - "net"
   - "logging"
 ---

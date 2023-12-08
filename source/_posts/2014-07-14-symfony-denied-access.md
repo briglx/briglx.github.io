@@ -36,11 +36,11 @@ cgi.fix_pathinfo=1
 I'm sure there is a better way to restart this service.
 
 ```bash
-ps -eaf | grep php 
-root 1269 1 0 16:39 ? 00:00:00 php-fpm: master process (/etc/php5/fpm/php-fpm.conf)  
+ps -eaf | grep php
+root 1269 1 0 16:39 ? 00:00:00 php-fpm: master process (/etc/php5/fpm/php-fpm.conf)
 
-sudo kill 1269 
-ps -eaf | grep php 
+sudo kill 1269
+ps -eaf | grep php
 root 1436 1 6 17:49 ? 00:00:00 php-fpm: master process (/etc/php5/fpm/php-fpm.conf)
 ```
 

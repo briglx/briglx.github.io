@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Week 49 Objectives FE"
 date: "2010-12-09"
-tags: 
+tags:
   - "objectives"
 ---
 

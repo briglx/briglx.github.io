@@ -22,39 +22,39 @@ Although it seems like nginx is now exposed. If not, why can't I just run node t
 Despite my own lack of understanding, having nginx in front will be useful if I want to serve up static images without having to go through node.
 
 1. Install nginx
-    
+
     - Follow the instruction to install [nginx](http://library.linode.com/web-servers/nginx/installation/debian-6-squeeze)
-    
+
     </li
 2. Forward request to node
-    - Edit nginx config at 
+    - Edit nginx config at
     ```bash
     vi /opt/nginx/conf/nginx.conf
 
     worker_processes  1;
- 
+
     error_log  /var/log/nginx/error.log notice;
-    
+
     events {
         worker_connections  1024;
     }
-    
+
     http {
         include       mime.types;
         default_type  application/octet-stream;
         access_log    /var/log/nginx/access.log;
         sendfile      on;
         keepalive_timeout  65;
-        
-        # Define the node service 
+
+        # Define the node service
         upstream node_service {
             server 127.0.0.1:9451;
         }
-    
+
         server {
             listen       80;
             server_name  localhost;
-    
+
             # Proxy traffic to node service
             location / {
                 # add proxy headers

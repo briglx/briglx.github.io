@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Freemarker not Displaying"
 date: "2011-07-20"
-tags: 
+tags:
   - "freemarker"
 ---
 

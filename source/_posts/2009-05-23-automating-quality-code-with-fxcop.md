@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Automating Quality Code with FXCop"
 date: "2009-05-23"
-tags: 
+tags:
   - "code-analysis"
 ---
 

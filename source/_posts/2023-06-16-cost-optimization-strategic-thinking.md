@@ -4,7 +4,7 @@ current: post
 navigation: True
 title: Cost Optimization Strategic Thinking
 date: 2023-06-16
-tags: 
+tags:
   - cloud
   - cost
   - optimization
@@ -29,17 +29,17 @@ Often, I am contacted by customers who feel overwhelmed and frustrated, they mig
 
 > "Help! Our storage cost is too high."
 >
-> "Help! Our compute is underutilzed." 
+> "Help! Our compute is underutilzed."
 >
-> "😱! Our ☁️ is too 🤑." 
+> "😱! Our ☁️ is too 🤑."
 >
-> "😭!! ⛈️ 💵 📈 🤯 😖 🔥 😵‍💫" 
+> "😭!! ⛈️ 💵 📈 🤯 😖 🔥 😵‍💫"
 
 When I hear this, I know the organization isn't following a strategy. They are in a "seek and destroy" cost mindset chasing anything that looks like it will save cost. These groups are asking for tools to deploy or building large complex dashboards that can slice and dice data a hundred different ways. It's an environment that feels like a constant fire fight against a runaway inferno.
 
 I completely understand the complexity of cloud cost management and the difficulty in knowng where to start. The most successful organizations move from a "seek and destroy" mindset towards developing and executing a strategy.
 
-## Strategy built around Best Practices 
+## Strategy built around Best Practices
 
 A popular strategy is to:
 
@@ -55,7 +55,7 @@ Leadership teams love this approach because it is nothing more than defining a p
 Defining best practices can be difficult and is sometimes more art than science. One technique I like to use is to look at the primary cost drivers of a service.
 
 ### A Primer on Cost Drivers
-Most services have several different drivers that go into the final cost. These can typically be found in the documentation or pricing calculators. 
+Most services have several different drivers that go into the final cost. These can typically be found in the documentation or pricing calculators.
 
 ![Storage Primary Cost Driver Sources]({{ site.url }}{{ site.baseurl }}/assets/images/20230616-storage-primary-cost-drivers-source.png)
 
@@ -77,8 +77,8 @@ Identifying the cost drivers is useful in a few ways:
 
 ### Example From Driver to Best Practice
 
-In our quest to develop a strategy we will implement the powerful leadership principle of ["Do what you say you will do"](https://www.linkedin.com/pulse/leadership-principles-1-do-what-you-say-melissa-hosgood/) and use our top cost drivers to define the best practices we will follow. 
-For each cost driver, consider not only how you can influence cost, but how do you want to run your organization. 
+In our quest to develop a strategy we will implement the powerful leadership principle of ["Do what you say you will do"](https://www.linkedin.com/pulse/leadership-principles-1-do-what-you-say-melissa-hosgood/) and use our top cost drivers to define the best practices we will follow.
+For each cost driver, consider not only how you can influence cost, but how do you want to run your organization.
 
 Brainstorm activities for each Storage Cost Drivers
 
@@ -141,20 +141,20 @@ We now have a collection of best practices to follow. Setting a goal means nothi
 
 ### Measure Compliance
 
-The management guru Peter Drucker once said, 
+The management guru Peter Drucker once said,
 
-> “If you can’t measure it you can’t improve it.” 
+> “If you can’t measure it you can’t improve it.”
 
 Our task now is to measure our compliance to the best practice standards we have defined. This is the steps that looks most similar to traditional reporting because we will create visuals. The most effective visuals need to incorporate the follow capabilities:
 * Separate composite metrics into atomic units. Ie. `total_cost` into  `quantity` and `unit_cost`.
 * Display service level indicators, `SLI`, as a percentage.
-* Prefer fewer `SLI` states. Ideally no more than three. 
+* Prefer fewer `SLI` states. Ideally no more than three.
 * Display Historical Trends. This is key in building trust for leadership.
 * Forecast next period's `SLI` and Cost
 * Calculate Organization service level objective `SLO` and Cost
 * Calculate cost if the organizaton meet its `SLO`.
 * Display Potential Savings
-  
+
 ![Access Tier]({{ site.url }}{{ site.baseurl }}/assets/images/20230616-storage-access-tier.png)
 
 > As an organization have 90% Aligned Data
@@ -180,11 +180,11 @@ Following these standards in visualising best practices has the following benefi
 In the event there is a missed `SLO` the most successful organizations establish a plan on how to meet the target. This could look like:
 * Defining Run-books
 * Instructions on how to apply an Azure Policy
-* Links to documentation on how to enable 'Auto-shutdown' 
+* Links to documentation on how to enable 'Auto-shutdown'
 
 Generally there is a central team who is defining the best practices and remediations and the downstream teams attempt to comply with the best practices.
 
-The point is to give the downstream team the tools or information to be successful. 
+The point is to give the downstream team the tools or information to be successful.
 
 ### Finally a Strategy
 
@@ -239,7 +239,7 @@ Parameters may include:
 | orphaned_disk_count |          |        |
 | attached_disk_count |           |       |
 | total_disk_count | | Calculated orphaned + attached |
-| attached_disk_percent | | Calculated attached / total | 
+| attached_disk_percent | | Calculated attached / total |
 | cost | | |
 | is_forecast | | Forecasted data |
 | is_latest | | Indicates the most recent data |
@@ -267,7 +267,7 @@ See full dataset `path/to/sample/dataset.csv`
 
 **AmortizedCost SQL Query**
 ```sql
-SELECT 
+SELECT
   [Date]
   , [ResourceId]
   , SUM([CostInBillingCurrency]) as Cost
@@ -284,13 +284,13 @@ resources
 | where type has "microsoft.compute/disks"
 | extend diskState = tostring(properties.diskState)
 | project current_date = format_datetime(now(), 'yyy-MM-dd'), subscriptionId, resourceGroup, id, sku_name = sku.name, diskState, managedBy, is_orphaned = (diskState == 'Unattached' or managedBy == "")
-``` 
+```
 
 ### Transformation
 Join `AmortizedCost` table and Azure Graph API Query by ResourceID and Date
 
 ```sql
-SELECT 
+SELECT
   a.[date]
   , a.[subscription_name]
   , a.[subscription_id]

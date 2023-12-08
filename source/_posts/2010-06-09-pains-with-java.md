@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Pains with Java"
 date: "2010-06-09"
-tags: 
+tags:
   - "intellij"
   - "java"
 ---
@@ -23,8 +23,8 @@ Here is what I did
 - Open Project Structure from file menu
 - Under Platform Settings select SDKs
 - For the Classpath tab, I clicked add and included
-    
+
     %JAVA_HOME/jre/lib/rt.jar
-    
+
 
 Hope this helps.

@@ -43,7 +43,7 @@ Followed [migration instructions](https://www.sitepoint.com/how-to-migrate-to-gu
 
 
 **Replace special Chars**
-The import applied a `\` to some special characters like `\=` 
+The import applied a `\` to some special characters like `\=`
 
 The full list was:
 ```
@@ -54,7 +54,7 @@ I use the following regex to find where they might be
 `\\[^A-Za-z0-9]+`
 
 **Install MathJax**
-Some of my post use LaTex so I need to render it. 
+Some of my post use LaTex so I need to render it.
 MathJax is a JavaScript library that allows this
 
 ```bash
@@ -75,7 +75,7 @@ bundle config set deployment true
 bundle config path ${process.env.GITHUB_WORKSPACE}/vendor/bundle
 bundle install --jobs=4 --retry=3 --gemfile=${gemSrc}
 
-# Build Jekyll 
+# Build Jekyll
 bundle exec jekyll build -s ${jekyllSrc} ${INPUT_CUSTOM_OPTS}
 
 # Format output html files
@@ -133,7 +133,7 @@ gulp --version
 # docker run --rm -it --env-file .env --mount type=bind,src="$(pwd)/docs",target=/usr/src/app/docs --mount type=bind,src="$(pwd)/source",target=/usr/src/app/source --name blog_build blog_build:latest
 
 # Migrate Database
-# docker container exec -it --env-file .env blog_build /usr/src/app/migrate_database.sh 
+# docker container exec -it --env-file .env blog_build /usr/src/app/migrate_database.sh
 
 # Build image
 # docker build --pull --rm -f "Dockerfile.build" -t blog_build:latest "."
@@ -187,7 +187,6 @@ source .venv/bin/activate
 
 # Update pip
 python -m pip install --upgrade pip
-
 pip install -r requirements_dev.txt
 ```
 

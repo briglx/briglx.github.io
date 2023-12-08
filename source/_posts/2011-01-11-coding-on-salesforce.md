@@ -9,7 +9,7 @@ title: "Coding on SalesForce"
 date: "2011-01-11"
 ---
 
-Tutorial #6 introduces the concept of Unit Test and has me creating a unit test for a trigger I wrote. 
+Tutorial #6 introduces the concept of Unit Test and has me creating a unit test for a trigger I wrote.
 
 First I want to mention that the eclipse plugin for SalesForce is very mature. It integrates with the SalesForce account I have. When I update code in the IDE, the server is updated. I can even Refresh from the server.
 

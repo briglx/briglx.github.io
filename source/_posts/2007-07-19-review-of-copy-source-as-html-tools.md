@@ -7,12 +7,12 @@ subclass: 'post'
 author: brig
 title: "Review of Copy Source As Html Tools"
 date: "2007-07-19"
-tags: 
+tags:
   - "blogging"
   - "coding"
 ---
 
-It makes sense that as a blog about .net programming I should include samples of code. 
+It makes sense that as a blog about .net programming I should include samples of code.
 
 Code is easier to read when there is syntax highlighting and proper indentation. I'm going to look at four tools that provide a way of displaying source code in Html documents. The first tool is a general add in to Visual Studio and the last tools are specific to [Windows Live Writer](http://windowslivewriter.spaces.live.com/Lists/cns!D85741BB5E0BE8AA!1340/).
 
@@ -152,12 +152,12 @@ This is also an plugin for Windows Live Writer and also has nearly the same numb
 <span style="color:#0000ff;">public</span> <span style="color:#0000ff;">class</span> <span style="color:#2b91af;">Wizard </span>{
     <span style="color:#0000ff;">const</span> <span style="color:#0000ff;">string</span> Gretting = <span style="color:#a31515;">"Greetings and well met."</span>;
 
-    <span style="color:#808080;">///</span><span style="color:#808080;">&lt;summary&gt; </span>    
-    <span style="color:#808080;">///</span><span style="color:#008000;"> Says the greeting. </span>    
-    <span style="color:#808080;">///</span><span style="color:#808080;">&lt;/summary&gt; </span>    
+    <span style="color:#808080;">///</span><span style="color:#808080;">&lt;summary&gt; </span>
+    <span style="color:#808080;">///</span><span style="color:#008000;"> Says the greeting. </span>
+    <span style="color:#808080;">///</span><span style="color:#808080;">&lt;/summary&gt; </span>
     <span style="color:#0000ff;">public</span> <span style="color:#0000ff;">void</span> SayGreeting()
     {
-        <span style="color:#008000;">// Ensure it is Daylight Saving Time </span>        
+        <span style="color:#008000;">// Ensure it is Daylight Saving Time </span>
         <span style="color:#0000ff;">if</span> (<span style="color:#2b91af;">DateTime</span>.Now.IsDaylightSavingTime())
         {
             <span style="color:#2b91af;">Console</span>.Write(<span style="color:#2b91af;">Math</span>.Abs(<span style="color:#2b91af;">Math</span>.PI + 25.4));
@@ -215,14 +215,14 @@ Not too bad. In fact, besides not keeping my original color and font, I like the
 
 ## The Results
 
-Among all of the tools I will keep two. 
+Among all of the tools I will keep two.
 
 - [CopySourceAsHtml](http://www.jtleigh.com/people/colin/software/CopySourceAsHtml/)
 - [Code Snippet plugin](http://gallery.live.com/liveItemDetail.aspx?li=d8835a5e-28da-4242-8http://gallery.live.com/liveItemDetail.aspx?li=d4409446-af7f-42ec-aa20-78aa5bac4748&bt=9&pl=82eb-e1a006b083b9&bt=9&pl=8) for Windows Live Writer
 
-I will keep [CopySourceAsHtml](http://www.jtleigh.com/people/colin/software/CopySourceAsHtml/) so I can get my code into html format whenever I want. 
+I will keep [CopySourceAsHtml](http://www.jtleigh.com/people/colin/software/CopySourceAsHtml/) so I can get my code into html format whenever I want.
 
-For Windows Live Writer, I'm going to stick with the aptly named [Code Snippet plugin for Windows Live Writer](http://gallery.live.com/liveItemDetail.aspx?li=d8835a5e-28da-4242-8http://gallery.live.com/liveItemDetail.aspx?li=d4409446-af7f-42ec-aa20-78aa5bac4748&bt=9&pl=82eb-e1a006b083b9&bt=9&pl=8). I chose this as the winner because I am provided options over the results and it has inline styles. 
+For Windows Live Writer, I'm going to stick with the aptly named [Code Snippet plugin for Windows Live Writer](http://gallery.live.com/liveItemDetail.aspx?li=d8835a5e-28da-4242-8http://gallery.live.com/liveItemDetail.aspx?li=d4409446-af7f-42ec-aa20-78aa5bac4748&bt=9&pl=82eb-e1a006b083b9&bt=9&pl=8). I chose this as the winner because I am provided options over the results and it has inline styles.
 
 [Insert Code for Windows Live Writer](http://gallery.live.com/liveItemDetail.aspx?li=1f57bd9b-a692-4593-9e9e-e2962d9c0eee&bt=9&pl=8) gives me almost the same features but doesn't provide inline styles which is a must when it comes to aggregators.
 

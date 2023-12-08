@@ -7,12 +7,12 @@ subclass: 'post'
 author: brig
 title: "Beware Dynamic User Controls in a Web Farm"
 date: "2007-11-02"
-tags: 
+tags:
   - "net"
   - "asp-net"
 ---
 
-Many large sites utilize a web farm with a load balancer. The load balancer will cycle through each server in the farm for each request. Today I assumed our load balancer had [persistence](http://en.wikipedia.org/wiki/Load_balancing_%28computing%29). 
+Many large sites utilize a web farm with a load balancer. The load balancer will cycle through each server in the farm for each request. Today I assumed our load balancer had [persistence](http://en.wikipedia.org/wiki/Load_balancing_%28computing%29).
 
 I think the text from Wikipedia sums my experience today: "But reliance on persistence can cause problems if the persistence fails." Come to find out, the rules on the load balancer were not setup uniformly and I found a special case where persistence failed.
 

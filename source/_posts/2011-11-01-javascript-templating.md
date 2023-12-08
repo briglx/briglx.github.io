@@ -23,7 +23,7 @@ The basic idea is to keep view code all in the same location. In this case the v
   <tr><td>John</td><td>Phoenix, AZ</td></tr>
   <tr><td>Bill</td><td>Tempe, AZ</td></tr>
 </table>
- 
+
 <div class="hidden employee-t">
   <tr><td>{name}</td><td>{location}</td></tr>
 </div>
@@ -34,24 +34,24 @@ The JavaScript code will add a new employee to the employees list.
 ```javascript
 // Get the template from the hidden div
 var newRowTemplate = $(".employee-t").html();
- 
+
 // Create a new template using the html for the pattern
 var newRow = new helios.template(newRowTemplate);
- 
+
 // Fetch employee data. Returns
-// {employees : [ 
-//   {"name":"Jim","location","San Jose, CA"}, 
+// {employees : [
+//   {"name":"Jim","location","San Jose, CA"},
 //   {"name":"Sara","location","L.A., CA"} ]}
 var items = ajax.get("/employee/ca")
- 
+
 var len = items.length;
 for (var i=0; i<len; i++)
 {
   var item = items[i];
- 
+
   // Evaluate the JSON object into the template
   var text = newRow.evaluate(item);
- 
+
   // Add the new element to the page
   $(.employees).append(text);
 }
@@ -69,11 +69,11 @@ Here is the very simple template to get the job done. Nothing special here.
 helios.template = function(text){
     this._pattern = $.trim(text);
 }
- 
-helios.template.prototype = { 
+
+helios.template.prototype = {
     evaluate : function(data){
         var s = this._pattern;
-     
+
         // Cycle each property name
         $.each(data, function(i){
             // Replace Named Placeholder with property value
@@ -81,7 +81,7 @@ helios.template.prototype = {
             s = s.replace(re, data[i] );
             //s = s.split(re).join(data[i]);
         });
-     
+
         // Replace the data found in the template.
         return s;
     }

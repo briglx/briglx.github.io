@@ -7,12 +7,12 @@ subclass: 'post'
 author: brig
 title: "Forms Authentication and Cookies"
 date: "2007-08-20"
-tags: 
+tags:
   - "net"
   - "asp-net"
 ---
 
-I encountered a strange problem this morning when I tried to turn on Authentication to the ASP.NET 2.0 Website. 
+I encountered a strange problem this morning when I tried to turn on Authentication to the ASP.NET 2.0 Website.
 
 I opened my handy dandy Wrox Professional ASP.NET 2.0 book to chapter 18, Security, and started the simple process of implementing forms authentication. Simple, hah! What happen was my cookies were not being saved. Walking step by step, I first made sure I denied access to any anonymous users.
 

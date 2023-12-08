@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Soap and Fiddler"
 date: "2007-08-19"
-tags: 
+tags:
   - "net"
 ---
 
@@ -15,7 +15,7 @@ A coworker told me about a strange error he was getting when trying to call a we
 
 Setting up an application to point to Fiddler is a little different between .NET 1.1 and .NET 2.0. In 1.1 apps you'll need to configure the app.config or web.config to use Fiddler as a proxy. Add the following to the config file.
 
-  
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>

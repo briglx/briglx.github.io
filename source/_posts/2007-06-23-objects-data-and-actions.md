@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Objects, Data, and Actions"
 date: "2007-06-23"
-tags: 
+tags:
   - "coding"
   - "objects"
 ---

@@ -5,7 +5,7 @@ current: post
 navigation: True
 title: Finding Missing Images
 date: 2022-05-20
-tags: 
+tags:
   - blogging
   - sed
   - awk
@@ -67,7 +67,7 @@ head referenced_images.csv
 /images/SBCLOptions.Png)
 ```
 
-I'd like to just get the image name though. Pearl has a [look-around assertion](https://perldoc.perl.org/perlre#Lookaround-Assertions) syntax which will check for things before or after the pattern match. 
+I'd like to just get the image name though. Pearl has a [look-around assertion](https://perldoc.perl.org/perlre#Lookaround-Assertions) syntax which will check for things before or after the pattern match.
 
 ```bash
 # Find a word between foo and bar
@@ -130,4 +130,3 @@ CropperCapture%5B12%5D.png,0
 ## References
 - Can I grep out a group match https://unix.stackexchange.com/questions/13466/can-grep-output-only-specified-groupings-that-match
 - Basic Grep info https://linuxize.com/post/regular-expressions-in-grep/
-

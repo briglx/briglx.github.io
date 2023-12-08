@@ -67,7 +67,7 @@ library(mrsdeploy)
 ########################################################## # Get Service-specific Swagger File in R # ##########################################################
 # During this authenticated session, download the # Swagger-based JSON file that defines this service swagger <- api$swagger() cat(swagger, file = "swagger.json", append = FALSE)
 # Share Swagger-based JSON with those who need to consume it`
-```    
+```
 
 **Use Rest Api**
 

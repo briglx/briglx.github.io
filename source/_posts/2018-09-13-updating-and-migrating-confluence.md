@@ -5,7 +5,7 @@ current: post
 navigation: True
 title: Updating and Migrating Confluence
 date: 2018-09-13
-tags: 
+tags:
   - "confluence"
   - "linux"
   - "ops"

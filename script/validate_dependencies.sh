@@ -13,7 +13,7 @@ set -e
 # Check OS Version
 os_version=$(grep PRETTY_NAME /etc/os-release | cut -d'=' -f2 | tr -d '"')
 if [ "$os_version" == "Debian GNU/Linux 11 (bullseye)" ]; then
-    echo "Valide OS version ${os_version}"
+    echo "Valid OS version ${os_version}"
 else
     echo "OS version does not match Debian GNU/Linux 11 (bullseye). Current version is $os_version"
 fi

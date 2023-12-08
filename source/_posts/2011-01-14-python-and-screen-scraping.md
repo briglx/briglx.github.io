@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Python and Screen Scraping"
 date: "2011-01-14"
-tags: 
+tags:
   - "python"
 ---
 
@@ -23,24 +23,24 @@ It only needs a dependency to `lxml` which has a [dependency](http://codespeak.n
 
 This failed for me. So I'm going to make sure I have `libxml2` and libxslt. First I install `libxml2`-dev `$ sudo apt-get install libxml2-dev`
 
-First I need to [build libxml2](http://www.techsww.com/tutorials/libraries/libxml/installation/installing_libxml_on_ubuntu_linux.php) 
+First I need to [build libxml2](http://www.techsww.com/tutorials/libraries/libxml/installation/installing_libxml_on_ubuntu_linux.php)
 ```bash
-wget ftp://xmlsoft.org/libxml2/libxml2-sources-2.7.6.tar.gz 
-tar -xvsf libxml2-sources-2.7.6.tar.gz 
-cd libxml2-2.7.6/ 
-./configure --prefix=/usr/local/libxml2 
-make 
+wget ftp://xmlsoft.org/libxml2/libxml2-sources-2.7.6.tar.gz
+tar -xvsf libxml2-sources-2.7.6.tar.gz
+cd libxml2-2.7.6/
+./configure --prefix=/usr/local/libxml2
+make
 sudo make install
 ```
 
-Next [build libxslt](http://www.techsww.com/tutorials/libraries/libxslt/installation/installing_libxslt_on_ubuntu_linux.php) 
+Next [build libxslt](http://www.techsww.com/tutorials/libraries/libxslt/installation/installing_libxslt_on_ubuntu_linux.php)
 
 ```bash
-wget ftp://xmlsoft.org/libxslt/libxslt-1.1.26.tar.gz 
-tar -xvzf libxslt-1.1.26.tar.gz 
-cd libxslt-1.1.26 
-./configure --prefix=/usr/local/libxslt --with-libxml-prefix=/usr/local/libxml2/ 
-make 
+wget ftp://xmlsoft.org/libxslt/libxslt-1.1.26.tar.gz
+tar -xvzf libxslt-1.1.26.tar.gz
+cd libxslt-1.1.26
+./configure --prefix=/usr/local/libxslt --with-libxml-prefix=/usr/local/libxml2/
+make
 sudo make install
 ```
 

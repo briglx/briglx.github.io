@@ -13,13 +13,13 @@ I have an HDInsight Spark cluster and wanted to fetch some data out of a Hive ta
 
 ```r
 mySparkCC <- RxSpark(
-    executorMem="1g", 
-    driverMem="1g", 
-    executorOverheadMem="1g", 
-    numExecutors=2, 
+    executorMem="1g",
+    driverMem="1g",
+    executorOverheadMem="1g",
+    numExecutors=2,
     idleTimeout = 600, #3600 is the default
-    persistentRun = TRUE, 
-    consoleOutput=TRUE) 
+    persistentRun = TRUE,
+    consoleOutput=TRUE)
 rxSetComputeContext(mySparkCC) rxGetComputeContext()
 
 sdf2 <- RxHiveData(query = "select * from hivesampletable LIMIT 100")

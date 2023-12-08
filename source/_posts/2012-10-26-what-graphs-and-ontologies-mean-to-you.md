@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "What Graphs and Ontologies mean to you"
 date: "2012-10-26"
-tags: 
+tags:
   - "graph"
   - "ontology"
   - "rdf"

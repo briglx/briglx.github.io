@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "When a Bug is Found"
 date: "2007-07-17"
-tags: 
+tags:
   - "process"
   - "testing"
 ---

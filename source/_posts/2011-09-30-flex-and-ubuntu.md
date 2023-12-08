@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Flex and Ubuntu"
 date: "2011-09-30"
-tags: 
+tags:
   - "flash"
   - "flex"
   - "linux"

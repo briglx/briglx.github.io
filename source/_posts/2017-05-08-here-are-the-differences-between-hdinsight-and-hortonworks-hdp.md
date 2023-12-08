@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Here are the differences between HDInsight and Hortonworks HDP"
 date: "2017-05-08"
-tags: 
+tags:
   - "software"
   - "azure"
   - "hadoop"

@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Ruby Array Randomize"
 date: "2007-07-11"
-tags: 
+tags:
   - "ruby"
 ---
 
@@ -32,7 +32,7 @@ end
 end
 ```
 
-Here are some test that make sure it really works. 
+Here are some test that make sure it really works.
 
 ```ruby
 puts "Randomize Tests" x = [1, 2, 3, 4, 5] print "x: " x.each do |i| print "#{i}" end y = x.randomize print "\ny: " y.each do |i| print "#{i}" end x.randomize! # x is now [3, 5, 4, 1, 2] print "\nx: " x.each do |i| print "#{i}" end x.randomize! # x is now [3, 5, 4, 1, 2] print "\nx: " x.each do |i| print "#{i}" end

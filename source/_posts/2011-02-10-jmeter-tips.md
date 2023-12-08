@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "JMeter Tips"
 date: "2011-02-10"
-tags: 
+tags:
   - "jmeter"
 ---
 

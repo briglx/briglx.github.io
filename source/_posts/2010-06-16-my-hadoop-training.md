@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "My Hadoop Training"
 date: "2010-06-16"
-tags: 
+tags:
   - "hadoop"
 ---
 

@@ -14,14 +14,14 @@ tags:
   - "redhat"
 cover: /assets/images/firewall-e1367345805612.png
 ---
-I just tried to deploy and test an application on EC2 running red hat but couldn't telnet it. 
+I just tried to deploy and test an application on EC2 running red hat but couldn't telnet it.
 
 I configured the security group to allow port 8080, I could see the port was running with netstat
 
 ```bash
 sudo netstat -lntp
 
-tcp 0 0 :::80 :::* LISTEN 29031/httpd 
+tcp 0 0 :::80 :::* LISTEN 29031/httpd
 tcp 0 0 :::8080 :::* LISTEN 28923/java
 ```
 

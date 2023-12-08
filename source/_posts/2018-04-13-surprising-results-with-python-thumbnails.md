@@ -8,7 +8,7 @@ author: brig
 cover: /assets/images/comparepythonthumbnailsfeature.png
 title: "Surprising Results with Python Thumbnails"
 date: "2018-04-13"
-tags: 
+tags:
   - "software"
   - "python"
 ---
@@ -47,7 +47,7 @@ from skimage import transform as skitr
 hash_size=8
 
 cv2Image = cv2.imread(fileName)
-cv2Image = cv2.cvtColor(cv2Image, cv2.COLOR_BGR2GRAY)                            
+cv2Image = cv2.cvtColor(cv2Image, cv2.COLOR_BGR2GRAY)
 cv2Image = cv2.resize(cv2Image, (hash_size +1 , hash_size))
 
 pillowImage = Image.open(fileName)
@@ -56,26 +56,26 @@ pillowImage = pillowImage.resize((9,8))
 
 skImage = io.imread(fileName, as_grey=True)
 skImage = skitr.resize(skImage, (hash_size, hash_size+1))
-                                 
+
  #  Use CV2 to load and resize image as original
-originalImage = resizeImage(cv2.imread(fileName))   
+originalImage = resizeImage(cv2.imread(fileName))
 rgb2grayImage = rgb2gray(originalImage)
-rgb2grayImage2 = rgb2gray2(originalImage)                               
+rgb2grayImage2 = rgb2gray2(originalImage)
 
 # Display the images
 fig, axes = plt.subplots(nrows=2, ncols=3)
 axes[0, 0].set_title('Original Image')
 axes[0, 0].imshow(originalImage, cmap='gray')
 axes[0, 0].axis('off')
-                                 
+
 axes[0, 1].set_title('CV2 Image')
 axes[0, 1].imshow(cv2Image, cmap='gray')
 axes[0, 1].axis('off')
-                                 
+
 axes[0, 2].set_title('Pillow Image')
 axes[0, 2].imshow(pillowImage, cmap='gray')
 axes[0, 2].axis('off')
-                                 
+
 axes[1, 0].set_title('skimage Image')
 axes[1, 0].imshow(skImage, cmap='gray')
 axes[1, 0].axis('off')

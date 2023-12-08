@@ -7,12 +7,12 @@ subclass: 'post'
 author: brig
 title: "Anonymous Delegates"
 date: "2007-08-21"
-tags: 
+tags:
   - "net"
   - "closure"
 ---
 
-I never thought I would use anonymous delegates mostly because I didn't fully understand what benefit they could give me. 
+I never thought I would use anonymous delegates mostly because I didn't fully understand what benefit they could give me.
 
 If I can't get something out of a new tool or methodology, why use it. With anonymous delegates I can get a lot of great things. Specifically simple solutions to my problems
 
@@ -32,7 +32,7 @@ class Program
             names.Add("Billy");
             names.Add("Susan");
             names.Add("Ed");
-            Console.WriteLine(IsLongName(names[4]));  
+            Console.WriteLine(IsLongName(names[4]));
         }
         static bool IsLongName(string name)
         {
@@ -40,9 +40,9 @@ class Program
         }
    }
 ```
-  
-I define a method that checks if the length of the name is greater than 4. Well my method `IsLongName` is in fact a `System.Predicate`. Since the `Find()` method takes a Predicate as the match pattern. I can pass this method to the `Find()` method and get a collection of just long names. Let's use `Find()` to get a list of names that are long names. First I'll need to wrap the `IsLongNamefunction` inside of a delegate. Then I can pass that delegate into the `Find()` method.  
-  
+
+I define a method that checks if the length of the name is greater than 4. Well my method `IsLongName` is in fact a `System.Predicate`. Since the `Find()` method takes a Predicate as the match pattern. I can pass this method to the `Find()` method and get a collection of just long names. Let's use `Find()` to get a list of names that are long names. First I'll need to wrap the `IsLongNamefunction` inside of a delegate. Then I can pass that delegate into the `Find()` method.
+
 ```cs
 class Program
    {
@@ -105,13 +105,13 @@ class Program
         }
    }
 ```
-  
+
 The console shows: `There are 3 long names.There are 3 MGB names.`
 
 ## Clean it up
 
-Now I see how powerful and convenient it is to be able to pass in a method that contains the logic to find an item in a list. But let's see how anonymous delegates can help out. All that an anonymous delegate gives us is the ability to create our methods on the fly; no need to have random methods sitting around that won't be used.  
-  
+Now I see how powerful and convenient it is to be able to pass in a method that contains the logic to find an item in a list. But let's see how anonymous delegates can help out. All that an anonymous delegate gives us is the ability to create our methods on the fly; no need to have random methods sitting around that won't be used.
+
 ```cs
 class Program
    {
@@ -142,12 +142,12 @@ class Program
             Console.ReadLine();
         }
 ```
-  
+
 The console shows: `There are 3 long names.There are 3 MGB names.`
 
 ## Adding Parameters
 
-What if my special search needs an additional parameter? Just create a wrapper class  
+What if my special search needs an additional parameter? Just create a wrapper class
 
 ```cs
 class Program

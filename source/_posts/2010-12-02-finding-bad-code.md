@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Finding Bad Code"
 date: "2010-12-02"
-tags: 
+tags:
   - "performance"
 ---
 

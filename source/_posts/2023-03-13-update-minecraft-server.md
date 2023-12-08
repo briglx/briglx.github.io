@@ -4,7 +4,7 @@ current: post
 navigation: True
 title: Update Minecraft Server
 date: 2023-03-13
-tags: 
+tags:
   - cloud
   - azure
   - minecraft
@@ -55,6 +55,6 @@ sudo chown -R minecraft.minecraft /srv/minecraft-server
 sudo systemctl start minecraft.service
 
 # Get status
-systemctl status minecraft.service 
+systemctl status minecraft.service
 
 ```

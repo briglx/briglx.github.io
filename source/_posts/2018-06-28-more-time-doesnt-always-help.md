@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "More Time Doesn't Always Help"
 date: "2018-06-28"
-tags: 
+tags:
   - "software"
   - "keras"
   - "machine-learning"

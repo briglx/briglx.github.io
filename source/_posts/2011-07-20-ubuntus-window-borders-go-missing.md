@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Ubuntu's Window Borders go Missing"
 date: "2011-07-20"
-tags: 
+tags:
   - "ubuntu"
 ---
 

@@ -25,5 +25,5 @@ I hate having to login to remote machines. Since SSH can be configured with publ
     ```
 3. Copy public key to remote machine.
     ```bash
-    remoteuser@local:~$ ssh-copy-id -i $HOME/.ssh/id_rsa.pub remoteuser@remotemachine 
+    remoteuser@local:~$ ssh-copy-id -i $HOME/.ssh/id_rsa.pub remoteuser@remotemachine
     ```

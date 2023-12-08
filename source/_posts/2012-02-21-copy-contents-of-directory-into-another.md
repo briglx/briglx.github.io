@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Copy Contents of Directory into Another"
 date: "2012-02-21"
-tags: 
+tags:
   - "bash"
   - "linux"
 ---

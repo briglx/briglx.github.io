@@ -28,7 +28,7 @@ case "$action" in
     echo
     echo "Running build..."
     # Execute the build script
-    docker run --rm -it -v "${PROJ_ROOT_PATH}/_site:/usr/src/app/_site:z" -v "${PROJ_ROOT_PATH}/source:/usr/src/app/source:z" blog_build:latest 
+    docker run --rm -it -v "${PROJ_ROOT_PATH}/_site:/usr/src/app/_site:z" -v "${PROJ_ROOT_PATH}/source:/usr/src/app/source:z" blog_build:latest
     ;;
   serve)
     # Add serve logic here

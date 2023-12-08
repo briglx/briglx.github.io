@@ -35,9 +35,9 @@ This is a full-featured port of Ghost's default theme [Casper](https://github.co
 
 There are several alternatives to building and deploying the site:
 
-1. build the site with [GitHub Actions](https://github.com/features/actions) which pushes 
-the resulting files (the contents of `_site/` or `../jasper2-pages/`) 
-to the *gh-pages* branch. This is the approach that is currently used. See 
+1. build the site with [GitHub Actions](https://github.com/features/actions) which pushes
+the resulting files (the contents of `_site/` or `../jasper2-pages/`)
+to the *gh-pages* branch. This is the approach that is currently used. See
 [jekyll_build.yml](.github/workflows/jekyll_build.yml) for more details.
 
 2. generate the site locally (more details below) and push the resulting

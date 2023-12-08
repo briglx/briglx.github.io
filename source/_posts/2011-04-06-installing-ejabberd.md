@@ -21,10 +21,10 @@ I'm working on a project that needs to stand up an XMPP server. I've decided on 
     `$ cp /opt/ejabberd/bin/ejabberd.init /etc/init.d/ejabberd`- Start service
     `$ /etc/init.d/ejabberd start`
 3. Create Admin Account
-    
+
     - Add the account with
     `$ ejabberdctl register admin1 example.org FgT5bk3 $ Failed RPC connection to the node ejabberd@localhost: nodedown`
-    
+
 
 Hmmm. I don't think I supposed to get that message. Running ejabber in live mode gives a better message. Of course I have no idea what this means. Now I did have trouble creating the user. I added then removed. So there might be issues with the user.
 

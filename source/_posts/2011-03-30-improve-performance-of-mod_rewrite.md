@@ -16,15 +16,15 @@ After [getting Pretty Links enabled]({% post_url 2011-03-28-enable-pretty-links-
 So I've edited `/etc/apache2/httpd.conf` to be
 
 ```xml
-<Directory /var/www/wordpress> 
-    <IfModule mod_rewrite.c> 
-        RewriteEngine On 
-        RewriteBase /wordpress/ 
-        RewriteRule ^index.php$ - [L] 
-        RewriteCond %{REQUEST_FILENAME} !-f 
-        RewriteCond %{REQUEST_FILENAME} !-d 
-        RewriteRule . /wordpress/index.php [L] 
-    </IfModule> 
+<Directory /var/www/wordpress>
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        RewriteBase /wordpress/
+        RewriteRule ^index.php$ - [L]
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule . /wordpress/index.php [L]
+    </IfModule>
 </Directory>
 ```
 

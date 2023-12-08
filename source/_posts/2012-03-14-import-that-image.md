@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Import that Image"
 date: "2012-03-14"
-tags: 
+tags:
   - "ec2"
 ---
 
@@ -31,15 +31,15 @@ Someone else did this so I really don't know what it takes. But I do know there 
     - Get Private Key
 4. Set Environment Variables. `export JAVA_HOME /path/to/java export EC2_HOME path/to/aws/api/tools/ export EC2_PRIVATE_KEY=/path/to/ect/pk-EXAMPLE.pem export EC2_CERT=/path/to/ec2/cert-EXAMPLE.pem export EC2_URL=https://ec2.us-east-1.amazonaws.com`
 5. Set Java Args
-    
+
     - Edit ec2-cmd to include:
     `set EC2_JVM_ARGS=-Xms1024m -Xmx2048m`
-    
+
 6. Import Image
-    
+
     - Run the ec2-import-instance command `$ ec2-import-instance /path/to/vmimage.vmdk -f VMDK -t m1.large -a x86_64 -b bucketname -o EXAMPLESECRETE -w EXAMPLEKEY`
     - Write down the import id for later use. See Possible Issues below.
-    
+
 
 That's is how I did it. Of course it wasn't a smooth import. I ran into a few issues.
 
@@ -52,11 +52,11 @@ That's is how I did it. Of course it wasn't a smooth import. I ran into a few is
     - Issue: For whatever reason the import process is interrupted
     - Solution: Restart the process. The import id is displayed when you start the import process. `$ .ec2-resume-import -t import-i-EXAMPLEID -o EXAMPLESECRETE -w EXAMPLEKEY /path/to/vmimage.vmdk`
 - Import Failed
-    
+
     - Issue: Failed due to unsupported OS Type. In my case I tried to upload Win7
-    
+
     Solution: Delete the import process `$ .ec2-cancel-conversion-task import-i-EXAMPLEID`
-    
+
 
 ## Resources
 

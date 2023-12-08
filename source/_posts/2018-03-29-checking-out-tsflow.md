@@ -108,8 +108,8 @@ Installed Download cuDNN v7.1.2 (Mar 21, 2018), for CUDA 9.0
 Copied files from zip to
 
 ```dos
-\cuda\bin\cudnn64_7.dll to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin. 
-\cuda\include\cudnn.h to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include. 
+\cuda\bin\cudnn64_7.dll to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin.
+\cuda\include\cudnn.h to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\include.
 \cuda\lib\x64\cudnn.lib to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1\lib\x64.
 ```
 

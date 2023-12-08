@@ -23,9 +23,9 @@ I have MySQL Workbench on my machine and though it would be trivial. When I trie
     - Restart the service `$ cd /opt/bitnami $ sudo ./ctlscript.sh restart mysql`
     Test connection `localhost$ mysql -h REMOTE_HOST -u root -p`
 2. **Start the backup**
-    
+
     This part was easy. I just had to follow the [backup instructions](http://forum.hostek.com/showthread.php?297-How-to-use-MySQL-Workbench-to-backup-your-MySQL-database).
-    
+
 
 I now have a complete backup of my blog data in a nice little file BlogBackup20120210.sql.
 

@@ -9,7 +9,7 @@ title: "Development Platforms"
 date: "2010-12-15"
 ---
 
-In the same vein of [developing application quicker with Frameworks]({% post_url 2010-12-14-rapid-development-frameworks %}), there is also the idea of deploying application faster using platforms. 
+In the same vein of [developing application quicker with Frameworks]({% post_url 2010-12-14-rapid-development-frameworks %}), there is also the idea of deploying application faster using platforms.
 
 These platforms let you run your web applications on hosted, scalable infrastructure. Applications are promoted as easy to build, easy to maintain, and easy to scale as traffic and data storage needs grow. With these frameworks, there are no servers to maintain.
 

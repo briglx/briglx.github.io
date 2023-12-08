@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Use Fiddler with .Net Application"
 date: "2008-06-24"
-tags: 
+tags:
   - "net"
   - "proxy"
 ---
@@ -25,10 +25,10 @@ Open Fiddler and click on Tools -> Fiddler Options. The Fiddler Options window w
 Open your Web.Config file and add the entry. Make sure the port on the address matches the one defined in Fiddler.
 
 ```xml
-<system.net> 
-  <defaultProxy> 
-    <proxy  proxyaddress="http://127.0.0.1:8888" /> 
-  </defaultProxy> 
+<system.net>
+  <defaultProxy>
+    <proxy  proxyaddress="http://127.0.0.1:8888" />
+  </defaultProxy>
 </system.net>
 ```
 

@@ -7,12 +7,12 @@ subclass: 'post'
 author: brig
 title: "How to Convert Integers to Strings in C#"
 date: "2007-08-31"
-tags: 
+tags:
   - "net"
   - "c"
 ---
 
-I've been working with converting strings to integers and have a few options at my disposal. 
+I've been working with converting strings to integers and have a few options at my disposal.
 
 In the past I've bounce between using Convert.Int32(string) and Int.Parse(string). I've decided to look into what really goes on under the covers between these different options.
 

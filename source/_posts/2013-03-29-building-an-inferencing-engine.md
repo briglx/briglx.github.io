@@ -21,7 +21,7 @@ I'm playing around with the idea of building an [inference engine](http://en.wik
 <AugustCoppola> <isParentOf> <NicolasCage>
 ```
 
-I can get a result from the following query even though this record doesn't exist. 
+I can get a result from the following query even though this record doesn't exist.
 ```xml
 ? <isChildOf> <AugustCoppola>
 ```

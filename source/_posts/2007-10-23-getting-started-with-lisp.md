@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Getting Started with Lisp"
 date: "2007-10-23"
-tags: 
+tags:
   - "lisp"
 ---
 
@@ -27,7 +27,7 @@ The secret to the grid is to look for your OS in left column and your processor 
 
 ## Stand your Ground
 
-Running the `sbcl.exe` executable and firing up Lisp for the first time is a little daunting. You'll get a sappy message about a Kitten of Death and then just a `*` prompt, almost mocking you saying 
+Running the `sbcl.exe` executable and firing up Lisp for the first time is a little daunting. You'll get a sappy message about a Kitten of Death and then just a `*` prompt, almost mocking you saying
 
 > Here's your Lisp environment...now what are you going to do?
 

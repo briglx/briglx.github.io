@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "First Impressions of Google App Engine"
 date: "2009-02-01"
-tags: 
+tags:
   - "app-engine"
   - "python"
 ---

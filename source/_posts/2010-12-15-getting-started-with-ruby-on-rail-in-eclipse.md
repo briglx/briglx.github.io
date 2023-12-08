@@ -26,24 +26,24 @@ sudo apt-get install ruby-full
     puts "Hello there!"
     ```
     - Run as Ruby Script
-- Install Rubygem 
+- Install Rubygem
     ```ruby
-    wget http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz 
-    tar zxvf rubygems-1.3.7.tgz 
-    cd rubygems-1.3.7 
-    ruby setup.rb 
-    ln -s /usr/bin/gem1.8 /usr/local/bin/gem 
+    wget http://production.cf.rubygems.org/rubygems/rubygems-1.3.7.tgz
+    tar zxvf rubygems-1.3.7.tgz
+    cd rubygems-1.3.7
+    ruby setup.rb
+    ln -s /usr/bin/gem1.8 /usr/local/bin/gem
     ```
 
 ## Install SQLite and Rails
 
 ```bash
 # Install SQLite
-sudo apt-get install sqlite3 libsqlite3-dev 
+sudo apt-get install sqlite3 libsqlite3-dev
 sudo gem install sqlite3-ruby
 
 # Now Rails
-gem install rails 
+gem install rails
 ```
 
 ## Configure Eclipse to Create Rails Projects

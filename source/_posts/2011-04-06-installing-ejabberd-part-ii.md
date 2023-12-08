@@ -7,61 +7,61 @@ subclass: 'post'
 author: brig
 title: "Installing Ejabberd - Part II"
 date: "2011-04-06"
-tags: 
+tags:
   - "ejabberd"
   - "path"
   - "tutorial"
 ---
 
-So my [first attempt]({% post_url 2011-04-06-installing-ejabberd %}) at installing ejabberd ended with the app not being able to start up. 
+So my [first attempt]({% post_url 2011-04-06-installing-ejabberd %}) at installing ejabberd ended with the app not being able to start up.
 
 I think this could be due to the fact that I was monkeying around with adding the ejabberd user and group and also the possibility of a bad setup because `/usr/sbin` isn't in the path. So I'm going to try again on a new clean server.
 
 1. First I made sure the `/usr/sbin` was in the path.
-    - Edit `/etc/profile` to include the path 
+    - Edit `/etc/profile` to include the path
     ```bash
-    PATH=$PATH:/usr/sbin 
+    PATH=$PATH:/usr/sbin
     export PATH
     ```
     - Edit roots `~/.bash_profile`
-    ```bash    
-    PATH=$PATH:/usr/sbin 
+    ```bash
+    PATH=$PATH:/usr/sbin
     export PATH
     ```
 2. Download and install. See [first attempt]({% post_url 2011-04-06-installing-ejabberd %})
     ```bash
-    sudo ./ejabberd-2.1.6-linux-x86_64-installer.bin 
-    Installation Directory [/opt/ejabberd-2.1.6]: 
+    sudo ./ejabberd-2.1.6-linux-x86_64-installer.bin
+    Installation Directory [/opt/ejabberd-2.1.6]:
     Cluster [y/N]: n
     ```
 3. Run
     - I'm going to to a test run with just the admin. I don't want to create an ejabberd user yet.
 4. Start service
     ```bash
-    sudo /opt/ejabberd-2.1.6/bin/ejabberdctl start 
-    sudo /opt/ejabberd-2.1.6/bin/ejabberdctl status 
-    # The node ejabberd@localhost is started with status: 
+    sudo /opt/ejabberd-2.1.6/bin/ejabberdctl start
+    sudo /opt/ejabberd-2.1.6/bin/ejabberdctl status
+    # The node ejabberd@localhost is started with status:
     # started ejabberd 2.1.6 is running in that node
     ```
 
     I don't see a crash dump so this looks good.
 5. Add an account with admin privileges
-    - Add user 
+    - Add user
     ```bash
     sudo /bin/ejabberdctl register testuser ca7bf9e4b2.devols.phoenix.edu Welcome1
     ```
-    - Edit configuration 
+    - Edit configuration
     ```
     {
-        acl, 
-        admins, 
-        {user, "admin", "ca7bf9e4b2.devols.phoenix.edu"}, 
+        acl,
+        admins,
+        {user, "admin", "ca7bf9e4b2.devols.phoenix.edu"},
         {user, "brlamore", "ca7bf9e4b2.devols.phoenix.edu"}
     }
     ```
-        
+
     Hmm. That didn't work very well for me. I keep getting the error
-        
+
     {% raw %}
     ```bash
     application: ejabberd
@@ -81,7 +81,7 @@ I think this could be due to the fact that I was monkeying around with adding th
     type: temporary
     ```
     {% endraw %}
-    Let's just have one admin account    
+    Let's just have one admin account
     - Restart
 7. Connect with Client
     - Added second user

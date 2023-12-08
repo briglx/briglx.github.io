@@ -28,7 +28,7 @@ RUN npm install
 RUN npm install -g gulp-cli
 
 # Helpful aliases
-RUN echo 'alias ll='"'"'ls $LS_OPTIONS -al'"'"'' >> /etc/bash.bashrc 
+RUN echo 'alias ll='"'"'ls $LS_OPTIONS -al'"'"'' >> /etc/bash.bashrc
 
 # Create app directory
 RUN mkdir -p /usr/src/app

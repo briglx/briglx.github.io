@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Conference and Webinar"
 date: "2012-12-13"
-tags: 
+tags:
   - "mongodb"
   - "mongosv"
   - "talks"

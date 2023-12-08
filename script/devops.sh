@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 ######################################################
-# Build jekyle site. 
+# Build jekyle site.
 # Globals:
 #
 # Params
@@ -49,25 +49,25 @@ echo "Project root: $PROJ_ROOT_PATH"
 action="${1:-build}"
 
 echo
-echo 
+echo
 pwd
 ls -al
 echo ls "${PROJ_ROOT_PATH}/source"
-echo 
+echo
 
 case "$action" in
   build)
     # Add build logic here
     echo "Running build..."
-    # Rebuild css 
+    # Rebuild css
     echo cd "${PROJ_ROOT_PATH}/source"
     cd "${PROJ_ROOT_PATH}/source"
     npm install
     gulp build
 
     # build site
-    bundle install 
-    bundle exec jekyll build 
+    bundle install
+    bundle exec jekyll build
     # Tell github not to create site
     touch "${PROJ_ROOT_PATH}/_site/.nojekyll"
 
@@ -77,13 +77,13 @@ case "$action" in
   serve)
     # Add serve logic here
     echo "Running serve..."
-    # Rebuild css 
+    # Rebuild css
     cd "${PROJ_ROOT_PATH}/source"
     npm install
     gulp build
 
     # build site
-    bundle install 
+    bundle install
     bundle exec jekyll serve
     # Tell github not to create site
     touch "${PROJ_ROOT_PATH}/_site/.nojekyll"

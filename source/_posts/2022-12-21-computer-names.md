@@ -4,7 +4,7 @@ current: post
 navigation: True
 title: Computer Names
 date: 2022-12-21
-tags: 
+tags:
   - names
 class: post-template
 subclass: 'post'

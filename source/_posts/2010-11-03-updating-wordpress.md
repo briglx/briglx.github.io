@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Updating Wordpress"
 date: "2010-11-03"
-tags: 
+tags:
   - "wordpress"
 ---
 
@@ -15,11 +15,11 @@ Well, since I've been playing around with wordpress, I thought I would update it
 
 1. Backup Files
   ```bash
-  mkdir wpbackup 
-  cp -r /var/www/wordpress /var/www/wpbackup 
+  mkdir wpbackup
+  cp -r /var/www/wordpress /var/www/wpbackup
   ```
 2. Backup Database
-  ```bash 
+  ```bash
   mysqldump --add-drop-table -h localhost -u root -p wordpress | bzip2 -c > blog.bak.sql.bz2
   ```
 3. Disable Plugins. Check!

@@ -4,7 +4,7 @@ current: post
 navigation: True
 title: Analyzing Azure Pricing
 date: 2023-11-10
-tags: 
+tags:
   - cloud
   - cost
   - optimization
@@ -40,7 +40,7 @@ The question I get asked most often is how do I analyize my costs. I like to use
 
 ## Azure APIs
 
-These are the primary APIs I use to analyze Azure costs. 
+These are the primary APIs I use to analyze Azure costs.
 
 | API | URL | Description |
 | --- | --- | --- |
@@ -68,7 +68,7 @@ The key columns are from the AmortizedCost dataset:
 
 ![Compute - RI Covered]({{ site.url }}{{ site.baseurl }}/assets/images/20231110-recipe-compute-ri-covered.png)
 
-This an example Recipe, which I've talked about in [Cost Optimization Strategic Thinking](https://www.brigl.com/blog/2021/06/16/cost-optimization-strategic-thinking/), where the goal is to have 90% of candidate VMs covered by an RI.  
+This an example Recipe, which I've talked about in [Cost Optimization Strategic Thinking](https://www.brigl.com/blog/2021/06/16/cost-optimization-strategic-thinking/), where the goal is to have 90% of candidate VMs covered by an RI.
 
 The next step is to define the scheme and the source for the data.
 
@@ -104,18 +104,18 @@ So we need to figure out where to source the data for each of these fields.
     * Use these fields during the previous time period and predict what the next time period quantity will be.
     * Use the `UnitPrice` from the `Negotiated Price Sheet API` for any servcices not found in the historic billing data.
     * The Price Sheet data includes discounted prices but not reservations.
-* optimal_cost 
+* optimal_cost
     * Find the ri price for each of the vm types in `ri_candidate_vm_count`
     * Use `EffectivePrice` from  `Exported Billing Data` AmortizedCost or calculate the percetange discount from the `UnitPrice` from the Retail Price Sheet API
 
 
 ## References
-* [Understand Cost Management data](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-cost-mgt-data) 
+* [Understand Cost Management data](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/understand-cost-mgt-data)
 [Azure Retail Prices overview](https://learn.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices?view=rest-cost-management-2023-08-01)
 * [Cost Management APIs overview](https://learn.microsoft.com/en-us/azure/cost-management-billing/automate/migrate-ea-reporting-arm-apis-overview)
 * [Reporting APIs for Enterprise customers - Price Sheet](https://learn.microsoft.com/en-us/rest/api/billing/enterprise/billing-enterprise-api-pricesheet)
 * [Retrieve large cost datasets recurringly with exports from Cost Management](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/ingest-azure-usage-at-scale)
-* [Create and Manage Exported Data](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-export-acm-data?tabs=azure-portal) 
+* [Create and Manage Exported Data](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-export-acm-data?tabs=azure-portal)
 * [Understand cost details fields](https://learn.microsoft.com/en-us/azure/cost-management-billing/automate/understand-usage-details-fields?source=recommendations)
 * [Azure Cost Management REST API](https://docs.microsoft.com/en-us/rest/api/cost-management/)
 * [Azure Cost Management REST API - Retail Prices](https://docs.microsoft.com/en-us/rest/api/cost-management/retail-prices/azure-retail-prices?view=rest-cost-management-2023-08-01)

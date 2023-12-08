@@ -7,11 +7,11 @@ subclass: 'post'
 author: brig
 title: "Installing Hadoop Cluster"
 date: "2010-12-08"
-tags: 
+tags:
   - "hadoop"
 ---
 
-I have four VM machines in dev and I want to configure my own [hadoop](http://hadoop.apache.org) cluster to use as a tool and analysis. 
+I have four VM machines in dev and I want to configure my own [hadoop](http://hadoop.apache.org) cluster to use as a tool and analysis.
 
 I'm going to follow the general process out lined by [hadoop's instructions](http://hadoop.apache.org/common/docs/current/cluster_setup.html) and [yahoo help](http://developer.yahoo.com/hadoop/tutorial/module7.html#config-small), [here](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-multi-node-cluster/) and [here](http://www.cloudera.com/blog/2009/08/hadoop-default-ports-quick-reference/).
 
@@ -24,12 +24,12 @@ I'm going to follow the general process out lined by [hadoop's instructions](htt
 I found that hadoop has [default ports](http://www.cloudera.com/blog/2009/08/hadoop-default-ports-quick-reference/) that need to be opened between servers before it will work.
 
 ```bash
-# Add local ssh support on each machine 
-ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa 
+# Add local ssh support on each machine
+ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
 cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 
 # Configure master to talk to each slave.
-a.brlamore@master:~$ ssh-copy-id -i $HOME/.ssh/id_rsa.pub a.brlamore@slave 
+a.brlamore@master:~$ ssh-copy-id -i $HOME/.ssh/id_rsa.pub a.brlamore@slave
 
 # Configure each slave to talk to the master.
 a.brlamore@slave:~$ ssh-copy-id -i $HOME/.ssh/id_rsa.pub a.brlamore@master
@@ -55,9 +55,9 @@ a.brlamore@slave:~$ ssh-copy-id -i $HOME/.ssh/id_rsa.pub a.brlamore@master
 ```bash
 vi /conf/slaves
 
-ali-graph002.devapollogrp.edu 
-ali-graph003.devapollogrp.edu 
-ali-graph004.devapollogrp.edu 
+ali-graph002.devapollogrp.edu
+ali-graph003.devapollogrp.edu
+ali-graph004.devapollogrp.edu
 ```
 **Site Configuration**
 - Set the `JAVA_HOME` in `conf/hadoop-env.sh` to `export JAVA_HOME=/usr/java/default`
@@ -95,7 +95,7 @@ Set values in `conf/hdfs-site.xml`
 </property>
 -->
 </configuration>
-```    
+```
 
 Set values in `conf/mapred-site.xml`
 

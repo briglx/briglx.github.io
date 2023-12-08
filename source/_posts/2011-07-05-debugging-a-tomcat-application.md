@@ -7,14 +7,14 @@ subclass: 'post'
 author: brig
 title: "Debugging a Tomcat Application"
 date: "2011-07-05"
-tags: 
+tags:
   - "cargo"
   - "eclipse"
   - "maven"
   - "tomcat"
 ---
 
-I primarily develop web applications but have been out of it for a while and needed to look at old code for a reminder. Well here is how I configure a project to debug in tomcat. 
+I primarily develop web applications but have been out of it for a while and needed to look at old code for a reminder. Well here is how I configure a project to debug in tomcat.
 
 There are two parts to debugging the application
 
@@ -38,7 +38,7 @@ There are two parts to debugging the application
         <container>
             <containerId>tomcat6x</containerId>
             <type>installed</type>
-            <home>${catalina.home}</home>                                 
+            <home>${catalina.home}</home>
         </container>
         <configuration>
             <home>target/tomcat6x</home>
@@ -57,7 +57,7 @@ There are two parts to debugging the application
                     </properties>
                 </deployable>
             </deployables>
-        </configuration>              
+        </configuration>
     </configuration>
 </plugin>
 ```
@@ -78,7 +78,7 @@ Create a new Debug Configuration in Eclipse
 To debug just do the following now:
 
 - From the command line in the project run
-```bash    
+```bash
 mvn -Dcargo.wait=true cargo:start
 ```
 - From eclipse select `Debug - MyWebApp`

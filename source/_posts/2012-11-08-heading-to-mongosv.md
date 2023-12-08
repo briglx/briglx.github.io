@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Heading to MongoSV"
 date: "2012-11-08"
-tags: 
+tags:
   - "mongodb"
   - "mongosv"
   - "talks"

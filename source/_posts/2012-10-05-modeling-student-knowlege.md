@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Modeling Student Knowledge"
 date: "2012-10-05"
-tags: 
+tags:
   - "coursera"
   - "pgm"
   - "probability"

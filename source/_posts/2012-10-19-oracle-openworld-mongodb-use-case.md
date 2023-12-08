@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Oracle Openworld - MongoDB Use Case"
 date: "2012-10-19"
-tags: 
+tags:
   - "mongodb"
   - "talks"
 ---

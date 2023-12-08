@@ -8,7 +8,7 @@ subclass: 'post'
 author: brig
 title: "Boilerplate Raspbian Setup"
 date: "2018-08-28"
-tags: 
+tags:
   - "software"
   - "linux"
   - "pi"
@@ -69,17 +69,17 @@ network={
         PasswordAuthentication no
         ```
     - Restart ssh server
-        
+
         ```bash
         sudo /etc/init.d/ssh restart
         ```
 - Remove User pi
-    
+
     ```bash
     sudo deluser -remove-home pi
     ```
 - Add alias to `~/.bashrc`
-    
+
     ```bash
     alias ll='ls -al'
     ```

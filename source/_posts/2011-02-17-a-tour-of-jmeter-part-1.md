@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "A Tour of JMeter - Part 1"
 date: "2011-02-17"
-tags: 
+tags:
   - "jmeter"
 ---
 
@@ -25,10 +25,10 @@ This tour is broken into several sections
 You can quickly start recording web interactions in less than 10 min with the tool. Run these commands in your console.
 
 ```bash
-wget http://apache.opensourceresources.org//jakarta/jmeter/binaries/jakarta-jmeter-2.4.tgz 
-tar zxvf jakarta-jmeter-2.4.tgz 
+wget http://apache.opensourceresources.org//jakarta/jmeter/binaries/jakarta-jmeter-2.4.tgz
+tar zxvf jakarta-jmeter-2.4.tgz
 cd jakarta-jmeter-2.4 $ bin/jmeter
-``` 
+```
 
 Bam! That fast.
 
@@ -43,7 +43,7 @@ Recording is just configuring JMeter to listen to the browser and configuring th
 - Add A Proxy in JMeter
   - Right Click on the Workbench and select **Non-Test Element**
   - Select **HTTP Proxy Server**
-  
+
   You can configure the Proxy Server different ways. Just stick to the defaults for now.
 - Add a Place to capture the recording
   - Right Click on the Workbench and select **Logic Controller**

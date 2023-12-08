@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Preventing Groupthink"
 date: "2009-05-23"
-tags: 
+tags:
   - "management"
 ---
 

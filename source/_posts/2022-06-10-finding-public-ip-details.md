@@ -4,7 +4,7 @@ current: post
 navigation: True
 title: Finding Public IP Details
 date: 2022-06-10
-tags: 
+tags:
   - cloud
   - kusto
   - azure
@@ -27,22 +27,22 @@ The goal is to see the different types of resources public ips are associated li
 After playing around with the query language and discovering that it doesn't implement the entire language, no `let` keyword, I came up with the following:
 
 ```kusto
-resources 
+resources
 | where type =~ 'Microsoft.Network/publicIPAddresses'
-| project  
-    id, 
+| project
+    id,
     joinId = iff(isempty(properties.ipConfiguration.id), '', tolower(strcat('/', strcat_array(array_slice(split(properties.ipConfiguration.id,'/'), 1, -3), '/')))),
     orphaned = iff(isempty(properties.ipConfiguration.id), true, false),
-    pubipname = name, 
+    pubipname = name,
     resourceGroup,
     ipAddress = properties.ipAddress
 | extend _provider = iff(orphaned, dynamic([{}]), split(split(joinId, 'providers')[1], '/'))
 | extend associated_to_provider = iif(orphaned, '', strcat_delim('/',_provider[1], _provider[2]))
 | join kind=leftouter(
     resources
-    | project id = tolower(id), name 
+    | project id = tolower(id), name
     ) on $left.joinId == $right.id
-| project 
+| project
     id, name = pubipname, ipAddress, orphaned,  associated_to_name = name, associated_to_provider, associated_to_id = joinId
 ```
 

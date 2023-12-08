@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Extract Terms from Text"
 date: "2014-01-10"
-tags: 
+tags:
   - "nlp"
   - "python"
 ---
@@ -28,7 +28,7 @@ extractor = extract.TermExtractor()
 
 text ="One company that successfully leverages a generic strategy is Costco Wholesale and that generic strategy is low-cost leadership. The company's mission is to provide popular products to customers at the lowest prices the market can offer. One way that Costco has been successful at this is by cutting expenses. Actual Costco stores are literally warehouses full of products. The company saves on many of the cosmetic aspects of typical retail stores. Additionally, most Costco stores are open 10 am to 8:30 pm during the week and closing earlier on the weekends. Less operating time saves money. Additionally, Costco operates on a membership program. This means that someone must be a member to enter the store and purchase the merchandise. One staff member stands at the entrance checking membership cards as members enter and other staff members stand at the exit matching receipts with purchases. This design allows the company to cut down on staffing costs by not needing as many employees wandering the large warehouses."
 
-# Show terms from text 
+# Show terms from text
 taggedTerms = sorted(extractor(text))
 
 print(taggedTerms)

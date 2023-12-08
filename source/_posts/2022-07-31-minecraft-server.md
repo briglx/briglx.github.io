@@ -4,7 +4,7 @@ current: post
 navigation: True
 title: Minecraft Server
 date: 2022-07-31
-tags: 
+tags:
   - cloud
   - azure
   - minecraft
@@ -46,8 +46,8 @@ cd /srv/minecraft-server
 sudo vi /etc/systemd/system/minecraft.service
 sudo chmod 664 /etc/systemd/system/minecraft.service
 
-[Unit] 
-Description=start and stop the minecraft-server 
+[Unit]
+Description=start and stop the minecraft-server
 
 [Service]
 WorkingDirectory=/srv/minecraft-server
@@ -72,7 +72,7 @@ sudo systemctl enable minecraft.service
 sudo systemctl start minecraft.service
 
 # Get status
-systemctl status minecraft.service 
+systemctl status minecraft.service
 
 
 ```

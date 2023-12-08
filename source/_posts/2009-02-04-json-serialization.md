@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Json Serialization"
 date: "2009-02-04"
-tags: 
+tags:
   - "net"
   - "json"
 ---

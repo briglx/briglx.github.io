@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Getting Started with Cacti"
 date: "2011-03-11"
-tags: 
+tags:
   - "cacti"
 ---
 
@@ -18,14 +18,14 @@ These steps are a mix of my adventure and my attempt to document how to setup ca
 1. **Install Required Packages**
     - Run the commands
     ```bash
-    sudo yum install 
-    sudo yum install httpd 
-    sudo yum install php 
-    sudo yum install php-mysql 
-    sudo yum install php-snmp 
-    sudo yum install mysql 
-    sudo yum install mysql-server 
-    sudo yum install net-snmp 
+    sudo yum install
+    sudo yum install httpd
+    sudo yum install php
+    sudo yum install php-mysql
+    sudo yum install php-snmp
+    sudo yum install mysql
+    sudo yum install mysql-server
+    sudo yum install net-snmp
     sudo yum install net-snmp-utils
     ```
 2. **Verify that httpd and mysqld**
@@ -34,36 +34,36 @@ These steps are a mix of my adventure and my attempt to document how to setup ca
     - Verify modules are loaded `$ php -m`
     - Trouble. When I run the command, I get a list of errors like the following for (`dbase.so`, `gd.so`, `ldap.so`, `mysql.so`, `mysqli.so`, `pdo.so`, `pdo_mysql.so`, `pdo_sqlite.so`, `snmp.so`)
     ```bash
-    PHP Startup: 
-    Unable to load dynamic library /etc/php.d/msql.so: 
-    cannot open shared object file: 
+    PHP Startup:
+    Unable to load dynamic library /etc/php.d/msql.so:
+    cannot open shared object file:
     No such file or directory in Unknown on line 0
     ```
     - It's looking for the file `/etc/php.d/msql.so` but that file lives in `/usr/lib64/php/modules/`
-    - Point where the modules are and restart apache        
+    - Point where the modules are and restart apache
     ```bash
     vi /etc/php.ini
     # Change the line to
     extension_dir = "/usr/lib64/php/modules"
     # Restart apache
-    /usr/sbin/apachectl stop 
+    /usr/sbin/apachectl stop
     /usr/sbin/apachectl start
     ```
-    - More errors. I'm still getting the errors 
+    - More errors. I'm still getting the errors
     ```bash
-    PHP Warning: PHP Startup: 
-    Unable to load dynamic library '/usr/lib64/php/modules/msql.so' - 
-    /usr/lib64/php/modules/msql.so: cannot open shared object file: 
-    No such file or directory in Unknown on line 0 PHP Warning: 
+    PHP Warning: PHP Startup:
+    Unable to load dynamic library '/usr/lib64/php/modules/msql.so' -
+    /usr/lib64/php/modules/msql.so: cannot open shared object file:
+    No such file or directory in Unknown on line 0 PHP Warning:
     Module 'snmp' already loaded in Unknown on line 0
     ```
-    - Let's look in php.ini. 
+    - Let's look in php.ini.
     ```bash
-    grep ^#*ex /etc/php.ini 
-    expose_php = On 
-    #extension_dir = "/etc/php.d" 
-    extension_dir = "/usr/lib64/php/modules" 
-    extension=msql.so 
+    grep ^#*ex /etc/php.ini
+    expose_php = On
+    #extension_dir = "/etc/php.d"
+    extension_dir = "/usr/lib64/php/modules"
+    extension=msql.so
     extension=snmp.so
     ```
     - I see where I changed the `extension_dir`. But I also see two explicit extensions. One for `msql` and `snmp`. Hmm those match my errors. I wonder if that could be the issue. I'm going to comment them out.
@@ -72,38 +72,38 @@ These steps are a mix of my adventure and my attempt to document how to setup ca
 4. **Configure Apache**
     - Looks like it was already configured
 5. **Configure MySql**
-    - Set Admin Password and Create Cacti Schema. (Replace `MY_PASSWORD` with whatever password you want) 
+    - Set Admin Password and Create Cacti Schema. (Replace `MY_PASSWORD` with whatever password you want)
     ```bash
-    mysqladmin --user=root password MY_PASSWORD 
-    mysqladmin --user=root --password reload 
+    mysqladmin --user=root password MY_PASSWORD
+    mysqladmin --user=root --password reload
     mysqladmin --user=root --password=MY_PASSWORD create cacti
     ```
 6. **Install Cacti**
-    - Create new user 
+    - Create new user
     ```bash
-    useradd cactiuser 
-    groupadd cacti 
+    useradd cactiuser
+    groupadd cacti
     usermod -a -G cacti cactiuser
     ```
-    - Setup Folder Structure 
+    - Setup Folder Structure
     ```bash
-    mkdir /opt/cacti 
-    cd /opt/cacti 
-    wget http://www.cacti.net/downloads/cacti-0.8.7g.tar.gz 
-    tar xzvf cacti-0.8.7g.tar.gz 
-    ln -s /opt/cacti/current/ /opt/cacti/cacti-0.8.7g 
+    mkdir /opt/cacti
+    cd /opt/cacti
+    wget http://www.cacti.net/downloads/cacti-0.8.7g.tar.gz
+    tar xzvf cacti-0.8.7g.tar.gz
+    ln -s /opt/cacti/current/ /opt/cacti/cacti-0.8.7g
     chomod cactiuser:cacti -R /opt/cacti
     ```
 7. **Verify Cacti Installation**
     - Navigating to `http://hostname/cacti/` returned a `404`
-    - Need to made a symbolic link 
+    - Need to made a symbolic link
     ```bash
     ln -s /var/www/html/cacti /opt/cacti/current
     ```
-    - Now when I navigate to `http://hostname/cacti/` I get the following error: 
+    - Now when I navigate to `http://hostname/cacti/` I get the following error:
     ```bash
-    FATAL: Cannot connect to MySQL server on 'localhost'. 
-    Please make sure you have specified a valid MySQL database name 
+    FATAL: Cannot connect to MySQL server on 'localhost'.
+    Please make sure you have specified a valid MySQL database name
     in 'include/config.php'
     ```
     - Looking at the file, I put the password in wrong. But I now see the Cacti Installation Screen. I'm so happy.
@@ -116,20 +116,20 @@ These steps are a mix of my adventure and my attempt to document how to setup ca
         - invalid path: `snmpget`
         - invalid path: `snmpbulkwalk`
         - invalid path: `snmpgetnext`
-    - Install `rddtools` 
+    - Install `rddtools`
     ```bash
-    sudo yum install cairo-devel libxml2-devel pango-devel pango libpng-devel freetype freetype-devel libart_lgpl-devel 
-    cd /opt sudo wget http://oss.oetiker.ch/rrdtool/pub/rrdtool-1.4.5.tar.gz 
-    sudo tar -zxvf rrdtool-1.4.5.tar.gz 
-    cd rrdtool-1.4.5 
-    # export PKG_CONFIG_PATH=/usr/lib/pkgconfig/ ./configure --prefix=/usr/local/rrdtool 
-    sudo make 
-    sudo make install 
+    sudo yum install cairo-devel libxml2-devel pango-devel pango libpng-devel freetype freetype-devel libart_lgpl-devel
+    cd /opt sudo wget http://oss.oetiker.ch/rrdtool/pub/rrdtool-1.4.5.tar.gz
+    sudo tar -zxvf rrdtool-1.4.5.tar.gz
+    cd rrdtool-1.4.5
+    # export PKG_CONFIG_PATH=/usr/lib/pkgconfig/ ./configure --prefix=/usr/local/rrdtool
+    sudo make
+    sudo make install
     cp /opt/rrdtool-1.4.5/bin/* usr/local/bin/
     ```
     - Install `snmpwalk`
         - After looking around I need to install `net-snmp-utils`. I added this to the initial installation items above. Lame.
-    
+
 9. **Done!** ![Cacti]({{ site.url }}{{ site.baseurl }}/assets/images/cacti.png)
 
 I'll configure cacti in another post. This was too much to get it installed.
@@ -137,7 +137,7 @@ I'll configure cacti in another post. This was too much to get it installed.
 ## Extra
 
 1. Install MySql Workbench
-    - Download and install  
+    - Download and install
     ```bash
     sudo dpkg -i mysql-workbench-gpl-5.2.32-1ubu1010-i386.deb
     # It said I had missing references. libzip1 and python-pysqlite2

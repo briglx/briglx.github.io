@@ -7,12 +7,12 @@ subclass: 'post'
 author: brig
 title: ".Net Development Trees part II"
 date: "2007-08-16"
-tags: 
+tags:
   - "net"
   - "talks"
 ---
 
-I've found that taking thought in setting up your project development tree can really help with unit testing and having continuous integration for you projects. 
+I've found that taking thought in setting up your project development tree can really help with unit testing and having continuous integration for you projects.
 
 This is the second installment of a presentation I put on during Desert Code Camp.
 
@@ -32,7 +32,7 @@ The following tools were used during the presentation and I'll go over how each 
 
 ## Sample Project
 
-Using Visual Studio 2005, I created a solution called Castor with several projects in it. The entire solution is in the nice development tree structure under the `/castor/src/` folder. Here is what the solution looks like. 
+Using Visual Studio 2005, I created a solution called Castor with several projects in it. The entire solution is in the nice development tree structure under the `/castor/src/` folder. Here is what the solution looks like.
 ![Castor Project]({{ site.url }}{{ site.baseurl }}/assets/images/CropperCapture%5B7%5D.png)
 
 ## First Step: Build
@@ -70,6 +70,6 @@ The last thing to do in order to get the project to build with a single click is
 @tools\nant\NAnt.exe -buildfile:Castor.build %*
 ```
 
-And with that, we can open up a prompt at our project root and type `go`. We should get something like the following with a nice little 'Build Successful' at the end. ![Success]({{ site.url }}{{ site.baseurl }}/assets/images/CropperCapture%5B10%5D.png) 
+And with that, we can open up a prompt at our project root and type `go`. We should get something like the following with a nice little 'Build Successful' at the end. ![Success]({{ site.url }}{{ site.baseurl }}/assets/images/CropperCapture%5B10%5D.png)
 
 That does it for this installment. Next I'll dig into adding value to our build script by including auto unit testing.

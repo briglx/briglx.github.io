@@ -4,7 +4,7 @@ current: post
 navigation: True
 title: Cost Optimization Maturity Model
 date: 2022-06-10
-tags: 
+tags:
   - cloud
   - cost
   - optimization
@@ -15,7 +15,7 @@ subclass: 'post'
 author: brig
 ---
 
-In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization. 
+In my experience working with Azure global enterprise customers, I see organizations move through several phases of cloud cost-optimization.
 
 ## Phase 1 - Freaking Out
 
@@ -123,7 +123,7 @@ Organizations stay in Phase 3 for various reasons before moving out. The primary
 
 ![Phase 4 - New Tool]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-phase4.png)
 
-When I faced this phase several years ago, I designed and [implemented a solution](https://github.com/briglx/AzureBillingReports) using my background in big data. After deploying it, I interviewed colleagues in other large organizations asking how they solved the problem. The responses were consistent with my solution's modern data warehouse pipeline architecture. 
+When I faced this phase several years ago, I designed and [implemented a solution](https://github.com/briglx/AzureBillingReports) using my background in big data. After deploying it, I interviewed colleagues in other large organizations asking how they solved the problem. The responses were consistent with my solution's modern data warehouse pipeline architecture.
 
 ![Big Data Enterprise Solution]({{ site.url }}{{ site.baseurl }}/assets/images/20220713-cloud-maturity-big-data-arch.png)
 
@@ -152,7 +152,7 @@ A good leader does not want to arbitrarily cut costs because it negatively impac
 
 Unpredictable cost-cutting impacts teams by taking away time from activities that create business value. In addition, cost-cutting forces cost-efficient teams to sacrifice reliability, functionality, or security to meet the cost-cutting goals.
 
-Measuring cost is an important part of running a successful business but is the wrong measurement for the various departments delivering business impact. Executives, operation teams, development teams, and analysts have different needs. 
+Measuring cost is an important part of running a successful business but is the wrong measurement for the various departments delivering business impact. Executives, operation teams, development teams, and analysts have different needs.
 
 Generally, executives have no problem spending money on an investment they trust. The cycle of cost-cutting and organic growth indicates a lack of confidence in the cloud and the team managing it. Leaders need key performance indicators (KPIs)s focused on business best practices to help them trust the cloud investment.
 
@@ -162,7 +162,7 @@ Development teams need reports that show how to comply with standards, implement
 
 Analysts need tools to explore the data and find edge cases to inform future strategies.
 
-Each department has different priorities around understading cloud usage and cost, performance tracking, and cloud optimization. The key is to move from arbitrary cost-cutting to a clear strategy. 
+Each department has different priorities around understading cloud usage and cost, performance tracking, and cloud optimization. The key is to move from arbitrary cost-cutting to a clear strategy.
 
 ### Define a Strategy
 
@@ -192,7 +192,7 @@ See [https://aka.ms/architecture/framework](https://aka.ms/architecture/framewor
 
 The best visualizations provide essential information each department needs. Reports designed to build trust for executives should show the current status of a best practice and the historical progress. Provide visualization that provides information needed to make real-time decisions.
 
-Organizations move out of phase 5 when it replaces the mindset of seeking-and-destroying costs to strategically monitor and measuring best practices. 
+Organizations move out of phase 5 when it replaces the mindset of seeking-and-destroying costs to strategically monitor and measuring best practices.
 
 ## Phase 6 - Recipes
 

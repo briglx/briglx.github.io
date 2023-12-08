@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Keeping the Blog Alive"
 date: "2007-07-02"
-tags: 
+tags:
   - "blogging"
   - "learning"
 ---

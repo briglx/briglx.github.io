@@ -7,13 +7,13 @@ subclass: 'post'
 author: brig
 title: "How Apollo Group Evaluated MongoDB White Paper"
 date: "2012-10-01"
-tags: 
+tags:
   - "mongodb"
   - "talks"
 cover: /assets/images/mongopaper-1920x360.png
 ---
 
-Earlier this year, I did a POC around MongoDB.  
+Earlier this year, I did a POC around MongoDB.
 
 The results were really interesting and I approached [10Gen](https://www.mongodb.com/press/10gen-announces-company-name-change-mongodb-inc) if they would like to take the findings to a larger audience. It turns out there is a lot of interest in the community on evaluating MongoDB.
 

@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "The Cloud is Cool"
 date: "2011-05-12"
-tags: 
+tags:
   - "ec2"
   - "wordpress"
 ---

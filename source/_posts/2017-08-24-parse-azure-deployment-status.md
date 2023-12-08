@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Parse Azure Deployment Status"
 date: "2017-08-24"
-tags: 
+tags:
   - "software"
   - "azure"
   - "python"

@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "AjaxWorld - Day 3"
 date: "2008-10-23"
-tags: 
+tags:
   - "speaking"
   - "web-design"
 ---

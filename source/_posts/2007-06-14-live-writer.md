@@ -7,7 +7,7 @@ subclass: 'post'
 author: brig
 title: "Live Writer"
 date: "2007-06-14"
-tags: 
+tags:
   - "blogging"
 ---
 
