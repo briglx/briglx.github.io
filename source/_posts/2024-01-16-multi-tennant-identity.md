@@ -50,7 +50,7 @@ So be sure to configure auditing of what accounts have access to the tenant.  Th
 
 I have a project where I created a POC for a similar problem here [https://github.com/briglx/python-b2c-app](Multi-tenant SaaS).
 
-![Multtenant SaaS]({{ site.url }}{{ site.baseurl }}/assets/images/220240116-multitenant-identity-architecture.png)
+![Multtenant SaaS]({{ site.url }}{{ site.baseurl }}/assets/images/20240116-multitenant-identity-architecture.png)
 
 This application is hosted in the provider's tenant, but he identities are stored in an Azure AD B2C directory. This directory is then setup to federate with the customer's Azure AD tenant.  This allows the customer to manage the identities in their own tenant.
 
