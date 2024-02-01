@@ -44,7 +44,7 @@ One of the key things to understand is that the user `admin@contoso.com` potenti
 
 If the `admin@contoso.com` were deleted from the `contoso.onlitware.com` tenant then the user would still be able to log in through the `live.com` account.  This is because the `live.com` account is a Microsoft Account and not a local account in the `contoso.onlitware.com` tenant.
 
-So be sure to configure auditing of what accounts have access to the tenant.  This is a good security practice.
+Configure auditing of what accounts have access to the tenant.
 
 ## Potential Architecture
 
@@ -52,7 +52,7 @@ I have a project where I created a POC for a similar problem here [https://githu
 
 ![Multtenant SaaS]({{ site.url }}{{ site.baseurl }}/assets/images/20240116-multitenant-identity-architecture.png)
 
-This application is hosted in the provider's tenant, but he identities are stored in an Azure AD B2C directory. This directory is then setup to federate with the customer's Azure AD tenant.  This allows the customer to manage the identities in their own tenant.
+This application is hosted in the provider's tenant, but the identities are stored in an Azure AD B2C directory. This directory is then setup to federate with the customer's Azure AD tenant.  This allows the customer to manage the identities in their own tenant.
 
 A provider could use this model to allow customers to onboard easily, setup federation, and manage their own identities.  
 
