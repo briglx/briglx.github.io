@@ -8,7 +8,9 @@ author: brig
 title: "Infrastructure as Code Patterns"
 date: "2023-12-08"
 tags:
-  - "blogging"
+  - "Cloud"
+  - "GitHub"
+  - "IaC"
 ---
 
 I've been using a few different patterns for Infrastructure as Code (IaC) and wanted to document them.
