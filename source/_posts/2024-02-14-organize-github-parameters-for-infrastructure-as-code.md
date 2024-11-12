@@ -75,7 +75,7 @@ In the GitHub world there are several places to set variables and parameters.
 
 ## Other Stuff
 | Type  | Capability | Domain | Usage | Example |
-| ----- | --------- | ------ | ----- | ------- |
+| ----- | ---------- | ------ | ----- | ------- |
 | [Environments](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment) | Group Custom Variables and Secrets | HCI/Trigger | Configure environments  | `dev`, `test`, `prod`, `stable`, `canary`, `release` |
 | | Input variables | HCI/Trigger | Parameters passed to an action, resuable workflow, or manually triggered workflow. Parameters that change for each deployment. | `env`, `skip_coverage`, `release_type`, `profile` |
 | Org - Custom [Variables](https://docs.github.com/en/actions/learn-github-actions/variables) | Global variable | Automation Plane | Org wide variable used between repos and workflows. | `DOCKERHUB_REPO`, `APPLE_DEVELOPER_ID`, `DEFAULT_REGION`, `ORG_TENANT_ID` |
