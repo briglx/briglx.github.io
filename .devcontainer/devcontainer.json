@@ -1,30 +1,53 @@
 {
-    // "image": "mcr.microsoft.com/devcontainers/python:3.10",
-    // "image": "mcr.microsoft.com/azure-functions/python:4-python3.10",
-    "build": {
-      "dockerfile": "Dockerfile",
-      "context": ".."
+  // "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  // "image": "mcr.microsoft.com/azure-functions/python:4-python3.10",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bullseye",
+  // "build": {
+  //   "dockerfile": "Dockerfile",
+  //   "context": ".."
+  // },
+  "features": {
+    "ghcr.io/devcontainers/features/ruby:1": {}
+   },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "GitHub.copilot",
+        "github.vscode-github-actions",
+        "hediet.vscode-drawio",
+        "humao.rest-client",
+        "IronGeek.vscode-env",
+        "ms-azuretools.vscode-bicep",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "tamasfe.even-better-toml",
+        "timonwong.shellcheck"
+      ]
     },
-    "features": { },
-    "customizations": {
-      "vscode": {
-        "extensions": [
-          "EditorConfig.EditorConfig",
-          "esbenp.prettier-vscode",
-          "GitHub.copilot",
-          "github.vscode-github-actions",
-          "hediet.vscode-drawio",
-          "IronGeek.vscode-env",
-          "ms-azuretools.vscode-docker",
-          "ms-python.python",
-          "timonwong.shellcheck"
-        ]
+    // Please keep this file in sync with settings in ./.vscode/settings.default.json
+    "settings": {
+      "docker.dockerSocketDiagnostics": true,
+      "editor.formatOnPaste": false,
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "files.trimTrailingWhitespace": true,
+      "python.formatting.provider": "black",
+      "shellcheck.useWorkspaceRootAsCwd": true,
+      "terminal.integrated.profiles.linux": {
+        "zsh": {
+        "path": "/usr/bin/zsh"
+        }
+      },
+      "terminal.integrated.defaultProfile.linux": "zsh",
+      "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
       }
-    },
-    "hostRequirements": {
-      "cpus": 4,
-      "memory": "8gb",
-      "storage": "32gb"
-    },
-    "postCreateCommand": ""
-  }
+    }
+  },
+  "postCreateCommand": ""
+}

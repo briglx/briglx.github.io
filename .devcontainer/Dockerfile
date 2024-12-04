@@ -11,6 +11,13 @@
 ARG RUBY_VERSION=2.7.4
 FROM ruby:$RUBY_VERSION-slim as jekyll
 
+RUN apk update && \
+    apk add --update --no-cache \
+    git \
+    python3 \
+    py3-pip \
+    && rm -rf /var/cache/apk/*
+
 RUN apt-get update && apt-get install -y \
   curl && \
   curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
@@ -61,7 +68,7 @@ RUN echo 'alias ll='"'"'ls $LS_OPTIONS -al'"'"'' >> /etc/bash.bashrc
 # RUN mkdir -p /usr/src/app
 WORKDIR /app
 COPY source/Gemfile /app/
-COPY source/Gemfile.lock /app/
+# COPY source/Gemfile.lock /app/
 ENV NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 RUN bundle install
 
