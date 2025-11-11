@@ -74,6 +74,7 @@ In the GitHub world there are several places to set variables and parameters.
 
 
 ## Other Stuff
+{% raw %}
 | Type                                                                                                                                     | Capability                         | Domain           | Usage                                                                                                                          | Example                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
 | [Environments](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)         | Group Custom Variables and Secrets | HCI/Trigger      | Configure environments                                                                                                         | `dev`, `test`, `prod`, `stable`, `canary`, `release`                           |
@@ -88,7 +89,7 @@ In the GitHub world there are several places to set variables and parameters.
 | Job - [Secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)                                      | Global secure variable             | Automation Plane | Secure variable used between job steps.                                                                                        |  tbd                                                                           |
 | Step - Custom [Variables](https://docs.github.com/en/actions/learn-github-actions/variables)                                             | Variable                           | Automation Plane | Variable used for a single step.                                                                                               | `CLIENT_SECRET`, `PYPI_API_TOKEN`, `AWS_ACCESS_KEY_ID`, `API_TOKEN`            |
 | Step - [Secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)                                     | Secure variable                    | Automation Plane | Secure variable used for a single step.                                                                                        | `GITHUB_TOKEN`, `OAUTH_TOKEN`, `OPENAI_API_KEY`, `CLIENT_ID`                   |
-
+{% endraw %}
 
 ## IaC Parameter Types
 
@@ -124,8 +125,6 @@ Bicept
 * Set variable values in the right domain.
 * Use parameters to pass information between domains.
 * Avoid outputing sensitive data.
-* 
-
 
 ## Example Configuration
 
@@ -145,6 +144,7 @@ HELLO_WORLD_ENABLED
 GREET_NAME
 ```
 
+{% raw %}
 ```yaml
 on:
   workflow_dispatch:
@@ -177,6 +177,7 @@ jobs:
       with:
         who-to-greet: ${{ vars.GREET_NAME }}
 ```
+{% endraw %}
 
 
 
